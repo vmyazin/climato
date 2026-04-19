@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button:focus-visible {
+  outline: 2px solid #cc3b1f;
+  outline-offset: 2px;
+}
+
+input::placeholder {
+  color: #8a8578;
+}
