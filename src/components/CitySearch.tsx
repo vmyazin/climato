@@ -1,4 +1,5 @@
 import React from 'react'
+import { flushSync } from 'react-dom'
 import { GeoCity } from '../data/cities'
 import { useCitySearch } from '../hooks/useCitySearch'
 
@@ -24,7 +25,9 @@ export function CitySearch({ value, onPick, fg = '#111', muted = '#8a8578', bg =
 
   React.useEffect(() => {
     const onDocClick = (e: MouseEvent) => {
-      if (boxRef.current && !boxRef.current.contains(e.target as Node)) setOpen(false)
+      if (boxRef.current && !boxRef.current.contains(e.target as Node)) {
+        flushSync(() => setOpen(false))
+      }
     }
     document.addEventListener('mousedown', onDocClick)
     return () => document.removeEventListener('mousedown', onDocClick)

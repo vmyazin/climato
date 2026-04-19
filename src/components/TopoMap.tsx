@@ -34,7 +34,7 @@ export function TopoMap({ lat, lon, height = 320, accent = '#cc3b1f' }: TopoMapP
   )
 
   return (
-    <div style={{ width: '100%', height }}>
+    <div style={{ width: '100%', height, position: 'relative', zIndex: 0 }}>
       <MapContainer
         center={[lat, lon]}
         zoom={11}

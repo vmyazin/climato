@@ -1,8 +1,8 @@
+import { useState } from 'react'
 import { City, MONTHS, MONTHS_LONG, cToF, mmToIn } from '../data/cities'
 import { MonthlyChart } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
 import { ChartToggle } from './Toggles'
-import { useWeatherStore } from '../store/weatherStore'
 
 const fg = '#0e0e0e'
 const bg = '#ebe6dc'
@@ -18,7 +18,7 @@ interface Props {
 }
 
 export function VariationB({ city, unit, chartVariant, setChartVariant }: Props) {
-  const { selectedMonth: m, setSelectedMonth: setM } = useWeatherStore()
+  const [m, setM] = useState(new Date().getMonth())
 
   const hi = unit === 'C' ? city.high[m] : Math.round(cToF(city.high[m]))
   const lo = unit === 'C' ? city.low[m]  : Math.round(cToF(city.low[m]))
@@ -55,7 +55,7 @@ export function VariationB({ city, unit, chartVariant, setChartVariant }: Props)
         </div>
 
         {/* HERO */}
-        <div style={{ position: 'relative', paddingTop: 40, paddingBottom: 32 }}>
+        <div style={{ position: 'relative', paddingTop: 40, paddingBottom: 32, pointerEvents: 'none' }}>
           <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 14, letterSpacing: 2, color: muted, marginBottom: -20 }}>
             {MONTHS_LONG[m].toUpperCase()} · AVG MEAN
           </div>
