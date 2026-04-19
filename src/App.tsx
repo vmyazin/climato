@@ -17,7 +17,7 @@ export default function App() {
   return (
     <div style={{ minHeight: '100vh', background: bg, fontFamily: "'Inter Tight', Inter, system-ui, sans-serif" }}>
       <AppHeader />
-      <main style={{ opacity: isPending ? 0.6 : 1, transition: 'opacity 0.25s' }}>
+      <main style={{ opacity: isPending ? 0.6 : 1, transition: 'opacity 0.25s', isolation: 'isolate' }}>
         {isError && (
           <div style={{ padding: '80px 32px', textAlign: 'center', color: muted, fontFamily: "'JetBrains Mono', monospace", fontSize: 13, letterSpacing: 1 }}>
             CLIMATE DATA UNAVAILABLE — CHECK NETWORK

@@ -14,7 +14,7 @@ const VIEWS = [
 ] as const
 
 export function AppHeader() {
-  const { selectedCity, setCity, unit, setUnit, chartVariant, setChartVariant, activeView, setActiveView } = useWeatherStore()
+  const { selectedCity, setCity, unit, setUnit, activeView, setActiveView } = useWeatherStore()
 
   const btnBase: CSSProperties = {
     padding: '5px 11px',
@@ -63,11 +63,6 @@ export function AppHeader() {
           ))}
         </ToggleGroup.Root>
 
-        <ToggleGroup.Root type="single" value={chartVariant} onValueChange={v => { if (v) setChartVariant(v as 'bar' | 'line' | 'ring') }} style={{ display: 'flex' }}>
-          {(['bar', 'line', 'ring'] as const).map(v => (
-            <ToggleGroup.Item key={v} value={v} style={btn(chartVariant === v)}>{v.toUpperCase()}</ToggleGroup.Item>
-          ))}
-        </ToggleGroup.Root>
       </div>
     </header>
   )

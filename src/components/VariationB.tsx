@@ -1,6 +1,7 @@
 import { City, MONTHS, MONTHS_LONG, cToF, mmToIn } from '../data/cities'
 import { MonthlyChart } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
+import { ChartToggle } from './Toggles'
 import { useWeatherStore } from '../store/weatherStore'
 
 const fg = '#0e0e0e'
@@ -16,7 +17,7 @@ interface Props {
   setChartVariant: (v: 'bar' | 'line' | 'ring') => void
 }
 
-export function VariationB({ city, unit, chartVariant }: Props) {
+export function VariationB({ city, unit, chartVariant, setChartVariant }: Props) {
   const { selectedMonth: m, setSelectedMonth: setM } = useWeatherStore()
 
   const hi = unit === 'C' ? city.high[m] : Math.round(cToF(city.high[m]))
@@ -92,10 +93,12 @@ export function VariationB({ city, unit, chartVariant }: Props) {
         <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 16 }}>
           <div style={{ border: `1px solid ${fg}`, background: '#fff', display: 'flex', flexDirection: 'column' }}>
             <div style={{
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
               padding: '10px 14px', borderBottom: `1px solid ${fg}`,
               fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5,
             }}>
-              12-MONTH PROFILE / °{unit}
+              <span>12-MONTH PROFILE / °{unit}</span>
+              <ChartToggle chartVariant={chartVariant} setChartVariant={setChartVariant} fg={fg} bg="#fff" />
             </div>
             <div style={{ flex: 1, padding: 12 }}>
               <MonthlyChart city={city} unit={unit} variant={chartVariant} width={720} height={300} fg={fg} accent={accent} muted={muted} />

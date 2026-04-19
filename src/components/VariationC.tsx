@@ -2,6 +2,7 @@ import React from 'react'
 import { City, MONTHS_LONG, cToF, mmToIn } from '../data/cities'
 import { MonthlyChart } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
+import { ChartToggle } from './Toggles'
 
 const fg = '#141311'
 const bg = '#f3ede1'
@@ -49,7 +50,7 @@ function FitHeadline({ text, maxFontSize, minFontSize, lineHeight, letterSpacing
   )
 }
 
-export function VariationC({ city, unit, chartVariant }: Props) {
+export function VariationC({ city, unit, chartVariant, setChartVariant }: Props) {
   const avgHi = city.high.reduce((a, b) => a + b, 0) / 12
   const avgLo = city.low.reduce((a, b) => a + b, 0) / 12
   const sh = unit === 'C' ? avgHi.toFixed(1) : cToF(avgHi).toFixed(1)
@@ -143,12 +144,15 @@ export function VariationC({ city, unit, chartVariant }: Props) {
         {/* Bottom chart ribbon */}
         <div style={{ border: `1px solid ${fg}`, background: '#fff' }}>
           <div style={{
-            display: 'flex', justifyContent: 'space-between',
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center',
             padding: '10px 14px', borderBottom: `1px solid ${fg}`,
             fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5,
           }}>
             <span>FIG 02 · MONTHLY TEMPERATURE PROFILE</span>
-            <span style={{ color: muted }}>°{unit} · HIGH / LOW · 12 MONTHS</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+              <ChartToggle chartVariant={chartVariant} setChartVariant={setChartVariant} fg={fg} bg="#fff" />
+              <span style={{ color: muted }}>°{unit} · HIGH / LOW · 12 MONTHS</span>
+            </div>
           </div>
           <div style={{ padding: 16 }}>
             <MonthlyChart city={city} unit={unit} variant={chartVariant} width={1220} height={220} fg={fg} accent={accent} muted={muted} />

@@ -2,6 +2,7 @@ import React from 'react'
 import { City, MONTHS, cToF, mmToIn } from '../data/cities'
 import { MonthlyChart, SmallBars } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
+import { ChartToggle } from './Toggles'
 
 const fg = '#111'
 const bg = '#f5f2ea'
@@ -16,7 +17,7 @@ interface Props {
   setChartVariant: (v: 'bar' | 'line' | 'ring') => void
 }
 
-export function VariationA({ city, unit, chartVariant }: Props) {
+export function VariationA({ city, unit, chartVariant, setChartVariant }: Props) {
   const avgHi = city.high.reduce((a, b) => a + b, 0) / 12
   const avgLo = city.low.reduce((a, b) => a + b, 0) / 12
   const annualPrecip = city.precip.reduce((a, b) => a + b, 0)
@@ -63,7 +64,11 @@ export function VariationA({ city, unit, chartVariant }: Props) {
         </div>
 
         {/* Chart module */}
-        <Module title="MONTHLY HIGH / LOW" subtitle={`12 MONTHS · °${unit}`}>
+        <Module
+          title="MONTHLY HIGH / LOW"
+          subtitle={`12 MONTHS · °${unit}`}
+          action={<ChartToggle chartVariant={chartVariant} setChartVariant={setChartVariant} fg={fg} bg="#fff" />}
+        >
           <div style={{ padding: '20px 24px' }}>
             <MonthlyChart city={city} unit={unit} variant={chartVariant} width={1180} height={320} fg={fg} accent={accent} muted={muted} />
           </div>
@@ -123,16 +128,19 @@ function Stat({ label, value, isAccent = false, last = false }: { label: string;
   )
 }
 
-function Module({ title, subtitle, children }: { title: string; subtitle: string; children: React.ReactNode }) {
+function Module({ title, subtitle, action, children }: { title: string; subtitle: string; action?: React.ReactNode; children: React.ReactNode }) {
   return (
     <div style={{ border: `1px solid ${fg}`, background: '#fff', display: 'flex', flexDirection: 'column' }}>
       <div style={{
-        display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         padding: '10px 14px', borderBottom: `1px solid ${fg}`,
         fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5,
       }}>
         <span style={{ color: fg }}>{title}</span>
-        <span style={{ color: muted }}>{subtitle}</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          {action}
+          <span style={{ color: muted }}>{subtitle}</span>
+        </div>
       </div>
       <div style={{ flex: 1 }}>{children}</div>
     </div>

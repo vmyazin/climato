@@ -48,7 +48,7 @@ export function CitySearch({ value, onPick, fg = '#111', muted = '#8a8578', bg =
   const fontPx = compact ? 13 : 15
 
   return (
-    <div ref={boxRef} style={{ position: 'relative', width: '100%', zIndex: 20 }}>
+    <div ref={boxRef} style={{ position: 'relative', width: '100%', zIndex: 9999 }}>
       <div style={{
         display: 'flex', alignItems: 'center', gap: 10,
         borderTop: `1px solid ${fg}`, borderBottom: `1px solid ${fg}`,
@@ -76,7 +76,7 @@ export function CitySearch({ value, onPick, fg = '#111', muted = '#8a8578', bg =
         <div style={{
           position: 'absolute', top: '100%', left: 0, right: 0,
           background: bg, borderLeft: `1px solid ${fg}`, borderRight: `1px solid ${fg}`,
-          borderBottom: `1px solid ${fg}`, zIndex: 50,
+          borderBottom: `1px solid ${fg}`, zIndex: 9999,
           boxShadow: '0 16px 40px rgba(0,0,0,0.12)',
         }}>
           {results.map((c, i) => {
