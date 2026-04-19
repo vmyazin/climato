@@ -1,5 +1,6 @@
 import { useQuery, keepPreviousData } from '@tanstack/react-query'
 import { CITIES, GeoCity } from '../data/cities'
+import { useWeatherStore, latLonKey } from '../store/weatherStore'
 
 interface OpenMeteoCity {
   id: number
@@ -78,14 +79,21 @@ async function geocode(query: string): Promise<GeoCity[]> {
   return deduplicate(data.results ?? [], query)
 }
 
-const defaultCities = (): GeoCity[] =>
-  CITIES.slice(0, 8).map(({ id, name, country, lat, lon, elev }) => ({ id, name, country, lat, lon, elev }))
+function buildDefaultCities(recent: GeoCity[]): GeoCity[] {
+  const recentKeys = new Set(recent.map(latLonKey))
+  const seeds = CITIES
+    .filter(c => !recentKeys.has(latLonKey(c)))
+    .slice(0, Math.max(0, 8 - recent.length))
+    .map(({ id, name, country, lat, lon, elev }) => ({ id, name, country, lat, lon, elev }))
+  return [...recent, ...seeds].slice(0, 8)
+}
 
 export function useCitySearch(query: string) {
+  const recentCities = useWeatherStore(s => s.recentCities)
   const trimmed = query.trim()
   return useQuery({
-    queryKey: ['geocode', trimmed.toLowerCase()],
-    queryFn: () => (trimmed ? geocode(trimmed) : Promise.resolve(defaultCities())),
+    queryKey: ['geocode', trimmed.toLowerCase(), recentCities.map(latLonKey).join(',')],
+    queryFn: () => (trimmed ? geocode(trimmed) : Promise.resolve(buildDefaultCities(recentCities))),
     staleTime: trimmed ? 5 * 60 * 1000 : Infinity,
     placeholderData: keepPreviousData,
   })

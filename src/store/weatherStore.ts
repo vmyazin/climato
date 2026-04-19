@@ -15,8 +15,11 @@ const defaultCity: GeoCity = {
   elev: 37,
 }
 
+const latLonKey = (c: GeoCity) => `${c.lat.toFixed(1)},${c.lon.toFixed(1)}`
+
 interface WeatherState {
   selectedCity: GeoCity
+  recentCities: GeoCity[]
   unit: Unit
   chartVariant: ChartVariant
   activeView: ActiveView
@@ -29,16 +32,26 @@ interface WeatherState {
   setSelectedMonth: (m: number) => void
 }
 
+export { latLonKey }
+
 export const useWeatherStore = create<WeatherState>()(
   persist(
     (set) => ({
       selectedCity: defaultCity,
+      recentCities: [],
       unit: 'C',
       chartVariant: 'bar',
       activeView: 'a',
       selectedMonth: new Date().getMonth(),
 
-      setCity: (selectedCity) => set({ selectedCity }),
+      setCity: (selectedCity) =>
+        set(state => ({
+          selectedCity,
+          recentCities: [
+            selectedCity,
+            ...state.recentCities.filter(c => latLonKey(c) !== latLonKey(selectedCity)),
+          ].slice(0, 5),
+        })),
       setUnit: (unit) => set({ unit }),
       setChartVariant: (chartVariant) => set({ chartVariant }),
       setActiveView: (activeView) => set({ activeView }),
