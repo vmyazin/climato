@@ -3,6 +3,7 @@ import { City, MONTHS, MONTHS_LONG, cToF, mmToIn } from '../data/cities'
 import { MonthlyChart } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
 import { ChartToggle } from './Toggles'
+import { FitHeadline } from './VariationC'
 
 const fg = '#0e0e0e'
 const bg = '#e6e5df'
@@ -56,7 +57,10 @@ export function VariationB({ city, unit, chartVariant, setChartVariant }: Props)
 
         {/* HERO */}
         <div style={{ position: 'relative', paddingTop: 40, paddingBottom: 32, pointerEvents: 'none' }}>
-          <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 14, letterSpacing: 2, color: muted, marginBottom: -20 }}>
+          <div style={{ paddingRight: 240 }}>
+            <FitHeadline text={city.name.toUpperCase()} maxFontSize={180} minFontSize={28} lineHeight={0.88} letterSpacing={-6} color={fg} />
+          </div>
+          <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 14, letterSpacing: 2, color: muted, marginTop: 14, marginBottom: -20 }}>
             {MONTHS_LONG[m].toUpperCase()} · AVG MEAN
           </div>
           <div style={{ display: 'flex', alignItems: 'flex-start', lineHeight: 0.82 }}>

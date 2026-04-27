@@ -17,7 +17,7 @@ interface Props {
   setChartVariant: (v: 'bar' | 'line' | 'ring') => void
 }
 
-function FitHeadline({ text, maxFontSize, minFontSize, lineHeight, letterSpacing, color }: {
+export function FitHeadline({ text, maxFontSize, minFontSize, lineHeight, letterSpacing, color }: {
   text: string; maxFontSize: number; minFontSize: number; lineHeight: number; letterSpacing: number; color: string
 }) {
   const wrapRef = React.useRef<HTMLDivElement>(null)
