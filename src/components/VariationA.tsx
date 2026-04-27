@@ -111,7 +111,6 @@ export function VariationA({ city, unit, chartVariant, setChartVariant }: Props)
           borderTop: `1px solid ${fg}`, paddingTop: 10,
         }}>
           <span>© CLIMATE ATLAS 2026</span>
-          <span>NORMALS 2014–2023 · OPEN-METEO ERA5</span>
           <span>VIEW A · SWISS GRID</span>
         </div>
       </div>

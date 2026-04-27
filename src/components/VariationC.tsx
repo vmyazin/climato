@@ -167,7 +167,6 @@ export function VariationC({ city, unit, chartVariant, setChartVariant }: Props)
           borderTop: `1px solid ${fg}`, paddingTop: 10,
         }}>
           <span>VIEW C · EDITORIAL</span>
-          <span>NORMALS 2014–2023 · OPEN-METEO ERA5</span>
           <span>© CLIMATE ATLAS 2026</span>
         </div>
       </div>
