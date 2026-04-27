@@ -10,14 +10,25 @@ interface CitySearchProps {
   muted?: string
   bg?: string
   compact?: boolean
+  initialQuery?: string
+  autoFocusSelect?: boolean
 }
 
-export function CitySearch({ value, onPick, fg = '#111', muted = '#8a8578', bg = '#fff', compact = false }: CitySearchProps) {
-  const [q, setQ] = React.useState('')
-  const [open, setOpen] = React.useState(false)
+export function CitySearch({ value, onPick, fg = '#111', muted = '#8a8578', bg = '#fff', compact = false, initialQuery = '', autoFocusSelect = false }: CitySearchProps) {
+  const [q, setQ] = React.useState(initialQuery)
+  const [open, setOpen] = React.useState(autoFocusSelect && !!initialQuery)
   const [idx, setIdx] = React.useState(0)
   const inputRef = React.useRef<HTMLInputElement>(null)
   const boxRef = React.useRef<HTMLDivElement>(null)
+
+  React.useEffect(() => {
+    if (!autoFocusSelect) return
+    const input = inputRef.current
+    if (!input) return
+    input.focus()
+    input.select()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const { data: results = [] } = useCitySearch(q)
 
