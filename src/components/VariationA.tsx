@@ -3,7 +3,9 @@ import { City, MONTHS, cToF, mmToIn } from '../data/cities'
 import { MonthlyChart, SmallBars } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
 import { ChartToggle } from './Toggles'
+import { CurrentTempBadge } from './CurrentTempBadge'
 import { useMediaQuery } from '../hooks/useMediaQuery'
+import type { CurrentTemp } from '../hooks/useCurrentTemp'
 
 const fg = '#111'
 const bg = '#f0f1ed'
@@ -16,9 +18,10 @@ interface Props {
   setUnit: (u: 'C' | 'F') => void
   chartVariant: 'bar' | 'line' | 'ring'
   setChartVariant: (v: 'bar' | 'line' | 'ring') => void
+  currentTemp?: CurrentTemp
 }
 
-export function VariationA({ city, unit, chartVariant, setChartVariant }: Props) {
+export function VariationA({ city, unit, chartVariant, setChartVariant, currentTemp }: Props) {
   const isMd = useMediaQuery('(min-width: 768px)')
   const avgHi = city.high.reduce((a, b) => a + b, 0) / 12
   const avgLo = city.low.reduce((a, b) => a + b, 0) / 12
@@ -50,6 +53,7 @@ export function VariationA({ city, unit, chartVariant, setChartVariant }: Props)
         <div style={{ marginTop: 8 }}>
           <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: isMd ? 12 : 10, letterSpacing: 2, color: muted, marginBottom: 10 }}>
             {city.lat >= 0 ? '+' : ''}{city.lat.toFixed(4)}°  ·  {city.lon >= 0 ? '+' : ''}{city.lon.toFixed(4)}°  ·  ELEV {city.elev}m
+            <CurrentTempBadge tempC={currentTemp?.tempC} unit={unit} fg={fg} muted={muted} accent={accent} variant="inline" />
           </div>
           <div style={{ fontSize: isMd ? 132 : 'clamp(48px, 15vw, 100px)', fontWeight: 700, lineHeight: 0.95, letterSpacing: isMd ? -4 : -2, color: fg, textTransform: 'uppercase', wordBreak: 'break-word' }}>
             {city.name}

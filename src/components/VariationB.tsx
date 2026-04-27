@@ -3,8 +3,10 @@ import { City, MONTHS, MONTHS_LONG, cToF, mmToIn } from '../data/cities'
 import { MonthlyChart } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
 import { ChartToggle } from './Toggles'
+import { CurrentTempBadge } from './CurrentTempBadge'
 import { FitHeadline } from './VariationC'
 import { useMediaQuery } from '../hooks/useMediaQuery'
+import type { CurrentTemp } from '../hooks/useCurrentTemp'
 
 const fg = '#0e0e0e'
 const bg = '#e6e5df'
@@ -17,9 +19,10 @@ interface Props {
   setUnit: (u: 'C' | 'F') => void
   chartVariant: 'bar' | 'line' | 'ring'
   setChartVariant: (v: 'bar' | 'line' | 'ring') => void
+  currentTemp?: CurrentTemp
 }
 
-export function VariationB({ city, unit, chartVariant, setChartVariant }: Props) {
+export function VariationB({ city, unit, chartVariant, setChartVariant, currentTemp }: Props) {
   const [m, setM] = useState(new Date().getMonth())
   const isMd = useMediaQuery('(min-width: 768px)')
 
@@ -83,12 +86,20 @@ export function VariationB({ city, unit, chartVariant, setChartVariant }: Props)
         {/* HERO */}
         <div style={{ position: 'relative', paddingTop: isMd ? 40 : 24, paddingBottom: isMd ? 32 : 16, pointerEvents: 'none' }}>
           {isMd ? (
-            <div style={{ paddingRight: 240 }}>
-              <FitHeadline text={city.name.toUpperCase()} maxFontSize={180} minFontSize={28} lineHeight={0.88} letterSpacing={-6} color={fg} />
-            </div>
+            <>
+              <div style={{ paddingRight: 240 }}>
+                <FitHeadline text={city.name.toUpperCase()} maxFontSize={180} minFontSize={28} lineHeight={0.88} letterSpacing={-6} color={fg} />
+              </div>
+              <div style={{ position: 'absolute', top: 8, right: 8 }}>
+                <CurrentTempBadge tempC={currentTemp?.tempC} unit={unit} fg={fg} muted={muted} accent={accent} variant="block" />
+              </div>
+            </>
           ) : (
             <div>
               <FitHeadline text={city.name.toUpperCase()} maxFontSize={80} minFontSize={28} lineHeight={0.88} letterSpacing={-3} color={fg} />
+              <div style={{ marginTop: 10 }}>
+                <CurrentTempBadge tempC={currentTemp?.tempC} unit={unit} fg={fg} muted={muted} accent={accent} variant="block" />
+              </div>
             </div>
           )}
 

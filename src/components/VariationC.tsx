@@ -3,7 +3,9 @@ import { City, MONTHS_LONG, cToF, mmToIn } from '../data/cities'
 import { MonthlyChart } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
 import { ChartToggle } from './Toggles'
+import { CurrentTempBadge } from './CurrentTempBadge'
 import { useMediaQuery } from '../hooks/useMediaQuery'
+import type { CurrentTemp } from '../hooks/useCurrentTemp'
 
 const fg = '#141311'
 const bg = '#eeece4'
@@ -16,6 +18,7 @@ interface Props {
   setUnit: (u: 'C' | 'F') => void
   chartVariant: 'bar' | 'line' | 'ring'
   setChartVariant: (v: 'bar' | 'line' | 'ring') => void
+  currentTemp?: CurrentTemp
 }
 
 export function FitHeadline({ text, maxFontSize, minFontSize, lineHeight, letterSpacing, color }: {
@@ -51,7 +54,7 @@ export function FitHeadline({ text, maxFontSize, minFontSize, lineHeight, letter
   )
 }
 
-export function VariationC({ city, unit, chartVariant, setChartVariant }: Props) {
+export function VariationC({ city, unit, chartVariant, setChartVariant, currentTemp }: Props) {
   const isMd = useMediaQuery('(min-width: 768px)')
   const avgHi = city.high.reduce((a, b) => a + b, 0) / 12
   const avgLo = city.low.reduce((a, b) => a + b, 0) / 12
@@ -114,8 +117,11 @@ export function VariationC({ city, unit, chartVariant, setChartVariant }: Props)
                 MONTHLY NORMALS
               </div>
               <FitHeadline text={city.name.toUpperCase()} maxFontSize={160} minFontSize={isMd ? 72 : 40} lineHeight={0.88} letterSpacing={-6} color={fg} />
-              <div style={{ fontSize: isMd ? 28 : 18, fontWeight: 400, color: muted, marginTop: 8, borderBottom: `1px solid ${fg}`, paddingBottom: 14 }}>
+              <div style={{ fontSize: isMd ? 28 : 18, fontWeight: 400, color: muted, marginTop: 8 }}>
                 {city.country}{city.admin1 ? ` · ${city.admin1}` : ''}
+              </div>
+              <div style={{ borderBottom: `1px solid ${fg}`, paddingBottom: 14 }}>
+                <CurrentTempBadge tempC={currentTemp?.tempC} unit={unit} fg={fg} muted={muted} accent={accent} variant="editorial" />
               </div>
             </div>
 
