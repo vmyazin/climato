@@ -110,3 +110,64 @@ export function reconstructFromCoords(
     elev: 0,
   }
 }
+
+interface OpenMeteoCity {
+  id: number
+  name: string
+  latitude: number
+  longitude: number
+  elevation?: number
+  country: string
+  admin1?: string
+  admin2?: string
+  population?: number
+}
+
+export async function resolveSlugViaGeocoding(parsed: {
+  countrySlug: string
+  admin1Slug?: string
+  citySlug: string
+}): Promise<GeoCity | null> {
+  const cityQuery = parsed.citySlug.replace(/-/g, ' ')
+  const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityQuery)}&count=20&language=en&format=json`
+
+  let data: { results?: OpenMeteoCity[] }
+  try {
+    const res = await fetch(url)
+    if (!res.ok) return null
+    data = await res.json()
+  } catch {
+    return null
+  }
+
+  const results = data.results ?? []
+
+  const matchAdmin1 = (r: OpenMeteoCity): boolean => {
+    if (!parsed.admin1Slug) return true
+    return !!r.admin1 && slugify(r.admin1) === parsed.admin1Slug
+  }
+
+  const matchCity = (r: OpenMeteoCity): boolean => {
+    if (slugify(r.name) === parsed.citySlug) return true
+    if (r.admin2 && slugify(r.admin2) === parsed.citySlug) return true
+    return false
+  }
+
+  const matches = results.filter(
+    r => countrySlug(r.country) === parsed.countrySlug && matchAdmin1(r) && matchCity(r),
+  )
+  if (matches.length === 0) return null
+
+  matches.sort((a, b) => (b.population ?? 0) - (a.population ?? 0))
+  const r = matches[0]
+
+  return {
+    id: String(r.id),
+    name: r.name,
+    country: r.country,
+    ...(r.admin1 ? { admin1: r.admin1 } : {}),
+    lat: r.latitude,
+    lon: r.longitude,
+    elev: Math.round(r.elevation ?? 0),
+  }
+}
