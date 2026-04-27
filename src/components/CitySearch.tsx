@@ -2,6 +2,8 @@ import React from 'react'
 import { flushSync } from 'react-dom'
 import { GeoCity } from '../data/cities'
 import { useCitySearch } from '../hooks/useCitySearch'
+import { useWeatherStore } from '../store/weatherStore'
+import { slugify } from '../lib/route'
 
 interface CitySearchProps {
   value: GeoCity
@@ -30,7 +32,8 @@ export function CitySearch({ value, onPick, fg = '#111', muted = '#8a8578', bg =
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const { data: results = [] } = useCitySearch(q)
+  const { data: results = [], isFetching } = useCitySearch(q)
+  const setNotFoundSlug = useWeatherStore(s => s.setNotFoundSlug)
 
   React.useEffect(() => { setIdx(0) }, [q])
 
@@ -54,7 +57,19 @@ export function CitySearch({ value, onPick, fg = '#111', muted = '#8a8578', bg =
   const onKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowDown') { e.preventDefault(); setOpen(true); setIdx(i => Math.min(i + 1, results.length - 1)) }
     else if (e.key === 'ArrowUp') { e.preventDefault(); setIdx(i => Math.max(i - 1, 0)) }
-    else if (e.key === 'Enter') { e.preventDefault(); if (results[idx]) pick(results[idx]) }
+    else if (e.key === 'Enter') {
+      e.preventDefault()
+      if (results[idx]) {
+        pick(results[idx])
+      } else {
+        const trimmed = q.trim()
+        if (!trimmed || isFetching) return
+        setNotFoundSlug(slugify(trimmed))
+        setQ('')
+        setOpen(false)
+        inputRef.current?.blur()
+      }
+    }
     else if (e.key === 'Escape') { setOpen(false); inputRef.current?.blur() }
   }
 

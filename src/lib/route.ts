@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import type { GeoCity } from '../data/cities'
 import { useWeatherStore } from '../store/weatherStore'
 
@@ -185,7 +185,8 @@ function currentUrl(): string {
 export function useUrlSync(): UrlSyncResult {
   const selectedCity = useWeatherStore(s => s.selectedCity)
   const setCity = useWeatherStore(s => s.setCity)
-  const [notFoundSlug, setNotFoundSlug] = useState<string | null>(null)
+  const setNotFoundSlug = useWeatherStore(s => s.setNotFoundSlug)
+  const notFoundSlug = useWeatherStore(s => s.notFoundSlug)
   const skipNextPush = useRef(false)
 
   useEffect(() => {
@@ -234,7 +235,6 @@ export function useUrlSync(): UrlSyncResult {
       skipNextPush.current = false
       return
     }
-    setNotFoundSlug(null)
     const { path, query } = toSlug(selectedCity)
     const target = path + query
     if (currentUrl() !== target) {

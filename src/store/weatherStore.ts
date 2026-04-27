@@ -24,12 +24,14 @@ interface WeatherState {
   chartVariant: ChartVariant
   activeView: ActiveView
   selectedMonth: number
+  notFoundSlug: string | null
 
   setCity: (city: GeoCity) => void
   setUnit: (unit: Unit) => void
   setChartVariant: (v: ChartVariant) => void
   setActiveView: (v: ActiveView) => void
   setSelectedMonth: (m: number) => void
+  setNotFoundSlug: (slug: string | null) => void
 }
 
 export { latLonKey }
@@ -43,6 +45,7 @@ export const useWeatherStore = create<WeatherState>()(
       chartVariant: 'bar',
       activeView: 'a',
       selectedMonth: new Date().getMonth(),
+      notFoundSlug: null,
 
       setCity: (selectedCity) =>
         set(state => ({
@@ -51,14 +54,24 @@ export const useWeatherStore = create<WeatherState>()(
             selectedCity,
             ...state.recentCities.filter(c => latLonKey(c) !== latLonKey(selectedCity)),
           ].slice(0, 5),
+          notFoundSlug: null,
         })),
       setUnit: (unit) => set({ unit }),
       setChartVariant: (chartVariant) => set({ chartVariant }),
       setActiveView: (activeView) => set({ activeView }),
       setSelectedMonth: (selectedMonth) => set({ selectedMonth }),
+      setNotFoundSlug: (notFoundSlug) => set({ notFoundSlug }),
     }),
     {
       name: 'climato-v3',
+      partialize: (state) => ({
+        selectedCity: state.selectedCity,
+        recentCities: state.recentCities,
+        unit: state.unit,
+        chartVariant: state.chartVariant,
+        activeView: state.activeView,
+        selectedMonth: state.selectedMonth,
+      }),
       onRehydrateStorage: () => (state) => {
         if (state && !state.selectedCity?.lat) state.selectedCity = defaultCity
       },

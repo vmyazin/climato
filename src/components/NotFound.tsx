@@ -36,7 +36,7 @@ export function NotFound({ citySlug }: NotFoundProps) {
           marginBottom: 48,
         }}
       >
-        No city matched that URL.
+        No climate data for that location.
       </div>
       <div style={{ textAlign: 'left' }}>
         <CitySearch
