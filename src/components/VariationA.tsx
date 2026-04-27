@@ -110,7 +110,7 @@ export function VariationA({ city, unit, chartVariant, setChartVariant }: Props)
           fontSize: 10, letterSpacing: 1.5, color: muted,
           borderTop: `1px solid ${fg}`, paddingTop: 10,
         }}>
-          <span>© CLIMATE ATLAS 2026</span>
+          <span>© CLIMATO 2026</span>
           <span>VIEW A · SWISS GRID</span>
         </div>
       </div>

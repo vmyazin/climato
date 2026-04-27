@@ -88,7 +88,7 @@ Route format: `/city/[slug]` where slug = `{name-lowercased-no-accents}-{country
 
 ### On-page SEO per city page
 
-**Title tag**: `{City} Monthly Weather Averages — Climate Atlas`
+**Title tag**: `{City} Monthly Weather Averages — Climato`
 **Meta description**: `Monthly temperature highs, lows, rainfall and sunshine hours for {City}, {Country}. Average high in {hottest_month}: {hottest_temp}°C.`
 
 **Structured data** (JSON-LD):

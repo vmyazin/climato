@@ -133,7 +133,7 @@ export function VariationB({ city, unit, chartVariant, setChartVariant }: Props)
         }}>
           <span>VIEW B · HERO NUMERIC</span>
           <span>SELECTED MONTH / {MONTHS[m]}</span>
-          <span>© CLIMATE ATLAS 2026</span>
+          <span>© CLIMATO 2026</span>
         </div>
       </div>
     </div>

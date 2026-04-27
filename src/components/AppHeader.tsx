@@ -41,7 +41,7 @@ export function AppHeader() {
       alignItems: 'center', gap: 24, padding: '0 32px', height: 56,
     }}>
       <div style={{ fontFamily: "'Inter Tight', Inter, system-ui, sans-serif", fontSize: 16, fontWeight: 700, letterSpacing: -0.5, color: fg, whiteSpace: 'nowrap' }}>
-        CLIMATE / ATLAS
+        CLIMATO
       </div>
 
       <div style={{ minWidth: 0 }}>

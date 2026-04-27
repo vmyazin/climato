@@ -167,7 +167,7 @@ export function VariationC({ city, unit, chartVariant, setChartVariant }: Props)
           borderTop: `1px solid ${fg}`, paddingTop: 10,
         }}>
           <span>VIEW C · EDITORIAL</span>
-          <span>© CLIMATE ATLAS 2026</span>
+          <span>© CLIMATO 2026</span>
         </div>
       </div>
     </div>
