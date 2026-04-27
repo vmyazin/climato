@@ -1,0 +1,112 @@
+import type { GeoCity } from '../data/cities'
+
+const COUNTRY_TO_SLUG: Record<string, string> = {
+  'United States': 'usa',
+  'United Kingdom': 'uk',
+  'United Arab Emirates': 'uae',
+  'South Korea': 'south-korea',
+  'North Korea': 'north-korea',
+}
+
+const SLUG_TO_COUNTRY: Record<string, string> = Object.fromEntries(
+  Object.entries(COUNTRY_TO_SLUG).map(([name, slug]) => [slug, name]),
+)
+
+export function slugify(s: string): string {
+  return s
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[‘’']/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+export function countrySlug(country: string): string {
+  return COUNTRY_TO_SLUG[country] ?? slugify(country)
+}
+
+function titleCase(s: string): string {
+  return s.replace(/\b\w/g, c => c.toUpperCase())
+}
+
+export function countryFromSlug(slug: string): string {
+  return SLUG_TO_COUNTRY[slug] ?? titleCase(slug.replace(/-/g, ' '))
+}
+
+export function nameFromSlug(slug: string): string {
+  return titleCase(slug.replace(/-/g, ' '))
+}
+
+export interface CityUrl {
+  path: string
+  query: string
+}
+
+export function toSlug(city: GeoCity): CityUrl {
+  const cSlug = countrySlug(city.country)
+  const citySlug = slugify(city.name)
+  const a1Slug = city.admin1 ? slugify(city.admin1) : null
+  const segments = a1Slug && a1Slug !== citySlug
+    ? [cSlug, a1Slug, citySlug]
+    : [cSlug, citySlug]
+  return {
+    path: '/' + segments.join('/'),
+    query: `?@${city.lat.toFixed(2)},${city.lon.toFixed(2)}`,
+  }
+}
+
+export type ParsedUrl =
+  | { type: 'root' }
+  | {
+      type: 'slug'
+      countrySlug: string
+      admin1Slug?: string
+      citySlug: string
+      ll?: [number, number]
+    }
+
+function parseLatLon(search: string): [number, number] | undefined {
+  const m = search.match(/^\?@(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)$/)
+  if (!m) return undefined
+  const lat = parseFloat(m[1])
+  const lon = parseFloat(m[2])
+  if (Number.isNaN(lat) || Number.isNaN(lon)) return undefined
+  if (lat < -90 || lat > 90 || lon < -180 || lon > 180) return undefined
+  return [lat, lon]
+}
+
+export function parseUrl(pathname: string, search: string): ParsedUrl {
+  const segs = pathname.split('/').filter(Boolean).map(s => s.toLowerCase())
+  if (segs.length === 0) return { type: 'root' }
+  if (segs.length < 2 || segs.length > 3) return { type: 'root' }
+  const ll = parseLatLon(search)
+  if (segs.length === 2) {
+    return { type: 'slug', countrySlug: segs[0], citySlug: segs[1], ll }
+  }
+  return {
+    type: 'slug',
+    countrySlug: segs[0],
+    admin1Slug: segs[1],
+    citySlug: segs[2],
+    ll,
+  }
+}
+
+export function reconstructFromCoords(
+  parsed: { countrySlug: string; admin1Slug?: string; citySlug: string },
+  ll: [number, number],
+): GeoCity {
+  const country = countryFromSlug(parsed.countrySlug)
+  const admin1 = parsed.admin1Slug ? nameFromSlug(parsed.admin1Slug) : undefined
+  const name = nameFromSlug(parsed.citySlug)
+  return {
+    id: `${parsed.countrySlug}-${parsed.citySlug}`,
+    name,
+    country,
+    ...(admin1 ? { admin1 } : {}),
+    lat: ll[0],
+    lon: ll[1],
+    elev: 0,
+  }
+}
