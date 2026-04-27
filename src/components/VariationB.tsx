@@ -5,9 +5,9 @@ import { TopoMap } from './TopoMap'
 import { ChartToggle } from './Toggles'
 
 const fg = '#0e0e0e'
-const bg = '#ebe6dc'
+const bg = '#e6e5df'
 const accent = '#cc3b1f'
-const muted = '#7a7468'
+const muted = '#75736d'
 
 interface Props {
   city: City

@@ -4,8 +4,8 @@ import { CitySearch } from './CitySearch'
 import { useWeatherStore } from '../store/weatherStore'
 
 const fg = '#111'
-const bg = '#f5f2ea'
-const muted = '#8a8578'
+const bg = '#f0f1ed'
+const muted = '#85847d'
 
 const VIEWS = [
   { id: 'a', label: 'A · CLASSIC' },

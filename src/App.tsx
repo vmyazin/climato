@@ -5,8 +5,8 @@ import { VariationC } from './components/VariationC'
 import { useWeatherStore } from './store/weatherStore'
 import { useClimateNormals } from './hooks/useClimateNormals'
 
-const bg = '#f5f2ea'
-const muted = '#8a8578'
+const bg = '#f0f1ed'
+const muted = '#85847d'
 
 export default function App() {
   const { selectedCity, unit, setUnit, chartVariant, setChartVariant, activeView } = useWeatherStore()
