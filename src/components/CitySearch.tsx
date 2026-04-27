@@ -83,7 +83,7 @@ export function CitySearch({ value, onPick, fg = '#111', muted = '#8a8578', bg =
             textTransform: q ? 'none' : 'uppercase',
           }}
         />
-        <span style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 10, letterSpacing: 1.5, color: muted }}>↵</span>
+        <span style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 20, letterSpacing: 1.5, lineHeight: 0.5, color: muted }}>↵</span>
       </div>
 
       {open && results.length > 0 && (
