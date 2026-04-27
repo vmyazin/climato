@@ -1,4 +1,6 @@
+import { useEffect, useRef, useState } from 'react'
 import type { GeoCity } from '../data/cities'
+import { useWeatherStore } from '../store/weatherStore'
 
 const COUNTRY_TO_SLUG: Record<string, string> = {
   'United States': 'usa',
@@ -170,4 +172,75 @@ export async function resolveSlugViaGeocoding(parsed: {
     lon: r.longitude,
     elev: Math.round(r.elevation ?? 0),
   }
+}
+
+export interface UrlSyncResult {
+  notFoundSlug: string | null
+}
+
+function currentUrl(): string {
+  return window.location.pathname + window.location.search
+}
+
+export function useUrlSync(): UrlSyncResult {
+  const selectedCity = useWeatherStore(s => s.selectedCity)
+  const setCity = useWeatherStore(s => s.setCity)
+  const [notFoundSlug, setNotFoundSlug] = useState<string | null>(null)
+  const skipNextPush = useRef(false)
+
+  useEffect(() => {
+    let cancelled = false
+
+    const resolve = async () => {
+      const parsed = parseUrl(window.location.pathname, window.location.search)
+      if (parsed.type === 'root') return
+
+      if (parsed.ll) {
+        const city = reconstructFromCoords(parsed, parsed.ll)
+        if (cancelled) return
+        skipNextPush.current = true
+        setCity(city)
+        return
+      }
+
+      const city = await resolveSlugViaGeocoding(parsed)
+      if (cancelled) return
+      if (city) {
+        skipNextPush.current = true
+        setCity(city)
+        const { path, query } = toSlug(city)
+        window.history.replaceState(null, '', path + query)
+      } else {
+        setNotFoundSlug(parsed.citySlug)
+      }
+    }
+
+    resolve()
+
+    const onPop = () => {
+      setNotFoundSlug(null)
+      resolve()
+    }
+    window.addEventListener('popstate', onPop)
+    return () => {
+      cancelled = true
+      window.removeEventListener('popstate', onPop)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    if (skipNextPush.current) {
+      skipNextPush.current = false
+      return
+    }
+    setNotFoundSlug(null)
+    const { path, query } = toSlug(selectedCity)
+    const target = path + query
+    if (currentUrl() !== target) {
+      window.history.pushState(null, '', target)
+    }
+  }, [selectedCity])
+
+  return { notFoundSlug }
 }
