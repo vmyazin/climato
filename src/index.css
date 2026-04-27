@@ -20,3 +20,39 @@ button:focus-visible {
 input::placeholder {
   color: #8a8578;
 }
+
+/* Touch: eliminate 300ms tap delay on interactive elements */
+button, [role="button"], input, select {
+  touch-action: manipulation;
+}
+
+/* Prevent text selection on UI controls */
+button, [role="button"] {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Safe-area for notched devices */
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Smooth momentum scrolling on iOS */
+.scroll-area {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Mobile-only overscroll snap for the month picker */
+.month-strip {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.month-strip::-webkit-scrollbar { display: none; }
+.month-strip-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}

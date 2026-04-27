@@ -3,6 +3,7 @@ import { City, MONTHS_LONG, cToF, mmToIn } from '../data/cities'
 import { MonthlyChart } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
 import { ChartToggle } from './Toggles'
+import { useMediaQuery } from '../hooks/useMediaQuery'
 
 const fg = '#141311'
 const bg = '#eeece4'
@@ -51,6 +52,7 @@ export function FitHeadline({ text, maxFontSize, minFontSize, lineHeight, letter
 }
 
 export function VariationC({ city, unit, chartVariant, setChartVariant }: Props) {
+  const isMd = useMediaQuery('(min-width: 768px)')
   const avgHi = city.high.reduce((a, b) => a + b, 0) / 12
   const avgLo = city.low.reduce((a, b) => a + b, 0) / 12
   const sh = unit === 'C' ? avgHi.toFixed(1) : cToF(avgHi).toFixed(1)
@@ -60,6 +62,8 @@ export function VariationC({ city, unit, chartVariant, setChartVariant }: Props)
   const coldest = city.low.indexOf(Math.min(...city.low))
   const wettest = city.precip.indexOf(Math.max(...city.precip))
   const sunniest = city.sun.indexOf(Math.max(...city.sun))
+
+  const pad = isMd ? 32 : 16
 
   return (
     <div style={{
@@ -72,13 +76,13 @@ export function VariationC({ city, unit, chartVariant, setChartVariant }: Props)
       <div style={{
         maxWidth: 1280,
         margin: '0 auto',
-        padding: 32,
+        padding: pad,
         display: 'flex',
         flexDirection: 'column',
         gap: 18,
       }}>
-        {/* Two-column main */}
-        <div style={{ display: 'grid', gridTemplateColumns: '520px minmax(0, 1fr)', gap: 24 }}>
+        {/* Two-column main — stacks on mobile */}
+        <div style={{ display: 'grid', gridTemplateColumns: isMd ? '520px minmax(0, 1fr)' : '1fr', gap: 24 }}>
           {/* LEFT: map + coord block */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             <div style={{ border: `1px solid ${fg}`, background: '#fff', display: 'flex', flexDirection: 'column' }}>
@@ -91,7 +95,7 @@ export function VariationC({ city, unit, chartVariant, setChartVariant }: Props)
                 <span style={{ color: muted }}>1:50 000</span>
               </div>
               <div>
-                <TopoMap lat={city.lat} lon={city.lon} width={520} height={520} stroke={fg} accent={accent} bg={bg} />
+                <TopoMap lat={city.lat} lon={city.lon} width={520} height={isMd ? 520 : 280} stroke={fg} accent={accent} bg={bg} />
               </div>
             </div>
 
@@ -109,8 +113,8 @@ export function VariationC({ city, unit, chartVariant, setChartVariant }: Props)
               <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 12, letterSpacing: 2, color: muted, marginBottom: 14 }}>
                 MONTHLY NORMALS
               </div>
-              <FitHeadline text={city.name.toUpperCase()} maxFontSize={160} minFontSize={72} lineHeight={0.88} letterSpacing={-6} color={fg} />
-              <div style={{ fontSize: 28, fontWeight: 400, color: muted, marginTop: 8, borderBottom: `1px solid ${fg}`, paddingBottom: 14 }}>
+              <FitHeadline text={city.name.toUpperCase()} maxFontSize={160} minFontSize={isMd ? 72 : 40} lineHeight={0.88} letterSpacing={-6} color={fg} />
+              <div style={{ fontSize: isMd ? 28 : 18, fontWeight: 400, color: muted, marginTop: 8, borderBottom: `1px solid ${fg}`, paddingBottom: 14 }}>
                 {city.country}{city.admin1 ? ` · ${city.admin1}` : ''}
               </div>
             </div>
@@ -119,14 +123,14 @@ export function VariationC({ city, unit, chartVariant, setChartVariant }: Props)
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, borderBottom: `1px solid ${fg}` }}>
               <div style={{ padding: '20px 0', borderRight: `1px solid ${fg}20` }}>
                 <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5, color: muted, marginBottom: 6 }}>AVG HIGH / YEAR</div>
-                <div style={{ fontSize: 108, fontWeight: 700, letterSpacing: -4, lineHeight: 0.9, color: accent, fontVariantNumeric: 'tabular-nums' }}>
-                  {sh}<span style={{ fontSize: 56 }}>°{unit}</span>
+                <div style={{ fontSize: isMd ? 108 : 'clamp(48px, 12vw, 80px)', fontWeight: 700, letterSpacing: -4, lineHeight: 0.9, color: accent, fontVariantNumeric: 'tabular-nums' }}>
+                  {sh}<span style={{ fontSize: isMd ? 56 : 'clamp(24px, 6vw, 40px)' }}>°{unit}</span>
                 </div>
               </div>
               <div style={{ padding: '20px 0 20px 20px' }}>
                 <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5, color: muted, marginBottom: 6 }}>AVG LOW / YEAR</div>
-                <div style={{ fontSize: 108, fontWeight: 700, letterSpacing: -4, lineHeight: 0.9, color: fg, fontVariantNumeric: 'tabular-nums' }}>
-                  {sl}<span style={{ fontSize: 56 }}>°{unit}</span>
+                <div style={{ fontSize: isMd ? 108 : 'clamp(48px, 12vw, 80px)', fontWeight: 700, letterSpacing: -4, lineHeight: 0.9, color: fg, fontVariantNumeric: 'tabular-nums' }}>
+                  {sl}<span style={{ fontSize: isMd ? 56 : 'clamp(24px, 6vw, 40px)' }}>°{unit}</span>
                 </div>
               </div>
             </div>
@@ -147,21 +151,22 @@ export function VariationC({ city, unit, chartVariant, setChartVariant }: Props)
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',
             padding: '10px 14px', borderBottom: `1px solid ${fg}`,
             fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5,
+            flexWrap: 'wrap', gap: 8,
           }}>
             <span>FIG 02 · MONTHLY TEMPERATURE PROFILE</span>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
               <ChartToggle chartVariant={chartVariant} setChartVariant={setChartVariant} fg={fg} bg="#fff" />
               <span style={{ color: muted }}>°{unit} · HIGH / LOW · 12 MONTHS</span>
             </div>
           </div>
           <div style={{ padding: 16 }}>
-            <MonthlyChart city={city} unit={unit} variant={chartVariant} width={1220} height={220} fg={fg} accent={accent} muted={muted} />
+            <MonthlyChart city={city} unit={unit} variant={chartVariant} height={isMd ? 220 : 180} fg={fg} accent={accent} muted={muted} />
           </div>
         </div>
 
         {/* Footer */}
         <div style={{
-          display: 'flex', justifyContent: 'space-between',
+          display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 4,
           fontFamily: "'JetBrains Mono', ui-monospace, monospace",
           fontSize: 10, letterSpacing: 1.5, color: muted,
           borderTop: `1px solid ${fg}`, paddingTop: 10,
