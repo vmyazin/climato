@@ -48,15 +48,11 @@ export function CurrentTempBadge({ tempC, unit, fg, muted, accent, variant = 'bl
       <>
         <style>{liveDotKeyframes}</style>
         <div
+          className="flex items-center gap-2.5 mt-3 w-fit"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
             border: `1px solid ${fg}`,
             padding: '6px 12px',
             background: '#fff',
-            marginTop: 12,
-            width: 'fit-content',
             fontFamily: "'JetBrains Mono', ui-monospace, monospace",
           }}
         >
@@ -84,20 +80,10 @@ export function CurrentTempBadge({ tempC, unit, fg, muted, accent, variant = 'bl
     return (
       <>
         <style>{liveDotKeyframes}</style>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'baseline',
-            gap: 14,
-            marginTop: 14,
-            paddingBottom: 4,
-          }}
-        >
+        <div className="flex items-baseline gap-3.5 mt-3.5 pb-1">
           <span
+            className="inline-flex items-center gap-2"
             style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 8,
               fontFamily: "'JetBrains Mono', ui-monospace, monospace",
               fontSize: 11,
               letterSpacing: 2,
@@ -128,15 +114,12 @@ export function CurrentTempBadge({ tempC, unit, fg, muted, accent, variant = 'bl
     <>
       <style>{liveDotKeyframes}</style>
       <div
+        className="inline-flex items-center gap-3 whitespace-nowrap"
         style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: 12,
           border: `1px solid ${fg}`,
           padding: '8px 14px',
           background: '#fff',
           fontFamily: "'JetBrains Mono', ui-monospace, monospace",
-          whiteSpace: 'nowrap',
         }}
       >
         <LiveDot accent={accent} />

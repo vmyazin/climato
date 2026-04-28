@@ -40,18 +40,15 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
       fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
       boxSizing: 'border-box',
     }}>
-      <div style={{
+      <div className="flex flex-col gap-5" style={{
         maxWidth: 1280,
         margin: '0 auto',
         padding: pad,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 20,
       }}>
         {/* Month picker strip */}
         {isMd ? (
           // Desktop: all 12 months in one row
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', border: `1px solid ${fg}` }}>
+          <div className="grid grid-cols-12" style={{ border: `1px solid ${fg}` }}>
             {MONTHS.map((mo, i) => (
               <button key={mo} onClick={() => setM(i)} style={{
                 padding: '10px 0',
@@ -66,7 +63,7 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
           </div>
         ) : (
           // Mobile: 2 rows of 6 (no horizontal scroll, just wrap)
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', border: `1px solid ${fg}` }}>
+          <div className="grid grid-cols-6" style={{ border: `1px solid ${fg}` }}>
             {MONTHS.map((mo, i) => (
               <button key={mo} onClick={() => setM(i)} style={{
                 padding: '10px 0',
@@ -110,7 +107,7 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
           {/* On mobile: show mean + hi/lo side by side in a grid instead of overlapping */}
           {isMd ? (
             <>
-              <div style={{ display: 'flex', alignItems: 'flex-start', lineHeight: 0.82 }}>
+              <div className="flex items-start" style={{ lineHeight: 0.82 }}>
                 <span style={{ fontSize: 'min(520px, 40vw)', fontWeight: 700, letterSpacing: -24, color: fg, fontVariantNumeric: 'tabular-nums' }}>
                   {mean}
                 </span>
@@ -119,7 +116,7 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
                 </span>
               </div>
               {/* Hi / Lo overlay */}
-              <div style={{ position: 'absolute', right: 8, top: 60, textAlign: 'right', display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <div className="flex flex-col gap-3.5" style={{ position: 'absolute', right: 8, top: 60, textAlign: 'right' }}>
                 <div>
                   <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5, color: muted }}>HIGH</div>
                   <div style={{ fontSize: 72, fontWeight: 600, letterSpacing: -2, color: accent, lineHeight: 1 }}>{hi}°</div>
@@ -132,8 +129,8 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
             </>
           ) : (
             // Mobile hero: big number left, hi/lo stacked right
-            <div style={{ display: 'flex', alignItems: 'flex-end', gap: 16, marginTop: 8 }}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', lineHeight: 0.82 }}>
+            <div className="flex items-end gap-4 mt-2">
+              <div className="flex items-start" style={{ lineHeight: 0.82 }}>
                 <span style={{ fontSize: 'clamp(80px, 25vw, 160px)', fontWeight: 700, letterSpacing: -8, color: fg, fontVariantNumeric: 'tabular-nums' }}>
                   {mean}
                 </span>
@@ -141,7 +138,7 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
                   °{unit}
                 </span>
               </div>
-              <div style={{ textAlign: 'right', marginBottom: 8, display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <div className="flex flex-col gap-2.5 mb-2" style={{ textAlign: 'right' }}>
                 <div>
                   <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 10, letterSpacing: 1.5, color: muted }}>HIGH</div>
                   <div style={{ fontSize: 40, fontWeight: 600, letterSpacing: -1.5, color: accent, lineHeight: 1 }}>{hi}°</div>
@@ -155,7 +152,7 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
           )}
 
           {/* Sun info row — 2 cols on mobile */}
-          <div style={{ display: 'grid', gridTemplateColumns: isMd ? 'repeat(4, 1fr)' : 'repeat(2, 1fr)', borderTop: `1px solid ${fg}`, borderLeft: `1px solid ${fg}20`, marginTop: 32 }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 mt-8" style={{ borderTop: `1px solid ${fg}`, borderLeft: `1px solid ${fg}20` }}>
             <BStat label="SUNRISE" value={city.sunrise[m]} isMd={isMd} />
             <BStat label="SUNSET" value={city.sunset[m]} isMd={isMd} />
             <BStat label="SUN HRS/DAY" value={city.sun[m].toFixed(1)} isMd={isMd} />
@@ -164,40 +161,36 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
         </div>
 
         {/* Secondary: chart + map — stack on mobile */}
-        <div style={{ display: 'grid', gridTemplateColumns: isMd ? '1.5fr 1fr' : '1fr', gap: 16 }}>
-          <div style={{ border: `1px solid ${fg}`, background: '#fff', display: 'flex', flexDirection: 'column' }}>
-            <div style={{
-              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+        <div className="grid gap-4" style={{ gridTemplateColumns: isMd ? '1.5fr 1fr' : '1fr' }}>
+          <div className="flex flex-col" style={{ border: `1px solid ${fg}`, background: '#fff' }}>
+            <div className="flex flex-wrap items-center justify-between gap-2" style={{
               padding: '10px 14px', borderBottom: `1px solid ${fg}`,
               fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5,
-              flexWrap: 'wrap', gap: 8,
             }}>
               <span>12-MONTH PROFILE / °{unit}</span>
               <ChartToggle chartVariant={chartVariant} setChartVariant={setChartVariant} fg={fg} bg="#fff" />
             </div>
-            <div style={{ flex: 1, padding: 12 }}>
+            <div className="flex-1" style={{ padding: 12 }}>
               <MonthlyChart city={city} unit={unit} variant={chartVariant} height={isMd ? 300 : 200} fg={fg} accent={accent} muted={muted} />
             </div>
           </div>
 
-          <div style={{ border: `1px solid ${fg}`, background: '#fff', display: 'flex', flexDirection: 'column' }}>
-            <div style={{
-              display: 'flex', justifyContent: 'space-between',
+          <div className="flex flex-col" style={{ border: `1px solid ${fg}`, background: '#fff' }}>
+            <div className="flex justify-between" style={{
               padding: '10px 14px', borderBottom: `1px solid ${fg}`,
               fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5,
             }}>
               <span>LOCATION</span>
               <span style={{ color: muted }}>{city.lat.toFixed(2)}, {city.lon.toFixed(2)}</span>
             </div>
-            <div style={{ flex: 1 }}>
+            <div className="flex-1">
               <TopoMap lat={city.lat} lon={city.lon} width={420} height={isMd ? 300 : 200} stroke={fg} accent={accent} bg={bg} />
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <div style={{
-          display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 4,
+        <div className="flex flex-wrap justify-between gap-1" style={{
           fontFamily: "'JetBrains Mono', ui-monospace, monospace",
           fontSize: 10, letterSpacing: 1.5, color: muted,
           borderTop: `1px solid ${fg}`, paddingTop: 10,
@@ -213,7 +206,7 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
 
 function BStat({ label, value, last = false, isMd = true }: { label: string; value: string; last?: boolean; isMd?: boolean }) {
   return (
-    <div style={{ padding: isMd ? '12px 16px' : '10px 12px', borderRight: last ? 'none' : `1px solid ${fg}20`, borderBottom: `1px solid ${fg}`, display: 'flex', flexDirection: 'column', gap: 4 }}>
+    <div className="flex flex-col gap-1" style={{ padding: isMd ? '12px 16px' : '10px 12px', borderRight: last ? 'none' : `1px solid ${fg}20`, borderBottom: `1px solid ${fg}` }}>
       <span style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 10, letterSpacing: 1.5, color: muted }}>{label}</span>
       <span style={{ fontSize: isMd ? 24 : 18, fontWeight: 500, color: fg, fontVariantNumeric: 'tabular-nums', letterSpacing: -0.5 }}>{value}</span>
     </div>

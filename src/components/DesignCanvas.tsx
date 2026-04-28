@@ -194,7 +194,7 @@ export function DCSection({ title, subtitle, gap = 48, children }: DCSectionProp
           <div style={{ fontSize: 14, fontWeight: 400, color: DC.subtitle }}>{subtitle}</div>
         )}
       </div>
-      <div style={{ display: 'flex', gap, padding: '0 60px', alignItems: 'flex-start', width: 'max-content' }}>
+      <div className="flex items-start w-max" style={{ gap, padding: '0 60px' }}>
         {children}
       </div>
     </div>

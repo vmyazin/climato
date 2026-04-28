@@ -41,13 +41,10 @@ export function VariationA({ city, unit, chartVariant, setChartVariant, currentT
       fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
       boxSizing: 'border-box',
     }}>
-      <div style={{
+      <div className="flex flex-col gap-4" style={{
         maxWidth: 1280,
         margin: '0 auto',
         padding: pad,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 16,
       }}>
         {/* Hero row */}
         <div style={{ marginTop: 8 }}>
@@ -64,9 +61,7 @@ export function VariationA({ city, unit, chartVariant, setChartVariant, currentT
         </div>
 
         {/* Stats strip — 2-col on mobile, 4-col on desktop */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: isMd ? 'repeat(4, 1fr)' : 'repeat(2, 1fr)',
+        <div className="grid grid-cols-2 md:grid-cols-4" style={{
           borderTop: `1px solid ${fg}`,
           borderLeft: `1px solid ${fg}`,
         }}>
@@ -88,7 +83,7 @@ export function VariationA({ city, unit, chartVariant, setChartVariant, currentT
         </Module>
 
         {/* Precip + Sun — stack on mobile */}
-        <div style={{ display: 'grid', gridTemplateColumns: isMd ? '1fr 1fr' : '1fr', gap: 16 }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Module title="PRECIPITATION" subtitle={unit === 'C' ? 'MM / MONTH' : 'IN / MONTH'}>
             <SmallBars data={unit === 'C' ? city.precip : city.precip.map(mmToIn)} fg={fg} accent="#2b5fae" unit={unit === 'C' ? 'mm' : 'in'} height={160} />
           </Module>
@@ -99,11 +94,11 @@ export function VariationA({ city, unit, chartVariant, setChartVariant, currentT
 
         {/* Map module — stack on mobile */}
         <Module title="LOCATION / TOPOGRAPHY" subtitle={`${city.lat >= 0 ? '+' : ''}${city.lat.toFixed(4)}, ${city.lon >= 0 ? '+' : ''}${city.lon.toFixed(4)}`}>
-          <div style={{ display: 'grid', gridTemplateColumns: isMd ? '1fr 220px' : '1fr', gap: 0 }}>
+          <div className="grid" style={{ gridTemplateColumns: isMd ? '1fr 220px' : '1fr' }}>
             <div style={{ borderRight: isMd ? `1px solid ${fg}20` : 'none', borderBottom: isMd ? 'none' : `1px solid ${fg}20` }}>
               <TopoMap lat={city.lat} lon={city.lon} width={920} height={isMd ? 320 : 240} stroke={fg} accent={accent} bg={bg} />
             </div>
-            <div style={{ padding: '16px 20px', display: 'grid', gridTemplateColumns: isMd ? '1fr' : '1fr 1fr', gap: 10 }}>
+            <div className="grid grid-cols-2 md:grid-cols-1 gap-2.5" style={{ padding: '16px 20px' }}>
               <MapKV k="LAT"           v={`${city.lat.toFixed(4)}°`} />
               <MapKV k="LON"           v={`${city.lon.toFixed(4)}°`} />
               <MapKV k="ELEV"          v={`${city.elev} m`} />
@@ -117,8 +112,7 @@ export function VariationA({ city, unit, chartVariant, setChartVariant, currentT
         </Module>
 
         {/* Footer */}
-        <div style={{
-          display: 'flex', justifyContent: 'space-between',
+        <div className="flex justify-between" style={{
           fontFamily: "'JetBrains Mono', ui-monospace, monospace",
           fontSize: 10, letterSpacing: 1.5, color: muted,
           borderTop: `1px solid ${fg}`, paddingTop: 10,
@@ -133,7 +127,7 @@ export function VariationA({ city, unit, chartVariant, setChartVariant, currentT
 
 function Stat({ label, value, isAccent = false, isMd = true }: { label: string; value: string; isAccent?: boolean; isMd?: boolean }) {
   return (
-    <div style={{ padding: isMd ? '14px 18px' : '12px 14px', borderRight: `1px solid ${fg}20`, borderBottom: `1px solid ${fg}`, borderTop: 'none', display: 'flex', flexDirection: 'column', gap: 6 }}>
+    <div className="flex flex-col gap-1.5" style={{ padding: isMd ? '14px 18px' : '12px 14px', borderRight: `1px solid ${fg}20`, borderBottom: `1px solid ${fg}`, borderTop: 'none' }}>
       <span style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 10, letterSpacing: 1.5, color: muted }}>{label}</span>
       <span style={{ fontSize: isMd ? 28 : 20, fontWeight: 600, letterSpacing: -0.5, color: isAccent ? accent : fg, fontVariantNumeric: 'tabular-nums' }}>{value}</span>
     </div>
@@ -142,27 +136,25 @@ function Stat({ label, value, isAccent = false, isMd = true }: { label: string; 
 
 function Module({ title, subtitle, action, children }: { title: string; subtitle: string; action?: React.ReactNode; children: React.ReactNode }) {
   return (
-    <div style={{ border: `1px solid ${fg}`, background: '#fff', display: 'flex', flexDirection: 'column' }}>
-      <div style={{
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+    <div className="flex flex-col" style={{ border: `1px solid ${fg}`, background: '#fff' }}>
+      <div className="flex flex-wrap items-center justify-between gap-2" style={{
         padding: '10px 14px', borderBottom: `1px solid ${fg}`,
         fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5,
-        flexWrap: 'wrap', gap: 8,
       }}>
         <span style={{ color: fg }}>{title}</span>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+        <div className="flex flex-wrap items-center gap-4">
           {action}
           <span style={{ color: muted }}>{subtitle}</span>
         </div>
       </div>
-      <div style={{ flex: 1 }}>{children}</div>
+      <div className="flex-1">{children}</div>
     </div>
   )
 }
 
 function MapKV({ k, v }: { k: string; v: string }) {
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, borderBottom: `1px solid ${fg}14`, paddingBottom: 6 }}>
+    <div className="flex justify-between" style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, borderBottom: `1px solid ${fg}14`, paddingBottom: 6 }}>
       <span style={{ color: muted, letterSpacing: 1.2 }}>{k}</span>
       <span style={{ color: fg }}>{v}</span>
     </div>

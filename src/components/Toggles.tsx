@@ -28,12 +28,12 @@ const btnStyle = (active: boolean, fg: string, bg: string) => ({
 
 export function Toggles({ unit, setUnit, chartVariant, setChartVariant, fg = '#111', bg = '#fff', row = false }: TogglesProps) {
   return (
-    <div style={{ display: 'flex', flexDirection: row ? 'row' : 'column', gap: 10, alignItems: row ? 'center' : 'flex-end' }}>
+    <div className={`flex gap-2.5 ${row ? 'flex-row items-center' : 'flex-col items-end'}`}>
       <ToggleGroup.Root
         type="single"
         value={unit}
         onValueChange={v => { if (v) setUnit(v as 'C' | 'F') }}
-        style={{ display: 'flex' }}
+        className="flex"
       >
         {(['C', 'F'] as const).map(u => (
           <ToggleGroup.Item
@@ -50,7 +50,7 @@ export function Toggles({ unit, setUnit, chartVariant, setChartVariant, fg = '#1
         type="single"
         value={chartVariant}
         onValueChange={v => { if (v) setChartVariant(v as 'bar' | 'line' | 'ring') }}
-        style={{ display: 'flex' }}
+        className="flex"
       >
         {(['bar', 'line', 'ring'] as const).map(v => (
           <ToggleGroup.Item
@@ -72,7 +72,7 @@ export function UnitToggle({ unit, setUnit, fg = '#111', bg = '#fff' }: Pick<Tog
       type="single"
       value={unit}
       onValueChange={v => { if (v) setUnit(v as 'C' | 'F') }}
-      style={{ display: 'flex', gap: 6 }}
+      className="flex gap-1.5"
     >
       {(['C', 'F'] as const).map(u => (
         <ToggleGroup.Item
@@ -101,7 +101,7 @@ export function ChartToggle({ chartVariant, setChartVariant, fg = '#111', bg = '
       type="single"
       value={chartVariant}
       onValueChange={v => { if (v) setChartVariant(v as 'bar' | 'line' | 'ring') }}
-      style={{ display: 'flex', gap: 4 }}
+      className="flex gap-1"
     >
       {(['bar', 'line', 'ring'] as const).map(v => (
         <ToggleGroup.Item

@@ -34,7 +34,7 @@ export default function App() {
       <main style={{ opacity: isPending && !notFoundSlug ? 0.6 : 1, transition: 'opacity 0.25s', paddingBottom: isMd ? 0 : 56 }}>
         {notFoundSlug && <NotFound citySlug={notFoundSlug} />}
         {!notFoundSlug && isError && (
-          <div style={{ padding: '80px 32px', textAlign: 'center', color: muted, fontFamily: "'JetBrains Mono', monospace", fontSize: 13, letterSpacing: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
+          <div className="flex flex-col items-center gap-5" style={{ padding: '80px 32px', textAlign: 'center', color: muted, fontFamily: "'JetBrains Mono', monospace", fontSize: 13, letterSpacing: 1 }}>
             <div>CLIMATE DATA UNAVAILABLE — CHECK NETWORK</div>
             <button
               onClick={handleRetry}

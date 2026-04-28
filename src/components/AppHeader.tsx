@@ -55,11 +55,11 @@ export function AppHeader() {
   if (isMd) {
     // Desktop: original 3-column sticky header
     return (
-      <header style={{
+      <header className="grid items-center gap-6" style={{
         position: 'sticky', top: 0, zIndex: 100,
         background: bg, borderBottom: `1px solid ${fg}`,
-        display: 'grid', gridTemplateColumns: 'auto 1fr auto',
-        alignItems: 'center', gap: 24, padding: '0 32px', height: 56,
+        gridTemplateColumns: 'auto 1fr auto',
+        padding: '0 32px', height: 56,
       }}>
         <div style={{ fontFamily: "'Inter Tight', Inter, system-ui, sans-serif", fontSize: 16, fontWeight: 700, letterSpacing: -0.5, color: fg, whiteSpace: 'nowrap' }}>
           CLIMATO
@@ -69,8 +69,8 @@ export function AppHeader() {
           <CitySearch value={selectedCity} onPick={setCity} fg={fg} muted={muted} bg={bg} compact />
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
-          <ToggleGroup.Root type="single" value={activeView} onValueChange={v => { if (v) setActiveView(v as 'a' | 'b' | 'c') }} style={{ display: 'flex' }}>
+        <div className="flex items-center gap-3 shrink-0">
+          <ToggleGroup.Root type="single" value={activeView} onValueChange={v => { if (v) setActiveView(v as 'a' | 'b' | 'c') }} className="flex">
             {VIEWS.map(v => (
               <ToggleGroup.Item key={v.id} value={v.id} style={btn(activeView === v.id)}>{v.label}</ToggleGroup.Item>
             ))}
@@ -78,7 +78,7 @@ export function AppHeader() {
 
           <div style={{ width: 1, height: 20, background: `${fg}30` }} />
 
-          <ToggleGroup.Root type="single" value={unit} onValueChange={v => { if (v) setUnit(v as 'C' | 'F') }} style={{ display: 'flex' }}>
+          <ToggleGroup.Root type="single" value={unit} onValueChange={v => { if (v) setUnit(v as 'C' | 'F') }} className="flex">
             {(['C', 'F'] as const).map(u => (
               <ToggleGroup.Item key={u} value={u} style={btn(unit === u)}>°{u}</ToggleGroup.Item>
             ))}
@@ -97,14 +97,13 @@ export function AppHeader() {
         background: bg, borderBottom: `1px solid ${fg}`,
       }}>
         {/* Row 1: brand + unit */}
-        <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        <div className="flex items-center justify-between" style={{
           padding: '0 16px', height: 48,
         }}>
           <div style={{ fontFamily: "'Inter Tight', Inter, system-ui, sans-serif", fontSize: 15, fontWeight: 700, letterSpacing: -0.5, color: fg }}>
             CLIMATO
           </div>
-          <ToggleGroup.Root type="single" value={unit} onValueChange={v => { if (v) setUnit(v as 'C' | 'F') }} style={{ display: 'flex' }}>
+          <ToggleGroup.Root type="single" value={unit} onValueChange={v => { if (v) setUnit(v as 'C' | 'F') }} className="flex">
             {(['C', 'F'] as const).map(u => (
               <ToggleGroup.Item key={u} value={u} style={{
                 ...btn(unit === u),
@@ -123,17 +122,16 @@ export function AppHeader() {
       </header>
 
       {/* Fixed bottom bar: view switcher */}
-      <div style={{
+      <div className="flex" style={{
         position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 100,
         background: bg, borderTop: `1px solid ${fg}`,
-        display: 'flex',
         paddingBottom: 'max(0px, env(safe-area-inset-bottom))',
       }}>
         <ToggleGroup.Root
           type="single"
           value={activeView}
           onValueChange={v => { if (v) setActiveView(v as 'a' | 'b' | 'c') }}
-          style={{ display: 'flex', width: '100%' }}
+          className="flex w-full"
         >
           {VIEWS.map(v => (
             <ToggleGroup.Item key={v.id} value={v.id} style={mobileBtn(activeView === v.id)}>

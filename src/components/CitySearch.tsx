@@ -78,8 +78,7 @@ export function CitySearch({ value, onPick, fg = '#111', muted = '#8a8578', bg =
 
   return (
     <div ref={boxRef} style={{ position: 'relative', width: '100%', zIndex: 9999 }}>
-      <div style={{
-        display: 'flex', alignItems: 'center', gap: 10,
+      <div className="flex items-center gap-2.5" style={{
         borderTop: `1px solid ${fg}`, borderBottom: `1px solid ${fg}`,
         padding: `${padV}px 14px`, background: bg,
       }}>
@@ -112,8 +111,9 @@ export function CitySearch({ value, onPick, fg = '#111', muted = '#8a8578', bg =
             const active = i === idx
             return (
               <div key={c.id} onMouseEnter={() => setIdx(i)} onMouseDown={e => { e.preventDefault(); pick(c) }}
+                className="grid items-center gap-3"
                 style={{
-                  display: 'grid', gridTemplateColumns: '28px 1fr auto', gap: 12, alignItems: 'center',
+                  gridTemplateColumns: '28px 1fr auto',
                   padding: '12px 14px',
                   background: active ? fg : 'transparent', color: active ? bg : fg,
                   borderTop: i === 0 ? 'none' : `1px solid ${fg}14`, cursor: 'pointer',
