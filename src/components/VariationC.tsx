@@ -90,9 +90,10 @@ export function VariationC({ city, unit, chartVariant, setChartVariant, currentT
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             <div style={{ border: `1px solid ${fg}`, background: '#fff', display: 'flex', flexDirection: 'column' }}>
               <div style={{
-                display: 'flex', justifyContent: 'space-between',
+                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                 padding: '10px 14px', borderBottom: `1px solid ${fg}`,
                 fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5,
+                flexWrap: 'wrap', gap: 8,
               }}>
                 <span>FIG 01 · TOPOGRAPHIC LOCATOR</span>
                 <span style={{ color: muted }}>1:50 000</span>
@@ -111,12 +112,27 @@ export function VariationC({ city, unit, chartVariant, setChartVariant, currentT
           </div>
 
           {/* RIGHT: editorial typography */}
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: isMd ? 'space-between' : 'flex-start', gap: isMd ? 0 : 20 }}>
             <div>
-              <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 12, letterSpacing: 2, color: muted, marginBottom: 14 }}>
+              <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: isMd ? 12 : 10, letterSpacing: 2, color: muted, marginBottom: isMd ? 14 : 10 }}>
                 MONTHLY NORMALS
               </div>
-              <FitHeadline text={city.name.toUpperCase()} maxFontSize={160} minFontSize={isMd ? 72 : 40} lineHeight={0.88} letterSpacing={-6} color={fg} />
+              {isMd ? (
+                <FitHeadline text={city.name.toUpperCase()} maxFontSize={160} minFontSize={72} lineHeight={0.88} letterSpacing={-6} color={fg} />
+              ) : (
+                <div style={{
+                  fontWeight: 700,
+                  fontSize: 'clamp(44px, 14vw, 96px)',
+                  lineHeight: 0.92,
+                  letterSpacing: -2,
+                  color: fg,
+                  wordBreak: 'break-word',
+                  overflowWrap: 'anywhere',
+                  hyphens: 'auto',
+                }}>
+                  {city.name.toUpperCase()}
+                </div>
+              )}
               <div style={{ fontSize: isMd ? 28 : 18, fontWeight: 400, color: muted, marginTop: 8 }}>
                 {city.country}{city.admin1 ? ` · ${city.admin1}` : ''}
               </div>
@@ -127,26 +143,26 @@ export function VariationC({ city, unit, chartVariant, setChartVariant, currentT
 
             {/* Pull-quote annual numbers */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, borderBottom: `1px solid ${fg}` }}>
-              <div style={{ padding: '20px 0', borderRight: `1px solid ${fg}20` }}>
-                <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5, color: muted, marginBottom: 6 }}>AVG HIGH / YEAR</div>
-                <div style={{ fontSize: isMd ? 108 : 'clamp(48px, 12vw, 80px)', fontWeight: 700, letterSpacing: -4, lineHeight: 0.9, color: accent, fontVariantNumeric: 'tabular-nums' }}>
-                  {sh}<span style={{ fontSize: isMd ? 56 : 'clamp(24px, 6vw, 40px)' }}>°{unit}</span>
+              <div style={{ padding: isMd ? '20px 0' : '14px 0', borderRight: `1px solid ${fg}20` }}>
+                <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: isMd ? 11 : 10, letterSpacing: 1.5, color: muted, marginBottom: 6 }}>AVG HIGH / YEAR</div>
+                <div style={{ fontSize: isMd ? 108 : 'clamp(44px, 13vw, 72px)', fontWeight: 700, letterSpacing: isMd ? -4 : -1.5, lineHeight: 0.9, color: accent, fontVariantNumeric: 'tabular-nums' }}>
+                  {sh}<span style={{ fontSize: isMd ? 56 : 'clamp(20px, 6vw, 36px)' }}>°{unit}</span>
                 </div>
               </div>
-              <div style={{ padding: '20px 0 20px 20px' }}>
-                <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5, color: muted, marginBottom: 6 }}>AVG LOW / YEAR</div>
-                <div style={{ fontSize: isMd ? 108 : 'clamp(48px, 12vw, 80px)', fontWeight: 700, letterSpacing: -4, lineHeight: 0.9, color: fg, fontVariantNumeric: 'tabular-nums' }}>
-                  {sl}<span style={{ fontSize: isMd ? 56 : 'clamp(24px, 6vw, 40px)' }}>°{unit}</span>
+              <div style={{ padding: isMd ? '20px 0 20px 20px' : '14px 0 14px 14px' }}>
+                <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: isMd ? 11 : 10, letterSpacing: 1.5, color: muted, marginBottom: 6 }}>AVG LOW / YEAR</div>
+                <div style={{ fontSize: isMd ? 108 : 'clamp(44px, 13vw, 72px)', fontWeight: 700, letterSpacing: isMd ? -4 : -1.5, lineHeight: 0.9, color: fg, fontVariantNumeric: 'tabular-nums' }}>
+                  {sl}<span style={{ fontSize: isMd ? 56 : 'clamp(20px, 6vw, 36px)' }}>°{unit}</span>
                 </div>
               </div>
             </div>
 
             {/* Notes grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 0 }}>
-              <Note n="01" label="HOTTEST MONTH"  body={`${MONTHS_LONG[hottest].toUpperCase()} — ${unit === 'C' ? city.high[hottest] : Math.round(cToF(city.high[hottest]))}°${unit} AVERAGE HIGH.`} />
-              <Note n="02" label="COLDEST MONTH"  body={`${MONTHS_LONG[coldest].toUpperCase()} — ${unit === 'C' ? city.low[coldest] : Math.round(cToF(city.low[coldest]))}°${unit} AVERAGE LOW.`} last />
-              <Note n="03" label="WETTEST MONTH"  body={`${MONTHS_LONG[wettest].toUpperCase()} — ${unit === 'C' ? city.precip[wettest] + ' mm' : mmToIn(city.precip[wettest]) + ' in'} PRECIP.`} />
-              <Note n="04" label="SUNNIEST MONTH" body={`${MONTHS_LONG[sunniest].toUpperCase()} — ${city.sun[sunniest].toFixed(1)} HRS / DAY.`} last />
+            <div style={{ display: 'grid', gridTemplateColumns: isMd ? 'repeat(2, 1fr)' : '1fr', gap: 0 }}>
+              <Note n="01" label="HOTTEST MONTH"  body={`${MONTHS_LONG[hottest].toUpperCase()} — ${unit === 'C' ? city.high[hottest] : Math.round(cToF(city.high[hottest]))}°${unit} AVERAGE HIGH.`} isMd={isMd} />
+              <Note n="02" label="COLDEST MONTH"  body={`${MONTHS_LONG[coldest].toUpperCase()} — ${unit === 'C' ? city.low[coldest] : Math.round(cToF(city.low[coldest]))}°${unit} AVERAGE LOW.`} last isMd={isMd} />
+              <Note n="03" label="WETTEST MONTH"  body={`${MONTHS_LONG[wettest].toUpperCase()} — ${unit === 'C' ? city.precip[wettest] + ' mm' : mmToIn(city.precip[wettest]) + ' in'} PRECIP.`} isMd={isMd} />
+              <Note n="04" label="SUNNIEST MONTH" body={`${MONTHS_LONG[sunniest].toUpperCase()} — ${city.sun[sunniest].toFixed(1)} HRS / DAY.`} last isMd={isMd} />
             </div>
           </div>
         </div>
@@ -199,14 +215,17 @@ function CKV({ k, v, last = false }: { k: string; v: string; last?: boolean }) {
   )
 }
 
-function Note({ n, label, body, last = false }: { n: string; label: string; body: string; last?: boolean }) {
+function Note({ n, label, body, last = false, isMd = true }: { n: string; label: string; body: string; last?: boolean; isMd?: boolean }) {
+  const isLastRow = n === '03' || n === '04'
   return (
     <div style={{
       padding: '16px 0',
-      paddingRight: last ? 0 : 20,
-      paddingLeft: (n === '02' || n === '04') ? 20 : 0,
-      borderRight: last ? 'none' : `1px solid ${fg}20`,
-      borderBottom: (n === '01' || n === '02') ? `1px solid ${fg}20` : 'none',
+      paddingRight: isMd ? (last ? 0 : 20) : 0,
+      paddingLeft: isMd && (n === '02' || n === '04') ? 20 : 0,
+      borderRight: isMd ? (last ? 'none' : `1px solid ${fg}20`) : 'none',
+      borderBottom: isMd
+        ? ((n === '01' || n === '02') ? `1px solid ${fg}20` : 'none')
+        : (isLastRow ? 'none' : `1px solid ${fg}20`),
       display: 'flex', gap: 12,
     }}>
       <span style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, color: accent, letterSpacing: 1.5 }}>{n}</span>
