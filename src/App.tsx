@@ -1,5 +1,6 @@
 import { AppHeader } from './components/AppHeader'
 import { NotFound } from './components/NotFound'
+import { SmokedGlassOverlay } from './components/SmokedGlassOverlay'
 import { VariationA } from './components/VariationA'
 import { VariationB } from './components/VariationB'
 import { VariationC } from './components/VariationC'
@@ -17,7 +18,7 @@ export default function App() {
   const { notFoundSlug } = useUrlSync()
   const climate = useClimateNormals(notFoundSlug ? undefined : selectedCity)
   const current = useCurrentTemp(notFoundSlug ? undefined : selectedCity)
-  const { data: city, isPending, isError, isFetching: isClimateFetching } = climate
+  const { data: city, isPending, isError, isFetching: isClimateFetching, isPlaceholderData } = climate
   const { data: currentTemp } = current
   const isMd = useMediaQuery('(min-width: 768px)')
 
@@ -69,6 +70,7 @@ export default function App() {
           </>
         )}
       </main>
+      <SmokedGlassOverlay active={isPlaceholderData && !notFoundSlug} />
     </div>
   )
 }
