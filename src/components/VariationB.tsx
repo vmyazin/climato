@@ -189,16 +189,6 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="flex flex-wrap justify-between gap-1" style={{
-          fontFamily: "'JetBrains Mono', ui-monospace, monospace",
-          fontSize: 10, letterSpacing: 1.5, color: muted,
-          borderTop: `1px solid ${fg}`, paddingTop: 10,
-        }}>
-          <span>VIEW B · HERO NUMERIC</span>
-          <span>SELECTED MONTH / {MONTHS[m]}</span>
-          <span>© CLIMATO 2026</span>
-        </div>
       </div>
     </div>
   )

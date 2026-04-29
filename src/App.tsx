@@ -1,4 +1,5 @@
 import { AppHeader } from './components/AppHeader'
+import { Footer } from './components/Footer'
 import { NotFound } from './components/NotFound'
 import { SmokedGlassOverlay } from './components/SmokedGlassOverlay'
 import { VariationA } from './components/VariationA'
@@ -69,6 +70,7 @@ export default function App() {
             {activeView === 'c' && <VariationC {...sharedProps} />}
           </>
         )}
+        <Footer />
       </main>
       <SmokedGlassOverlay active={isPlaceholderData && !notFoundSlug} />
     </div>

@@ -1,6 +1,7 @@
 import { CSSProperties } from 'react'
 import * as ToggleGroup from '@radix-ui/react-toggle-group'
 import { CitySearch } from './CitySearch'
+import { LogoMark } from './LogoMark'
 import { useWeatherStore } from '../store/weatherStore'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 
@@ -61,7 +62,8 @@ export function AppHeader() {
         gridTemplateColumns: 'auto 1fr auto',
         padding: '0 32px', height: 56,
       }}>
-        <div style={{ fontFamily: "'Inter Tight', Inter, system-ui, sans-serif", fontSize: 16, fontWeight: 700, letterSpacing: -0.5, color: fg, whiteSpace: 'nowrap' }}>
+        <div className="flex items-center gap-2.5" style={{ fontFamily: "'Inter Tight', Inter, system-ui, sans-serif", fontSize: 18, fontWeight: 700, letterSpacing: -0.5, color: fg, whiteSpace: 'nowrap' }}>
+          <LogoMark size={36} />
           CLIMATO
         </div>
 
@@ -100,7 +102,8 @@ export function AppHeader() {
         <div className="flex items-center justify-between" style={{
           padding: '0 16px', height: 48,
         }}>
-          <div style={{ fontFamily: "'Inter Tight', Inter, system-ui, sans-serif", fontSize: 15, fontWeight: 700, letterSpacing: -0.5, color: fg }}>
+          <div className="flex items-center gap-2" style={{ fontFamily: "'Inter Tight', Inter, system-ui, sans-serif", fontSize: 17, fontWeight: 700, letterSpacing: -0.5, color: fg }}>
+            <LogoMark size={30} />
             CLIMATO
           </div>
           <ToggleGroup.Root type="single" value={unit} onValueChange={v => { if (v) setUnit(v as 'C' | 'F') }} className="flex">

@@ -111,15 +111,6 @@ export function VariationA({ city, unit, chartVariant, setChartVariant, currentT
           </div>
         </Module>
 
-        {/* Footer */}
-        <div className="flex justify-between" style={{
-          fontFamily: "'JetBrains Mono', ui-monospace, monospace",
-          fontSize: 10, letterSpacing: 1.5, color: muted,
-          borderTop: `1px solid ${fg}`, paddingTop: 10,
-        }}>
-          <span>© CLIMATO 2026</span>
-          <span>VIEW A · SWISS GRID</span>
-        </div>
       </div>
     </div>
   )
