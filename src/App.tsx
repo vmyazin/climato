@@ -10,6 +10,7 @@ import { useClimateNormals } from './hooks/useClimateNormals'
 import { useCurrentTemp } from './hooks/useCurrentTemp'
 import { useUrlSync } from './lib/route'
 import { useMediaQuery } from './hooks/useMediaQuery'
+import { useDocumentMeta } from './hooks/useDocumentMeta'
 
 const bg = '#f0f1ed'
 const muted = '#85847d'
@@ -22,6 +23,8 @@ export default function App() {
   const { data: city, isPending, isError, isFetching: isClimateFetching, isPlaceholderData } = climate
   const { data: currentTemp } = current
   const isMd = useMediaQuery('(min-width: 768px)')
+
+  useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoundSlug })
 
   const sharedProps = city ? { city, unit, setUnit, chartVariant, setChartVariant, currentTemp } : null
 

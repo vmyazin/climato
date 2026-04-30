@@ -45,7 +45,7 @@ export function FitHeadline({ text, maxFontSize, minFontSize, lineHeight, letter
   const common: React.CSSProperties = { fontWeight: 700, lineHeight, letterSpacing, color, whiteSpace: 'nowrap' }
 
   return (
-    <div ref={wrapRef} style={{ width: '100%', overflow: 'hidden' }}>
+    <div ref={wrapRef} style={{ width: '100%' }}>
       <span ref={measureRef} style={{ ...common, fontSize: maxFontSize, position: 'absolute', visibility: 'hidden', pointerEvents: 'none', left: -99999, top: -99999 }}>
         {text}
       </span>
