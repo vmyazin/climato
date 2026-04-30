@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cities:build": "scripts/build-cities.sh"
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.1.6",

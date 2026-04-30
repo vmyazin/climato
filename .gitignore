@@ -34,3 +34,7 @@ pnpm-debug.log*
 # TypeScript
 *.tsbuildinfo
 .vercel
+
+
+# GeoNames raw dumps (re-downloadable)
+data/raw/
