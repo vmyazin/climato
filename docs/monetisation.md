@@ -1,6 +1,10 @@
 # Climato — Monetisation Strategy
 
-## 1. Affiliate Link Strategy
+> **Status legend:** ✅ done · 🟡 partial · ⬜ not started
+>
+> Last audit: 2026-05-02
+
+## 1. Affiliate Link Strategy — ⬜ not started
 
 ### Principle
 Every city page already answers "what is the weather like there?" — the natural follow-on is "should I visit, and when?" That intent is extremely high-value for travel affiliates.
@@ -17,17 +21,17 @@ Every city page already answers "what is the weather like there?" — the natura
 
 ### Placement in the app
 
-**Placement 1 — "Best months to visit" card** (add to Variation A below the stats strip)
+**Placement 1 — "Best months to visit" card** ⬜ (add to Variation A below the stats strip)
 - Derive automatically from climate data: best months = highest sunshine hours, lowest precip, comfortable temperature range (15–28°C)
 - Example: *"Best time to visit Florianópolis: November–March (warm, sunny). Avoid June–August (cool, higher rain)."*
 - CTA button: **"Find flights →"** (Skyscanner deeplink) + **"Browse hotels →"** (Booking.com deeplink)
 
-**Placement 2 — Contextual footer on each city**
+**Placement 2 — Contextual footer on each city** ⬜
 - 3 icon-link buttons: ✈ Flights · 🏨 Hotels · 🎟 Activities
 - Small, tasteful, below the NORMALS footer line
 - Only shown when a real geocoded city is selected (not on default/seed cities without confirmed coordinates)
 
-**Placement 3 — "Visit in [month]" prompt in Variation B**
+**Placement 3 — "Visit in [month]" prompt in Variation B** ⬜
 - When a user selects a month, show: *"Thinking of visiting [city] in [month]? [month] averages [X]°C with [Y]mm rain."*
 - CTA: **"Check hotel prices for [month] →"**
 
@@ -49,32 +53,33 @@ https://www.getyourguide.com/[city-slug]-l[location_id]/activities/?partner_id=[
 - Scales linearly. At 100k visitors: ~€900/month passively.
 
 ### Implementation notes
-- Store affiliate IDs in `.env` (`VITE_BOOKING_AID`, `VITE_SKYSCANNER_ID`, etc.)
-- Use `rel="noopener noreferrer sponsored"` on all affiliate links
-- Only activate links for cities returned by the geocoding API (have real lat/lon)
-- A/B test placement 1 vs placement 3 using a simple localStorage flag
+- ⬜ Store affiliate IDs in `.env` (`VITE_BOOKING_AID`, `VITE_SKYSCANNER_ID`, etc.)
+- ⬜ Use `rel="noopener noreferrer sponsored"` on all affiliate links
+- 🟡 Only activate links for cities returned by the geocoding API (have real lat/lon) — placeholder vs geocoded distinction already exists in [src/lib/route.ts](src/lib/route.ts) (lat=0/lon=0 sentinel)
+- ⬜ A/B test placement 1 vs placement 3 using a simple localStorage flag
+- ✅ `booking_dest_id` and `iata` columns reserved in [data/cities.tsv](data/cities.tsv) catalog schema (currently unfilled — see [scripts/build-cities.sh](scripts/build-cities.sh))
 
 ---
 
-## 2. SEO Strategy
+## 2. SEO Strategy — 🟡 partial
 
 ### Opportunity
 Queries like *"average temperature Tokyo March"*, *"weather averages Florianópolis by month"*, *"best time to visit Cape Town"* get tens of thousands of monthly searches globally. Current ranking pages are mostly ugly weather-data dumps. A well-designed, fast static page wins.
 
 ### Technical approach
 
-**Generate static pages** — one URL per city, pre-rendered at build time.
+**Generate static pages** — 🟡 one URL per city; routing live, pre-render at build time still pending.
 
 ```
-/city/tokyo-japan
-/city/florianopolis-brazil
-/city/cape-town-south-africa
-/city/reykjavik-iceland
+/japan/tokyo
+/brazil/florianopolis
+/south-africa/cape-town
+/iceland/reykjavik
 ```
 
-Route format: `/city/[slug]` where slug = `{name-lowercased-no-accents}-{country-lowercased}`.
+Route format: ✅ implemented as `/{country}/{city}` (and `/{country}/{admin1}/{city}` for ambiguous duplicates). See [src/lib/route.ts](src/lib/route.ts) and [src/lib/slug.ts](src/lib/slug.ts) — the doc's earlier `/city/[slug]` shape was superseded.
 
-**Implementation**: Add React Router (or switch to a meta-framework). For pure static, generate HTML files per city at build time using the Open-Meteo archive API — fetch once, bake into the build output.
+**Implementation**: 🟡 custom URL sync via `useUrlSync` ([src/lib/route.ts](src/lib/route.ts)) instead of React Router; SPA-only render, no per-city HTML pre-rendering yet. Open-Meteo data is fetched per-visit, not baked into the build.
 
 ### Target keyword clusters
 
@@ -88,10 +93,10 @@ Route format: `/city/[slug]` where slug = `{name-lowercased-no-accents}-{country
 
 ### On-page SEO per city page
 
-**Title tag**: `{City} Monthly Weather Averages — Climato`
-**Meta description**: `Monthly temperature highs, lows, rainfall and sunshine hours for {City}, {Country}. Average high in {hottest_month}: {hottest_temp}°C.`
+- ✅ **Title tag**: `{City} Monthly Weather Averages — Climato` — implemented in [src/hooks/useDocumentMeta.ts](src/hooks/useDocumentMeta.ts)
+- ✅ **Meta description**: `Monthly temperature highs, lows, rainfall and sunshine hours for {City}, {Country}. Average high in {hottest_month}: {hottest_temp}°C.` — implemented in [src/hooks/useDocumentMeta.ts](src/hooks/useDocumentMeta.ts) (uses peak-month + peak-temp template once climate data resolves; falls back to a no-stat variant during loading)
 
-**Structured data** (JSON-LD):
+⬜ **Structured data** (JSON-LD): no `application/ld+json` script in [index.html](index.html) or anywhere in `src/` yet.
 ```json
 {
   "@context": "https://schema.org",
@@ -102,44 +107,44 @@ Route format: `/city/[slug]` where slug = `{name-lowercased-no-accents}-{country
 }
 ```
 
-**H1**: `{City} Monthly Weather & Climate Averages`
-**H2s**: Monthly Temperatures · Rainfall by Month · Best Time to Visit · Sunrise & Sunset
+- 🟡 **H1**: a semantic `<h1>` exists in [src/components/CityHeroFallback.tsx](src/components/CityHeroFallback.tsx) for the SEO first-paint fallback (renders the city name only, not the full doc spec); main variations don't yet emit an `<h1>`
+- ⬜ **H2s**: Monthly Temperatures · Rainfall by Month · Best Time to Visit · Sunrise & Sunset — none of these are H2s in the current layout
 
-### Content to auto-generate from data (no manual writing)
+### Content to auto-generate from data (no manual writing) — ⬜ not started
 
 Each city page should include these auto-generated paragraphs:
 
-1. **Overview** — *"{City} has a [climate type] climate. The warmest month is [month] ({temp}°C average high) and the coolest is [month] ({temp}°C)."*
-2. **Rainfall** — *"Annual rainfall totals [X]mm. The wettest month is [month] ([X]mm) and the driest is [month] ([X]mm)."*
-3. **Best time to visit** — *"The best time to visit {City} is [month range], when temperatures average [X]–[X]°C with [X] sunshine hours per day."*
-4. **Monthly breakdown table** — the 12-row data table that Google can parse and feature-snippet
+1. ⬜ **Overview** — *"{City} has a [climate type] climate. The warmest month is [month] ({temp}°C average high) and the coolest is [month] ({temp}°C)."*
+2. ⬜ **Rainfall** — *"Annual rainfall totals [X]mm. The wettest month is [month] ([X]mm) and the driest is [month] ([X]mm)."*
+3. ⬜ **Best time to visit** — *"The best time to visit {City} is [month range], when temperatures average [X]–[X]°C with [X] sunshine hours per day."*
+4. 🟡 **Monthly breakdown table** — climate data is rendered as a chart ([src/components/MonthlyChart.tsx](src/components/MonthlyChart.tsx)) but not as a parseable HTML `<table>` for Google snippets
 
 ### Scale
 
-- Seed: 18 existing cities (immediate — zero extra API cost)
-- Phase 2: Top 200 most-searched cities (build-time fetch from Open-Meteo)
-- Phase 3: All GeoNames cities with population > 50k (~10,000 cities)
+- ✅ Seed: 18 existing cities (immediate — zero extra API cost) — [src/data/cities.ts](src/data/cities.ts)
+- 🟡 Phase 2: Top 200 most-searched cities — catalog ingestion built ([scripts/build-cities.sh](scripts/build-cities.sh) → `data/cities.tsv`, default `MIN_POP=100000` ≈ several thousand cities); the sitemap covers them, but Open-Meteo data is **not** baked at build time — it's still fetched per-visit
+- 🟡 Phase 3: All GeoNames cities with population > 50k — pipeline supports it (lower `MIN_POP`), still SPA-rendered
 
-**Cost to serve**: static HTML + CDN = near zero. Open-Meteo archive calls at build time only (not per-visitor).
+**Cost to serve**: 🟡 static shell + CDN serves the SPA, but Open-Meteo archive calls happen per-visitor (not at build time) until pre-rendering ships.
 
 ### Technical SEO checklist
 
-- [ ] `sitemap.xml` generated at build time listing all city URLs
-- [ ] `robots.txt` allowing full crawl
-- [ ] Canonical URLs (avoid duplicate content between `/city/tokyo-japan` and the SPA root)
-- [ ] `og:image` auto-generated per city (screenshot of the chart, or a text-based card)
-- [ ] Core Web Vitals: static pages should score 95+ on Lighthouse
-- [ ] Internal linking: each city page links to 5 nearby cities (drives crawl depth)
+- [x] ✅ `sitemap.xml` generated at build time listing all city URLs — [vite.config.ts:90-146](vite.config.ts#L90-L146), output at [dist/sitemap.xml](dist/sitemap.xml)
+- [x] ✅ `robots.txt` allowing full crawl — generated by the same Vite plugin, output at [dist/robots.txt](dist/robots.txt)
+- [ ] 🟡 Canonical URLs — sitemap-side canonicalisation logic present (`canonicalPaths` in [vite.config.ts:56-88](vite.config.ts#L56-L88) deduplicates ambiguous slugs); no `<link rel="canonical">` tag rendered in HTML yet
+- [ ] ⬜ `og:image` auto-generated per city — only a single global [public/og-image.png](public/og-image.png) ships ([index.html:14](index.html#L14)); no per-city variant
+- [ ] ⬜ Core Web Vitals: static pages should score 95+ on Lighthouse — not measured
+- [ ] ⬜ Internal linking: each city page links to 5 nearby cities — no nearby-city links in any view
 
 ### Distribution timeline
 
-| Month | Action |
-|-------|--------|
-| 1 | Publish 18 seed city pages, submit sitemap to Google Search Console |
-| 2 | Add affiliate CTAs, monitor which cities get impressions |
-| 3 | Expand to top 200 cities based on search volume data |
-| 6 | Evaluate traffic — if >5k/month, apply for Mediavine display ads |
-| 12 | 10k+ cities, consider Booking.com preferred partner status |
+| Month | Action | Status |
+|-------|--------|--------|
+| 1 | Publish 18 seed city pages, submit sitemap to Google Search Console | 🟡 18 pages live + sitemap built; GSC submission is a manual step (status unknown) |
+| 2 | Add affiliate CTAs, monitor which cities get impressions | ⬜ |
+| 3 | Expand to top 200 cities based on search volume data | 🟡 catalog ingestion ready, expansion pending search-volume data |
+| 6 | Evaluate traffic — if >5k/month, apply for Mediavine display ads | ⬜ |
+| 12 | 10k+ cities, consider Booking.com preferred partner status | ⬜ |
 
 ---
 
