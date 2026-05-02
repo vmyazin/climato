@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import type { City, GeoCity } from '../data/cities'
 import { MONTHS_LONG } from '../data/cities'
-import { nameFromSlug } from '../lib/route'
+import { nameFromSlug, toSlug } from '../lib/route'
 
 const DEFAULT_TITLE = 'Climato — Monthly Averages'
 const DEFAULT_DESCRIPTION =
@@ -20,6 +20,20 @@ function setMeta(name: string, content: string) {
     document.head.appendChild(el)
   }
   el.setAttribute('content', content)
+}
+
+function setCanonical(href: string | null) {
+  let el = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+  if (!href) {
+    el?.remove()
+    return
+  }
+  if (!el) {
+    el = document.createElement('link')
+    el.setAttribute('rel', 'canonical')
+    document.head.appendChild(el)
+  }
+  if (el.getAttribute('href') !== href) el.setAttribute('href', href)
 }
 
 function setJsonLd(payload: object | null) {
@@ -101,6 +115,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       document.title = `${label} — not found · Climato`
       setMeta('description', DEFAULT_DESCRIPTION)
       setJsonLd(null)
+      setCanonical(null)
       return
     }
 
@@ -129,8 +144,14 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
     const hasRealCoords = selectedCity.lat !== 0 || selectedCity.lon !== 0
     if (hasRealCoords) {
       setJsonLd(buildDatasetJsonLd(selectedCity, haveFreshClimate ? city : undefined))
+      // Canonical URL: drops the optional ?@lat,lon query string so Google
+      // collapses /spain/madrid and /spain/madrid?@40.42,-3.70 into one
+      // canonical entry. Resolved via the same toSlug used by the router.
+      const { path } = toSlug(selectedCity)
+      setCanonical(`${window.location.origin}${path}`)
     } else {
       setJsonLd(null)
+      setCanonical(null)
     }
   }, [selectedCity, city, isPlaceholderData, notFoundSlug])
 
@@ -139,6 +160,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       document.title = DEFAULT_TITLE
       setMeta('description', DEFAULT_DESCRIPTION)
       setJsonLd(null)
+      setCanonical(null)
     }
   }, [])
 }

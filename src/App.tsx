@@ -1,5 +1,6 @@
 import { AppHeader } from './components/AppHeader'
 import { CityHeroFallback } from './components/CityHeroFallback'
+import { ClimateNarrative } from './components/ClimateNarrative'
 import { Footer } from './components/Footer'
 import { NotFound } from './components/NotFound'
 import { SmokedGlassOverlay } from './components/SmokedGlassOverlay'
@@ -70,6 +71,7 @@ export default function App() {
             {activeView === 'a' && <VariationA {...sharedProps} />}
             {activeView === 'b' && <VariationB {...sharedProps} />}
             {activeView === 'c' && <VariationC {...sharedProps} />}
+            <ClimateNarrative city={sharedProps.city} unit={sharedProps.unit} />
           </>
         )}
         <Footer />
