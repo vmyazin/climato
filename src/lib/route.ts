@@ -164,19 +164,15 @@ export function useUrlSync(): UrlSyncResult {
       const parsed = parseUrl(window.location.pathname, window.location.search)
       if (parsed.type === 'root') return
 
-      if (parsed.ll) {
-        const city = reconstructFromCoords(parsed, parsed.ll)
-        if (cancelled) return
-        skipNextPush.current = true
-        setCity(city)
-        return
-      }
-
-      // Synchronous placeholder so the first paint already shows the correct
-      // city name + country derived from the URL slug (matters for the SEO
-      // fallback hero and for Googlebot's render snapshot before geocoding
-      // resolves).
-      const placeholder = reconstructFromSlug(parsed)
+      // Synchronous placeholder for first paint — uses the URL coords if
+      // present, otherwise lat=0/lon=0 (which keeps useClimateNormals and
+      // /api/* hooks disabled). Both kinds of placeholder use a synthetic
+      // string id ("spain-madrid", "placeholder:..."); the API rejects
+      // these, so the climate fetch waits for geocoding to upgrade the
+      // city to a real GeoNames id below.
+      const placeholder = parsed.ll
+        ? reconstructFromCoords(parsed, parsed.ll)
+        : reconstructFromSlug(parsed)
       skipNextPush.current = true
       setCity(placeholder)
 
