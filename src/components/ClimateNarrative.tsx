@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { City, MONTHS, MONTHS_LONG, cToF, mmToIn } from '../data/cities'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import {
@@ -130,11 +131,6 @@ function OverviewBody({
   pullQuoteCaption: string
   isMd: boolean
 }) {
-  const firstChar = city.name.charAt(0)
-  const remainder = city.name.slice(1)
-  const sentence1Rest = ` has a ${climateName} climate. `
-  const sentence2 = `The warmest month is ${warmestMonth} (${warmestTemp} average high) and the coolest is ${coolestMonth} (${coolestTemp}).`
-
   return (
     <div style={{
       display: 'grid',
@@ -149,19 +145,9 @@ function OverviewBody({
         lineHeight: 1.6,
         color: fg,
       }}>
-        <span style={{
-          float: 'left',
-          fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
-          fontSize: isMd ? 64 : 48,
-          fontWeight: 700,
-          lineHeight: 0.85,
-          color: accent,
-          paddingRight: 8,
-          paddingTop: 4,
-        }}>
-          {firstChar}
-        </span>
-        <span>{remainder}{sentence1Rest}{sentence2}</span>
+        {city.name} has a {climateName} climate. The warmest month is{' '}
+        <span style={{ color: accent, fontWeight: 600 }}>{warmestMonth}</span>{' '}
+        ({warmestTemp} average high) and the coolest is {coolestMonth} ({coolestTemp}).
       </p>
       <PullQuote value={pullQuoteValue} caption={pullQuoteCaption} isMd={isMd} />
     </div>
@@ -342,6 +328,38 @@ function Sparkline({ values, highlightIdx, isMd }: { values: number[]; highlight
   )
 }
 
+type SortKey = 'month' | 'high' | 'low' | 'rain' | 'sun' | 'sunrise' | 'sunset'
+type SortDir = 'asc' | 'desc'
+
+interface RowData {
+  monthIdx: number
+  month: string
+  high: number
+  low: number
+  rain: number
+  sun: number
+  sunrise: string
+  sunset: string
+}
+
+const COLUMNS: Array<{ key: SortKey; label: string }> = [
+  { key: 'month',   label: 'Month' },
+  { key: 'high',    label: 'High' },
+  { key: 'low',     label: 'Low' },
+  { key: 'rain',    label: 'Rain' },
+  { key: 'sun',     label: 'Sun' },
+  { key: 'sunrise', label: 'Sunrise' },
+  { key: 'sunset',  label: 'Sunset' },
+]
+
+function compareRows(a: RowData, b: RowData, key: SortKey, dir: SortDir): number {
+  const sign = dir === 'asc' ? 1 : -1
+  const av = key === 'month' ? a.monthIdx : a[key]
+  const bv = key === 'month' ? b.monthIdx : b[key]
+  if (typeof av === 'number' && typeof bv === 'number') return (av - bv) * sign
+  return String(av).localeCompare(String(bv)) * sign
+}
+
 function MonthlyTable({
   city, t, mm, isMd,
 }: {
@@ -350,8 +368,33 @@ function MonthlyTable({
   mm: (v: number) => string
   isMd: boolean
 }) {
+  const [sortKey, setSortKey] = useState<SortKey>('month')
+  const [sortDir, setSortDir] = useState<SortDir>('asc')
+
+  const rows: RowData[] = MONTHS_LONG.map((month, i) => ({
+    monthIdx: i,
+    month,
+    high: city.high[i],
+    low: city.low[i],
+    rain: city.precip[i],
+    sun: city.sun[i],
+    sunrise: city.sunrise[i],
+    sunset: city.sunset[i],
+  }))
+  const sorted = [...rows].sort((a, b) => compareRows(a, b, sortKey, sortDir))
+
+  const handleSort = (key: SortKey) => {
+    if (key === sortKey) {
+      setSortDir(d => (d === 'asc' ? 'desc' : 'asc'))
+    } else {
+      setSortKey(key)
+      // Numeric columns default to descending (highest first), text to asc.
+      setSortDir(key === 'month' || key === 'sunrise' || key === 'sunset' ? 'asc' : 'desc')
+    }
+  }
+
   const cellPad = isMd ? '8px 14px' : '6px 8px'
-  const headStyle: React.CSSProperties = {
+  const headBaseStyle: React.CSSProperties = {
     fontFamily: "'JetBrains Mono', ui-monospace, monospace",
     fontSize: 10,
     letterSpacing: 1.5,
@@ -359,10 +402,27 @@ function MonthlyTable({
     textTransform: 'uppercase',
     fontWeight: 500,
     textAlign: 'left',
-    padding: cellPad,
+    padding: 0,
     borderBottom: `1px solid ${fg}`,
     whiteSpace: 'nowrap',
     background: '#fafafa',
+  }
+  const headButtonStyle: React.CSSProperties = {
+    appearance: 'none',
+    background: 'transparent',
+    border: 'none',
+    padding: cellPad,
+    margin: 0,
+    cursor: 'pointer',
+    color: 'inherit',
+    font: 'inherit',
+    letterSpacing: 'inherit',
+    textTransform: 'inherit',
+    width: '100%',
+    textAlign: 'left',
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 6,
   }
   const cellStyle: React.CSSProperties = {
     fontSize: isMd ? 13 : 11,
@@ -390,29 +450,47 @@ function MonthlyTable({
           padding: cellPad,
           captionSide: 'top',
         }}>
-          {`Monthly climate normals for ${city.name}, ${city.country}`}
+          {`Monthly climate normals for ${city.name}, ${city.country} — click a column to sort`}
         </caption>
         <thead>
           <tr>
-            <th scope="col" style={headStyle}>Month</th>
-            <th scope="col" style={headStyle}>High</th>
-            <th scope="col" style={headStyle}>Low</th>
-            <th scope="col" style={headStyle}>Rain</th>
-            <th scope="col" style={headStyle}>Sun</th>
-            <th scope="col" style={headStyle}>Sunrise</th>
-            <th scope="col" style={headStyle}>Sunset</th>
+            {COLUMNS.map(col => {
+              const isActive = col.key === sortKey
+              return (
+                <th
+                  key={col.key}
+                  scope="col"
+                  aria-sort={isActive ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}
+                  style={{
+                    ...headBaseStyle,
+                    color: isActive ? fg : muted,
+                  }}
+                >
+                  <button
+                    type="button"
+                    onClick={() => handleSort(col.key)}
+                    style={headButtonStyle}
+                  >
+                    <span>{col.label}</span>
+                    <span aria-hidden="true" style={{ color: isActive ? accent : `${muted}66`, fontSize: 9 }}>
+                      {isActive ? (sortDir === 'asc' ? '▲' : '▼') : '↕'}
+                    </span>
+                  </button>
+                </th>
+              )
+            })}
           </tr>
         </thead>
         <tbody>
-          {MONTHS_LONG.map((month, i) => (
-            <tr key={month}>
-              <th scope="row" style={monthCell}>{month}</th>
-              <td style={cellStyle}>{t(city.high[i])}</td>
-              <td style={cellStyle}>{t(city.low[i])}</td>
-              <td style={cellStyle}>{mm(city.precip[i])}</td>
-              <td style={cellStyle}>{city.sun[i].toFixed(1)} h</td>
-              <td style={cellStyle}>{city.sunrise[i]}</td>
-              <td style={cellStyle}>{city.sunset[i]}</td>
+          {sorted.map(row => (
+            <tr key={row.month}>
+              <th scope="row" style={monthCell}>{row.month}</th>
+              <td style={cellStyle}>{t(row.high)}</td>
+              <td style={cellStyle}>{t(row.low)}</td>
+              <td style={cellStyle}>{mm(row.rain)}</td>
+              <td style={cellStyle}>{row.sun.toFixed(1)} h</td>
+              <td style={cellStyle}>{row.sunrise}</td>
+              <td style={cellStyle}>{row.sunset}</td>
             </tr>
           ))}
         </tbody>
