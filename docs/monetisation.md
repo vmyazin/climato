@@ -2,7 +2,7 @@
 
 > **Status legend:** ✅ done · 🟡 partial · ⬜ not started
 >
-> Last audit: 2026-05-02
+> Last audit: 2026-05-03
 
 ## 1. Affiliate Link Strategy — ⬜ not started
 
@@ -96,7 +96,7 @@ Route format: ✅ implemented as `/{country}/{city}` (and `/{country}/{admin1}/{
 - ✅ **Title tag**: `{City} Monthly Weather Averages — Climato` — implemented in [src/hooks/useDocumentMeta.ts](src/hooks/useDocumentMeta.ts)
 - ✅ **Meta description**: `Monthly temperature highs, lows, rainfall and sunshine hours for {City}, {Country}. Average high in {hottest_month}: {hottest_temp}°C.` — implemented in [src/hooks/useDocumentMeta.ts](src/hooks/useDocumentMeta.ts) (uses peak-month + peak-temp template once climate data resolves; falls back to a no-stat variant during loading)
 
-⬜ **Structured data** (JSON-LD): no `application/ld+json` script in [index.html](index.html) or anywhere in `src/` yet.
+✅ **Structured data** (JSON-LD): emitted at runtime by [src/hooks/useDocumentMeta.ts](src/hooks/useDocumentMeta.ts) once geocoding resolves, with `temporalCoverage`, `spatialCoverage` (Place + GeoCoordinates), `variableMeasured`, license, source attribution to Open-Meteo, and an admin1/name dedup. Skipped on the not-found path and for placeholder cities (lat=0/lon=0).
 ```json
 {
   "@context": "https://schema.org",
@@ -122,10 +122,12 @@ Each city page should include these auto-generated paragraphs:
 ### Scale
 
 - ✅ Seed: 18 existing cities (immediate — zero extra API cost) — [src/data/cities.ts](src/data/cities.ts)
-- 🟡 Phase 2: Top 200 most-searched cities — catalog ingestion built ([scripts/build-cities.sh](scripts/build-cities.sh) → `data/cities.tsv`, default `MIN_POP=100000` ≈ several thousand cities); the sitemap covers them, but Open-Meteo data is **not** baked at build time — it's still fetched per-visit
-- 🟡 Phase 3: All GeoNames cities with population > 50k — pipeline supports it (lower `MIN_POP`), still SPA-rendered
+- ✅ Phase 2: Top 200 most-searched cities — catalog ingestion built ([scripts/build-cities.sh](scripts/build-cities.sh) → `data/cities.tsv`, default `MIN_POP=100000` ≈ 6k cities) **and** lazy-fill is live: the first visit to any catalog city triggers an Open-Meteo fetch via [api/normals.ts](api/normals.ts), the result lands in Upstash Redis, and the hourly drain cron ([.github/workflows/drain-normals.yml](.github/workflows/drain-normals.yml)) commits it to [data/normals/](data/normals/). Future visits + future builds serve straight from CDN. The dataset grows organically with traffic, no bulk ingest needed.
+- 🟡 Phase 3: All GeoNames cities with population > 50k — same pipeline supports it (lower `MIN_POP` and re-run [scripts/build-cities.sh](scripts/build-cities.sh)). Still SPA-rendered (no per-city pre-rendering yet).
 
-**Cost to serve**: 🟡 static shell + CDN serves the SPA, but Open-Meteo archive calls happen per-visitor (not at build time) until pre-rendering ships.
+**Cost to serve**: ✅ static shell + CDN serves the SPA. Open-Meteo archive calls now happen **once per city, ever** (not per-visitor) — first visit goes through [api/normals.ts](api/normals.ts) → [api/_lib/catalog.ts](api/_lib/catalog.ts) catalog-validates the request → fetches Open-Meteo → caches in Upstash. Subsequent visits hit the cached `/normals/{id}.json` static asset. Steady-state Open-Meteo dependency for climate normals tends to zero as the long-tail fills in.
+
+**Operational visibility**: ✅ a password-protected debug panel at [/admin](https://climato.smoxu.com/admin) (auth via `ADMIN_PASSWORD` env var, HMAC-derived session cookie) lists pending Upstash entries and committed cached cities, classified by id type (geonames / curated / slug-dup).
 
 ### Technical SEO checklist
 
