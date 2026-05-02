@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/((?!api/|normals/|.*\\.[a-z0-9]+$).*)", "destination": "/index.html" }
+    { "source": "/admin", "destination": "/api/admin" },
+    { "source": "/((?!api/|normals/|admin$|.*\\.[a-z0-9]+$).*)", "destination": "/index.html" }
   ]
 }

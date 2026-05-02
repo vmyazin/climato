@@ -149,50 +149,73 @@ Sitemap: ${siteUrl}/sitemap.xml
       if (existsSync(normalsDir)) {
         let count = 0
         for (const file of readdirSync(normalsDir)) {
-          if (!file.endsWith('.json') || file.startsWith('_')) continue
+          if (!file.endsWith('.json')) continue
+          // Skip dotfiles and bookkeeping (.gitkeep). The drain index
+          // (_index.json) IS exposed at /normals/_index.json so the admin
+          // page can introspect what's been ingested without a function.
+          if (file.startsWith('.')) continue
           const source = readFileSync(resolve(normalsDir, file), 'utf8')
           this.emitFile({ type: 'asset', fileName: `normals/${file}`, source })
           count++
         }
-        console.log(`[seo] normals: ${count} cached cities`)
+        console.log(`[seo] normals: ${count} cached cities (incl. _index.json)`)
       }
     },
   }
 }
 
-// Mount api/normals.ts at /api/normals during `vite dev` so the dev server
-// matches production. Reads request URL/query, calls the handler with a
-// minimal Express-like (req, res) shim, returns the response.
-function devApiNormals(): Plugin {
+// Mount Vercel-style /api/* handlers during `vite dev` so the dev server
+// matches production. Each route loads the corresponding api/*.ts module
+// via SSR and invokes it with a minimal Express-like (req, res) shim.
+interface DevApiRoute {
+  path: string
+  module: string
+  defaultContentType?: string
+}
+
+function devApiRoutes(routes: DevApiRoute[]): Plugin {
   return {
-    name: 'climato-dev-api-normals',
+    name: 'climato-dev-api-routes',
     apply: 'serve',
     configureServer(server) {
-      server.middlewares.use('/api/normals', async (req, res) => {
-        const { default: handler } = await server.ssrLoadModule('/api/normals.ts')
-        let statusCode = 200
-        let body = ''
-        const headers: Record<string, string> = {}
-        const shimRes = {
-          status(code: number) { statusCode = code; return shimRes },
-          setHeader(name: string, value: string) { headers[name] = value },
-          json(payload: unknown) { body = JSON.stringify(payload) },
-        }
-        try {
-          await handler({ url: req.url, query: {} }, shimRes)
-        } catch (err) {
-          statusCode = 500
-          body = JSON.stringify({ error: String(err) })
-        }
-        for (const [k, v] of Object.entries(headers)) res.setHeader(k, v)
-        if (!headers['Content-Type']) res.setHeader('Content-Type', 'application/json')
-        res.statusCode = statusCode
-        res.end(body)
-      })
+      for (const route of routes) {
+        server.middlewares.use(route.path, async (req, res) => {
+          const { default: handler } = await server.ssrLoadModule(route.module)
+          let statusCode = 200
+          let body = ''
+          const headers: Record<string, string> = {}
+          const shimRes = {
+            status(code: number) { statusCode = code; return shimRes },
+            setHeader(name: string, value: string) { headers[name] = value },
+            json(payload: unknown) { body = JSON.stringify(payload) },
+            send(payload: string) { body = payload },
+          }
+          try {
+            await handler({ url: req.url, headers: req.headers, query: {} }, shimRes)
+          } catch (err) {
+            statusCode = 500
+            body = JSON.stringify({ error: String(err) })
+          }
+          for (const [k, v] of Object.entries(headers)) res.setHeader(k, v)
+          if (!headers['Content-Type']) {
+            res.setHeader('Content-Type', route.defaultContentType ?? 'application/json')
+          }
+          res.statusCode = statusCode
+          res.end(body)
+        })
+      }
     },
   }
 }
 
 export default defineConfig({
-  plugins: [react(), seoFiles(), devApiNormals()],
+  plugins: [
+    react(),
+    seoFiles(),
+    devApiRoutes([
+      { path: '/api/normals', module: '/api/normals.ts' },
+      { path: '/api/admin',   module: '/api/admin.ts',   defaultContentType: 'text/html; charset=utf-8' },
+      { path: '/admin',       module: '/api/admin.ts',   defaultContentType: 'text/html; charset=utf-8' },
+    ]),
+  ],
 })
