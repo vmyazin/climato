@@ -11,6 +11,17 @@ interface VercelLikeResponse {
   json(payload: unknown): void
 }
 
+// Wrapper stored in KV. Keeps the climate fields alongside human-readable
+// metadata so the drain can promote both into data/normals/_index.json.
+// Older entries written before metadata existed are bare Normals — both
+// shapes are handled below.
+interface PendingValue {
+  normals: Normals
+  name?: string
+  country?: string
+  admin1?: string
+}
+
 function parseQuery(req: VercelLikeRequest): URLSearchParams {
   if (req.url) return new URL(req.url, 'http://localhost').searchParams
   const out = new URLSearchParams()
@@ -35,30 +46,49 @@ function getRedis() {
   return { url, token }
 }
 
+function unwrap(value: unknown): Normals | null {
+  if (!value || typeof value !== 'object') return null
+  const obj = value as Record<string, unknown>
+  if ('normals' in obj && typeof obj.normals === 'object' && obj.normals) {
+    return obj.normals as Normals
+  }
+  // Legacy: bare Normals shape.
+  if (Array.isArray(obj.high) && Array.isArray(obj.low)) {
+    return obj as unknown as Normals
+  }
+  return null
+}
+
 async function readKv(id: string): Promise<Normals | null> {
   const env = getRedis()
   if (!env) return null
   try {
     const { Redis } = await import('@upstash/redis')
     const redis = new Redis(env)
-    return (await redis.get<Normals>(`pending:${id}`)) ?? null
+    const value = await redis.get(`pending:${id}`)
+    return unwrap(value)
   } catch (err) {
     console.error('[normals] KV read failed:', err)
     return null
   }
 }
 
-async function writeKv(id: string, normals: Normals): Promise<void> {
+async function writeKv(id: string, value: PendingValue): Promise<void> {
   const env = getRedis()
   if (!env) return
   try {
     const { Redis } = await import('@upstash/redis')
     const redis = new Redis(env)
     // 30-day TTL: more than enough for the drain cron to promote it.
-    await redis.set(`pending:${id}`, normals, { ex: 60 * 60 * 24 * 30 })
+    await redis.set(`pending:${id}`, value, { ex: 60 * 60 * 24 * 30 })
   } catch (err) {
     console.error('[normals] KV write failed:', err)
   }
+}
+
+function trimMeta(s: string | null, max: number): string {
+  if (!s) return ''
+  return s.trim().slice(0, max)
 }
 
 export default async function handler(req: VercelLikeRequest, res: VercelLikeResponse) {
@@ -66,6 +96,9 @@ export default async function handler(req: VercelLikeRequest, res: VercelLikeRes
   const id = params.get('id')?.trim() ?? ''
   const lat = parseFloat(params.get('lat') ?? '')
   const lon = parseFloat(params.get('lon') ?? '')
+  const name = trimMeta(params.get('name'), 200)
+  const country = trimMeta(params.get('country'), 100)
+  const admin1 = trimMeta(params.get('admin1'), 100)
 
   if (!id || !ID_RE.test(id)) return bad(res, 400, 'invalid id')
   if (!Number.isFinite(lat) || lat < -90 || lat > 90) return bad(res, 400, 'invalid lat')
@@ -89,7 +122,11 @@ export default async function handler(req: VercelLikeRequest, res: VercelLikeRes
   }
 
   // Fire-and-forget: don't block the response on KV write.
-  writeKv(id, normals).catch(() => { /* logged in writeKv */ })
+  const wrapped: PendingValue = { normals }
+  if (name) wrapped.name = name
+  if (country) wrapped.country = country
+  if (admin1) wrapped.admin1 = admin1
+  writeKv(id, wrapped).catch(() => { /* logged in writeKv */ })
 
   res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400')
   res.setHeader('X-Climato-Cache', 'miss')

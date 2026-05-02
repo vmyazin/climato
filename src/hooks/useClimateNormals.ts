@@ -13,10 +13,18 @@ async function fetchNormals(geo: GeoCity): Promise<City> {
   }
 
   // Cold cache: API route fetches Open-Meteo and writes to KV. The drain
-  // workflow promotes KV entries to data/normals/ on a cron.
-  const apiRes = await fetch(
-    `/api/normals?id=${encodeURIComponent(geo.id)}&lat=${geo.lat}&lon=${geo.lon}`,
-  )
+  // workflow promotes KV entries to data/normals/ on a cron. Forward name
+  // and country so the function can stash them alongside the normals — the
+  // drain reads them out into _index.json for human-readable admin views.
+  const params = new URLSearchParams({
+    id: geo.id,
+    lat: String(geo.lat),
+    lon: String(geo.lon),
+    name: geo.name,
+    country: geo.country,
+  })
+  if (geo.admin1) params.set('admin1', geo.admin1)
+  const apiRes = await fetch(`/api/normals?${params}`)
   if (!apiRes.ok) throw new Error(`Normals API error ${apiRes.status}`)
   const normals = await apiRes.json() as Normals
   return { ...geo, ...normals }

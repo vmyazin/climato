@@ -22,11 +22,16 @@ const COOKIE_MAX_AGE = 60 * 60 * 24 * 30
 
 interface IndexEntry {
   fetched_at: string
+  name?: string
+  country?: string
+  admin1?: string
 }
 type Index = Record<string, IndexEntry>
 
 interface PendingEntry {
   id: string
+  name?: string
+  country?: string
 }
 
 function getHeader(req: VercelLikeRequest, name: string): string | undefined {
@@ -139,7 +144,22 @@ async function loadPending(): Promise<PendingEntry[]> {
       keys.push(...batch)
       cursor = String(next)
     } while (cursor !== '0')
-    return keys.map(k => ({ id: k.slice('pending:'.length) }))
+    if (keys.length === 0) return []
+    // Pull values in one shot so we can surface name/country alongside the id.
+    const values = await redis.mget<unknown[]>(...keys)
+    return keys.map((k, i) => {
+      const id = k.slice('pending:'.length)
+      const v = values[i]
+      if (v && typeof v === 'object' && !Array.isArray(v)) {
+        const obj = v as { name?: unknown; country?: unknown }
+        return {
+          id,
+          name: typeof obj.name === 'string' ? obj.name : undefined,
+          country: typeof obj.country === 'string' ? obj.country : undefined,
+        }
+      }
+      return { id }
+    })
   } catch (err) {
     console.error('[admin] KV scan failed:', err)
     return []
@@ -172,6 +192,7 @@ const STYLE = `
   th, td { border-bottom: 1px solid #1c1c1c; padding: 4px 16px 4px 0; text-align: left; vertical-align: top; }
   th { color: #777; font-weight: 500; text-transform: uppercase; font-size: 11px; }
   .muted { color: #666; font-style: italic; }
+  .dim { color: #666; font-size: 11px; }
   .stat { color: #fff; font-size: 18px; }
   .row { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 8px; }
   .col { display: flex; flex-direction: column; }
@@ -256,16 +277,47 @@ function renderAdmin(opts: {
   kvConfigured: boolean
 }): string {
   const { index, pending, origin, kvConfigured } = opts
-  const cachedIds = Object.keys(index).sort()
+
+  // Sort cached entries alphabetically by friendly name when available, with
+  // unnamed (legacy / curated) entries falling back to their id. This gives
+  // the panel a more scannable order than purely lexicographic-by-id.
+  const cachedIds = Object.keys(index).sort((a, b) => {
+    const la = index[a].name ?? a
+    const lb = index[b].name ?? b
+    return la.localeCompare(lb)
+  })
+
+  const formatPlace = (e: { name?: string; country?: string; admin1?: string }): string => {
+    if (!e.name) return ''
+    const parts = [e.name]
+    if (e.admin1 && e.admin1 !== e.name) parts.push(e.admin1)
+    if (e.country) parts.push(e.country)
+    return parts.join(' · ')
+  }
+
   const cachedRows = cachedIds
-    .map(id => `      <tr><td>${escapeHtml(id)}</td><td>${escapeHtml(index[id].fetched_at)}</td><td>${classifyId(id)}</td></tr>`)
+    .map(id => {
+      const e = index[id]
+      const place = formatPlace(e) || `<span class="muted">—</span>`
+      return `      <tr><td>${place}</td><td class="dim">${escapeHtml(id)}</td><td>${escapeHtml(e.fetched_at)}</td><td>${classifyId(id)}</td></tr>`
+    })
     .join('\n')
 
-  const pendingIds = [...new Set(pending.map(p => p.id))].sort()
-  const pendingRows = pendingIds.length === 0
-    ? `      <tr><td colspan="2" class="muted">— no pending entries —</td></tr>`
-    : pendingIds
-        .map(id => `      <tr><td>${escapeHtml(id)}</td><td>${classifyId(id)}</td></tr>`)
+  // Dedupe pending by id but keep the first metadata seen.
+  const pendingById = new Map<string, PendingEntry>()
+  for (const p of pending) if (!pendingById.has(p.id)) pendingById.set(p.id, p)
+  const pendingSorted = Array.from(pendingById.values()).sort((a, b) => {
+    const la = a.name ?? a.id
+    const lb = b.name ?? b.id
+    return la.localeCompare(lb)
+  })
+  const pendingRows = pendingSorted.length === 0
+    ? `      <tr><td colspan="3" class="muted">— no pending entries —</td></tr>`
+    : pendingSorted
+        .map(p => {
+          const place = formatPlace(p) || `<span class="muted">—</span>`
+          return `      <tr><td>${place}</td><td class="dim">${escapeHtml(p.id)}</td><td>${classifyId(p.id)}</td></tr>`
+        })
         .join('\n')
 
   const cachedSlug = cachedIds.filter(id => classifyId(id) === 'slug').length
@@ -290,13 +342,13 @@ function renderAdmin(opts: {
   <div class="col"><span class="col-label">geonames-style</span><span class="stat">${cachedGeo}</span></div>
   <div class="col"><span class="col-label">slug-style (dups likely)</span><span class="stat ${cachedSlug ? 'warn' : ''}">${cachedSlug}</span></div>
   <div class="col"><span class="col-label">curated</span><span class="stat">${cachedCurated}</span></div>
-  <div class="col"><span class="col-label">pending (kv)</span><span class="stat">${pendingIds.length}</span></div>
+  <div class="col"><span class="col-label">pending (kv)</span><span class="stat">${pendingSorted.length}</span></div>
   <div class="col"><span class="col-label">kv configured</span><span class="stat">${kvConfigured ? 'yes' : 'no'}</span></div>
 </div>
 
 <h2>Pending — Upstash <code>pending:*</code></h2>
 <table>
-  <thead><tr><th>id</th><th>type</th></tr></thead>
+  <thead><tr><th>city</th><th>id</th><th>type</th></tr></thead>
   <tbody>
 ${pendingRows}
   </tbody>
@@ -304,9 +356,9 @@ ${pendingRows}
 
 <h2>Cached — <code>data/normals/</code> (committed)</h2>
 <table>
-  <thead><tr><th>id</th><th>fetched_at</th><th>type</th></tr></thead>
+  <thead><tr><th>city</th><th>id</th><th>fetched_at</th><th>type</th></tr></thead>
   <tbody>
-${cachedRows || '      <tr><td colspan="3" class="muted">— empty —</td></tr>'}
+${cachedRows || '      <tr><td colspan="4" class="muted">— empty —</td></tr>'}
   </tbody>
 </table>
 

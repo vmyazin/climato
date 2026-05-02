@@ -15,8 +15,18 @@ const INDEX_PATH = resolve(NORMALS_DIR, '_index.json')
 
 interface IndexEntry {
   fetched_at: string
+  name?: string
+  country?: string
+  admin1?: string
 }
 type Index = Record<string, IndexEntry>
+
+interface PendingValue {
+  normals: unknown
+  name?: string
+  country?: string
+  admin1?: string
+}
 
 function loadIndex(): Index {
   if (!existsSync(INDEX_PATH)) return {}
@@ -62,9 +72,31 @@ async function main() {
       continue
     }
     const value = await redis.get(key)
-    if (!value) continue
-    writeFileSync(resolve(NORMALS_DIR, `${id}.json`), JSON.stringify(value))
-    index[id] = { fetched_at: now }
+    if (!value || typeof value !== 'object') continue
+
+    // Two possible shapes in KV:
+    // - new (PendingValue): { normals, name?, country?, admin1? }
+    // - legacy (bare Normals): { high, low, precip, sun, sunrise, sunset }
+    const obj = value as Record<string, unknown>
+    const wrapped = obj as unknown as PendingValue
+    const isWrapped =
+      typeof wrapped.normals === 'object' && wrapped.normals !== null && !Array.isArray(wrapped.normals)
+    const normals = isWrapped ? wrapped.normals : obj
+
+    writeFileSync(resolve(NORMALS_DIR, `${id}.json`), JSON.stringify(normals))
+    const entry: IndexEntry = { fetched_at: now }
+    if (isWrapped) {
+      if (typeof wrapped.name === 'string' && wrapped.name) entry.name = wrapped.name
+      if (typeof wrapped.country === 'string' && wrapped.country) entry.country = wrapped.country
+      if (typeof wrapped.admin1 === 'string' && wrapped.admin1) entry.admin1 = wrapped.admin1
+    } else {
+      // Preserve any name/country we already had on a previous drain.
+      const prev = index[id]
+      if (prev?.name) entry.name = prev.name
+      if (prev?.country) entry.country = prev.country
+      if (prev?.admin1) entry.admin1 = prev.admin1
+    }
+    index[id] = entry
     written++
     await redis.del(key)
   }
