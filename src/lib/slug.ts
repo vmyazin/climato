@@ -55,3 +55,24 @@ export function toSlug(city: GeoCity): CityUrl {
     query: `?@${city.lat.toFixed(2)},${city.lon.toFixed(2)}`,
   }
 }
+
+// The same allowlist enforced server-side in api/_lib/catalog.ts. Kept
+// duplicated rather than imported because the api/ tree is bundled
+// separately by Vercel and we want this to ship in the SPA bundle too.
+const CURATED_IDS = new Set<string>([
+  'reykjavik', 'tokyo', 'cairo', 'buenosaires', 'london', 'sydney', 'nyc',
+  'mumbai', 'paris', 'capetown', 'marrakech', 'singapore', 'moscow', 'mexico',
+  'dubai', 'stockholm', 'florianopolis',
+])
+
+const NUMERIC_ID = /^\d+$/
+
+// Whether a GeoCity has a stable, server-acceptable id — i.e., one that
+// either matches a curated city or looks like a GeoNames numeric id. The
+// URL handler synthesises placeholder ids (e.g., "spain-madrid",
+// "placeholder:...") for first-paint that the API rejects; hooks should
+// stay disabled until geocoding upgrades the city to a resolved one.
+export function isResolvedCity(city: { id: string } | undefined | null): boolean {
+  if (!city) return false
+  return CURATED_IDS.has(city.id) || NUMERIC_ID.test(city.id)
+}

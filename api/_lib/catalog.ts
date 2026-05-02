@@ -79,3 +79,48 @@ export function validateCity(id: string, lat: number, lon: number): ValidationRe
   }
   return { ok: true, entry }
 }
+
+export interface NeighborEntry extends CatalogEntry {
+  id: string
+  distance_km: number
+}
+
+const EARTH_RADIUS_KM = 6371
+
+// Great-circle distance (haversine). Cheap enough to run against the full
+// 6k-row catalog per request — measured at well under 10ms on cold cache.
+function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const toRad = (deg: number) => (deg * Math.PI) / 180
+  const dLat = toRad(lat2 - lat1)
+  const dLon = toRad(lon2 - lon1)
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2
+  return 2 * EARTH_RADIUS_KM * Math.asin(Math.sqrt(a))
+}
+
+// Returns the N nearest catalog cities to the given lat/lon, excluding any
+// entry within `minKm` (default 30km skips metro-area subdivisions —
+// Madrid districts, Tokyo wards, NYC boroughs — which would otherwise
+// dominate the list and read as "neighbourhoods" rather than destinations)
+// and any entry beyond `maxKm` (default 600km skips the section entirely
+// for genuinely isolated cities like Reykjavík where the nearest city is
+// across an ocean).
+export function findNearest(
+  origin: { lat: number; lon: number },
+  n: number,
+  excludeId?: string,
+  minKm = 30,
+  maxKm = 600,
+): NeighborEntry[] {
+  const cat = getCatalog()
+  const candidates: NeighborEntry[] = []
+  for (const [id, entry] of cat) {
+    if (id === excludeId) continue
+    const distance_km = haversineKm(origin.lat, origin.lon, entry.lat, entry.lon)
+    if (distance_km < minKm || distance_km > maxKm) continue
+    candidates.push({ id, ...entry, distance_km })
+  }
+  candidates.sort((a, b) => a.distance_km - b.distance_km)
+  return candidates.slice(0, Math.max(0, Math.min(n, 50)))
+}

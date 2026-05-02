@@ -226,6 +226,7 @@ export default defineConfig({
     seoFiles(),
     devApiRoutes([
       { path: '/api/normals', module: '/api/normals.ts' },
+      { path: '/api/nearby',  module: '/api/nearby.ts' },
       { path: '/api/admin',   module: '/api/admin.ts',   defaultContentType: 'text/html; charset=utf-8' },
       { path: '/admin',       module: '/api/admin.ts',   defaultContentType: 'text/html; charset=utf-8' },
     ]),

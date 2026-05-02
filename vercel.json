@@ -6,6 +6,9 @@
   "functions": {
     "api/normals.ts": {
       "includeFiles": "data/cities.tsv"
+    },
+    "api/nearby.ts": {
+      "includeFiles": "data/cities.tsv"
     }
   }
 }

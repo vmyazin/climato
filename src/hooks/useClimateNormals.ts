@@ -1,5 +1,6 @@
 import { useQuery, keepPreviousData } from '@tanstack/react-query'
 import type { City, GeoCity, Normals } from '../data/cities'
+import { isResolvedCity } from '../lib/slug'
 
 async function fetchNormals(geo: GeoCity): Promise<City> {
   // Cache hit: served directly from CDN (committed in data/normals/, copied
@@ -34,7 +35,7 @@ export function useClimateNormals(geo: GeoCity | undefined) {
   return useQuery({
     queryKey: ['climate', geo?.lat.toFixed(2), geo?.lon.toFixed(2)],
     queryFn: () => fetchNormals(geo!),
-    enabled: !!geo?.lat,
+    enabled: !!geo?.lat && isResolvedCity(geo),
     staleTime: Infinity,
     gcTime: 7 * 24 * 60 * 60 * 1000,
     placeholderData: keepPreviousData,
