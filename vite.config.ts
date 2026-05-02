@@ -173,6 +173,12 @@ interface DevApiRoute {
   defaultContentType?: string
 }
 
+async function readRawBody(req: import('node:http').IncomingMessage): Promise<string> {
+  const chunks: Buffer[] = []
+  for await (const chunk of req) chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk)
+  return Buffer.concat(chunks).toString('utf8')
+}
+
 function devApiRoutes(routes: DevApiRoute[]): Plugin {
   return {
     name: 'climato-dev-api-routes',
@@ -183,15 +189,21 @@ function devApiRoutes(routes: DevApiRoute[]): Plugin {
           const { default: handler } = await server.ssrLoadModule(route.module)
           let statusCode = 200
           let body = ''
-          const headers: Record<string, string> = {}
+          const headers: Record<string, string | string[]> = {}
           const shimRes = {
             status(code: number) { statusCode = code; return shimRes },
-            setHeader(name: string, value: string) { headers[name] = value },
+            setHeader(name: string, value: string | string[]) { headers[name] = value },
             json(payload: unknown) { body = JSON.stringify(payload) },
             send(payload: string) { body = payload },
           }
+          const rawBody = req.method && req.method !== 'GET' && req.method !== 'HEAD'
+            ? await readRawBody(req)
+            : undefined
           try {
-            await handler({ url: req.url, headers: req.headers, query: {} }, shimRes)
+            await handler(
+              { url: req.url, method: req.method, headers: req.headers, rawBody },
+              shimRes,
+            )
           } catch (err) {
             statusCode = 500
             body = JSON.stringify({ error: String(err) })

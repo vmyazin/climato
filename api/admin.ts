@@ -1,17 +1,24 @@
-import { timingSafeEqual } from 'node:crypto'
+import { createHmac, timingSafeEqual } from 'node:crypto'
 
 interface VercelLikeRequest {
   url?: string
+  method?: string
   headers?: Record<string, string | string[] | undefined>
+  body?: unknown
+  rawBody?: string
 }
 
 interface VercelLikeResponse {
   status(code: number): VercelLikeResponse
-  setHeader(name: string, value: string): void
+  setHeader(name: string, value: string | string[]): void
   send(body: string): void
 }
 
-const REALM = 'Climato Admin'
+const COOKIE_NAME = 'climato_admin'
+const SESSION_PAYLOAD = 'climato-admin-v1'
+// 30 days. Long enough to be set-and-forget, short enough that a stale device
+// eventually re-prompts.
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 30
 
 interface IndexEntry {
   fetched_at: string
@@ -20,7 +27,6 @@ type Index = Record<string, IndexEntry>
 
 interface PendingEntry {
   id: string
-  has_value: boolean
 }
 
 function getHeader(req: VercelLikeRequest, name: string): string | undefined {
@@ -29,23 +35,78 @@ function getHeader(req: VercelLikeRequest, name: string): string | undefined {
   return v
 }
 
-function checkBasicAuth(req: VercelLikeRequest, password: string): boolean {
-  const auth = getHeader(req, 'authorization')
-  if (!auth?.startsWith('Basic ')) return false
-  let decoded: string
-  try {
-    decoded = Buffer.from(auth.slice('Basic '.length), 'base64').toString('utf8')
-  } catch {
-    return false
+function sessionToken(password: string): string {
+  return createHmac('sha256', password).update(SESSION_PAYLOAD).digest('hex')
+}
+
+function constantTimeStringEqual(a: string, b: string): boolean {
+  const aBuf = Buffer.from(a)
+  const bBuf = Buffer.from(b)
+  if (aBuf.length !== bBuf.length) return false
+  return timingSafeEqual(aBuf, bBuf)
+}
+
+function parseCookies(header: string | undefined): Record<string, string> {
+  const out: Record<string, string> = {}
+  if (!header) return out
+  for (const part of header.split(';')) {
+    const eq = part.indexOf('=')
+    if (eq < 0) continue
+    const k = part.slice(0, eq).trim()
+    const v = part.slice(eq + 1).trim()
+    if (k) out[k] = decodeURIComponent(v)
   }
-  const colon = decoded.indexOf(':')
-  if (colon < 0) return false
-  const provided = decoded.slice(colon + 1)
-  // Constant-time compare; equal-length is required for timingSafeEqual.
-  const a = Buffer.from(provided)
-  const b = Buffer.from(password)
-  if (a.length !== b.length) return false
-  return timingSafeEqual(a, b)
+  return out
+}
+
+function isAuthenticated(req: VercelLikeRequest, password: string): boolean {
+  const cookies = parseCookies(getHeader(req, 'cookie'))
+  const provided = cookies[COOKIE_NAME]
+  if (!provided) return false
+  return constantTimeStringEqual(provided, sessionToken(password))
+}
+
+function isProduction(req: VercelLikeRequest): boolean {
+  // localhost can't accept Secure cookies set over HTTP. Production on Vercel
+  // is always HTTPS.
+  if (process.env.VERCEL) return true
+  const host = getHeader(req, 'host') ?? ''
+  return !host.includes('localhost') && !host.startsWith('127.')
+}
+
+function buildSetCookie(token: string, secure: boolean): string {
+  const flags = [
+    `${COOKIE_NAME}=${token}`,
+    'Path=/',
+    `Max-Age=${COOKIE_MAX_AGE}`,
+    'HttpOnly',
+    'SameSite=Lax',
+  ]
+  if (secure) flags.push('Secure')
+  return flags.join('; ')
+}
+
+function buildClearCookie(): string {
+  return `${COOKIE_NAME}=; Path=/; Max-Age=0; HttpOnly; SameSite=Lax`
+}
+
+async function readBody(req: VercelLikeRequest): Promise<Record<string, string>> {
+  // Vercel's runtime parses application/x-www-form-urlencoded into req.body
+  // as Record<string, string>. Dev shim hands us a raw string in rawBody.
+  if (typeof req.body === 'object' && req.body !== null) {
+    const out: Record<string, string> = {}
+    for (const [k, v] of Object.entries(req.body)) {
+      if (typeof v === 'string') out[k] = v
+    }
+    return out
+  }
+  if (typeof req.rawBody === 'string') {
+    return Object.fromEntries(new URLSearchParams(req.rawBody))
+  }
+  if (typeof req.body === 'string') {
+    return Object.fromEntries(new URLSearchParams(req.body))
+  }
+  return {}
 }
 
 function getRedisEnv() {
@@ -78,7 +139,7 @@ async function loadPending(): Promise<PendingEntry[]> {
       keys.push(...batch)
       cursor = String(next)
     } while (cursor !== '0')
-    return keys.map(k => ({ id: k.slice('pending:'.length), has_value: true }))
+    return keys.map(k => ({ id: k.slice('pending:'.length) }))
   } catch (err) {
     console.error('[admin] KV scan failed:', err)
     return []
@@ -88,10 +149,10 @@ async function loadPending(): Promise<PendingEntry[]> {
 const NUMERIC_ID = /^\d+$/
 const SLUG_ID = /^[a-z0-9-]+-[a-z0-9-]+$/i
 
-function classifyId(id: string): 'geonames' | 'slug' | 'other' {
+function classifyId(id: string): 'geonames' | 'slug' | 'curated' {
   if (NUMERIC_ID.test(id)) return 'geonames'
   if (SLUG_ID.test(id)) return 'slug'
-  return 'other'
+  return 'curated'
 }
 
 function escapeHtml(s: string): string {
@@ -102,7 +163,98 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot;')
 }
 
-function renderHtml(opts: {
+const STYLE = `
+  body { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; font-size: 13px; color: #ddd; background: #0c0c0c; margin: 0; padding: 24px; line-height: 1.55; }
+  h1, h2 { color: #fff; font-weight: 600; margin: 0 0 8px; letter-spacing: 0.5px; }
+  h1 { font-size: 14px; text-transform: uppercase; }
+  h2 { font-size: 12px; text-transform: uppercase; margin-top: 32px; color: #888; }
+  table { border-collapse: collapse; margin-top: 8px; min-width: 480px; }
+  th, td { border-bottom: 1px solid #1c1c1c; padding: 4px 16px 4px 0; text-align: left; vertical-align: top; }
+  th { color: #777; font-weight: 500; text-transform: uppercase; font-size: 11px; }
+  .muted { color: #666; font-style: italic; }
+  .stat { color: #fff; font-size: 18px; }
+  .row { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 8px; }
+  .col { display: flex; flex-direction: column; }
+  .col-label { color: #777; font-size: 11px; text-transform: uppercase; }
+  .warn { color: #f7b731; }
+  a { color: #4eb1ff; }
+  .meta { color: #555; font-size: 11px; margin-top: 24px; }
+
+  /* Login screen */
+  .login-shell { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; }
+  .login { width: 100%; max-width: 360px; }
+  .login-brand { color: #fff; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+  .login-sub { color: #777; font-size: 11px; margin-bottom: 24px; }
+  .login form { display: flex; flex-direction: column; gap: 12px; }
+  .login label { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .login input[type="password"] {
+    background: #161616;
+    border: 1px solid #262626;
+    color: #f1f1f1;
+    padding: 12px 14px;
+    font: inherit;
+    font-size: 14px;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 120ms ease;
+  }
+  .login input[type="password"]:focus { border-color: #4eb1ff; }
+  .login button {
+    background: #f1f1f1;
+    color: #0c0c0c;
+    border: 0;
+    padding: 12px 14px;
+    font: inherit;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 120ms ease;
+  }
+  .login button:hover { background: #fff; }
+  .login .err { color: #ff6b6b; font-size: 12px; margin-top: 4px; }
+  .login .hint { color: #555; font-size: 11px; margin-top: 16px; }
+`
+
+function renderLogin(opts: { error?: string }): string {
+  const { error } = opts
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Climato Admin · Sign in</title>
+<meta name="robots" content="noindex">
+<style>${STYLE}</style>
+</head>
+<body>
+<div class="login-shell">
+  <div class="login">
+    <div class="login-brand">[Climato Admin]</div>
+    <div class="login-sub">debug · cached cities · pending queue</div>
+    <form method="POST" action="/admin" autocomplete="off">
+      <label for="password">password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        autofocus
+        required
+        autocomplete="current-password"
+      />
+      ${error ? `<div class="err">${escapeHtml(error)}</div>` : ''}
+      <button type="submit">enter ▸</button>
+    </form>
+    <div class="hint">set <code>ADMIN_PASSWORD</code> in Vercel env.</div>
+  </div>
+</div>
+</body>
+</html>`
+}
+
+function renderAdmin(opts: {
   index: Index
   pending: PendingEntry[]
   origin: string
@@ -123,31 +275,17 @@ function renderHtml(opts: {
 
   const cachedSlug = cachedIds.filter(id => classifyId(id) === 'slug').length
   const cachedGeo = cachedIds.filter(id => classifyId(id) === 'geonames').length
+  const cachedCurated = cachedIds.filter(id => classifyId(id) === 'curated').length
   const now = new Date().toISOString()
 
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Climato Admin</title>
 <meta name="robots" content="noindex">
-<style>
-  body { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; font-size: 13px; color: #ddd; background: #111; margin: 0; padding: 24px; line-height: 1.55; }
-  h1, h2 { color: #fff; font-weight: 600; margin: 0 0 8px; letter-spacing: 0.5px; }
-  h1 { font-size: 14px; text-transform: uppercase; }
-  h2 { font-size: 12px; text-transform: uppercase; margin-top: 32px; color: #888; }
-  table { border-collapse: collapse; margin-top: 8px; min-width: 480px; }
-  th, td { border-bottom: 1px solid #222; padding: 4px 16px 4px 0; text-align: left; vertical-align: top; }
-  th { color: #777; font-weight: 500; text-transform: uppercase; font-size: 11px; }
-  .muted { color: #666; font-style: italic; }
-  .stat { color: #fff; font-size: 18px; }
-  .row { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 8px; }
-  .col { display: flex; flex-direction: column; }
-  .col-label { color: #777; font-size: 11px; text-transform: uppercase; }
-  .warn { color: #f7b731; }
-  a { color: #4eb1ff; }
-  .meta { color: #555; font-size: 11px; margin-top: 24px; }
-</style>
+<style>${STYLE}</style>
 </head>
 <body>
 <h1>[Climato Admin] · ${escapeHtml(now)}</h1>
@@ -156,6 +294,7 @@ function renderHtml(opts: {
   <div class="col"><span class="col-label">cached</span><span class="stat">${cachedIds.length}</span></div>
   <div class="col"><span class="col-label">geonames-style</span><span class="stat">${cachedGeo}</span></div>
   <div class="col"><span class="col-label">slug-style (dups likely)</span><span class="stat ${cachedSlug ? 'warn' : ''}">${cachedSlug}</span></div>
+  <div class="col"><span class="col-label">curated</span><span class="stat">${cachedCurated}</span></div>
   <div class="col"><span class="col-label">pending (kv)</span><span class="stat">${pendingIds.length}</span></div>
   <div class="col"><span class="col-label">kv configured</span><span class="stat">${kvConfigured ? 'yes' : 'no'}</span></div>
 </div>
@@ -179,14 +318,14 @@ ${cachedRows || '      <tr><td colspan="3" class="muted">— empty —</td></tr>
 <div class="meta">
   origin: <code>${escapeHtml(origin)}</code> ·
   <a href="javascript:location.reload()">reload</a> ·
-  <a href="/normals/_index.json" target="_blank">_index.json</a>
+  <a href="/normals/_index.json" target="_blank">_index.json</a> ·
+  <a href="/admin?logout=1">log out</a>
 </div>
 </body>
 </html>`
 }
 
 function deriveOrigin(req: VercelLikeRequest): string {
-  // Vercel injects x-forwarded-host / x-forwarded-proto; fall back to VERCEL_URL.
   const proto = getHeader(req, 'x-forwarded-proto') ?? 'https'
   const host = getHeader(req, 'x-forwarded-host') ?? getHeader(req, 'host')
   if (host) return `${proto}://${host}`
@@ -194,27 +333,56 @@ function deriveOrigin(req: VercelLikeRequest): string {
   return 'http://localhost:5188'
 }
 
-export default async function handler(req: VercelLikeRequest, res: VercelLikeResponse) {
+function htmlResponse(res: VercelLikeResponse, code: number, html: string, extraHeaders: Record<string, string | string[]> = {}) {
+  res.setHeader('Content-Type', 'text/html; charset=utf-8')
   res.setHeader('Cache-Control', 'no-store, max-age=0')
+  for (const [k, v] of Object.entries(extraHeaders)) res.setHeader(k, v)
+  res.status(code).send(html)
+}
 
+export default async function handler(req: VercelLikeRequest, res: VercelLikeResponse) {
   const password = process.env.ADMIN_PASSWORD
   if (!password) {
     res.setHeader('Content-Type', 'text/plain; charset=utf-8')
+    res.setHeader('Cache-Control', 'no-store, max-age=0')
     res.status(503).send('ADMIN_PASSWORD env var is not set on this deployment.')
     return
   }
-  if (!checkBasicAuth(req, password)) {
-    res.setHeader('WWW-Authenticate', `Basic realm="${REALM}", charset="UTF-8"`)
-    res.setHeader('Content-Type', 'text/plain; charset=utf-8')
-    res.status(401).send('Authentication required.')
+
+  const method = (req.method ?? 'GET').toUpperCase()
+  const url = new URL(req.url ?? '/admin', 'http://localhost')
+
+  // Logout: clear cookie, render login page.
+  if (method === 'GET' && url.searchParams.get('logout') === '1') {
+    htmlResponse(res, 200, renderLogin({}), { 'Set-Cookie': buildClearCookie() })
+    return
+  }
+
+  // POST: form submission. Validate password, set cookie, redirect to GET.
+  if (method === 'POST') {
+    const fields = await readBody(req)
+    const provided = (fields.password ?? '').trim()
+    if (!provided || !constantTimeStringEqual(provided, password)) {
+      htmlResponse(res, 401, renderLogin({ error: 'Invalid password.' }))
+      return
+    }
+    res.setHeader('Set-Cookie', buildSetCookie(sessionToken(password), isProduction(req)))
+    res.setHeader('Cache-Control', 'no-store, max-age=0')
+    res.setHeader('Location', '/admin')
+    res.status(303).send('')
+    return
+  }
+
+  // GET: cookie-gated admin page, or login form.
+  if (!isAuthenticated(req, password)) {
+    htmlResponse(res, 200, renderLogin({}))
     return
   }
 
   const origin = deriveOrigin(req)
   const [index, pending] = await Promise.all([loadIndex(origin), loadPending()])
 
-  res.setHeader('Content-Type', 'text/html; charset=utf-8')
-  res.status(200).send(renderHtml({
+  htmlResponse(res, 200, renderAdmin({
     index,
     pending,
     origin,
