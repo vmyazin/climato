@@ -124,7 +124,7 @@ export async function resolveSlugViaGeocoding(parsed: {
   }
 
   const matches = results.filter(
-    r => countrySlug(r.country) === parsed.countrySlug && matchAdmin1(r) && matchCity(r),
+    r => !!r.country && countrySlug(r.country) === parsed.countrySlug && matchAdmin1(r) && matchCity(r),
   )
   if (matches.length === 0) return null
 
