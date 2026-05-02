@@ -37,7 +37,7 @@ jobs:
           if [[ -n "$(git status --porcelain data/normals/)" ]]; then
             count=$(git status --porcelain data/normals/ | wc -l | tr -d ' ')
             git config user.name 'climato-bot'
-            git config user.email 'bot@climato.app'
+            git config user.email 'bot@climato.smoxu.com'
             git add data/normals/
             git commit -m "data: ingest ${count} cities from drain"
             git push

@@ -92,7 +92,7 @@ function seoFiles(): Plugin {
     name: 'climato-seo-files',
     apply: 'build',
     generateBundle() {
-      const siteUrl = (process.env.VITE_SITE_URL ?? 'https://climato.app').replace(/\/$/, '')
+      const siteUrl = (process.env.VITE_SITE_URL ?? 'https://climato.smoxu.com').replace(/\/$/, '')
       const lastmod = new Date().toISOString().slice(0, 10)
       const catalog = loadCityCatalog(resolve(__dirname, 'data/cities.tsv'))
 
