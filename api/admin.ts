@@ -182,28 +182,26 @@ const STYLE = `
 
   /* Login screen */
   .login-shell { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; }
-  .login { width: 100%; max-width: 360px; }
-  .login-brand { color: #fff; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-  .login-sub { color: #777; font-size: 11px; margin-bottom: 24px; }
-  .login form { display: flex; flex-direction: column; gap: 12px; }
-  .login label { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .login { width: 100%; max-width: 320px; }
+  .login form { display: flex; flex-direction: column; gap: 10px; }
   .login input[type="password"] {
     background: #161616;
     border: 1px solid #262626;
     color: #f1f1f1;
-    padding: 12px 14px;
+    padding: 11px 14px;
     font: inherit;
     font-size: 14px;
     border-radius: 4px;
     outline: none;
     transition: border-color 120ms ease;
   }
+  .login input[type="password"]::placeholder { color: #555; }
   .login input[type="password"]:focus { border-color: #4eb1ff; }
   .login button {
     background: #f1f1f1;
     color: #0c0c0c;
     border: 0;
-    padding: 12px 14px;
+    padding: 11px 14px;
     font: inherit;
     font-weight: 600;
     font-size: 13px;
@@ -214,8 +212,7 @@ const STYLE = `
     transition: background 120ms ease;
   }
   .login button:hover { background: #fff; }
-  .login .err { color: #ff6b6b; font-size: 12px; margin-top: 4px; }
-  .login .hint { color: #555; font-size: 11px; margin-top: 16px; }
+  .login .err { color: #ff6b6b; font-size: 12px; margin-top: -2px; }
 `
 
 function renderLogin(opts: { error?: string }): string {
@@ -225,21 +222,20 @@ function renderLogin(opts: { error?: string }): string {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Climato Admin · Sign in</title>
+<title>Climato Admin</title>
 <meta name="robots" content="noindex">
 <style>${STYLE}</style>
 </head>
 <body>
 <div class="login-shell">
   <div class="login">
-    <div class="login-brand">[Climato Admin]</div>
-    <div class="login-sub">debug · cached cities · pending queue</div>
     <form method="POST" action="/admin" autocomplete="off">
-      <label for="password">password</label>
       <input
         id="password"
         name="password"
         type="password"
+        placeholder="password"
+        aria-label="password"
         autofocus
         required
         autocomplete="current-password"
@@ -247,7 +243,6 @@ function renderLogin(opts: { error?: string }): string {
       ${error ? `<div class="err">${escapeHtml(error)}</div>` : ''}
       <button type="submit">enter ▸</button>
     </form>
-    <div class="hint">set <code>ADMIN_PASSWORD</code> in Vercel env.</div>
   </div>
 </div>
 </body>
