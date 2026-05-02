@@ -1,6 +1,6 @@
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
-import { readFileSync, existsSync } from 'node:fs'
+import { readFileSync, existsSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { CITIES, type GeoCity } from './src/data/cities'
 import { countrySlug, slugify } from './src/lib/slug'
@@ -141,10 +141,58 @@ Sitemap: ${siteUrl}/sitemap.xml
       this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: sitemap })
       this.emitFile({ type: 'asset', fileName: 'robots.txt', source: robots })
       console.log(`[seo] sitemap.xml: ${urls.length} URLs (1 root + ${urls.length - 1} cities)`)
+
+      // Bake committed climate normals into the bundle. Cache hits are served
+      // from /normals/{id}.json by the CDN; the API route is only invoked on
+      // a cold cache.
+      const normalsDir = resolve(__dirname, 'data/normals')
+      if (existsSync(normalsDir)) {
+        let count = 0
+        for (const file of readdirSync(normalsDir)) {
+          if (!file.endsWith('.json') || file.startsWith('_')) continue
+          const source = readFileSync(resolve(normalsDir, file), 'utf8')
+          this.emitFile({ type: 'asset', fileName: `normals/${file}`, source })
+          count++
+        }
+        console.log(`[seo] normals: ${count} cached cities`)
+      }
+    },
+  }
+}
+
+// Mount api/normals.ts at /api/normals during `vite dev` so the dev server
+// matches production. Reads request URL/query, calls the handler with a
+// minimal Express-like (req, res) shim, returns the response.
+function devApiNormals(): Plugin {
+  return {
+    name: 'climato-dev-api-normals',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use('/api/normals', async (req, res) => {
+        const { default: handler } = await server.ssrLoadModule('/api/normals.ts')
+        let statusCode = 200
+        let body = ''
+        const headers: Record<string, string> = {}
+        const shimRes = {
+          status(code: number) { statusCode = code; return shimRes },
+          setHeader(name: string, value: string) { headers[name] = value },
+          json(payload: unknown) { body = JSON.stringify(payload) },
+        }
+        try {
+          await handler({ url: req.url, query: {} }, shimRes)
+        } catch (err) {
+          statusCode = 500
+          body = JSON.stringify({ error: String(err) })
+        }
+        for (const [k, v] of Object.entries(headers)) res.setHeader(k, v)
+        if (!headers['Content-Type']) res.setHeader('Content-Type', 'application/json')
+        res.statusCode = statusCode
+        res.end(body)
+      })
     },
   }
 }
 
 export default defineConfig({
-  plugins: [react(), seoFiles()],
+  plugins: [react(), seoFiles(), devApiNormals()],
 })

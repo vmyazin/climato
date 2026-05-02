@@ -1,0 +1,46 @@
+name: Drain pending climate normals
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # hourly
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  drain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Drain Upstash → data/normals/
+        env:
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+        run: pnpm exec tsx scripts/drain-normals.ts
+
+      - name: Commit if changed
+        run: |
+          if [[ -n "$(git status --porcelain data/normals/)" ]]; then
+            count=$(git status --porcelain data/normals/ | wc -l | tr -d ' ')
+            git config user.name 'climato-bot'
+            git config user.email 'bot@climato.app'
+            git add data/normals/
+            git commit -m "data: ingest ${count} cities from drain"
+            git push
+          else
+            echo "No new normals to drain."
+          fi
