@@ -15,5 +15,5 @@
     "noUnusedParameters": true,
     "types": ["node"]
   },
-  "include": ["vite.config.ts", "api/**/*.ts", "scripts/**/*.ts", "src/lib/normals.ts", "src/data/cities.ts", "src/lib/slug.ts"]
+  "include": ["vite.config.ts", "api/**/*.ts", "scripts/**/*.ts", "src/data/cities.ts", "src/lib/slug.ts"]
 }

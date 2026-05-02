@@ -17,6 +17,11 @@ export interface City extends GeoCity {
   sunset: string[]
 }
 
+// Climate-only fields a City has on top of its GeoCity identity. Used by the
+// /api/normals payload contract, which returns just these fields (the geo
+// half is already known to the caller).
+export type Normals = Pick<City, 'high' | 'low' | 'precip' | 'sun' | 'sunrise' | 'sunset'>
+
 export const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'] as const
 export const MONTHS_LONG = ['January','February','March','April','May','June','July','August','September','October','November','December'] as const
 

@@ -1,6 +1,5 @@
 import { useQuery, keepPreviousData } from '@tanstack/react-query'
-import type { City, GeoCity } from '../data/cities'
-import type { Normals } from '../lib/normals'
+import type { City, GeoCity, Normals } from '../data/cities'
 
 async function fetchNormals(geo: GeoCity): Promise<City> {
   // Cache hit: served directly from CDN (committed in data/normals/, copied
