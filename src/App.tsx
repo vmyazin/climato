@@ -1,4 +1,5 @@
 import { AppHeader } from './components/AppHeader'
+import { CityHeroFallback } from './components/CityHeroFallback'
 import { Footer } from './components/Footer'
 import { NotFound } from './components/NotFound'
 import { SmokedGlassOverlay } from './components/SmokedGlassOverlay'
@@ -62,9 +63,7 @@ export default function App() {
           </div>
         )}
         {!notFoundSlug && !isError && !sharedProps && (
-          <div style={{ padding: '80px 32px', textAlign: 'center', color: muted, fontFamily: "'JetBrains Mono', monospace", fontSize: 13, letterSpacing: 1 }}>
-            LOADING CLIMATE DATA …
-          </div>
+          <CityHeroFallback city={selectedCity} />
         )}
         {!notFoundSlug && sharedProps && (
           <>

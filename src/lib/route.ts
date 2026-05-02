@@ -61,6 +61,26 @@ export function reconstructFromCoords(
   }
 }
 
+// lat=0 keeps useClimateNormals disabled until the real geocoding response replaces this.
+export function reconstructFromSlug(parsed: {
+  countrySlug: string
+  admin1Slug?: string
+  citySlug: string
+}): GeoCity {
+  const country = countryFromSlug(parsed.countrySlug)
+  const admin1 = parsed.admin1Slug ? nameFromSlug(parsed.admin1Slug) : undefined
+  const name = nameFromSlug(parsed.citySlug)
+  return {
+    id: `placeholder:${parsed.countrySlug}-${parsed.citySlug}`,
+    name,
+    country,
+    ...(admin1 ? { admin1 } : {}),
+    lat: 0,
+    lon: 0,
+    elev: 0,
+  }
+}
+
 interface OpenMeteoCity {
   id: number
   name: string
@@ -152,6 +172,14 @@ export function useUrlSync(): UrlSyncResult {
         return
       }
 
+      // Synchronous placeholder so the first paint already shows the correct
+      // city name + country derived from the URL slug (matters for the SEO
+      // fallback hero and for Googlebot's render snapshot before geocoding
+      // resolves).
+      const placeholder = reconstructFromSlug(parsed)
+      skipNextPush.current = true
+      setCity(placeholder)
+
       const city = await resolveSlugViaGeocoding(parsed)
       if (cancelled) return
       if (city) {
@@ -183,6 +211,9 @@ export function useUrlSync(): UrlSyncResult {
       skipNextPush.current = false
       return
     }
+    // Placeholder cities (lat=0,lon=0) shouldn't drive URL changes — they
+    // exist only as a first-paint stand-in until real geocoding resolves.
+    if (selectedCity.lat === 0 && selectedCity.lon === 0) return
     const { path, query } = toSlug(selectedCity)
     const target = path + query
     if (currentUrl() !== target) {
