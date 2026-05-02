@@ -7,6 +7,11 @@ const DEFAULT_TITLE = 'Climato — Monthly Averages'
 const DEFAULT_DESCRIPTION =
   "What's the weather really like in any city? See monthly averages — temperature, rainfall and sunshine hours — and the best time to visit."
 
+const JSONLD_ID = 'climato-jsonld'
+
+// Matches the archive-API window in useClimateNormals — keep in sync.
+const CLIMATE_PERIOD = '2014-01-01/2023-12-31'
+
 function setMeta(name: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[name="${name}"]`)
   if (!el) {
@@ -15,6 +20,71 @@ function setMeta(name: string, content: string) {
     document.head.appendChild(el)
   }
   el.setAttribute('content', content)
+}
+
+function setJsonLd(payload: object | null) {
+  const existing = document.getElementById(JSONLD_ID)
+  if (!payload) {
+    existing?.remove()
+    return
+  }
+  const json = JSON.stringify(payload)
+  if (existing) {
+    if (existing.textContent !== json) existing.textContent = json
+    return
+  }
+  const el = document.createElement('script')
+  el.id = JSONLD_ID
+  el.type = 'application/ld+json'
+  el.textContent = json
+  document.head.appendChild(el)
+}
+
+function buildDatasetJsonLd(selectedCity: GeoCity, city: City | undefined) {
+  // Skip admin1 when it duplicates the city name — common for city-states
+  // like Tokyo where admin1 ("Tokyo") collapses with name ("Tokyo").
+  const includeAdmin1 = selectedCity.admin1 && selectedCity.admin1 !== selectedCity.name
+  const placeName = includeAdmin1
+    ? `${selectedCity.name}, ${selectedCity.admin1}, ${selectedCity.country}`
+    : `${selectedCity.name}, ${selectedCity.country}`
+
+  const place: Record<string, unknown> = {
+    '@type': 'Place',
+    name: placeName,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: selectedCity.lat,
+      longitude: selectedCity.lon,
+    },
+  }
+
+  const dataset: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: `Monthly Climate Normals — ${selectedCity.name}`,
+    description: `Monthly average temperature, precipitation and sunshine data for ${selectedCity.name}, ${selectedCity.country}.`,
+    spatialCoverage: place,
+    temporalCoverage: CLIMATE_PERIOD,
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+    isAccessibleForFree: true,
+    creator: { '@type': 'Organization', name: 'Climato' },
+    sourceOrganization: {
+      '@type': 'Organization',
+      name: 'Open-Meteo',
+      url: 'https://open-meteo.com/',
+    },
+  }
+
+  if (city) {
+    dataset.variableMeasured = [
+      { '@type': 'PropertyValue', name: 'Average daily high temperature', unitCode: 'CEL' },
+      { '@type': 'PropertyValue', name: 'Average daily low temperature', unitCode: 'CEL' },
+      { '@type': 'PropertyValue', name: 'Monthly precipitation', unitCode: 'MMT' },
+      { '@type': 'PropertyValue', name: 'Daily sunshine hours', unitCode: 'HUR' },
+    ]
+  }
+
+  return dataset
 }
 
 interface Args {
@@ -30,6 +100,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       const label = nameFromSlug(notFoundSlug)
       document.title = `${label} — not found · Climato`
       setMeta('description', DEFAULT_DESCRIPTION)
+      setJsonLd(null)
       return
     }
 
@@ -52,12 +123,22 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
         `Monthly temperature highs, lows, rainfall and sunshine hours for ${name}, ${country}.`,
       )
     }
+
+    // Only emit Dataset JSON-LD once we have real coordinates — placeholders
+    // (lat=0,lon=0 from reconstructFromSlug) would publish bogus geo data.
+    const hasRealCoords = selectedCity.lat !== 0 || selectedCity.lon !== 0
+    if (hasRealCoords) {
+      setJsonLd(buildDatasetJsonLd(selectedCity, haveFreshClimate ? city : undefined))
+    } else {
+      setJsonLd(null)
+    }
   }, [selectedCity, city, isPlaceholderData, notFoundSlug])
 
   useEffect(() => {
     return () => {
       document.title = DEFAULT_TITLE
       setMeta('description', DEFAULT_DESCRIPTION)
+      setJsonLd(null)
     }
   }, [])
 }
