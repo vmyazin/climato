@@ -10,8 +10,10 @@ import {
 
 const fg = '#111'
 const muted = '#85847d'
+const accent = '#cc3b1f'
 const precipBlue = '#2b5fae'
-const hairline = '#11111114'
+const cardBg = '#fff'
+const sheetBg = '#f0f1ed'
 
 interface Props {
   city: City
@@ -23,11 +25,10 @@ interface Props {
 // real content to index, not just charts. All four sections live under their
 // own <h2> for semantic SEO.
 //
-// Visual approach: minimal chrome — no bordered card containers. Numbered
-// eyebrow labels + large h2s + body type doing the work, hairlines between
-// sections. The rainfall section borrows a small inline sparkline from the
-// "Dashboard density" design exploration so the seasonal pattern lands
-// without requiring a trip to the table below.
+// Visual approach: Swiss-grid bordered cards (matching VariationA's Module
+// pattern) as the chassis, with magazine-editorial moves inside —
+// asymmetric two-column lead with a drop cap, a pull-quote callout, a
+// featured "best months" range, and a tinted bordered table.
 export function ClimateNarrative({ city, unit }: Props) {
   const isMd = useMediaQuery('(min-width: 768px)')
   const pad = isMd ? 32 : 16
@@ -42,101 +43,302 @@ export function ClimateNarrative({ city, unit }: Props) {
   const tDecimal = (c: number) => unit === 'C' ? `${c.toFixed(1)}°C` : `${cToF(c).toFixed(1)}°F`
   const mm = (v: number) => unit === 'C' ? `${v} mm` : `${mmToIn(v)} in`
 
-  const overview = `${city.name} has a ${climateLabel(climate)} climate. The warmest month is ${MONTHS_LONG[hi.peakIdx]} (${t(hi.peakValue)} average high) and the coolest is ${MONTHS_LONG[hi.troughIdx]} (${t(hi.troughValue)}).`
-  const rainfall = `Annual rainfall totals ${mm(annualPrecip)}. The wettest month is ${MONTHS_LONG[pr.peakIdx]} (${mm(pr.peakValue)}) and the driest is ${MONTHS_LONG[pr.troughIdx]} (${mm(pr.troughValue)}).`
-  const bestTimeText = best
-    ? `The best time to visit ${city.name} is ${best.formatted}, when temperatures average ${t(best.avgLowRange[0])}–${t(best.avgHighRange[1])} with ${best.avgSun.toFixed(1)} sunshine hours per day.`
-    : `${city.name} doesn't have a clearly preferred season — its climate stays fairly consistent year-round.`
+  // Pull-quote: lifts the temperature extremes into a stat-as-headline so
+  // skimmers get the climatic signature in one glance.
+  const pullQuoteValue = t(hi.peakValue)
+  const pullQuoteCaption = `${MONTHS_LONG[hi.peakIdx]} · hottest month`
 
   return (
     <div style={{
       width: '100%',
-      background: '#f0f1ed',
+      background: sheetBg,
       color: fg,
       fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
       boxSizing: 'border-box',
     }}>
-      <div style={{
+      <div className="flex flex-col gap-4" style={{
         maxWidth: 1280,
         margin: '0 auto',
         padding: `0 ${pad}px ${pad}px`,
       }}>
 
-        <Section index={1} title="Climate Overview" meta={`${MONTHS_LONG[hi.peakIdx]} → ${MONTHS_LONG[lo.troughIdx]}`} isMd={isMd}>
-          <Para isMd={isMd}>{overview}</Para>
-        </Section>
+        <Module index={1} title="Climate Overview" meta={`${MONTHS_LONG[hi.peakIdx]} → ${MONTHS_LONG[lo.troughIdx]}`} isMd={isMd}>
+          <OverviewBody
+            city={city}
+            climateName={climateLabel(climate)}
+            warmestMonth={MONTHS_LONG[hi.peakIdx]}
+            warmestTemp={t(hi.peakValue)}
+            coolestMonth={MONTHS_LONG[hi.troughIdx]}
+            coolestTemp={t(hi.troughValue)}
+            pullQuoteValue={pullQuoteValue}
+            pullQuoteCaption={pullQuoteCaption}
+            isMd={isMd}
+          />
+        </Module>
 
-        <Section index={2} title="Rainfall by Month" meta={`${mm(annualPrecip)} / year`} isMd={isMd}>
-          <Para isMd={isMd}>{rainfall}</Para>
-          <Sparkline values={city.precip} highlightIdx={pr.peakIdx} isMd={isMd} />
-        </Section>
+        <Module index={2} title="Rainfall by Month" meta={`${mm(annualPrecip)} / year`} isMd={isMd}>
+          <RainfallBody
+            cityName={city.name}
+            precip={city.precip}
+            wettestMonth={MONTHS_LONG[pr.peakIdx]}
+            wettestValue={mm(pr.peakValue)}
+            driestMonth={MONTHS_LONG[pr.troughIdx]}
+            driestValue={mm(pr.troughValue)}
+            annualValue={mm(annualPrecip)}
+            highlightIdx={pr.peakIdx}
+            isMd={isMd}
+          />
+        </Module>
 
-        <Section index={3} title="Best Time to Visit" meta={best ? best.formatted : 'no clear season'} isMd={isMd}>
-          <Para isMd={isMd}>{bestTimeText}</Para>
-        </Section>
+        <Module index={3} title="Best Time to Visit" meta={best ? best.formatted : 'no clear season'} isMd={isMd}>
+          <BestTimeBody
+            cityName={city.name}
+            range={best?.formatted ?? null}
+            tempLow={best ? t(best.avgLowRange[0]) : ''}
+            tempHigh={best ? t(best.avgHighRange[1]) : ''}
+            sun={best?.avgSun ?? null}
+            isMd={isMd}
+          />
+        </Module>
 
-        <Section
+        <Module
           index={4}
           title="Monthly Breakdown"
           meta={`12 months · °${unit} · ${unit === 'C' ? 'mm' : 'in'} · hours`}
           isMd={isMd}
         >
           <MonthlyTable city={city} t={tDecimal} mm={mm} isMd={isMd} />
-        </Section>
+        </Module>
 
       </div>
     </div>
   )
 }
 
-// 12-bar inline sparkline of monthly precipitation. The peak month gets the
-// accent colour so the eye lands on the visual claim made in the prose.
+// ─── 01 · Climate Overview ────────────────────────────────────────────────────
+function OverviewBody({
+  city, climateName, warmestMonth, warmestTemp, coolestMonth, coolestTemp,
+  pullQuoteValue, pullQuoteCaption, isMd,
+}: {
+  city: City
+  climateName: string
+  warmestMonth: string
+  warmestTemp: string
+  coolestMonth: string
+  coolestTemp: string
+  pullQuoteValue: string
+  pullQuoteCaption: string
+  isMd: boolean
+}) {
+  const firstChar = city.name.charAt(0)
+  const remainder = city.name.slice(1)
+  const sentence1Rest = ` has a ${climateName} climate. `
+  const sentence2 = `The warmest month is ${warmestMonth} (${warmestTemp} average high) and the coolest is ${coolestMonth} (${coolestTemp}).`
+
+  return (
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: isMd ? '7fr 5fr' : '1fr',
+      gap: isMd ? 32 : 20,
+      padding: isMd ? '24px 28px' : '20px 18px',
+      alignItems: 'start',
+    }}>
+      <p style={{
+        margin: 0,
+        fontSize: isMd ? 18 : 16,
+        lineHeight: 1.6,
+        color: fg,
+      }}>
+        <span style={{
+          float: 'left',
+          fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
+          fontSize: isMd ? 64 : 48,
+          fontWeight: 700,
+          lineHeight: 0.85,
+          color: accent,
+          paddingRight: 8,
+          paddingTop: 4,
+        }}>
+          {firstChar}
+        </span>
+        <span>{remainder}{sentence1Rest}{sentence2}</span>
+      </p>
+      <PullQuote value={pullQuoteValue} caption={pullQuoteCaption} isMd={isMd} />
+    </div>
+  )
+}
+
+function PullQuote({ value, caption, isMd }: { value: string; caption: string; isMd: boolean }) {
+  return (
+    <aside style={{
+      borderLeft: `3px solid ${accent}`,
+      padding: isMd ? '6px 0 6px 18px' : '4px 0 4px 14px',
+    }}>
+      <div style={{
+        fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
+        fontSize: isMd ? 56 : 40,
+        fontWeight: 700,
+        letterSpacing: -1,
+        lineHeight: 1,
+        color: fg,
+        fontVariantNumeric: 'tabular-nums',
+      }}>
+        {value}
+      </div>
+      <div style={{
+        marginTop: 10,
+        fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+        fontSize: 11,
+        letterSpacing: 1.5,
+        color: muted,
+        textTransform: 'uppercase',
+      }}>
+        {caption}
+      </div>
+    </aside>
+  )
+}
+
+// ─── 02 · Rainfall by Month ───────────────────────────────────────────────────
+function RainfallBody({
+  cityName, precip, wettestMonth, wettestValue, driestMonth, driestValue,
+  annualValue, highlightIdx, isMd,
+}: {
+  cityName: string
+  precip: number[]
+  wettestMonth: string
+  wettestValue: string
+  driestMonth: string
+  driestValue: string
+  annualValue: string
+  highlightIdx: number
+  isMd: boolean
+}) {
+  return (
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: isMd ? '5fr 7fr' : '1fr',
+      gap: isMd ? 32 : 20,
+      padding: isMd ? '24px 28px' : '20px 18px',
+      alignItems: 'start',
+    }}>
+      <div>
+        <p style={{ margin: 0, fontSize: isMd ? 18 : 16, lineHeight: 1.6, color: fg }}>
+          {cityName} sees {annualValue} of rain a year. The wettest month is {wettestMonth} ({wettestValue}); the driest is {driestMonth} ({driestValue}).
+        </p>
+      </div>
+      <Sparkline values={precip} highlightIdx={highlightIdx} isMd={isMd} />
+    </div>
+  )
+}
+
+// ─── 03 · Best Time to Visit ──────────────────────────────────────────────────
+function BestTimeBody({
+  cityName, range, tempLow, tempHigh, sun, isMd,
+}: {
+  cityName: string
+  range: string | null
+  tempLow: string
+  tempHigh: string
+  sun: number | null
+  isMd: boolean
+}) {
+  if (!range || sun === null) {
+    return (
+      <div style={{ padding: isMd ? '24px 28px' : '20px 18px' }}>
+        <p style={{ margin: 0, fontSize: isMd ? 18 : 16, lineHeight: 1.6, color: fg }}>
+          {cityName} doesn't have a clearly preferred season — its climate stays fairly consistent year-round.
+        </p>
+      </div>
+    )
+  }
+
+  return (
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: isMd ? '5fr 7fr' : '1fr',
+      gap: isMd ? 32 : 20,
+      padding: isMd ? '24px 28px' : '20px 18px',
+      alignItems: 'start',
+    }}>
+      <div style={{
+        borderLeft: `3px solid ${accent}`,
+        padding: isMd ? '6px 0 6px 18px' : '4px 0 4px 14px',
+      }}>
+        <div style={{
+          fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
+          fontSize: isMd ? 48 : 36,
+          fontWeight: 700,
+          letterSpacing: -0.5,
+          lineHeight: 1,
+          color: fg,
+          textTransform: 'uppercase',
+        }}>
+          {range}
+        </div>
+        <div style={{
+          marginTop: 10,
+          fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+          fontSize: 11,
+          letterSpacing: 1.5,
+          color: muted,
+          textTransform: 'uppercase',
+        }}>
+          {tempLow} – {tempHigh} · {sun.toFixed(1)}h sun
+        </div>
+      </div>
+      <p style={{ margin: 0, fontSize: isMd ? 18 : 16, lineHeight: 1.6, color: fg }}>
+        The best time to visit {cityName} is {range}, when temperatures average {tempLow}–{tempHigh} with {sun.toFixed(1)} sunshine hours per day.
+      </p>
+    </div>
+  )
+}
+
+// ─── 04 · Monthly Breakdown ───────────────────────────────────────────────────
 function Sparkline({ values, highlightIdx, isMd }: { values: number[]; highlightIdx: number; isMd: boolean }) {
   const max = Math.max(...values, 1)
-  const barW = isMd ? 14 : 10
-  const gap = 4
-  const height = 36
-  const labelH = 14
+  const barW = isMd ? 22 : 14
+  const gap = 6
+  const height = isMd ? 72 : 48
+  const labelH = 16
   const totalW = values.length * barW + (values.length - 1) * gap
 
   return (
-    <div style={{ marginTop: 18 }}>
-      <svg
-        viewBox={`0 0 ${totalW} ${height + labelH}`}
-        width="100%"
-        style={{ maxWidth: totalW, display: 'block', overflow: 'visible' }}
-        role="img"
-        aria-label="Monthly precipitation pattern"
-      >
-        {values.map((v, i) => {
-          const h = Math.max(1, Math.round((v / max) * height))
-          return (
-            <rect
-              key={i}
-              x={i * (barW + gap)}
-              y={height - h}
-              width={barW}
-              height={h}
-              fill={i === highlightIdx ? precipBlue : `${fg}33`}
-            />
-          )
-        })}
-        {MONTHS.map((m, i) => (
-          <text
-            key={m}
-            x={i * (barW + gap) + barW / 2}
-            y={height + labelH - 2}
-            textAnchor="middle"
-            fontFamily="'JetBrains Mono', ui-monospace, monospace"
-            fontSize={9}
-            letterSpacing={1}
-            fill={i === highlightIdx ? fg : muted}
-          >
-            {m[0]}
-          </text>
-        ))}
-      </svg>
-    </div>
+    <svg
+      viewBox={`0 0 ${totalW} ${height + labelH}`}
+      width="100%"
+      style={{ maxWidth: totalW, display: 'block', overflow: 'visible' }}
+      role="img"
+      aria-label="Monthly precipitation pattern"
+    >
+      {values.map((v, i) => {
+        const h = Math.max(1, Math.round((v / max) * height))
+        return (
+          <rect
+            key={i}
+            x={i * (barW + gap)}
+            y={height - h}
+            width={barW}
+            height={h}
+            fill={i === highlightIdx ? precipBlue : `${fg}22`}
+          />
+        )
+      })}
+      {MONTHS.map((m, i) => (
+        <text
+          key={m}
+          x={i * (barW + gap) + barW / 2}
+          y={height + labelH - 2}
+          textAnchor="middle"
+          fontFamily="'JetBrains Mono', ui-monospace, monospace"
+          fontSize={10}
+          letterSpacing={1}
+          fill={i === highlightIdx ? fg : muted}
+        >
+          {m[0]}
+        </text>
+      ))}
+    </svg>
   )
 }
 
@@ -160,12 +362,13 @@ function MonthlyTable({
     padding: cellPad,
     borderBottom: `1px solid ${fg}`,
     whiteSpace: 'nowrap',
+    background: '#fafafa',
   }
   const cellStyle: React.CSSProperties = {
     fontSize: isMd ? 13 : 11,
     color: fg,
     padding: cellPad,
-    borderBottom: `1px solid ${hairline}`,
+    borderBottom: `1px solid ${fg}14`,
     fontVariantNumeric: 'tabular-nums',
     whiteSpace: 'nowrap',
   }
@@ -176,7 +379,7 @@ function MonthlyTable({
   }
 
   return (
-    <div style={{ overflowX: 'auto', marginTop: 8 }}>
+    <div style={{ overflowX: 'auto' }}>
       <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 600 }}>
         <caption style={{
           textAlign: 'left',
@@ -184,7 +387,7 @@ function MonthlyTable({
           fontSize: 10,
           letterSpacing: 1.5,
           color: muted,
-          padding: `0 ${isMd ? 14 : 8}px 8px`,
+          padding: cellPad,
           captionSide: 'top',
         }}>
           {`Monthly climate normals for ${city.name}, ${city.country}`}
@@ -202,10 +405,7 @@ function MonthlyTable({
         </thead>
         <tbody>
           {MONTHS_LONG.map((month, i) => (
-            <tr
-              key={month}
-              style={{ background: i % 2 === 1 ? '#0000000a' : 'transparent' }}
-            >
+            <tr key={month}>
               <th scope="row" style={monthCell}>{month}</th>
               <td style={cellStyle}>{t(city.high[i])}</td>
               <td style={cellStyle}>{t(city.low[i])}</td>
@@ -221,7 +421,9 @@ function MonthlyTable({
   )
 }
 
-function Section({
+// Module: matches the bordered-card chassis used across VariationA. The
+// header bar carries a numbered eyebrow + h2 + right-aligned mono meta.
+function Module({
   index, title, meta, children, isMd,
 }: {
   index: number
@@ -230,28 +432,37 @@ function Section({
   children: React.ReactNode
   isMd: boolean
 }) {
-  const sectionPad = isMd ? '40px 0 0' : '28px 0 0'
-  const innerPad = isMd ? '0' : '0'
-
   return (
     <section style={{
-      padding: sectionPad,
-      borderTop: index === 1 ? 'none' : `1px solid ${hairline}`,
-      marginTop: index === 1 ? 0 : (isMd ? 40 : 28),
+      border: `1px solid ${fg}`,
+      background: cardBg,
     }}>
-      <div className="flex flex-wrap items-baseline justify-between gap-2" style={{
-        padding: innerPad,
-        marginBottom: 6,
+      <header className="flex flex-wrap items-baseline justify-between gap-2" style={{
+        padding: isMd ? '14px 20px' : '12px 16px',
+        borderBottom: `1px solid ${fg}`,
       }}>
-        <span style={{
-          fontFamily: "'JetBrains Mono', ui-monospace, monospace",
-          fontSize: 11,
-          letterSpacing: 2,
-          color: muted,
-          textTransform: 'uppercase',
-        }}>
-          {String(index).padStart(2, '0')} / {title}
-        </span>
+        <div className="flex items-baseline gap-3 flex-wrap">
+          <span style={{
+            fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+            fontSize: 11,
+            letterSpacing: 2,
+            color: muted,
+            textTransform: 'uppercase',
+          }}>
+            № {String(index).padStart(2, '0')}
+          </span>
+          <h2 style={{
+            margin: 0,
+            fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+            fontSize: 11,
+            fontWeight: 600,
+            letterSpacing: 1.5,
+            color: fg,
+            textTransform: 'uppercase',
+          }}>
+            {title}
+          </h2>
+        </div>
         {meta && (
           <span style={{
             fontFamily: "'JetBrains Mono', ui-monospace, monospace",
@@ -263,35 +474,8 @@ function Section({
             {meta}
           </span>
         )}
-      </div>
-      <h2 style={{
-        margin: '0 0 14px',
-        fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
-        fontSize: isMd ? 36 : 26,
-        fontWeight: 600,
-        letterSpacing: -0.5,
-        lineHeight: 1.1,
-        color: fg,
-      }}>
-        {title}
-      </h2>
-      <div style={{ padding: innerPad }}>
-        {children}
-      </div>
+      </header>
+      <div>{children}</div>
     </section>
-  )
-}
-
-function Para({ children, isMd }: { children: React.ReactNode; isMd: boolean }) {
-  return (
-    <p style={{
-      margin: 0,
-      fontSize: isMd ? 18 : 16,
-      lineHeight: 1.6,
-      color: fg,
-      maxWidth: 720,
-    }}>
-      {children}
-    </p>
   )
 }
