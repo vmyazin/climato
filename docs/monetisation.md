@@ -2,7 +2,7 @@
 
 > **Status legend:** ✅ done · 🟡 partial · ⬜ not started
 >
-> Last audit: 2026-05-03 (post climate narrative)
+> Last audit: 2026-05-03 (post nearby cities)
 
 ## 1. Affiliate Link Strategy — ⬜ not started
 
@@ -136,7 +136,7 @@ All four sections are derived purely from the `City` shape — no extra fetches,
 - [x] ✅ Canonical URLs — sitemap-side canonicalisation in [vite.config.ts:56-88](vite.config.ts#L56-L88) **plus** a `<link rel="canonical">` tag emitted at runtime by [src/hooks/useDocumentMeta.ts](src/hooks/useDocumentMeta.ts) that drops the optional `?@lat,lon` query so Google collapses the two URL forms into one canonical entry per city
 - [ ] ⬜ `og:image` auto-generated per city — only a single global [public/og-image.png](public/og-image.png) ships ([index.html:14](index.html#L14)); no per-city variant
 - [ ] ⬜ Core Web Vitals: static pages should score 95+ on Lighthouse — not measured
-- [ ] ⬜ Internal linking: each city page links to 5 nearby cities — no nearby-city links in any view
+- [x] ✅ Internal linking: each city page links to 5 nearby cities — `№ 05 Nearby Cities` Module under each city page, fed by `/api/nearby` ([api/nearby.ts](api/nearby.ts) + `findNearest` in [api/_lib/catalog.ts](api/_lib/catalog.ts)). Each link uses `toSlug()` so it points to the same canonical URL as the sitemap. Section auto-hides for genuinely isolated cities (Reykjavík etc) where the nearest catalog city is past the 600 km ceiling.
 
 ### Distribution timeline
 
