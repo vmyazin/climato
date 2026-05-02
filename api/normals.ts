@@ -1,4 +1,5 @@
 import { fetchOpenMeteoNormals, type Normals } from './_lib/normals.js'
+import { validateCity } from './_lib/catalog.js'
 
 interface VercelLikeRequest {
   url?: string
@@ -103,6 +104,11 @@ export default async function handler(req: VercelLikeRequest, res: VercelLikeRes
   if (!id || !ID_RE.test(id)) return bad(res, 400, 'invalid id')
   if (!Number.isFinite(lat) || lat < -90 || lat > 90) return bad(res, 400, 'invalid lat')
   if (!Number.isFinite(lon) || lon < -180 || lon > 180) return bad(res, 400, 'invalid lon')
+
+  // Reject anything that isn't a known city. Closes the proxy-abuse,
+  // KV-pollution, and data-poisoning vectors documented in the audit.
+  const validation = validateCity(id, lat, lon)
+  if (!validation.ok) return bad(res, 400, validation.error)
 
   const cached = await readKv(id)
   if (cached) {
