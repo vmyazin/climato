@@ -1,4 +1,4 @@
-import { fetchOpenMeteoNormals, type Normals } from './_lib/normals'
+import { fetchOpenMeteoNormals, type Normals } from './_lib/normals.js'
 
 interface VercelLikeRequest {
   url?: string
