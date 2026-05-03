@@ -1,6 +1,18 @@
 {
+  "353219": {
+    "fetched_at": "2026-05-03T00:11:46.565Z",
+    "name": "6th of October City",
+    "country": "Egypt",
+    "admin1": "Giza"
+  },
   "2300660": {
     "fetched_at": "2026-05-02T22:10:05.270Z"
+  },
+  "2652053": {
+    "fetched_at": "2026-05-03T00:11:46.565Z",
+    "name": "Crawley",
+    "country": "United Kingdom",
+    "admin1": "England"
   },
   "2879139": {
     "fetched_at": "2026-05-02T22:03:13.315Z"
@@ -17,6 +29,12 @@
   "5391959": {
     "fetched_at": "2026-05-02T22:10:05.270Z"
   },
+  "6951112": {
+    "fetched_at": "2026-05-03T00:11:46.565Z",
+    "name": "Somerset West",
+    "country": "South Africa",
+    "admin1": "Western Cape"
+  },
   "germany-leipzig": {
     "fetched_at": "2026-05-02T22:03:13.315Z"
   },
@@ -25,5 +43,10 @@
   },
   "cairo": {
     "fetched_at": "2026-05-02T23:12:28.096Z"
+  },
+  "london": {
+    "fetched_at": "2026-05-03T00:11:46.565Z",
+    "name": "London",
+    "country": "United Kingdom"
   }
 }
