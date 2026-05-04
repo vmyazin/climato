@@ -5,6 +5,18 @@
     "country": "Egypt",
     "admin1": "Giza"
   },
+  "359280": {
+    "fetched_at": "2026-05-04T09:40:07.031Z",
+    "name": "Banhā",
+    "country": "Egypt",
+    "admin1": "Qalyubia"
+  },
+  "1848004": {
+    "fetched_at": "2026-05-04T09:40:07.031Z",
+    "name": "Zama",
+    "country": "Japan",
+    "admin1": "Kanagawa"
+  },
   "2300660": {
     "fetched_at": "2026-05-02T22:10:05.270Z"
   },
@@ -31,6 +43,12 @@
   },
   "3463237": {
     "fetched_at": "2026-05-02T22:10:05.270Z"
+  },
+  "3469968": {
+    "fetched_at": "2026-05-04T09:40:07.031Z",
+    "name": "Blumenau",
+    "country": "Brazil",
+    "admin1": "Santa Catarina"
   },
   "5391959": {
     "fetched_at": "2026-05-02T22:10:05.270Z"
