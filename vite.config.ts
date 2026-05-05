@@ -1,4 +1,4 @@
-import { defineConfig, type Plugin } from 'vite'
+import { defineConfig, loadEnv, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import { readFileSync, existsSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
@@ -219,6 +219,16 @@ function devApiRoutes(routes: DevApiRoute[]): Plugin {
     },
   }
 }
+
+// Merge .env.local (and other .env* files) into process.env so that
+// server-side code running inside the Vite dev SSR context — i.e. the
+// api/* handlers mounted by devApiRoutes — can read secrets like
+// ADMIN_PASSWORD via process.env without needing them in the shell.
+// The empty prefix string tells loadEnv to return all variables, not
+// just the VITE_-prefixed ones. This only runs during `pnpm dev`; the
+// Vercel production environment injects vars directly.
+const localEnv = loadEnv('development', process.cwd(), '')
+Object.assign(process.env, localEnv)
 
 export default defineConfig({
   plugins: [

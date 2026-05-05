@@ -23,9 +23,6 @@
     "country": "Japan",
     "admin1": "Hokkaido"
   },
-  "2300660": {
-    "fetched_at": "2026-05-02T22:10:05.270Z"
-  },
   "2643743": {
     "fetched_at": "2026-05-05T00:14:38.305Z",
     "name": "London",
@@ -33,7 +30,7 @@
     "admin1": "England"
   },
   "2646914": {
-    "fetched_at": "2026-05-03T11:12:55.932Z",
+    "fetched_at": "2026-05-03T11:12:55.832Z",
     "name": "High Wycombe",
     "country": "United Kingdom",
     "admin1": "England"
@@ -51,10 +48,16 @@
     "admin1": "England"
   },
   "2879139": {
-    "fetched_at": "2026-05-02T22:03:13.315Z"
+    "fetched_at": "2026-05-02T22:03:13.315Z",
+    "name": "Leipzig",
+    "country": "Germany",
+    "admin1": "Saxony"
   },
   "3117735": {
-    "fetched_at": "2026-05-02T22:03:13.315Z"
+    "fetched_at": "2026-05-02T22:03:13.315Z",
+    "name": "Madrid",
+    "country": "Spain",
+    "admin1": "Madrid"
   },
   "3173435": {
     "fetched_at": "2026-05-05T00:14:38.305Z",
@@ -69,10 +72,16 @@
     "admin1": "Lombardy"
   },
   "3369157": {
-    "fetched_at": "2026-05-02T22:10:05.270Z"
+    "fetched_at": "2026-05-02T22:10:05.270Z",
+    "name": "Cape Town",
+    "country": "South Africa",
+    "admin1": "Western Cape"
   },
   "3463237": {
-    "fetched_at": "2026-05-02T22:10:05.270Z"
+    "fetched_at": "2026-05-02T22:10:05.270Z",
+    "name": "Florianópolis",
+    "country": "Brazil",
+    "admin1": "Santa Catarina"
   },
   "3469968": {
     "fetched_at": "2026-05-04T09:40:07.031Z",
@@ -81,7 +90,10 @@
     "admin1": "Santa Catarina"
   },
   "5391959": {
-    "fetched_at": "2026-05-02T22:10:05.270Z"
+    "fetched_at": "2026-05-02T22:10:05.270Z",
+    "name": "San Francisco",
+    "country": "United States",
+    "admin1": "California"
   },
   "6951112": {
     "fetched_at": "2026-05-03T00:11:46.565Z",
@@ -89,23 +101,19 @@
     "country": "South Africa",
     "admin1": "Western Cape"
   },
-  "germany-leipzig": {
-    "fetched_at": "2026-05-02T22:03:13.315Z"
-  },
-  "tokyo": {
-    "fetched_at": "2026-05-02T22:10:05.270Z"
-  },
   "cairo": {
-    "fetched_at": "2026-05-02T23:12:28.096Z"
-  },
-  "london": {
-    "fetched_at": "2026-05-03T00:11:46.565Z",
-    "name": "London",
-    "country": "United Kingdom"
+    "fetched_at": "2026-05-02T23:12:28.096Z",
+    "name": "Cairo",
+    "country": "Egypt"
   },
   "reykjavik": {
     "fetched_at": "2026-05-03T11:12:55.932Z",
     "name": "Reykjavík",
     "country": "Iceland"
+  },
+  "tokyo": {
+    "fetched_at": "2026-05-02T22:10:05.270Z",
+    "name": "Tokyo",
+    "country": "Japan"
   }
 }
