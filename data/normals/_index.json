@@ -17,8 +17,20 @@
     "country": "Japan",
     "admin1": "Kanagawa"
   },
+  "2128295": {
+    "fetched_at": "2026-05-05T00:14:38.305Z",
+    "name": "Sapporo",
+    "country": "Japan",
+    "admin1": "Hokkaido"
+  },
   "2300660": {
     "fetched_at": "2026-05-02T22:10:05.270Z"
+  },
+  "2643743": {
+    "fetched_at": "2026-05-05T00:14:38.305Z",
+    "name": "London",
+    "country": "United Kingdom",
+    "admin1": "England"
   },
   "2646914": {
     "fetched_at": "2026-05-03T11:12:55.932Z",
@@ -37,6 +49,18 @@
   },
   "3117735": {
     "fetched_at": "2026-05-02T22:03:13.315Z"
+  },
+  "3173435": {
+    "fetched_at": "2026-05-05T00:14:38.305Z",
+    "name": "Milan",
+    "country": "Italy",
+    "admin1": "Lombardy"
+  },
+  "3181554": {
+    "fetched_at": "2026-05-05T00:14:38.305Z",
+    "name": "Brescia",
+    "country": "Italy",
+    "admin1": "Lombardy"
   },
   "3369157": {
     "fetched_at": "2026-05-02T22:10:05.270Z"
