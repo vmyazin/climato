@@ -46,7 +46,7 @@ export default function App() {
         )}
         {!notFoundSlug && (isError || (isClimateFetching && !sharedProps)) && (
           <div className="flex flex-col items-center gap-5" style={{ padding: '32px 32px 48px', textAlign: 'center', color: muted, fontFamily: "'JetBrains Mono', monospace", fontSize: 13, letterSpacing: 1 }}>
-            <div>CLIMATE DATA UNAVAILABLE — CHECK NETWORK</div>
+            {!isClimateFetching && <div>CLIMATE DATA UNAVAILABLE — CHECK NETWORK</div>}
             <button
               onClick={handleRetry}
               disabled={isClimateFetching}
