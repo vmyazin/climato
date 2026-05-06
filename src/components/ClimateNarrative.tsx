@@ -98,6 +98,7 @@ export function ClimateNarrative({ city, unit }: Props) {
             tempLow={best ? t(best.avgLowRange[0]) : ''}
             tempHigh={best ? t(best.avgHighRange[1]) : ''}
             sun={best?.avgSun ?? null}
+            coolerAlt={best?.coolerAlt}
             isMd={isMd}
           />
         </Module>
@@ -220,13 +221,14 @@ function RainfallBody({
 
 // ─── 03 · Best Time to Visit ──────────────────────────────────────────────────
 function BestTimeBody({
-  cityName, range, tempLow, tempHigh, sun, isMd,
+  cityName, range, tempLow, tempHigh, sun, coolerAlt, isMd,
 }: {
   cityName: string
   range: string | null
   tempLow: string
   tempHigh: string
   sun: number | null
+  coolerAlt?: string
   isMd: boolean
 }) {
   if (!range || sun === null) {
@@ -273,9 +275,21 @@ function BestTimeBody({
           {tempLow} – {tempHigh} · {sun.toFixed(1)}h sun
         </div>
       </div>
-      <p style={{ margin: 0, fontSize: isMd ? 18 : 16, lineHeight: 1.6, color: fg }}>
-        The best time to visit {cityName} is {range}, when temperatures average {tempLow}–{tempHigh} with {sun.toFixed(1)} sunshine hours per day.
-      </p>
+      <div>
+        <p style={{ margin: 0, fontSize: isMd ? 18 : 16, lineHeight: 1.6, color: fg }}>
+          The best time to visit {cityName} is {range}, when temperatures average {tempLow}–{tempHigh} with {sun.toFixed(1)} sunshine hours per day.
+        </p>
+        {coolerAlt && (
+          <p style={{
+            margin: '14px 0 0',
+            fontSize: isMd ? 15 : 14,
+            lineHeight: 1.55,
+            color: muted,
+          }}>
+            Some visitors prefer {coolerAlt} for cooler, drier conditions.
+          </p>
+        )}
+      </div>
     </div>
   )
 }

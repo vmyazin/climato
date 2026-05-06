@@ -89,20 +89,36 @@ export interface BestMonthsResult {
   avgHighRange: [number, number]
   avgLowRange: [number, number]
   avgSun: number
+  // If the primary pick is a warm/wet season, this is a cooler alternative
+  // run with decent scores (≥0.7) and meaningfully lower average high (≥5°C).
+  coolerAlt?: string
 }
 
-// Score each month for "good time to visit". 1 = great, 0 = avoid. Heuristics
-// favour mild-to-warm temperatures, decent sun, and not-soaking precipitation.
+// Score each month for "good time to visit". 1 = great, 0 = avoid.
+//
+// Precipitation tolerance scales with temperature. Warm months (hi ≥ 25°C) at
+// beach/subtropical destinations typically see rain as short afternoon
+// thunderstorms rather than persistent overcast — visitors tolerate it because
+// the rest of the day is sunny and warm. The same rainfall in a cool month
+// means grey days, so the threshold stays tighter.
+//
+// The upper temperature ceiling is raised to 31°C (was 28°C) to stop Southern
+// Hemisphere summer highs from being scored out of the "perfect" band —
+// 29–31°C is exactly the beach weather that draws most visitors to cities like
+// Florianópolis or Rio in December–February.
 function scoreMonth(city: City, i: number): number {
   const hi = city.high[i]
   const lo = city.low[i]
   const pr = city.precip[i]
   const su = city.sun[i]
-  if (hi < 12 || hi > 33) return 0
+  if (hi < 12 || hi > 35) return 0
   if (lo < 2) return 0.3
-  if (pr > 180) return 0.4
   if (su < 4) return 0.5
-  if (hi >= 18 && hi <= 28 && pr < 100 && su >= 6) return 1
+  // Warm months allow more rainfall before being penalised.
+  const precipLimit = hi >= 25 ? 180 : 100
+  if (hi >= 18 && hi <= 31 && pr < precipLimit && su >= 6) return 1
+  if (pr > 200) return 0.3
+  if (pr > 160) return 0.4
   return 0.7
 }
 
@@ -141,6 +157,13 @@ function formatMonthRange(months: number[]): string {
   return `${MONTHS_LONG[months[0]]}–${MONTHS_LONG[months[months.length - 1]]}`
 }
 
+// Maximum window length to report. Anything longer becomes "visit any time
+// except X" which is not actionable. For destinations that score well almost
+// year-round (e.g. a subtropical city where only one month is marginal), we
+// narrow to the warmest contiguous sub-window so the recommendation is the
+// peak season visitors actually target.
+const MAX_BEST_WINDOW = 6
+
 export function pickBestMonths(city: City): BestMonthsResult | null {
   const scores = Array.from({ length: 12 }, (_, i) => scoreMonth(city, i))
   let months = longestRun(scores, 1)
@@ -148,10 +171,39 @@ export function pickBestMonths(city: City): BestMonthsResult | null {
   if (months.length === 0) months = longestRun(scores, 0.7)
   if (months.length === 0) return null
 
+  // If the run is very broad, narrow it to the warmest sub-window so the
+  // pick reflects the peak season rather than "almost year-round".
+  if (months.length > MAX_BEST_WINDOW) {
+    let best = months.slice(0, MAX_BEST_WINDOW)
+    let bestAvg = best.reduce((s, i) => s + city.high[i], 0) / MAX_BEST_WINDOW
+    for (let start = 1; start <= months.length - MAX_BEST_WINDOW; start++) {
+      const w = months.slice(start, start + MAX_BEST_WINDOW)
+      const avg = w.reduce((s, i) => s + city.high[i], 0) / MAX_BEST_WINDOW
+      if (avg > bestAvg) { bestAvg = avg; best = w }
+    }
+    months = best
+  }
+
   const highs = months.map(i => city.high[i])
   const lows = months.map(i => city.low[i])
   const suns = months.map(i => city.sun[i])
   const avg = (arr: number[]) => arr.reduce((a, b) => a + b, 0) / arr.length
+  const primaryAvgHigh = avg(highs)
+
+  // Derive a cooler alternative: the longest decent run (≥0.7) outside the
+  // primary selection whose average high is ≥5°C lower. This surfaces for
+  // warm beach destinations where the "best" pick is the hot summer — some
+  // visitors legitimately prefer the quieter, cooler shoulder season.
+  const primarySet = new Set(months)
+  const altScores = scores.map((s, i) => (primarySet.has(i) ? 0 : s))
+  const altMonths = longestRun(altScores, 0.7)
+  const altAvgHigh = altMonths.length
+    ? avg(altMonths.map(i => city.high[i]))
+    : Infinity
+  const coolerAlt =
+    altMonths.length >= 1 && primaryAvgHigh - altAvgHigh >= 5
+      ? formatMonthRange(altMonths)
+      : undefined
 
   return {
     months,
@@ -159,6 +211,7 @@ export function pickBestMonths(city: City): BestMonthsResult | null {
     avgHighRange: [Math.min(...highs), Math.max(...highs)],
     avgLowRange: [Math.min(...lows), Math.max(...lows)],
     avgSun: avg(suns),
+    ...(coolerAlt ? { coolerAlt } : {}),
   }
 }
 
