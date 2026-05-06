@@ -38,6 +38,7 @@ export function useClimateNormals(geo: GeoCity | undefined) {
     enabled: !!geo?.lat && isResolvedCity(geo),
     staleTime: Infinity,
     gcTime: 7 * 24 * 60 * 60 * 1000,
+    retry: 1,
     placeholderData: keepPreviousData,
   })
 }

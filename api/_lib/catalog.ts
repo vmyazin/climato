@@ -70,7 +70,14 @@ export function validateCity(id: string, lat: number, lon: number): ValidationRe
   if (CURATED_IDS.has(id)) return { ok: true }
   if (!NUMERIC_ID.test(id)) return { ok: false, error: 'unknown id format' }
   const entry = getCatalog().get(id)
-  if (!entry) return { ok: false, error: 'unknown id' }
+  if (!entry) {
+    // Valid GeoNames numeric id not in our catalog — typically a city below
+    // the MIN_POP=100k build threshold (e.g. Beverly MA, pop ~43k). The id
+    // format is correct and lat/lon already passed range checks; accept it.
+    // We can't cross-check coords against the catalog but the request almost
+    // certainly originates from our own geocoding path.
+    return { ok: true }
+  }
   if (Math.abs(lat - entry.lat) > COORD_TOLERANCE_DEG) {
     return { ok: false, error: 'lat does not match id' }
   }
