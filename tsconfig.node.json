@@ -17,5 +17,5 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "include": ["vite.config.ts", "api/**/*.ts", "api/**/*.tsx", "scripts/**/*.ts", "src/data/cities.ts", "src/lib/slug.ts"]
+  "include": ["vite.config.ts", "middleware.ts", "api/**/*.ts", "api/**/*.tsx", "scripts/**/*.ts", "src/data/cities.ts", "src/lib/slug.ts"]
 }
