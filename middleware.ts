@@ -14,6 +14,7 @@ function slugToTitle(slug: string): string {
 interface CityParsed {
   city: string
   country: string
+  admin1?: string
 }
 
 function parseCity(pathname: string): CityParsed | null {
@@ -22,6 +23,7 @@ function parseCity(pathname: string): CityParsed | null {
   return {
     city: slugToTitle(segs[segs.length - 1]),
     country: slugToTitle(segs[0]),
+    ...(segs.length === 3 ? { admin1: slugToTitle(segs[1]) } : {}),
   }
 }
 
@@ -35,15 +37,29 @@ function escapeHtml(s: string): string {
 }
 
 export default function middleware(request: Request): Response {
+  const url = new URL(request.url)
+
+  // /ogimage preview: strip suffix, redirect directly to the image.
+  // Works for any user-agent so devs can paste the URL in a browser tab.
+  if (url.pathname.endsWith('/ogimage')) {
+    const cityPath = url.pathname.slice(0, -'/ogimage'.length)
+    const parsed = parseCity(cityPath)
+    if (parsed) {
+      const params = new URLSearchParams({ city: parsed.city, country: parsed.country })
+      if (parsed.admin1) params.set('admin1', parsed.admin1)
+      return Response.redirect(`${url.origin}/api/og?${params}`, 302)
+    }
+  }
+
   const ua = request.headers.get('user-agent') ?? ''
   if (!BOT_UA.test(ua)) return next()
 
-  const url = new URL(request.url)
   const parsed = parseCity(url.pathname)
   if (!parsed) return next()
 
   const { city, country } = parsed
   const ogParams = new URLSearchParams({ city, country })
+  if (parsed.admin1) ogParams.set('admin1', parsed.admin1)
   const ogImage  = `${url.origin}/api/og?${ogParams}`
   const title    = `${city} Monthly Weather Averages — Climato`
   const desc     = `Monthly temperature highs, lows, rainfall and sunshine hours for ${city}, ${country}.`
