@@ -29,6 +29,8 @@ function parseLatLon(search: string): [number, number] | undefined {
 export function parseUrl(pathname: string, search: string): ParsedUrl {
   const segs = pathname.split('/').filter(Boolean).map(s => s.toLowerCase())
   if (segs.length === 0) return { type: 'root' }
+  // Exclude server-side paths — in Vite dev these fall through to the SPA.
+  if (segs[0] === 'api' || segs[0] === 'normals') return { type: 'root' }
   if (segs.length < 2 || segs.length > 3) return { type: 'root' }
   const ll = parseLatLon(search)
   if (segs.length === 2) {
