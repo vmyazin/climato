@@ -161,7 +161,26 @@ export function useUrlSync(): UrlSyncResult {
     let cancelled = false
 
     const resolve = async () => {
-      const parsed = parseUrl(window.location.pathname, window.location.search)
+      const pathname = window.location.pathname
+
+      // /ogimage suffix: redirect to the OG image endpoint.
+      // In production the middleware handles this before the SPA loads;
+      // this branch covers the Vite dev server where middleware doesn't run.
+      if (pathname.endsWith('/ogimage')) {
+        const cityPath = pathname.slice(0, -'/ogimage'.length)
+        const inner = parseUrl(cityPath, '')
+        if (inner.type === 'slug') {
+          const p = new URLSearchParams({
+            city: nameFromSlug(inner.citySlug),
+            country: countryFromSlug(inner.countrySlug),
+          })
+          if (inner.admin1Slug) p.set('admin1', nameFromSlug(inner.admin1Slug))
+          window.location.replace(`/api/og?${p}`)
+        }
+        return
+      }
+
+      const parsed = parseUrl(pathname, window.location.search)
       if (parsed.type === 'root') return
 
       // Synchronous placeholder for first paint — uses the URL coords if
