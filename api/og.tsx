@@ -225,18 +225,18 @@ export default async function handler(req: Request): Promise<Response> {
           </span>
         </div>
 
-        {/* Main content */}
+        {/* Main content — explicit row with fixed column widths */}
         <div
           style={{
             display: 'flex',
+            flexDirection: 'row',
             flex: 1,
-            padding: hasChart ? '36px 44px 40px' : '0 44px',
-            gap: 44,
-            alignItems: hasChart ? 'flex-start' : 'center',
+            padding: '36px 44px 40px',
+            gap: 36,
           }}
         >
-          {/* Left column */}
-          <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+          {/* Left column: 520px */}
+          <div style={{ display: 'flex', flexDirection: 'column', width: 520 }}>
             {/* City name */}
             <div
               style={{
@@ -342,9 +342,9 @@ export default async function handler(req: Request): Promise<Response> {
             )}
           </div>
 
-          {/* Right column — bar chart */}
+          {/* Right column: 556px (1200 - 44*2 - 36 gap - 520 left) */}
           {hasChart && (
-            <div style={{ display: 'flex', width: 490, alignSelf: 'stretch' }}>
+            <div style={{ display: 'flex', width: 556, alignSelf: 'stretch' }}>
               <BarChart highs={highs!} lows={lows!} />
             </div>
           )}
