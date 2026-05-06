@@ -11,6 +11,12 @@
     "country": "Egypt",
     "admin1": "Qalyubia"
   },
+  "993800": {
+    "fetched_at": "2026-05-06T13:31:06.365Z",
+    "name": "Johannesburg",
+    "country": "South Africa",
+    "admin1": "Gauteng"
+  },
   "1848004": {
     "fetched_at": "2026-05-04T09:40:07.031Z",
     "name": "Zama",
