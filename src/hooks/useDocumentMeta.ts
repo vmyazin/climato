@@ -22,6 +22,43 @@ function setMeta(name: string, content: string) {
   el.setAttribute('content', content)
 }
 
+function setPropMeta(property: string, content: string) {
+  let el = document.head.querySelector<HTMLMetaElement>(`meta[property="${property}"]`)
+  if (!el) {
+    el = document.createElement('meta')
+    el.setAttribute('property', property)
+    document.head.appendChild(el)
+  }
+  el.setAttribute('content', content)
+}
+
+const DEFAULT_OG_IMAGE = '/og-image.png'
+
+function buildOgImageUrl(selectedCity: GeoCity, city: City): string {
+  const hi   = Math.max(...city.high)
+  const lo   = Math.min(...city.low)
+  const rain = Math.round(city.precip.reduce((a, b) => a + b, 0))
+  const sun  = Math.round((city.sun.reduce((a, b) => a + b, 0) / 12) * 10) / 10
+  const params = new URLSearchParams({
+    city: selectedCity.name,
+    country: selectedCity.country,
+    hi: String(hi),
+    lo: String(lo),
+    rain: String(rain),
+    sun: String(sun),
+  })
+  if (selectedCity.admin1) params.set('admin1', selectedCity.admin1)
+  return `/api/og?${params}`
+}
+
+function setOgImage(url: string) {
+  setPropMeta('og:image', url)
+  setPropMeta('og:image:width', '1200')
+  setPropMeta('og:image:height', '630')
+  setPropMeta('og:image:type', 'image/png')
+  setMeta('twitter:image', url)
+}
+
 function setCanonical(href: string | null) {
   let el = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
   if (!href) {
@@ -114,6 +151,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       const label = nameFromSlug(notFoundSlug)
       document.title = `${label} — not found · Climato`
       setMeta('description', DEFAULT_DESCRIPTION)
+      setOgImage(DEFAULT_OG_IMAGE)
       setJsonLd(null)
       setCanonical(null)
       return
@@ -139,6 +177,14 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       )
     }
 
+    // OG / Twitter image — full mode (with stats) when climate is fresh,
+    // lite mode (city + country only) otherwise.
+    if (haveFreshClimate) {
+      setOgImage(buildOgImageUrl(selectedCity, city))
+    } else {
+      setOgImage(DEFAULT_OG_IMAGE)
+    }
+
     // Only emit Dataset JSON-LD once we have real coordinates — placeholders
     // (lat=0,lon=0 from reconstructFromSlug) would publish bogus geo data.
     const hasRealCoords = selectedCity.lat !== 0 || selectedCity.lon !== 0
@@ -159,6 +205,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
     return () => {
       document.title = DEFAULT_TITLE
       setMeta('description', DEFAULT_DESCRIPTION)
+      setOgImage(DEFAULT_OG_IMAGE)
       setJsonLd(null)
       setCanonical(null)
     }
