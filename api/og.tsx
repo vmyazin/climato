@@ -2,27 +2,28 @@ import { ImageResponse } from '@vercel/og'
 
 export const config = { runtime: 'edge' }
 
-// Cache the font across warm invocations.
-let interTightBold: ArrayBuffer | null = null
+// Cached across warm invocations.
+let cachedFont: ArrayBuffer | null = null
 
-async function loadFont(): Promise<ArrayBuffer> {
-  if (interTightBold) return interTightBold
-  // Inter Tight 700 subset (latin). Falls back to regular Inter on error.
-  const urls = [
-    'https://fonts.gstatic.com/s/intertight/v7/NGS6v5_NC0k9P_v6ZUCbLRAHxK1EkSysd0mm_00.woff2',
-    'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
-  ]
-  for (const url of urls) {
-    try {
-      const res = await fetch(url)
-      if (res.ok) {
-        interTightBold = await res.arrayBuffer()
-        return interTightBold
-      }
-    } catch { /* try next */ }
+async function loadFont(): Promise<ArrayBuffer | null> {
+  if (cachedFont) return cachedFont
+  try {
+    // Ask the Google Fonts CSS API for Inter Tight 700.
+    // The response contains a url() pointing at the current woff2 binary.
+    // Must send a modern UA or Google returns woff instead of woff2.
+    const css = await fetch(
+      'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700&display=swap',
+      { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Vercel/og)' } },
+    ).then(r => r.text())
+
+    const match = css.match(/src: url\((https:\/\/fonts\.gstatic\.com[^)]+)\)/)
+    if (!match) return null
+
+    cachedFont = await fetch(match[1]).then(r => r.arrayBuffer())
+    return cachedFont
+  } catch {
+    return null
   }
-  // Should not happen — return empty buffer, Satori will use its fallback.
-  return new ArrayBuffer(0)
 }
 
 function sanitise(s: string | null, max: number): string {
@@ -55,11 +56,9 @@ export default async function handler(req: Request): Promise<Response> {
   const subtitle = admin1 ? `${admin1} · ${country}` : country
 
   const fontData = await loadFont()
-
-  // City name font size: shrink for long names
   const nameFontSize = city.length > 14 ? 64 : city.length > 10 ? 76 : 90
 
-  return new ImageResponse(
+  const img = new ImageResponse(
     (
       <div
         style={{
@@ -73,48 +72,20 @@ export default async function handler(req: Request): Promise<Response> {
         }}
       >
         {/* Top bar */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
-          <span
-            style={{
-              fontFamily: 'monospace',
-              fontSize: 12,
-              letterSpacing: 3,
-              color: '#555',
-              textTransform: 'uppercase',
-            }}
-          >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <span style={{ fontFamily: 'monospace', fontSize: 12, letterSpacing: 3, color: '#555' }}>
             CLIMATO
           </span>
-          <span
-            style={{
-              fontFamily: 'monospace',
-              fontSize: 11,
-              letterSpacing: 2,
-              color: '#333',
-            }}
-          >
+          <span style={{ fontFamily: 'monospace', fontSize: 11, letterSpacing: 2, color: '#333' }}>
             Monthly Climate Averages
           </span>
         </div>
 
         {/* Divider */}
-        <div style={{ height: 1, background: '#222', marginTop: 24 }} />
+        <div style={{ height: 1, background: '#222', marginTop: 24, display: 'flex' }} />
 
-        {/* City name — main focus */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            flex: 1,
-            justifyContent: 'center',
-          }}
-        >
+        {/* City block — centred vertically */}
+        <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'center' }}>
           <div
             style={{
               fontSize: nameFontSize,
@@ -122,11 +93,12 @@ export default async function handler(req: Request): Promise<Response> {
               color: '#ffffff',
               letterSpacing: -3,
               lineHeight: 1,
+              display: 'flex',
             }}
           >
             {city}
           </div>
-          {subtitle && (
+          {subtitle ? (
             <div
               style={{
                 fontSize: 24,
@@ -134,18 +106,19 @@ export default async function handler(req: Request): Promise<Response> {
                 color: '#666',
                 marginTop: 16,
                 letterSpacing: 0,
+                display: 'flex',
               }}
             >
               {subtitle}
             </div>
-          )}
+          ) : null}
         </div>
 
         {/* Divider */}
-        <div style={{ height: 1, background: '#222', marginBottom: 24 }} />
+        <div style={{ height: 1, background: '#222', marginBottom: 24, display: 'flex' }} />
 
-        {/* Stats row — only when climate data is supplied */}
-        {hasStats && (
+        {/* Stats or domain */}
+        {hasStats ? (
           <div
             style={{
               display: 'flex',
@@ -154,7 +127,6 @@ export default async function handler(req: Request): Promise<Response> {
               fontSize: 13,
               letterSpacing: 2,
               color: '#555',
-              textTransform: 'uppercase',
             }}
           >
             <span style={{ color: '#999' }}>{fmt(hi!)}° HIGH</span>
@@ -162,16 +134,8 @@ export default async function handler(req: Request): Promise<Response> {
             <span>{fmt(rain!)} mm RAIN</span>
             <span>{fmt(sun!, 1)} h SUN</span>
           </div>
-        )}
-        {!hasStats && (
-          <div
-            style={{
-              fontFamily: 'monospace',
-              fontSize: 12,
-              letterSpacing: 2,
-              color: '#333',
-            }}
-          >
+        ) : (
+          <div style={{ display: 'flex', fontFamily: 'monospace', fontSize: 12, letterSpacing: 2, color: '#333' }}>
             climato.app
           </div>
         )}
@@ -180,17 +144,18 @@ export default async function handler(req: Request): Promise<Response> {
     {
       width: 1200,
       height: 630,
-      fonts: [
-        {
-          name: 'Inter Tight',
-          data: fontData,
-          weight: 700,
-          style: 'normal',
-        },
-      ],
-      headers: {
-        'Cache-Control': 'public, s-maxage=2592000, stale-while-revalidate=86400',
-      },
-    }
+      ...(fontData
+        ? { fonts: [{ name: 'Inter Tight', data: fontData, weight: 700, style: 'normal' }] }
+        : {}),
+    },
   )
+
+  // Wrap to set Cache-Control explicitly — avoids relying on the
+  // ImageResponse options.headers field which varies across versions.
+  return new Response(img.body, {
+    headers: {
+      'content-type': 'image/png',
+      'cache-control': 'public, s-maxage=2592000, stale-while-revalidate=86400',
+    },
+  })
 }
