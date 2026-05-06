@@ -6,13 +6,14 @@ const muted = '#85847d'
 
 interface Props {
   city: GeoCity
+  isError?: boolean
 }
 
 // First-paint placeholder shown before climate data loads.
 // Renders semantic <h1> + a keyword-rich paragraph so Googlebot's render
 // snapshot has the city's name and surface keywords even if the climate
 // fetch hasn't resolved.
-export function CityHeroFallback({ city }: Props) {
+export function CityHeroFallback({ city, isError = false }: Props) {
   const isMd = useMediaQuery('(min-width: 768px)')
   const pad = isMd ? 32 : 16
   const hasCoords = city.lat !== 0 || city.lon !== 0
@@ -72,15 +73,17 @@ export function CityHeroFallback({ city }: Props) {
           and the best time to visit.
         </p>
 
-        <div style={{
-          marginTop: 28,
-          fontFamily: "'JetBrains Mono', ui-monospace, monospace",
-          fontSize: 11,
-          letterSpacing: 1.5,
-          color: muted,
-        }}>
-          LOADING CLIMATE DATA …
-        </div>
+        {!isError && (
+          <div style={{
+            marginTop: 28,
+            fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+            fontSize: 11,
+            letterSpacing: 1.5,
+            color: muted,
+          }}>
+            LOADING CLIMATE DATA …
+          </div>
+        )}
       </div>
     </div>
   )

@@ -41,8 +41,11 @@ export default function App() {
       <AppHeader />
       <main style={{ opacity: isPending && !notFoundSlug ? 0.6 : 1, transition: 'opacity 0.25s', paddingBottom: isMd ? 0 : 56 }}>
         {notFoundSlug && <NotFound citySlug={notFoundSlug} />}
-        {!notFoundSlug && isError && (
-          <div className="flex flex-col items-center gap-5" style={{ padding: '80px 32px', textAlign: 'center', color: muted, fontFamily: "'JetBrains Mono', monospace", fontSize: 13, letterSpacing: 1 }}>
+        {!notFoundSlug && !sharedProps && (
+          <CityHeroFallback city={selectedCity} isError={isError} />
+        )}
+        {!notFoundSlug && (isError || (isClimateFetching && !sharedProps)) && (
+          <div className="flex flex-col items-center gap-5" style={{ padding: '32px 32px 48px', textAlign: 'center', color: muted, fontFamily: "'JetBrains Mono', monospace", fontSize: 13, letterSpacing: 1 }}>
             <div>CLIMATE DATA UNAVAILABLE — CHECK NETWORK</div>
             <button
               onClick={handleRetry}
@@ -51,21 +54,18 @@ export default function App() {
                 fontFamily: "'JetBrains Mono', ui-monospace, monospace",
                 fontSize: 12,
                 letterSpacing: 1.5,
-                color: '#111',
-                background: '#fff',
+                color: isClimateFetching ? '#fff' : '#111',
+                background: isClimateFetching ? '#111' : '#fff',
                 border: '1px solid #111',
                 padding: '10px 20px',
-                cursor: isClimateFetching ? 'progress' : 'pointer',
-                opacity: isClimateFetching ? 0.5 : 1,
+                cursor: isClimateFetching ? 'wait' : 'pointer',
                 minHeight: 44,
+                transition: 'background 150ms ease, color 150ms ease',
               }}
             >
-              {isClimateFetching ? 'RETRYING …' : 'TRY AGAIN'}
+              {isClimateFetching ? 'FETCHING …' : 'TRY AGAIN'}
             </button>
           </div>
-        )}
-        {!notFoundSlug && !isError && !sharedProps && (
-          <CityHeroFallback city={selectedCity} />
         )}
         {!notFoundSlug && sharedProps && (
           <>
