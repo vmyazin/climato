@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import type { City, GeoCity } from '../data/cities'
-import { MONTHS_LONG } from '../data/cities'
+import { MONTHS, MONTHS_LONG } from '../data/cities'
 import { nameFromSlug, toSlug } from '../lib/route'
 
 const DEFAULT_TITLE = 'Climato — Monthly Averages'
@@ -35,17 +35,21 @@ function setPropMeta(property: string, content: string) {
 const DEFAULT_OG_IMAGE = '/og-image.png'
 
 function buildOgImageUrl(selectedCity: GeoCity, city: City): string {
-  const hi   = Math.max(...city.high)
-  const lo   = Math.min(...city.low)
-  const rain = Math.round(city.precip.reduce((a, b) => a + b, 0))
-  const sun  = Math.round((city.sun.reduce((a, b) => a + b, 0) / 12) * 10) / 10
-  const params = new URLSearchParams({
-    city: selectedCity.name,
+  const hi      = Math.max(...city.high)
+  const lo      = Math.min(...city.low)
+  const rain    = Math.round(city.precip.reduce((a, b) => a + b, 0))
+  const peakIdx = city.high.indexOf(hi)
+  const peak    = MONTHS[peakIdx]
+  const r1      = (v: number) => Math.round(v * 10) / 10
+  const params  = new URLSearchParams({
+    city:    selectedCity.name,
     country: selectedCity.country,
-    hi: String(hi),
-    lo: String(lo),
-    rain: String(rain),
-    sun: String(sun),
+    hi:      String(hi),
+    lo:      String(lo),
+    rain:    String(rain),
+    peak,
+    highs:   city.high.map(r1).join(','),
+    lows:    city.low.map(r1).join(','),
   })
   if (selectedCity.admin1) params.set('admin1', selectedCity.admin1)
   return `/api/og?${params}`
