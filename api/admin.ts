@@ -1,4 +1,5 @@
 import { createHmac, timingSafeEqual } from 'node:crypto'
+import { BIG_CITY_MIN_POP, catalogStats, isBigCity } from './_lib/catalog.js'
 
 interface VercelLikeRequest {
   url?: string
@@ -122,10 +123,24 @@ function getRedisEnv() {
 }
 
 async function loadIndex(origin: string): Promise<Index> {
+  // Try HTTP first (production: served from the CDN as a static asset).
+  // The Content-Type check rejects Vite dev's SPA fallback, which returns
+  // 200 + text/html for any unknown path.
   try {
     const res = await fetch(`${origin}/normals/_index.json`, { cache: 'no-store' })
-    if (!res.ok) return {}
-    return (await res.json()) as Index
+    if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
+      return (await res.json()) as Index
+    }
+  } catch {
+    // fall through to disk
+  }
+  // Disk fallback (dev / cold function invocation): read directly so the
+  // admin panel shows real numbers even when there's no CDN copy yet.
+  try {
+    const { readFileSync } = await import('node:fs')
+    const { resolve } = await import('node:path')
+    const text = readFileSync(resolve(process.cwd(), 'data/normals/_index.json'), 'utf8')
+    return JSON.parse(text) as Index
   } catch {
     return {}
   }
@@ -175,6 +190,92 @@ function classifyId(id: string): 'geonames' | 'slug' | 'curated' {
   return 'curated'
 }
 
+interface SchemaStats {
+  bigCityCatalogSize: number
+  bigCityCachedCount: number
+  coveragePct: number
+  totalCatalogSize: number
+  medianAgeDays: number | null
+  oldestLabel: string | null
+  oldestAgeDays: number | null
+  sitemapTotal: number
+  sitemapWithFreshLastmod: number
+  sitemapFallbackLastmod: number
+  qualityMissingName: number
+  qualityMissingCountry: number
+  qualitySlugFormIds: number
+}
+
+function ageInDays(iso: string, now: number): number {
+  const t = new Date(iso).getTime()
+  if (!Number.isFinite(t)) return 0
+  return Math.max(0, Math.round((now - t) / 86_400_000))
+}
+
+function median(nums: number[]): number | null {
+  if (nums.length === 0) return null
+  const sorted = [...nums].sort((a, b) => a - b)
+  const mid = Math.floor(sorted.length / 2)
+  return sorted.length % 2 ? sorted[mid] : Math.round((sorted[mid - 1] + sorted[mid]) / 2)
+}
+
+function computeSchemaStats(index: Index): SchemaStats {
+  const now = Date.now()
+  const entries = Object.entries(index)
+  const ids = Object.keys(index)
+  const cat = catalogStats()
+
+  // Coverage against big-city catalog (population ≥ 250k). Curated ids
+  // count too — they're real cities even though they aren't keyed by
+  // GeoNames numeric id.
+  const bigCityCachedCount = ids.filter(id => isBigCity(id) || classifyId(id) === 'curated').length
+  const coveragePct = cat.bigCities > 0
+    ? Math.round((bigCityCachedCount / cat.bigCities) * 1000) / 10
+    : 0
+
+  // Freshness
+  const ages = entries.map(([, e]) => ageInDays(e.fetched_at, now))
+  const medianAgeDays = median(ages)
+  let oldestLabel: string | null = null
+  let oldestAgeDays: number | null = null
+  if (entries.length > 0) {
+    const [id, entry] = entries.reduce((acc, cur) =>
+      ageInDays(cur[1].fetched_at, now) > ageInDays(acc[1].fetched_at, now) ? cur : acc,
+    )
+    oldestAgeDays = ageInDays(entry.fetched_at, now)
+    oldestLabel = entry.name ? `${entry.name}${entry.country ? ', ' + entry.country : ''}` : id
+  }
+
+  // Sitemap: a URL gets a real per-city lastmod iff that city's id is in
+  // the normals index. Otherwise it falls back to the build date. This
+  // mirrors the logic in vite.config.ts:seoFiles.
+  const sitemapTotal = cat.total + 17 // catalog cities + 17 curated (rough; dedups not counted)
+  const sitemapWithFreshLastmod = entries.length
+  const sitemapFallbackLastmod = Math.max(0, sitemapTotal - sitemapWithFreshLastmod)
+
+  // Quality invariants — should all be 0 after the data cleanup. Any
+  // non-zero count is a regression worth surfacing in accent yellow/red.
+  const qualityMissingName = entries.filter(([, e]) => !e.name).length
+  const qualityMissingCountry = entries.filter(([, e]) => !e.country).length
+  const qualitySlugFormIds = ids.filter(id => classifyId(id) === 'slug').length
+
+  return {
+    bigCityCatalogSize: cat.bigCities,
+    bigCityCachedCount,
+    coveragePct,
+    totalCatalogSize: cat.total,
+    medianAgeDays,
+    oldestLabel,
+    oldestAgeDays,
+    sitemapTotal,
+    sitemapWithFreshLastmod,
+    sitemapFallbackLastmod,
+    qualityMissingName,
+    qualityMissingCountry,
+    qualitySlugFormIds,
+  }
+}
+
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, '&amp;')
@@ -198,6 +299,9 @@ const STYLE = `
   .col { display: flex; flex-direction: column; }
   .col-label { color: #777; font-size: 11px; text-transform: uppercase; }
   .warn { color: #f7b731; }
+  .good { color: #6dd083; }
+  .err  { color: #ff6b6b; }
+  .stat-sub { color: #666; font-size: 11px; margin-top: 2px; font-family: 'JetBrains Mono', ui-monospace, monospace; letter-spacing: 0.5px; }
   a { color: #4eb1ff; }
   .meta { color: #555; font-size: 11px; margin-top: 24px; }
 
@@ -325,6 +429,14 @@ function renderAdmin(opts: {
   const cachedCurated = cachedIds.filter(id => classifyId(id) === 'curated').length
   const now = new Date().toISOString()
 
+  // SEO health
+  const seo = computeSchemaStats(index)
+  const coverageClass = seo.coveragePct < 5 ? 'warn' : seo.coveragePct < 25 ? '' : 'good'
+  const oldestClass = seo.oldestAgeDays !== null && seo.oldestAgeDays > 60 ? 'warn' : ''
+  const medianClass = seo.medianAgeDays !== null && seo.medianAgeDays > 30 ? 'warn' : ''
+  const qualityTotal = seo.qualityMissingName + seo.qualityMissingCountry + seo.qualitySlugFormIds
+  const qualityClass = qualityTotal === 0 ? 'good' : 'err'
+
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -344,6 +456,40 @@ function renderAdmin(opts: {
   <div class="col"><span class="col-label">curated</span><span class="stat">${cachedCurated}</span></div>
   <div class="col"><span class="col-label">pending (kv)</span><span class="stat">${pendingSorted.length}</span></div>
   <div class="col"><span class="col-label">kv configured</span><span class="stat">${kvConfigured ? 'yes' : 'no'}</span></div>
+</div>
+
+<h2>Schema Status — SEO health</h2>
+<div class="row">
+  <div class="col">
+    <span class="col-label">coverage (pop ≥ ${BIG_CITY_MIN_POP / 1000}k)</span>
+    <span class="stat ${coverageClass}">${seo.coveragePct}%</span>
+    <span class="stat-sub">${seo.bigCityCachedCount} / ${seo.bigCityCatalogSize} cities</span>
+  </div>
+  <div class="col">
+    <span class="col-label">median age</span>
+    <span class="stat ${medianClass}">${seo.medianAgeDays === null ? '—' : `${seo.medianAgeDays}d`}</span>
+    <span class="stat-sub">across ${cachedIds.length} entries</span>
+  </div>
+  <div class="col">
+    <span class="col-label">oldest entry</span>
+    <span class="stat ${oldestClass}">${seo.oldestAgeDays === null ? '—' : `${seo.oldestAgeDays}d`}</span>
+    <span class="stat-sub">${seo.oldestLabel ? escapeHtml(seo.oldestLabel) : '—'}</span>
+  </div>
+  <div class="col">
+    <span class="col-label">sitemap urls</span>
+    <span class="stat">${seo.sitemapTotal.toLocaleString()}</span>
+    <span class="stat-sub">${seo.sitemapWithFreshLastmod} fresh · ${seo.sitemapFallbackLastmod.toLocaleString()} fallback</span>
+  </div>
+  <div class="col">
+    <span class="col-label">catalog total</span>
+    <span class="stat">${seo.totalCatalogSize.toLocaleString()}</span>
+    <span class="stat-sub">${seo.bigCityCatalogSize.toLocaleString()} big · ${(seo.totalCatalogSize - seo.bigCityCatalogSize).toLocaleString()} small</span>
+  </div>
+  <div class="col">
+    <span class="col-label">quality issues</span>
+    <span class="stat ${qualityClass}">${qualityTotal}</span>
+    <span class="stat-sub">${seo.qualityMissingName} no-name · ${seo.qualityMissingCountry} no-country · ${seo.qualitySlugFormIds} slug-form</span>
+  </div>
 </div>
 
 <h2>Pending — Upstash <code>pending:*</code></h2>

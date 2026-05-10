@@ -7,7 +7,14 @@ export interface CatalogEntry {
   name: string
   country: string
   admin1?: string
+  population: number
 }
+
+// Population threshold above which a catalog city is treated as an SEO
+// ranking target. Smaller cities still get pages but they rarely surface
+// in search; tracking coverage against them produces a misleadingly low
+// headline metric (e.g. "0.6% covered") that doesn't reflect actual reach.
+export const BIG_CITY_MIN_POP = 250_000
 
 // Trusted seed cities defined inline in src/data/cities.ts. These id strings
 // don't appear in data/cities.tsv (which keys by GeoNames numeric id), so
@@ -38,12 +45,14 @@ function loadCatalog(): Map<string, CatalogEntry> {
     const lat = parseFloat(cols[6])
     const lon = parseFloat(cols[7])
     if (!Number.isFinite(lat) || !Number.isFinite(lon)) continue
+    const population = parseInt(cols[8] ?? '', 10) || 0
     map.set(cols[0], {
       lat,
       lon,
       name: cols[1],
       country: cols[2],
       ...(cols[4] ? { admin1: cols[4] } : {}),
+      population,
     })
   }
   return map
@@ -52,6 +61,29 @@ function loadCatalog(): Map<string, CatalogEntry> {
 function getCatalog(): Map<string, CatalogEntry> {
   if (!catalog) catalog = loadCatalog()
   return catalog
+}
+
+export interface CatalogStats {
+  total: number
+  bigCities: number
+}
+
+// Aggregate stats for the admin Schema Status panel.
+export function catalogStats(): CatalogStats {
+  const cat = getCatalog()
+  let bigCities = 0
+  for (const entry of cat.values()) {
+    if (entry.population >= BIG_CITY_MIN_POP) bigCities++
+  }
+  return { total: cat.size, bigCities }
+}
+
+// Whether a given GeoNames id belongs to a city that exceeds the SEO
+// ranking-target threshold. Used by the admin page to decide whether a
+// cached entry "counts" toward Coverage.
+export function isBigCity(id: string): boolean {
+  const entry = getCatalog().get(id)
+  return !!entry && entry.population >= BIG_CITY_MIN_POP
 }
 
 // How far the supplied lat/lon may drift from the catalog entry before we
