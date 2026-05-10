@@ -17,6 +17,12 @@
     "country": "South Africa",
     "admin1": "Gauteng"
   },
+  "1147540": {
+    "fetched_at": "2026-05-10T22:12:48.808Z",
+    "name": "Baghlan",
+    "country": "Afghanistan",
+    "admin1": "Baghlan"
+  },
   "1848004": {
     "fetched_at": "2026-05-04T09:40:07.031Z",
     "name": "Zama",
@@ -95,6 +101,12 @@
     "country": "Brazil",
     "admin1": "Santa Catarina"
   },
+  "3471039": {
+    "fetched_at": "2026-05-10T22:12:48.808Z",
+    "name": "Balneário Camboriú",
+    "country": "Brazil",
+    "admin1": "Santa Catarina"
+  },
   "4168782": {
     "fetched_at": "2026-05-09T08:28:20.476Z",
     "name": "Plantation",
@@ -118,6 +130,11 @@
     "name": "Somerset West",
     "country": "South Africa",
     "admin1": "Western Cape"
+  },
+  "999999999": {
+    "fetched_at": "2026-05-10T22:12:48.808Z",
+    "name": "Audit",
+    "country": "Audit"
   },
   "cairo": {
     "fetched_at": "2026-05-02T23:12:28.096Z",
