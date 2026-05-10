@@ -95,7 +95,7 @@ function setJsonLd(payload: object | null) {
   document.head.appendChild(el)
 }
 
-function buildDatasetJsonLd(selectedCity: GeoCity, city: City | undefined) {
+function buildDatasetNode(selectedCity: GeoCity, city: City | undefined): Record<string, unknown> {
   // Skip admin1 when it duplicates the city name — common for city-states
   // like Tokyo where admin1 ("Tokyo") collapses with name ("Tokyo").
   const includeAdmin1 = selectedCity.admin1 && selectedCity.admin1 !== selectedCity.name
@@ -114,7 +114,6 @@ function buildDatasetJsonLd(selectedCity: GeoCity, city: City | undefined) {
   }
 
   const dataset: Record<string, unknown> = {
-    '@context': 'https://schema.org',
     '@type': 'Dataset',
     name: `Monthly Climate Normals — ${selectedCity.name}`,
     description: `Monthly average temperature, precipitation and sunshine data for ${selectedCity.name}, ${selectedCity.country}.`,
@@ -140,6 +139,35 @@ function buildDatasetJsonLd(selectedCity: GeoCity, city: City | undefined) {
   }
 
   return dataset
+}
+
+// Schema.org BreadcrumbList: lets Google show the path (Climato › Madrid,
+// Spain) in SERP rich results. Two levels for now — once country index
+// pages ship we can add the country layer as an intermediate ListItem.
+function buildBreadcrumbNode(selectedCity: GeoCity): Record<string, unknown> {
+  const origin = window.location.origin
+  const { path } = toSlug(selectedCity)
+  const includeAdmin1 = selectedCity.admin1 && selectedCity.admin1 !== selectedCity.name
+  const cityLabel = includeAdmin1
+    ? `${selectedCity.name}, ${selectedCity.admin1}, ${selectedCity.country}`
+    : `${selectedCity.name}, ${selectedCity.country}`
+  return {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Climato', item: `${origin}/` },
+      { '@type': 'ListItem', position: 2, name: cityLabel, item: `${origin}${path}` },
+    ],
+  }
+}
+
+function buildJsonLd(selectedCity: GeoCity, city: City | undefined): object {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      buildDatasetNode(selectedCity, city),
+      buildBreadcrumbNode(selectedCity),
+    ],
+  }
 }
 
 interface Args {
@@ -189,11 +217,14 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       setOgImage(DEFAULT_OG_IMAGE)
     }
 
-    // Only emit Dataset JSON-LD once we have real coordinates — placeholders
+    // Only emit JSON-LD once we have real coordinates — placeholders
     // (lat=0,lon=0 from reconstructFromSlug) would publish bogus geo data.
+    // The payload now contains both a Dataset node (climate normals) and a
+    // BreadcrumbList node (Climato › City, Country) so Google can show the
+    // breadcrumb path in SERP rich results.
     const hasRealCoords = selectedCity.lat !== 0 || selectedCity.lon !== 0
     if (hasRealCoords) {
-      setJsonLd(buildDatasetJsonLd(selectedCity, haveFreshClimate ? city : undefined))
+      setJsonLd(buildJsonLd(selectedCity, haveFreshClimate ? city : undefined))
       // Canonical URL: drops the optional ?@lat,lon query string so Google
       // collapses /spain/madrid and /spain/madrid?@40.42,-3.70 into one
       // canonical entry. Resolved via the same toSlug used by the router.

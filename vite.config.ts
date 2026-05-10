@@ -87,14 +87,35 @@ function canonicalPaths(items: SeoCity[]): Map<SeoCity, string> {
   return out
 }
 
+interface NormalsIndexEntry {
+  fetched_at: string
+  name?: string
+  country?: string
+  admin1?: string
+}
+
+function loadNormalsIndex(p: string): Record<string, NormalsIndexEntry> {
+  if (!existsSync(p)) return {}
+  try {
+    return JSON.parse(readFileSync(p, 'utf8'))
+  } catch {
+    return {}
+  }
+}
+
 function seoFiles(): Plugin {
   return {
     name: 'climato-seo-files',
     apply: 'build',
     generateBundle() {
       const siteUrl = (process.env.VITE_SITE_URL ?? 'https://climato.smoxu.com').replace(/\/$/, '')
-      const lastmod = new Date().toISOString().slice(0, 10)
+      const buildDate = new Date().toISOString().slice(0, 10)
       const catalog = loadCityCatalog(resolve(__dirname, 'data/cities.tsv'))
+      // Per-city lastmod: when this city's climate data was last fetched
+      // (drained from Upstash → committed to data/normals/). Falls back to
+      // the build date for cities never visited yet. Google uses lastmod to
+      // prioritise crawling pages that have actually changed.
+      const normalsIndex = loadNormalsIndex(resolve(__dirname, 'data/normals/_index.json'))
 
       const items: SeoCity[] = [
         ...CITIES.map(c => ({ city: c as GeoCity, population: 0, isCurated: true })),
@@ -103,17 +124,20 @@ function seoFiles(): Plugin {
       const paths = canonicalPaths(items)
 
       const seen = new Set<string>()
-      const urls: { loc: string; priority: string; changefreq: string }[] = [
-        { loc: `${siteUrl}/`, priority: '1.0', changefreq: 'weekly' },
+      const urls: { loc: string; priority: string; changefreq: string; lastmod: string }[] = [
+        { loc: `${siteUrl}/`, priority: '1.0', changefreq: 'weekly', lastmod: buildDate },
       ]
       for (const it of items) {
         const path = paths.get(it)
         if (!path || seen.has(path)) continue
         seen.add(path)
+        const entry = normalsIndex[it.city.id]
+        const lastmod = entry?.fetched_at?.slice(0, 10) ?? buildDate
         urls.push({
           loc: `${siteUrl}${path}`,
           priority: priorityFor(it.population, it.isCurated),
           changefreq: 'monthly',
+          lastmod,
         })
       }
 
@@ -123,7 +147,7 @@ ${urls
   .map(
     u => `  <url>
     <loc>${u.loc}</loc>
-    <lastmod>${lastmod}</lastmod>
+    <lastmod>${u.lastmod}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`,
