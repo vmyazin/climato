@@ -4,8 +4,16 @@ export const config = {
   matcher: ['/((?!api/|normals/|admin$|.*\\.(?:js|css|png|svg|ico|webp|woff2?|json|txt|xml)$).*)'],
 }
 
+// Social-share previewers only. These crawlers grab og:* / twitter:* meta
+// tags and don't execute JS, so we serve a stripped HTML response with the
+// per-city image + title baked in.
+//
+// Search-engine crawlers (Googlebot, Bingbot, DuckDuckBot, Applebot, ia_archiver,
+// w3c_validator) are deliberately NOT in this list — they're capable of
+// rendering the SPA and need to see the full climate narrative, monthly
+// table, JSON-LD, and internal nearby-city links to rank the page properly.
 const BOT_UA =
-  /twitterbot|facebookexternalhit|telegrambot|slackbot|whatsapp|linkedinbot|discordbot|applebot|googlebot|bingbot|duckduckbot|ia_archiver|vkshare|pinterest|tumblr|w3c_validator/i
+  /twitterbot|facebookexternalhit|telegrambot|slackbot|whatsapp|linkedinbot|discordbot|vkshare|pinterest|tumblr/i
 
 function slugToTitle(slug: string): string {
   return slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
