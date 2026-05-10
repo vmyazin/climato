@@ -1,4 +1,5 @@
 import { ImageResponse } from '@vercel/og'
+import { checkRateLimit } from './_lib/ratelimit.js'
 
 export const config = { runtime: 'edge' }
 
@@ -36,6 +37,17 @@ const FG    = '#111111'
 const RED   = '#d64040'
 
 export default async function handler(req: Request): Promise<Response> {
+  // Adapter: checkRateLimit expects a Node-style req.headers record,
+  // Edge runtime gives us a Headers object. Build the minimal shape.
+  const ip = req.headers.get('x-forwarded-for') ?? undefined
+  const rl = await checkRateLimit({ headers: { 'x-forwarded-for': ip } }, 'og')
+  if (!rl.allowed) {
+    return new Response('rate limited', {
+      status: 429,
+      headers: { 'Retry-After': '60', 'Content-Type': 'text/plain' },
+    })
+  }
+
   const { searchParams, origin } = new URL(req.url)
 
   const city    = sanitise(searchParams.get('city'), 80) || 'Unknown'

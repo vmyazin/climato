@@ -1,5 +1,6 @@
 import { createHmac, timingSafeEqual } from 'node:crypto'
 import { BIG_CITY_MIN_POP, catalogStats, isBigCity } from './_lib/catalog.js'
+import { checkRateLimit } from './_lib/ratelimit.js'
 
 interface VercelLikeRequest {
   url?: string
@@ -553,6 +554,14 @@ export default async function handler(req: VercelLikeRequest, res: VercelLikeRes
 
   // POST: form submission. Validate password, set cookie, redirect to GET.
   if (method === 'POST') {
+    // Tight per-IP throttle on login attempts (5/min) — slows brute force
+    // without affecting legitimate refresh / cookie-validated GETs below.
+    const rl = await checkRateLimit(req, 'admin')
+    if (!rl.allowed) {
+      res.setHeader('Retry-After', '60')
+      htmlResponse(res, 429, renderLogin({ error: 'Too many attempts — try again in a minute.' }))
+      return
+    }
     const fields = await readBody(req)
     const provided = (fields.password ?? '').trim()
     if (!provided || !constantTimeStringEqual(provided, password)) {

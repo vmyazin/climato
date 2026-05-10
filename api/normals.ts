@@ -1,9 +1,11 @@
 import { fetchOpenMeteoNormals, type Normals } from './_lib/normals.js'
 import { validateCity } from './_lib/catalog.js'
+import { checkRateLimit } from './_lib/ratelimit.js'
 
 interface VercelLikeRequest {
   url?: string
   query?: Record<string, string | string[]>
+  headers?: Record<string, string | string[] | undefined>
 }
 
 interface VercelLikeResponse {
@@ -93,6 +95,14 @@ function trimMeta(s: string | null, max: number): string {
 }
 
 export default async function handler(req: VercelLikeRequest, res: VercelLikeResponse) {
+  // IP-based rate limit before any expensive work (catalog parse, Open-Meteo
+  // fetch, KV write). Fails open in dev / when Upstash isn't configured.
+  const rl = await checkRateLimit(req, 'normals')
+  if (!rl.allowed) {
+    res.setHeader('Retry-After', '60')
+    return bad(res, 429, 'rate limited')
+  }
+
   const params = parseQuery(req)
   const id = params.get('id')?.trim() ?? ''
   const lat = parseFloat(params.get('lat') ?? '')
