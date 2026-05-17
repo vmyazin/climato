@@ -2,7 +2,7 @@
 
 > **Status legend:** ✅ done · 🟡 partial · ⬜ not started
 >
-> Last audit: 2026-05-17 (post BreadcrumbList JSON-LD + per-city sitemap lastmod)
+> Last audit: 2026-05-17 (post BreadcrumbList JSON-LD + per-city sitemap lastmod, plus h1 fix + Traffic Acquisition section)
 
 ## 1. Affiliate Link Strategy — ⬜ not started
 
@@ -155,6 +155,118 @@ All four sections are derived purely from the `City` shape — no extra fetches,
 | 3 | Expand to top 200 cities based on search volume data | 🟡 catalog ingestion ready, expansion pending search-volume data |
 | 6 | Evaluate traffic — if >5k/month, apply for Mediavine display ads | ⬜ |
 | 12 | 10k+ cities, consider Booking.com preferred partner status | ⬜ |
+
+---
+
+## 3. Traffic Acquisition — ⬜ not started
+
+### Why this matters
+Sections 1 and 2 both depend on the prerequisite this section addresses: people actually visiting the site. With zero traffic the affiliate placements have nothing to convert and Google has no engagement signals (clicks from SERP, dwell time, backlinks) to rank pages from. The job for the first 90 days isn't revenue — it's getting indexed, earning backlinks, and identifying which channels and keyword clusters convert.
+
+### Channel matrix
+
+| Channel | Effort | Time-to-traffic | Compounds? | Notes |
+|---------|--------|----------------|------------|-------|
+| Pinterest | Low | Days–weeks | Yes | Per-city OG images are pin-ready; travel is a native Pinterest niche |
+| Show HN | Low | Hours | No | One-shot — brings backlinks even if traffic spike doesn't last |
+| Reddit | Low | Hours | No | r/dataisbeautiful, r/digitalnomad, r/solotravel, country subs |
+| Embed widget | Medium | Months | Yes | Pure backlink play; scales with the catalog |
+| Comparison pages | Medium | Months | Yes | "Paris vs London" — high search volume, low competition, auto-generatable |
+| Seasonal landing pages | Medium | Months | Yes | "Best places to visit in March" — refreshed monthly |
+| Wikipedia citations | High | Weeks | Yes | Strong backlinks; strict editorial rules |
+| Awesome lists | Low | Weeks | Yes | One-time submissions |
+| Blogger outreach | High | Weeks | Yes | Manual; pitch as a data source for "best time to visit" posts |
+
+### Quick wins — first 4 weeks
+
+**Pinterest** ⬜
+- Create a business account branded as Climato
+- Pin every per-city OG image (start with the 18 seed cities, expand as the catalog fills). Title format: *"[City] weather averages — [hottest month] hits [X]°C"*
+- Keyword-rich descriptions: "best time to visit", "monthly rainfall", "travel weather guide"
+- Group cities into boards by climate type (Tropical, Mediterranean, Continental, etc.) for browse-driven traffic
+- Automation: pull `city × image-url × description` rows from the catalog → bulk-pin via the Pinterest API or a scheduler like Tailwind
+
+**Show HN** ⬜
+- Title format: *"Show HN: Climato — monthly weather averages for any city, free"*
+- Post Tuesday or Wednesday 9–11am ET (peak engagement window)
+- Lead with angles that resonate on HN: open data attribution (Open-Meteo), the lazy-fill + drain ingestion pipeline, zero per-visit API cost
+- Pre-warm at least 12 demo cities so the SPA feels instant
+
+**Reddit** ⬜
+- r/dataisbeautiful: post a striking single-city chart (e.g. Mumbai monsoon rainfall) with the link in the OP comment, not the title
+- r/digitalnomad, r/solotravel, r/expats: comment helpfully on "where should I go in [month]?" threads — link only when contextually relevant
+- Country subs (r/Brazil, r/japanlife, r/IWantOut): share when a question matches
+- Risk: spam-ban — always lead with value, treat the link as secondary
+
+**Niche communities** ⬜
+- Nomad List forum, Slow Travel forum, Numbeo discussion areas
+- Digital-nomad / expat Facebook groups (declining but still trafficked)
+
+### Compounding moats — month 1–6
+
+**Embed widget** ⬜
+- Provide a one-line `<script>` snippet that travel blogs can drop into "best time to visit X" posts
+- Renders a compact city climate card (mini chart + best months) with a "powered by Climato" backlink
+- Example install: `<script src="https://climato.smoxu.com/embed.js" data-city="tokyo"></script>`
+- Promote via a dedicated `/embed` landing page and the blogger-outreach motion below
+- Each embed = one durable backlink; aim for 50–100 placements in 6 months
+
+**Comparison pages** ⬜
+- Route: `/compare/{city-a}/vs/{city-b}` (e.g. `/compare/paris/vs/london`)
+- High volume, low competition: "paris vs london weather" ~5k/mo, "lisbon vs barcelona weather" ~3k/mo
+- Auto-generated from the existing `City` shape — side-by-side bar chart for temp and rainfall, "which is hotter/wetter/sunnier" summary derived from [src/lib/climate-summary.ts](src/lib/climate-summary.ts)
+- Pre-generate the top 200–500 likely city pairs (capital × capital, popular tourism pairs)
+- List in `sitemap.xml` with their own canonical URLs
+- Risk: thin-content penalty — each page needs ≥200 words of derived analysis (rainfall delta, best month for each, climate-type comparison)
+
+**Seasonal landing pages** ⬜
+- Route: `/best-places-to-visit-in-{month}` — refreshed monthly with calendar context
+- Lists 15–20 cities with ideal conditions for that month (warm but not too hot, low rain, sunny), filtered by hemisphere
+- Reuses the existing scoring logic in [src/lib/climate-summary.ts](src/lib/climate-summary.ts)
+- Search volume: "best places to visit in march" ~30–100k/mo globally
+- Format: intro paragraph, ranked list with mini climate cards linking to full city pages
+- Bonus: internal links drive crawl-budget into the long tail of city pages
+
+### Outreach — slower, manual
+
+**Wikipedia citations** ⬜
+- Find city Wikipedia articles with thin or unsourced climate sections; cite Climato as an external link or a source for derived stats
+- Read [WP:RS](https://en.wikipedia.org/wiki/WP:RS) and [WP:EL](https://en.wikipedia.org/wiki/WP:EL) first — Climato is a tertiary source, Open-Meteo is primary; some editors prefer citing Open-Meteo directly
+- Risk: editors aggressively revert anything perceived as promotional — move slowly, build a real editor account first, skip if it feels spammy
+
+**Awesome lists & directories** ⬜
+- [awesome-public-datasets](https://github.com/awesomedata/awesome-public-datasets)
+- [awesome-data-visualization](https://github.com/javierluraschi/awesome-data-visualization)
+- Niche travel directories (Visit-A-City, Travel Awaits, etc.)
+
+**Blogger outreach** ⬜
+- Use Ahrefs / Ubersuggest / plain Google to find blogs ranking for "best time to visit X" terms
+- Pitch the embed widget as a value-add for their existing post in exchange for attribution
+- Target cadence: 10 outreach emails / week → 1–2 placements / month at typical conversion rates
+
+### Tracking infrastructure ⬜
+- Install Plausible or Umami (privacy-friendly, lightweight) — required to know which channels actually convert
+- Per-channel UTM tags on every external link Climato controls (Pinterest descriptions, Reddit comments, embed-widget backlinks)
+- Weekly review: top referrers, top landing pages, top search queries from GSC
+- Kill channels showing <5% of total referrals after 90 days; double down on the rest
+
+### 90-day timeline
+
+| Week | Focus | Expected outcome |
+|------|-------|-----------------|
+| 1 | Submit sitemap to GSC. Install Plausible. Pinterest account live, first 18 cities pinned. | Tracking baseline, first impressions in GSC |
+| 2 | Show HN launch. Submit to 3 awesome lists. | One-shot traffic spike + first wave of backlinks |
+| 3–4 | Reddit posts in 5 targeted subs. Reach out to 5 niche forums. | First 500–2,000 referral visits |
+| 5–8 | Build embed widget + `/embed` landing page. Auto-generate top 50 comparison pages. | Compounding distribution infrastructure live |
+| 9–12 | Launch seasonal landing pages. Start blogger outreach (10/wk). Cautious Wikipedia edits. | First consistent GSC impressions on city pages |
+
+### Gate to start Section 1 (affiliates)
+The affiliate work in Section 1 only becomes worth the build effort once these are true:
+- 5k+ monthly visitors from organic + referral combined
+- 50+ backlinks from referring domains
+- At least one channel showing consistent week-over-week growth
+
+Until then, every hour spent on affiliate UI is an hour not spent earning the traffic those CTAs need to convert.
 
 ---
 
