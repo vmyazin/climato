@@ -85,7 +85,7 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
           {isMd ? (
             <>
               <div style={{ paddingRight: 240 }}>
-                <FitHeadline text={city.name.toUpperCase()} maxFontSize={180} minFontSize={28} lineHeight={0.88} letterSpacing={-6} color={fg} />
+                <FitHeadline as="h1" text={city.name.toUpperCase()} maxFontSize={180} minFontSize={28} lineHeight={0.88} letterSpacing={-6} color={fg} />
               </div>
               <div style={{ position: 'absolute', top: 8, right: 8 }}>
                 <CurrentTempBadge tempC={currentTemp?.tempC} unit={unit} fg={fg} muted={muted} accent={accent} variant="block" />
@@ -93,7 +93,7 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
             </>
           ) : (
             <div>
-              <FitHeadline text={city.name.toUpperCase()} maxFontSize={80} minFontSize={28} lineHeight={0.88} letterSpacing={-3} color={fg} />
+              <FitHeadline as="h1" text={city.name.toUpperCase()} maxFontSize={80} minFontSize={28} lineHeight={0.88} letterSpacing={-3} color={fg} />
               <div style={{ marginTop: 10 }}>
                 <CurrentTempBadge tempC={currentTemp?.tempC} unit={unit} fg={fg} muted={muted} accent={accent} variant="block" />
               </div>

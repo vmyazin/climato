@@ -52,9 +52,9 @@ export function VariationA({ city, unit, chartVariant, setChartVariant, currentT
             {city.lat >= 0 ? '+' : ''}{city.lat.toFixed(4)}°  ·  {city.lon >= 0 ? '+' : ''}{city.lon.toFixed(4)}°  ·  ELEV {city.elev}m
             <CurrentTempBadge tempC={currentTemp?.tempC} unit={unit} fg={fg} muted={muted} accent={accent} variant="inline" />
           </div>
-          <div style={{ fontSize: isMd ? 132 : 'clamp(48px, 15vw, 100px)', fontWeight: 700, lineHeight: 0.95, letterSpacing: isMd ? -4 : -2, color: fg, textTransform: 'uppercase', wordBreak: 'break-word' }}>
+          <h1 style={{ margin: 0, fontSize: isMd ? 132 : 'clamp(48px, 15vw, 100px)', fontWeight: 700, lineHeight: 0.95, letterSpacing: isMd ? -4 : -2, color: fg, textTransform: 'uppercase', wordBreak: 'break-word' }}>
             {city.name}
-          </div>
+          </h1>
           <div style={{ fontSize: isMd ? 28 : 18, fontWeight: 400, letterSpacing: -0.4, color: muted, marginTop: 4 }}>
             {city.country}{city.admin1 ? ` · ${city.admin1}` : ''}
           </div>

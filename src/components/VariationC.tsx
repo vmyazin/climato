@@ -21,8 +21,8 @@ interface Props {
   currentTemp?: CurrentTemp
 }
 
-export function FitHeadline({ text, maxFontSize, minFontSize, lineHeight, letterSpacing, color }: {
-  text: string; maxFontSize: number; minFontSize: number; lineHeight: number; letterSpacing: number; color: string
+export function FitHeadline({ text, maxFontSize, minFontSize, lineHeight, letterSpacing, color, as: Tag = 'div' }: {
+  text: string; maxFontSize: number; minFontSize: number; lineHeight: number; letterSpacing: number; color: string; as?: 'div' | 'h1'
 }) {
   const wrapRef = React.useRef<HTMLDivElement>(null)
   const measureRef = React.useRef<HTMLSpanElement>(null)
@@ -42,14 +42,14 @@ export function FitHeadline({ text, maxFontSize, minFontSize, lineHeight, letter
     setSize(s)
   }, [text, maxFontSize, minFontSize])
 
-  const common: React.CSSProperties = { fontWeight: 700, lineHeight, letterSpacing, color, whiteSpace: 'nowrap' }
+  const common: React.CSSProperties = { fontWeight: 700, lineHeight, letterSpacing, color, whiteSpace: 'nowrap', margin: 0 }
 
   return (
     <div ref={wrapRef} style={{ width: '100%' }}>
       <span ref={measureRef} style={{ ...common, fontSize: maxFontSize, position: 'absolute', visibility: 'hidden', pointerEvents: 'none', left: -99999, top: -99999 }}>
         {text}
       </span>
-      <div style={{ ...common, fontSize: size }}>{text}</div>
+      <Tag style={{ ...common, fontSize: size }}>{text}</Tag>
     </div>
   )
 }
@@ -114,9 +114,10 @@ export function VariationC({ city, unit, chartVariant, setChartVariant, currentT
                 MONTHLY NORMALS
               </div>
               {isMd ? (
-                <FitHeadline text={city.name.toUpperCase()} maxFontSize={160} minFontSize={72} lineHeight={0.88} letterSpacing={-6} color={fg} />
+                <FitHeadline as="h1" text={city.name.toUpperCase()} maxFontSize={160} minFontSize={72} lineHeight={0.88} letterSpacing={-6} color={fg} />
               ) : (
-                <div style={{
+                <h1 style={{
+                  margin: 0,
                   fontWeight: 700,
                   fontSize: 'clamp(44px, 14vw, 96px)',
                   lineHeight: 0.92,
@@ -127,7 +128,7 @@ export function VariationC({ city, unit, chartVariant, setChartVariant, currentT
                   hyphens: 'auto',
                 }}>
                   {city.name.toUpperCase()}
-                </div>
+                </h1>
               )}
               <div style={{ fontSize: isMd ? 28 : 18, fontWeight: 400, color: muted, marginTop: 8 }}>
                 {city.country}{city.admin1 ? ` · ${city.admin1}` : ''}

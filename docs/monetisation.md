@@ -115,7 +115,7 @@ Route format: ✅ implemented as `/{country}/{city}` (and `/{country}/{admin1}/{
 }
 ```
 
-- 🟡 **H1**: a semantic `<h1>` exists in [src/components/CityHeroFallback.tsx](src/components/CityHeroFallback.tsx) for the SEO first-paint fallback (renders the city name only, not the full doc spec); main variations don't yet emit an `<h1>`
+- ✅ **H1**: every city variation emits a semantic `<h1>` with the city name — [VariationA.tsx](src/components/VariationA.tsx) directly, [VariationB.tsx](src/components/VariationB.tsx) and [VariationC.tsx](src/components/VariationC.tsx) via the `as="h1"` prop on `FitHeadline`. [CityHeroFallback.tsx](src/components/CityHeroFallback.tsx) also emits one during the loading state.
 - ✅ **H2s**: Climate Overview · Rainfall by Month · Best Time to Visit · Monthly Breakdown — emitted by [src/components/ClimateNarrative.tsx](src/components/ClimateNarrative.tsx) under each city page. (The doc's earlier list — Monthly Temperatures · Rainfall · Best Time · Sunrise & Sunset — was renamed to better match the actual content; sunrise/sunset folded into the Monthly Breakdown table.)
 
 ### Content to auto-generate from data (no manual writing) — ✅ done
