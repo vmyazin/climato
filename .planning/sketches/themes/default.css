@@ -1,0 +1,94 @@
+/* Climato Comparison-Page Theme
+   Inherits from existing site (Inter Tight + JetBrains Mono, cream + black,
+   single accent red) and adds a second city accent (deep navy) so two
+   cities can be visually distinguished in side-by-side layouts. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Surface */
+  --color-bg: #f0f1ed;
+  --color-surface: #ffffff;
+  --color-border: #111;
+  --color-border-soft: rgba(17, 17, 17, 0.12);
+  --color-grid: rgba(17, 17, 17, 0.06);
+
+  /* Type */
+  --color-text: #111;
+  --color-text-muted: #85847d;
+
+  /* Accents */
+  --color-accent: #cc3b1f;     /* Climato brand red — RESERVED for true brand-voice moments
+                                  (verdict-word emphasis, wordmark). Never use as a
+                                  category identifier for one of N peer items. */
+  --color-city-a: #1d5a52;     /* City A — deep teal (cool, water/sky) */
+  --color-city-b: #b08229;     /* City B — warm ochre (warm, sun/earth) */
+  --color-overlap: #5a6240;    /* Mix — muted olive for "both ideal" */
+  --color-good: #4a7c3a;       /* Suitability — moss green */
+  --color-warn: #cf9a3a;       /* Suitability — amber */
+
+  /* Typography */
+  --font-display: 'Inter Tight', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 28px;
+  --text-2xl: 44px;
+  --text-3xl: 72px;
+  --text-4xl: 132px;
+
+  /* Spacing — matches existing 4/8/16/24/32px rhythm */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Shapes — minimal radius, mostly squared like the existing site */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-pill: 9999px;
+}
+
+/* Base reset for sketches */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mono labels — used everywhere in the existing site */
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 1.5px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+/* Display headings */
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+/* Tabular numbers for charts/tables */
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* Common border grid */
+.grid-border { border: 1px solid var(--color-border); }
+.grid-border-soft { border: 1px solid var(--color-border-soft); }
