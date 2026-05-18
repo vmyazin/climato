@@ -153,11 +153,11 @@ export function CompareWithPill({ geo, city, fg = '#111', muted = '#85847d', bg 
           transition: 'background 0.15s, color 0.15s',
           minHeight: 32,
         }}
-        onMouseDown={(e) => {
+        onMouseEnter={(e) => {
           e.currentTarget.style.background = fg
           e.currentTarget.style.color = bg
         }}
-        onMouseUp={(e) => {
+        onMouseLeave={(e) => {
           e.currentTarget.style.background = bg
           e.currentTarget.style.color = fg
         }}
@@ -166,7 +166,7 @@ export function CompareWithPill({ geo, city, fg = '#111', muted = '#85847d', bg 
         aria-controls="compare-with-panel"
         aria-label="Compare this city with another"
       >
-        <span aria-hidden="true">↔</span>
+        <span aria-hidden="true" style={{ fontSize: 16, lineHeight: 1 }}>↔</span>
         <span>Compare with …</span>
       </button>
 
