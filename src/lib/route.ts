@@ -175,6 +175,14 @@ export interface UrlSyncResult {
   notFoundSlug: string | null
 }
 
+// Custom event used by programmatic URL pushers (e.g. <CompareWithPill>)
+// to nudge useUrlSync's resolve effect — pushState() does NOT fire popstate.
+const URL_CHANGE_EVENT = 'climato:urlchange'
+
+export function notifyUrlChange(): void {
+  window.dispatchEvent(new Event(URL_CHANGE_EVENT))
+}
+
 function currentUrl(): string {
   return window.location.pathname + window.location.search
 }
@@ -276,9 +284,15 @@ export function useUrlSync(): UrlSyncResult {
       resolve()
     }
     window.addEventListener('popstate', onPop)
+    // pushState() does NOT fire popstate. Components that programmatically
+    // change the URL (e.g. <CompareWithPill> jumping to /compare/...) must
+    // dispatch the custom event below after their pushState call so
+    // useUrlSync picks up the change.
+    window.addEventListener(URL_CHANGE_EVENT, onPop)
     return () => {
       cancelled = true
       window.removeEventListener('popstate', onPop)
+      window.removeEventListener(URL_CHANGE_EVENT, onPop)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
