@@ -44,10 +44,13 @@ export function ComparisonPage({ a, b }: Props) {
           display: 'grid',
           gridTemplateColumns: '420px 1fr',
           gap: 32,
-          alignItems: 'start',
+          // `alignItems: 'stretch'` (the default) makes the left cell tall
+          // enough for the sticky calendar to actually stick — with `start`
+          // the cell collapsed to content height and sticky had no track.
         }}>
-          {/* Sticky calendar sidebar */}
-          <div style={{ position: 'sticky', top: 24 }}>
+          {/* Sticky calendar sidebar — offset must clear the sticky AppHeader
+              (56px tall on desktop) plus a small breathing-room gap. */}
+          <div style={{ position: 'sticky', top: 72 }}>
             <div style={{
               fontFamily: "'JetBrains Mono', ui-monospace, monospace",
               fontSize: 11,
