@@ -197,12 +197,14 @@ async function renderCompareOg(searchParams: URLSearchParams): Promise<Response>
   const warmer   = sanitise(searchParams.get('warmer'), 3).toLowerCase()
   const overlap  = sanitise(searchParams.get('overlap'), 40)
 
-  // Pick a font size so both names fit comfortably side-by-side.
+  // Stacked layout — each name gets the full canvas width, so the only
+  // constraint is fitting on one line at the chosen size. Bias toward
+  // headline-scale typography; only shrink for very long names.
   const longest = Math.max(aCity.length, bCity.length)
-  const nameFontSize = longest > 16 ? 56
-                     : longest > 12 ? 72
-                     : longest > 9  ? 92
-                     :                108
+  const nameFontSize = longest > 18 ? 96
+                     : longest > 14 ? 120
+                     : longest > 10 ? 140
+                     :                160
 
   const warmerName = warmer === 'a' ? aCity : warmer === 'b' ? bCity : null
   const tempLine = tempDelta !== null && warmerName
@@ -225,39 +227,71 @@ async function renderCompareOg(searchParams: URLSearchParams): Promise<Response>
           position: 'relative',
         }}
       >
-        {/* Top mono label */}
+        {/* Top brand row — logo mark + wordmark + section label */}
         <div
           style={{
             display: 'flex',
-            fontFamily: 'monospace',
-            fontSize: 16,
-            letterSpacing: 3,
-            color: MUTED,
-            textTransform: 'uppercase',
+            alignItems: 'center',
+            gap: 14,
           }}
         >
-          CLIMATO · CLIMATE COMPARISON
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1080 1080"
+            width={28}
+            height={28}
+            fill={FG}
+          >
+            <path d="M583.81,986.69c-36.4,49.14-52.68,44.52-88.2,1.45-40.6-41.53-309.3-352.87-309.3-570.1,0-468.4,716.56-464.62,707,16-4.3,216.33-166.57,398.25-309.5,552.66ZM545.15,972.63c124.66-134.78,308.15-330.66,309.53-549.02,1.06-166.96-147.45-313.94-314.26-314.94-202.86-1.21-318.82,134.58-314.33,328.63,2.19,94.49,116.83,318.52,236.85,455.8,10.2,11.66,72.66,92.93,82.22,79.51Z" />
+            <path d="M601.87,815.39c-146.22,70.7-271.46-119.86-152.92-226.39,10.07-6.44.67-339.07,3.76-354.29,9.74-113.44,182.41-98.12,175.77,16.46,4.84,17.41-11.24,338.66,8.58,342.73,66.33,60.01,48.52,185.35-35.2,221.49ZM598.31,771.14c53.96-41.28,48.83-126.21-5.9-164.22-10.78-.4-4.74-337.08-5.05-349.4-1.79-70.52-85.95-84.99-96.31-16.5,0,0,.2,357.84.2,357.84-1.49,11.94-30.7,29.95-37.2,46.68-51.9,87.31,64.11,188.81,144.25,125.58Z" />
+            <path d="M586.82,743.26c-32.5,27.71-69.53,20.46-92.74-1.45-25.66-24.22-29.2-70.99-1.57-98.98,12.09-12.25,26.01-13.12,25.96-23.24l-.1-268.18c-3.4-26.27,38.88-33.52,40.44-6.21,3.94,28.72-.65,251.17-1.33,280.78,54.16,19.8,61.6,83.59,29.35,117.29Z" />
+          </svg>
+          <span
+            style={{
+              display: 'flex',
+              fontSize: 22,
+              fontWeight: 700,
+              letterSpacing: 1.5,
+              color: FG,
+              textTransform: 'uppercase',
+            }}
+          >
+            Climato
+          </span>
+          <span
+            style={{
+              display: 'flex',
+              fontFamily: 'monospace',
+              fontSize: 14,
+              letterSpacing: 2.5,
+              color: MUTED,
+              textTransform: 'uppercase',
+              marginLeft: 6,
+            }}
+          >
+            · Climate Comparison
+          </span>
         </div>
 
-        {/* City face-off — fills the middle */}
+        {/* Stacked face-off — each name owns its own row so long names
+            (e.g. "Vladivostok") never collide with the "vs" separator. */}
         <div
           style={{
             display: 'flex',
+            flexDirection: 'column',
             flex: 1,
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            marginTop: 24,
-            marginBottom: 24,
-            gap: 24,
+            justifyContent: 'center',
+            marginTop: 16,
+            marginBottom: 16,
           }}
         >
-          <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span style={{
               fontSize: nameFontSize,
               fontWeight: 700,
               color: CITY_A_COLOR,
-              letterSpacing: -3,
-              lineHeight: 0.95,
+              letterSpacing: -4,
+              lineHeight: 0.92,
               textTransform: 'uppercase',
               display: 'flex',
             }}>
@@ -267,7 +301,9 @@ async function renderCompareOg(searchParams: URLSearchParams): Promise<Response>
               <span style={{
                 fontSize: 22,
                 color: MUTED,
-                marginTop: 14,
+                marginTop: 6,
+                letterSpacing: 1.5,
+                textTransform: 'uppercase',
                 display: 'flex',
               }}>
                 {aCountry}
@@ -277,24 +313,24 @@ async function renderCompareOg(searchParams: URLSearchParams): Promise<Response>
 
           <div style={{
             display: 'flex',
-            fontSize: 56,
-            fontWeight: 400,
+            fontFamily: 'monospace',
+            fontSize: 18,
+            letterSpacing: 3,
             color: MUTED,
-            letterSpacing: 2,
-            flexShrink: 0,
+            textTransform: 'uppercase',
+            margin: '14px 0',
           }}>
             vs
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', flex: 1, alignItems: 'flex-end' }}>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span style={{
               fontSize: nameFontSize,
               fontWeight: 700,
               color: CITY_B_COLOR,
-              letterSpacing: -3,
-              lineHeight: 0.95,
+              letterSpacing: -4,
+              lineHeight: 0.92,
               textTransform: 'uppercase',
-              textAlign: 'right',
               display: 'flex',
             }}>
               {bCity}
@@ -303,8 +339,9 @@ async function renderCompareOg(searchParams: URLSearchParams): Promise<Response>
               <span style={{
                 fontSize: 22,
                 color: MUTED,
-                marginTop: 14,
-                textAlign: 'right',
+                marginTop: 6,
+                letterSpacing: 1.5,
+                textTransform: 'uppercase',
                 display: 'flex',
               }}>
                 {bCountry}
