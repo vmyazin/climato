@@ -56,6 +56,26 @@ function buildOgImageUrl(selectedCity: GeoCity, city: City): string {
   return `/api/og?${params}`
 }
 
+// Build the comparison-page OG image URL. The endpoint at /api/og?compare=1
+// renders the dual-city face-off with the headline differential baked in,
+// so social shares show the actual comparison rather than the generic logo.
+function buildComparisonOgImageUrl(a: GeoCity, b: GeoCity, cityA: City, cityB: City): string {
+  const result = compareCities(cityA, cityB)
+  const tempStat = result.stats[0]   // AVG HIGH is always stats[0]
+  const params = new URLSearchParams({
+    compare: '1',
+    aCity: a.name,
+    aCountry: a.country,
+    bCity: b.name,
+    bCountry: b.country,
+    warmer: tempStat.winner,
+    // Strip the '+' and '°' from the delta string so the endpoint can parse a plain number.
+    tempDelta: tempStat.delta.replace(/[^0-9.]/g, ''),
+  })
+  if (result.overlapFormatted) params.set('overlap', result.overlapFormatted)
+  return `/api/og?${params}`
+}
+
 function setOgImage(url: string) {
   setPropMeta('og:image', url)
   setPropMeta('og:image:width', '1200')
@@ -239,8 +259,13 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
         )
       }
 
-      // Per-comparison OG image (Task 3.4) is deferred; fall back to default.
-      setOgImage(DEFAULT_OG_IMAGE)
+      // Per-comparison OG image — only when both halves are climate-resolved
+      // (otherwise we can't compute a meaningful differential to embed).
+      if (haveBothClimate) {
+        setOgImage(buildComparisonOgImageUrl(a, b, cityA, cityB))
+      } else {
+        setOgImage(DEFAULT_OG_IMAGE)
+      }
 
       const hasRealCoordsA = a.lat !== 0 || a.lon !== 0
       const hasRealCoordsB = b.lat !== 0 || b.lon !== 0
