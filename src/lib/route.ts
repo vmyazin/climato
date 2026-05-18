@@ -297,25 +297,36 @@ export function useUrlSync(): UrlSyncResult {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // Track the last city we observed so we only push when selectedCity
+  // actually changes. Comparing references (rather than a one-shot "mounted"
+  // flag) keeps this correct under React StrictMode's double-invocation.
+  const prevSelectedCity = useRef(selectedCity)
+
   useEffect(() => {
     if (skipNextPush.current) {
       skipNextPush.current = false
+      prevSelectedCity.current = selectedCity
       return
     }
-    // Comparison mode owns the URL — don't let selectedCity push over it.
-    // Read window.location directly (not a store subscription) to avoid the
-    // stale-closure race on first mount where setComparisonPair has already
-    // run synchronously inside the mount effect but the store-hook value
-    // captured in this effect's closure is from the prior render.
-    if (window.location.pathname.startsWith('/compare/')) return
+    if (prevSelectedCity.current === selectedCity) return
     // Placeholder cities (lat=0,lon=0) shouldn't drive URL changes — they
     // exist only as a first-paint stand-in until real geocoding resolves.
-    if (selectedCity.lat === 0 && selectedCity.lon === 0) return
+    if (selectedCity.lat === 0 && selectedCity.lon === 0) {
+      prevSelectedCity.current = selectedCity
+      return
+    }
+    // If we're on /compare/, the user just picked a city from the header
+    // search while viewing the comparison page. Clear the comparison pair
+    // so the single-city flow renders once the URL update lands.
+    if (window.location.pathname.startsWith('/compare/')) {
+      clearComparison()
+    }
     const { path, query } = toSlug(selectedCity)
     const target = path + query
     if (currentUrl() !== target) {
       window.history.pushState(null, '', target)
     }
+    prevSelectedCity.current = selectedCity
   }, [selectedCity])
 
   return { notFoundSlug }
