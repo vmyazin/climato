@@ -29,6 +29,18 @@
     "country": "Japan",
     "admin1": "Kanagawa"
   },
+  "2013348": {
+    "fetched_at": "2026-05-18T23:20:20.640Z",
+    "name": "Vladivostok",
+    "country": "Russia",
+    "admin1": "Primorskiy (Maritime) Kray"
+  },
+  "2019528": {
+    "fetched_at": "2026-05-18T23:20:20.640Z",
+    "name": "Nakhodka",
+    "country": "Russia",
+    "admin1": "Primorskiy (Maritime) Kray"
+  },
   "2128295": {
     "fetched_at": "2026-05-05T00:14:38.305Z",
     "name": "Sapporo",
@@ -65,6 +77,12 @@
     "country": "Germany",
     "admin1": "Saxony"
   },
+  "2988507": {
+    "fetched_at": "2026-05-18T23:20:20.640Z",
+    "name": "Paris",
+    "country": "France",
+    "admin1": "Île-de-France Region"
+  },
   "3117735": {
     "fetched_at": "2026-05-02T22:03:13.315Z",
     "name": "Madrid",
@@ -88,6 +106,18 @@
     "name": "Cape Town",
     "country": "South Africa",
     "admin1": "Western Cape"
+  },
+  "3413829": {
+    "fetched_at": "2026-05-18T23:20:20.640Z",
+    "name": "Reykjavik",
+    "country": "Iceland",
+    "admin1": "Capital Region"
+  },
+  "3453186": {
+    "fetched_at": "2026-05-18T23:20:20.640Z",
+    "name": "Ponta Grossa",
+    "country": "Brazil",
+    "admin1": "Paraná"
   },
   "3459712": {
     "fetched_at": "2026-05-18T14:08:33.613Z",
@@ -128,6 +158,12 @@
   "4930505": {
     "fetched_at": "2026-05-07T18:28:37.260Z",
     "name": "Beverly",
+    "country": "United States",
+    "admin1": "Massachusetts"
+  },
+  "4930956": {
+    "fetched_at": "2026-05-18T23:20:20.640Z",
+    "name": "Boston",
     "country": "United States",
     "admin1": "Massachusetts"
   },
