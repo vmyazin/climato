@@ -1,8 +1,28 @@
 # Comparison Pages — Implementation Plan
 
+> **Status: ✅ COMPLETE (2026-05-18)** — Verified end-to-end with Playwright at `/compare/france/paris/vs/uk/london`. See commit `ecd5543` (most recent) back through `8b55077`. Only Task 3.4 (per-comparison OG image) remains deferred per the plan's own scoping.
+
 **Goal:** Ship `/compare/{country-a}/{city-a}/vs/{country-b}/{city-b}` as a new high-SEO route on Climato. Built against the sketch findings in [.claude/skills/sketch-findings-climato/](../.claude/skills/sketch-findings-climato/).
 
 **Estimated scope:** 6 tasks, ~1 day of focused work. No backend changes (all data is derived from existing per-city Open-Meteo cache).
+
+## Implementation Commits
+
+| Wave | Task | Commit | Description |
+|------|------|--------|-------------|
+| 1 | 1.1 | `8b55077` | Routing extension — parse `/compare/{a}/vs/{b}` URLs + `toCompareSlug()` helper |
+| 1 | 1.2 | `4233dfe` | `monthlySuitability()` 0–3 bucket helper |
+| 1 | 1.3 | `c95fa60` | `compareCities()` differential helper |
+| 2 | 2.4 | `0dd3f08` | Color tokens (deep teal + warm ochre + muted olive) |
+| 2 | 2.1 | `a565821` | `<BestMonthsCalendar>` paired-heatmap-rows component |
+| 2 | 2.2 | `8ada7f5` | `<VersusDiptych>` stat-band component |
+| 2 | 2.3 | `ada5b13` | `<ComparisonPage>` assembly |
+| 3 | 3.1 | `54bb8cd` | Wiring — `comparisonStore` + `useUrlSync` + `App.tsx` |
+| 3 | 3.2 | `dd0f0cb` | SEO meta + JSON-LD (two `Dataset` nodes + `BreadcrumbList`) |
+| 3 | 3.3 | `5372fac` | Sitemap pre-generation (top 50 × 50 → 946 unique pairs) |
+| — | bugfix | `ecd5543` | URL race: persisted single-city URL was overwriting comparison route on first mount |
+
+**Build verified:** `dist/sitemap.xml` contains 7,010 URLs (1 root + 6,063 cities + 946 comparison pairs), gzip 65kB.
 
 ## URL Shape
 
