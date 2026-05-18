@@ -49,18 +49,20 @@ export function VariationA({ city, unit, chartVariant, setChartVariant, currentT
       }}>
         {/* Hero row */}
         <div style={{ marginTop: 8 }}>
-          <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: isMd ? 12 : 10, letterSpacing: 2, color: muted, marginBottom: 10 }}>
-            {city.lat >= 0 ? '+' : ''}{city.lat.toFixed(4)}°  ·  {city.lon >= 0 ? '+' : ''}{city.lon.toFixed(4)}°  ·  ELEV {city.elev}m
-            <CurrentTempBadge tempC={currentTemp?.tempC} unit={unit} fg={fg} muted={muted} accent={accent} variant="inline" />
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16, marginBottom: 10 }}>
+            <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: isMd ? 12 : 10, letterSpacing: 2, color: muted, flex: 1, minWidth: 0 }}>
+              {city.lat >= 0 ? '+' : ''}{city.lat.toFixed(4)}°  ·  {city.lon >= 0 ? '+' : ''}{city.lon.toFixed(4)}°  ·  ELEV {city.elev}m
+              <CurrentTempBadge tempC={currentTemp?.tempC} unit={unit} fg={fg} muted={muted} accent={accent} variant="inline" />
+            </div>
+            <div style={{ flexShrink: 0 }}>
+              <CompareWithPill geo={city} city={city} fg={fg} muted={muted} bg="#fff" align="right" />
+            </div>
           </div>
           <h1 style={{ margin: 0, fontSize: isMd ? 132 : 'clamp(48px, 15vw, 100px)', fontWeight: 700, lineHeight: 0.95, letterSpacing: isMd ? -4 : -2, color: fg, textTransform: 'uppercase', wordBreak: 'break-word' }}>
             {city.name}
           </h1>
           <div style={{ fontSize: isMd ? 28 : 18, fontWeight: 400, letterSpacing: -0.4, color: muted, marginTop: 4 }}>
             {city.country}{city.admin1 ? ` · ${city.admin1}` : ''}
-          </div>
-          <div style={{ marginTop: 16 }}>
-            <CompareWithPill geo={city} city={city} fg={fg} muted={muted} bg="#fff" />
           </div>
         </div>
 

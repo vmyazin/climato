@@ -16,10 +16,21 @@ interface Props {
   fg?:    string
   muted?: string
   bg?:    string
+  // Which edge the expanded panel anchors against the pill. Use 'right'
+  // when the pill itself sits at the right edge of its container so the
+  // panel doesn't overflow the viewport. Defaults to 'left'.
+  align?: 'left' | 'right'
 }
 
-export function CompareWithPill({ geo, city, fg = '#111', muted = '#85847d', bg = '#ffffff' }: Props) {
+// Approximate panel width including padding/border — used to decide
+// whether the panel would overflow the viewport if anchored to the
+// caller's preferred edge.
+const PANEL_APPROX_WIDTH = 380
+const VIEWPORT_PADDING = 16
+
+export function CompareWithPill({ geo, city, fg = '#111', muted = '#85847d', bg = '#ffffff', align = 'left' }: Props) {
   const [expanded, setExpanded] = React.useState(false)
+  const [effectiveAlign, setEffectiveAlign] = React.useState<'left' | 'right'>(align)
   const collapseTimer = React.useRef<number | null>(null)
   const containerRef = React.useRef<HTMLDivElement>(null)
 
@@ -28,11 +39,28 @@ export function CompareWithPill({ geo, city, fg = '#111', muted = '#85847d', bg 
   // Don't show the pill for placeholder cities (lat=0/lon=0 first paint).
   if (!isResolvedCity(geo) || (geo.lat === 0 && geo.lon === 0)) return null
 
+  // Pick the alignment that keeps the panel inside the viewport. The
+  // caller's `align` prop is treated as a preference, overridden only
+  // when the preferred edge would overflow. Measured against the pill's
+  // current bounding rect, so this re-runs whenever the user expands
+  // (and naturally handles resize since expansion re-measures).
+  const decideAlignment = (): 'left' | 'right' => {
+    const container = containerRef.current
+    if (!container) return align
+    const rect = container.getBoundingClientRect()
+    const vw = window.innerWidth
+    const fitsLeft = rect.left + PANEL_APPROX_WIDTH + VIEWPORT_PADDING <= vw
+    const fitsRight = rect.right - PANEL_APPROX_WIDTH - VIEWPORT_PADDING >= 0
+    if (align === 'left') return fitsLeft ? 'left' : (fitsRight ? 'right' : 'left')
+    return fitsRight ? 'right' : (fitsLeft ? 'left' : 'right')
+  }
+
   const expand = () => {
     if (collapseTimer.current) {
       window.clearTimeout(collapseTimer.current)
       collapseTimer.current = null
     }
+    setEffectiveAlign(decideAlignment())
     setExpanded(true)
   }
 
@@ -131,6 +159,7 @@ export function CompareWithPill({ geo, city, fg = '#111', muted = '#85847d', bg 
           fg={fg}
           muted={muted}
           bg={bg}
+          align={effectiveAlign}
           suggestions={suggestions}
           onPick={navigateToCompare}
         />
@@ -146,11 +175,12 @@ interface ExpandedPanelProps {
   fg:        string
   muted:     string
   bg:        string
+  align:     'left' | 'right'
   suggestions: ReturnType<typeof useCompareSuggestions>
   onPick:    (city: GeoCity) => void
 }
 
-function ExpandedPanel({ geo, fg, muted, bg, suggestions, onPick }: ExpandedPanelProps) {
+function ExpandedPanel({ geo, fg, muted, bg, align, suggestions, onPick }: ExpandedPanelProps) {
   const { nearby, climateSimilar, popular, combined, isLoading } = suggestions
 
   // Source-of-suggestion lookup so chips can carry a tiny mono tag.
@@ -165,14 +195,21 @@ function ExpandedPanel({ geo, fg, muted, bg, suggestions, onPick }: ExpandedPane
   return (
     <div
       style={{
-        marginTop: 8,
+        // Float over the content below the pill instead of pushing it
+        // down — keeps the page layout stable when the panel opens/closes.
+        position: 'absolute',
+        top: 'calc(100% + 6px)',
+        ...(align === 'right' ? { right: 0 } : { left: 0 }),
+        zIndex: 50,
+        minWidth: 340,
+        maxWidth: 560,
         padding: 14,
         border: `1px solid ${fg}`,
         background: bg,
+        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.08)',
         display: 'flex',
         flexDirection: 'column',
         gap: 12,
-        maxWidth: 560,
       }}
     >
       <div
