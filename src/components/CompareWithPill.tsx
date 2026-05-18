@@ -1,0 +1,294 @@
+import React from 'react'
+import type { GeoCity, City } from '../data/cities'
+import { useCompareSuggestions } from '../hooks/useCompareSuggestions'
+import { toCompareSlug, notifyUrlChange } from '../lib/route'
+import { isResolvedCity } from '../lib/slug'
+import { CitySearch } from './CitySearch'
+import { OVERLAP_COLOR } from '../lib/colors'
+
+const COLLAPSE_DELAY_MS = 300
+
+interface Props {
+  geo:  GeoCity
+  city: City | undefined
+  // Optional overrides for callers that want pill chrome to match a
+  // specific variation's hero palette. Defaults are tuned for cream bg.
+  fg?:    string
+  muted?: string
+  bg?:    string
+}
+
+export function CompareWithPill({ geo, city, fg = '#111', muted = '#85847d', bg = '#ffffff' }: Props) {
+  const [expanded, setExpanded] = React.useState(false)
+  const collapseTimer = React.useRef<number | null>(null)
+  const containerRef = React.useRef<HTMLDivElement>(null)
+
+  const suggestions = useCompareSuggestions({ geo, city })
+
+  // Don't show the pill for placeholder cities (lat=0/lon=0 first paint).
+  if (!isResolvedCity(geo) || (geo.lat === 0 && geo.lon === 0)) return null
+
+  const expand = () => {
+    if (collapseTimer.current) {
+      window.clearTimeout(collapseTimer.current)
+      collapseTimer.current = null
+    }
+    setExpanded(true)
+  }
+
+  const scheduleCollapse = () => {
+    if (collapseTimer.current) window.clearTimeout(collapseTimer.current)
+    collapseTimer.current = window.setTimeout(() => setExpanded(false), COLLAPSE_DELAY_MS)
+  }
+
+  // Tap outside (mobile) → collapse
+  React.useEffect(() => {
+    if (!expanded) return
+    function onDocPointer(e: PointerEvent) {
+      const root = containerRef.current
+      if (!root) return
+      if (e.target instanceof Node && !root.contains(e.target)) {
+        setExpanded(false)
+      }
+    }
+    document.addEventListener('pointerdown', onDocPointer)
+    return () => document.removeEventListener('pointerdown', onDocPointer)
+  }, [expanded])
+
+  // Escape collapses + refocuses pill
+  React.useEffect(() => {
+    if (!expanded) return
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') setExpanded(false)
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [expanded])
+
+  const navigateToCompare = (other: GeoCity) => {
+    if (other.id === geo.id) return
+    const { path } = toCompareSlug(geo, other)
+    window.history.pushState(null, '', path)
+    notifyUrlChange()
+    setExpanded(false)
+  }
+
+  return (
+    <div
+      ref={containerRef}
+      onMouseEnter={expand}
+      onMouseLeave={scheduleCollapse}
+      style={{
+        display: 'inline-flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        position: 'relative',
+      }}
+    >
+      {/* Resting pill */}
+      <button
+        type="button"
+        onClick={() => setExpanded(e => !e)}
+        onFocus={expand}
+        style={{
+          fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+          fontSize: 11,
+          letterSpacing: '1.5px',
+          textTransform: 'uppercase',
+          color: fg,
+          background: bg,
+          border: `1px solid ${fg}`,
+          padding: '7px 12px',
+          cursor: 'pointer',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 8,
+          transition: 'background 0.15s, color 0.15s',
+          minHeight: 32,
+        }}
+        onMouseDown={(e) => {
+          e.currentTarget.style.background = fg
+          e.currentTarget.style.color = bg
+        }}
+        onMouseUp={(e) => {
+          e.currentTarget.style.background = bg
+          e.currentTarget.style.color = fg
+        }}
+        aria-expanded={expanded}
+        aria-label="Compare this city with another"
+      >
+        <span aria-hidden="true">↔</span>
+        <span>Compare with …</span>
+      </button>
+
+      {expanded && (
+        <ExpandedPanel
+          geo={geo}
+          fg={fg}
+          muted={muted}
+          bg={bg}
+          suggestions={suggestions}
+          onPick={navigateToCompare}
+        />
+      )}
+    </div>
+  )
+}
+
+// ───────────────────────────────────────────────────────────────────
+
+interface ExpandedPanelProps {
+  geo:       GeoCity
+  fg:        string
+  muted:     string
+  bg:        string
+  suggestions: ReturnType<typeof useCompareSuggestions>
+  onPick:    (city: GeoCity) => void
+}
+
+function ExpandedPanel({ geo, fg, muted, bg, suggestions, onPick }: ExpandedPanelProps) {
+  const { nearby, climateSimilar, popular, combined, isLoading } = suggestions
+
+  // Source-of-suggestion lookup so chips can carry a tiny mono tag.
+  const sourceById = React.useMemo(() => {
+    const map = new Map<string, { tag: string; tint: string }>()
+    for (const c of nearby) map.set(c.id, { tag: 'NEAR', tint: muted })
+    for (const c of climateSimilar) if (!map.has(c.id)) map.set(c.id, { tag: 'LIKE', tint: OVERLAP_COLOR })
+    for (const c of popular) if (!map.has(c.id)) map.set(c.id, { tag: 'POP', tint: muted })
+    return map
+  }, [nearby, climateSimilar, popular, muted])
+
+  return (
+    <div
+      style={{
+        marginTop: 8,
+        padding: 14,
+        border: `1px solid ${fg}`,
+        background: bg,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 12,
+        maxWidth: 560,
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+          fontSize: 10,
+          letterSpacing: '1.5px',
+          textTransform: 'uppercase',
+          color: muted,
+        }}
+      >
+        Compare {geo.name} with …
+      </div>
+
+      {combined.length === 0 && !isLoading && (
+        <div style={{ fontSize: 13, color: muted }}>
+          No suggested comparisons yet — try the search below.
+        </div>
+      )}
+
+      {(combined.length > 0 || isLoading) && (
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 6,
+          }}
+        >
+          {isLoading && combined.length === 0
+            ? Array.from({ length: 6 }).map((_, i) => (
+                <Chip key={`skel-${i}`} fg={fg} muted={muted} bg={bg} loading />
+              ))
+            : combined.map(c => {
+                const src = sourceById.get(c.id)
+                return (
+                  <Chip
+                    key={c.id}
+                    label={c.name}
+                    sourceTag={src?.tag}
+                    sourceTint={src?.tint ?? muted}
+                    fg={fg}
+                    muted={muted}
+                    bg={bg}
+                    onClick={() => onPick(c)}
+                  />
+                )
+              })}
+        </div>
+      )}
+
+      <CitySearch
+        value={geo}
+        onPick={onPick}
+        fg={fg}
+        muted={muted}
+        bg={bg}
+        compact
+      />
+    </div>
+  )
+}
+
+// ───────────────────────────────────────────────────────────────────
+
+interface ChipProps {
+  label?:       string
+  sourceTag?:   string
+  sourceTint?:  string
+  fg:           string
+  muted:        string
+  bg:           string
+  loading?:     boolean
+  onClick?:     () => void
+}
+
+function Chip({ label, sourceTag, sourceTint, fg, muted, bg, loading, onClick }: ChipProps) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={loading}
+      style={{
+        fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
+        fontSize: 13,
+        color: fg,
+        background: bg,
+        border: `1px solid ${fg}`,
+        padding: '6px 10px',
+        cursor: loading ? 'wait' : 'pointer',
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 6,
+        transition: 'background 0.15s, color 0.15s',
+        minHeight: 28,
+        ...(loading ? { color: muted, borderColor: muted } : {}),
+      }}
+      onMouseDown={(e) => {
+        if (loading) return
+        e.currentTarget.style.background = fg
+        e.currentTarget.style.color = bg
+      }}
+      onMouseUp={(e) => {
+        if (loading) return
+        e.currentTarget.style.background = bg
+        e.currentTarget.style.color = fg
+      }}
+    >
+      {loading ? '…' : label}
+      {sourceTag && !loading ? (
+        <span
+          style={{
+            fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+            fontSize: 9,
+            letterSpacing: '1px',
+            color: sourceTint,
+          }}
+        >
+          {sourceTag}
+        </span>
+      ) : null}
+    </button>
+  )
+}
