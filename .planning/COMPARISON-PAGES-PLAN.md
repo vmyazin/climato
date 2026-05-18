@@ -1,6 +1,6 @@
 # Comparison Pages — Implementation Plan
 
-> **Status: ✅ COMPLETE (2026-05-18)** — Verified end-to-end with Playwright at `/compare/france/paris/vs/uk/london`. See commit `ecd5543` (most recent) back through `8b55077`. Only Task 3.4 (per-comparison OG image) remains deferred per the plan's own scoping.
+> **Status: ✅ COMPLETE (2026-05-18)** — All tasks (1.1 through 3.4) shipped. Verified end-to-end with Playwright at `/compare/france/paris/vs/uk/london`. See commits `6759fe8` (most recent) back through `8b55077`.
 
 **Goal:** Ship `/compare/{country-a}/{city-a}/vs/{country-b}/{city-b}` as a new high-SEO route on Climato. Built against the sketch findings in [.claude/skills/sketch-findings-climato/](../.claude/skills/sketch-findings-climato/).
 
@@ -21,6 +21,7 @@
 | 3 | 3.2 | `dd0f0cb` | SEO meta + JSON-LD (two `Dataset` nodes + `BreadcrumbList`) |
 | 3 | 3.3 | `5372fac` | Sitemap pre-generation (top 50 × 50 → 946 unique pairs) |
 | — | bugfix | `ecd5543` | URL race: persisted single-city URL was overwriting comparison route on first mount |
+| 3 | 3.4 | `6759fe8` | Per-comparison OG image — `/api/og?compare=1` + middleware bot meta + comparison-aware OG URL in `useDocumentMeta` |
 
 **Build verified:** `dist/sitemap.xml` contains 7,010 URLs (1 root + 6,063 cities + 946 comparison pairs), gzip 65kB.
 
