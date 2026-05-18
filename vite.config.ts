@@ -141,6 +141,34 @@ function seoFiles(): Plugin {
         })
       }
 
+      // Comparison pages: pre-generate the top 50 × 50 = 1225 unique pairs
+      // so Google can crawl them on first index. Lower priority (0.5) than
+      // single-city pages since they're a derivative surface. Uncatalogued
+      // pairs fall back to on-demand generation (the SPA handles any pair
+      // at runtime, just not in the sitemap).
+      const TOP_N_FOR_COMPARISON = 50
+      const top = [...items]
+        .sort((a, b) =>
+          (b.isCurated ? 1 : 0) - (a.isCurated ? 1 : 0) || b.population - a.population
+        )
+        .slice(0, TOP_N_FOR_COMPARISON)
+
+      let comparisonCount = 0
+      for (let i = 0; i < top.length; i++) {
+        for (let j = i + 1; j < top.length; j++) {
+          const aPath = paths.get(top[i])
+          const bPath = paths.get(top[j])
+          if (!aPath || !bPath) continue
+          urls.push({
+            loc: `${siteUrl}/compare${aPath}/vs${bPath}`,
+            priority: '0.5',
+            changefreq: 'monthly',
+            lastmod: buildDate,
+          })
+          comparisonCount++
+        }
+      }
+
       const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
@@ -164,7 +192,7 @@ Sitemap: ${siteUrl}/sitemap.xml
 
       this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: sitemap })
       this.emitFile({ type: 'asset', fileName: 'robots.txt', source: robots })
-      console.log(`[seo] sitemap.xml: ${urls.length} URLs (1 root + ${urls.length - 1} cities)`)
+      console.log(`[seo] sitemap.xml: ${urls.length} URLs (1 root + ${urls.length - 1 - comparisonCount} cities + ${comparisonCount} comparison pairs)`)
 
       // Bake committed climate normals into the bundle. Cache hits are served
       // from /normals/{id}.json by the CDN; the API route is only invoked on
