@@ -88,7 +88,11 @@ export function CompareWithPill({ geo, city, fg = '#111', muted = '#85847d', bg 
       {/* Resting pill */}
       <button
         type="button"
-        onClick={() => setExpanded(e => !e)}
+        // Click always opens — never toggles closed (mouseEnter has usually
+        // already opened it, so a toggle would immediately close). The
+        // expanded panel is dismissed via mouse-leave grace, tap-outside,
+        // or the Escape key — not a second click on the pill itself.
+        onClick={expand}
         onFocus={expand}
         style={{
           fontFamily: "'JetBrains Mono', ui-monospace, monospace",

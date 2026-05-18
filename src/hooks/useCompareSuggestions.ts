@@ -68,7 +68,17 @@ function signatureDistance(a: ClimateSignature, b: ClimateSignature): number {
   return Math.sqrt(dT * dT + dP * dP + dS * dS)
 }
 
-function pickClimateSimilar(currentCity: City, alreadyExcluded: Set<string>): GeoCity[] {
+// Returns the seed-CITIES entry whose name matches the current city, if any.
+// Used to bridge the gap between runtime geocoded ids (numeric, from
+// Open-Meteo) and seed ids (slug-like tokens, e.g. 'paris'). The two don't
+// match — both refer to the same place — so all comparison-bucket logic
+// needs name-based equivalence.
+function seedMatchOf(currentName: string): City | undefined {
+  const lc = currentName.toLowerCase()
+  return CITIES.find(c => c.name.toLowerCase() === lc)
+}
+
+function pickClimateSimilar(currentCity: City, alreadyExcluded: Set<string>, currentNameLc: string): GeoCity[] {
   const currentSig = signatureOf(currentCity)
   const currentType = classifyClimate(currentCity)
 
@@ -79,6 +89,7 @@ function pickClimateSimilar(currentCity: City, alreadyExcluded: Set<string>): Ge
   const scored: Scored[] = []
   for (const candidate of CITIES) {
     if (candidate.id === currentCity.id) continue
+    if (candidate.name.toLowerCase() === currentNameLc) continue  // name-equiv guard
     if (alreadyExcluded.has(candidate.id)) continue
     const distKm = haversineKm(currentCity.lat, currentCity.lon, candidate.lat, candidate.lon)
     if (distKm < CLIMATE_FAR_MIN_KM) continue
@@ -99,13 +110,14 @@ function pickClimateSimilar(currentCity: City, alreadyExcluded: Set<string>): Ge
   return scored.slice(0, 2).map(s => s.city)
 }
 
-function pickPopular(currentCityId: string, alreadyExcluded: Set<string>): GeoCity[] {
-  const partnerIds = popularPartnersFor(currentCityId)
+function pickPopular(lookupKey: string, currentNameLc: string, alreadyExcluded: Set<string>): GeoCity[] {
+  const partnerIds = popularPartnersFor(lookupKey)
   const out: GeoCity[] = []
   for (const id of partnerIds) {
     if (alreadyExcluded.has(id)) continue
     const seed = CITIES.find(c => c.id === id)
     if (!seed) continue
+    if (seed.name.toLowerCase() === currentNameLc) continue  // name-equiv guard
     out.push(seed)
     if (out.length >= 2) break
   }
@@ -150,6 +162,14 @@ export function useCompareSuggestions({ geo, city }: Args): CompareSuggestions {
       return { nearby: [], climateSimilar: [], popular: [], combined: [], isLoading: false }
     }
 
+    // Bridge runtime-geocoded id to seed-CITIES id by name. If the current
+    // city matches a seed (Paris/Tokyo/etc.), prefer the seed id for the
+    // POPULAR_PAIRS lookup so we hit the curated entry instead of falling
+    // back to GLOBAL_TOP_PAIRS.
+    const currentNameLc = geo.name.toLowerCase()
+    const seedMatch = seedMatchOf(geo.name)
+    const popularLookupKey = seedMatch?.id ?? geo.id
+
     // Source A — nearby (top 2 with distance >= NEARBY_MIN_KM)
     const nearbyAll = nearbyQ.data ?? []
     const nearby = nearbyAll
@@ -158,13 +178,14 @@ export function useCompareSuggestions({ geo, city }: Args): CompareSuggestions {
       .map(nearbyToGeoCity)
 
     const excluded = new Set<string>([geo.id, ...nearby.map(c => c.id)])
+    if (seedMatch) excluded.add(seedMatch.id)
 
     // Source B — climate-similar (only when climate is loaded)
-    const climateSimilar = city ? pickClimateSimilar(city, excluded) : []
+    const climateSimilar = city ? pickClimateSimilar(city, excluded, currentNameLc) : []
     for (const c of climateSimilar) excluded.add(c.id)
 
     // Source C — popular
-    const popular = pickPopular(geo.id, excluded)
+    const popular = pickPopular(popularLookupKey, currentNameLc, excluded)
 
     const combined = combineSuggestions(nearby, climateSimilar, popular, geo.id)
 
