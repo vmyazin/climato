@@ -34,7 +34,7 @@ When a user is reading about a single city, give them a low-friction, in-place w
 |------|----------------|
 | `src/components/CompareWithPill.tsx` | Resting pill + expanded state container + selection handler |
 | `src/hooks/useCompareSuggestions.ts` | Returns the 6 picks (2 nearby + 2 climate-similar + 2 popular) |
-| `data/popular-compare-pairs.ts` | Editorial-curated map of anchor cities → their popular comparison partners |
+| `src/data/popular-compare-pairs.ts` | Editorial-curated map of anchor cities → their popular comparison partners |
 
 ### Component placement
 
@@ -174,12 +174,13 @@ function onSelectComparePartner(other: GeoCity) {
   if (other.id === currentCity.id) return // defensive — should never happen
   const { path } = toCompareSlug(currentCity, other)
   window.history.pushState(null, '', path)
-  // useUrlSync's popstate listener picks up the change and triggers
-  // comparison-store population + ComparisonPage render
+  // pushState does NOT fire popstate natively, so useUrlSync needs an
+  // explicit nudge — see Open Implementation Question #1 for the resolution.
+  triggerUrlSyncResolve()
 }
 ```
 
-(Note: `window.history.pushState` doesn't fire `popstate` natively, so the handler also needs to manually trigger the resolve. Implementation detail — likely a `useUrlSync.refresh()` exposed, or a custom event. To be resolved during planning.)
+The `triggerUrlSyncResolve()` mechanism is unresolved (Open Implementation Question #1 below). Candidate approaches: expose a `useUrlSync.refresh()` callback, dispatch a custom DOM event, or just re-read the URL via a polling effect. Picked during planning.
 
 ### Search input
 
@@ -245,7 +246,7 @@ These were discussed and deferred:
 |------|--------|
 | `src/components/CompareWithPill.tsx` | NEW |
 | `src/hooks/useCompareSuggestions.ts` | NEW |
-| `data/popular-compare-pairs.ts` | NEW |
+| `src/data/popular-compare-pairs.ts` | NEW (matches `src/data/cities.ts` convention for editorial seed data) |
 | `src/components/VariationA.tsx` | Add `<CompareWithPill>` to the hero block |
 | `src/components/VariationB.tsx` | Add `<CompareWithPill>` to the hero block |
 | `src/components/VariationC.tsx` | Add `<CompareWithPill>` to the hero block |
