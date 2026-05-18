@@ -43,16 +43,31 @@ export interface CityUrl {
   query: string
 }
 
-export function toSlug(city: GeoCity): CityUrl {
+function citySegments(city: GeoCity): string[] {
   const cSlug = countrySlug(city.country)
   const citySlug = slugify(city.name)
   const a1Slug = city.admin1 ? slugify(city.admin1) : null
-  const segments = a1Slug && a1Slug !== citySlug
+  return a1Slug && a1Slug !== citySlug
     ? [cSlug, a1Slug, citySlug]
     : [cSlug, citySlug]
+}
+
+export function toSlug(city: GeoCity): CityUrl {
   return {
-    path: '/' + segments.join('/'),
+    path: '/' + citySegments(city).join('/'),
     query: `?@${city.lat.toFixed(2)},${city.lon.toFixed(2)}`,
+  }
+}
+
+// Build the canonical comparison URL for a pair of cities. No coord query —
+// both halves are resolved by slug, so the lat/lon hint that single-city
+// URLs carry would be redundant.
+export function toCompareSlug(a: GeoCity, b: GeoCity): CityUrl {
+  const aSegs = citySegments(a)
+  const bSegs = citySegments(b)
+  return {
+    path: '/compare/' + aSegs.join('/') + '/vs/' + bSegs.join('/'),
+    query: '',
   }
 }
 
