@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-18
 **Topic:** Hero-area UI affordance that lets a user on a single-city page jump to a `/compare/{a}/vs/{b}` comparison page.
-**Status:** Designed, awaiting plan.
+**Status:** ✅ Shipped (2026-05-18). 11 atomic commits from `8aceccd` (popular-pairs data) through `c394748` (a11y polish). End-to-end verified at desktop + mobile across all three variations, seed + long-tail source cities, chip-click + search-typeahead navigation, and browser back-navigation.
 
 ## Context
 
@@ -234,11 +234,15 @@ These were discussed and deferred:
   4. Clicks one chip
   5. Verifies the URL changes to `/compare/france/paris/vs/...` and `<ComparisonPage>` renders
 
-## Open implementation questions (resolve during planning)
+## Open implementation questions — RESOLVED
 
-1. **`history.pushState` doesn't fire `popstate`.** The cleanest path is to expose a `useUrlSync.refresh()` (or similar) that the pill calls after pushing the URL. Alternative: dispatch a custom event that `useUrlSync` listens for. Picked during planning.
-2. **Catalog access from the browser.** The catalog (`data/cities.tsv`) is currently consumed by `vite.config.ts` for sitemap generation and by `api/_lib/catalog.ts` for the `/api/nearby` endpoint. The browser needs access too for climate-similarity scoring — either bundle a JSON version, fetch it via `/normals/...` style endpoint, or compute similarity server-side via a new `/api/compare-suggest` endpoint. Picked during planning.
-3. **Where exactly the pill sits in each variation's hero.** A/B/C have different hero structures. May need slightly different placements per variation. Resolved by inspection during planning + a sketch pass if needed.
+1. **`history.pushState` doesn't fire `popstate`.** ✅ Resolved with a custom event. `src/lib/route.ts` exports `notifyUrlChange()` which dispatches a `climato:urlchange` event; `useUrlSync` listens for both `popstate` and the custom event. `<CompareWithPill>` calls `notifyUrlChange()` after each `pushState`.
+2. **Catalog access from the browser.** ✅ Resolved by scoping climate-similarity to the existing seed-CITIES pool (`src/data/cities.ts`, 18 cities) for v1. The seed pool is global and diverse enough for reasonable matches; catalog-wide similarity is deferred until traffic data suggests it's worth the bundle-size cost.
+3. **Where exactly the pill sits in each variation's hero.** ✅ Resolved through iterative visual feedback during implementation:
+   - VariationA: top-right of the coords/temp row (flexbox with `justify-content: space-between`), `align="right"`
+   - VariationB: inside the absolute-positioned HIGH/LOW overlay on the desktop hero (with `pointerEvents:auto` to re-enable interaction); same in the mobile flex column. `align="right"`
+   - VariationC: inside the editorial right column under the `CurrentTempBadge`, default `align="left"`
+   - Viewport-aware alignment overrides the explicit `align` prop if the panel would overflow.
 
 ## Files we'll touch (preview)
 
