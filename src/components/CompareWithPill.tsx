@@ -93,6 +93,21 @@ export function CompareWithPill({ geo, city, fg = '#111', muted = '#85847d', bg 
     return () => document.removeEventListener('keydown', onKey)
   }, [expanded])
 
+  // Re-evaluate alignment on window resize while the panel is open. Without
+  // this, a panel that was right-anchored at expand time might end up
+  // overflowing the left edge after the user makes the window narrower.
+  React.useEffect(() => {
+    if (!expanded) return
+    function onResize() {
+      setEffectiveAlign(decideAlignment())
+    }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+    // decideAlignment closes over `align` (a prop) — the effect re-binds
+    // whenever align changes, which is exactly what we want.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [expanded, align])
+
   const navigateToCompare = (other: GeoCity) => {
     if (other.id === geo.id) return
     const { path } = toCompareSlug(geo, other)
