@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sketch 002 — Best-Months Calendar (Paris vs London)</title>
+<link rel="stylesheet" href="../themes/default.css">
+<style>
+  body { padding-top: 56px; padding-bottom: 80px; }
+
+  /* ============ Variant tabs ============ */
+  #variant-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9998;
+    background: #fff; border-bottom: 1px solid var(--color-border);
+    padding: 10px 16px; display: flex; gap: 8px; align-items: center;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+  }
+  .variant-tab {
+    padding: 8px 14px; border: 1px solid var(--color-border);
+    background: transparent; color: var(--color-text);
+    cursor: pointer; font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 1.5px; text-transform: uppercase; transition: all 0.15s;
+  }
+  .variant-tab:hover { background: rgba(0,0,0,0.04); }
+  .variant-tab.active { background: var(--color-text); color: var(--color-bg); }
+
+  /* ============ Page chrome ============ */
+  .page { max-width: 1280px; margin: 0 auto; padding: 32px; }
+  .variant { display: none; }
+  .variant.active { display: block; }
+
+  .v-head { margin-bottom: 28px; }
+  .v-head h1 {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 56px; line-height: 0.95; letter-spacing: -0.04em;
+    margin: 0; text-transform: uppercase;
+  }
+  .v-head .sub { font-size: 18px; color: var(--color-text-muted); margin-top: 8px; max-width: 720px; }
+
+  /* Two presentation contexts: sidebar (narrow) + full-width (wide) */
+  .presentations {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .context-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    padding: 20px;
+  }
+  .context-card .ctx-label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px;
+    color: var(--color-text-muted); text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-border-soft);
+  }
+
+  /* Notes panel below the two contexts */
+  .notes {
+    margin-top: 32px;
+    padding: 24px;
+    background: rgba(0,0,0,0.02);
+    border-left: 3px solid var(--color-text);
+  }
+  .notes h3 {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase; margin: 0 0 12px 0;
+  }
+  .notes ul { margin: 0; padding-left: 18px; }
+  .notes li { line-height: 1.5; margin-bottom: 6px; }
+
+  /* ============ City colors ============ */
+  .city-a { color: var(--color-city-a); }
+  .city-b { color: var(--color-city-b); }
+  .a-fill { background: var(--color-city-a); }
+  .b-fill { background: var(--color-city-b); }
+  .both-fill { background: var(--color-overlap); }
+
+  /* Shared legend */
+  .legend {
+    display: flex; gap: 14px; flex-wrap: wrap; margin-top: 12px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    color: var(--color-text-muted); text-transform: uppercase;
+  }
+  .legend .dot { display: inline-block; width: 10px; height: 10px; vertical-align: middle; margin-right: 5px; }
+
+  /* ============================================================
+     VARIANT A — Paired Heatmap Rows
+     The version currently in sketch 001 C: 3 rows of 12 cells.
+  ============================================================ */
+  .heatmap {
+    display: grid;
+    grid-template-columns: 44px repeat(12, 1fr);
+    border: 1px solid var(--color-border);
+    background: #fafaf7;
+  }
+  .heatmap .hm-row-label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; display: flex; align-items: center; justify-content: center;
+    color: var(--color-text-muted);
+    border-right: 1px solid var(--color-border);
+    background: #fafaf7;
+  }
+  .heatmap .hm-row-label.par { color: var(--color-city-a); font-weight: 600; }
+  .heatmap .hm-row-label.lon { color: var(--color-city-b); font-weight: 600; }
+  .heatmap .hm-row-label.both { background: rgba(90, 98, 64, 0.08); color: var(--color-overlap); font-weight: 600; }
+
+  .heatmap .hm-month {
+    font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px;
+    color: var(--color-text-muted); text-transform: uppercase;
+    padding: 7px 0; text-align: center;
+    border-right: 1px solid var(--color-border-soft);
+    border-bottom: 1px solid var(--color-border);
+    background: #fafaf7;
+  }
+  .heatmap .hm-month:last-child { border-right: none; }
+
+  .heatmap .hm-cell {
+    height: 34px;
+    border-right: 1px solid var(--color-border-soft);
+    border-bottom: 1px solid var(--color-border-soft);
+    transition: filter 0.15s; cursor: pointer;
+  }
+  .heatmap .hm-cell:last-child { border-right: none; }
+  .heatmap .hm-cell:hover { filter: brightness(0.92); }
+
+  /* Suitability gradient — same per-row, regardless of city */
+  .hm-cell.s0 { background: transparent; }
+  .hm-cell.s1 { background: rgba(207, 154, 58, 0.12); }
+  .hm-cell.s2 { background: rgba(207, 154, 58, 0.32); }
+  .hm-cell.s3 { background: rgba(74, 124, 58, 0.38); }
+  .hm-cell.both { background: var(--color-overlap); }
+
+  /* ============================================================
+     VARIANT B — Diverging Bars (tug-of-war / pulse)
+     Each month has a PAR bar growing UP from center, and a LON
+     bar growing DOWN. Score = bar height. Where both peak, the
+     center axis shows an overlap marker.
+  ============================================================ */
+  .diverge {
+    border: 1px solid var(--color-border); background: #fff;
+    padding: 14px 16px 12px 16px;
+  }
+  .diverge-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 4px;
+    height: 200px;
+    position: relative;
+  }
+  .div-col {
+    display: flex; flex-direction: column;
+    height: 100%; align-items: stretch; justify-content: center;
+    position: relative;
+  }
+  /* Center divider line */
+  .div-col::before {
+    content: ''; position: absolute;
+    top: 50%; left: -2px; right: -2px; height: 2px;
+    background: var(--color-text);
+    z-index: 2;
+  }
+  .div-col .above, .div-col .below {
+    display: flex; align-items: flex-end; justify-content: center;
+    height: 50%; position: relative;
+  }
+  .div-col .below { align-items: flex-start; }
+  .div-col .bar-a, .div-col .bar-b {
+    width: 70%; min-height: 0;
+    transition: filter 0.15s; cursor: pointer;
+  }
+  .div-col .bar-a { background: var(--color-city-a); }
+  .div-col .bar-b { background: var(--color-city-b); }
+  .div-col .bar-a:hover, .div-col .bar-b:hover { filter: brightness(0.85); }
+
+  .div-col .overlap-mark {
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 10px; height: 10px;
+    background: var(--color-overlap);
+    border: 1.5px solid #fff;
+    z-index: 3;
+    border-radius: 50%;
+  }
+
+  .diverge-months {
+    display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 4px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    color: var(--color-text-muted); text-transform: uppercase;
+    margin-top: 8px;
+  }
+  .diverge-months span { text-align: center; }
+
+  .diverge-labels {
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .diverge-labels .top-label { color: var(--color-city-a); font-weight: 600; }
+  .diverge-labels .bot-label { color: var(--color-city-b); font-weight: 600; }
+
+  /* ============================================================
+     VARIANT C — Suitability Curves (additive area chart)
+     SVG paths: two filled areas (PAR teal, LON ochre), overlap
+     reads as a darker stacked area where both are at peak.
+  ============================================================ */
+  .curves {
+    border: 1px solid var(--color-border); background: #fff;
+    padding: 14px 16px;
+  }
+  .curves svg {
+    width: 100%; height: 180px;
+    display: block;
+  }
+  .curves-x {
+    display: grid; grid-template-columns: repeat(12, 1fr);
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    color: var(--color-text-muted); text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .curves-x span { text-align: center; }
+  .curves-y {
+    position: relative; height: 0;
+    font-family: var(--font-mono); font-size: 8px; letter-spacing: 1px;
+    color: var(--color-text-muted); text-transform: uppercase;
+  }
+  /* y-tick labels positioned absolutely beside curves */
+  .curve-overlap-flag {
+    display: flex; gap: 8px; align-items: center;
+    margin-top: 10px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    color: var(--color-overlap); text-transform: uppercase;
+  }
+  .curve-overlap-flag .pill {
+    display: inline-block; width: 10px; height: 10px;
+    background: var(--color-overlap);
+  }
+
+  /* ============ Sketch toolbar ============ */
+  #sketch-tools {
+    position: fixed; bottom: 12px; right: 12px; z-index: 9999;
+    font-family: system-ui; font-size: 12px;
+    background: rgba(0,0,0,0.75); color: white; padding: 8px 12px;
+    border-radius: 8px; opacity: 0.4; transition: opacity 0.2s;
+    display: flex; gap: 8px; align-items: center;
+  }
+  #sketch-tools:hover { opacity: 1; }
+  #sketch-tools select { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 2px 4px; }
+
+  /* Reusable section title on each variant page */
+  .section-title {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+    color: var(--color-text-muted); text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div id="variant-nav">
+  <span style="color: var(--color-text-muted); margin-right: 6px;">SKETCH 002 ·</span>
+  <button class="variant-tab active" onclick="showVariant('a', event)">A: Paired Heatmap Rows ★ Selected</button>
+  <button class="variant-tab" onclick="showVariant('b', event)">B: Diverging Bars</button>
+  <button class="variant-tab" onclick="showVariant('c', event)">C: Suitability Curves</button>
+</div>
+
+<!-- ============================================================
+     VARIANT A — Paired Heatmap Rows
+============================================================ -->
+<div id="variant-a" class="variant active">
+  <div class="page">
+    <div class="v-head">
+      <h1>A. Paired Heatmap Rows</h1>
+      <div class="sub">Two rows for the cities, a third row showing where both are ideal. Discrete cells, suitability encoded by color intensity. This is the version currently in Sketch 001 C — included as a reference baseline.</div>
+    </div>
+
+    <div class="presentations">
+      <!-- Narrow / sidebar context -->
+      <div class="context-card">
+        <div class="ctx-label">★ SIDEBAR CONTEXT · 420px</div>
+        <div class="section-title">BEST MONTHS</div>
+        <div class="heatmap" id="heatmap-narrow">
+          <div class="hm-row-label" style="border-bottom: 1px solid var(--color-border);"></div>
+          <div class="hm-month">J</div><div class="hm-month">F</div><div class="hm-month">M</div>
+          <div class="hm-month">A</div><div class="hm-month">M</div><div class="hm-month">J</div>
+          <div class="hm-month">J</div><div class="hm-month">A</div><div class="hm-month">S</div>
+          <div class="hm-month">O</div><div class="hm-month">N</div><div class="hm-month">D</div>
+          <!-- rows injected by JS -->
+        </div>
+        <div class="legend">
+          <span><span class="dot" style="background: rgba(207, 154, 58, 0.12); border: 1px solid var(--color-border-soft);"></span>Cool/wet</span>
+          <span><span class="dot" style="background: rgba(207, 154, 58, 0.32); border: 1px solid var(--color-border-soft);"></span>Workable</span>
+          <span><span class="dot" style="background: rgba(74, 124, 58, 0.38); border: 1px solid var(--color-border-soft);"></span>Ideal</span>
+          <span><span class="dot both-fill"></span>Best for both</span>
+        </div>
+      </div>
+
+      <!-- Wide / full-width context -->
+      <div class="context-card">
+        <div class="ctx-label">FULL-WIDTH / MOBILE-STACK CONTEXT</div>
+        <div class="section-title">BEST MONTHS</div>
+        <div class="heatmap" id="heatmap-wide" style="grid-template-columns: 70px repeat(12, 1fr);">
+          <div class="hm-row-label" style="border-bottom: 1px solid var(--color-border);"></div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">JAN</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">FEB</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">MAR</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">APR</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">MAY</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">JUN</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">JUL</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">AUG</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">SEP</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">OCT</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">NOV</div>
+          <div class="hm-month" style="font-size: 11px; padding: 10px 0;">DEC</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <h3>Notes</h3>
+      <ul>
+        <li><strong>Strength:</strong> Discrete cells map cleanly to "what's this month?" — most readable for quick scanning.</li>
+        <li><strong>Weakness:</strong> Cells are flat — no sense of how close two months are or which is slightly better.</li>
+        <li><strong>Overlap:</strong> Needs a dedicated third row, which adds vertical weight in the narrow sidebar.</li>
+        <li><strong>Fits:</strong> Works at any width. Sidebar version is compact; wide version is even more scannable.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     VARIANT B — Diverging Bars
+============================================================ -->
+<div id="variant-b" class="variant">
+  <div class="page">
+    <div class="v-head">
+      <h1>B. Diverging Bars</h1>
+      <div class="sub">Each month has two bars on a center axis — Paris bar grows up, London bar grows down. Where both peak, a dot marks the center axis. Reads as a pulse / tug-of-war between two cities.</div>
+    </div>
+
+    <div class="presentations">
+      <!-- Narrow / sidebar context -->
+      <div class="context-card">
+        <div class="ctx-label">★ SIDEBAR CONTEXT · 420px</div>
+        <div class="section-title">BEST MONTHS</div>
+        <div class="diverge">
+          <div class="diverge-labels">
+            <span class="top-label">▲ PARIS</span>
+            <span style="color: var(--color-text-muted);">SUITABILITY</span>
+            <span class="bot-label">LONDON ▼</span>
+          </div>
+          <div class="diverge-grid" id="diverge-narrow">
+            <!-- 12 columns injected by JS -->
+          </div>
+          <div class="diverge-months" id="diverge-months-narrow">
+            <span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span>
+            <span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+          </div>
+        </div>
+        <div class="legend">
+          <span><span class="dot a-fill"></span>Paris (up)</span>
+          <span><span class="dot b-fill"></span>London (down)</span>
+          <span><span class="dot" style="background: var(--color-overlap); border-radius: 50%;"></span>Both peak</span>
+        </div>
+      </div>
+
+      <!-- Wide / full-width context -->
+      <div class="context-card">
+        <div class="ctx-label">FULL-WIDTH / MOBILE-STACK CONTEXT</div>
+        <div class="section-title">BEST MONTHS</div>
+        <div class="diverge">
+          <div class="diverge-labels">
+            <span class="top-label">▲ PARIS</span>
+            <span style="color: var(--color-text-muted);">SUITABILITY · 0–3 PER CITY</span>
+            <span class="bot-label">LONDON ▼</span>
+          </div>
+          <div class="diverge-grid" id="diverge-wide" style="height: 240px;">
+            <!-- 12 columns injected by JS -->
+          </div>
+          <div class="diverge-months">
+            <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span>
+            <span>JUL</span><span>AUG</span><span>SEP</span><span>OCT</span><span>NOV</span><span>DEC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <h3>Notes</h3>
+      <ul>
+        <li><strong>Strength:</strong> Continuous bar heights show how close two months are. Vertically efficient — overlap doesn't need a third row.</li>
+        <li><strong>Weakness:</strong> "Going down" might feel negative for City B (visual hierarchy treats up-as-good). Mitigated by labeling.</li>
+        <li><strong>Overlap:</strong> Dot on the center axis where both bars hit max. Compact, doesn't add height.</li>
+        <li><strong>Fits:</strong> Works narrow and wide. Wide reads almost like a heartbeat across the year.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     VARIANT C — Suitability Curves
+============================================================ -->
+<div id="variant-c" class="variant">
+  <div class="page">
+    <div class="v-head">
+      <h1>C. Suitability Curves</h1>
+      <div class="sub">Continuous filled curves — Paris in teal, London in ochre, both partially transparent. Where they overlap (both at peak), the colors mix into the overlap olive automatically. Feels more chart-like, less calendar-like.</div>
+    </div>
+
+    <div class="presentations">
+      <!-- Narrow / sidebar context -->
+      <div class="context-card">
+        <div class="ctx-label">★ SIDEBAR CONTEXT · 420px</div>
+        <div class="section-title">SUITABILITY · MONTHLY</div>
+        <div class="curves">
+          <svg viewBox="0 0 1200 360" preserveAspectRatio="none" id="svg-narrow"></svg>
+          <div class="curves-x">
+            <span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span>
+            <span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+          </div>
+          <div class="curve-overlap-flag">
+            <span class="pill"></span>
+            <span>BOTH IDEAL · MAY–AUG</span>
+          </div>
+        </div>
+        <div class="legend">
+          <span><span class="dot a-fill" style="opacity: 0.6;"></span>Paris curve</span>
+          <span><span class="dot b-fill" style="opacity: 0.6;"></span>London curve</span>
+          <span><span class="dot both-fill"></span>Both ideal</span>
+        </div>
+      </div>
+
+      <!-- Wide / full-width context -->
+      <div class="context-card">
+        <div class="ctx-label">FULL-WIDTH / MOBILE-STACK CONTEXT</div>
+        <div class="section-title">SUITABILITY · MONTHLY</div>
+        <div class="curves">
+          <svg viewBox="0 0 1200 360" preserveAspectRatio="none" id="svg-wide" style="height: 220px;"></svg>
+          <div class="curves-x">
+            <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span>
+            <span>JUL</span><span>AUG</span><span>SEP</span><span>OCT</span><span>NOV</span><span>DEC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <h3>Notes</h3>
+      <ul>
+        <li><strong>Strength:</strong> Smooth curves feel like the existing Climato chart language. Overlap is communicated automatically by color compositing — no extra row, no extra marker.</li>
+        <li><strong>Weakness:</strong> Less "calendar"-feeling. Users scanning for a specific month have to find it on a smooth curve rather than a discrete cell.</li>
+        <li><strong>Overlap:</strong> The "both ideal" band emerges as a single olive-shaded area where the two filled curves overlap at maximum.</li>
+        <li><strong>Fits:</strong> Best at wider widths. At sidebar width, individual month resolution is fine but feels more abstract.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============ Sketch toolbar ============ -->
+<div id="sketch-tools">
+  <span>SKETCH 002</span>
+  <select onchange="document.querySelectorAll('link[href*=themes]').forEach(l => l.href = '../themes/' + this.value + '.css')">
+    <option value="default">Default</option>
+  </select>
+</div>
+
+<script>
+  // ============ Variant switching ============
+  function showVariant(id, evt) {
+    document.querySelectorAll('.variant').forEach(v => v.classList.remove('active'));
+    document.querySelectorAll('.variant-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('variant-' + id).classList.add('active');
+    evt.target.classList.add('active');
+    window.scrollTo(0, 0);
+  }
+
+  // ============ Data ============
+  // Suitability score 0..3 per month for each city.
+  // Real implementation will derive this from climate-summary.ts (temp band,
+  // rainfall, sunshine), but for the sketch the scores are hand-picked to
+  // match the Paris/London narrative.
+  const paris  = [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 1, 0];
+  const london = [0, 0, 1, 2, 3, 3, 3, 3, 2, 1, 0, 0];
+  const months = ['J','F','M','A','M','J','J','A','S','O','N','D'];
+
+  // ============ Variant A: Heatmap rows ============
+  function renderHeatmap(elId) {
+    const root = document.getElementById(elId);
+    if (!root) return;
+
+    const html = [];
+    // PAR row
+    html.push('<div class="hm-row-label par">PAR</div>');
+    paris.forEach(s => html.push(`<div class="hm-cell s${s}" title="Score ${s}/3"></div>`));
+    // LON row
+    html.push('<div class="hm-row-label lon">LON</div>');
+    london.forEach(s => html.push(`<div class="hm-cell s${s}" title="Score ${s}/3"></div>`));
+    // BOTH row
+    html.push('<div class="hm-row-label both">★</div>');
+    for (let i = 0; i < 12; i++) {
+      const both = (paris[i] === 3 && london[i] === 3);
+      html.push(`<div class="hm-cell ${both ? 'both' : 's0'}" title="${both ? 'Both ideal' : 'Not both'}"></div>`);
+    }
+    root.insertAdjacentHTML('beforeend', html.join(''));
+  }
+  renderHeatmap('heatmap-narrow');
+  renderHeatmap('heatmap-wide');
+
+  // ============ Variant B: Diverging bars ============
+  function renderDiverge(elId) {
+    const root = document.getElementById(elId);
+    if (!root) return;
+
+    let html = '';
+    for (let i = 0; i < 12; i++) {
+      const a = paris[i];
+      const b = london[i];
+      const both = (a === 3 && b === 3);
+      const aPct = (a / 3) * 100;
+      const bPct = (b / 3) * 100;
+      html += `
+        <div class="div-col">
+          <div class="above">
+            <div class="bar-a" style="height: ${aPct}%" title="Paris ${a}/3"></div>
+          </div>
+          <div class="below">
+            <div class="bar-b" style="height: ${bPct}%" title="London ${b}/3"></div>
+          </div>
+          ${both ? '<div class="overlap-mark" title="Both ideal"></div>' : ''}
+        </div>
+      `;
+    }
+    root.innerHTML = html;
+  }
+  renderDiverge('diverge-narrow');
+  renderDiverge('diverge-wide');
+
+  // ============ Variant C: Suitability curves (SVG) ============
+  function renderCurves(svgId) {
+    const svg = document.getElementById(svgId);
+    if (!svg) return;
+
+    const W = 1200;
+    const H = 360;
+    const padLeft = 0;
+    const padRight = 0;
+    const padTop = 30;
+    const padBottom = 30;
+    const innerW = W - padLeft - padRight;
+    const innerH = H - padTop - padBottom;
+
+    // 12 months → 13 grid points (so the curve reaches the right edge)
+    function path(data, smooth = true) {
+      const pts = data.map((v, i) => {
+        const x = padLeft + (i / 11) * innerW;
+        const y = padTop + innerH - (v / 3) * innerH;
+        return [x, y];
+      });
+      if (!smooth) {
+        return pts.map((p, i) => (i === 0 ? `M${p[0]},${p[1]}` : `L${p[0]},${p[1]}`)).join('');
+      }
+      // Cardinal spline-ish smoothing using midpoints
+      let d = `M${pts[0][0]},${pts[0][1]}`;
+      for (let i = 1; i < pts.length; i++) {
+        const cur = pts[i];
+        const prev = pts[i - 1];
+        const mx = (prev[0] + cur[0]) / 2;
+        d += ` Q${prev[0]},${prev[1]} ${mx},${(prev[1] + cur[1]) / 2}`;
+        d += ` T${cur[0]},${cur[1]}`;
+      }
+      return d;
+    }
+
+    const aPath = path(paris);
+    const bPath = path(london);
+    const baseY = padTop + innerH;
+    const aFill = `${aPath} L${padLeft + innerW},${baseY} L${padLeft},${baseY} Z`;
+    const bFill = `${bPath} L${padLeft + innerW},${baseY} L${padLeft},${baseY} Z`;
+
+    // y grid lines (0, 1, 2, 3)
+    let yGrid = '';
+    for (let v = 0; v <= 3; v++) {
+      const y = padTop + innerH - (v / 3) * innerH;
+      yGrid += `<line x1="${padLeft}" y1="${y}" x2="${padLeft + innerW}" y2="${y}" stroke="rgba(17,17,17,0.06)" stroke-width="1" />`;
+      yGrid += `<text x="${padLeft + 4}" y="${y - 4}" font-family="JetBrains Mono, monospace" font-size="14" fill="rgba(17,17,17,0.35)" letter-spacing="1">${v}</text>`;
+    }
+
+    svg.innerHTML = `
+      ${yGrid}
+      <path d="${aFill}" fill="var(--color-city-a)" fill-opacity="0.55" />
+      <path d="${bFill}" fill="var(--color-city-b)" fill-opacity="0.55" />
+      <path d="${aPath}" stroke="var(--color-city-a)" stroke-width="2.5" fill="none" />
+      <path d="${bPath}" stroke="var(--color-city-b)" stroke-width="2.5" fill="none" />
+    `;
+  }
+  renderCurves('svg-narrow');
+  renderCurves('svg-wide');
+</script>
+
+</body>
+</html>

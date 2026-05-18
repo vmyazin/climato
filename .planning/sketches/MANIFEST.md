@@ -13,5 +13,5 @@ Comparison pages (`/compare/{a}/vs/{b}`) for Climato. Calendar-led, decision-aid
 | # | Name | Design Question | Winner | Tags |
 |---|------|----------------|--------|------|
 | 001 | page-structure | What's the overall page layout when a calendar leads? | **C — Sticky Calendar Split** | layout, structure |
-| 002 | best-months-calendar | How does the dual-city calendar visualize suitability + overlap? | TBD | component, calendar, novel |
+| 002 | best-months-calendar | How does the dual-city calendar visualize suitability + overlap? | **A — Paired Heatmap Rows** | component, calendar, novel |
 | 003 | headline-stat-band | What does the headline differential-stats band look like? | TBD | component, typography |
