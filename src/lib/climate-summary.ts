@@ -218,3 +218,25 @@ export function pickBestMonths(city: City): BestMonthsResult | null {
 export function annualPrecipMm(city: City): number {
   return city.precip.reduce((a, b) => a + b, 0)
 }
+
+// Map the internal 0..1 suitability score from scoreMonth into the four
+// discrete buckets the comparison-page calendar visualisation expects:
+//   3 = ideal (mild temp, low rain, decent sun)
+//   2 = workable
+//   1 = poor (cool/wet)
+//   0 = bad (too cold, too hot, or too dark)
+// The thresholds align with scoreMonth's return values: 1, 0.7, 0.5/0.4/0.3, 0.
+export type SuitabilityClass = 0 | 1 | 2 | 3
+
+export function suitabilityClass(score: number): SuitabilityClass {
+  if (score >= 1) return 3
+  if (score >= 0.7) return 2
+  if (score >= 0.3) return 1
+  return 0
+}
+
+// Return the 12-month suitability classes for a city. Consumed by
+// <BestMonthsCalendar> in the comparison page.
+export function monthlySuitability(city: City): SuitabilityClass[] {
+  return Array.from({ length: 12 }, (_, i) => suitabilityClass(scoreMonth(city, i)))
+}
