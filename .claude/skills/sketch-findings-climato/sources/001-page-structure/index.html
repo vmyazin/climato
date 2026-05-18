@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sketch 001 — Page Structure (Paris vs London)</title>
+<link rel="stylesheet" href="../themes/default.css">
+<style>
+  body { padding-top: 56px; }
+  /* ============ Variant tabs ============ */
+  #variant-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9998;
+    background: #fff; border-bottom: 1px solid var(--color-border);
+    padding: 10px 16px; display: flex; gap: 8px; align-items: center;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+  }
+  .variant-tab {
+    padding: 8px 14px; border: 1px solid var(--color-border);
+    background: transparent; color: var(--color-text);
+    cursor: pointer; font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 1.5px; text-transform: uppercase; transition: all 0.15s;
+  }
+  .variant-tab:hover { background: rgba(0,0,0,0.04); }
+  .variant-tab.active { background: var(--color-text); color: var(--color-bg); }
+
+  /* ============ Shared comparison-page chrome ============ */
+  .page { max-width: 1280px; margin: 0 auto; padding: 32px; }
+
+  .breadcrumb {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+    color: var(--color-text-muted); text-transform: uppercase; margin-bottom: 16px;
+  }
+  .breadcrumb a { color: var(--color-text-muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--color-text); }
+
+  /* City colors used inline */
+  .city-a { color: var(--color-city-a); }
+  .city-b { color: var(--color-city-b); }
+  .city-a-fill { background: var(--color-city-a); }
+  .city-b-fill { background: var(--color-city-b); }
+  .both-fill   { background: var(--color-overlap); }
+
+  /* ============ Calendar component (shared across variants) ============ */
+  .cal {
+    display: grid;
+    grid-template-columns: 60px repeat(12, 1fr);
+    border: 1px solid var(--color-border);
+    background: #fff;
+  }
+  .cal-row-label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase; display: flex; align-items: center; justify-content: center;
+    border-right: 1px solid var(--color-border);
+    background: #fafaf7;
+  }
+  .cal-month-head {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--color-text-muted);
+    padding: 8px 0; text-align: center;
+    border-right: 1px solid var(--color-border-soft);
+    border-bottom: 1px solid var(--color-border);
+    background: #fafaf7;
+  }
+  .cal-month-head:last-child { border-right: none; }
+  .cal-cell {
+    height: 44px;
+    border-right: 1px solid var(--color-border-soft);
+    border-bottom: 1px solid var(--color-border-soft);
+    position: relative; cursor: pointer; transition: filter 0.15s;
+  }
+  .cal-cell:hover { filter: brightness(0.92); }
+  .cal-cell:last-child { border-right: none; }
+  .cal-cell.score-3 { background: rgba(74, 124, 58, 0.35); }   /* great */
+  .cal-cell.score-2 { background: rgba(207, 154, 58, 0.30); }  /* ok */
+  .cal-cell.score-1 { background: rgba(207, 154, 58, 0.12); }  /* poor */
+  .cal-cell.score-0 { background: transparent; }                /* bad */
+  .cal-cell.overlap-both {
+    background: rgba(90, 98, 64, 0.5);
+    color: white;
+  }
+  .cal-cell .month-tag {
+    position: absolute; top: 4px; left: 4px;
+    font-family: var(--font-mono); font-size: 9px; color: rgba(0,0,0,0.4);
+  }
+
+  /* Pulled-quote verdict */
+  .verdict {
+    display: flex; align-items: baseline; gap: 12px;
+    padding: 20px 0;
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 28px; line-height: 1.15; letter-spacing: -0.02em;
+  }
+  .verdict .accent { color: var(--color-accent); }
+
+  /* Stat strip — used in all three variants but positioned differently */
+  .stat-strip { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--color-border); border-left: 1px solid var(--color-border); }
+  .stat {
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 18px 20px;
+    background: #fff;
+  }
+  .stat .label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; color: var(--color-text-muted); text-transform: uppercase; margin-bottom: 8px; }
+  .stat .value { font-family: var(--font-display); font-weight: 700; font-size: 32px; letter-spacing: -0.02em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .stat .winner-tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.2px; margin-top: 6px; text-transform: uppercase; }
+
+  /* Side-by-side bar chart */
+  .chart {
+    border: 1px solid var(--color-border); background: #fff;
+    padding: 20px 24px; min-height: 260px;
+  }
+  .chart-title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .chart-title-row h3 { font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; }
+  .chart-legend { display: flex; gap: 14px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+  .legend-dot { display: inline-block; width: 12px; height: 12px; vertical-align: middle; margin-right: 4px; }
+  .bars { display: grid; grid-template-columns: repeat(12, 1fr); gap: 6px; height: 180px; align-items: end; padding: 0 4px; }
+  .bar-group { display: flex; gap: 2px; align-items: end; height: 100%; }
+  .bar-a, .bar-b { width: 50%; min-height: 4px; }
+  .bar-a { background: var(--color-city-a); }
+  .bar-b { background: var(--color-city-b); }
+  .bar-x { display: grid; grid-template-columns: repeat(12, 1fr); gap: 6px; margin-top: 8px; font-family: var(--font-mono); font-size: 10px; color: var(--color-text-muted); }
+  .bar-x span { text-align: center; }
+
+  /* Side-by-side data table */
+  .data-table {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border-top: 1px solid var(--color-border);
+  }
+  .col {
+    padding: 24px; background: #fff;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
+  }
+  .col:last-child { border-left: none; }
+  .col h2 { font-family: var(--font-display); font-weight: 700; font-size: 56px; letter-spacing: -0.03em; margin: 0 0 4px 0; text-transform: uppercase; line-height: 0.92; }
+  .col .country { font-size: 18px; color: var(--color-text-muted); margin-bottom: 16px; }
+  .col table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .col th, .col td { padding: 6px 4px; text-align: right; font-size: 13px; }
+  .col th:first-child, .col td:first-child { text-align: left; }
+  .col th { font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; color: var(--color-text-muted); text-transform: uppercase; border-bottom: 1px solid var(--color-border-soft); }
+  .col tbody tr:nth-child(even) { background: rgba(0,0,0,0.02); }
+
+  /* City headers — used in B */
+  .duo-head {
+    display: grid; grid-template-columns: 1fr 60px 1fr; align-items: end;
+    border-bottom: 1px solid var(--color-border); padding-bottom: 16px; margin-bottom: 24px;
+  }
+  .duo-head .city-block h1 {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 96px; letter-spacing: -0.04em; line-height: 0.9; margin: 0;
+    text-transform: uppercase;
+  }
+  .duo-head .city-block.right { text-align: right; }
+  .duo-head .vs {
+    font-family: var(--font-mono); font-size: 14px; letter-spacing: 2px;
+    text-align: center; color: var(--color-text-muted);
+    transform: translateY(-12px);
+  }
+  .duo-head .country { font-size: 16px; color: var(--color-text-muted); margin-top: 4px; }
+
+  /* Sticky sidebar — used in C */
+  .split-layout { display: grid; grid-template-columns: 420px 1fr; gap: 32px; align-items: start; }
+  .split-layout .sticky-cal { position: sticky; top: 72px; }
+
+  /* ============ Variants ============ */
+  .variant { display: none; }
+  .variant.active { display: block; }
+
+  /* Footer */
+  .foot {
+    margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--color-border-soft);
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+    color: var(--color-text-muted); text-transform: uppercase;
+    display: flex; justify-content: space-between;
+  }
+
+  /* ============ Sketch toolbar ============ */
+  #sketch-tools {
+    position: fixed; bottom: 12px; right: 12px; z-index: 9999;
+    font-family: system-ui; font-size: 12px;
+    background: rgba(0,0,0,0.75); color: white; padding: 8px 12px;
+    border-radius: 8px; opacity: 0.4; transition: opacity 0.2s;
+    display: flex; gap: 8px; align-items: center;
+  }
+  #sketch-tools:hover { opacity: 1; }
+  #sketch-tools select { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 2px 4px; }
+</style>
+</head>
+<body>
+
+<div id="variant-nav">
+  <span style="color: var(--color-text-muted); margin-right: 6px;">SKETCH 001 ·</span>
+  <button class="variant-tab active" onclick="showVariant('a', event)">A: Calendar Hero</button>
+  <button class="variant-tab" onclick="showVariant('b', event)">B: Verdict + Calendar</button>
+  <button class="variant-tab" onclick="showVariant('c', event)">C: Sticky Calendar Split ★ Selected</button>
+</div>
+
+<!-- ============================================================
+     VARIANT A — Calendar Hero
+     The calendar fills the fold. Below it: stats, charts, tables.
+     Pure "decision-aid first, deep data second" reading order.
+============================================================ -->
+<div id="variant-a" class="variant active">
+  <div class="page">
+    <div class="breadcrumb"><a href="#">CLIMATO</a> · <a href="#">PARIS</a> · COMPARE WITH LONDON</div>
+
+    <!-- Calendar hero -->
+    <div style="margin-bottom: 8px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px;">
+        <h1 class="display" style="font-size: 64px;">
+          <span class="city-a">Paris</span> vs <span class="city-b">London</span>
+        </h1>
+        <div class="mono-label">BEST MONTHS TO VISIT · CLIMATE COMPARISON</div>
+      </div>
+
+      <div class="cal" id="cal-a">
+        <div class="cal-row-label" style="border-bottom: 1px solid var(--color-border);"></div>
+        <div class="cal-month-head">J</div><div class="cal-month-head">F</div><div class="cal-month-head">M</div>
+        <div class="cal-month-head">A</div><div class="cal-month-head">M</div><div class="cal-month-head">J</div>
+        <div class="cal-month-head">J</div><div class="cal-month-head">A</div><div class="cal-month-head">S</div>
+        <div class="cal-month-head">O</div><div class="cal-month-head">N</div><div class="cal-month-head">D</div>
+
+        <div class="cal-row-label">PAR</div>
+        <div class="cal-cell score-0"></div><div class="cal-cell score-0"></div><div class="cal-cell score-1"></div>
+        <div class="cal-cell score-2"></div><div class="cal-cell score-3"></div><div class="cal-cell score-3"></div>
+        <div class="cal-cell score-3"></div><div class="cal-cell score-3"></div><div class="cal-cell score-3"></div>
+        <div class="cal-cell score-2"></div><div class="cal-cell score-1"></div><div class="cal-cell score-0"></div>
+
+        <div class="cal-row-label">LON</div>
+        <div class="cal-cell score-0"></div><div class="cal-cell score-0"></div><div class="cal-cell score-1"></div>
+        <div class="cal-cell score-2"></div><div class="cal-cell score-3"></div><div class="cal-cell score-3"></div>
+        <div class="cal-cell score-3"></div><div class="cal-cell score-3"></div><div class="cal-cell score-2"></div>
+        <div class="cal-cell score-1"></div><div class="cal-cell score-0"></div><div class="cal-cell score-0"></div>
+
+        <div class="cal-row-label" style="background: rgba(90, 98, 64, 0.1); font-weight: 600;">BOTH</div>
+        <div class="cal-cell score-0"></div><div class="cal-cell score-0"></div><div class="cal-cell score-1"></div>
+        <div class="cal-cell score-2"></div><div class="cal-cell overlap-both"></div><div class="cal-cell overlap-both"></div>
+        <div class="cal-cell overlap-both"></div><div class="cal-cell overlap-both"></div><div class="cal-cell score-2"></div>
+        <div class="cal-cell score-1"></div><div class="cal-cell score-0"></div><div class="cal-cell score-0"></div>
+      </div>
+
+      <div style="display: flex; gap: 18px; margin-top: 12px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; color: var(--color-text-muted); text-transform: uppercase;">
+        <span><span class="legend-dot" style="background: rgba(74, 124, 58, 0.35); border: 1px solid var(--color-border-soft);"></span>Ideal</span>
+        <span><span class="legend-dot" style="background: rgba(207, 154, 58, 0.30); border: 1px solid var(--color-border-soft);"></span>Workable</span>
+        <span><span class="legend-dot" style="background: rgba(207, 154, 58, 0.12); border: 1px solid var(--color-border-soft);"></span>Cool/wet</span>
+        <span><span class="legend-dot both-fill"></span>Best for both</span>
+      </div>
+    </div>
+
+    <!-- Stats strip directly below -->
+    <div class="stat-strip" style="margin-top: 32px;">
+      <div class="stat">
+        <div class="label">AVG HIGH</div>
+        <div class="value"><span class="city-a">15.6°C</span> / <span class="city-b">13.6°C</span></div>
+        <div class="winner-tag city-a">PARIS +2.0°</div>
+      </div>
+      <div class="stat">
+        <div class="label">ANNUAL RAIN</div>
+        <div class="value"><span class="city-a">630mm</span> / <span class="city-b">603mm</span></div>
+        <div class="winner-tag city-a">PARIS +4%</div>
+      </div>
+      <div class="stat">
+        <div class="label">SUN HRS / DAY</div>
+        <div class="value"><span class="city-a">4.95</span> / <span class="city-b">4.28</span></div>
+        <div class="winner-tag city-a">PARIS +16%</div>
+      </div>
+      <div class="stat">
+        <div class="label">PEAK OVERLAP</div>
+        <div class="value">MAY–AUG</div>
+        <div class="winner-tag" style="color: var(--color-overlap);">4 SHARED MONTHS</div>
+      </div>
+    </div>
+
+    <!-- Overlay chart -->
+    <div class="chart" style="margin-top: 32px; border-top: none;">
+      <div class="chart-title-row">
+        <h3>MONTHLY HIGH · °C</h3>
+        <div class="chart-legend">
+          <span><span class="legend-dot city-a-fill"></span>Paris</span>
+          <span><span class="legend-dot city-b-fill"></span>London</span>
+        </div>
+      </div>
+      <div class="bars" id="bars-a"></div>
+      <div class="bar-x">
+        <span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span>
+        <span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+      </div>
+    </div>
+
+    <!-- Data table side-by-side -->
+    <div class="data-table" style="margin-top: 32px; border-top: 1px solid var(--color-border);">
+      <div class="col">
+        <h2 class="city-a">PARIS</h2>
+        <div class="country">FRANCE · Île-de-France</div>
+        <table>
+          <thead><tr><th>Month</th><th>High</th><th>Low</th><th>Rain</th><th>Sun</th></tr></thead>
+          <tbody id="paris-tbody-a"></tbody>
+        </table>
+      </div>
+      <div class="col">
+        <h2 class="city-b">LONDON</h2>
+        <div class="country">UNITED KINGDOM · England</div>
+        <table>
+          <thead><tr><th>Month</th><th>High</th><th>Low</th><th>Rain</th><th>Sun</th></tr></thead>
+          <tbody id="london-tbody-a"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="foot"><span>SOURCE · OPEN-METEO · 30-YR NORMALS</span><span>CLIMATO</span></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     VARIANT B — Verdict + Calendar
+     Editorial city headers up top, a pulled-quote VERDICT band,
+     then the calendar, then deep data. Reads more like an article.
+============================================================ -->
+<div id="variant-b" class="variant">
+  <div class="page">
+    <div class="breadcrumb"><a href="#">CLIMATO</a> · COMPARE</div>
+
+    <!-- Editorial duo header -->
+    <div class="duo-head">
+      <div class="city-block">
+        <h1 class="city-a">PARIS</h1>
+        <div class="country">FRANCE</div>
+      </div>
+      <div class="vs">VS</div>
+      <div class="city-block right">
+        <h1 class="city-b">LONDON</h1>
+        <div class="country">UNITED KINGDOM</div>
+      </div>
+    </div>
+
+    <!-- Pulled-quote verdict -->
+    <div class="verdict" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: 28px 0; margin-bottom: 32px;">
+      <span class="mono-label" style="white-space: nowrap;">VERDICT</span>
+      <span style="flex: 1;">
+        <span class="city-a">Paris</span> runs <span class="accent">2°C warmer</span> than <span class="city-b">London</span> on average, but gets <span class="accent">4% more rain</span>.
+        Both cities peak <span class="accent">May–August</span> — ideal for either, perfect for both.
+      </span>
+    </div>
+
+    <!-- Calendar -->
+    <div style="margin-bottom: 32px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px;">
+        <div class="mono-label">BEST MONTHS — SIDE BY SIDE</div>
+        <div class="mono-label" style="color: var(--color-overlap);">★ INDICATES BEST FOR BOTH</div>
+      </div>
+      <div class="cal">
+        <div class="cal-row-label" style="border-bottom: 1px solid var(--color-border);"></div>
+        <div class="cal-month-head">JAN</div><div class="cal-month-head">FEB</div><div class="cal-month-head">MAR</div>
+        <div class="cal-month-head">APR</div><div class="cal-month-head">MAY</div><div class="cal-month-head">JUN</div>
+        <div class="cal-month-head">JUL</div><div class="cal-month-head">AUG</div><div class="cal-month-head">SEP</div>
+        <div class="cal-month-head">OCT</div><div class="cal-month-head">NOV</div><div class="cal-month-head">DEC</div>
+
+        <div class="cal-row-label">PAR</div>
+        <div class="cal-cell score-0"></div><div class="cal-cell score-0"></div><div class="cal-cell score-1"></div>
+        <div class="cal-cell score-2"></div><div class="cal-cell score-3"></div><div class="cal-cell score-3"></div>
+        <div class="cal-cell score-3"></div><div class="cal-cell score-3"></div><div class="cal-cell score-3"></div>
+        <div class="cal-cell score-2"></div><div class="cal-cell score-1"></div><div class="cal-cell score-0"></div>
+
+        <div class="cal-row-label">LON</div>
+        <div class="cal-cell score-0"></div><div class="cal-cell score-0"></div><div class="cal-cell score-1"></div>
+        <div class="cal-cell score-2"></div><div class="cal-cell score-3"></div><div class="cal-cell score-3"></div>
+        <div class="cal-cell score-3"></div><div class="cal-cell score-3"></div><div class="cal-cell score-2"></div>
+        <div class="cal-cell score-1"></div><div class="cal-cell score-0"></div><div class="cal-cell score-0"></div>
+      </div>
+    </div>
+
+    <!-- Overlay chart -->
+    <div class="chart">
+      <div class="chart-title-row">
+        <h3>MONTHLY HIGH · °C</h3>
+        <div class="chart-legend">
+          <span><span class="legend-dot city-a-fill"></span>Paris</span>
+          <span><span class="legend-dot city-b-fill"></span>London</span>
+        </div>
+      </div>
+      <div class="bars" id="bars-b"></div>
+      <div class="bar-x">
+        <span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span>
+        <span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="stat-strip" style="margin-top: 32px;">
+      <div class="stat">
+        <div class="label">AVG HIGH</div>
+        <div class="value"><span class="city-a">15.6°C</span> / <span class="city-b">13.6°C</span></div>
+        <div class="winner-tag city-a">PARIS +2.0°</div>
+      </div>
+      <div class="stat">
+        <div class="label">ANNUAL RAIN</div>
+        <div class="value"><span class="city-a">630mm</span> / <span class="city-b">603mm</span></div>
+        <div class="winner-tag city-a">PARIS +4%</div>
+      </div>
+      <div class="stat">
+        <div class="label">SUN HRS / DAY</div>
+        <div class="value"><span class="city-a">4.95</span> / <span class="city-b">4.28</span></div>
+        <div class="winner-tag city-a">PARIS +16%</div>
+      </div>
+      <div class="stat">
+        <div class="label">PEAK OVERLAP</div>
+        <div class="value">MAY–AUG</div>
+        <div class="winner-tag" style="color: var(--color-overlap);">4 SHARED MONTHS</div>
+      </div>
+    </div>
+
+    <!-- Data table -->
+    <div class="data-table" style="margin-top: 32px;">
+      <div class="col">
+        <h2 class="city-a" style="font-size: 36px;">PARIS</h2>
+        <table>
+          <thead><tr><th>Month</th><th>High</th><th>Low</th><th>Rain</th><th>Sun</th></tr></thead>
+          <tbody id="paris-tbody-b"></tbody>
+        </table>
+      </div>
+      <div class="col">
+        <h2 class="city-b" style="font-size: 36px;">LONDON</h2>
+        <table>
+          <thead><tr><th>Month</th><th>High</th><th>Low</th><th>Rain</th><th>Sun</th></tr></thead>
+          <tbody id="london-tbody-b"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="foot"><span>SOURCE · OPEN-METEO · 30-YR NORMALS</span><span>CLIMATO</span></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     VARIANT C — Sticky Calendar Split
+     The calendar stays pinned to the left (or top on mobile) while
+     the user scrolls through deep data on the right. Highest signal
+     density — answers "when?" no matter where the user is on the page.
+============================================================ -->
+<div id="variant-c" class="variant">
+  <div class="page">
+    <div class="breadcrumb"><a href="#">CLIMATO</a> · COMPARE</div>
+
+    <!-- Headline — sized to match Climato VariationA's hero scale -->
+    <div style="margin-bottom: 36px;">
+      <h1 class="display" style="font-size: clamp(80px, 13vw, 168px); line-height: 0.9; letter-spacing: -0.045em; text-transform: uppercase; word-break: break-word; margin: 0;">
+        <span class="city-a" data-city="a">Paris</span> <span style="color: var(--color-text-muted); font-weight: 400; font-size: 0.4em; vertical-align: 0.55em; letter-spacing: 0;">vs</span> <span class="city-b" data-city="b">London</span>
+      </h1>
+      <div style="font-size: 22px; color: var(--color-text-muted); margin-top: 16px; max-width: 720px;">
+        When should you visit each — and when are both ideal?
+      </div>
+    </div>
+
+    <div class="split-layout">
+      <!-- LEFT: sticky calendar -->
+      <div class="sticky-cal">
+        <div class="mono-label" style="margin-bottom: 8px;">BEST MONTHS</div>
+        <div class="cal" style="grid-template-columns: 50px repeat(12, 1fr);">
+          <div class="cal-row-label" style="border-bottom: 1px solid var(--color-border);"></div>
+          <div class="cal-month-head" style="font-size: 9px;">J</div><div class="cal-month-head" style="font-size: 9px;">F</div><div class="cal-month-head" style="font-size: 9px;">M</div>
+          <div class="cal-month-head" style="font-size: 9px;">A</div><div class="cal-month-head" style="font-size: 9px;">M</div><div class="cal-month-head" style="font-size: 9px;">J</div>
+          <div class="cal-month-head" style="font-size: 9px;">J</div><div class="cal-month-head" style="font-size: 9px;">A</div><div class="cal-month-head" style="font-size: 9px;">S</div>
+          <div class="cal-month-head" style="font-size: 9px;">O</div><div class="cal-month-head" style="font-size: 9px;">N</div><div class="cal-month-head" style="font-size: 9px;">D</div>
+
+          <div class="cal-row-label" style="font-size: 9px;">PAR</div>
+          <div class="cal-cell score-0" style="height: 28px;"></div><div class="cal-cell score-0" style="height: 28px;"></div><div class="cal-cell score-1" style="height: 28px;"></div>
+          <div class="cal-cell score-2" style="height: 28px;"></div><div class="cal-cell score-3" style="height: 28px;"></div><div class="cal-cell score-3" style="height: 28px;"></div>
+          <div class="cal-cell score-3" style="height: 28px;"></div><div class="cal-cell score-3" style="height: 28px;"></div><div class="cal-cell score-3" style="height: 28px;"></div>
+          <div class="cal-cell score-2" style="height: 28px;"></div><div class="cal-cell score-1" style="height: 28px;"></div><div class="cal-cell score-0" style="height: 28px;"></div>
+
+          <div class="cal-row-label" style="font-size: 9px;">LON</div>
+          <div class="cal-cell score-0" style="height: 28px;"></div><div class="cal-cell score-0" style="height: 28px;"></div><div class="cal-cell score-1" style="height: 28px;"></div>
+          <div class="cal-cell score-2" style="height: 28px;"></div><div class="cal-cell score-3" style="height: 28px;"></div><div class="cal-cell score-3" style="height: 28px;"></div>
+          <div class="cal-cell score-3" style="height: 28px;"></div><div class="cal-cell score-3" style="height: 28px;"></div><div class="cal-cell score-2" style="height: 28px;"></div>
+          <div class="cal-cell score-1" style="height: 28px;"></div><div class="cal-cell score-0" style="height: 28px;"></div><div class="cal-cell score-0" style="height: 28px;"></div>
+
+          <div class="cal-row-label" style="font-size: 9px; background: rgba(90, 98, 64, 0.1);">★</div>
+          <div class="cal-cell score-0" style="height: 28px;"></div><div class="cal-cell score-0" style="height: 28px;"></div><div class="cal-cell score-0" style="height: 28px;"></div>
+          <div class="cal-cell score-0" style="height: 28px;"></div><div class="cal-cell overlap-both" style="height: 28px;"></div><div class="cal-cell overlap-both" style="height: 28px;"></div>
+          <div class="cal-cell overlap-both" style="height: 28px;"></div><div class="cal-cell overlap-both" style="height: 28px;"></div><div class="cal-cell score-0" style="height: 28px;"></div>
+          <div class="cal-cell score-0" style="height: 28px;"></div><div class="cal-cell score-0" style="height: 28px;"></div><div class="cal-cell score-0" style="height: 28px;"></div>
+        </div>
+
+        <!-- Mini-verdict under sticky cal -->
+        <div style="margin-top: 16px; padding: 14px; background: rgba(90, 98, 64, 0.08); border-left: 3px solid var(--color-overlap);">
+          <div class="mono-label" style="margin-bottom: 6px;">PEAK OVERLAP</div>
+          <div style="font-family: var(--font-display); font-size: 22px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.15;">May–August</div>
+          <div style="font-size: 13px; color: var(--color-text-muted); margin-top: 4px;">Mild, dry-ish, long days. Best for visiting both on one trip.</div>
+        </div>
+
+        <div class="mono-label" style="margin-top: 20px; margin-bottom: 8px;">LEGEND</div>
+        <div style="display: flex; flex-direction: column; gap: 6px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px; color: var(--color-text-muted); text-transform: uppercase;">
+          <span><span class="legend-dot" style="background: rgba(74, 124, 58, 0.35); border: 1px solid var(--color-border-soft);"></span>Ideal</span>
+          <span><span class="legend-dot" style="background: rgba(207, 154, 58, 0.30); border: 1px solid var(--color-border-soft);"></span>Workable</span>
+          <span><span class="legend-dot both-fill"></span>Best for both</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: scrolling deep data -->
+      <div>
+        <!-- Stats strip — compact for narrow column -->
+        <div class="stat-strip" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="stat">
+            <div class="label">AVG HIGH</div>
+            <div class="value" style="font-size: 24px;"><span class="city-a">15.6°</span> / <span class="city-b">13.6°</span></div>
+            <div class="winner-tag city-a">PARIS +2.0°C</div>
+          </div>
+          <div class="stat">
+            <div class="label">ANNUAL RAIN</div>
+            <div class="value" style="font-size: 24px;"><span class="city-a">630mm</span> / <span class="city-b">603mm</span></div>
+            <div class="winner-tag city-a">PARIS +4%</div>
+          </div>
+          <div class="stat">
+            <div class="label">SUN HRS / DAY</div>
+            <div class="value" style="font-size: 24px;"><span class="city-a">4.95</span> / <span class="city-b">4.28</span></div>
+            <div class="winner-tag city-a">PARIS +16%</div>
+          </div>
+          <div class="stat">
+            <div class="label">CLIMATE TYPE</div>
+            <div class="value" style="font-size: 18px; line-height: 1.2;">Temperate oceanic (both)</div>
+            <div class="winner-tag" style="color: var(--color-overlap);">SIMILAR</div>
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="chart" style="margin-top: 24px;">
+          <div class="chart-title-row">
+            <h3>MONTHLY HIGH · °C</h3>
+            <div class="chart-legend">
+              <span><span class="legend-dot city-a-fill"></span>Paris</span>
+              <span><span class="legend-dot city-b-fill"></span>London</span>
+            </div>
+          </div>
+          <div class="bars" id="bars-c"></div>
+          <div class="bar-x">
+            <span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span>
+            <span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+          </div>
+        </div>
+
+        <!-- Narrative -->
+        <div style="margin-top: 24px; padding: 24px; background: #fff; border: 1px solid var(--color-border);">
+          <h3 class="mono-label" style="margin: 0 0 12px 0;">CLIMATE OVERVIEW</h3>
+          <p style="margin: 0 0 10px 0; line-height: 1.55;">Both cities sit in the temperate-oceanic zone of northwestern Europe, but Paris is roughly 350 km inland from the Atlantic and runs noticeably warmer year-round. Paris averages a 24°C high in July; London tops out at 22°C in the same month.</p>
+          <p style="margin: 0; line-height: 1.55;">Rainfall is comparable in volume but distributed differently — London's wettest month is October (69mm), while Paris peaks in May (63mm). Both are equally cloudy in winter; Paris gets noticeably more summer sun.</p>
+        </div>
+
+      </div>
+    </div>
+    <!-- End split-layout. Tables go full-width below for proper side-by-side comparison. -->
+
+    <!-- Full-width side-by-side monthly breakdown (matches Sketch B's table layout) -->
+    <div style="margin-top: 48px;">
+      <div class="mono-label" style="margin-bottom: 12px;">MONTHLY BREAKDOWN — SIDE BY SIDE</div>
+      <div class="data-table">
+        <div class="col">
+          <h2 class="city-a" data-city="a">Paris</h2>
+          <div class="country" data-country="a">FRANCE · ÎLE-DE-FRANCE</div>
+          <table>
+            <thead><tr><th>Month</th><th>High</th><th>Low</th><th>Rain</th><th>Sun</th></tr></thead>
+            <tbody id="paris-tbody-c"></tbody>
+          </table>
+        </div>
+        <div class="col">
+          <h2 class="city-b" data-city="b">London</h2>
+          <div class="country" data-country="b">UNITED KINGDOM · England</div>
+          <table>
+            <thead><tr><th>Month</th><th>High</th><th>Low</th><th>Rain</th><th>Sun</th></tr></thead>
+            <tbody id="london-tbody-c"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot"><span>SOURCE · OPEN-METEO · 30-YR NORMALS</span><span>CLIMATO</span></div>
+  </div>
+</div>
+
+<!-- ============ Sketch toolbar ============ -->
+<div id="sketch-tools">
+  <span>SKETCH 001</span>
+  <select onchange="document.querySelectorAll('link[href*=themes]').forEach(l => l.href = '../themes/' + this.value + '.css')">
+    <option value="default">Default</option>
+  </select>
+  <span style="opacity: 0.6;">·</span>
+  <span style="opacity: 0.7;">stress test:</span>
+  <select id="name-swap" onchange="swapCityNames(this.value)" title="Swap city names to test how the layout handles long names (variant C only)">
+    <option value="default">Paris / London</option>
+    <option value="medium">Reykjavík / Bratislava</option>
+    <option value="long">Saint Petersburg / Christchurch</option>
+    <option value="hyphen">Cluj-Napoca / Frankfurt am Main</option>
+    <option value="extreme">San Cristóbal de las Casas / Vereeniging</option>
+  </select>
+</div>
+
+<script>
+  // ============ Variant switching ============
+  function showVariant(id, evt) {
+    document.querySelectorAll('.variant').forEach(v => v.classList.remove('active'));
+    document.querySelectorAll('.variant-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('variant-' + id).classList.add('active');
+    evt.target.classList.add('active');
+    window.scrollTo(0, 0);
+  }
+
+  // ============ Data (Paris vs London — 30-year normals, approximated) ============
+  const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  const paris = {
+    high:   [ 7,  8, 12, 15, 19, 22, 24, 24, 21, 16, 11,  8],
+    low:    [ 3,  3,  5,  7, 11, 14, 16, 16, 13, 10,  6,  4],
+    precip: [51, 41, 47, 51, 63, 50, 53, 62, 47, 53, 54, 58],
+    sun:    [2.1, 3.0, 4.7, 6.0, 6.8, 7.5, 8.0, 7.2, 5.9, 4.0, 2.4, 1.8]
+  };
+  const london = {
+    high:   [ 8,  8, 11, 14, 17, 20, 22, 22, 19, 15, 11,  8],
+    low:    [ 3,  3,  4,  6,  9, 12, 14, 14, 12,  9,  6,  4],
+    precip: [55, 41, 42, 44, 49, 45, 45, 50, 49, 69, 59, 55],
+    sun:    [1.7, 2.4, 4.0, 5.2, 6.3, 6.6, 6.9, 6.4, 5.0, 3.4, 2.0, 1.5]
+  };
+
+  // ============ Render bar charts ============
+  function renderBars(elId) {
+    const el = document.getElementById(elId);
+    if (!el) return;
+    const max = 30;
+    let html = '';
+    for (let i = 0; i < 12; i++) {
+      const aPct = (paris.high[i] / max) * 100;
+      const bPct = (london.high[i] / max) * 100;
+      html += `<div class="bar-group">
+        <div class="bar-a" style="height: ${aPct}%" title="Paris ${paris.high[i]}°C"></div>
+        <div class="bar-b" style="height: ${bPct}%" title="London ${london.high[i]}°C"></div>
+      </div>`;
+    }
+    el.innerHTML = html;
+  }
+  ['bars-a','bars-b','bars-c'].forEach(renderBars);
+
+  // ============ Render tables ============
+  function renderTable(elId, data) {
+    const el = document.getElementById(elId);
+    if (!el) return;
+    let html = '';
+    for (let i = 0; i < 12; i++) {
+      html += `<tr>
+        <td>${months[i]}</td>
+        <td style="padding: 6px 12px;">${data.high[i]}°</td>
+        <td style="padding: 6px 12px;">${data.low[i]}°</td>
+        <td style="padding: 6px 12px;">${data.precip[i]}mm</td>
+        <td style="padding: 6px 12px;">${data.sun[i].toFixed(1)}h</td>
+      </tr>`;
+    }
+    el.innerHTML = html;
+  }
+  ['paris-tbody-a','paris-tbody-b','paris-tbody-c'].forEach(id => renderTable(id, paris));
+  ['london-tbody-a','london-tbody-b','london-tbody-c'].forEach(id => renderTable(id, london));
+
+  // ============ City-name stress test (variant C) ============
+  // Swaps the headline + table-header city names to longer strings so the
+  // typography stress points (clamp() headline, .col h2) can be eyeballed.
+  // Narrative/breadcrumb/stat-tag copy is intentionally NOT swapped — those
+  // are smaller text and not the focus of the stress test.
+  const CITY_PAIRS = {
+    default:  { a: 'Paris',  b: 'London',           ca: 'FRANCE · ÎLE-DE-FRANCE',     cb: 'UNITED KINGDOM · England' },
+    medium:   { a: 'Reykjavík', b: 'Bratislava',    ca: 'ICELAND · Capital Region',   cb: 'SLOVAKIA · Bratislava Region' },
+    long:     { a: 'Saint Petersburg', b: 'Christchurch', ca: 'RUSSIA · Northwestern', cb: 'NEW ZEALAND · Canterbury' },
+    hyphen:   { a: 'Cluj-Napoca', b: 'Frankfurt am Main', ca: 'ROMANIA · Cluj',        cb: 'GERMANY · Hesse' },
+    extreme:  { a: 'San Cristóbal de las Casas', b: 'Vereeniging', ca: 'MEXICO · Chiapas', cb: 'SOUTH AFRICA · Gauteng' }
+  };
+  function swapCityNames(key) {
+    const p = CITY_PAIRS[key] || CITY_PAIRS.default;
+    document.querySelectorAll('[data-city="a"]').forEach(el => el.textContent = p.a);
+    document.querySelectorAll('[data-city="b"]').forEach(el => el.textContent = p.b);
+    document.querySelectorAll('[data-country="a"]').forEach(el => el.textContent = p.ca);
+    document.querySelectorAll('[data-country="b"]').forEach(el => el.textContent = p.cb);
+    // Auto-jump to variant C since that's where the swap takes effect.
+    document.querySelectorAll('.variant').forEach(v => v.classList.remove('active'));
+    document.querySelectorAll('.variant-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('variant-c').classList.add('active');
+    document.querySelectorAll('.variant-tab')[2].classList.add('active');
+  }
+</script>
+
+</body>
+</html>
