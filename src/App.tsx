@@ -38,7 +38,15 @@ export default function App() {
   const climateB = useClimateNormals(isComparison ? comparisonB : undefined)
   const isMd = useMediaQuery('(min-width: 768px)')
 
-  useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoundSlug })
+  useDocumentMeta({
+    selectedCity,
+    city,
+    isPlaceholderData,
+    notFoundSlug,
+    comparison: isComparison && comparisonA && comparisonB
+      ? { a: comparisonA, b: comparisonB, cityA: climateA.data, cityB: climateB.data }
+      : undefined,
+  })
 
   const sharedProps = city ? { city, unit, setUnit, chartVariant, setChartVariant, currentTemp } : null
 

@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import type { City, GeoCity } from '../data/cities'
 import { MONTHS, MONTHS_LONG } from '../data/cities'
-import { nameFromSlug, toSlug } from '../lib/route'
+import { nameFromSlug, toCompareSlug, toSlug } from '../lib/route'
+import { compareCities } from '../lib/comparison'
 
 const DEFAULT_TITLE = 'Climato — Monthly Averages'
 const DEFAULT_DESCRIPTION =
@@ -170,15 +171,90 @@ function buildJsonLd(selectedCity: GeoCity, city: City | undefined): object {
   }
 }
 
+// Build comparison-page meta: title, description, canonical, and a JSON-LD
+// graph with two Dataset nodes (one per city) plus a BreadcrumbList
+// (Climato › Compare › A vs B).
+function buildComparisonJsonLd(a: GeoCity, b: GeoCity, cityA: City | undefined, cityB: City | undefined): object {
+  const origin = window.location.origin
+  const compareUrl = `${origin}${toCompareSlug(a, b).path}`
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      buildDatasetNode(a, cityA),
+      buildDatasetNode(b, cityB),
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Climato', item: `${origin}/` },
+          { '@type': 'ListItem', position: 2, name: 'Compare', item: `${origin}/compare` },
+          { '@type': 'ListItem', position: 3, name: `${a.name} vs ${b.name}`, item: compareUrl },
+        ],
+      },
+    ],
+  }
+}
+
+interface ComparisonMeta {
+  a: GeoCity
+  b: GeoCity
+  cityA?: City   // climate-resolved (with high/low/precip/sun arrays)
+  cityB?: City
+}
+
 interface Args {
   selectedCity: GeoCity
   city: City | undefined
   isPlaceholderData: boolean
   notFoundSlug: string | null
+  // When set, comparison mode takes precedence over single-city mode.
+  comparison?: ComparisonMeta
 }
 
-export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoundSlug }: Args) {
+export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoundSlug, comparison }: Args) {
   useEffect(() => {
+    // ─── Comparison mode ────────────────────────────────────────────────
+    if (comparison) {
+      const { a, b, cityA, cityB } = comparison
+      document.title = `${a.name} vs ${b.name} — Climate Comparison · Climato`
+
+      const haveBothClimate = !!cityA && !!cityB
+      if (haveBothClimate) {
+        const result = compareCities(cityA, cityB)
+        const tempStat = result.stats[0]
+        const warmerName = tempStat.winner === 'a' ? a.name : tempStat.winner === 'b' ? b.name : null
+        const tempPhrase = warmerName
+          ? `${warmerName} is ${tempStat.delta.replace('+', '')} warmer on average.`
+          : `Both cities share the same average temperature.`
+        const overlapPhrase = result.overlapMonths.length
+          ? ` Best months for both: ${result.overlapFormatted}.`
+          : ''
+        setMeta(
+          'description',
+          `Compare monthly weather averages for ${a.name} and ${b.name}. ${tempPhrase}${overlapPhrase}`,
+        )
+      } else {
+        setMeta(
+          'description',
+          `Compare monthly temperature, rainfall and sunshine averages for ${a.name}, ${a.country} and ${b.name}, ${b.country}.`,
+        )
+      }
+
+      // Per-comparison OG image (Task 3.4) is deferred; fall back to default.
+      setOgImage(DEFAULT_OG_IMAGE)
+
+      const hasRealCoordsA = a.lat !== 0 || a.lon !== 0
+      const hasRealCoordsB = b.lat !== 0 || b.lon !== 0
+      if (hasRealCoordsA && hasRealCoordsB) {
+        setJsonLd(buildComparisonJsonLd(a, b, cityA, cityB))
+        const compareUrl = `${window.location.origin}${toCompareSlug(a, b).path}`
+        setCanonical(compareUrl)
+      } else {
+        setJsonLd(null)
+        setCanonical(null)
+      }
+      return
+    }
+
     if (notFoundSlug) {
       const label = nameFromSlug(notFoundSlug)
       document.title = `${label} — not found · Climato`
@@ -234,7 +310,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       setJsonLd(null)
       setCanonical(null)
     }
-  }, [selectedCity, city, isPlaceholderData, notFoundSlug])
+  }, [selectedCity, city, isPlaceholderData, notFoundSlug, comparison])
 
   useEffect(() => {
     return () => {
