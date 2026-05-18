@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import type { GeoCity } from '../data/cities'
 import { useWeatherStore } from '../store/weatherStore'
+import { useComparisonStore } from '../store/comparisonStore'
 import { countryFromSlug, countrySlug, nameFromSlug, slugify, toCompareSlug, toSlug } from './slug'
 
 export { countryFromSlug, countrySlug, nameFromSlug, slugify, toCompareSlug, toSlug }
@@ -183,6 +184,10 @@ export function useUrlSync(): UrlSyncResult {
   const setCity = useWeatherStore(s => s.setCity)
   const setNotFoundSlug = useWeatherStore(s => s.setNotFoundSlug)
   const notFoundSlug = useWeatherStore(s => s.notFoundSlug)
+  const setComparisonPair = useComparisonStore(s => s.setPair)
+  const setComparisonHalf = useComparisonStore(s => s.setHalf)
+  const setComparisonNotFound = useComparisonStore(s => s.setNotFound)
+  const clearComparison = useComparisonStore(s => s.clear)
   const skipNextPush = useRef(false)
 
   useEffect(() => {
@@ -209,10 +214,36 @@ export function useUrlSync(): UrlSyncResult {
       }
 
       const parsed = parseUrl(pathname, window.location.search)
-      if (parsed.type === 'root') return
-      // Comparison routes are handled by a separate path (see Task 3.1 wiring).
-      // useUrlSync only owns single-city slug routing here.
-      if (parsed.type === 'compare') return
+      if (parsed.type === 'root') {
+        clearComparison()
+        return
+      }
+
+      // Comparison: resolve both halves in parallel via geocoding. Set
+      // placeholders synchronously so first-paint can render the diptych
+      // skeleton; replace with real cities as geocoding lands.
+      if (parsed.type === 'compare') {
+        const placeholderA = reconstructFromSlug(parsed.a)
+        const placeholderB = reconstructFromSlug(parsed.b)
+        setComparisonPair(placeholderA, placeholderB)
+
+        const [resolvedA, resolvedB] = await Promise.all([
+          resolveSlugViaGeocoding(parsed.a),
+          resolveSlugViaGeocoding(parsed.b),
+        ])
+        if (cancelled) return
+
+        if (resolvedA) setComparisonHalf('a', resolvedA)
+        else setComparisonNotFound('a')
+
+        if (resolvedB) setComparisonHalf('b', resolvedB)
+        else setComparisonNotFound('b')
+        return
+      }
+
+      // Single-city slug — clear any prior comparison state and run the
+      // existing flow.
+      clearComparison()
 
       // Synchronous placeholder for first paint — uses the URL coords if
       // present, otherwise lat=0/lon=0 (which keeps useClimateNormals and
