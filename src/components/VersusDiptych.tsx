@@ -1,7 +1,7 @@
 import React from 'react'
 import type { City } from '../data/cities'
 import { compareCities, type ComparisonStat } from '../lib/comparison'
-import { CITY_A_COLOR, CITY_B_COLOR, OVERLAP_COLOR } from '../lib/colors'
+import { CITY_A_COLOR, CITY_B_COLOR } from '../lib/colors'
 
 const borderHard = '#111'
 const borderSoft = 'rgba(17, 17, 17, 0.12)'
@@ -41,7 +41,6 @@ function winnerArrow(winner: ComparisonStat['winner'], aName: string, bName: str
 
 export function VersusDiptych({ a, b }: Props) {
   const result = compareCities(a, b)
-  const overlapMonthCount = result.overlapMonths.length
 
   return (
     <div style={{
@@ -111,60 +110,9 @@ export function VersusDiptych({ a, b }: Props) {
         />
       ))}
 
-      {/* Overlap row — appears only when there is at least one shared ideal month */}
-      {overlapMonthCount > 0 && (
-        <DuelRow
-          tint
-          leftBlock={
-            <>
-              <div style={{ ...monoLabel, color: OVERLAP_COLOR, fontWeight: 600 }}>PEAK OVERLAP</div>
-              <div style={{
-                ...display,
-                fontSize: 40,
-                lineHeight: 0.95,
-                color: OVERLAP_COLOR,
-              }}>
-                {result.overlapFormatted}
-              </div>
-            </>
-          }
-          centerBlock={
-            <>
-              <div style={{ ...monoLabel, fontSize: 9 }}>SHARED IDEAL</div>
-              <div style={{
-                ...display,
-                fontSize: 18,
-                color: OVERLAP_COLOR,
-              }}>
-                {overlapMonthCount} {overlapMonthCount === 1 ? 'MO' : 'MOS'}
-              </div>
-              <div style={{
-                fontFamily: "'JetBrains Mono', ui-monospace, monospace",
-                fontSize: 10,
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
-                color: OVERLAP_COLOR,
-              }}>
-                ★ BOTH
-              </div>
-            </>
-          }
-          rightBlock={
-            <>
-              <div style={{ ...monoLabel, color: OVERLAP_COLOR, fontWeight: 600, textAlign: 'right' }}>PEAK OVERLAP</div>
-              <div style={{
-                ...display,
-                fontSize: 40,
-                lineHeight: 0.95,
-                color: OVERLAP_COLOR,
-                textAlign: 'right',
-              }}>
-                {result.overlapFormatted}
-              </div>
-            </>
-          }
-        />
-      )}
+      {/* Note: a PEAK OVERLAP row used to live here, but it duplicated the
+          "Peak overlap" card already shown in the sticky-calendar sidebar,
+          and both side columns rendered identical text. Removed for clarity. */}
     </div>
   )
 }
