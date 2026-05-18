@@ -162,6 +162,8 @@ export function CompareWithPill({ geo, city, fg = '#111', muted = '#85847d', bg 
           e.currentTarget.style.color = fg
         }}
         aria-expanded={expanded}
+        aria-haspopup="dialog"
+        aria-controls="compare-with-panel"
         aria-label="Compare this city with another"
       >
         <span aria-hidden="true">↔</span>
@@ -209,6 +211,9 @@ function ExpandedPanel({ geo, fg, muted, bg, align, suggestions, onPick }: Expan
 
   return (
     <div
+      id="compare-with-panel"
+      role="dialog"
+      aria-label={`Compare ${geo.name} with another city`}
       style={{
         // Float over the content below the pill instead of pushing it
         // down — keeps the page layout stable when the panel opens/closes.
