@@ -1,6 +1,6 @@
 import React from 'react'
 import type { City } from '../data/cities'
-import { compareCities, type ComparisonStat } from '../lib/comparison'
+import { compareCities, type ComparisonStat, type Unit } from '../lib/comparison'
 import { CITY_A_COLOR, CITY_B_COLOR } from '../lib/colors'
 import { CityLink } from './CityLink'
 
@@ -26,6 +26,7 @@ const display: React.CSSProperties = {
 interface Props {
   a: City
   b: City
+  unit?: Unit
 }
 
 function colorFor(winner: ComparisonStat['winner']): string {
@@ -40,8 +41,8 @@ function winnerArrow(winner: ComparisonStat['winner'], aName: string, bName: str
   return 'TIE'
 }
 
-export function VersusDiptych({ a, b }: Props) {
-  const result = compareCities(a, b)
+export function VersusDiptych({ a, b, unit = 'C' }: Props) {
+  const result = compareCities(a, b, unit)
 
   return (
     <div style={{

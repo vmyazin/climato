@@ -1,12 +1,13 @@
 import React from 'react'
 import type { City } from '../data/cities'
-import { MONTHS_LONG, MONTHS } from '../data/cities'
+import { MONTHS_LONG, MONTHS, cToF, mmToIn } from '../data/cities'
 import { BestMonthsCalendar } from './BestMonthsCalendar'
 import { CityLink } from './CityLink'
 import { VersusDiptych } from './VersusDiptych'
-import { compareCities } from '../lib/comparison'
+import { compareCities, type Unit } from '../lib/comparison'
 import { classifyClimate, climateLabel, peakAndTrough } from '../lib/climate-summary'
 import { CITY_A_COLOR, CITY_B_COLOR, OVERLAP_COLOR } from '../lib/colors'
+import { useWeatherStore } from '../store/weatherStore'
 
 const fg = '#111'
 const bg = '#f0f1ed'
@@ -20,7 +21,8 @@ interface Props {
 }
 
 export function ComparisonPage({ a, b }: Props) {
-  const result = compareCities(a, b)
+  const unit: Unit = useWeatherStore(s => s.unit)
+  const result = compareCities(a, b, unit)
 
   return (
     <div style={{
@@ -67,8 +69,8 @@ export function ComparisonPage({ a, b }: Props) {
 
           {/* Right column: scrolling content */}
           <div>
-            <VersusDiptych a={a} b={b} />
-            <Narrative a={a} b={b} />
+            <VersusDiptych a={a} b={b} unit={unit} />
+            <Narrative a={a} b={b} unit={unit} />
           </div>
         </div>
 
@@ -89,8 +91,8 @@ export function ComparisonPage({ a, b }: Props) {
             gridTemplateColumns: '1fr 1fr',
             borderTop: `1px solid ${borderHard}`,
           }}>
-            <CityTableCol city={a} color={CITY_A_COLOR} leftCol />
-            <CityTableCol city={b} color={CITY_B_COLOR} />
+            <CityTableCol city={a} color={CITY_A_COLOR} unit={unit} leftCol />
+            <CityTableCol city={b} color={CITY_B_COLOR} unit={unit} />
           </div>
         </div>
       </div>
@@ -231,12 +233,14 @@ function Legend() {
   )
 }
 
-function Narrative({ a, b }: { a: City; b: City }) {
+function Narrative({ a, b, unit }: { a: City; b: City; unit: Unit }) {
   const aClimate = classifyClimate(a)
   const bClimate = classifyClimate(b)
   const aPeak = peakAndTrough(a.high)
   const bPeak = peakAndTrough(b.high)
   const sharedClimate = aClimate === bClimate
+  const fmtTemp = (c: number) =>
+    unit === 'F' ? `${cToF(c).toFixed(1)}°F` : `${c.toFixed(1)}°C`
 
   return (
     <div style={{
@@ -268,15 +272,18 @@ function Narrative({ a, b }: { a: City; b: City }) {
         )}
         {' '}
         <CityLink city={a} style={{ color: CITY_A_COLOR, fontWeight: 600 }}>{a.name}</CityLink>'s warmest month is <strong>{MONTHS_LONG[aPeak.peakIdx]}</strong> at{' '}
-        <strong>{aPeak.peakValue}°C</strong>;{' '}
+        <strong>{fmtTemp(aPeak.peakValue)}</strong>;{' '}
         <CityLink city={b} style={{ color: CITY_B_COLOR, fontWeight: 600 }}>{b.name}</CityLink> peaks in <strong>{MONTHS_LONG[bPeak.peakIdx]}</strong> at{' '}
-        <strong>{bPeak.peakValue}°C</strong>.
+        <strong>{fmtTemp(bPeak.peakValue)}</strong>.
       </p>
     </div>
   )
 }
 
-function CityTableCol({ city, color, leftCol }: { city: City; color: string; leftCol?: boolean }) {
+function CityTableCol({ city, color, unit, leftCol }: { city: City; color: string; unit: Unit; leftCol?: boolean }) {
+  const showTemp = (c: number) => unit === 'F' ? Math.round(cToF(c)) : c
+  const showRain = (mm: number) => unit === 'F' ? mmToIn(mm) : mm
+  const rainSuffix = unit === 'F' ? 'in' : 'mm'
   return (
     <div style={{
       padding: 24,
@@ -332,9 +339,9 @@ function CityTableCol({ city, color, leftCol }: { city: City; color: string; lef
               background: i % 2 === 1 ? 'rgba(0, 0, 0, 0.02)' : 'transparent',
             }}>
               <td style={{ padding: '6px 4px', fontSize: 13, textAlign: 'left' }}>{m}</td>
-              <td style={{ padding: '6px 4px', fontSize: 13, textAlign: 'right' }}>{city.high[i]}°</td>
-              <td style={{ padding: '6px 4px', fontSize: 13, textAlign: 'right' }}>{city.low[i]}°</td>
-              <td style={{ padding: '6px 4px', fontSize: 13, textAlign: 'right' }}>{city.precip[i]}mm</td>
+              <td style={{ padding: '6px 4px', fontSize: 13, textAlign: 'right' }}>{showTemp(city.high[i])}°</td>
+              <td style={{ padding: '6px 4px', fontSize: 13, textAlign: 'right' }}>{showTemp(city.low[i])}°</td>
+              <td style={{ padding: '6px 4px', fontSize: 13, textAlign: 'right' }}>{showRain(city.precip[i])}{rainSuffix}</td>
               <td style={{ padding: '6px 4px', fontSize: 13, textAlign: 'right' }}>{city.sun[i].toFixed(1)}h</td>
             </tr>
           ))}
