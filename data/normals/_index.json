@@ -89,11 +89,23 @@
     "country": "South Africa",
     "admin1": "Western Cape"
   },
+  "3459712": {
+    "fetched_at": "2026-05-18T14:08:33.613Z",
+    "name": "Joinville",
+    "country": "Brazil",
+    "admin1": "Santa Catarina"
+  },
   "3463237": {
     "fetched_at": "2026-05-02T22:10:05.270Z",
     "name": "Florianópolis",
     "country": "Brazil",
     "admin1": "Santa Catarina"
+  },
+  "3465927": {
+    "fetched_at": "2026-05-18T14:08:33.613Z",
+    "name": "Colombo",
+    "country": "Brazil",
+    "admin1": "Paraná"
   },
   "3469968": {
     "fetched_at": "2026-05-04T09:40:07.031Z",
@@ -124,6 +136,12 @@
     "name": "San Francisco",
     "country": "United States",
     "admin1": "California"
+  },
+  "6317123": {
+    "fetched_at": "2026-05-18T14:08:33.613Z",
+    "name": "Fazenda Rio Grande",
+    "country": "Brazil",
+    "admin1": "Paraná"
   },
   "6951112": {
     "fetched_at": "2026-05-03T00:11:46.565Z",
