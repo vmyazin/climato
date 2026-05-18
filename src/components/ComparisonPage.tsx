@@ -2,6 +2,7 @@ import React from 'react'
 import type { City } from '../data/cities'
 import { MONTHS_LONG, MONTHS } from '../data/cities'
 import { BestMonthsCalendar } from './BestMonthsCalendar'
+import { CityLink } from './CityLink'
 import { VersusDiptych } from './VersusDiptych'
 import { compareCities } from '../lib/comparison'
 import { classifyClimate, climateLabel, peakAndTrough } from '../lib/climate-summary'
@@ -92,8 +93,6 @@ export function ComparisonPage({ a, b }: Props) {
             <CityTableCol city={b} color={CITY_B_COLOR} />
           </div>
         </div>
-
-        <Footer />
       </div>
     </div>
   )
@@ -129,7 +128,7 @@ function Hero({ a, b }: { a: City; b: City }) {
         wordBreak: 'break-word',
         margin: 0,
       }}>
-        <span style={{ color: CITY_A_COLOR }}>{a.name}</span>{' '}
+        <CityLink city={a} style={{ color: CITY_A_COLOR }}>{a.name}</CityLink>{' '}
         <span style={{
           color: muted,
           fontWeight: 400,
@@ -137,7 +136,7 @@ function Hero({ a, b }: { a: City; b: City }) {
           verticalAlign: '0.55em',
           letterSpacing: 0,
         }}>vs</span>{' '}
-        <span style={{ color: CITY_B_COLOR }}>{b.name}</span>
+        <CityLink city={b} style={{ color: CITY_B_COLOR }}>{b.name}</CityLink>
       </h1>
       <div style={{
         fontSize: 22,
@@ -257,14 +256,20 @@ function Narrative({ a, b }: { a: City; b: City }) {
         CLIMATE OVERVIEW
       </h3>
       <p style={{ margin: '0 0 10px 0', lineHeight: 1.55 }}>
-        {a.name} has a <strong>{climateLabel(aClimate)}</strong> climate;{' '}
-        {sharedClimate
-          ? `${b.name} shares the same classification.`
-          : `${b.name} is classified as ${climateLabel(bClimate)}.`}
+        <CityLink city={a} style={{ color: CITY_A_COLOR, fontWeight: 600 }}>{a.name}</CityLink> has a <strong>{climateLabel(aClimate)}</strong> climate;{' '}
+        {sharedClimate ? (
+          <>
+            <CityLink city={b} style={{ color: CITY_B_COLOR, fontWeight: 600 }}>{b.name}</CityLink> shares the same classification.
+          </>
+        ) : (
+          <>
+            <CityLink city={b} style={{ color: CITY_B_COLOR, fontWeight: 600 }}>{b.name}</CityLink> is classified as {climateLabel(bClimate)}.
+          </>
+        )}
         {' '}
-        {a.name}'s warmest month is <strong>{MONTHS_LONG[aPeak.peakIdx]}</strong> at{' '}
+        <CityLink city={a} style={{ color: CITY_A_COLOR, fontWeight: 600 }}>{a.name}</CityLink>'s warmest month is <strong>{MONTHS_LONG[aPeak.peakIdx]}</strong> at{' '}
         <strong>{aPeak.peakValue}°C</strong>;{' '}
-        {b.name} peaks in <strong>{MONTHS_LONG[bPeak.peakIdx]}</strong> at{' '}
+        <CityLink city={b} style={{ color: CITY_B_COLOR, fontWeight: 600 }}>{b.name}</CityLink> peaks in <strong>{MONTHS_LONG[bPeak.peakIdx]}</strong> at{' '}
         <strong>{bPeak.peakValue}°C</strong>.
       </p>
     </div>
@@ -290,7 +295,7 @@ function CityTableCol({ city, color, leftCol }: { city: City; color: string; lef
         lineHeight: 0.92,
         color,
       }}>
-        {city.name}
+        <CityLink city={city}>{city.name}</CityLink>
       </h2>
       <div style={{
         fontSize: 18,
@@ -339,22 +344,3 @@ function CityTableCol({ city, color, leftCol }: { city: City; color: string; lef
   )
 }
 
-function Footer() {
-  return (
-    <div style={{
-      marginTop: 56,
-      paddingTop: 24,
-      borderTop: `1px solid ${borderSoft}`,
-      fontFamily: "'JetBrains Mono', ui-monospace, monospace",
-      fontSize: 11,
-      letterSpacing: '1.5px',
-      color: muted,
-      textTransform: 'uppercase',
-      display: 'flex',
-      justifyContent: 'space-between',
-    }}>
-      <span>SOURCE · OPEN-METEO · 30-YR NORMALS</span>
-      <span>CLIMATO</span>
-    </div>
-  )
-}

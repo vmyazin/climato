@@ -2,6 +2,7 @@ import React from 'react'
 import type { City } from '../data/cities'
 import { compareCities, type ComparisonStat } from '../lib/comparison'
 import { CITY_A_COLOR, CITY_B_COLOR } from '../lib/colors'
+import { CityLink } from './CityLink'
 
 const borderHard = '#111'
 const borderSoft = 'rgba(17, 17, 17, 0.12)'
@@ -63,7 +64,7 @@ export function VersusDiptych({ a, b }: Props) {
               textTransform: 'uppercase',
               color: CITY_A_COLOR,
             }}>
-              {a.name}
+              <CityLink city={a}>{a.name}</CityLink>
             </h2>
             <div style={{ ...monoLabel, marginTop: 10 }}>
               {a.country}{a.admin1 ? ` · ${a.admin1}` : ''}
@@ -91,7 +92,7 @@ export function VersusDiptych({ a, b }: Props) {
               color: CITY_B_COLOR,
               textAlign: 'right',
             }}>
-              {b.name}
+              <CityLink city={b}>{b.name}</CityLink>
             </h2>
             <div style={{ ...monoLabel, marginTop: 10, textAlign: 'right' }}>
               {b.country}{b.admin1 ? ` · ${b.admin1}` : ''}
