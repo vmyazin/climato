@@ -111,7 +111,7 @@ function Breadcrumb({ a, b }: { a: City; b: City }) {
       textTransform: 'uppercase',
       marginBottom: 16,
     }}>
-      <a href="/" style={{ color: muted, textDecoration: 'none' }}>CLIMATO</a> · COMPARE · {a.name.toUpperCase()} vs {b.name.toUpperCase()}
+COMPARE · {a.name.toUpperCase()} vs {b.name.toUpperCase()}
     </div>
   )
 }
