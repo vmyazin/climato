@@ -4,6 +4,7 @@ import { MonthlyChart } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
 import { ChartToggle } from './Toggles'
 import { CurrentTempBadge } from './CurrentTempBadge'
+import { CompareWithPill } from './CompareWithPill'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import type { CurrentTemp } from '../hooks/useCurrentTemp'
 
@@ -135,6 +136,9 @@ export function VariationC({ city, unit, chartVariant, setChartVariant, currentT
               </div>
               <div style={{ borderBottom: `1px solid ${fg}`, paddingBottom: 14 }}>
                 <CurrentTempBadge tempC={currentTemp?.tempC} unit={unit} fg={fg} muted={muted} accent={accent} variant="editorial" />
+              </div>
+              <div style={{ paddingTop: 14 }}>
+                <CompareWithPill geo={city} city={city} fg={fg} muted={muted} bg="#fff" />
               </div>
             </div>
 

@@ -5,6 +5,7 @@ import { TopoMap } from './TopoMap'
 import { ChartToggle } from './Toggles'
 import { CurrentTempBadge } from './CurrentTempBadge'
 import { FitHeadline } from './VariationC'
+import { CompareWithPill } from './CompareWithPill'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import type { CurrentTemp } from '../hooks/useCurrentTemp'
 
@@ -158,6 +159,10 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
             <BStat label="SUN HRS/DAY" value={city.sun[m].toFixed(1)} isMd={isMd} />
             <BStat label="PRECIP" value={unit === 'C' ? `${city.precip[m]} mm` : `${mmToIn(city.precip[m])} in`} last isMd={isMd} />
           </div>
+        </div>
+
+        <div>
+          <CompareWithPill geo={city} city={city} fg={fg} muted={muted} bg={bg} />
         </div>
 
         {/* Secondary: chart + map — stack on mobile */}

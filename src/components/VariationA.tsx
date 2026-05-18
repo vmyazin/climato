@@ -4,6 +4,7 @@ import { MonthlyChart, SmallBars } from './MonthlyChart'
 import { TopoMap } from './TopoMap'
 import { ChartToggle } from './Toggles'
 import { CurrentTempBadge } from './CurrentTempBadge'
+import { CompareWithPill } from './CompareWithPill'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import type { CurrentTemp } from '../hooks/useCurrentTemp'
 
@@ -57,6 +58,9 @@ export function VariationA({ city, unit, chartVariant, setChartVariant, currentT
           </h1>
           <div style={{ fontSize: isMd ? 28 : 18, fontWeight: 400, letterSpacing: -0.4, color: muted, marginTop: 4 }}>
             {city.country}{city.admin1 ? ` · ${city.admin1}` : ''}
+          </div>
+          <div style={{ marginTop: 16 }}>
+            <CompareWithPill geo={city} city={city} fg={fg} muted={muted} bg="#fff" />
           </div>
         </div>
 
