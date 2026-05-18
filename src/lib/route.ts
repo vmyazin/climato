@@ -288,6 +288,12 @@ export function useUrlSync(): UrlSyncResult {
       skipNextPush.current = false
       return
     }
+    // Comparison mode owns the URL — don't let selectedCity push over it.
+    // Read window.location directly (not a store subscription) to avoid the
+    // stale-closure race on first mount where setComparisonPair has already
+    // run synchronously inside the mount effect but the store-hook value
+    // captured in this effect's closure is from the prior render.
+    if (window.location.pathname.startsWith('/compare/')) return
     // Placeholder cities (lat=0,lon=0) shouldn't drive URL changes — they
     // exist only as a first-paint stand-in until real geocoding resolves.
     if (selectedCity.lat === 0 && selectedCity.lon === 0) return
