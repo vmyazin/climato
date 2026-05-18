@@ -38,3 +38,10 @@ pnpm-debug.log*
 
 # GeoNames raw dumps (re-downloadable)
 data/raw/
+
+# Playwright MCP scratch — screenshots, console logs, snapshot YAMLs from
+# agent-driven QA. Always disposable; never commit.
+.playwright-mcp/
+*-mobile-*.png
+*-desktop-*.png
+compare-*.png

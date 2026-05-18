@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import type { City } from '../data/cities'
 import { MONTHS_LONG, MONTHS, cToF, mmToIn } from '../data/cities'
 import { BestMonthsCalendar } from './BestMonthsCalendar'
@@ -8,6 +8,7 @@ import { compareCities, type Unit } from '../lib/comparison'
 import { classifyClimate, climateLabel, peakAndTrough } from '../lib/climate-summary'
 import { CITY_A_COLOR, CITY_B_COLOR, OVERLAP_COLOR } from '../lib/colors'
 import { useWeatherStore } from '../store/weatherStore'
+import { useMediaQuery } from '../hooks/useMediaQuery'
 
 const fg = '#111'
 const bg = '#f0f1ed'
@@ -23,6 +24,7 @@ interface Props {
 export function ComparisonPage({ a, b }: Props) {
   const unit: Unit = useWeatherStore(s => s.unit)
   const result = compareCities(a, b, unit)
+  const isMd = useMediaQuery('(min-width: 768px)')
 
   return (
     <div style={{
@@ -35,22 +37,22 @@ export function ComparisonPage({ a, b }: Props) {
       <div style={{
         maxWidth: 1280,
         margin: '0 auto',
-        padding: 32,
+        padding: isMd ? 32 : 16,
       }}>
         <Breadcrumb a={a} b={b} />
-        <Hero a={a} b={b} />
+        <Hero a={a} b={b} isMd={isMd} />
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '420px 1fr',
-          gap: 32,
+          gridTemplateColumns: isMd ? '420px 1fr' : '1fr',
+          gap: isMd ? 32 : 24,
           // `alignItems: 'stretch'` (the default) makes the left cell tall
           // enough for the sticky calendar to actually stick — with `start`
           // the cell collapsed to content height and sticky had no track.
         }}>
-          {/* Sticky calendar sidebar — offset must clear the sticky AppHeader
-              (56px tall on desktop) plus a small breathing-room gap. */}
-          <div style={{ position: 'sticky', top: 72 }}>
+          {/* Calendar sidebar — sticky on desktop, stacked at top on mobile.
+              Sticky offset clears the AppHeader (56px) plus breathing room. */}
+          <div style={isMd ? { position: 'sticky', top: 72 } : undefined}>
             <div style={{
               fontFamily: "'JetBrains Mono', ui-monospace, monospace",
               fontSize: 11,
@@ -77,27 +79,8 @@ export function ComparisonPage({ a, b }: Props) {
           </div>
         </div>
 
-        {/* Full-width side-by-side monthly tables */}
-        <div style={{ marginTop: 48 }}>
-          <div style={{
-            fontFamily: "'JetBrains Mono', ui-monospace, monospace",
-            fontSize: 11,
-            letterSpacing: '1.5px',
-            color: muted,
-            textTransform: 'uppercase',
-            marginBottom: 12,
-          }}>
-            MONTHLY BREAKDOWN — SIDE BY SIDE
-          </div>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            borderTop: `1px solid ${borderHard}`,
-          }}>
-            <CityTableCol city={a} color={CITY_A_COLOR} unit={unit} leftCol />
-            <CityTableCol city={b} color={CITY_B_COLOR} unit={unit} />
-          </div>
-        </div>
+        {/* Monthly breakdown — side-by-side on desktop, tabbed on mobile */}
+        <MonthlyBreakdown a={a} b={b} unit={unit} isMd={isMd} />
       </div>
     </div>
   )
@@ -120,13 +103,13 @@ COMPARE · {a.name.toUpperCase()} vs {b.name.toUpperCase()}
   )
 }
 
-function Hero({ a, b }: { a: City; b: City }) {
+function Hero({ a, b, isMd }: { a: City; b: City; isMd: boolean }) {
   return (
-    <div style={{ marginBottom: 36 }}>
+    <div style={{ marginBottom: isMd ? 36 : 24 }}>
       <h1 style={{
         fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
         fontWeight: 700,
-        fontSize: 'clamp(64px, 13vw, 168px)',
+        fontSize: isMd ? 'clamp(64px, 13vw, 168px)' : 'clamp(44px, 14vw, 64px)',
         lineHeight: 0.9,
         letterSpacing: '-0.045em',
         textTransform: 'uppercase',
@@ -144,9 +127,9 @@ function Hero({ a, b }: { a: City; b: City }) {
         <CityLink city={b} style={{ color: CITY_B_COLOR }}>{b.name}</CityLink>
       </h1>
       <div style={{
-        fontSize: 22,
+        fontSize: isMd ? 22 : 16,
         color: muted,
-        marginTop: 16,
+        marginTop: isMd ? 16 : 12,
         maxWidth: 720,
       }}>
         When should you visit each — and when are both ideal?
@@ -283,37 +266,62 @@ function Narrative({ a, b, unit }: { a: City; b: City; unit: Unit }) {
   )
 }
 
-function CityTableCol({ city, color, unit, leftCol }: { city: City; color: string; unit: Unit; leftCol?: boolean }) {
+interface CityTableColProps {
+  city: City
+  color: string
+  unit: Unit
+  leftCol?: boolean
+  isMd: boolean
+  // When the city name lives in a tab above the table (mobile-tabbed view),
+  // drop the in-table h2 to avoid duplication. The country/admin1 line stays
+  // because it carries info the tab doesn't.
+  hideHeading?: boolean
+  // When the table sits below tabs, the active tab provides the top border.
+  // Skip the table's top border here so they merge into a single rectangle.
+  borderlessTop?: boolean
+}
+
+function CityTableCol({ city, color, unit, leftCol, isMd, hideHeading, borderlessTop }: CityTableColProps) {
   const showTemp = (c: number) => unit === 'F' ? Math.round(cToF(c)) : c
   const showRain = (mm: number) => unit === 'F' ? mmToIn(mm) : mm
   const rainSuffix = unit === 'F' ? 'in' : 'mm'
   return (
     <div style={{
-      padding: 24,
+      padding: isMd ? 24 : 16,
       background: '#fff',
-      border: `1px solid ${borderHard}`,
-      borderTop: 'none',
-      ...(leftCol ? { borderRight: 'none' } : {}),
+      // Per-side borders (not shorthand + override) so toggling `isMd` at
+      // runtime doesn't trip React's shorthand/non-shorthand conflict warning.
+      borderLeft: `1px solid ${borderHard}`,
+      // On desktop the two columns sit side-by-side, so the left column drops
+      // its right border to share the divider. On mobile they stack, so both
+      // keep their right border for a clean grid.
+      borderRight: (isMd && leftCol) ? 'none' : `1px solid ${borderHard}`,
+      borderTop: borderlessTop ? 'none' : `1px solid ${borderHard}`,
+      borderBottom: `1px solid ${borderHard}`,
     }}>
-      <h2 style={{
-        fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
-        fontWeight: 700,
-        fontSize: 56,
-        letterSpacing: '-0.03em',
-        margin: '0 0 4px 0',
-        textTransform: 'uppercase',
-        lineHeight: 0.92,
-        color,
-      }}>
-        <CityLink city={city}>{city.name}</CityLink>
-      </h2>
-      <div style={{
-        fontSize: 18,
-        color: muted,
-        marginBottom: 16,
-      }}>
-        {city.country}{city.admin1 ? ` · ${city.admin1}` : ''}
-      </div>
+      {!hideHeading && (
+        <>
+          <h2 style={{
+            fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
+            fontWeight: 700,
+            fontSize: isMd ? 56 : 36,
+            letterSpacing: '-0.03em',
+            margin: '0 0 4px 0',
+            textTransform: 'uppercase',
+            lineHeight: 0.92,
+            color,
+          }}>
+            <CityLink city={city}>{city.name}</CityLink>
+          </h2>
+          <div style={{
+            fontSize: isMd ? 18 : 14,
+            color: muted,
+            marginBottom: isMd ? 16 : 12,
+          }}>
+            {city.country}{city.admin1 ? ` · ${city.admin1}` : ''}
+          </div>
+        </>
+      )}
 
       <table style={{
         width: '100%',
@@ -351,6 +359,145 @@ function CityTableCol({ city, color, unit, leftCol }: { city: City; color: strin
         </tbody>
       </table>
     </div>
+  )
+}
+
+// ─── Monthly Breakdown ──────────────────────────────────────────────────────
+//
+// Desktop: render both city tables side-by-side, just like before.
+// Mobile:  render a 2-button tab row; only the active city's table is shown.
+//          Tabs use each city's identity color so the active selection has
+//          obvious, branded recognition.
+
+function MonthlyBreakdown({ a, b, unit, isMd }: { a: City; b: City; unit: Unit; isMd: boolean }) {
+  const [tab, setTab] = useState<'a' | 'b'>('a')
+
+  return (
+    <div style={{ marginTop: isMd ? 48 : 32 }}>
+      <div style={{
+        fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+        fontSize: 11,
+        letterSpacing: '1.5px',
+        color: muted,
+        textTransform: 'uppercase',
+        marginBottom: 12,
+      }}>
+        MONTHLY BREAKDOWN{isMd ? ' — SIDE BY SIDE' : ''}
+      </div>
+
+      {isMd ? (
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          borderTop: `1px solid ${borderHard}`,
+        }}>
+          <CityTableCol city={a} color={CITY_A_COLOR} unit={unit} leftCol isMd={isMd} />
+          <CityTableCol city={b} color={CITY_B_COLOR} unit={unit} isMd={isMd} />
+        </div>
+      ) : (
+        <>
+          <MonthlyTabs a={a} b={b} active={tab} onChange={setTab} />
+          <CityTableCol
+            // The key remounts the table on tab change so any future row
+            // animations or transitions trigger naturally per tab.
+            key={tab}
+            city={tab === 'a' ? a : b}
+            color={tab === 'a' ? CITY_A_COLOR : CITY_B_COLOR}
+            unit={unit}
+            isMd={isMd}
+            hideHeading
+            borderlessTop
+          />
+        </>
+      )}
+    </div>
+  )
+}
+
+function MonthlyTabs({ a, b, active, onChange }: {
+  a: City
+  b: City
+  active: 'a' | 'b'
+  onChange: (next: 'a' | 'b') => void
+}) {
+  return (
+    <div
+      role="tablist"
+      aria-label="Monthly breakdown city"
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+      }}
+    >
+      <TabButton
+        city={a}
+        color={CITY_A_COLOR}
+        active={active === 'a'}
+        onClick={() => onChange('a')}
+        position="left"
+      />
+      <TabButton
+        city={b}
+        color={CITY_B_COLOR}
+        active={active === 'b'}
+        onClick={() => onChange('b')}
+        position="right"
+      />
+    </div>
+  )
+}
+
+function TabButton({ city, color, active, onClick, position }: {
+  city: City
+  color: string
+  active: boolean
+  onClick: () => void
+  position: 'left' | 'right'
+}) {
+  return (
+    <button
+      type="button"
+      role="tab"
+      aria-selected={active}
+      onClick={onClick}
+      style={{
+        // Touch-friendly height; matches AGENTS/skill guidance for 48px+ targets.
+        minHeight: 56,
+        padding: '10px 14px',
+        background: active ? '#fff' : 'rgba(17, 17, 17, 0.04)',
+        color: active ? color : muted,
+        // Border choreography: the active tab carries a 3px city-color accent
+        // on top and drops its bottom border so it merges with the table below.
+        // The inactive tab keeps the full black frame.
+        borderTop: active ? `3px solid ${color}` : `3px solid ${borderHard}`,
+        borderBottom: active ? 'none' : `1px solid ${borderHard}`,
+        borderLeft: position === 'left' ? `1px solid ${borderHard}` : 'none',
+        borderRight: `1px solid ${borderHard}`,
+        cursor: 'pointer',
+        textAlign: 'left',
+        fontFamily: "'Inter Tight', Inter, system-ui, sans-serif",
+        fontWeight: active ? 700 : 500,
+        fontSize: 20,
+        textTransform: 'uppercase',
+        letterSpacing: '-0.02em',
+        lineHeight: 1.05,
+        transition: 'background 0.15s ease, color 0.15s ease',
+      }}
+    >
+      {city.name}
+      <span style={{
+        display: 'block',
+        fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+        fontSize: 9,
+        letterSpacing: '1.5px',
+        color: muted,
+        textTransform: 'uppercase',
+        marginTop: 4,
+        fontWeight: 400,
+      }}>
+        {city.country}{city.admin1 ? ` · ${city.admin1}` : ''}
+      </span>
+    </button>
   )
 }
 
