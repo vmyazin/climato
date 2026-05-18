@@ -126,6 +126,11 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
                   <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 11, letterSpacing: 1.5, color: muted }}>LOW</div>
                   <div style={{ fontSize: 72, fontWeight: 600, letterSpacing: -2, color: fg, lineHeight: 1 }}>{lo}°</div>
                 </div>
+                {/* Compare pill — sits under the HIGH/LOW stack. pointerEvents
+                    is re-enabled because the hero block has it disabled. */}
+                <div style={{ pointerEvents: 'auto', marginTop: 6, display: 'flex', justifyContent: 'flex-end' }}>
+                  <CompareWithPill geo={city} city={city} fg={fg} muted={muted} bg={bg} align="right" />
+                </div>
               </div>
             </>
           ) : (
@@ -148,6 +153,10 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
                   <div style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", fontSize: 10, letterSpacing: 1.5, color: muted }}>LOW</div>
                   <div style={{ fontSize: 40, fontWeight: 600, letterSpacing: -1.5, color: fg, lineHeight: 1 }}>{lo}°</div>
                 </div>
+                {/* Compare pill — under HIGH/LOW on mobile too. */}
+                <div style={{ pointerEvents: 'auto', marginTop: 4, display: 'flex', justifyContent: 'flex-end' }}>
+                  <CompareWithPill geo={city} city={city} fg={fg} muted={muted} bg={bg} align="right" />
+                </div>
               </div>
             </div>
           )}
@@ -159,10 +168,6 @@ export function VariationB({ city, unit, chartVariant, setChartVariant, currentT
             <BStat label="SUN HRS/DAY" value={city.sun[m].toFixed(1)} isMd={isMd} />
             <BStat label="PRECIP" value={unit === 'C' ? `${city.precip[m]} mm` : `${mmToIn(city.precip[m])} in`} last isMd={isMd} />
           </div>
-        </div>
-
-        <div>
-          <CompareWithPill geo={city} city={city} fg={fg} muted={muted} bg={bg} />
         </div>
 
         {/* Secondary: chart + map — stack on mobile */}
