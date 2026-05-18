@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sketch 003 — Headline Stat Band (Paris vs London)</title>
+<link rel="stylesheet" href="../themes/default.css">
+<style>
+  body { padding-top: 56px; padding-bottom: 80px; }
+
+  /* ============ Variant tabs ============ */
+  #variant-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 9998;
+    background: #fff; border-bottom: 1px solid var(--color-border);
+    padding: 10px 16px; display: flex; gap: 8px; align-items: center;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+  }
+  .variant-tab {
+    padding: 8px 14px; border: 1px solid var(--color-border);
+    background: transparent; color: var(--color-text);
+    cursor: pointer; font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 1.5px; text-transform: uppercase; transition: all 0.15s;
+  }
+  .variant-tab:hover { background: rgba(0,0,0,0.04); }
+  .variant-tab.active { background: var(--color-text); color: var(--color-bg); }
+
+  .page { max-width: 1280px; margin: 0 auto; padding: 32px; }
+  .variant { display: none; }
+  .variant.active { display: block; }
+
+  .v-head { margin-bottom: 28px; }
+  .v-head h1 {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 56px; line-height: 0.95; letter-spacing: -0.04em;
+    margin: 0; text-transform: uppercase;
+  }
+  .v-head .sub { font-size: 18px; color: var(--color-text-muted); margin-top: 8px; max-width: 720px; }
+
+  .city-a { color: var(--color-city-a); }
+  .city-b { color: var(--color-city-b); }
+  .a-fill { background: var(--color-city-a); }
+  .b-fill { background: var(--color-city-b); }
+  .accent { color: var(--color-accent); }
+
+  /* Notes block */
+  .notes {
+    margin-top: 32px;
+    padding: 24px;
+    background: rgba(0,0,0,0.02);
+    border-left: 3px solid var(--color-text);
+  }
+  .notes h3 {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase; margin: 0 0 12px 0;
+  }
+  .notes ul { margin: 0; padding-left: 18px; }
+  .notes li { line-height: 1.5; margin-bottom: 6px; }
+
+  /* ============================================================
+     VARIANT A — Big-Typography Stat Cards
+     Four-up grid; each stat has a giant number with the two
+     city values rendered as fractions of the headline.
+  ============================================================ */
+  .cards {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
+  }
+  .card {
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 24px 22px;
+    background: #fff;
+  }
+  .card .card-label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--color-text-muted);
+    margin-bottom: 14px;
+  }
+  .card .card-pair {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 44px; line-height: 0.95; letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+    display: flex; align-items: baseline; gap: 6px;
+  }
+  .card .card-pair .slash { color: rgba(17,17,17,0.18); font-weight: 400; }
+  .card .card-pair .unit { font-size: 22px; color: var(--color-text-muted); font-weight: 500; }
+  .card .delta {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border-soft);
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.2px;
+    text-transform: uppercase;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .card .delta-num { font-size: 13px; font-weight: 600; }
+
+  /* ============================================================
+     VARIANT B — Wide Stat Strip
+     One horizontal row, each stat is a tiny label + a single
+     short verdict sentence using inline city-colored values.
+  ============================================================ */
+  .strip {
+    border: 1px solid var(--color-border); background: #fff;
+    padding: 28px 32px;
+  }
+  .strip-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  .strip-stat {
+    padding-left: 16px;
+    border-left: 2px solid var(--color-text);
+  }
+  .strip-stat .label {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px;
+    color: var(--color-text-muted); text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .strip-stat .verdict {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 22px; line-height: 1.2; letter-spacing: -0.015em;
+  }
+  .strip-stat .verdict .name { font-weight: 700; }
+  .strip-stat .verdict .delta { color: var(--color-accent); }
+
+  /* ============================================================
+     VARIANT C — Versus Diptych
+     Each stat is a face-off panel: city A value on the left,
+     city B value on the right, with the differential pulled
+     between them like a referee mark.
+  ============================================================ */
+  .diptych {
+    display: flex; flex-direction: column; gap: 0;
+    border: 1px solid var(--color-border); background: #fff;
+  }
+  .duel {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+    border-bottom: 1px solid var(--color-border-soft);
+  }
+  .duel:last-child { border-bottom: none; }
+
+  /* City header row — persistent subheadings above the diptych columns */
+  .diptych-header {
+    border-bottom: 2px solid var(--color-text);
+    background: rgba(0,0,0,0.02);
+  }
+  .diptych-header .side { padding: 22px 24px; }
+  .diptych-header .side.right { padding: 22px 24px; }
+  .diptych-header .city-name {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 56px; line-height: 0.88; letter-spacing: -0.035em;
+    margin: 0; text-transform: uppercase;
+  }
+  .diptych-header .country {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px;
+    color: var(--color-text-muted); text-transform: uppercase;
+    margin-top: 10px;
+  }
+  .diptych-header .center {
+    background: transparent;
+    border-left: none; border-right: none;
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 22px; color: var(--color-text-muted);
+    letter-spacing: 1px;
+    padding: 22px 18px;
+    align-items: center; justify-content: center;
+    min-width: 140px;
+  }
+
+  .duel .side {
+    padding: 18px 24px;
+    display: flex; flex-direction: column;
+    justify-content: center;
+  }
+  .duel .side.right { text-align: right; }
+  .duel .side .city-tag {
+    font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .duel .side .num {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 40px; line-height: 0.95; letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .duel .side .num .unit { font-size: 18px; color: var(--color-text-muted); font-weight: 500; margin-left: 2px; }
+
+  .duel .center {
+    padding: 12px 18px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 4px;
+    border-left: 1px solid var(--color-border-soft);
+    border-right: 1px solid var(--color-border-soft);
+    background: rgba(17,17,17,0.02);
+    min-width: 140px;
+  }
+  .duel .center .center-label {
+    font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px;
+    color: var(--color-text-muted); text-transform: uppercase;
+  }
+  .duel .center .center-delta {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 18px; letter-spacing: -0.01em; color: var(--color-accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .duel .center .winner-arrow {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--color-text-muted);
+  }
+
+  /* Sketch toolbar */
+  #sketch-tools {
+    position: fixed; bottom: 12px; right: 12px; z-index: 9999;
+    font-family: system-ui; font-size: 12px;
+    background: rgba(0,0,0,0.75); color: white; padding: 8px 12px;
+    border-radius: 8px; opacity: 0.4; transition: opacity 0.2s;
+    display: flex; gap: 8px; align-items: center;
+  }
+  #sketch-tools:hover { opacity: 1; }
+  #sketch-tools select { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 2px 4px; }
+</style>
+</head>
+<body>
+
+<div id="variant-nav">
+  <span style="color: var(--color-text-muted); margin-right: 6px;">SKETCH 003 ·</span>
+  <button class="variant-tab active" onclick="showVariant('a', event)">A: Big-Typography Cards</button>
+  <button class="variant-tab" onclick="showVariant('b', event)">B: Wide Stat Strip</button>
+  <button class="variant-tab" onclick="showVariant('c', event)">C: Versus Diptych ★ Selected</button>
+</div>
+
+<!-- ============================================================
+     VARIANT A — Big-Typography Stat Cards (4-up grid)
+     This is the version currently in Sketch 001 C — included as
+     baseline reference.
+============================================================ -->
+<div id="variant-a" class="variant active">
+  <div class="page">
+    <div class="v-head">
+      <h1>A. Big-Typography Cards</h1>
+      <div class="sub">Four-up grid of stat cards. Each card shows the two city values as a slashed pair, with the differential rendered as a separate mono-label row. Familiar grid pattern from the existing Climato VariationA hero.</div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">AVG HIGH</div>
+        <div class="card-pair">
+          <span class="city-a">15.6</span>
+          <span class="slash">/</span>
+          <span class="city-b">13.6</span>
+          <span class="unit">°C</span>
+        </div>
+        <div class="delta">
+          <span style="color: var(--color-text-muted);">PARIS HOTTER</span>
+          <span class="delta-num city-a">+2.0°</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">ANNUAL RAIN</div>
+        <div class="card-pair">
+          <span class="city-a">630</span>
+          <span class="slash">/</span>
+          <span class="city-b">603</span>
+          <span class="unit">mm</span>
+        </div>
+        <div class="delta">
+          <span style="color: var(--color-text-muted);">PARIS WETTER</span>
+          <span class="delta-num city-a">+4%</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">SUN HRS / DAY</div>
+        <div class="card-pair">
+          <span class="city-a">4.95</span>
+          <span class="slash">/</span>
+          <span class="city-b">4.28</span>
+        </div>
+        <div class="delta">
+          <span style="color: var(--color-text-muted);">PARIS SUNNIER</span>
+          <span class="delta-num city-a">+16%</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">PEAK OVERLAP</div>
+        <div class="card-pair" style="font-size: 32px;">
+          MAY–AUG
+        </div>
+        <div class="delta">
+          <span style="color: var(--color-text-muted);">BOTH IDEAL</span>
+          <span class="delta-num" style="color: var(--color-overlap);">4 MONTHS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <h3>Notes</h3>
+      <ul>
+        <li><strong>Strength:</strong> Familiar from VariationA. Quick scanning — values on top line, verdict beneath.</li>
+        <li><strong>Weakness:</strong> "15.6 / 13.6" requires the reader to do the subtraction themselves. The delta line helps, but feels secondary.</li>
+        <li><strong>Tone:</strong> Neutral and data-forward. No editorializing.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     VARIANT B — Wide Stat Strip (verdict-first sentences)
+     Each stat is phrased as a short sentence rather than a
+     number pair. The verdict leads, the number is embedded.
+============================================================ -->
+<div id="variant-b" class="variant">
+  <div class="page">
+    <div class="v-head">
+      <h1>B. Wide Stat Strip</h1>
+      <div class="sub">Each stat is a short verdict sentence rather than a number pair. Reads like editorial copy. The differential is the headline; raw numbers are de-emphasized.</div>
+    </div>
+
+    <div class="strip">
+      <div class="strip-grid">
+        <div class="strip-stat">
+          <div class="label">TEMPERATURE</div>
+          <div class="verdict">
+            <span class="name city-a">Paris</span> runs
+            <span class="delta">2°C warmer</span>
+            on average.
+          </div>
+        </div>
+        <div class="strip-stat">
+          <div class="label">RAINFALL</div>
+          <div class="verdict">
+            <span class="name city-a">Paris</span> gets
+            <span class="delta">4% more rain</span>
+            per year.
+          </div>
+        </div>
+        <div class="strip-stat">
+          <div class="label">SUNSHINE</div>
+          <div class="verdict">
+            <span class="name city-a">Paris</span> sees
+            <span class="delta">16% more sun</span>
+            per day.
+          </div>
+        </div>
+        <div class="strip-stat" style="border-left-color: var(--color-overlap);">
+          <div class="label">OVERLAP</div>
+          <div class="verdict">
+            Both peak
+            <span class="delta" style="color: var(--color-overlap);">May–August</span>
+            — ideal for either.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <h3>Notes</h3>
+      <ul>
+        <li><strong>Strength:</strong> Reads as English, not data. Conversion-friendly because the takeaway is pre-chewed for the user.</li>
+        <li><strong>Weakness:</strong> Hides the raw numbers — users wanting specifics have to scroll to the tables. Less SEO surface (no temperature digits in the hero band).</li>
+        <li><strong>Tone:</strong> Editorial, opinionated. Good when the comparison has a clear pattern (Paris wins most categories); awkward when the picture is mixed.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     VARIANT C — Versus Diptych
+     Each stat is a face-off: city A value left, city B value
+     right, differential pulled into a center "referee" column.
+============================================================ -->
+<div id="variant-c" class="variant">
+  <div class="page">
+    <div class="v-head">
+      <h1>C. Versus Diptych</h1>
+      <div class="sub">Each stat is rendered as a face-off — city A on the left, city B on the right, the differential occupies a center column like a referee marker. Visually dramatic, mirrors the page's PARIS vs LONDON identity.</div>
+    </div>
+
+    <div class="diptych">
+      <!-- City name subheadings persist above all duel rows -->
+      <div class="duel diptych-header">
+        <div class="side">
+          <h2 class="city-name city-a">PARIS</h2>
+          <div class="country">FRANCE · ÎLE-DE-FRANCE</div>
+        </div>
+        <div class="center">vs</div>
+        <div class="side right">
+          <h2 class="city-name city-b">LONDON</h2>
+          <div class="country">UNITED KINGDOM · ENGLAND</div>
+        </div>
+      </div>
+
+      <div class="duel">
+        <div class="side">
+          <div class="city-tag city-a">AVG HIGH</div>
+          <div class="num city-a">15.6<span class="unit">°C</span></div>
+        </div>
+        <div class="center">
+          <div class="center-label">DIFFERENCE</div>
+          <div class="center-delta">+2.0°</div>
+          <div class="winner-arrow city-a">◀ PARIS</div>
+        </div>
+        <div class="side right">
+          <div class="city-tag city-b">AVG HIGH</div>
+          <div class="num city-b">13.6<span class="unit">°C</span></div>
+        </div>
+      </div>
+
+      <div class="duel">
+        <div class="side">
+          <div class="city-tag city-a">ANNUAL RAIN</div>
+          <div class="num city-a">630<span class="unit">mm</span></div>
+        </div>
+        <div class="center">
+          <div class="center-label">DIFFERENCE</div>
+          <div class="center-delta">+4%</div>
+          <div class="winner-arrow city-a">◀ PARIS</div>
+        </div>
+        <div class="side right">
+          <div class="city-tag city-b">ANNUAL RAIN</div>
+          <div class="num city-b">603<span class="unit">mm</span></div>
+        </div>
+      </div>
+
+      <div class="duel">
+        <div class="side">
+          <div class="city-tag city-a">SUN / DAY</div>
+          <div class="num city-a">4.95<span class="unit">h</span></div>
+        </div>
+        <div class="center">
+          <div class="center-label">DIFFERENCE</div>
+          <div class="center-delta">+16%</div>
+          <div class="winner-arrow city-a">◀ PARIS</div>
+        </div>
+        <div class="side right">
+          <div class="city-tag city-b">SUN / DAY</div>
+          <div class="num city-b">4.28<span class="unit">h</span></div>
+        </div>
+      </div>
+
+      <div class="duel" style="background: rgba(90, 98, 64, 0.04);">
+        <div class="side">
+          <div class="city-tag" style="color: var(--color-overlap);">PEAK OVERLAP</div>
+          <div class="num" style="color: var(--color-overlap);">May–August</div>
+        </div>
+        <div class="center">
+          <div class="center-label">SHARED IDEAL</div>
+          <div class="center-delta" style="color: var(--color-overlap);">4 MO</div>
+          <div class="winner-arrow" style="color: var(--color-overlap);">★ BOTH</div>
+        </div>
+        <div class="side right">
+          <div class="city-tag" style="color: var(--color-overlap);">PEAK OVERLAP</div>
+          <div class="num" style="color: var(--color-overlap);">May–August</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <h3>Notes</h3>
+      <ul>
+        <li><strong>Strength:</strong> Mirrors the page identity (PARIS vs LONDON) most literally. Each stat becomes a single readable face-off.</li>
+        <li><strong>Weakness:</strong> Vertical — takes more height than A or B. Could feel heavy if there are many stats. The "winner arrow" reinforces a competitive frame, which may not always fit (e.g. similar-climate cities).</li>
+        <li><strong>Tone:</strong> Most dramatic. Sports-section vibe. Good for sites that lean into the rivalry framing.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Sketch toolbar -->
+<div id="sketch-tools">
+  <span>SKETCH 003</span>
+  <select onchange="document.querySelectorAll('link[href*=themes]').forEach(l => l.href = '../themes/' + this.value + '.css')">
+    <option value="default">Default</option>
+  </select>
+</div>
+
+<script>
+  function showVariant(id, evt) {
+    document.querySelectorAll('.variant').forEach(v => v.classList.remove('active'));
+    document.querySelectorAll('.variant-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('variant-' + id).classList.add('active');
+    evt.target.classList.add('active');
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>
