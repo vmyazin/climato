@@ -1,6 +1,7 @@
 import { AppHeader } from './components/AppHeader'
 import { CityHeroFallback } from './components/CityHeroFallback'
 import { ClimateNarrative } from './components/ClimateNarrative'
+import { ComparisonHeroFallback } from './components/ComparisonHeroFallback'
 import { ComparisonPage } from './components/ComparisonPage'
 import { Footer } from './components/Footer'
 import { NearbyCitiesSection } from './components/NearbyCitiesSection'
@@ -64,7 +65,7 @@ export default function App() {
           <ComparisonPage a={climateA.data} b={climateB.data} />
         )}
         {isComparison && (!climateA.data || !climateB.data) && (
-          <CityHeroFallback city={comparisonA} isError={climateA.isError || climateB.isError} />
+          <ComparisonHeroFallback a={comparisonA} b={comparisonB} isError={climateA.isError || climateB.isError} />
         )}
 
         {/* Single-city mode — existing flow */}
