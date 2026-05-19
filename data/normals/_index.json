@@ -35,6 +35,12 @@
     "country": "Japan",
     "admin1": "Kanagawa"
   },
+  "1850147": {
+    "fetched_at": "2026-05-19T04:32:10.512Z",
+    "name": "Tokyo",
+    "country": "Japan",
+    "admin1": "Tokyo"
+  },
   "2013348": {
     "fetched_at": "2026-05-18T23:20:20.640Z",
     "name": "Vladivostok",
@@ -118,6 +124,12 @@
     "name": "Reykjavik",
     "country": "Iceland",
     "admin1": "Capital Region"
+  },
+  "3445993": {
+    "fetched_at": "2026-05-19T04:32:10.512Z",
+    "name": "Tubarão",
+    "country": "Brazil",
+    "admin1": "Santa Catarina"
   },
   "3453186": {
     "fetched_at": "2026-05-18T23:20:20.640Z",
