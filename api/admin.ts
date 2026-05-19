@@ -383,10 +383,16 @@ function renderAdmin(opts: {
 }): string {
   const { index, pending, origin, kvConfigured } = opts
 
-  // Sort cached entries alphabetically by friendly name when available, with
-  // unnamed (legacy / curated) entries falling back to their id. This gives
-  // the panel a more scannable order than purely lexicographic-by-id.
+  // Sort cached entries by fetched_at descending — newest cached first. This
+  // makes the panel useful as an activity log: whatever the drain just wrote
+  // sits at the top. Ties (or unparseable timestamps) fall back to friendly
+  // name alphabetical for stable ordering.
   const cachedIds = Object.keys(index).sort((a, b) => {
+    const ta = Date.parse(index[a].fetched_at)
+    const tb = Date.parse(index[b].fetched_at)
+    const va = Number.isFinite(ta) ? ta : 0
+    const vb = Number.isFinite(tb) ? tb : 0
+    if (vb !== va) return vb - va
     const la = index[a].name ?? a
     const lb = index[b].name ?? b
     return la.localeCompare(lb)
