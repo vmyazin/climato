@@ -11,6 +11,12 @@
     "country": "Egypt",
     "admin1": "Qalyubia"
   },
+  "542420": {
+    "fetched_at": "2026-05-19T00:19:43.853Z",
+    "name": "Krasnodar",
+    "country": "Russia",
+    "admin1": "Krasnodar Krai"
+  },
   "993800": {
     "fetched_at": "2026-05-06T13:31:06.365Z",
     "name": "Johannesburg",
@@ -154,6 +160,12 @@
     "name": "Plantation",
     "country": "United States",
     "admin1": "Florida"
+  },
+  "4180439": {
+    "fetched_at": "2026-05-19T00:19:43.853Z",
+    "name": "Atlanta",
+    "country": "United States",
+    "admin1": "Georgia"
   },
   "4930505": {
     "fetched_at": "2026-05-07T18:28:37.260Z",
