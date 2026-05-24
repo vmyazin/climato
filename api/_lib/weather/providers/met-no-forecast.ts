@@ -1,9 +1,9 @@
 import type { CurrentTemp } from './open-meteo-forecast.js'
 
-// MET Norway requires identification. Includes a contact URL so they can
-// reach us if our usage causes issues. Bump the version when the user-agent
-// string changes meaningfully.
-const USER_AGENT = 'climato/1.0 (+https://climato.app/contact)'
+// MET Norway requires identification. Includes a working contact URL so
+// they can reach us if our usage causes issues. Bump the version when the
+// user-agent string changes meaningfully.
+const USER_AGENT = 'climato/1.0 (+https://climato.smoxu.com)'
 
 interface MetNoResponse {
   properties?: {
