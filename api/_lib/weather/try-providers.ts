@@ -8,9 +8,10 @@ export interface ProviderResult<T> {
   source: string
 }
 
-// Tries each provider in order. Each call gets its own AbortController with the
-// given timeout. On error or timeout, logs to console.error and moves to the
-// next provider. Throws if all fail.
+// Tries each provider in order. Each call gets its own AbortController with
+// the given timeout. On error or timeout, logs to console.error and moves to
+// the next provider. Timers are cleared in finally so no leaked setTimeout
+// survives the loop. Throws if all fail.
 export async function tryProviders<T>(
   providers: ProviderEntry<T>[],
   timeoutMs: number,

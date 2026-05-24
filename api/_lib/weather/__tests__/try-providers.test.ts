@@ -2,8 +2,16 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { tryProviders } from '../try-providers.js'
 
 describe('tryProviders', () => {
-  beforeEach(() => { vi.useFakeTimers() })
-  afterEach(() => { vi.useRealTimers() })
+  beforeEach(() => {
+    vi.useFakeTimers()
+    // Negative-path tests intentionally fire provider failures. Silence the
+    // expected console.error spam so test output stays readable.
+    vi.spyOn(console, 'error').mockImplementation(() => {})
+  })
+  afterEach(() => {
+    vi.useRealTimers()
+    vi.restoreAllMocks()
+  })
 
   it('returns the first provider result on success', async () => {
     const out = await tryProviders([

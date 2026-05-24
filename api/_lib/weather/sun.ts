@@ -1,4 +1,3 @@
-// @ts-ignore — tz-lookup ships no types
 import tzlookup from 'tz-lookup'
 
 // NOAA Solar Calculator algorithm. Returns UT (UTC) Date for sunrise/sunset.
@@ -53,12 +52,14 @@ function solarEvent(date: Date, lat: number, lon: number, rising: boolean): Date
 }
 
 function formatLocal(date: Date, timeZone: string): string {
-  // en-GB gives 24-hour HH:MM.
+  // hourCycle: 'h23' guarantees "00:00" for midnight regardless of locale
+  // or ICU version. Older Node/ICU versions rendered midnight as "24:00"
+  // for en-GB with hour12: false.
   return new Intl.DateTimeFormat('en-GB', {
     timeZone,
     hour: '2-digit',
     minute: '2-digit',
-    hour12: false,
+    hourCycle: 'h23',
   }).format(date)
 }
 
