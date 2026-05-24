@@ -4,7 +4,9 @@ Monthly climate averages for any city in the world, in three distinct display st
 
 ## What This Does
 
-A weather data app that fetches real ERA5 climate normals (2014–2023) from the Open-Meteo archive API for any city you search. It shows monthly high/low temperatures, precipitation, sunshine hours, sunrise/sunset times, and a topographic map of the location. Three layout variations — Swiss grid, oversized numeric hero, and editorial asymmetric — let you view the same data in different ways.
+A weather data app that fetches real ERA5 climate normals (2014–2023) for any city you search. It shows monthly high/low temperatures, precipitation, sunshine hours, sunrise/sunset times, and a topographic map of the location. Three layout variations — Swiss grid, oversized numeric hero, and editorial asymmetric — let you view the same data in different ways.
+
+Data comes from Open-Meteo by default, with **NASA POWER as an automatic archive fallback** and **MET Norway as a current-temperature fallback** when Open-Meteo is unreachable or overloaded. The footer reflects which providers actually served your page.
 
 Built as a design+data exploration: I wanted to see how far you could push data visualisation aesthetics with plain React + SVG, no charting library.
 
@@ -15,7 +17,7 @@ Built as a design+data exploration: I wanted to see how far you could push data 
 ## Tech Stack
 
 - **Framework**: Vite + React 19 + TypeScript
-- **Data**: [Open-Meteo](https://open-meteo.com/) — geocoding + 10-year ERA5 climate archive (no API key required)
+- **Data**: [Open-Meteo](https://open-meteo.com/) (primary) — geocoding + 10-year ERA5 climate archive + current temperature. With server-side fallbacks to [NASA POWER](https://power.larc.nasa.gov/) (archive) and [MET Norway](https://api.met.no/) (current temp) when Open-Meteo is down. All providers are free, no API key required.
 - **Maps**: Leaflet + OpenTopoMap tiles (real SRTM contour data)
 - **State**: Zustand (persisted) + React Query (cached API calls)
 - **UI**: Tailwind CSS + Radix UI (ToggleGroup for view/unit/chart toggles, Popover for city search)
@@ -36,7 +38,7 @@ Opens at `http://localhost:5173`. No environment variables or API keys needed.
 
 **City search** calls the Open-Meteo geocoding API (`/v1/search`) with deduplication: results are grouped by normalised name (diacritics stripped) + country, and the highest-population entry wins per group. This avoids the problem where a common city name returns dozens of tiny same-named towns before the well-known city.
 
-**Climate data** is fetched from the Open-Meteo archive API (`/v1/archive`, 2014–2023). The response is ~3,600 daily records aggregated client-side into 12-month normals: temperatures averaged, precipitation summed per month then averaged across years, sunshine converted from seconds/day to hours/day. Sunrise/sunset times are taken from the 15th of each month in 2023 as a representative sample. React Query caches results indefinitely so repeat visits are instant.
+**Climate data** is fetched server-side through a small orchestrator at `/api/normals` that tries Open-Meteo's archive first and falls through to NASA POWER on any failure (5xx, 4 s timeout, malformed response). Either way the response is ~3,600 daily records aggregated into 12-month normals: temperatures averaged, precipitation summed per month then averaged across years, sunshine converted from seconds/day to hours/day. NASA POWER doesn't ship a `sunshine_duration` field, so the fallback path approximates it from the ratio of all-sky to clear-sky shortwave radiation × computed day length. Sunrise/sunset times are computed locally from the NOAA solar equation + `tz-lookup` (no upstream dependency), so they're correct even when both providers are out. Current temperature flows through a parallel `/api/current` route with Open-Meteo → MET Norway fallback, edge-cached for 5 min via Vercel. React Query caches results client-side; an `X-Climato-Source` response header drives the footer's dynamic attribution.
 
 **Three views** share one city, one unit toggle (°C/°F), and one chart-type toggle (bar/line/ring). State persists to localStorage via Zustand.
 
