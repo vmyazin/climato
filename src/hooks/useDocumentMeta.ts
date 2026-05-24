@@ -1,17 +1,18 @@
 import { useEffect } from 'react'
 import type { City, GeoCity } from '../data/cities'
-import { MONTHS, MONTHS_LONG } from '../data/cities'
 import { nameFromSlug, toCompareSlug, toSlug } from '../lib/route'
 import { compareCities } from '../lib/comparison'
-
-const DEFAULT_TITLE = 'Climato — Monthly Averages'
-const DEFAULT_DESCRIPTION =
-  "What's the weather really like in any city? See monthly averages — temperature, rainfall and sunshine hours — and the best time to visit."
-
-const JSONLD_ID = 'climato-jsonld'
-
-// Matches the archive-API window in useClimateNormals — keep in sync.
-const CLIMATE_PERIOD = '2014-01-01/2023-12-31'
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_OG_IMAGE,
+  DEFAULT_TITLE,
+  JSONLD_ID,
+  buildCityJsonLd,
+  buildCityOgImageUrl,
+  buildCitySeoMeta,
+  buildComparisonJsonLd,
+  buildComparisonOgImageUrl,
+} from '../lib/seo'
 
 function setMeta(name: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[name="${name}"]`)
@@ -31,49 +32,6 @@ function setPropMeta(property: string, content: string) {
     document.head.appendChild(el)
   }
   el.setAttribute('content', content)
-}
-
-const DEFAULT_OG_IMAGE = '/og-image.png'
-
-function buildOgImageUrl(selectedCity: GeoCity, city: City): string {
-  const hi      = Math.max(...city.high)
-  const lo      = Math.min(...city.low)
-  const rain    = Math.round(city.precip.reduce((a, b) => a + b, 0))
-  const peakIdx = city.high.indexOf(hi)
-  const peak    = MONTHS[peakIdx]
-  const r1      = (v: number) => Math.round(v * 10) / 10
-  const params  = new URLSearchParams({
-    city:    selectedCity.name,
-    country: selectedCity.country,
-    hi:      String(hi),
-    lo:      String(lo),
-    rain:    String(rain),
-    peak,
-    highs:   city.high.map(r1).join(','),
-    lows:    city.low.map(r1).join(','),
-  })
-  if (selectedCity.admin1) params.set('admin1', selectedCity.admin1)
-  return `/api/og?${params}`
-}
-
-// Build the comparison-page OG image URL. The endpoint at /api/og?compare=1
-// renders the dual-city face-off with the headline differential baked in,
-// so social shares show the actual comparison rather than the generic logo.
-function buildComparisonOgImageUrl(a: GeoCity, b: GeoCity, cityA: City, cityB: City): string {
-  const result = compareCities(cityA, cityB)
-  const tempStat = result.stats[0]   // AVG HIGH is always stats[0]
-  const params = new URLSearchParams({
-    compare: '1',
-    aCity: a.name,
-    aCountry: a.country,
-    bCity: b.name,
-    bCountry: b.country,
-    warmer: tempStat.winner,
-    // Strip the '+' and '°' from the delta string so the endpoint can parse a plain number.
-    tempDelta: tempStat.delta.replace(/[^0-9.]/g, ''),
-  })
-  if (result.overlapFormatted) params.set('overlap', result.overlapFormatted)
-  return `/api/og?${params}`
 }
 
 function setOgImage(url: string) {
@@ -114,104 +72,6 @@ function setJsonLd(payload: object | null) {
   el.type = 'application/ld+json'
   el.textContent = json
   document.head.appendChild(el)
-}
-
-function buildDatasetNode(selectedCity: GeoCity, city: City | undefined): Record<string, unknown> {
-  // Skip admin1 when it duplicates the city name — common for city-states
-  // like Tokyo where admin1 ("Tokyo") collapses with name ("Tokyo").
-  const includeAdmin1 = selectedCity.admin1 && selectedCity.admin1 !== selectedCity.name
-  const placeName = includeAdmin1
-    ? `${selectedCity.name}, ${selectedCity.admin1}, ${selectedCity.country}`
-    : `${selectedCity.name}, ${selectedCity.country}`
-
-  const place: Record<string, unknown> = {
-    '@type': 'Place',
-    name: placeName,
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: selectedCity.lat,
-      longitude: selectedCity.lon,
-    },
-  }
-
-  const dataset: Record<string, unknown> = {
-    '@type': 'Dataset',
-    name: `Monthly Climate Normals — ${selectedCity.name}`,
-    description: `Monthly average temperature, precipitation and sunshine data for ${selectedCity.name}, ${selectedCity.country}.`,
-    spatialCoverage: place,
-    temporalCoverage: CLIMATE_PERIOD,
-    license: 'https://creativecommons.org/licenses/by/4.0/',
-    isAccessibleForFree: true,
-    creator: { '@type': 'Organization', name: 'Climato' },
-    sourceOrganization: {
-      '@type': 'Organization',
-      name: 'Open-Meteo',
-      url: 'https://open-meteo.com/',
-    },
-  }
-
-  if (city) {
-    dataset.variableMeasured = [
-      { '@type': 'PropertyValue', name: 'Average daily high temperature', unitCode: 'CEL' },
-      { '@type': 'PropertyValue', name: 'Average daily low temperature', unitCode: 'CEL' },
-      { '@type': 'PropertyValue', name: 'Monthly precipitation', unitCode: 'MMT' },
-      { '@type': 'PropertyValue', name: 'Daily sunshine hours', unitCode: 'HUR' },
-    ]
-  }
-
-  return dataset
-}
-
-// Schema.org BreadcrumbList: lets Google show the path (Climato › Madrid,
-// Spain) in SERP rich results. Two levels for now — once country index
-// pages ship we can add the country layer as an intermediate ListItem.
-function buildBreadcrumbNode(selectedCity: GeoCity): Record<string, unknown> {
-  const origin = window.location.origin
-  const { path } = toSlug(selectedCity)
-  const includeAdmin1 = selectedCity.admin1 && selectedCity.admin1 !== selectedCity.name
-  const cityLabel = includeAdmin1
-    ? `${selectedCity.name}, ${selectedCity.admin1}, ${selectedCity.country}`
-    : `${selectedCity.name}, ${selectedCity.country}`
-  return {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Climato', item: `${origin}/` },
-      { '@type': 'ListItem', position: 2, name: cityLabel, item: `${origin}${path}` },
-    ],
-  }
-}
-
-function buildJsonLd(selectedCity: GeoCity, city: City | undefined): object {
-  return {
-    '@context': 'https://schema.org',
-    '@graph': [
-      buildDatasetNode(selectedCity, city),
-      buildBreadcrumbNode(selectedCity),
-    ],
-  }
-}
-
-// Build comparison-page meta: title, description, canonical, and a JSON-LD
-// graph with two Dataset nodes (one per city) plus a BreadcrumbList
-// (Climato › Compare › A vs B).
-function buildComparisonJsonLd(a: GeoCity, b: GeoCity, cityA: City | undefined, cityB: City | undefined): object {
-  const origin = window.location.origin
-  const compareUrl = `${origin}${toCompareSlug(a, b).path}`
-  return {
-    '@context': 'https://schema.org',
-    '@graph': [
-      buildDatasetNode(a, cityA),
-      buildDatasetNode(b, cityB),
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Climato', item: `${origin}/` },
-          { '@type': 'ListItem', position: 2, name: 'Compare', item: `${origin}/compare` },
-          { '@type': 'ListItem', position: 3, name: `${a.name} vs ${b.name}`, item: compareUrl },
-        ],
-      },
-    ],
-  }
 }
 
 interface ComparisonMeta {
@@ -270,7 +130,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       const hasRealCoordsA = a.lat !== 0 || a.lon !== 0
       const hasRealCoordsB = b.lat !== 0 || b.lon !== 0
       if (hasRealCoordsA && hasRealCoordsB) {
-        setJsonLd(buildComparisonJsonLd(a, b, cityA, cityB))
+        setJsonLd(buildComparisonJsonLd(a, b, cityA, cityB, window.location.origin))
         const compareUrl = `${window.location.origin}${toCompareSlug(a, b).path}`
         setCanonical(compareUrl)
       } else {
@@ -292,18 +152,19 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
 
     const name = selectedCity.name
     const country = selectedCity.country
-    document.title = `${name} Monthly Weather Averages — Climato`
 
     const haveFreshClimate = !!city && !isPlaceholderData
     if (haveFreshClimate) {
-      const peakIdx = city.high.indexOf(Math.max(...city.high))
-      const peakMonth = MONTHS_LONG[peakIdx]
-      const peakTemp = city.high[peakIdx]
-      setMeta(
-        'description',
-        `Monthly temperature highs, lows, rainfall and sunshine hours for ${name}, ${country}. Average high in ${peakMonth}: ${peakTemp}°C.`,
-      )
+      const { path } = toSlug(selectedCity)
+      const meta = buildCitySeoMeta(selectedCity, city, window.location.origin, path)
+      document.title = meta.title
+      setMeta('description', meta.description)
+      setOgImage(buildCityOgImageUrl(selectedCity, city))
+      setJsonLd(meta.jsonLd)
+      setCanonical(meta.canonicalUrl)
+      return
     } else {
+      document.title = `${name} Monthly Weather Averages — Climato`
       setMeta(
         'description',
         `Monthly temperature highs, lows, rainfall and sunshine hours for ${name}, ${country}.`,
@@ -312,11 +173,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
 
     // OG / Twitter image — full mode (with stats) when climate is fresh,
     // lite mode (city + country only) otherwise.
-    if (haveFreshClimate) {
-      setOgImage(buildOgImageUrl(selectedCity, city))
-    } else {
-      setOgImage(DEFAULT_OG_IMAGE)
-    }
+    setOgImage(DEFAULT_OG_IMAGE)
 
     // Only emit JSON-LD once we have real coordinates — placeholders
     // (lat=0,lon=0 from reconstructFromSlug) would publish bogus geo data.
@@ -325,7 +182,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
     // breadcrumb path in SERP rich results.
     const hasRealCoords = selectedCity.lat !== 0 || selectedCity.lon !== 0
     if (hasRealCoords) {
-      setJsonLd(buildJsonLd(selectedCity, haveFreshClimate ? city : undefined))
+      setJsonLd(buildCityJsonLd(selectedCity, undefined, window.location.origin))
       // Canonical URL: drops the optional ?@lat,lon query string so Google
       // collapses /spain/madrid and /spain/madrid?@40.42,-3.70 into one
       // canonical entry. Resolved via the same toSlug used by the router.

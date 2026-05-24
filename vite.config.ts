@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { readFileSync, existsSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { CITIES, type GeoCity } from './src/data/cities'
-import { countrySlug, slugify } from './src/lib/slug'
+import { buildSeoCityRoutes, priorityFor, type SeoCityInput } from './src/lib/seo-routes'
 
 interface CatalogCity extends GeoCity {
   population: number
@@ -33,58 +33,6 @@ function loadCityCatalog(tsvPath: string): CatalogCity[] {
     })
   }
   return cities
-}
-
-function priorityFor(population: number, isCurated: boolean): string {
-  if (isCurated) return '0.9'
-  if (population >= 1_000_000) return '0.9'
-  if (population >= 250_000) return '0.7'
-  return '0.5'
-}
-
-interface SeoCity {
-  city: GeoCity
-  population: number
-  isCurated: boolean
-}
-
-/**
- * Build canonical URL paths, including the admin1 segment ONLY when needed
- * to disambiguate cities sharing a name within the same country (e.g. the
- * three US Springfields). Singletons get the short, pretty form.
- */
-function canonicalPaths(items: SeoCity[]): Map<SeoCity, string> {
-  const groups = new Map<string, SeoCity[]>()
-  for (const it of items) {
-    const key = countrySlug(it.city.country) + '|' + slugify(it.city.name)
-    const arr = groups.get(key) ?? []
-    arr.push(it)
-    groups.set(key, arr)
-  }
-
-  const out = new Map<SeoCity, string>()
-  for (const [, group] of groups) {
-    const distinctAdmin1s = new Set(
-      group.map(g => (g.city.admin1 ? slugify(g.city.admin1) : '')).filter(Boolean),
-    )
-    const ambiguous = distinctAdmin1s.size > 1
-    if (!ambiguous) {
-      // Pick representative: prefer curated, then highest population
-      const rep = group.find(g => g.isCurated)
-        ?? [...group].sort((a, b) => b.population - a.population)[0]
-      const cs = countrySlug(rep.city.country)
-      const ns = slugify(rep.city.name)
-      out.set(rep, `/${cs}/${ns}`)
-    } else {
-      for (const it of group) {
-        const cs = countrySlug(it.city.country)
-        const ns = slugify(it.city.name)
-        const a1 = it.city.admin1 ? slugify(it.city.admin1) : ''
-        out.set(it, a1 && a1 !== ns ? `/${cs}/${a1}/${ns}` : `/${cs}/${ns}`)
-      }
-    }
-  }
-  return out
 }
 
 interface NormalsIndexEntry {
@@ -117,18 +65,19 @@ function seoFiles(): Plugin {
       // prioritise crawling pages that have actually changed.
       const normalsIndex = loadNormalsIndex(resolve(__dirname, 'data/normals/_index.json'))
 
-      const items: SeoCity[] = [
+      const items: SeoCityInput[] = [
         ...CITIES.map(c => ({ city: c as GeoCity, population: 0, isCurated: true })),
         ...catalog.map(c => ({ city: c as GeoCity, population: c.population, isCurated: false })),
       ]
-      const paths = canonicalPaths(items)
+      const routes = buildSeoCityRoutes(items)
+      const pathsById = new Map(routes.map(route => [route.city.id, route.path]))
 
       const seen = new Set<string>()
       const urls: { loc: string; priority: string; changefreq: string; lastmod: string }[] = [
         { loc: `${siteUrl}/`, priority: '1.0', changefreq: 'weekly', lastmod: buildDate },
       ]
-      for (const it of items) {
-        const path = paths.get(it)
+      for (const it of routes) {
+        const path = it.path
         if (!path || seen.has(path)) continue
         seen.add(path)
         const entry = normalsIndex[it.city.id]
@@ -156,8 +105,8 @@ function seoFiles(): Plugin {
       let comparisonCount = 0
       for (let i = 0; i < top.length; i++) {
         for (let j = i + 1; j < top.length; j++) {
-          const aPath = paths.get(top[i])
-          const bPath = paths.get(top[j])
+          const aPath = pathsById.get(top[i].city.id)
+          const bPath = pathsById.get(top[j].city.id)
           if (!aPath || !bPath) continue
           urls.push({
             loc: `${siteUrl}/compare${aPath}/vs${bPath}`,
@@ -212,6 +161,24 @@ Sitemap: ${siteUrl}/sitemap.xml
         }
         console.log(`[seo] normals: ${count} cached cities (incl. _index.json)`)
       }
+    },
+  }
+}
+
+function previewCleanUrls(): Plugin {
+  return {
+    name: 'climato-preview-clean-urls',
+    apply: 'serve',
+    configurePreviewServer(server) {
+      server.middlewares.use((req, res, next) => {
+        if (req.method !== 'GET' && req.method !== 'HEAD') return next()
+        const pathname = new URL(req.url ?? '/', 'http://localhost').pathname
+        if (pathname === '/' || pathname.endsWith('/') || pathname.includes('.')) return next()
+        const file = resolve(__dirname, 'dist', `${pathname.slice(1)}.html`)
+        if (!existsSync(file)) return next()
+        res.setHeader('Content-Type', 'text/html; charset=utf-8')
+        res.end(readFileSync(file))
+      })
     },
   }
 }
@@ -286,6 +253,7 @@ export default defineConfig({
   plugins: [
     react(),
     seoFiles(),
+    previewCleanUrls(),
     devApiRoutes([
       { path: '/api/normals', module: '/api/normals.ts' },
       { path: '/api/current', module: '/api/current.ts' },

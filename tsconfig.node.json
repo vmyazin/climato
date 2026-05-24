@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022"],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "strict": true,
     "module": "ESNext",
@@ -17,5 +17,21 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "include": ["vite.config.ts", "middleware.ts", "api/**/*.ts", "api/**/*.tsx", "scripts/**/*.ts", "src/data/cities.ts", "src/lib/slug.ts"]
+  "include": [
+    "vite.config.ts",
+    "middleware.ts",
+    "api/**/*.ts",
+    "api/**/*.tsx",
+    "scripts/**/*.ts",
+    "src/data/cities.ts",
+    "src/lib/slug.ts",
+    "src/lib/seo.ts",
+    "src/lib/seo-routes.ts",
+    "src/lib/prerender-html.ts",
+    "src/lib/climate-summary.ts",
+    "src/components/ClimateNarrative.tsx",
+    "src/components/StaticCitySnapshot.tsx",
+    "src/components/StaticNearbyCitiesSection.tsx",
+    "src/hooks/useMediaQuery.ts"
+  ]
 }
