@@ -25,7 +25,7 @@ When Open-Meteo fails (5xx, timeout, malformed response), Climato falls through 
 1. **Move forecast to a server-side route** (`/api/current`). Unlocks Vercel edge caching (popular cities served without touching any upstream), keeps the fallback logic in one language and one place, hides any future API keys.
 2. **One fallback per endpoint, not a chain.** Open-Meteo 95% × secondary 95% (independent) → 99.75% combined. A third provider is marginal cost vs. complexity; easy to add later.
 3. **No circuit breaker.** Simple try-primary-then-secondary on each request. Stateless, no health tracking, no warmup.
-4. **Local sunrise/sunset.** NOAA sunrise equation, ~30 LOC, no dependencies. Removes a fragile field from the Open-Meteo response (currently keyed off `2023-XX-15`) and means the calculation is provider-independent.
+4. **Local sunrise/sunset.** NOAA sunrise equation in UT, combined with `tz-lookup` (lat/lon → IANA timezone name) and `Intl.DateTimeFormat` to render correct civil local time. ~50 LOC plus one small dep (`tz-lookup`, ~150 KB). Removes a fragile upstream field (currently keyed off `2023-XX-15`) and makes the calculation provider-independent.
 
 ## Provider choices
 
@@ -99,7 +99,7 @@ The `nasa-power-archive.ts` adapter:
 1. Fetches the same date range as Open-Meteo (`ARCHIVE_START` … `ARCHIVE_END`).
 2. Rebuilds parallel arrays in the existing `ArchiveDaily` shape.
 3. **Sunshine duration approximation:** `sunshine_seconds = (ALLSKY / CLRSKY) × day_length_seconds`. The ratio of all-sky to clear-sky shortwave radiation is a reasonable proxy for "fraction of day that was sunny," scaled by computed day length. Expected accuracy vs. Open-Meteo's `sunshine_duration`: within roughly 10–20%. Acceptable for a fallback; the response advertises `X-Climato-Source: nasa-power` so the lower fidelity is visible.
-4. **Sunrise/sunset:** not requested from NASA POWER. Removed from both providers' fetches entirely. `aggregate()` gains a `lat: number, lon: number` parameter and calls `sun.ts` to compute the monthly representative sunrise/sunset values directly. This makes the field provider-independent and removes the fragile dependency on `2023-XX-15` rows being present in upstream data.
+4. **Sunrise/sunset:** not requested from NASA POWER. Removed from both providers' fetches entirely. `aggregate()` gains `lat: number, lon: number` parameters and calls `sun.ts` to compute the 12 monthly representative sunrise/sunset values (15th of each month) as `HH:MM` strings in the city's civil local time. `sun.ts` uses the NOAA sunrise equation for UT, looks up the IANA timezone via `tz-lookup`, then formats with `Intl.DateTimeFormat({ timeZone, hour: '2-digit', minute: '2-digit', hour12: false })`. This makes the field provider-independent and removes the fragile dependency on `2023-XX-15` rows being present in upstream data.
 
 ### Forecast
 
@@ -143,6 +143,10 @@ The orchestrator catches `throw`s, logs, moves on. No retry-with-backoff inside 
 - Every fallback logs `console.error('[weather] <endpoint> primary failed, trying <secondary>: <reason>')`.
 - Response header `X-Climato-Source: open-meteo | nasa-power | met-no` indicates which provider answered.
 - No new metrics infrastructure — Vercel logs are searchable for the `[weather]` prefix.
+
+## Dependencies added
+
+- `tz-lookup` (~150 KB, no runtime deps) — lat/lon → IANA timezone name for sunrise/sunset rendering.
 
 ## Out of scope
 
