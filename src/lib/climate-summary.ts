@@ -111,12 +111,16 @@ function scoreMonth(city: City, i: number): number {
   const lo = city.low[i]
   const pr = city.precip[i]
   const su = city.sun[i]
+  const minHigh = Math.min(...city.high)
+  const maxHigh = Math.max(...city.high)
+  const warmLeisureDestination = Math.abs(city.lat) <= 35 && minHigh >= 16 && maxHigh >= 26
+  const idealMinHigh = warmLeisureDestination ? 22 : 18
   if (hi < 12 || hi > 35) return 0
   if (lo < 2) return 0.3
   if (su < 4) return 0.5
   // Warm months allow more rainfall before being penalised.
-  const precipLimit = hi >= 25 ? 180 : 100
-  if (hi >= 18 && hi <= 31 && pr < precipLimit && su >= 6) return 1
+  const precipLimit = hi >= 24 ? 185 : 100
+  if (hi >= idealMinHigh && hi <= 31 && pr < precipLimit && su >= 6) return 1
   if (pr > 200) return 0.3
   if (pr > 160) return 0.4
   return 0.7

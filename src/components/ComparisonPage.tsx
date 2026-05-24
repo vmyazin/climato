@@ -170,7 +170,7 @@ function PeakOverlapCard({ formatted, count }: { formatted: string; count: numbe
         color: muted,
         marginTop: 4,
       }}>
-        Mild temperatures, lower rainfall, longer days — good for visiting both on one trip.
+        Comfortable temperatures and manageable rain — good for visiting both on one trip.
       </div>
     </div>
   )
@@ -500,4 +500,3 @@ function TabButton({ city, color, active, onClick, position }: {
     </button>
   )
 }
-

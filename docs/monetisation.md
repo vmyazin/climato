@@ -2,7 +2,7 @@
 
 > **Status legend:** ✅ done · 🟡 partial · ⬜ not started
 >
-> Last audit: 2026-05-17 (post BreadcrumbList JSON-LD + per-city sitemap lastmod, plus h1 fix + Traffic Acquisition section)
+> Last audit: 2026-05-24 (post warm-leisure best-month scoring refinement)
 
 ## 1. Affiliate Link Strategy — ⬜ not started
 
@@ -22,7 +22,7 @@ Every city page already answers "what is the weather like there?" — the natura
 ### Placement in the app
 
 **Placement 1 — "Best months to visit" card** ⬜ (add to Variation A below the stats strip)
-- Derive automatically from climate data: best months = highest sunshine hours, lowest precip, comfortable temperature range (15–28°C)
+- Derive automatically from climate data: best months = sunshine hours, rainfall, and comfortable temperatures; warm leisure destinations need genuinely warm monthly highs before a month is treated as peak season.
 - Example: *"Best time to visit Florianópolis: November–March (warm, sunny). Avoid June–August (cool, higher rain)."*
 - CTA button: **"Find flights →"** (Skyscanner deeplink) + **"Browse hotels →"** (Booking.com deeplink)
 
@@ -124,7 +124,7 @@ All four sections are derived purely from the `City` shape — no extra fetches,
 
 1. ✅ **Overview** — *"{City} has a [climate type] climate. The warmest month is [month] ({temp}°C average high) and the coolest is [month] ({temp}°C)."* — climate type via a coarse Köppen-ish classifier (tropical / arid / mediterranean / temperate / continental / subarctic / polar).
 2. ✅ **Rainfall** — *"Annual rainfall totals [X]mm. The wettest month is [month] ([X]mm) and the driest is [month] ([X]mm)."*
-3. ✅ **Best time to visit** — *"The best time to visit {City} is [month range], when temperatures average [X]–[X]°C with [X] sunshine hours per day."* — picks the longest contiguous run of "good" months (mild temp, low rain, decent sun), with wraparound handling for Southern Hemisphere cities.
+3. ✅ **Best time to visit** — *"The best time to visit {City} is [month range], when temperatures average [X]–[X]°C with [X] sunshine hours per day."* — picks the longest contiguous run of "good" months (temperature, rain, sun), with wraparound handling for Southern Hemisphere cities and a warmer peak-season floor for subtropical/leisure destinations.
 4. ✅ **Monthly breakdown table** — semantic `<table>` with caption + thead + 12 rows (month / high / low / rain / sun / sunrise / sunset). Numeric cells use tabular-nums for clean column alignment. Google can feature-snippet directly from this.
 
 ### Scale
