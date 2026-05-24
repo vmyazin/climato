@@ -8,6 +8,10 @@
 
 - Always clean up playwright files after use
 
+## Testing
+
+Do not test the UI when employing TDD, focus on business logic. You should not add UI-only tests that merely assert rendered text, layout, CSS classes, component structure, or visual composition. You should look for the underlying business logic boundary first and test there instead.
+
 ## Documentation hygiene
 
 - After shipping a meaningful change, audit any related docs (e.g. `docs/monetisation.md`) and re-mark the status of items the change touched (✅ done · 🟡 partial · ⬜ not started). Bump the `Last audit:` date at the top of the doc.
