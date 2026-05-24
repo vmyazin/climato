@@ -25,5 +25,11 @@ export async function fetchOpenMeteoArchive(
   ) {
     throw new Error('open-meteo archive: missing daily fields')
   }
+  // Reject empty-but-200 responses: a partial outage where the API returns
+  // valid shape with no rows would otherwise be aggregated to all-zero
+  // Normals and cached in KV for 30 days.
+  if (d.time.length === 0) {
+    throw new Error('open-meteo archive: empty daily fields')
+  }
   return d as ArchiveDaily
 }

@@ -60,4 +60,21 @@ describe('normalizeNasaPower', () => {
     expect(out.precipitation_sum[0]).toBeNull()
     expect(out.sunshine_duration[0]).toBeNull()
   })
+
+  it('rejects empty-but-200 responses (no T2M_MAX keys)', () => {
+    // Partial outage where NASA POWER returns valid shape with no rows;
+    // without the guard this would aggregate to all-zero Normals.
+    const fx = {
+      properties: {
+        parameter: {
+          T2M_MAX: {},
+          T2M_MIN: {},
+          PRECTOTCORR: {},
+          ALLSKY_SFC_SW_DWN: {},
+          CLRSKY_SFC_SW_DWN: {},
+        },
+      },
+    }
+    expect(() => normalizeNasaPower(fx, 35.6762)).toThrow(/empty/i)
+  })
 })

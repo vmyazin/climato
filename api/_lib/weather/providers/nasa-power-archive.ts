@@ -52,6 +52,11 @@ export function normalizeNasaPower(json: NasaPowerResponse, lat: number): Archiv
   }
 
   const keys = Object.keys(p.T2M_MAX).sort() // sortable: YYYYMMDD lexicographic = chronological
+  // Reject empty-but-200 responses; an empty parameter map would otherwise
+  // aggregate to all-zero Normals and get cached in KV for 30 days.
+  if (keys.length === 0) {
+    throw new Error('nasa-power: empty T2M_MAX')
+  }
 
   const time: string[] = []
   const tmax: (number | null)[] = []
