@@ -67,8 +67,13 @@ export interface SunMonths {
   sunset: string[]
 }
 
+// Sentinel for months where the sun never rises or sets (polar day/night).
+// Surfaces visibly in the UI as "—" instead of a confidently-wrong "06:00",
+// which matters for in-catalog polar cities like Murmansk and Norilsk.
+export const POLAR_SENTINEL = '—'
+
 // Computes the 15th-of-month sunrise/sunset for the city, rendered as HH:MM
-// in the city's IANA timezone. Falls back to '06:00' / '18:00' on polar days.
+// in the city's IANA timezone. Returns POLAR_SENTINEL on polar day/night.
 export function monthlySunriseSunset(lat: number, lon: number): SunMonths {
   const tz = tzlookup(lat, lon)
   const year = new Date().getUTCFullYear()
@@ -78,8 +83,8 @@ export function monthlySunriseSunset(lat: number, lon: number): SunMonths {
     const day = new Date(Date.UTC(year, m, 15, 12))
     const sr = solarEvent(day, lat, lon, true)
     const ss = solarEvent(day, lat, lon, false)
-    sunrise.push(sr ? formatLocal(sr, tz) : '06:00')
-    sunset.push(ss ? formatLocal(ss, tz) : '18:00')
+    sunrise.push(sr ? formatLocal(sr, tz) : POLAR_SENTINEL)
+    sunset.push(ss ? formatLocal(ss, tz) : POLAR_SENTINEL)
   }
   return { sunrise, sunset }
 }
