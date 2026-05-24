@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-23
 **Topic:** Add a secondary weather-data provider behind Open-Meteo for both historical archive (server) and current temperature (moved to server), so that Open-Meteo outages and overload events stop user-visible failures.
-**Status:** Spec — not yet implemented.
+**Status:** Implemented on `feat/weather-provider-fallback` (18 commits, 25 tests, live-verified). Awaiting merge decision. See [review](../reviews/2026-05-23-weather-provider-fallback-review.md).
 
 ## Context
 
