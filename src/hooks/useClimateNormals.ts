@@ -7,15 +7,17 @@ async function fetchNormals(geo: GeoCity): Promise<City> {
   // to dist/normals/ at build time by the seoFiles vite plugin). The
   // content-type check rejects Vite dev's SPA fallback (200 + text/html for
   // missing static files), which would otherwise look like a cache hit.
+  // The static drain is currently Open-Meteo-sourced, so mark accordingly.
   const staticRes = await fetch(`/normals/${geo.id}.json`)
   if (staticRes.ok && staticRes.headers.get('content-type')?.includes('application/json')) {
     const normals = await staticRes.json() as Normals
-    return { ...geo, ...normals }
+    return { ...geo, ...normals, source: 'open-meteo' }
   }
 
-  // Cold cache: API route fetches Open-Meteo and writes to KV. The drain
-  // workflow promotes KV entries to data/normals/ on a cron. Forward name
-  // and country so the function can stash them alongside the normals — the
+  // Cold cache: API route runs the archive orchestrator (Open-Meteo →
+  // NASA POWER fallback) and writes the result to KV. The drain workflow
+  // promotes KV entries to data/normals/ on a cron. Forward name and
+  // country so the function can stash them alongside the normals — the
   // drain reads them out into _index.json for human-readable admin views.
   const params = new URLSearchParams({
     id: geo.id,
@@ -28,7 +30,8 @@ async function fetchNormals(geo: GeoCity): Promise<City> {
   const apiRes = await fetch(`/api/normals?${params}`)
   if (!apiRes.ok) throw new Error(`Normals API error ${apiRes.status}`)
   const normals = await apiRes.json() as Normals
-  return { ...geo, ...normals }
+  const source = apiRes.headers.get('X-Climato-Source') ?? undefined
+  return { ...geo, ...normals, source }
 }
 
 export function useClimateNormals(geo: GeoCity | undefined) {

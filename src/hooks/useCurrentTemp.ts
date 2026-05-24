@@ -4,6 +4,7 @@ import type { GeoCity } from '../data/cities'
 export interface CurrentTemp {
   tempC: number
   observedAt: string
+  source?: string  // X-Climato-Source slug: 'open-meteo' | 'met-no'
 }
 
 async function fetchCurrentTemp(geo: GeoCity): Promise<CurrentTemp> {
@@ -18,7 +19,8 @@ async function fetchCurrentTemp(geo: GeoCity): Promise<CurrentTemp> {
   if (typeof json.tempC !== 'number' || !json.observedAt) {
     throw new Error('Current-temp response missing fields')
   }
-  return { tempC: json.tempC, observedAt: json.observedAt }
+  const source = res.headers.get('X-Climato-Source') ?? undefined
+  return { tempC: json.tempC, observedAt: json.observedAt, source }
 }
 
 export function useCurrentTemp(geo: GeoCity | undefined) {

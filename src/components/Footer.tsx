@@ -4,7 +4,11 @@ import { useMediaQuery } from '../hooks/useMediaQuery'
 const fg = '#111'
 const muted = '#85847d'
 
-export function Footer() {
+interface FooterProps {
+  sourcesLabel?: string
+}
+
+export function Footer({ sourcesLabel }: FooterProps) {
   const isMd = useMediaQuery('(min-width: 768px)')
   if (!isMd) return null
   return (
@@ -24,7 +28,7 @@ export function Footer() {
       <div style={{ color: fg, fontFamily: "'Inter Tight', Inter, system-ui, sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: -0.2, textTransform: 'none' }}>
         CLIMATO
       </div>
-      <div>Data · Open-Meteo</div>
+      <div>Data · {sourcesLabel ?? 'Open-Meteo'}</div>
       <div>© Climato 2026</div>
     </footer>
   )
