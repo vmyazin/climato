@@ -4,29 +4,23 @@ import type { GeoCity } from '../data/cities'
 export interface CurrentTemp {
   tempC: number
   observedAt: string
-}
-
-interface ForecastResponse {
-  current?: {
-    time?: string
-    temperature_2m?: number
-  }
+  source?: string  // X-Climato-Source slug: 'open-meteo' | 'met-no'
 }
 
 async function fetchCurrentTemp(geo: GeoCity): Promise<CurrentTemp> {
   const params = new URLSearchParams({
-    latitude: String(geo.lat),
-    longitude: String(geo.lon),
-    current: 'temperature_2m',
-    timezone: 'auto',
+    id: geo.id,
+    lat: String(geo.lat),
+    lon: String(geo.lon),
   })
-  const res = await fetch(`https://api.open-meteo.com/v1/forecast?${params}`)
-  if (!res.ok) throw new Error(`Forecast API error ${res.status}`)
-  const json = (await res.json()) as ForecastResponse
-  const t = json.current?.temperature_2m
-  const time = json.current?.time
-  if (typeof t !== 'number' || !time) throw new Error('Forecast API returned no current temperature')
-  return { tempC: t, observedAt: time }
+  const res = await fetch(`/api/current?${params}`)
+  if (!res.ok) throw new Error(`Current-temp request failed: ${res.status}`)
+  const json = (await res.json()) as Partial<CurrentTemp>
+  if (typeof json.tempC !== 'number' || !json.observedAt) {
+    throw new Error('Current-temp response missing fields')
+  }
+  const source = res.headers.get('X-Climato-Source') ?? undefined
+  return { tempC: json.tempC, observedAt: json.observedAt, source }
 }
 
 export function useCurrentTemp(geo: GeoCity | undefined) {

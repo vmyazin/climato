@@ -15,6 +15,7 @@ export interface City extends GeoCity {
   sun: number[]
   sunrise: string[]
   sunset: string[]
+  source?: string  // X-Climato-Source slug: 'open-meteo' | 'nasa-power' | undefined for static-served entries
 }
 
 // Climate-only fields a City has on top of its GeoCity identity. Used by the

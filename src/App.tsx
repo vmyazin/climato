@@ -17,6 +17,7 @@ import { useCurrentTemp } from './hooks/useCurrentTemp'
 import { useUrlSync } from './lib/route'
 import { useMediaQuery } from './hooks/useMediaQuery'
 import { useDocumentMeta } from './hooks/useDocumentMeta'
+import { dataSourceLabel } from './lib/dataSources'
 
 const bg = '#f0f1ed'
 const muted = '#85847d'
@@ -50,6 +51,15 @@ export default function App() {
   })
 
   const sharedProps = city ? { city, unit, setUnit, chartVariant, setChartVariant, currentTemp } : null
+
+  // Union of all data-source slugs that have answered queries on this page,
+  // for footer attribution. Deduplicated and rendered as comma-joined labels.
+  const sourcesLabel = dataSourceLabel([
+    city?.source,
+    climateA.data?.source,
+    climateB.data?.source,
+    currentTemp?.source,
+  ])
 
   const handleRetry = () => {
     climate.refetch()
@@ -105,7 +115,7 @@ export default function App() {
             <NearbyCitiesSection city={sharedProps.city} />
           </>
         )}
-        <Footer />
+        <Footer sourcesLabel={sourcesLabel} />
       </main>
       <SmokedGlassOverlay active={isPlaceholderData && !notFoundSlug && !isComparison} />
     </div>

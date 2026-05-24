@@ -1,4 +1,5 @@
-import { fetchOpenMeteoNormals, type Normals } from './_lib/normals.js'
+import { type Normals } from './_lib/normals.js'
+import { fetchArchiveNormals } from './_lib/weather/archive.js'
 import { validateCity } from './_lib/catalog.js'
 import { checkRateLimit } from './_lib/ratelimit.js'
 
@@ -130,10 +131,13 @@ export default async function handler(req: VercelLikeRequest, res: VercelLikeRes
   }
 
   let normals: Normals
+  let source: string
   try {
-    normals = await fetchOpenMeteoNormals(lat, lon)
+    const result = await fetchArchiveNormals(lat, lon)
+    normals = result.data
+    source = result.source
   } catch (err) {
-    console.error('[normals] Open-Meteo fetch failed:', err)
+    console.error('[normals] all archive providers failed:', err)
     return bad(res, 502, 'upstream fetch failed')
   }
 
@@ -146,6 +150,7 @@ export default async function handler(req: VercelLikeRequest, res: VercelLikeRes
 
   res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400')
   res.setHeader('X-Climato-Cache', 'miss')
+  res.setHeader('X-Climato-Source', source)
   res.status(200)
   res.json(normals)
 }

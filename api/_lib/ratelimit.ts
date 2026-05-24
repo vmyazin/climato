@@ -8,7 +8,7 @@ interface ReqLike {
   headers?: Record<string, string | string[] | undefined>
 }
 
-export type RateLimitNamespace = 'normals' | 'nearby' | 'og' | 'admin'
+export type RateLimitNamespace = 'normals' | 'nearby' | 'og' | 'admin' | 'current'
 
 // Tokens per minute per IP. Tuned for the expected legitimate traffic
 // pattern (a single browser session generating a small handful of requests
@@ -18,6 +18,7 @@ const LIMITS: Record<RateLimitNamespace, { tokens: number; window: '1 m' }> = {
   nearby:  { tokens: 60, window: '1 m' },
   og:      { tokens: 20, window: '1 m' },
   admin:   { tokens: 5,  window: '1 m' }, // login attempts only
+  current: { tokens: 60, window: '1 m' }, // edge-cached, so per-IP misses are low
 }
 
 function getEnv(): { url: string; token: string } | null {
