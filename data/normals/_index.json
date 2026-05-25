@@ -77,6 +77,12 @@
     "country": "Japan",
     "admin1": "Hokkaido"
   },
+  "2147714": {
+    "fetched_at": "2026-05-25T01:37:40.613Z",
+    "name": "Sydney",
+    "country": "Australia",
+    "admin1": "New South Wales"
+  },
   "2643743": {
     "fetched_at": "2026-05-05T00:14:38.305Z",
     "name": "London",
