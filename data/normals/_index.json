@@ -1,4 +1,16 @@
 {
+  "311046": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "İzmir",
+    "country": "Turkey",
+    "admin1": "İzmir Province"
+  },
+  "323786": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Ankara",
+    "country": "Turkey",
+    "admin1": "Ankara"
+  },
   "353219": {
     "fetched_at": "2026-05-03T00:11:46.565Z",
     "name": "6th of October City",
@@ -10,6 +22,12 @@
     "name": "Banhā",
     "country": "Egypt",
     "admin1": "Qalyubia"
+  },
+  "498817": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Saint Petersburg",
+    "country": "Russia",
+    "admin1": "St.-Petersburg"
   },
   "524901": {
     "fetched_at": "2026-05-24T21:15:47.469Z",
@@ -23,6 +41,24 @@
     "country": "Russia",
     "admin1": "Krasnodar Krai"
   },
+  "703448": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Kyiv",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
+  },
+  "745044": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Istanbul",
+    "country": "Turkey",
+    "admin1": "Istanbul"
+  },
+  "750269": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Bursa",
+    "country": "Turkey",
+    "admin1": "Bursa Province"
+  },
   "993800": {
     "fetched_at": "2026-05-06T13:31:06.365Z",
     "name": "Johannesburg",
@@ -35,15 +71,398 @@
     "country": "Afghanistan",
     "admin1": "Baghlan"
   },
+  "1214520": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Medan",
+    "country": "Indonesia",
+    "admin1": "North Sumatra"
+  },
+  "1298824": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Yangon",
+    "country": "Myanmar",
+    "admin1": "Yangon"
+  },
+  "1529102": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Ürümqi",
+    "country": "China",
+    "admin1": "Xinjiang"
+  },
+  "1566083": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "admin1": "Ho Chi Minh City (HCMC)"
+  },
+  "1581130": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Hanoi",
+    "country": "Vietnam",
+    "admin1": "Hanoi"
+  },
+  "1581298": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Haiphong",
+    "country": "Vietnam",
+    "admin1": "Hai Phong"
+  },
+  "1609350": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
+  "1625822": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Surabaya",
+    "country": "Indonesia",
+    "admin1": "East Java"
+  },
+  "1642911": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Jakarta",
+    "country": "Indonesia",
+    "admin1": "Jakarta"
+  },
+  "1649378": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Bekasi",
+    "country": "Indonesia",
+    "admin1": "West Java"
+  },
+  "1650357": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Bandung",
+    "country": "Indonesia",
+    "admin1": "West Java"
+  },
+  "1668341": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Taipei",
+    "country": "Taiwan",
+    "admin1": "Taiwan"
+  },
+  "1668399": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Taichung",
+    "country": "Taiwan",
+    "admin1": "Taiwan"
+  },
+  "1673820": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Kaohsiung",
+    "country": "Taiwan",
+    "admin1": "Takao"
+  },
+  "1692192": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Quezon City",
+    "country": "Philippines",
+    "admin1": "National Capital Region"
+  },
+  "1784658": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Zhengzhou",
+    "country": "China",
+    "admin1": "Henan"
+  },
+  "1785286": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Zibo",
+    "country": "China",
+    "admin1": "Shandong"
+  },
+  "1785725": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Yunfu",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
+  "1790630": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Xi’an",
+    "country": "China",
+    "admin1": "Shaanxi"
+  },
+  "1790645": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Xiamen",
+    "country": "China",
+    "admin1": "Fujian"
+  },
+  "1790842": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Wuzhong",
+    "country": "China",
+    "admin1": "Ningxia"
+  },
+  "1790923": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Wuxi",
+    "country": "China",
+    "admin1": "Jiangsu"
+  },
+  "1791247": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Wuhan",
+    "country": "China",
+    "admin1": "Hubei"
+  },
+  "1791388": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Wenzhou",
+    "country": "China",
+    "admin1": "Zhejiang"
+  },
+  "1792947": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Tianjin",
+    "country": "China",
+    "admin1": "Tianjin"
+  },
+  "1793346": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Tangshan",
+    "country": "China",
+    "admin1": "Hebei"
+  },
+  "1793511": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Taiyuan",
+    "country": "China",
+    "admin1": "Shanxi"
+  },
+  "1794903": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Shiyan",
+    "country": "China",
+    "admin1": "Hubei"
+  },
+  "1795270": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Shijiazhuang",
+    "country": "China",
+    "admin1": "Hebei"
+  },
+  "1795565": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Shenzhen",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
+  "1795940": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Shantou",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
+  "1796236": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Shanghai",
+    "country": "China",
+    "admin1": "Shanghai"
+  },
+  "1797873": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Huai'an",
+    "country": "China",
+    "admin1": "Jiangsu"
+  },
+  "1797929": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Qingdao",
+    "country": "China",
+    "admin1": "Shandong"
+  },
+  "1798425": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Puyang",
+    "country": "China",
+    "admin1": "Zhejiang"
+  },
+  "1798524": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Pudong",
+    "country": "China",
+    "admin1": "Shanghai"
+  },
+  "1799397": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Ningbo",
+    "country": "China",
+    "admin1": "Zhejiang"
+  },
+  "1799869": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Nanning",
+    "country": "China",
+    "admin1": "Guangxi"
+  },
+  "1799962": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Nanjing",
+    "country": "China",
+    "admin1": "Jiangsu"
+  },
+  "1800480": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Minhang",
+    "country": "China",
+    "admin1": "Shanghai"
+  },
+  "1803318": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Linyi",
+    "country": "China",
+    "admin1": "Shandong"
+  },
+  "1804430": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Lanzhou",
+    "country": "China",
+    "admin1": "Gansu"
+  },
+  "1804651": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Kunming",
+    "country": "China",
+    "admin1": "Yunnan"
+  },
+  "1805753": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Jinan",
+    "country": "China",
+    "admin1": "Shandong"
+  },
+  "1806776": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Huizhou",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
+  "1808722": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Hefei",
+    "country": "China",
+    "admin1": "Anhui"
+  },
+  "1808926": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Hangzhou",
+    "country": "China",
+    "admin1": "Zhejiang"
+  },
+  "1809078": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Haikou",
+    "country": "China",
+    "admin1": "Hainan"
+  },
+  "1809461": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Guiyang",
+    "country": "China",
+    "admin1": "Guizhou"
+  },
+  "1809858": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Guangzhou",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
+  "1810821": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Fuzhou",
+    "country": "China",
+    "admin1": "Fujian"
+  },
+  "1811103": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Foshan",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
+  "1812545": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Dongguan",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
+  "1814087": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Dalian",
+    "country": "China",
+    "admin1": "Liaoning"
+  },
+  "1814906": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Chongqing",
+    "country": "China",
+    "admin1": "Chongqing"
+  },
+  "1815286": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Chengdu",
+    "country": "China",
+    "admin1": "Sichuan"
+  },
+  "1815456": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Changzhou",
+    "country": "China",
+    "admin1": "Jiangsu"
+  },
+  "1815577": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Changsha",
+    "country": "China",
+    "admin1": "Hunan"
+  },
   "1816670": {
     "fetched_at": "2026-05-24T21:15:47.469Z",
     "name": "Beijing",
     "country": "China",
     "admin1": "Beijing Municipality"
   },
+  "1816971": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Baoding",
+    "country": "China",
+    "admin1": "Hebei"
+  },
+  "1819729": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Hong Kong",
+    "country": "Hong Kong"
+  },
+  "1835848": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Seoul",
+    "country": "South Korea",
+    "admin1": "Seoul"
+  },
+  "1838524": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Busan",
+    "country": "South Korea",
+    "admin1": "Busan"
+  },
+  "1843564": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Incheon",
+    "country": "South Korea",
+    "admin1": "Incheon"
+  },
   "1848004": {
     "fetched_at": "2026-05-04T09:40:07.031Z",
     "name": "Zama",
+    "country": "Japan",
+    "admin1": "Kanagawa"
+  },
+  "1848354": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Yokohama",
     "country": "Japan",
     "admin1": "Kanagawa"
   },
@@ -52,6 +471,23 @@
     "name": "Tokyo",
     "country": "Japan",
     "admin1": "Tokyo"
+  },
+  "1853909": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Osaka",
+    "country": "Japan",
+    "admin1": "Osaka"
+  },
+  "1880252": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Singapore",
+    "country": "Singapore"
+  },
+  "1886760": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Suzhou",
+    "country": "China",
+    "admin1": "Jiangsu"
   },
   "2013348": {
     "fetched_at": "2026-05-18T23:20:20.640Z",
@@ -70,6 +506,24 @@
     "name": "Shunyi",
     "country": "China",
     "admin1": "Beijing Municipality"
+  },
+  "2034937": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Shenyang",
+    "country": "China",
+    "admin1": "Liaoning"
+  },
+  "2037013": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Harbin",
+    "country": "China",
+    "admin1": "Heilongjiang"
+  },
+  "2038180": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Changchun",
+    "country": "China",
+    "admin1": "Jilin"
   },
   "2128295": {
     "fetched_at": "2026-05-05T00:14:38.305Z",
@@ -113,6 +567,12 @@
     "country": "Germany",
     "admin1": "Saxony"
   },
+  "2950159": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Berlin",
+    "country": "Germany",
+    "admin1": "State of Berlin"
+  },
   "2988507": {
     "fetched_at": "2026-05-18T23:20:20.640Z",
     "name": "Paris",
@@ -149,11 +609,35 @@
     "country": "Iceland",
     "admin1": "Capital Region"
   },
+  "3435910": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "admin1": "Buenos Aires F.D."
+  },
   "3445993": {
     "fetched_at": "2026-05-19T04:32:10.512Z",
     "name": "Tubarão",
     "country": "Brazil",
     "admin1": "Santa Catarina"
+  },
+  "3448439": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "São Paulo",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "3450554": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Salvador",
+    "country": "Brazil",
+    "admin1": "Bahia"
+  },
+  "3451190": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "admin1": "Rio de Janeiro"
   },
   "3453186": {
     "fetched_at": "2026-05-18T23:20:20.640Z",
@@ -185,11 +669,59 @@
     "country": "Brazil",
     "admin1": "Santa Catarina"
   },
+  "3470127": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Belo Horizonte",
+    "country": "Brazil",
+    "admin1": "Minas Gerais"
+  },
   "3471039": {
     "fetched_at": "2026-05-10T22:12:48.808Z",
     "name": "Balneário Camboriú",
     "country": "Brazil",
     "admin1": "Santa Catarina"
+  },
+  "3530597": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Mexico City",
+    "country": "Mexico",
+    "admin1": "Mexico City"
+  },
+  "3646738": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Caracas",
+    "country": "Venezuela",
+    "admin1": "Distrito Federal"
+  },
+  "3652462": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Quito",
+    "country": "Ecuador",
+    "admin1": "Pichincha"
+  },
+  "3657509": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Guayaquil",
+    "country": "Ecuador",
+    "admin1": "Guayas"
+  },
+  "3688689": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Bogotá",
+    "country": "Colombia",
+    "admin1": "Bogota D.C."
+  },
+  "3871336": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Santiago",
+    "country": "Chile",
+    "admin1": "Santiago Metropolitan"
+  },
+  "3936456": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Lima",
+    "country": "Peru",
+    "admin1": "Lima Province"
   },
   "4168782": {
     "fetched_at": "2026-05-09T08:28:20.476Z",
@@ -209,6 +741,12 @@
     "country": "United States",
     "admin1": "Texas"
   },
+  "4887398": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Chicago",
+    "country": "United States",
+    "admin1": "Illinois"
+  },
   "4930505": {
     "fetched_at": "2026-05-07T18:28:37.260Z",
     "name": "Beverly",
@@ -221,11 +759,35 @@
     "country": "United States",
     "admin1": "Massachusetts"
   },
+  "5110302": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Brooklyn",
+    "country": "United States",
+    "admin1": "New York"
+  },
+  "5128581": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "New York City",
+    "country": "United States",
+    "admin1": "New York"
+  },
+  "5368361": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Los Angeles",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5391959": {
     "fetched_at": "2026-05-02T22:10:05.270Z",
     "name": "San Francisco",
     "country": "United States",
     "admin1": "California"
+  },
+  "6167865": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Toronto",
+    "country": "Canada",
+    "admin1": "Ontario"
   },
   "6317123": {
     "fetched_at": "2026-05-18T14:08:33.613Z",
@@ -238,6 +800,41 @@
     "name": "Somerset West",
     "country": "South Africa",
     "admin1": "Western Cape"
+  },
+  "6986104": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Zhongshan",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
+  "11995100": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Bazhong",
+    "country": "China",
+    "admin1": "Sichuan"
+  },
+  "12747063": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "New Territories",
+    "country": "Hong Kong"
+  },
+  "12908892": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "New Taipei City",
+    "country": "Taiwan",
+    "admin1": "Taipei"
+  },
+  "13308620": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Bao'an",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
+  "13512505": {
+    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "name": "Lüliang",
+    "country": "China",
+    "admin1": "Shanxi"
   },
   "999999999": {
     "fetched_at": "2026-05-10T22:12:48.808Z",
