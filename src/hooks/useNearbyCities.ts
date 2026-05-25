@@ -31,10 +31,14 @@ async function fetchNearby(geo: GeoCity, n: number): Promise<NearbyCity[]> {
 
 export function useNearbyCities(geo: GeoCity | undefined, n: number = 5) {
   return useQuery({
-    queryKey: ['nearby', geo?.lat.toFixed(2), geo?.lon.toFixed(2), n],
+    queryKey: nearbyCitiesQueryKey(geo, n),
     queryFn: () => fetchNearby(geo!, n),
     enabled: !!geo?.lat && isResolvedCity(geo),
     staleTime: Infinity,
     gcTime: 7 * 24 * 60 * 60 * 1000,
   })
+}
+
+export function nearbyCitiesQueryKey(geo: GeoCity | undefined, n: number = 5): readonly unknown[] {
+  return ['nearby', geo?.lat.toFixed(2), geo?.lon.toFixed(2), n]
 }

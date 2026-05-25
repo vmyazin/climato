@@ -8,6 +8,7 @@ import { findNearest } from '../api/_lib/catalog'
 import { buildSeoCityRoutes, type SeoCityInput } from '../src/lib/seo-routes'
 import { buildCitySeoMeta } from '../src/lib/seo'
 import { injectPrerenderedCityHtml } from '../src/lib/prerender-html'
+import { buildPrerenderSeedScript } from '../src/lib/prerender-seed'
 
 interface CatalogCity extends GeoCity {
   population: number
@@ -86,7 +87,8 @@ function main() {
     const neighbors = findNearest({ lat: city.lat, lon: city.lon }, 5, city.id)
     const appHtml = renderToStaticMarkup(React.createElement(StaticCitySnapshot, { city, neighbors }))
     const meta = buildCitySeoMeta(city, city, siteUrl, route.path)
-    const html = injectPrerenderedCityHtml(baseHtml, meta, appHtml)
+    const seedScript = buildPrerenderSeedScript({ city, climate: city, neighbors })
+    const html = injectPrerenderedCityHtml(baseHtml, meta, appHtml, seedScript)
     writeRouteHtml(route.path, html)
     rendered++
   }

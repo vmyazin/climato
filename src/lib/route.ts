@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import type { GeoCity } from '../data/cities'
 import { useWeatherStore } from '../store/weatherStore'
 import { useComparisonStore } from '../store/comparisonStore'
-import { countryFromSlug, countrySlug, nameFromSlug, slugify, toCompareSlug, toSlug } from './slug'
+import { countryFromSlug, countrySlug, isResolvedCity, nameFromSlug, slugify, toCompareSlug, toSlug } from './slug'
 
 export { countryFromSlug, countrySlug, nameFromSlug, slugify, toCompareSlug, toSlug }
 export type { CityUrl } from './slug'
@@ -108,6 +108,14 @@ export function reconstructFromSlug(parsed: {
     lon: 0,
     elev: 0,
   }
+}
+
+export function parsedSlugMatchesCity(parsed: ParsedSlug, city: GeoCity): boolean {
+  if (!isResolvedCity(city)) return false
+  if (countrySlug(city.country) !== parsed.countrySlug) return false
+  if (slugify(city.name) !== parsed.citySlug) return false
+  if (parsed.admin1Slug) return !!city.admin1 && slugify(city.admin1) === parsed.admin1Slug
+  return true
 }
 
 interface OpenMeteoCity {
@@ -252,6 +260,14 @@ export function useUrlSync(): UrlSyncResult {
       // Single-city slug — clear any prior comparison state and run the
       // existing flow.
       clearComparison()
+
+      // Prerendered pages can seed a fully resolved city before React mounts.
+      // If that seed already matches the URL, keep it and skip the remote
+      // geocoder so hydration doesn't downgrade static HTML to a loading shell.
+      if (parsedSlugMatchesCity(parsed, useWeatherStore.getState().selectedCity)) {
+        skipNextPush.current = true
+        return
+      }
 
       // Synchronous placeholder for first paint — uses the URL coords if
       // present, otherwise lat=0/lon=0 (which keeps useClimateNormals and

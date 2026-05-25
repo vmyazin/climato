@@ -33,4 +33,21 @@ describe('injectPrerenderedCityHtml', () => {
     expect(html).toContain('<script id="climato-jsonld" type="application/ld+json">')
     expect(html).toContain('<div id="root"><main><h1>Tokyo</h1></main></div>')
   })
+
+  it('injects an optional prerender seed next to the root container', () => {
+    const baseHtml = '<html><head></head><body><div id="root"></div><script type="module" src="/assets/index.js"></script></body></html>'
+    const meta: CitySeoMeta = {
+      title: 'Tokyo Monthly Weather Averages — Climato',
+      description: 'Monthly weather averages for Tokyo.',
+      canonicalUrl: 'https://climato.smoxu.com/japan/tokyo',
+      ogImageUrl: 'https://climato.smoxu.com/api/og?city=Tokyo',
+      jsonLd: { '@context': 'https://schema.org' },
+    }
+    const seed = '<script id="climato-prerender-seed" type="application/json">{"city":{"id":"tokyo"}}</script>'
+
+    const html = injectPrerenderedCityHtml(baseHtml, meta, '<main>Tokyo</main>', seed)
+
+    expect(html).toContain('<div id="root"><main>Tokyo</main></div><script id="climato-prerender-seed"')
+    expect(html.indexOf('climato-prerender-seed')).toBeLessThan(html.indexOf('/assets/index.js'))
+  })
 })

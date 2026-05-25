@@ -1,6 +1,11 @@
 import { JSONLD_ID, type CitySeoMeta } from './seo'
 
-export function injectPrerenderedCityHtml(baseHtml: string, meta: CitySeoMeta, appHtml: string): string {
+export function injectPrerenderedCityHtml(
+  baseHtml: string,
+  meta: CitySeoMeta,
+  appHtml: string,
+  seedScript = '',
+): string {
   const cleaned = removeManagedHeadTags(baseHtml)
   const headTags = [
     `<title>${escapeHtml(meta.title)}</title>`,
@@ -23,7 +28,7 @@ export function injectPrerenderedCityHtml(baseHtml: string, meta: CitySeoMeta, a
 
   return cleaned
     .replace('</head>', `    ${headTags}\n  </head>`)
-    .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+    .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>${seedScript}`)
 }
 
 function removeManagedHeadTags(html: string): string {

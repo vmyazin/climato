@@ -34,9 +34,13 @@ async function fetchNormals(geo: GeoCity): Promise<City> {
   return { ...geo, ...normals, source }
 }
 
+export function climateQueryKey(geo: GeoCity | undefined): readonly unknown[] {
+  return ['climate', geo?.lat.toFixed(2), geo?.lon.toFixed(2)]
+}
+
 export function useClimateNormals(geo: GeoCity | undefined) {
   return useQuery({
-    queryKey: ['climate', geo?.lat.toFixed(2), geo?.lon.toFixed(2)],
+    queryKey: climateQueryKey(geo),
     queryFn: () => fetchNormals(geo!),
     enabled: !!geo?.lat && isResolvedCity(geo),
     staleTime: Infinity,
