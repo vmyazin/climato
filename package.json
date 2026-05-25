@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "cities:build": "scripts/build-cities.sh",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "normals:backfill-largest": "tsx scripts/backfill-largest-cities.ts"
   },
   "engines": {
     "node": ">=20"

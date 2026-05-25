@@ -34,6 +34,26 @@ pnpm dev
 
 Opens at `http://localhost:5173`. No environment variables or API keys needed.
 
+## Normals backfill
+
+Bulk-populate `data/normals/` for the largest uncached catalog cities in preferred regions (Americas, East/Southeast Asia, and Europe — Turkey and Russia count as Europe). Uses the same archive provider chain as production (`fetchArchiveNormals()`: Open-Meteo first, NASA POWER fallback), not the rate-limited `/api/normals` route.
+
+```bash
+# Fetch and write the next batch (default: 100 cities)
+pnpm normals:backfill-largest
+
+# Preview candidates without API calls or file writes
+DRY_RUN=1 pnpm normals:backfill-largest
+
+# Smaller batch
+LIMIT=50 pnpm normals:backfill-largest
+
+# Slower requests — helps avoid Open-Meteo HTTP 429 rate limits
+DELAY_MS=1500 pnpm normals:backfill-largest
+```
+
+Each run skips cities already present in `data/normals/`, so reruns pick up the next largest uncached preferred-region cities.
+
 ## How It Works
 
 **City search** calls the Open-Meteo geocoding API (`/v1/search`) with deduplication: results are grouped by normalised name (diacritics stripped) + country, and the highest-population entry wins per group. This avoids the problem where a common city name returns dozens of tiny same-named towns before the well-known city.
