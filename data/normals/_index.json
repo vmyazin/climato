@@ -371,6 +371,12 @@
     "country": "China",
     "admin1": "Shandong"
   },
+  "1792520": {
+    "fetched_at": "2026-05-25T15:12:39.709Z",
+    "name": "Tongzhou",
+    "country": "China",
+    "admin1": "Beijing Municipality"
+  },
   "1792947": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Tianjin",
