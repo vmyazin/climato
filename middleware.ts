@@ -1,4 +1,4 @@
-import { next } from '@vercel/edge'
+import { next, rewrite } from '@vercel/edge'
 
 export const config = {
   matcher: ['/((?!api/|normals/|admin$|.*\\.(?:js|css|png|svg|ico|webp|woff2?|json|txt|xml)$).*)'],
@@ -83,7 +83,7 @@ export default function middleware(request: Request): Response {
   }
 
   const ua = request.headers.get('user-agent') ?? ''
-  if (!BOT_UA.test(ua)) return next()
+  if (!BOT_UA.test(ua)) return rewrite(new URL('/', url))
 
   // Comparison route — different OG endpoint, different title/description.
   // No climate data in middleware, so the image renders without a tempDelta
