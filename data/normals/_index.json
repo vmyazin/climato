@@ -41,6 +41,12 @@
     "country": "Egypt",
     "admin1": "Qalyubia"
   },
+  "360630": {
+    "fetched_at": "2026-05-25T06:28:46.652Z",
+    "name": "Cairo",
+    "country": "Egypt",
+    "admin1": "Cairo Governorate"
+  },
   "498817": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Saint Petersburg",
@@ -1010,6 +1016,12 @@
     "country": "Brazil",
     "admin1": "Pernambuco"
   },
+  "3395981": {
+    "fetched_at": "2026-05-25T06:28:46.652Z",
+    "name": "Maceió",
+    "country": "Brazil",
+    "admin1": "Alagoas"
+  },
   "3399415": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Fortaleza",
@@ -1022,11 +1034,23 @@
     "country": "Iceland",
     "admin1": "Capital Region"
   },
+  "3431271": {
+    "fetched_at": "2026-05-25T06:28:46.652Z",
+    "name": "Lomas de Zamora",
+    "country": "Argentina",
+    "admin1": "Buenos Aires"
+  },
   "3435910": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Buenos Aires",
     "country": "Argentina",
     "admin1": "Buenos Aires F.D."
+  },
+  "3441575": {
+    "fetched_at": "2026-05-25T06:28:46.652Z",
+    "name": "Montevideo",
+    "country": "Uruguay",
+    "admin1": "Montevideo Department"
   },
   "3445993": {
     "fetched_at": "2026-05-19T04:32:10.512Z",
@@ -1376,6 +1400,12 @@
     "country": "China",
     "admin1": "Jiangsu"
   },
+  "7645166": {
+    "fetched_at": "2026-05-25T06:28:46.652Z",
+    "name": "San Miguel",
+    "country": "Argentina",
+    "admin1": "Buenos Aires"
+  },
   "8347664": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Ordos",
@@ -1454,5 +1484,10 @@
     "fetched_at": "2026-05-02T22:10:05.270Z",
     "name": "Tokyo",
     "country": "Japan"
+  },
+  "buenosaires": {
+    "fetched_at": "2026-05-25T06:28:46.652Z",
+    "name": "Buenos Aires",
+    "country": "Argentina"
   }
 }
