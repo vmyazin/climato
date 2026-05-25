@@ -47,18 +47,24 @@ describe('prerender seed — city kind', () => {
 })
 
 describe('prerender seed — comparison kind', () => {
-  it('serializes and round-trips a comparison seed', () => {
-    const script = buildPrerenderSeedScript({ kind: 'comparison', a: tokyo, b: london, climateA: tokyo, climateB: london })
+  it('serializes and round-trips a compact comparison seed', () => {
+    const script = buildPrerenderSeedScript({ kind: 'comparison', a: tokyo, b: london })
     const parsed = parsePrerenderSeedJson(script.match(/type="application\/json">(.+)<\/script>/)?.[1] ?? '{}')
+    expect(script).not.toContain('climateA')
+    expect(script).not.toContain('climateB')
     expect(parsed?.kind).toBe('comparison')
     if (parsed?.kind !== 'comparison') return
     expect(parsed.a.id).toBe('tokyo')
     expect(parsed.b.id).toBe('london')
-    expect(parsed.climateA.high).toHaveLength(12)
-    expect(parsed.climateB.low).toHaveLength(12)
+    expect(parsed.a.high).toHaveLength(12)
+    expect(parsed.b.low).toHaveLength(12)
   })
 
-  it('rejects comparison seeds with missing climate', () => {
-    expect(parsePrerenderSeedJson(JSON.stringify({ kind: 'comparison', a: tokyo, b: london, climateA: tokyo }))).toBeNull()
+  it('rejects comparison seeds whose halves are not full climate payloads', () => {
+    expect(parsePrerenderSeedJson(JSON.stringify({
+      kind: 'comparison',
+      a: { id: 'tokyo', name: 'Tokyo', country: 'Japan', lat: 35.6762, lon: 139.6503, elev: 40 },
+      b: london,
+    }))).toBeNull()
   })
 })

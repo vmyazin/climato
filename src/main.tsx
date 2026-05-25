@@ -20,11 +20,11 @@ const parsed = parseUrl(window.location.pathname, window.location.search)
 const prerenderSeed = readPrerenderSeed(document)
 
 if (parsed.type === 'compare' && prerenderSeed?.kind === 'comparison') {
-  const { a, b, climateA, climateB } = prerenderSeed
+  const { a, b } = prerenderSeed
   if (parsedSlugMatchesCity(parsed.a, a) && parsedSlugMatchesCity(parsed.b, b)) {
     useComparisonStore.getState().setPair(a, b)
-    queryClient.setQueryData(climateQueryKey(a), climateA)
-    queryClient.setQueryData(climateQueryKey(b), climateB)
+    queryClient.setQueryData(climateQueryKey(a), a)
+    queryClient.setQueryData(climateQueryKey(b), b)
   }
 } else if (parsed.type === 'slug') {
   const hasMatchingPrerenderSeed = prerenderSeed?.kind === 'city' && parsedSlugMatchesCity(parsed, prerenderSeed.city)

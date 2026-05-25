@@ -110,7 +110,7 @@ function main() {
 
       const appHtml = renderToStaticMarkup(React.createElement(StaticComparisonSnapshot, { a, b }))
       const meta = buildComparisonSeoMeta(a, b, a, b, siteUrl)
-      const seedScript = buildPrerenderSeedScript({ kind: 'comparison', a, b, climateA: a, climateB: b })
+      const seedScript = buildPrerenderSeedScript({ kind: 'comparison', a, b })
       const html = injectPrerenderedCityHtml(baseHtml, meta, appHtml, seedScript)
       writeRouteHtml(path, html)
       rendered++

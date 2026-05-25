@@ -11,10 +11,8 @@ export interface CitySeed {
 
 export interface ComparisonSeed {
   kind: 'comparison'
-  a: GeoCity
-  b: GeoCity
-  climateA: City
-  climateB: City
+  a: City
+  b: City
 }
 
 export type PrerenderSeed = CitySeed | ComparisonSeed
@@ -51,8 +49,8 @@ export function parsePrerenderSeedJson(json: string): PrerenderSeed | null {
 
     if (raw.kind === 'comparison') {
       const v = raw as Partial<ComparisonSeed>
-      if (!isGeoCity(v.a) || !isGeoCity(v.b) || !isCity(v.climateA) || !isCity(v.climateB)) return null
-      return { kind: 'comparison', a: v.a, b: v.b, climateA: v.climateA, climateB: v.climateB }
+      if (!isCity(v.a) || !isCity(v.b)) return null
+      return { kind: 'comparison', a: v.a, b: v.b }
     }
 
     // 'city' kind (new) or legacy (no kind field — treat as city seed)
