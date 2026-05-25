@@ -1,3 +1,4 @@
+// api/admin.ts
 import { createHmac, timingSafeEqual } from 'node:crypto'
 import { BIG_CITY_MIN_POP, catalogStats, isBigCity } from './_lib/catalog.js'
 import { checkRateLimit } from './_lib/ratelimit.js'
@@ -18,6 +19,7 @@ interface VercelLikeResponse {
 
 const COOKIE_NAME = 'climato_admin'
 const SESSION_PAYLOAD = 'climato-admin-v1'
+const CACHED_PAGE_SIZE = 20
 // 30 days. Long enough to be set-and-forget, short enough that a stale device
 // eventually re-prompts.
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 30
@@ -287,10 +289,11 @@ function escapeHtml(s: string): string {
 
 const STYLE = `
   body { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; font-size: 13px; color: #ddd; background: #0c0c0c; margin: 0; padding: 24px; line-height: 1.55; }
+  .admin-page { max-width: 960px; }
   h1, h2 { color: #fff; font-weight: 600; margin: 0 0 8px; letter-spacing: 0.5px; }
   h1 { font-size: 14px; text-transform: uppercase; }
   h2 { font-size: 12px; text-transform: uppercase; margin-top: 32px; color: #888; }
-  table { border-collapse: collapse; margin-top: 8px; min-width: 480px; }
+  table { border-collapse: collapse; margin-top: 8px; width: 100%; }
   th, td { border-bottom: 1px solid #1c1c1c; padding: 4px 16px 4px 0; text-align: left; vertical-align: top; }
   th { color: #777; font-weight: 500; text-transform: uppercase; font-size: 11px; }
   .muted { color: #666; font-style: italic; }
@@ -339,6 +342,190 @@ const STYLE = `
   }
   .login button:hover { background: #fff; }
   .login .err { color: #ff6b6b; font-size: 12px; margin-top: -2px; }
+
+  /* Cached cities pagination */
+  .cached-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+  .pager-links { display: flex; gap: 10px; align-items: center; }
+  .pager-links a { text-decoration: none; }
+  .pager-links a:hover { text-decoration: underline; }
+
+  /* Cached cities filter */
+  .cached-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  .cached-filter {
+    flex: 1 1 240px;
+    max-width: 420px;
+    background: #161616;
+    border: 1px solid #262626;
+    color: #f1f1f1;
+    padding: 8px 12px;
+    font: inherit;
+    font-size: 13px;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 120ms ease;
+  }
+  .cached-filter::placeholder { color: #555; }
+  .cached-filter:focus { border-color: #4eb1ff; }
+  [hidden] { display: none !important; }
+`
+
+function parsePageParam(raw: string | null): number {
+  if (!raw) return 1
+  const n = parseInt(raw, 10)
+  return Number.isFinite(n) && n >= 1 ? n : 1
+}
+
+function paginateIds<T>(items: T[], page: number, pageSize: number): {
+  items: T[]
+  page: number
+  totalPages: number
+  total: number
+} {
+  const total = items.length
+  const totalPages = Math.max(1, Math.ceil(total / pageSize))
+  const safePage = Math.min(Math.max(1, page), totalPages)
+  const start = (safePage - 1) * pageSize
+  return {
+    items: items.slice(start, start + pageSize),
+    page: safePage,
+    totalPages,
+    total,
+  }
+}
+
+function renderCachedPagination(opts: {
+  page: number
+  totalPages: number
+  total: number
+  id?: string
+}): string {
+  const { page, totalPages, total, id } = opts
+  if (total === 0) return ''
+  const prev = page > 1
+    ? `<a href="/admin?page=${page - 1}">← prev</a>`
+    : `<span class="dim">← prev</span>`
+  const next = page < totalPages
+    ? `<a href="/admin?page=${page + 1}">next →</a>`
+    : `<span class="dim">next →</span>`
+  const idAttr = id ? ` id="${id}"` : ''
+  return `<div class="cached-pagination"${idAttr}>
+  <span class="dim">Page ${page} of ${totalPages} · ${total} cities</span>
+  <div class="pager-links">${prev}${next}</div>
+</div>`
+}
+
+interface CachedCityRow {
+  id: string
+  name: string
+  country: string
+  admin1: string
+  fetchedAt: string
+  type: string
+}
+
+function toCachedCityRow(id: string, entry: IndexEntry): CachedCityRow {
+  return {
+    id,
+    name: entry.name ?? '',
+    country: entry.country ?? '',
+    admin1: entry.admin1 ?? '',
+    fetchedAt: entry.fetched_at,
+    type: classifyId(id),
+  }
+}
+
+function renderCachedCityRowHtml(row: CachedCityRow, formatPlace: (e: {
+  name?: string
+  country?: string
+  admin1?: string
+}) => string): string {
+  const placeText = formatPlace(row)
+  const place = placeText ? escapeHtml(placeText) : `<span class="muted">—</span>`
+  return `      <tr><td>${place}</td><td class="dim">${escapeHtml(row.id)}</td><td>${escapeHtml(row.fetchedAt)}</td><td>${row.type}</td></tr>`
+}
+
+const CACHED_FILTER_SCRIPT = `
+(function () {
+  var rows = window.__CACHED_CITIES__
+  var tbody = document.getElementById('cached-tbody')
+  var input = document.getElementById('cached-filter')
+  var status = document.getElementById('cached-filter-status')
+  var pagers = [
+    document.getElementById('cached-pagination-top'),
+    document.getElementById('cached-pagination-bottom'),
+  ]
+  if (!rows || !tbody || !input) return
+
+  var initialHtml = tbody.innerHTML
+
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+  }
+
+  function formatPlace(row) {
+    if (!row.name) return ''
+    var parts = [row.name]
+    if (row.admin1 && row.admin1 !== row.name) parts.push(row.admin1)
+    if (row.country) parts.push(row.country)
+    return parts.join(' · ')
+  }
+
+  function rowHtml(row) {
+    var place = formatPlace(row)
+    var placeCell = place ? esc(place) : '<span class="muted">—</span>'
+    return '<tr><td>' + placeCell + '</td><td class="dim">' + esc(row.id) + '</td><td>' + esc(row.fetchedAt) + '</td><td>' + esc(row.type) + '</td></tr>'
+  }
+
+  function searchText(row) {
+    return [row.name, row.admin1, row.country, row.id, row.type, row.fetchedAt].join(' ').toLowerCase()
+  }
+
+  function setPagerHidden(hidden) {
+    for (var i = 0; i < pagers.length; i++) {
+      if (pagers[i]) pagers[i].hidden = hidden
+    }
+  }
+
+  function applyFilter() {
+    var q = input.value.trim().toLowerCase()
+    var filtering = q.length > 0
+    setPagerHidden(filtering)
+    if (!filtering) {
+      tbody.innerHTML = initialHtml
+      if (status) status.hidden = true
+      return
+    }
+    var matches = rows.filter(function (row) {
+      return searchText(row).indexOf(q) !== -1
+    })
+    tbody.innerHTML = matches.length
+      ? matches.map(rowHtml).join('')
+      : '<tr><td colspan="4" class="muted">— no matches —</td></tr>'
+    if (status) {
+      status.hidden = false
+      status.textContent = matches.length === 1 ? '1 match' : matches.length + ' matches'
+    }
+  }
+
+  input.addEventListener('input', applyFilter)
+})()
 `
 
 function renderLogin(opts: { error?: string }): string {
@@ -380,8 +567,9 @@ function renderAdmin(opts: {
   pending: PendingEntry[]
   origin: string
   kvConfigured: boolean
+  cachedPage: number
 }): string {
-  const { index, pending, origin, kvConfigured } = opts
+  const { index, pending, origin, kvConfigured, cachedPage } = opts
 
   // Sort cached entries by fetched_at descending — newest cached first. This
   // makes the panel useful as an activity log: whatever the drain just wrote
@@ -406,12 +594,13 @@ function renderAdmin(opts: {
     return parts.join(' · ')
   }
 
-  const cachedRows = cachedIds
-    .map(id => {
-      const e = index[id]
-      const place = formatPlace(e) || `<span class="muted">—</span>`
-      return `      <tr><td>${place}</td><td class="dim">${escapeHtml(id)}</td><td>${escapeHtml(e.fetched_at)}</td><td>${classifyId(id)}</td></tr>`
-    })
+  const pagedCached = paginateIds(cachedIds, cachedPage, CACHED_PAGE_SIZE)
+  const cachedPaginationTop = renderCachedPagination({ ...pagedCached, id: 'cached-pagination-top' })
+  const cachedPaginationBottom = renderCachedPagination({ ...pagedCached, id: 'cached-pagination-bottom' })
+  const allCachedRows = cachedIds.map(id => toCachedCityRow(id, index[id]))
+
+  const cachedRows = pagedCached.items
+    .map(id => renderCachedCityRowHtml(toCachedCityRow(id, index[id]), formatPlace))
     .join('\n')
 
   // Dedupe pending by id but keep the first metadata seen.
@@ -454,6 +643,7 @@ function renderAdmin(opts: {
 <style>${STYLE}</style>
 </head>
 <body>
+<div class="admin-page">
 <h1>[Climato Admin] · ${escapeHtml(now)}</h1>
 
 <div class="row">
@@ -508,18 +698,34 @@ ${pendingRows}
 </table>
 
 <h2>Cached — <code>data/normals/</code> (committed)</h2>
+<div class="cached-toolbar">
+  <input
+    type="search"
+    id="cached-filter"
+    class="cached-filter"
+    placeholder="Filter cities…"
+    aria-label="Filter cached cities"
+    autocomplete="off"
+  />
+  <span id="cached-filter-status" class="dim" hidden></span>
+</div>
+${cachedPaginationTop}
 <table>
   <thead><tr><th>city</th><th>id</th><th>fetched_at</th><th>type</th></tr></thead>
-  <tbody>
+  <tbody id="cached-tbody">
 ${cachedRows || '      <tr><td colspan="4" class="muted">— empty —</td></tr>'}
   </tbody>
 </table>
+${cachedPaginationBottom}
+<script>window.__CACHED_CITIES__=${JSON.stringify(allCachedRows)}</script>
+<script>${CACHED_FILTER_SCRIPT}</script>
 
 <div class="meta">
   origin: <code>${escapeHtml(origin)}</code> ·
   <a href="javascript:location.reload()">reload</a> ·
   <a href="/normals/_index.json" target="_blank">_index.json</a> ·
   <a href="/admin?logout=1">log out</a>
+</div>
 </div>
 </body>
 </html>`
@@ -588,6 +794,7 @@ export default async function handler(req: VercelLikeRequest, res: VercelLikeRes
   }
 
   const origin = deriveOrigin(req)
+  const cachedPage = parsePageParam(url.searchParams.get('page'))
   const [index, pending] = await Promise.all([loadIndex(origin), loadPending()])
 
   htmlResponse(res, 200, renderAdmin({
@@ -595,5 +802,6 @@ export default async function handler(req: VercelLikeRequest, res: VercelLikeRes
     pending,
     origin,
     kvConfigured: !!getRedisEnv(),
+    cachedPage,
   }))
 }
