@@ -110,6 +110,17 @@ export function reconstructFromSlug(parsed: {
   }
 }
 
+// Returns true when the comparison store is already seeded with cities that
+// match both halves of a compare URL — meaning geocoding can be skipped.
+export function comparisonSeedMatchesUrl(
+  parsed: { a: ParsedSlug; b: ParsedSlug },
+  store: { cityA: GeoCity | null; cityB: GeoCity | null },
+): boolean {
+  return !!store.cityA && !!store.cityB
+    && parsedSlugMatchesCity(parsed.a, store.cityA)
+    && parsedSlugMatchesCity(parsed.b, store.cityB)
+}
+
 export function parsedSlugMatchesCity(parsed: ParsedSlug, city: GeoCity): boolean {
   if (!isResolvedCity(city)) return false
   if (countrySlug(city.country) !== parsed.countrySlug) return false
@@ -241,12 +252,7 @@ export function useUrlSync(): UrlSyncResult {
       if (parsed.type === 'compare') {
         // If main.tsx already seeded both halves from a prerender payload that
         // matches this URL, skip geocoding — same early-return as single-city.
-        const storeState = useComparisonStore.getState()
-        if (
-          storeState.cityA && storeState.cityB &&
-          parsedSlugMatchesCity(parsed.a, storeState.cityA) &&
-          parsedSlugMatchesCity(parsed.b, storeState.cityB)
-        ) {
+        if (comparisonSeedMatchesUrl(parsed, useComparisonStore.getState())) {
           skipNextPush.current = true
           return
         }
