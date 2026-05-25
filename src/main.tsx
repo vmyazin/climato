@@ -7,26 +7,34 @@ import { queryPersister, persistOptions } from './lib/queryPersister'
 import { parseUrl, parsedSlugMatchesCity, reconstructFromCoords, reconstructFromSlug } from './lib/route'
 import { readPrerenderSeed } from './lib/prerender-seed'
 import { useWeatherStore } from './store/weatherStore'
+import { useComparisonStore } from './store/comparisonStore'
 import { climateQueryKey } from './hooks/useClimateNormals'
 import { nearbyCitiesQueryKey } from './hooks/useNearbyCities'
 import './index.css'
 
 const queryClient = new QueryClient()
 
-// Seed selectedCity from the URL synchronously so the first render shows the
-// correct city in the SEO fallback hero — avoids a flash of the persisted
-// default city (Reykjavík) when landing on e.g. /china/shanghai.
+// Seed store + React Query caches from the prerendered payload so first render
+// shows real content without a flash of the loading shell or a geocoding round-trip.
 const parsed = parseUrl(window.location.pathname, window.location.search)
-if (parsed.type === 'slug') {
-  const prerenderSeed = readPrerenderSeed(document)
-  const hasMatchingPrerenderSeed = !!prerenderSeed && parsedSlugMatchesCity(parsed, prerenderSeed.city)
+const prerenderSeed = readPrerenderSeed(document)
+
+if (parsed.type === 'compare' && prerenderSeed?.kind === 'comparison') {
+  const { a, b, climateA, climateB } = prerenderSeed
+  if (parsedSlugMatchesCity(parsed.a, a) && parsedSlugMatchesCity(parsed.b, b)) {
+    useComparisonStore.getState().setPair(a, b)
+    queryClient.setQueryData(climateQueryKey(a), climateA)
+    queryClient.setQueryData(climateQueryKey(b), climateB)
+  }
+} else if (parsed.type === 'slug') {
+  const hasMatchingPrerenderSeed = prerenderSeed?.kind === 'city' && parsedSlugMatchesCity(parsed, prerenderSeed.city)
   const seed = hasMatchingPrerenderSeed
-    ? prerenderSeed.city
+    ? prerenderSeed!.city
     : parsed.ll
       ? reconstructFromCoords(parsed, parsed.ll)
       : reconstructFromSlug(parsed)
   useWeatherStore.getState().setCity(seed)
-  if (hasMatchingPrerenderSeed) {
+  if (hasMatchingPrerenderSeed && prerenderSeed?.kind === 'city') {
     queryClient.setQueryData(climateQueryKey(prerenderSeed.city), prerenderSeed.climate)
     queryClient.setQueryData(nearbyCitiesQueryKey(prerenderSeed.city, 5), prerenderSeed.neighbors ?? [])
   }

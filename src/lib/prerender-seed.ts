@@ -2,7 +2,25 @@ import type { City, GeoCity } from '../data/cities'
 
 export const PRERENDER_SEED_ID = 'climato-prerender-seed'
 
-export interface PrerenderSeed {
+export interface CitySeed {
+  kind: 'city'
+  city: GeoCity
+  climate: City
+  neighbors?: PrerenderNeighbor[]
+}
+
+export interface ComparisonSeed {
+  kind: 'comparison'
+  a: GeoCity
+  b: GeoCity
+  climateA: City
+  climateB: City
+}
+
+export type PrerenderSeed = CitySeed | ComparisonSeed
+
+// Legacy shape — used by already-deployed HTML that predates the `kind` field.
+interface LegacyCitySeed {
   city: GeoCity
   climate: City
   neighbors?: PrerenderNeighbor[]
@@ -29,13 +47,23 @@ export function readPrerenderSeed(doc: Pick<Document, 'getElementById'>): Preren
 
 export function parsePrerenderSeedJson(json: string): PrerenderSeed | null {
   try {
-    const value = JSON.parse(json) as Partial<PrerenderSeed>
-    if (!isGeoCity(value.city) || !isCity(value.climate)) return null
-    if (value.neighbors !== undefined && !isNeighborArray(value.neighbors)) return null
+    const raw = JSON.parse(json) as Record<string, unknown>
+
+    if (raw.kind === 'comparison') {
+      const v = raw as Partial<ComparisonSeed>
+      if (!isGeoCity(v.a) || !isGeoCity(v.b) || !isCity(v.climateA) || !isCity(v.climateB)) return null
+      return { kind: 'comparison', a: v.a, b: v.b, climateA: v.climateA, climateB: v.climateB }
+    }
+
+    // 'city' kind (new) or legacy (no kind field — treat as city seed)
+    const v = raw as Partial<LegacyCitySeed>
+    if (!isGeoCity(v.city) || !isCity(v.climate)) return null
+    if (v.neighbors !== undefined && !isNeighborArray(v.neighbors)) return null
     return {
-      city: value.city,
-      climate: value.climate,
-      ...(value.neighbors ? { neighbors: value.neighbors } : {}),
+      kind: 'city',
+      city: v.city,
+      climate: v.climate,
+      ...(v.neighbors ? { neighbors: v.neighbors } : {}),
     }
   } catch {
     return null

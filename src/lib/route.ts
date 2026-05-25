@@ -239,6 +239,18 @@ export function useUrlSync(): UrlSyncResult {
       // placeholders synchronously so first-paint can render the diptych
       // skeleton; replace with real cities as geocoding lands.
       if (parsed.type === 'compare') {
+        // If main.tsx already seeded both halves from a prerender payload that
+        // matches this URL, skip geocoding — same early-return as single-city.
+        const storeState = useComparisonStore.getState()
+        if (
+          storeState.cityA && storeState.cityB &&
+          parsedSlugMatchesCity(parsed.a, storeState.cityA) &&
+          parsedSlugMatchesCity(parsed.b, storeState.cityB)
+        ) {
+          skipNextPush.current = true
+          return
+        }
+
         const placeholderA = reconstructFromSlug(parsed.a)
         const placeholderB = reconstructFromSlug(parsed.b)
         setComparisonPair(placeholderA, placeholderB)

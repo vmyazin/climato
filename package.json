@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p tsconfig.json && tsc -p tsconfig.node.json && vite build && tsx scripts/prerender-cities.ts",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.node.json && vite build && tsx scripts/prerender-cities.ts && tsx scripts/prerender-comparisons.ts",
     "preview": "vite preview",
     "cities:build": "scripts/build-cities.sh",
     "test": "vitest",

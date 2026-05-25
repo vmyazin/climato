@@ -155,6 +155,32 @@ export function buildComparisonJsonLd(
   }
 }
 
+export function buildComparisonSeoMeta(
+  a: GeoCity,
+  b: GeoCity,
+  cityA: City,
+  cityB: City,
+  siteUrl: string,
+): CitySeoMeta {
+  const origin = siteUrl.replace(/\/$/, '')
+  const { path } = toCompareSlug(a, b)
+  const canonicalUrl = `${origin}${path}`
+  const result = compareCities(cityA, cityB)
+  const tempStat = result.stats[0]
+  const warmerName = tempStat.winner === 'a' ? a.name : b.name
+  const coolerName = tempStat.winner === 'a' ? b.name : a.name
+  const overlapHint = result.overlapFormatted
+    ? ` Both are ideal in ${result.overlapFormatted}.`
+    : ''
+  return {
+    title: `${a.name} vs ${b.name} — Climate Comparison · Climato`,
+    description: `${warmerName} is warmer than ${coolerName} by ${tempStat.delta}. Monthly temperature, rainfall and sunshine comparison.${overlapHint}`,
+    canonicalUrl,
+    ogImageUrl: absoluteUrl(siteUrl, buildComparisonOgImageUrl(a, b, cityA, cityB)),
+    jsonLd: buildComparisonJsonLd(a, b, cityA, cityB, origin),
+  }
+}
+
 export function buildCitySeoMeta(selectedCity: GeoCity, city: City, siteUrl: string, path?: string): CitySeoMeta {
   const peakIdx = city.high.indexOf(Math.max(...city.high))
   const peakMonth = MONTHS_LONG[peakIdx]
