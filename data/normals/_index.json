@@ -569,6 +569,12 @@
     "country": "China",
     "admin1": "Shandong"
   },
+  "1803834": {
+    "fetched_at": "2026-07-05T15:56:50.764Z",
+    "name": "Liaocheng",
+    "country": "China",
+    "admin1": "Shandong"
+  },
   "1804430": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Lanzhou",
@@ -1033,6 +1039,12 @@
     "name": "Maceió",
     "country": "Brazil",
     "admin1": "Alagoas"
+  },
+  "3397838": {
+    "fetched_at": "2026-07-05T15:56:50.764Z",
+    "name": "Jaboatão",
+    "country": "Brazil",
+    "admin1": "Pernambuco"
   },
   "3399415": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
