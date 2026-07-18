@@ -131,6 +131,18 @@
     "country": "Russia",
     "admin1": "Novosibirsk Oblast"
   },
+  "1526384": {
+    "fetched_at": "2026-07-18T04:33:47.532Z",
+    "name": "Almaty",
+    "country": "Kazakhstan",
+    "admin1": "Almaty"
+  },
+  "1528675": {
+    "fetched_at": "2026-07-18T04:33:47.532Z",
+    "name": "Bishkek",
+    "country": "Kyrgyzstan",
+    "admin1": "Bishkek"
+  },
   "1529102": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Ürümqi",
