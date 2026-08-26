@@ -527,6 +527,12 @@
     "country": "Uzbekistan",
     "admin1": "Samarqand Region"
   },
+  "1253184": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Vijayawada",
+    "country": "India",
+    "admin1": "Andhra Pradesh"
+  },
   "1254187": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "Thrissur",
@@ -568,6 +574,12 @@
     "name": "Porbandar",
     "country": "India",
     "admin1": "Gujarat"
+  },
+  "1259686": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Pīlibhīt",
+    "country": "India",
+    "admin1": "Uttar Pradesh"
   },
   "1263311": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -688,6 +700,12 @@
     "name": "Bengaluru",
     "country": "India",
     "admin1": "Karnataka"
+  },
+  "1277835": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Bahadurgarh",
+    "country": "India",
+    "admin1": "Haryana"
   },
   "1279403": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -2107,6 +2125,12 @@
     "country": "Benin",
     "admin1": "Borgou Department"
   },
+  "2427455": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Moundou",
+    "country": "Chad",
+    "admin1": "Logone Occidental Region"
+  },
   "2464470": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Tunis",
@@ -2179,9 +2203,21 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2638671": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Salford",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2638785": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "St Helens",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2643123": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Manchester",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -2281,11 +2317,23 @@
     "country": "France",
     "admin1": "Île-de-France Region"
   },
+  "3003796": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Le Havre",
+    "country": "France",
+    "admin1": "Normandy"
+  },
   "3015772": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Paris 13 Gobelins",
     "country": "France",
     "admin1": "Île-de-France Region"
+  },
+  "3043470": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Újpest",
+    "country": "Hungary",
+    "admin1": "Budapest"
   },
   "3054643": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -2413,6 +2461,12 @@
     "country": "Iceland",
     "admin1": "Capital Region"
   },
+  "3427408": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Villa Lugano",
+    "country": "Argentina",
+    "admin1": "Buenos Aires F.D."
+  },
   "3428775": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "San Justo",
@@ -2527,6 +2581,12 @@
     "country": "Brazil",
     "admin1": "Bahia"
   },
+  "3450817": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Sabará",
+    "country": "Brazil",
+    "admin1": "Minas Gerais"
+  },
   "3451190": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Rio de Janeiro",
@@ -2548,6 +2608,12 @@
   "3453837": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Pindamonhangaba",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "3454982": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Parelheiros",
     "country": "Brazil",
     "admin1": "São Paulo"
   },
@@ -2791,11 +2857,23 @@
     "country": "Venezuela",
     "admin1": "Zulia"
   },
+  "3641099": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "El Vigía",
+    "country": "Venezuela",
+    "admin1": "Mérida"
+  },
   "3641351": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "El Tigre",
     "country": "Venezuela",
     "admin1": "Anzoátegui"
+  },
+  "3644417": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Ejido",
+    "country": "Venezuela",
+    "admin1": "Mérida"
   },
   "3646738": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
@@ -2898,6 +2976,12 @@
     "name": "San Nicolás de los Arroyos",
     "country": "Argentina",
     "admin1": "Buenos Aires"
+  },
+  "3838583": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Rosario",
+    "country": "Argentina",
+    "admin1": "Santa Fe"
   },
   "3860259": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -3109,6 +3193,12 @@
     "country": "Canada",
     "admin1": "Alberta"
   },
+  "5937615": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Delta",
+    "country": "Canada",
+    "admin1": "British Columbia"
+  },
   "5959974": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Gatineau",
@@ -3156,6 +3246,18 @@
     "name": "Regina",
     "country": "Canada",
     "admin1": "Saskatchewan"
+  },
+  "6122085": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Richmond",
+    "country": "Canada",
+    "admin1": "British Columbia"
+  },
+  "6136944": {
+    "fetched_at": "2026-08-26T21:19:43.452Z",
+    "name": "Saanich",
+    "country": "Canada",
+    "admin1": "British Columbia"
   },
   "6167865": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
