@@ -1403,6 +1403,12 @@
     "country": "China",
     "admin1": "Jiangxi"
   },
+  "1786770": {
+    "fetched_at": "2026-08-27T23:15:15.266Z",
+    "name": "Yibin",
+    "country": "China",
+    "admin1": "Sichuan"
+  },
   "1787093": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Yantai",
@@ -2413,6 +2419,12 @@
     "country": "Morocco",
     "admin1": "Tanger-Tetouan-Al Hoceima"
   },
+  "2544333": {
+    "fetched_at": "2026-08-27T23:15:15.266Z",
+    "name": "Khenifra",
+    "country": "Morocco",
+    "admin1": "Beni Mellal-Khenifra"
+  },
   "2544571": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "Kenitra",
@@ -3307,6 +3319,12 @@
     "country": "Argentina",
     "admin1": "Buenos Aires"
   },
+  "3837702": {
+    "fetched_at": "2026-08-27T23:15:15.266Z",
+    "name": "Catamarca",
+    "country": "Argentina",
+    "admin1": "Catamarca"
+  },
   "3838583": {
     "fetched_at": "2026-08-26T21:19:43.452Z",
     "name": "Rosario",
@@ -3720,6 +3738,12 @@
     "name": "Pôr do Sol",
     "country": "Brazil",
     "admin1": "Federal District"
+  },
+  "8616127": {
+    "fetched_at": "2026-08-27T23:15:15.266Z",
+    "name": "Hai Bà Trưng",
+    "country": "Vietnam",
+    "admin1": "Hanoi"
   },
   "9081327": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
