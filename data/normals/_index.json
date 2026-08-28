@@ -11,6 +11,12 @@
     "country": "Yemen",
     "admin1": "Dhamār"
   },
+  "88319": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Benghazi",
+    "country": "Libya",
+    "admin1": "Banghazi"
+  },
   "92052": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Rānyah",
@@ -971,6 +977,12 @@
     "country": "Vietnam",
     "admin1": "An Giang"
   },
+  "1565022": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Thu Dau Mot",
+    "country": "Vietnam",
+    "admin1": "Ho Chi Minh City (HCMC)"
+  },
   "1566083": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Ho Chi Minh City",
@@ -1283,15 +1295,39 @@
     "country": "Taiwan",
     "admin1": "Taiwan"
   },
+  "1686547": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Silang",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
+  },
   "1692192": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Quezon City",
     "country": "Philippines",
     "admin1": "National Capital Region"
   },
+  "1692520": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Pulong Santa Cruz",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
+  },
+  "1699296": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Rodriguez",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
+  },
   "1701668": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Manila",
+    "country": "Philippines",
+    "admin1": "National Capital Region"
+  },
+  "1701966": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Mandaluyong",
     "country": "Philippines",
     "admin1": "National Capital Region"
   },
@@ -2293,6 +2329,18 @@
     "country": "China",
     "admin1": "Inner Mongolia"
   },
+  "2111684": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Narita",
+    "country": "Japan",
+    "admin1": "Chiba"
+  },
+  "2112664": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Ichihara",
+    "country": "Japan",
+    "admin1": "Chiba"
+  },
   "2128295": {
     "fetched_at": "2026-05-05T00:14:38.305Z",
     "name": "Sapporo",
@@ -2317,17 +2365,35 @@
     "country": "Angola",
     "admin1": "Zaire Province"
   },
+  "2239862": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Malanje",
+    "country": "Angola",
+    "admin1": "Malanje Province"
+  },
   "2240449": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Luanda",
     "country": "Angola",
     "admin1": "Luanda Province"
   },
+  "2274895": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Monrovia",
+    "country": "Liberia",
+    "admin1": "Montserrado County"
+  },
   "2318044": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Yola",
     "country": "Nigeria",
     "admin1": "Adamawa"
+  },
+  "2322733": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Surulere",
+    "country": "Nigeria",
+    "admin1": "Lagos"
   },
   "2325314": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -2383,6 +2449,12 @@
     "country": "Benin",
     "admin1": "Borgou Department"
   },
+  "2407790": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Kenema",
+    "country": "Sierra Leone",
+    "admin1": "Eastern Province"
+  },
   "2427455": {
     "fetched_at": "2026-08-26T21:19:43.452Z",
     "name": "Moundou",
@@ -2418,6 +2490,12 @@
     "name": "Las Palmas de Gran Canaria",
     "country": "Spain",
     "admin1": "Canary Islands"
+  },
+  "2517117": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Granada",
+    "country": "Spain",
+    "admin1": "Andalusia"
   },
   "2530048": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -2628,6 +2706,12 @@
     "name": "Budapest",
     "country": "Hungary",
     "admin1": "Budapest"
+  },
+  "3099230": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Gliwice",
+    "country": "Poland",
+    "admin1": "Silesia"
   },
   "3099434": {
     "fetched_at": "2026-08-07T04:15:16.909Z",
@@ -3295,6 +3379,12 @@
     "country": "Colombia",
     "admin1": "Valle del Cauca Department"
   },
+  "3688465": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Bucaramanga",
+    "country": "Colombia",
+    "admin1": "Santander Department"
+  },
   "3688689": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Bogotá",
@@ -3811,6 +3901,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "11962408": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Jardim Angela",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
   "11995100": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Bazhong",
@@ -3881,6 +3977,12 @@
     "name": "New Taipei City",
     "country": "Taiwan",
     "admin1": "Taipei"
+  },
+  "13156582": {
+    "fetched_at": "2026-08-28T19:37:43.002Z",
+    "name": "Arabkir",
+    "country": "Armenia",
+    "admin1": "Yerevan"
   },
   "13308620": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
