@@ -371,6 +371,12 @@
     "country": "Serbia",
     "admin1": "Central Serbia"
   },
+  "927967": {
+    "fetched_at": "2026-08-28T07:08:37.558Z",
+    "name": "Lilongwe",
+    "country": "Malawi",
+    "admin1": "Central Region"
+  },
   "949224": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Thohoyandou",
@@ -1564,6 +1570,12 @@
     "name": "Songjiang",
     "country": "China",
     "admin1": "Shanghai"
+  },
+  "1794060": {
+    "fetched_at": "2026-08-28T07:08:37.558Z",
+    "name": "Songcheng",
+    "country": "China",
+    "admin1": "Fujian"
   },
   "1794903": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
@@ -3547,6 +3559,12 @@
     "country": "Canada",
     "admin1": "Alberta"
   },
+  "5935277": {
+    "fetched_at": "2026-08-28T07:08:37.558Z",
+    "name": "Dartmouth",
+    "country": "Canada",
+    "admin1": "Nova Scotia"
+  },
   "5937615": {
     "fetched_at": "2026-08-26T21:19:43.452Z",
     "name": "Delta",
@@ -3648,6 +3666,12 @@
     "name": "Tangará da Serra",
     "country": "Brazil",
     "admin1": "Mato Grosso"
+  },
+  "6354908": {
+    "fetched_at": "2026-08-28T07:08:37.558Z",
+    "name": "Sydney",
+    "country": "Canada",
+    "admin1": "Nova Scotia"
   },
   "6697759": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
