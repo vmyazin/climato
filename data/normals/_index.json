@@ -95,6 +95,12 @@
     "country": "Tanzania",
     "admin1": "Morogoro"
   },
+  "160263": {
+    "fetched_at": "2026-08-29T20:05:52.305Z",
+    "name": "Dar es Salaam",
+    "country": "Tanzania",
+    "admin1": "Dar es Salaam Region"
+  },
   "173576": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Latakia",
@@ -1451,6 +1457,12 @@
     "country": "China",
     "admin1": "Shandong"
   },
+  "1785453": {
+    "fetched_at": "2026-08-29T20:05:52.305Z",
+    "name": "Zaozhuang",
+    "country": "China",
+    "admin1": "Shandong"
+  },
   "1785623": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Kunshan",
@@ -1490,6 +1502,12 @@
   "1787746": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Yancheng",
+    "country": "China",
+    "admin1": "Jiangsu"
+  },
+  "1787824": {
+    "fetched_at": "2026-08-29T20:05:52.305Z",
+    "name": "Tongshan",
     "country": "China",
     "admin1": "Jiangsu"
   },
@@ -2009,6 +2027,12 @@
     "country": "China",
     "admin1": "Sichuan"
   },
+  "1813425": {
+    "fetched_at": "2026-08-29T20:05:52.305Z",
+    "name": "Datun",
+    "country": "China",
+    "admin1": "Jiangsu"
+  },
   "1814087": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Dalian",
@@ -2205,6 +2229,12 @@
     "country": "Japan",
     "admin1": "Hyōgo"
   },
+  "1859307": {
+    "fetched_at": "2026-08-29T20:05:52.305Z",
+    "name": "Kitakyushu",
+    "country": "Japan",
+    "admin1": "Fukuoka"
+  },
   "1859642": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Kawasaki",
@@ -2298,6 +2328,12 @@
     "name": "Qiqihar",
     "country": "China",
     "admin1": "Heilongjiang"
+  },
+  "2035966": {
+    "fetched_at": "2026-08-29T20:05:52.305Z",
+    "name": "Longjing",
+    "country": "China",
+    "admin1": "Jilin"
   },
   "2036113": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -2551,6 +2587,12 @@
     "country": "Morocco",
     "admin1": "Oriental"
   },
+  "2541479": {
+    "fetched_at": "2026-08-29T20:05:52.305Z",
+    "name": "Nador",
+    "country": "Morocco",
+    "admin1": "Oriental"
+  },
   "2544001": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Ksar El Kebir",
@@ -2740,6 +2782,12 @@
   "2988507": {
     "fetched_at": "2026-05-18T23:20:20.640Z",
     "name": "Paris",
+    "country": "France",
+    "admin1": "Île-de-France Region"
+  },
+  "2994540": {
+    "fetched_at": "2026-08-29T20:05:52.305Z",
+    "name": "Paris 20 Ménilmontant",
     "country": "France",
     "admin1": "Île-de-France Region"
   },
@@ -3834,6 +3882,12 @@
     "name": "Sydney",
     "country": "Canada",
     "admin1": "Nova Scotia"
+  },
+  "6693228": {
+    "fetched_at": "2026-08-29T20:05:52.305Z",
+    "name": "Balvanera",
+    "country": "Argentina",
+    "admin1": "Buenos Aires F.D."
   },
   "6697759": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
