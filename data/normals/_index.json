@@ -905,6 +905,12 @@
     "country": "Russia",
     "admin1": "Tyumen Oblast"
   },
+  "1494114": {
+    "fetched_at": "2026-08-29T09:24:56.015Z",
+    "name": "Prokopyevsk",
+    "country": "Russia",
+    "admin1": "Kemerovo Oblast"
+  },
   "1496747": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Novosibirsk",
@@ -1318,6 +1324,12 @@
     "name": "Pulong Santa Cruz",
     "country": "Philippines",
     "admin1": "Calabarzon"
+  },
+  "1694781": {
+    "fetched_at": "2026-08-29T09:24:56.015Z",
+    "name": "Paranaque City",
+    "country": "Philippines",
+    "admin1": "National Capital Region"
   },
   "1699296": {
     "fetched_at": "2026-08-28T19:37:43.002Z",
@@ -1973,6 +1985,12 @@
     "country": "China",
     "admin1": "Guangdong"
   },
+  "1812728": {
+    "fetched_at": "2026-08-29T09:24:56.015Z",
+    "name": "Dingzhou",
+    "country": "China",
+    "admin1": "Hebei"
+  },
   "1813171": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Zhangjiajie",
@@ -2186,6 +2204,12 @@
     "name": "Kawasaki",
     "country": "Japan",
     "admin1": "Kanagawa"
+  },
+  "1860735": {
+    "fetched_at": "2026-08-29T09:24:56.015Z",
+    "name": "Kakamigahara",
+    "country": "Japan",
+    "admin1": "Gifu"
   },
   "1863967": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -2491,11 +2515,23 @@
     "country": "Algeria",
     "admin1": "Béchar Province"
   },
+  "2514169": {
+    "fetched_at": "2026-08-29T09:24:56.015Z",
+    "name": "Marbella",
+    "country": "Spain",
+    "admin1": "Andalusia"
+  },
   "2515270": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Las Palmas de Gran Canaria",
     "country": "Spain",
     "admin1": "Canary Islands"
+  },
+  "2516395": {
+    "fetched_at": "2026-08-29T09:24:56.015Z",
+    "name": "Jaén",
+    "country": "Spain",
+    "admin1": "Andalusia"
   },
   "2517117": {
     "fetched_at": "2026-08-28T19:37:43.002Z",
