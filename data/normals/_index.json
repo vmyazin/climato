@@ -119,6 +119,12 @@
     "country": "Kenya",
     "admin1": "Kiambu County"
   },
+  "198629": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Eldoret",
+    "country": "Kenya",
+    "admin1": "Uasin Gishu County"
+  },
   "233346": {
     "fetched_at": "2026-08-26T18:30:40.356Z",
     "name": "Gulu",
@@ -869,6 +875,12 @@
     "country": "India",
     "admin1": "Haryana"
   },
+  "1278685": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Anand",
+    "country": "India",
+    "admin1": "Gujarat"
+  },
   "1278718": {
     "fetched_at": "2026-08-27T13:08:28.196Z",
     "name": "Amravati",
@@ -1229,6 +1241,12 @@
     "country": "Indonesia",
     "admin1": "Central Java"
   },
+  "1629131": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Salatiga",
+    "country": "Indonesia",
+    "admin1": "Central Java"
+  },
   "1631393": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
     "name": "Prabumulih",
@@ -1367,6 +1385,12 @@
     "country": "Philippines",
     "admin1": "Calabarzon"
   },
+  "1699802": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Meycauayan",
+    "country": "Philippines",
+    "admin1": "Central Luzon"
+  },
   "1701668": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Manila",
@@ -1402,6 +1426,12 @@
     "name": "Caloocan",
     "country": "Philippines",
     "admin1": "National Capital Region"
+  },
+  "1730413": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Apalit",
+    "country": "Philippines",
+    "admin1": "Central Luzon"
   },
   "1730713": {
     "fetched_at": "2026-08-26T18:30:40.356Z",
@@ -1466,6 +1496,12 @@
   "1784853": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Zhaoqing",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
+  "1784990": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Zhanjiang",
     "country": "China",
     "admin1": "Guangdong"
   },
@@ -1865,6 +1901,12 @@
     "country": "China",
     "admin1": "Shandong"
   },
+  "1803886": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Anning",
+    "country": "China",
+    "admin1": "Yunnan"
+  },
   "1804430": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Lanzhou",
@@ -1991,6 +2033,12 @@
     "country": "China",
     "admin1": "Hubei"
   },
+  "1810295": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Gaozhou",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
   "1810638": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Ganzhou",
@@ -2062,6 +2110,12 @@
     "name": "Dalian",
     "country": "China",
     "admin1": "Liaoning"
+  },
+  "1814786": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Yangchun",
+    "country": "China",
+    "admin1": "Guangdong"
   },
   "1814870": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -2833,6 +2887,12 @@
     "country": "Belgium",
     "admin1": "Wallonia"
   },
+  "2870221": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Moers",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
+  },
   "2879139": {
     "fetched_at": "2026-05-02T22:03:13.315Z",
     "name": "Leipzig",
@@ -2929,6 +2989,18 @@
     "country": "Spain",
     "admin1": "Catalonia"
   },
+  "3165926": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Taranto",
+    "country": "Italy",
+    "admin1": "Apulia"
+  },
+  "3168673": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Salerno",
+    "country": "Italy",
+    "admin1": "Campania"
+  },
   "3169070": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Rome",
@@ -2946,6 +3018,12 @@
     "name": "Livorno",
     "country": "Italy",
     "admin1": "Tuscany"
+  },
+  "3176885": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Foggia",
+    "country": "Italy",
+    "admin1": "Apulia"
   },
   "3181554": {
     "fetched_at": "2026-05-05T00:14:38.305Z",
@@ -3835,6 +3913,12 @@
     "country": "United States",
     "admin1": "New York"
   },
+  "5116495": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Elmhurst",
+    "country": "United States",
+    "admin1": "New York"
+  },
   "5128581": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "New York City",
@@ -3985,6 +4069,18 @@
     "country": "Canada",
     "admin1": "British Columbia"
   },
+  "6254843": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Birendranagar",
+    "country": "Nepal",
+    "admin1": "Karnali Pradesh"
+  },
+  "6295587": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Batam",
+    "country": "Indonesia",
+    "admin1": "Riau"
+  },
   "6316328": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Águas Lindas de Goiás",
@@ -4123,6 +4219,12 @@
     "country": "Vietnam",
     "admin1": "Tay Ninh"
   },
+  "10265071": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Mandoli",
+    "country": "India",
+    "admin1": "National Capital Territory of Delhi"
+  },
   "10374906": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Dchira El Jihadia",
@@ -4141,6 +4243,12 @@
     "country": "China",
     "admin1": "Jiangsu"
   },
+  "11111027": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Shengavit",
+    "country": "Armenia",
+    "admin1": "Yerevan"
+  },
   "11395976": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Mirpur Model Thana",
@@ -4153,9 +4261,21 @@
     "country": "China",
     "admin1": "Inner Mongolia"
   },
+  "11962376": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Capao Redondo",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
   "11962381": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Rio Pequeno",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "11962389": {
+    "fetched_at": "2026-08-30T00:48:12.875Z",
+    "name": "Lajeado",
     "country": "Brazil",
     "admin1": "São Paulo"
   },
