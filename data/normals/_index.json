@@ -239,6 +239,12 @@
     "country": "Iran",
     "admin1": "Lorestan Province"
   },
+  "128747": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Karaj",
+    "country": "Iran",
+    "admin1": "Alborz Province"
+  },
   "130802": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Īlām",
@@ -899,6 +905,12 @@
     "country": "Sudan",
     "admin1": "Eastern Darfur"
   },
+  "400771": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Moḩammad Shahr",
+    "country": "Iran",
+    "admin1": "Alborz Province"
+  },
   "406462": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Naz̧arābād",
@@ -1523,6 +1535,12 @@
     "country": "South Africa",
     "admin1": "KwaZulu-Natal"
   },
+  "962367": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Richards Bay",
+    "country": "South Africa",
+    "admin1": "KwaZulu-Natal"
+  },
   "963241": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Randburg",
@@ -1546,6 +1564,12 @@
     "name": "Polokwane",
     "country": "South Africa",
     "admin1": "Limpopo"
+  },
+  "965301": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Pietermaritzburg",
+    "country": "South Africa",
+    "admin1": "KwaZulu-Natal"
   },
   "967476": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -2320,6 +2344,12 @@
     "country": "India",
     "admin1": "Haryana"
   },
+  "1258109": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Robertsonpet",
+    "country": "India",
+    "admin1": "Karnataka"
+  },
   "1258126": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Rishra",
@@ -2397,6 +2427,12 @@
     "name": "Punāsa",
     "country": "India",
     "admin1": "Madhya Pradesh"
+  },
+  "1259312": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Proddatūr",
+    "country": "India",
+    "admin1": "Andhra Pradesh"
   },
   "1259385": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -2968,6 +3004,12 @@
     "country": "India",
     "admin1": "Andhra Pradesh"
   },
+  "1270670": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Guntakal",
+    "country": "India",
+    "admin1": "Andhra Pradesh"
+  },
   "1270752": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Kalaburagi",
@@ -3417,6 +3459,12 @@
     "name": "Badlapur",
     "country": "India",
     "admin1": "Maharashtra"
+  },
+  "1278083": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Azamgarh",
+    "country": "India",
+    "admin1": "Uttar Pradesh"
   },
   "1278314": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -4453,6 +4501,12 @@
   "1650357": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Bandung",
+    "country": "Indonesia",
+    "admin1": "West Java"
+  },
+  "1651112": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Astanajapura",
     "country": "Indonesia",
     "admin1": "West Java"
   },
@@ -11580,6 +11634,12 @@
     "country": "Peru",
     "admin1": "Lima region"
   },
+  "3934876": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Miraflores",
+    "country": "Peru",
+    "admin1": "Lima region"
+  },
   "3936456": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Lima",
@@ -12120,6 +12180,12 @@
     "country": "United States",
     "admin1": "Washington"
   },
+  "5882873": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Ajax",
+    "country": "Canada",
+    "admin1": "Ontario"
+  },
   "5894171": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Barrie",
@@ -12431,6 +12497,12 @@
     "name": "Ursynów",
     "country": "Poland",
     "admin1": "Mazovia"
+  },
+  "6657205": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Fardīs",
+    "country": "Iran",
+    "admin1": "Tehran"
   },
   "6693228": {
     "fetched_at": "2026-08-29T20:05:52.305Z",
@@ -12863,6 +12935,12 @@
     "name": "City of Port Phillip",
     "country": "Australia",
     "admin1": "Victoria"
+  },
+  "10303650": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Simele",
+    "country": "Iraq",
+    "admin1": "Duhok Governorate"
   },
   "10374906": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -13413,6 +13491,12 @@
     "name": "Motijheel",
     "country": "Bangladesh",
     "admin1": "Dhaka Division"
+  },
+  "13607660": {
+    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "name": "Verhunskyi",
+    "country": "Ukraine",
+    "admin1": "Luhansk Oblast"
   },
   "13607722": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
