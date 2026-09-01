@@ -89,6 +89,12 @@
     "country": "Iraq",
     "admin1": "Karbala Governorate"
   },
+  "98182": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Baghdad",
+    "country": "Iraq",
+    "admin1": "Baghdad"
+  },
   "98245": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Az Zubayr",
@@ -482,6 +488,12 @@
   "229911": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Lugazi",
+    "country": "Uganda",
+    "admin1": "Central Region"
+  },
+  "232713": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Kajansi",
     "country": "Uganda",
     "admin1": "Central Region"
   },
@@ -1048,6 +1060,12 @@
     "name": "Nevinnomyssk",
     "country": "Russia",
     "admin1": "Stavropol Kray"
+  },
+  "523523": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Nal'chik",
+    "country": "Russia",
+    "admin1": "Kabardino-Balkariya Republic"
   },
   "523812": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -2188,6 +2206,12 @@
     "country": "India",
     "admin1": "Maharashtra"
   },
+  "1254089": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Tumakuru",
+    "country": "India",
+    "admin1": "Karnataka"
+  },
   "1254187": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "Thrissur",
@@ -2536,6 +2560,12 @@
     "country": "India",
     "admin1": "Gujarat"
   },
+  "1261731": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Nashik",
+    "country": "India",
+    "admin1": "Maharashtra"
+  },
   "1261931": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Nandurbar",
@@ -2848,6 +2878,12 @@
     "country": "India",
     "admin1": "Assam"
   },
+  "1268936": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Jhunjhunūn",
+    "country": "India",
+    "admin1": "Rajasthan"
+  },
   "1269006": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Jhānsi",
@@ -2931,6 +2967,12 @@
     "name": "Hubballi",
     "country": "India",
     "admin1": "Karnataka"
+  },
+  "1269934": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Hosūr",
+    "country": "India",
+    "admin1": "Tamil Nadu"
   },
   "1269935": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -3454,6 +3496,12 @@
     "country": "India",
     "admin1": "Haryana"
   },
+  "1277936": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Bagalkot",
+    "country": "India",
+    "admin1": "Karnataka"
+  },
   "1277939": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Bagaha",
@@ -3633,6 +3681,12 @@
     "name": "Patan",
     "country": "Nepal",
     "admin1": "Bagmati Province"
+  },
+  "1285173": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Yenangyaung",
+    "country": "Myanmar",
+    "admin1": "Magway"
   },
   "1298824": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
@@ -4503,6 +4557,12 @@
     "name": "Banjarmasin",
     "country": "Indonesia",
     "admin1": "South Kalimantan"
+  },
+  "1650234": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Banjar",
+    "country": "Indonesia",
+    "admin1": "West Java"
   },
   "1650357": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
@@ -6316,6 +6376,12 @@
     "country": "China",
     "admin1": "Chongqing"
   },
+  "1814915": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Chengqiao",
+    "country": "China",
+    "admin1": "Shanghai Municipality"
+  },
   "1814928": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Chóngfú",
@@ -7861,6 +7927,12 @@
     "country": "Nigeria",
     "admin1": "Lagos"
   },
+  "2322794": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Suleja",
+    "country": "Nigeria",
+    "admin1": "Niger State"
+  },
   "2324774": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Port Harcourt",
@@ -8790,6 +8862,12 @@
     "country": "Germany",
     "admin1": "Schleswig-Holstein"
   },
+  "2892518": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Kassel",
+    "country": "Germany",
+    "admin1": "Hesse"
+  },
   "2892794": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Karlsruhe",
@@ -8939,6 +9017,12 @@
     "name": "Toulon",
     "country": "France",
     "admin1": "Provence-Alpes-Côte d'Azur"
+  },
+  "2982652": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Rouen",
+    "country": "France",
+    "admin1": "Normandy"
   },
   "2983990": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -9299,6 +9383,12 @@
     "name": "Zenica",
     "country": "Bosnia and Herzegovina",
     "admin1": "Federation of Bosnia and Herzegovina"
+  },
+  "3186886": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Zagreb",
+    "country": "Croatia",
+    "admin1": "City of Zagreb"
   },
   "3190261": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -11280,6 +11370,12 @@
     "country": "Colombia",
     "admin1": "Antioquia"
   },
+  "3689147": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Barranquilla",
+    "country": "Colombia",
+    "admin1": "Atlántico"
+  },
   "3689560": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Armenia",
@@ -12276,6 +12372,12 @@
     "country": "Canada",
     "admin1": "Ontario"
   },
+  "5992996": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Kitchener",
+    "country": "Canada",
+    "admin1": "Ontario"
+  },
   "6049429": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Langley",
@@ -12581,6 +12683,12 @@
     "name": "Somerset West",
     "country": "South Africa",
     "admin1": "Western Cape"
+  },
+  "6957079": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Benito Juárez",
+    "country": "Mexico",
+    "admin1": "Mexico City"
   },
   "6958503": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -12959,6 +13067,12 @@
     "name": "Ingombota",
     "country": "Angola",
     "admin1": "Luanda Province"
+  },
+  "10858926": {
+    "fetched_at": "2026-09-01T05:45:57.153Z",
+    "name": "Kyengera",
+    "country": "Uganda",
+    "admin1": "Central Region"
   },
   "10859300": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
