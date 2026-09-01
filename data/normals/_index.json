@@ -755,6 +755,12 @@
     "country": "Egypt",
     "admin1": "Qena Governorate"
   },
+  "350789": {
+    "fetched_at": "2026-09-01T00:49:03.103Z",
+    "name": "Qalyub",
+    "country": "Egypt",
+    "admin1": "Qalyubia Governorate"
+  },
   "352181": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Mīt Ghamr",
