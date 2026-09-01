@@ -2194,6 +2194,12 @@
     "country": "India",
     "admin1": "Telangana"
   },
+  "1253084": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Vizianagaram",
+    "country": "India",
+    "admin1": "Andhra Pradesh"
+  },
   "1253133": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Virār",
@@ -3298,6 +3304,12 @@
     "country": "India",
     "admin1": "Karnataka"
   },
+  "1273587": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Damoh",
+    "country": "India",
+    "admin1": "Madhya Pradesh"
+  },
   "1273780": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Cuttack",
@@ -3772,6 +3784,12 @@
     "country": "Myanmar",
     "admin1": "Yangon"
   },
+  "1300466": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Bago",
+    "country": "Myanmar",
+    "admin1": "Bago Region"
+  },
   "1302439": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Pakokku",
@@ -3795,6 +3813,12 @@
     "name": "Kēng Tung",
     "country": "Myanmar",
     "admin1": "Shan State"
+  },
+  "1321937": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Insein",
+    "country": "Myanmar",
+    "admin1": "Yangon"
   },
   "1328421": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -4209,6 +4233,12 @@
     "name": "Chũ",
     "country": "Vietnam",
     "admin1": "Bac Ninh"
+  },
+  "1585317": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Chơn Thành",
+    "country": "Vietnam",
+    "admin1": "Dong Nai"
   },
   "1586151": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -6052,6 +6082,12 @@
     "country": "China",
     "admin1": "Hunan"
   },
+  "1804252": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Lecheng",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
   "1804386": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Laohekou",
@@ -6967,6 +7003,12 @@
     "name": "Machida",
     "country": "Japan",
     "admin1": "Tokyo"
+  },
+  "1857910": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Kyoto",
+    "country": "Japan",
+    "admin1": "Kyoto"
   },
   "1858296": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -9504,6 +9546,12 @@
     "country": "Poland",
     "admin1": "Pomerania"
   },
+  "3102014": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Bydgoszcz",
+    "country": "Poland",
+    "admin1": "Kujawsko-Pomorskie"
+  },
   "3109718": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Santander",
@@ -10230,6 +10278,12 @@
     "country": "Brazil",
     "admin1": "Rio Grande do Sul"
   },
+  "3448632": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "São José dos Pinhais",
+    "country": "Brazil",
+    "admin1": "Paraná"
+  },
   "3448636": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "São José dos Campos",
@@ -10547,6 +10601,12 @@
     "name": "Itaperuna",
     "country": "Brazil",
     "admin1": "Rio de Janeiro"
+  },
+  "3460791": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Itanhaém",
+    "country": "Brazil",
+    "admin1": "São Paulo"
   },
   "3460845": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -10949,6 +11009,12 @@
     "name": "Punta Cana",
     "country": "Dominican Republic",
     "admin1": "La Altagracia Province"
+  },
+  "3511550": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Bella Vista",
+    "country": "Dominican Republic",
+    "admin1": "Nacional"
   },
   "3513966": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -11460,6 +11526,12 @@
     "country": "Ecuador",
     "admin1": "Santo Domingo de los Tsáchilas"
   },
+  "3652350": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Riobamba",
+    "country": "Ecuador",
+    "admin1": "Chimborazo Province"
+  },
   "3652462": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Quito",
@@ -11795,6 +11867,12 @@
     "name": "Ciudad Camilo Cienfuegos",
     "country": "Cuba",
     "admin1": "Havana"
+  },
+  "3817746": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Tepexpan",
+    "country": "Mexico",
+    "admin1": "México"
   },
   "3827407": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -13523,6 +13601,12 @@
     "name": "Luis Eduardo Magalhães",
     "country": "Brazil",
     "admin1": "Estado de Bahia"
+  },
+  "11523293": {
+    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "name": "Sejong",
+    "country": "South Korea",
+    "admin1": "Sejong-si"
   },
   "11611609": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
