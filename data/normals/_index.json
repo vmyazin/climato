@@ -449,6 +449,12 @@
     "country": "Kenya",
     "admin1": "Kwale County"
   },
+  "187896": {
+    "fetched_at": "2026-09-01T18:53:26.101Z",
+    "name": "Mandera",
+    "country": "Kenya",
+    "admin1": "Mandera County"
+  },
   "189386": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Limuru",
@@ -4942,6 +4948,12 @@
     "country": "Philippines",
     "admin1": "Central Luzon"
   },
+  "1732637": {
+    "fetched_at": "2026-09-01T18:53:26.101Z",
+    "name": "Maran",
+    "country": "Malaysia",
+    "admin1": "Pahang"
+  },
   "1732687": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Batu Pahat",
@@ -7190,6 +7202,12 @@
     "country": "Japan",
     "admin1": "Kanagawa"
   },
+  "1873757": {
+    "fetched_at": "2026-09-01T18:53:26.101Z",
+    "name": "Nampo",
+    "country": "North Korea",
+    "admin1": "Nampo"
+  },
   "1880159": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Ulu Bedok",
@@ -7486,6 +7504,12 @@
   "2036595": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Jalai Nur",
+    "country": "China",
+    "admin1": "Inner Mongolia"
+  },
+  "2036597": {
+    "fetched_at": "2026-09-01T18:53:26.101Z",
+    "name": "Jiagedaqi",
     "country": "China",
     "admin1": "Inner Mongolia"
   },
@@ -8149,6 +8173,12 @@
     "country": "Nigeria",
     "admin1": "Oyo State"
   },
+  "2328684": {
+    "fetched_at": "2026-09-01T18:53:26.101Z",
+    "name": "Nsukka",
+    "country": "Nigeria",
+    "admin1": "Enugu State"
+  },
   "2328765": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Nnewi",
@@ -8203,6 +8233,12 @@
     "country": "Nigeria",
     "admin1": "Osun State"
   },
+  "2337313": {
+    "fetched_at": "2026-09-01T18:53:26.101Z",
+    "name": "Irewe",
+    "country": "Nigeria",
+    "admin1": "Lagos"
+  },
   "2338313": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
     "name": "Ikeja",
@@ -8232,6 +8268,12 @@
     "name": "Esuk Oron",
     "country": "Nigeria",
     "admin1": "Akwa Ibom State"
+  },
+  "2343279": {
+    "fetched_at": "2026-09-01T18:53:26.101Z",
+    "name": "Enugu",
+    "country": "Nigeria",
+    "admin1": "Enugu State"
   },
   "2348773": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -11177,6 +11219,12 @@
     "name": "Jutiapa",
     "country": "Guatemala",
     "admin1": "Departamento de Jutiapa"
+  },
+  "3595237": {
+    "fetched_at": "2026-09-01T18:53:26.101Z",
+    "name": "Jalapa",
+    "country": "Guatemala",
+    "admin1": "Jalapa"
   },
   "3598529": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
