@@ -4480,6 +4480,12 @@
     "country": "Indonesia",
     "admin1": "North Sulawesi"
   },
+  "1636884": {
+    "fetched_at": "2026-09-01T21:26:49.774Z",
+    "name": "Magelang",
+    "country": "Indonesia",
+    "admin1": "Central Java"
+  },
   "1637090": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Lumajang",
@@ -7488,6 +7494,12 @@
     "name": "Lianshan",
     "country": "China",
     "admin1": "Liaoning"
+  },
+  "2036458": {
+    "fetched_at": "2026-09-01T21:26:49.774Z",
+    "name": "Jining",
+    "country": "China",
+    "admin1": "Inner Mongolia"
   },
   "2036502": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -10997,6 +11009,12 @@
     "name": "Minatitlán",
     "country": "Mexico",
     "admin1": "Veracruz"
+  },
+  "3523349": {
+    "fetched_at": "2026-09-01T21:26:49.774Z",
+    "name": "Mérida",
+    "country": "Mexico",
+    "admin1": "Yucatán"
   },
   "3526682": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
