@@ -4636,6 +4636,12 @@
     "country": "Indonesia",
     "admin1": "West Java"
   },
+  "1646698": {
+    "fetched_at": "2026-09-02T01:29:30.034Z",
+    "name": "Cikampek",
+    "country": "Indonesia",
+    "admin1": "West Java"
+  },
   "1647003": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Cibinong",
@@ -4954,6 +4960,12 @@
     "country": "Philippines",
     "admin1": "National Capital Region"
   },
+  "1725684": {
+    "fetched_at": "2026-09-02T01:29:30.034Z",
+    "name": "Bayugan",
+    "country": "Philippines",
+    "admin1": "Caraga"
+  },
   "1726280": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Batangas",
@@ -5241,6 +5253,12 @@
     "name": "Yingtan",
     "country": "China",
     "admin1": "Jiangxi"
+  },
+  "1786731": {
+    "fetched_at": "2026-09-02T01:29:30.034Z",
+    "name": "Qingzhou",
+    "country": "China",
+    "admin1": "Shandong"
   },
   "1786746": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -5625,6 +5643,12 @@
     "name": "Suqian",
     "country": "China",
     "admin1": "Jiangsu"
+  },
+  "1793900": {
+    "fetched_at": "2026-09-02T01:29:30.034Z",
+    "name": "Suining",
+    "country": "China",
+    "admin1": "Sichuan"
   },
   "1794035": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -7405,6 +7429,12 @@
     "country": "China",
     "admin1": "Inner Mongolia"
   },
+  "2033536": {
+    "fetched_at": "2026-09-02T01:29:30.034Z",
+    "name": "Yakeshi",
+    "country": "China",
+    "admin1": "Inner Mongolia"
+  },
   "2033574": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Xuanhua",
@@ -8016,6 +8046,12 @@
     "name": "Tivaouane",
     "country": "Senegal",
     "admin1": "Thies"
+  },
+  "2244616": {
+    "fetched_at": "2026-09-02T01:29:30.034Z",
+    "name": "Tiébo",
+    "country": "Senegal",
+    "admin1": "Diourbel Region"
   },
   "2244799": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -11862,6 +11898,12 @@
     "country": "Haiti",
     "admin1": "Ouest"
   },
+  "3731088": {
+    "fetched_at": "2026-09-02T01:29:30.034Z",
+    "name": "Arcahaie",
+    "country": "Haiti",
+    "admin1": "Ouest"
+  },
   "3746181": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Ciudad Camilo Cienfuegos",
@@ -13583,6 +13625,12 @@
     "name": "Shengavit",
     "country": "Armenia",
     "admin1": "Yerevan"
+  },
+  "11127930": {
+    "fetched_at": "2026-09-02T01:29:30.034Z",
+    "name": "Phusro",
+    "country": "India",
+    "admin1": "Jharkhand"
   },
   "11205667": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
