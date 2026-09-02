@@ -467,6 +467,12 @@
     "country": "Kenya",
     "admin1": "Kiambu County"
   },
+  "189723": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Ongata Rongai",
+    "country": "Kenya",
+    "admin1": "Kajiado County"
+  },
   "191220": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Kitale",
@@ -1030,6 +1036,12 @@
     "name": "Yaroslavl",
     "country": "Russia",
     "admin1": "Yaroslavl Oblast"
+  },
+  "472459": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Vologda",
+    "country": "Russia",
+    "admin1": "Vologda Oblast"
   },
   "473972": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -3688,6 +3700,12 @@
     "country": "India",
     "admin1": "Uttar Pradesh"
   },
+  "1278149": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Aurangabad",
+    "country": "India",
+    "admin1": "Maharashtra"
+  },
   "1278314": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Asansol",
@@ -5487,6 +5505,12 @@
     "name": "Xuchang",
     "country": "China",
     "admin1": "Henan"
+  },
+  "1788081": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Xuancheng",
+    "country": "China",
+    "admin1": "Anhui"
   },
   "1788268": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -7603,6 +7627,12 @@
     "country": "China",
     "admin1": "Inner Mongolia"
   },
+  "2033242": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Yushu",
+    "country": "China",
+    "admin1": "Jilin"
+  },
   "2033536": {
     "fetched_at": "2026-09-02T01:29:30.034Z",
     "name": "Yakeshi",
@@ -8083,6 +8113,12 @@
     "country": "Australia",
     "admin1": "Tasmania"
   },
+  "2165798": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Geelong",
+    "country": "Australia",
+    "admin1": "Victoria"
+  },
   "2171507": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Wollongong",
@@ -8394,6 +8430,12 @@
     "name": "Yola",
     "country": "Nigeria",
     "admin1": "Adamawa"
+  },
+  "2319133": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Warri",
+    "country": "Nigeria",
+    "admin1": "Delta"
   },
   "2320831": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
@@ -9042,6 +9084,12 @@
     "country": "Morocco",
     "admin1": "Marrakesh-Safi"
   },
+  "2550078": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "El Jadida",
+    "country": "Morocco",
+    "admin1": "Casablanca-Settat"
+  },
   "2553604": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
     "name": "Casablanca",
@@ -9540,6 +9588,12 @@
     "country": "Germany",
     "admin1": "Thuringia"
   },
+  "2924573": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Friedrichshain",
+    "country": "Germany",
+    "admin1": "State of Berlin"
+  },
   "2929670": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Erfurt",
@@ -9623,6 +9677,12 @@
     "name": "Dublin",
     "country": "Ireland",
     "admin1": "Leinster"
+  },
+  "2965140": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Cork",
+    "country": "Ireland",
+    "admin1": "Munster"
   },
   "2968254": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
@@ -11970,6 +12030,12 @@
     "country": "Brazil",
     "admin1": "Acre"
   },
+  "3662762": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Porto Velho",
+    "country": "Brazil",
+    "admin1": "Rondônia"
+  },
   "3663517": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Manaus",
@@ -12017,6 +12083,12 @@
     "name": "Sogamoso",
     "country": "Colombia",
     "admin1": "Departamento de Boyacá"
+  },
+  "3667905": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Soacha",
+    "country": "Colombia",
+    "admin1": "Cundinamarca"
   },
   "3667983": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -12546,6 +12618,12 @@
     "country": "Bolivia",
     "admin1": "Cochabamba"
   },
+  "3907584": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Potosí",
+    "country": "Bolivia",
+    "admin1": "Potosí Department"
+  },
   "3911925": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "La Paz",
@@ -12965,6 +13043,12 @@
     "name": "Staten Island",
     "country": "United States",
     "admin1": "New York"
+  },
+  "5145476": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Akron",
+    "country": "United States",
+    "admin1": "Ohio"
   },
   "5231851": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -13800,6 +13884,12 @@
     "country": "China",
     "admin1": "Chongqing Municipality"
   },
+  "8416218": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Lizhi",
+    "country": "China",
+    "admin1": "Chongqing Municipality"
+  },
   "8417605": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Yangcheng",
@@ -14617,6 +14707,12 @@
   "13608000": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Jinshan",
+    "country": "China",
+    "admin1": "Shanghai Municipality"
+  },
+  "13608002": {
+    "fetched_at": "2026-09-02T15:22:17.614Z",
+    "name": "Fengxiang",
     "country": "China",
     "admin1": "Shanghai Municipality"
   },
