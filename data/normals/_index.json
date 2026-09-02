@@ -881,6 +881,12 @@
     "country": "Egypt",
     "admin1": "Damietta Governorate"
   },
+  "358821": {
+    "fetched_at": "2026-09-02T21:34:09.419Z",
+    "name": "Bilqās",
+    "country": "Egypt",
+    "admin1": "Dakahlia Governorate"
+  },
   "358840": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Bilbeis",
@@ -2146,6 +2152,12 @@
     "country": "Bangladesh",
     "admin1": "Dhaka Division"
   },
+  "1203891": {
+    "fetched_at": "2026-09-02T21:34:09.419Z",
+    "name": "Dinajpur",
+    "country": "Bangladesh",
+    "admin1": "Rangpur Division"
+  },
   "1207337": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Chāndpur",
@@ -3297,6 +3309,12 @@
     "name": "Gangavati",
     "country": "India",
     "admin1": "Karnataka"
+  },
+  "1271685": {
+    "fetched_at": "2026-09-02T21:34:09.419Z",
+    "name": "Sri Ganganagar",
+    "country": "India",
+    "admin1": "Rajasthan"
   },
   "1271717": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -8041,6 +8059,12 @@
     "country": "China",
     "admin1": "Heilongjiang"
   },
+  "2038584": {
+    "fetched_at": "2026-09-02T21:34:09.419Z",
+    "name": "Baishan",
+    "country": "China",
+    "admin1": "Jilin"
+  },
   "2038650": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Anda",
@@ -10995,6 +11019,12 @@
   "3457000": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Mogi Guaçu",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "3457001": {
+    "fetched_at": "2026-09-02T21:34:09.419Z",
+    "name": "Mogi das Cruzes",
     "country": "Brazil",
     "admin1": "São Paulo"
   },
@@ -14751,6 +14781,12 @@
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Nossa Senhora de Fátima",
     "country": "China"
+  },
+  "13535744": {
+    "fetched_at": "2026-09-02T21:34:09.419Z",
+    "name": "Holosiyiv",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
   },
   "13546518": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
