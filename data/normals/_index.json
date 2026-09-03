@@ -1637,6 +1637,12 @@
     "country": "Ukraine",
     "admin1": "Zakarpattia Oblast"
   },
+  "692194": {
+    "fetched_at": "2026-09-03T23:34:54.858Z",
+    "name": "Sumy",
+    "country": "Ukraine",
+    "admin1": "Sumy"
+  },
   "694423": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Sevastopol",
@@ -5925,6 +5931,12 @@
     "name": "Yunfu",
     "country": "China",
     "admin1": "Guangdong"
+  },
+  "1785781": {
+    "fetched_at": "2026-09-03T23:34:54.858Z",
+    "name": "Yulin",
+    "country": "China",
+    "admin1": "Guangxi"
   },
   "1785974": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -10414,6 +10426,12 @@
     "country": "Germany",
     "admin1": "Bavaria"
   },
+  "2869894": {
+    "fetched_at": "2026-09-03T23:34:54.858Z",
+    "name": "Mönchengladbach",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
+  },
   "2870221": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
     "name": "Moers",
@@ -10587,6 +10605,12 @@
     "name": "Darmstadt",
     "country": "Germany",
     "admin1": "Hesse"
+  },
+  "2940132": {
+    "fetched_at": "2026-09-03T23:34:54.858Z",
+    "name": "Chemnitz",
+    "country": "Germany",
+    "admin1": "Saxony"
   },
   "2944368": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -13954,6 +13978,12 @@
     "country": "Mexico",
     "admin1": "Nuevo León"
   },
+  "3985710": {
+    "fetched_at": "2026-09-03T23:34:54.858Z",
+    "name": "Cabo San Lucas",
+    "country": "Mexico",
+    "admin1": "Baja California Sur"
+  },
   "3991164": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Santiago de Querétaro",
@@ -15076,6 +15106,12 @@
     "country": "Chile",
     "admin1": "Santiago Metropolitan"
   },
+  "7281838": {
+    "fetched_at": "2026-09-03T23:34:54.858Z",
+    "name": "Logan City",
+    "country": "Australia",
+    "admin1": "Queensland"
+  },
   "7283386": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Changshu",
@@ -15285,6 +15321,12 @@
     "name": "Krasnogvargeisky",
     "country": "Russia",
     "admin1": "St.-Petersburg"
+  },
+  "8504958": {
+    "fetched_at": "2026-09-03T23:34:54.858Z",
+    "name": "Akademicheskoe",
+    "country": "Russia",
+    "admin1": "Leningradskaya Oblast'"
   },
   "8504960": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -15837,6 +15879,12 @@
     "name": "Amaravati",
     "country": "India",
     "admin1": "Andhra Pradesh"
+  },
+  "12269572": {
+    "fetched_at": "2026-09-03T23:34:54.858Z",
+    "name": "Fangchenggang",
+    "country": "China",
+    "admin1": "Guangxi"
   },
   "12278193": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
