@@ -977,6 +977,12 @@
     "country": "South Sudan",
     "admin1": "Upper Nile"
   },
+  "373303": {
+    "fetched_at": "2026-09-03T01:33:12.533Z",
+    "name": "Juba",
+    "country": "South Sudan",
+    "admin1": "Central Equatoria"
+  },
   "377039": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "Port Sudan",
@@ -3436,6 +3442,12 @@
     "country": "India",
     "admin1": "Odisha"
   },
+  "1273865": {
+    "fetched_at": "2026-09-03T01:33:12.533Z",
+    "name": "Coimbatore",
+    "country": "India",
+    "admin1": "Tamil Nadu"
+  },
   "1273874": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Kochi",
@@ -4647,6 +4659,12 @@
     "name": "Pangkalpinang",
     "country": "Indonesia",
     "admin1": "Bangka–Belitung Islands"
+  },
+  "1632998": {
+    "fetched_at": "2026-09-03T01:33:12.533Z",
+    "name": "Pamanukan",
+    "country": "Indonesia",
+    "admin1": "West Java"
   },
   "1633070": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -6316,6 +6334,12 @@
     "country": "China",
     "admin1": "Guangxi"
   },
+  "1803567": {
+    "fetched_at": "2026-09-03T01:33:12.533Z",
+    "name": "Linfen",
+    "country": "China",
+    "admin1": "Shanxi"
+  },
   "1803590": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Lincang",
@@ -6693,6 +6717,12 @@
     "name": "Guangshui",
     "country": "China",
     "admin1": "Hubei"
+  },
+  "1810240": {
+    "fetched_at": "2026-09-03T01:33:12.533Z",
+    "name": "Gejiu",
+    "country": "China",
+    "admin1": "Yunnan"
   },
   "1810295": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
@@ -7770,6 +7800,12 @@
     "country": "China",
     "admin1": "Inner Mongolia"
   },
+  "2034312": {
+    "fetched_at": "2026-09-03T01:33:12.533Z",
+    "name": "Ulanhot",
+    "country": "China",
+    "admin1": "Inner Mongolia"
+  },
   "2034400": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Tongliao",
@@ -8591,6 +8627,12 @@
     "name": "Suleja",
     "country": "Nigeria",
     "admin1": "Niger State"
+  },
+  "2323675": {
+    "fetched_at": "2026-09-03T01:33:12.533Z",
+    "name": "Sapele",
+    "country": "Nigeria",
+    "admin1": "Delta"
   },
   "2324774": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -11728,6 +11770,12 @@
     "name": "Ecatepec de Morelos",
     "country": "Mexico",
     "admin1": "México"
+  },
+  "3530049": {
+    "fetched_at": "2026-09-03T01:33:12.533Z",
+    "name": "Delegación Cuajimalpa de Morelos",
+    "country": "Mexico",
+    "admin1": "Mexico City"
   },
   "3530367": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
