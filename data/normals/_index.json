@@ -269,6 +269,12 @@
     "country": "Iran",
     "admin1": "Hamadan Province"
   },
+  "125446": {
+    "fetched_at": "2026-09-03T21:26:23.717Z",
+    "name": "Mahabad",
+    "country": "Iran",
+    "admin1": "West Azerbaijan Province"
+  },
   "126015": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Lāhījān",
@@ -1660,6 +1666,12 @@
     "name": "Nyíregyháza",
     "country": "Hungary",
     "admin1": "Szabolcs-Szatmár-Bereg"
+  },
+  "717582": {
+    "fetched_at": "2026-09-03T21:26:23.717Z",
+    "name": "Miskolc",
+    "country": "Hungary",
+    "admin1": "Borsod-Abaúj-Zemplén"
   },
   "724443": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -7742,6 +7754,12 @@
     "country": "Japan",
     "admin1": "Okayama"
   },
+  "1849563": {
+    "fetched_at": "2026-09-03T21:26:23.717Z",
+    "name": "Tsuruoka",
+    "country": "Japan",
+    "admin1": "Yamagata"
+  },
   "1850147": {
     "fetched_at": "2026-05-19T04:32:10.512Z",
     "name": "Tokyo",
@@ -8638,6 +8656,12 @@
     "name": "Hailar",
     "country": "China",
     "admin1": "Inner Mongolia"
+  },
+  "2037086": {
+    "fetched_at": "2026-09-03T21:26:23.717Z",
+    "name": "Haicheng",
+    "country": "China",
+    "admin1": "Liaoning"
   },
   "2037201": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -9765,6 +9789,12 @@
     "name": "El Achir",
     "country": "Algeria",
     "admin1": "Bordj Bou Arréridj"
+  },
+  "2500017": {
+    "fetched_at": "2026-09-03T21:26:23.717Z",
+    "name": "Djelfa",
+    "country": "Algeria",
+    "admin1": "Djelfa Province"
   },
   "2501152": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -12178,6 +12208,12 @@
     "country": "Brazil",
     "admin1": "Goiás"
   },
+  "3462672": {
+    "fetched_at": "2026-09-03T21:26:23.717Z",
+    "name": "Gama",
+    "country": "Brazil",
+    "admin1": "Federal District"
+  },
   "3462964": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Franco da Rocha",
@@ -13960,6 +13996,12 @@
     "country": "Mexico",
     "admin1": "Guanajuato"
   },
+  "4004886": {
+    "fetched_at": "2026-09-03T21:26:23.717Z",
+    "name": "Nogales",
+    "country": "Mexico",
+    "admin1": "Sonora"
+  },
   "4005509": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
     "name": "Guadalupe",
@@ -14907,6 +14949,12 @@
     "name": "Uruma",
     "country": "Japan",
     "admin1": "Okinawa"
+  },
+  "6822163": {
+    "fetched_at": "2026-09-03T21:26:23.717Z",
+    "name": "Iruma",
+    "country": "Japan",
+    "admin1": "Saitama"
   },
   "6825489": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
