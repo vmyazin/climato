@@ -5,6 +5,12 @@
     "country": "Iran",
     "admin1": "Tehran"
   },
+  "36618": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Dezfūl",
+    "country": "Iran",
+    "admin1": "Khuzestan"
+  },
   "63400": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Cabudwaaq",
@@ -593,6 +599,12 @@
     "country": "Chad",
     "admin1": "Ouadaï Region"
   },
+  "248460": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Khuraybat as Sūq",
+    "country": "Jordan",
+    "admin1": "Amman Governorate"
+  },
   "248946": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Irbid",
@@ -875,6 +887,12 @@
     "country": "Egypt",
     "admin1": "Dakahlia Governorate"
   },
+  "352733": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Marsá Maţrūḩ",
+    "country": "Egypt",
+    "admin1": "Matruh Governorate"
+  },
   "353183": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Maghāghah",
@@ -922,6 +940,12 @@
     "name": "Disūq",
     "country": "Egypt",
     "admin1": "Kafr el-Sheikh Governorate"
+  },
+  "358448": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Damanhur",
+    "country": "Egypt",
+    "admin1": "Beheira"
   },
   "358600": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
@@ -1006,6 +1030,12 @@
     "name": "Ismailia",
     "country": "Egypt",
     "admin1": "Ismailia Governorate"
+  },
+  "361058": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Alexandria",
+    "country": "Egypt",
+    "admin1": "Alexandria Governorate"
   },
   "361179": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
@@ -1205,6 +1235,12 @@
     "country": "Russia",
     "admin1": "Moscow Oblast"
   },
+  "504341": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Pskov",
+    "country": "Russia",
+    "admin1": "Pskov Oblast"
+  },
   "509820": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Petrozavodsk",
@@ -1216,6 +1252,12 @@
     "name": "Penza",
     "country": "Russia",
     "admin1": "Penza Oblast"
+  },
+  "514734": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Orsk",
+    "country": "Russia",
+    "admin1": "Orenburg Oblast"
   },
   "515003": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -2080,6 +2122,12 @@
     "country": "Pakistan",
     "admin1": "Punjab"
   },
+  "1171305": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Malir Cantonment",
+    "country": "Pakistan",
+    "admin1": "Sindh"
+  },
   "1172451": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Lahore",
@@ -2488,6 +2536,12 @@
     "country": "India",
     "admin1": "Gujarat"
   },
+  "1253573": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Vadodara",
+    "country": "India",
+    "admin1": "Gujarat"
+  },
   "1253744": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Uppal Kalan",
@@ -2691,6 +2745,12 @@
     "name": "Saharsa",
     "country": "India",
     "admin1": "Bihar"
+  },
+  "1257806": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Sahāranpur",
+    "country": "India",
+    "admin1": "Uttar Pradesh"
   },
   "1258044": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
@@ -3670,6 +3730,12 @@
     "country": "India",
     "admin1": "National Capital Territory of Delhi"
   },
+  "1273313": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Dehradun",
+    "country": "India",
+    "admin1": "Uttarakhand"
+  },
   "1273368": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Davangere",
@@ -4192,11 +4258,23 @@
     "country": "Nepal",
     "admin1": "Bagmati Province"
   },
+  "1283240": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Kathmandu",
+    "country": "Nepal",
+    "admin1": "Bagmati Province"
+  },
   "1283339": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
     "name": "Hetauda",
     "country": "Nepal",
     "admin1": "Bagmati Province"
+  },
+  "1283562": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Butwal",
+    "country": "Nepal",
+    "admin1": "Lumbini Province"
   },
   "1285173": {
     "fetched_at": "2026-09-01T05:45:57.153Z",
@@ -4522,6 +4600,12 @@
     "country": "Vietnam",
     "admin1": "Can Tho City"
   },
+  "1565157": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Thới Lai",
+    "country": "Vietnam",
+    "admin1": "Can Tho City"
+  },
   "1566083": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Ho Chi Minh City",
@@ -4756,6 +4840,12 @@
     "country": "Thailand",
     "admin1": "Prachin Buri"
   },
+  "1607782": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Phasi Charoen",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
   "1609350": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Bangkok",
@@ -4947,6 +5037,12 @@
     "name": "Palembang",
     "country": "Indonesia",
     "admin1": "South Sumatra"
+  },
+  "1635111": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Mojokerto",
+    "country": "Indonesia",
+    "admin1": "East Java"
   },
   "1635283": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
@@ -5824,6 +5920,12 @@
     "country": "China",
     "admin1": "Shanxi"
   },
+  "1786112": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Heyuan",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
   "1786546": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Zhongxiang",
@@ -6526,6 +6628,12 @@
     "country": "China",
     "admin1": "Shanghai"
   },
+  "1798654": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Pingxiang",
+    "country": "China",
+    "admin1": "Jiangxi"
+  },
   "1798760": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Pingliang",
@@ -6982,6 +7090,12 @@
     "country": "China",
     "admin1": "Shaanxi"
   },
+  "1807112": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Huangzhou",
+    "country": "China",
+    "admin1": "Hubei"
+  },
   "1807234": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Huangshi",
@@ -7204,6 +7318,12 @@
     "country": "China",
     "admin1": "Jiangsu"
   },
+  "1811729": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Encheng",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
   "1812228": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
     "name": "Dongtai",
@@ -7413,6 +7533,12 @@
     "name": "Boshan",
     "country": "China",
     "admin1": "Shandong"
+  },
+  "1816329": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Bishan",
+    "country": "China",
+    "admin1": "Chongqing Municipality"
   },
   "1816440": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
@@ -8837,6 +8963,12 @@
     "country": "New Zealand",
     "admin1": "Waikato Region"
   },
+  "2208032": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Tauranga",
+    "country": "New Zealand",
+    "admin1": "Bay of Plenty"
+  },
   "2210247": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Tripoli",
@@ -10228,6 +10360,12 @@
     "country": "Germany",
     "admin1": "Lower Saxony"
   },
+  "2860410": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Oberhausen",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
+  },
   "2864118": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Neuss",
@@ -10509,6 +10647,12 @@
     "name": "Rouen",
     "country": "France",
     "admin1": "Normandy"
+  },
+  "2983854": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Paris 12 Reuilly",
+    "country": "France",
+    "admin1": "Île-de-France Region"
   },
   "2983990": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -10797,6 +10941,12 @@
     "name": "Alcobendas",
     "country": "Spain",
     "admin1": "Madrid"
+  },
+  "3133880": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Trondheim",
+    "country": "Norway",
+    "admin1": "Trøndelag"
   },
   "3137115": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -11602,6 +11752,12 @@
     "country": "Brazil",
     "admin1": "Estado de Bahia"
   },
+  "3449701": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Santo André",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
   "3450554": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Salvador",
@@ -11761,6 +11917,12 @@
   "3456117": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Nova Serrana",
+    "country": "Brazil",
+    "admin1": "Minas Gerais"
+  },
+  "3456147": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Nova Lima",
     "country": "Brazil",
     "admin1": "Minas Gerais"
   },
@@ -12130,6 +12292,12 @@
     "country": "Brazil",
     "admin1": "Espírito Santo"
   },
+  "3466296": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Chapecó",
+    "country": "Brazil",
+    "admin1": "Santa Catarina"
+  },
   "3466692": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Catanduva",
@@ -12177,6 +12345,12 @@
     "name": "Campo Grande",
     "country": "Brazil",
     "admin1": "Mato Grosso do Sul"
+  },
+  "3467865": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Campinas",
+    "country": "Brazil",
+    "admin1": "São Paulo"
   },
   "3467978": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -12339,6 +12513,12 @@
     "name": "Aracaju",
     "country": "Brazil",
     "admin1": "Sergipe"
+  },
+  "3471910": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Apucarana",
+    "country": "Brazil",
+    "admin1": "Paraná"
   },
   "3472287": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -12573,6 +12753,12 @@
     "name": "Azcapotzalco",
     "country": "Mexico",
     "admin1": "Mexico City"
+  },
+  "3532624": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Ciudad López Mateos",
+    "country": "Mexico",
+    "admin1": "México"
   },
   "3536729": {
     "fetched_at": "2026-08-29T22:50:00.152Z",
@@ -14170,6 +14356,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5347335": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Fairfield",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5355933": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
     "name": "Hayward",
@@ -15237,6 +15429,12 @@
     "name": "Dchira El Jihadia",
     "country": "Morocco",
     "admin1": "Souss-Massa"
+  },
+  "10524295": {
+    "fetched_at": "2026-09-03T18:54:42.659Z",
+    "name": "Rāniganj",
+    "country": "India",
+    "admin1": "Telangana"
   },
   "10627325": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
