@@ -5578,6 +5578,12 @@
     "country": "Philippines",
     "admin1": "Calabarzon"
   },
+  "1718306": {
+    "fetched_at": "2026-09-04T01:26:49.281Z",
+    "name": "Carmona",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
+  },
   "1719274": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "Candelaria",
@@ -8186,6 +8192,12 @@
     "country": "Japan",
     "admin1": "Kanagawa"
   },
+  "1863440": {
+    "fetched_at": "2026-09-04T01:26:49.281Z",
+    "name": "Hachiōji",
+    "country": "Japan",
+    "admin1": "Tokyo"
+  },
   "1863917": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Fukuyama",
@@ -9029,6 +9041,12 @@
     "country": "Cameroon",
     "admin1": "Adamaoua Region"
   },
+  "2229411": {
+    "fetched_at": "2026-09-04T01:26:49.281Z",
+    "name": "Limbe",
+    "country": "Cameroon",
+    "admin1": "South-West Region"
+  },
   "2229752": {
     "fetched_at": "2026-08-29T22:50:00.152Z",
     "name": "Kumba",
@@ -9532,6 +9550,12 @@
     "name": "Abakaliki",
     "country": "Nigeria",
     "admin1": "Ebonyi State"
+  },
+  "2356157": {
+    "fetched_at": "2026-09-04T01:26:49.281Z",
+    "name": "Saaba",
+    "country": "Burkina Faso",
+    "admin1": "Centre Region"
   },
   "2358946": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
