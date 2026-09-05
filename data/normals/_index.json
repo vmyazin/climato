@@ -6369,6 +6369,12 @@
     "country": "Philippines",
     "admin1": "Davao Region"
   },
+  "1715430": {
+    "fetched_at": "2026-09-05T22:22:46.900Z",
+    "name": "Dasmariñas",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
+  },
   "1717641": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Cavite City",
@@ -10929,6 +10935,12 @@
     "country": "Nigeria",
     "admin1": "Osun State"
   },
+  "2338106": {
+    "fetched_at": "2026-09-05T22:22:46.900Z",
+    "name": "Ikot Ekpene",
+    "country": "Nigeria",
+    "admin1": "Akwa Ibom State"
+  },
   "2338313": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
     "name": "Ikeja",
@@ -15020,6 +15032,12 @@
     "country": "El Salvador",
     "admin1": "San Miguel Department"
   },
+  "3588258": {
+    "fetched_at": "2026-09-05T22:22:46.900Z",
+    "name": "Totonicapán",
+    "country": "Guatemala",
+    "admin1": "Totonicapán"
+  },
   "3589885": {
     "fetched_at": "2026-09-02T06:28:08.098Z",
     "name": "San Juan Sacatepéquez",
@@ -15817,6 +15835,12 @@
     "name": "San Nicolás de los Arroyos",
     "country": "Argentina",
     "admin1": "Buenos Aires"
+  },
+  "3836873": {
+    "fetched_at": "2026-09-05T22:22:46.900Z",
+    "name": "San Miguel de Tucumán",
+    "country": "Argentina",
+    "admin1": "Tucuman"
   },
   "3837056": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
