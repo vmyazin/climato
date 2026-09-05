@@ -167,6 +167,12 @@
     "country": "Saudi Arabia",
     "admin1": "Al Jawf Region"
   },
+  "103630": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Najran",
+    "country": "Saudi Arabia",
+    "admin1": "Najran Region"
+  },
   "105299": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Jizan",
@@ -1510,6 +1516,12 @@
     "name": "Kovrov",
     "country": "Russia",
     "admin1": "Vladimir Oblast"
+  },
+  "543878": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Kostroma",
+    "country": "Russia",
+    "admin1": "Kostroma Oblast"
   },
   "546105": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -4341,6 +4353,12 @@
     "country": "India",
     "admin1": "Uttar Pradesh"
   },
+  "1275218": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Botad",
+    "country": "India",
+    "admin1": "Gujarat"
+  },
   "1275339": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Mumbai",
@@ -5144,6 +5162,12 @@
     "name": "Dunhuang",
     "country": "China",
     "admin1": "Gansu"
+  },
+  "1529569": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Changji",
+    "country": "China",
+    "admin1": "Xinjiang"
   },
   "1538637": {
     "fetched_at": "2026-09-04T15:10:30.811Z",
@@ -6165,6 +6189,12 @@
     "country": "Philippines",
     "admin1": "Central Luzon"
   },
+  "1701124": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Maramag",
+    "country": "Philippines",
+    "admin1": "Northern Mindanao"
+  },
   "1701500": {
     "fetched_at": "2026-09-02T23:36:56.397Z",
     "name": "Mansilingan",
@@ -6302,6 +6332,12 @@
     "name": "Caloocan",
     "country": "Philippines",
     "admin1": "National Capital Region"
+  },
+  "1722930": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Bulaon",
+    "country": "Philippines",
+    "admin1": "Central Luzon"
   },
   "1725684": {
     "fetched_at": "2026-09-02T01:29:30.034Z",
@@ -6516,6 +6552,12 @@
   "1771023": {
     "fetched_at": "2026-09-04T23:27:11.474Z",
     "name": "Kampung Baru Subang",
+    "country": "Malaysia",
+    "admin1": "Selangor"
+  },
+  "1771298": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Kampong Baharu Cheras Batu Sebelas",
     "country": "Malaysia",
     "admin1": "Selangor"
   },
@@ -7479,6 +7521,12 @@
     "country": "China",
     "admin1": "Fujian"
   },
+  "1798473": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Puqi",
+    "country": "China",
+    "admin1": "Hubei"
+  },
   "1798490": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Pulandian",
@@ -7748,6 +7796,12 @@
     "name": "Liaocheng",
     "country": "China",
     "admin1": "Shandong"
+  },
+  "1803842": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Hepu",
+    "country": "China",
+    "admin1": "Guangxi"
   },
   "1803886": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
@@ -13436,6 +13490,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3448744": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "São José",
+    "country": "Brazil",
+    "admin1": "Santa Catarina"
+  },
   "3448877": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "São João de Meriti",
@@ -13717,6 +13777,12 @@
     "name": "Nova Friburgo",
     "country": "Brazil",
     "admin1": "Rio de Janeiro"
+  },
+  "3456223": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Nossa Senhora do Socorro",
+    "country": "Brazil",
+    "admin1": "Sergipe"
   },
   "3456225": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -14761,6 +14827,12 @@
     "name": "Soyapango",
     "country": "El Salvador",
     "admin1": "San Salvador Department"
+  },
+  "3583334": {
+    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "name": "Santa Ana",
+    "country": "El Salvador",
+    "admin1": "Santa Ana Department"
   },
   "3583361": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
