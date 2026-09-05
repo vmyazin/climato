@@ -1379,6 +1379,12 @@
     "country": "Russia",
     "admin1": "Yaroslavl Oblast"
   },
+  "500096": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Ryazan",
+    "country": "Russia",
+    "admin1": "Ryazan Oblast"
+  },
   "503977": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Pushkino",
@@ -1859,11 +1865,23 @@
     "country": "Ukraine",
     "admin1": "Rivne Oblast"
   },
+  "702320": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Makiyivka",
+    "country": "Ukraine",
+    "admin1": "Donetsk Oblast"
+  },
   "703448": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Kyiv",
     "country": "Ukraine",
     "admin1": "Kyiv City"
+  },
+  "706524": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Kerch",
+    "country": "Ukraine",
+    "admin1": "Crimea"
   },
   "709717": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -5367,6 +5385,12 @@
     "country": "Vietnam",
     "admin1": "Dong Nai"
   },
+  "1585330": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Chợ Lớn",
+    "country": "Vietnam",
+    "admin1": "Ho Chi Minh City (HCMC)"
+  },
   "1586151": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Cao Lanh",
@@ -5624,6 +5648,12 @@
     "name": "Prabumulih",
     "country": "Indonesia",
     "admin1": "South Sumatra"
+  },
+  "1631733": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Pelabuhanratu",
+    "country": "Indonesia",
+    "admin1": "West Java"
   },
   "1631761": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -8689,6 +8719,12 @@
     "country": "Japan",
     "admin1": "Shiga"
   },
+  "1848445": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Honmachi",
+    "country": "Japan",
+    "admin1": "Kumamoto"
+  },
   "1848522": {
     "fetched_at": "2026-09-04T06:34:02.423Z",
     "name": "Yao",
@@ -10149,6 +10185,12 @@
     "country": "New Zealand",
     "admin1": "Otago"
   },
+  "2192362": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Christchurch",
+    "country": "New Zealand",
+    "admin1": "Canterbury"
+  },
   "2208032": {
     "fetched_at": "2026-09-03T18:54:42.659Z",
     "name": "Tauranga",
@@ -10724,6 +10766,12 @@
     "name": "Gusau",
     "country": "Nigeria",
     "admin1": "Zamfara State"
+  },
+  "2341374": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Gboko",
+    "country": "Nigeria",
+    "admin1": "Benue State"
   },
   "2341656": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -12416,6 +12464,12 @@
     "country": "Spain",
     "admin1": "Madrid"
   },
+  "3118150": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Logroño",
+    "country": "Spain",
+    "admin1": "La Rioja"
+  },
   "3118532": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "León",
@@ -12943,6 +12997,12 @@
     "name": "Caucaia",
     "country": "Brazil",
     "admin1": "Ceará"
+  },
+  "3402591": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Castanhal",
+    "country": "Brazil",
+    "admin1": "Pará"
   },
   "3402655": {
     "fetched_at": "2026-09-04T21:04:35.522Z",
@@ -15116,6 +15176,12 @@
     "country": "Colombia",
     "admin1": "Cesar Department"
   },
+  "3666608": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Tunja",
+    "country": "Colombia",
+    "admin1": "Departamento de Boyacá"
+  },
   "3666645": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
     "name": "Tuluá",
@@ -16082,6 +16148,12 @@
     "country": "United States",
     "admin1": "North Carolina"
   },
+  "4553433": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Tulsa",
+    "country": "United States",
+    "admin1": "Oklahoma"
+  },
   "4560349": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Philadelphia",
@@ -16217,6 +16289,12 @@
   "4930956": {
     "fetched_at": "2026-05-18T23:20:20.640Z",
     "name": "Boston",
+    "country": "United States",
+    "admin1": "Massachusetts"
+  },
+  "4945121": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "New Bedford",
     "country": "United States",
     "admin1": "Massachusetts"
   },
@@ -17773,6 +17851,12 @@
     "name": "Taitō City",
     "country": "Japan",
     "admin1": "Tokyo"
+  },
+  "11808941": {
+    "fetched_at": "2026-09-05T13:36:47.520Z",
+    "name": "Sekondi",
+    "country": "Ghana",
+    "admin1": "Western Region"
   },
   "11837657": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
