@@ -3921,6 +3921,12 @@
     "country": "India",
     "admin1": "Uttar Pradesh"
   },
+  "1269280": {
+    "fetched_at": "2026-09-06T13:12:00.839Z",
+    "name": "Jamuria",
+    "country": "India",
+    "admin1": "West Bengal"
+  },
   "1269300": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Jamshedpur",
@@ -5220,6 +5226,12 @@
   "1529114": {
     "fetched_at": "2026-09-02T18:59:09.006Z",
     "name": "Turpan",
+    "country": "China",
+    "admin1": "Xinjiang"
+  },
+  "1529195": {
+    "fetched_at": "2026-09-06T13:12:00.839Z",
+    "name": "Shihezi",
     "country": "China",
     "admin1": "Xinjiang"
   },
@@ -7353,6 +7365,12 @@
     "country": "China",
     "admin1": "Henan"
   },
+  "1793424": {
+    "fetched_at": "2026-09-06T13:12:00.839Z",
+    "name": "Tanggu",
+    "country": "China",
+    "admin1": "Tianjin Municipality"
+  },
   "1793505": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Taizhou",
@@ -7610,6 +7628,12 @@
     "name": "Qujing",
     "country": "China",
     "admin1": "Yunnan"
+  },
+  "1797353": {
+    "fetched_at": "2026-09-06T13:12:00.839Z",
+    "name": "Quanzhou",
+    "country": "China",
+    "admin1": "Fujian"
   },
   "1797798": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -10857,6 +10881,12 @@
     "country": "Nigeria",
     "admin1": "Niger State"
   },
+  "2323390": {
+    "fetched_at": "2026-09-06T13:12:00.839Z",
+    "name": "Saki",
+    "country": "Nigeria",
+    "admin1": "Oyo State"
+  },
   "2323411": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
     "name": "Sagamu",
@@ -11425,6 +11455,12 @@
     "name": "Jijel",
     "country": "Algeria",
     "admin1": "Jijel Province"
+  },
+  "2495662": {
+    "fetched_at": "2026-09-06T13:12:00.839Z",
+    "name": "Guelma",
+    "country": "Algeria",
+    "admin1": "Guelma Province"
   },
   "2496049": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
