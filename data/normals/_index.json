@@ -719,6 +719,12 @@
     "country": "Lebanon",
     "admin1": "South Governorate"
   },
+  "276781": {
+    "fetched_at": "2026-09-06T20:52:46.826Z",
+    "name": "Beirut",
+    "country": "Lebanon",
+    "admin1": "Beirut"
+  },
   "278913": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Nabatiye et Tahta",
@@ -1271,6 +1277,12 @@
     "country": "Iran",
     "admin1": "Isfahan"
   },
+  "425378": {
+    "fetched_at": "2026-09-06T20:52:46.826Z",
+    "name": "Bujumbura",
+    "country": "Burundi",
+    "admin1": "Bujumbura Mairie Province"
+  },
   "461740": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Zyuzino",
@@ -1336,6 +1348,12 @@
     "name": "Velikiye Luki",
     "country": "Russia",
     "admin1": "Pskov Oblast"
+  },
+  "479123": {
+    "fetched_at": "2026-09-06T20:52:46.826Z",
+    "name": "Ulyanovsk",
+    "country": "Russia",
+    "admin1": "Ulyanovsk Oblast"
   },
   "480060": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
@@ -6861,6 +6879,12 @@
     "country": "China",
     "admin1": "Guangdong"
   },
+  "1784953": {
+    "fetched_at": "2026-09-06T20:52:46.826Z",
+    "name": "Zhaoyuan",
+    "country": "China",
+    "admin1": "Shandong"
+  },
   "1784990": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
     "name": "Zhanjiang",
@@ -8570,6 +8594,12 @@
     "name": "Dingxi",
     "country": "China",
     "admin1": "Gansu"
+  },
+  "1812955": {
+    "fetched_at": "2026-09-06T20:52:46.826Z",
+    "name": "Dezhou",
+    "country": "China",
+    "admin1": "Shandong"
   },
   "1812990": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -11720,6 +11750,12 @@
     "country": "Italy",
     "admin1": "Sardinia"
   },
+  "2529013": {
+    "fetched_at": "2026-09-06T20:52:46.826Z",
+    "name": "Temara",
+    "country": "Morocco",
+    "admin1": "Rabat-Salé-Kénitra"
+  },
   "2530048": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Taourirt",
@@ -13286,6 +13322,12 @@
     "country": "Brazil",
     "admin1": "Pernambuco"
   },
+  "3392998": {
+    "fetched_at": "2026-09-06T20:52:46.826Z",
+    "name": "Parnamirim",
+    "country": "Brazil",
+    "admin1": "Rio Grande do Norte"
+  },
   "3393001": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Parnaíba",
@@ -14263,6 +14305,12 @@
     "name": "Lagarto",
     "country": "Brazil",
     "admin1": "Sergipe"
+  },
+  "3459505": {
+    "fetched_at": "2026-09-06T20:52:46.826Z",
+    "name": "Juiz de Fora",
+    "country": "Brazil",
+    "admin1": "Minas Gerais"
   },
   "3459712": {
     "fetched_at": "2026-05-18T14:08:33.613Z",
@@ -15721,6 +15769,12 @@
     "name": "Pitalito",
     "country": "Colombia",
     "admin1": "Huila Department"
+  },
+  "3672328": {
+    "fetched_at": "2026-09-06T20:52:46.826Z",
+    "name": "Piedecuesta",
+    "country": "Colombia",
+    "admin1": "Santander Department"
   },
   "3672486": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
