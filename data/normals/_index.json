@@ -7881,6 +7881,12 @@
     "country": "China",
     "admin1": "Beijing Municipality"
   },
+  "1800779": {
+    "fetched_at": "2026-09-06T22:28:17.648Z",
+    "name": "Meizhou",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
   "1800818": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
     "name": "Meishan",
@@ -12104,6 +12110,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2656192": {
+    "fetched_at": "2026-09-06T22:28:17.648Z",
+    "name": "Basingstoke",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2657832": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Aberdeen",
@@ -13819,6 +13831,12 @@
     "name": "Toledo",
     "country": "Brazil",
     "admin1": "Paraná"
+  },
+  "3446606": {
+    "fetched_at": "2026-09-06T22:28:17.648Z",
+    "name": "Teresópolis",
+    "country": "Brazil",
+    "admin1": "Rio de Janeiro"
   },
   "3446682": {
     "fetched_at": "2026-09-05T18:36:25.616Z",
@@ -17953,6 +17971,12 @@
     "name": "Karnaphuli",
     "country": "Bangladesh",
     "admin1": "Chittagong"
+  },
+  "8307452": {
+    "fetched_at": "2026-09-06T22:28:17.648Z",
+    "name": "Huangpu",
+    "country": "China",
+    "admin1": "Shanghai Municipality"
   },
   "8335361": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
