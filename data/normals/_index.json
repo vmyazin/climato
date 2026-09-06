@@ -4281,6 +4281,12 @@
     "country": "India",
     "admin1": "Maharashtra"
   },
+  "1272805": {
+    "fetched_at": "2026-09-06T16:29:06.700Z",
+    "name": "Dhaulpur",
+    "country": "India",
+    "admin1": "Rajasthan"
+  },
   "1272842": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Dharmavaram",
@@ -6885,6 +6891,12 @@
     "country": "China",
     "admin1": "Jiangsu"
   },
+  "1785710": {
+    "fetched_at": "2026-09-06T16:29:06.700Z",
+    "name": "Jinghong",
+    "country": "China",
+    "admin1": "Yunnan"
+  },
   "1785725": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Yunfu",
@@ -8499,6 +8511,12 @@
     "country": "China",
     "admin1": "Guangdong"
   },
+  "1811764": {
+    "fetched_at": "2026-09-06T16:29:06.700Z",
+    "name": "Duyun",
+    "country": "China",
+    "admin1": "Guizhou"
+  },
   "1812101": {
     "fetched_at": "2026-09-05T20:45:00.477Z",
     "name": "Dongying",
@@ -8910,6 +8928,12 @@
     "name": "Gwangju",
     "country": "South Korea",
     "admin1": "Gwangju"
+  },
+  "1842025": {
+    "fetched_at": "2026-09-06T16:29:06.700Z",
+    "name": "Gunsan",
+    "country": "South Korea",
+    "admin1": "Jeollabuk-do"
   },
   "1842225": {
     "fetched_at": "2026-08-26T18:30:40.356Z",
@@ -11126,6 +11150,12 @@
     "name": "Buguma",
     "country": "Nigeria",
     "admin1": "Rivers State"
+  },
+  "2347954": {
+    "fetched_at": "2026-09-06T16:29:06.700Z",
+    "name": "Bama",
+    "country": "Nigeria",
+    "admin1": "Borno State"
   },
   "2348773": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -15170,6 +15200,12 @@
     "country": "El Salvador",
     "admin1": "San Miguel Department"
   },
+  "3587902": {
+    "fetched_at": "2026-09-06T16:29:06.700Z",
+    "name": "Villa Nueva",
+    "country": "Guatemala",
+    "admin1": "Guatemala"
+  },
   "3588258": {
     "fetched_at": "2026-09-05T22:22:46.900Z",
     "name": "Totonicapán",
@@ -16969,6 +17005,12 @@
     "name": "Lakewood",
     "country": "United States",
     "admin1": "Colorado"
+  },
+  "5475352": {
+    "fetched_at": "2026-09-06T16:29:06.700Z",
+    "name": "Las Cruces",
+    "country": "United States",
+    "admin1": "New Mexico"
   },
   "5511077": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -18861,6 +18903,12 @@
   "13546518": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Dniprovskyi",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
+  },
+  "13546521": {
+    "fetched_at": "2026-09-06T16:29:06.700Z",
+    "name": "Shevchenkivskyi",
     "country": "Ukraine",
     "admin1": "Kyiv City"
   },
