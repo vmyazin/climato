@@ -431,6 +431,12 @@
     "country": "Angola",
     "admin1": "Luanda Norte"
   },
+  "145778": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Chitato",
+    "country": "Angola",
+    "admin1": "Luanda Norte"
+  },
   "146268": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Nicosia",
@@ -1493,6 +1499,12 @@
     "country": "Russia",
     "admin1": "Stavropol Kray"
   },
+  "523064": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Nazran",
+    "country": "Russia",
+    "admin1": "Ingushetiya Republic"
+  },
   "523523": {
     "fetched_at": "2026-09-01T05:45:57.153Z",
     "name": "Nal'chik",
@@ -1853,6 +1865,12 @@
     "country": "Romania",
     "admin1": "Neamț County"
   },
+  "671768": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Oradea",
+    "country": "Romania",
+    "admin1": "Bihor County"
+  },
   "677697": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Galati",
@@ -2056,6 +2074,12 @@
     "name": "Ajapnyak",
     "country": "Armenia",
     "admin1": "Yerevan"
+  },
+  "877747": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Mtwara",
+    "country": "Tanzania",
+    "admin1": "Mtwara"
   },
   "888710": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -7521,6 +7545,12 @@
     "country": "China",
     "admin1": "Shanghai"
   },
+  "1796376": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Shajing",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
   "1796421": {
     "fetched_at": "2026-08-27T13:08:28.196Z",
     "name": "Shahecheng",
@@ -9687,6 +9717,12 @@
     "country": "Russia",
     "admin1": "Zabaykalskiy (Transbaikal) Kray"
   },
+  "2027667": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Angarsk",
+    "country": "Russia",
+    "admin1": "Irkutsk Oblast"
+  },
   "2033147": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
     "name": "Zhaozhou",
@@ -10250,6 +10286,12 @@
     "name": "Ichihara",
     "country": "Japan",
     "admin1": "Chiba"
+  },
+  "2112923": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Fukushima",
+    "country": "Japan",
+    "admin1": "Fukushima"
   },
   "2113015": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -11819,6 +11861,12 @@
   "2638785": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "St Helens",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2640354": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Peterborough",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -14168,6 +14216,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3460634": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Itaquera",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
   "3460644": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
     "name": "Itaquaquecetuba",
@@ -15596,6 +15650,12 @@
     "country": "Colombia",
     "admin1": "Cundinamarca"
   },
+  "3674453": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Montería",
+    "country": "Colombia",
+    "admin1": "Departamento de Córdoba"
+  },
   "3674962": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Medellín",
@@ -16838,6 +16898,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5400075": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Sunnyvale",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5402405": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Thousand Oaks",
@@ -17846,6 +17912,12 @@
     "country": "China",
     "admin1": "Chongqing Municipality"
   },
+  "8581443": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "South Tangerang",
+    "country": "Indonesia",
+    "admin1": "Banten"
+  },
   "8593863": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
     "name": "Rodenkirchen",
@@ -17959,6 +18031,12 @@
     "name": "Iskandar Puteri",
     "country": "Malaysia",
     "admin1": "Johor"
+  },
+  "10173001": {
+    "fetched_at": "2026-09-06T09:43:13.415Z",
+    "name": "Itaim Bibi",
+    "country": "Brazil",
+    "admin1": "São Paulo"
   },
   "10261509": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
