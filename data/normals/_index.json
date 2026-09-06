@@ -5139,6 +5139,12 @@
     "country": "Kazakhstan",
     "admin1": "Pavlodar Region"
   },
+  "1524325": {
+    "fetched_at": "2026-09-06T00:16:45.957Z",
+    "name": "Ekibastuz",
+    "country": "Kazakhstan",
+    "admin1": "Pavlodar Region"
+  },
   "1526384": {
     "fetched_at": "2026-07-18T04:33:47.532Z",
     "name": "Almaty",
@@ -10712,6 +10718,12 @@
     "name": "Koforidua",
     "country": "Ghana",
     "admin1": "Eastern Region"
+  },
+  "2300379": {
+    "fetched_at": "2026-09-06T00:16:45.957Z",
+    "name": "Ho",
+    "country": "Ghana",
+    "admin1": "Volta Region"
   },
   "2302357": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -18175,6 +18187,12 @@
     "name": "Villa Mercedes",
     "country": "Chile",
     "admin1": "Biobio"
+  },
+  "11962371": {
+    "fetched_at": "2026-09-06T00:16:45.957Z",
+    "name": "Grajaú",
+    "country": "Brazil",
+    "admin1": "São Paulo"
   },
   "11962373": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
