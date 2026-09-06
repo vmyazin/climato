@@ -845,6 +845,12 @@
     "country": "Ethiopia",
     "admin1": "Somali"
   },
+  "326406": {
+    "fetched_at": "2026-09-06T05:10:51.076Z",
+    "name": "Weldiya",
+    "country": "Ethiopia",
+    "admin1": "Amhara"
+  },
   "328689": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Shashamane",
@@ -1792,6 +1798,12 @@
     "name": "Vantaa",
     "country": "Finland",
     "admin1": "Uusimaa"
+  },
+  "634963": {
+    "fetched_at": "2026-09-06T05:10:51.076Z",
+    "name": "Tampere",
+    "country": "Finland",
+    "admin1": "Pirkanmaa"
   },
   "649360": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -5511,6 +5523,12 @@
     "country": "Vietnam",
     "admin1": "Can Tho City"
   },
+  "1587923": {
+    "fetched_at": "2026-09-06T05:10:51.076Z",
+    "name": "Bien Hoa",
+    "country": "Vietnam",
+    "admin1": "Dong Nai"
+  },
   "1588060": {
     "fetched_at": "2026-09-05T18:36:25.616Z",
     "name": "Bến Cát",
@@ -6068,6 +6086,12 @@
     "name": "Bandung",
     "country": "Indonesia",
     "admin1": "West Java"
+  },
+  "1650527": {
+    "fetched_at": "2026-09-06T05:10:51.076Z",
+    "name": "Balikpapan",
+    "country": "Indonesia",
+    "admin1": "East Kalimantan"
   },
   "1651112": {
     "fetched_at": "2026-08-31T21:39:48.036Z",
@@ -8995,6 +9019,12 @@
     "country": "Japan",
     "admin1": "Aichi"
   },
+  "1853483": {
+    "fetched_at": "2026-09-06T05:10:51.076Z",
+    "name": "Oyama",
+    "country": "Japan",
+    "admin1": "Tochigi"
+  },
   "1853909": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Osaka",
@@ -10334,6 +10364,12 @@
     "name": "Wollongong",
     "country": "Australia",
     "admin1": "New South Wales"
+  },
+  "2172797": {
+    "fetched_at": "2026-09-06T05:10:51.076Z",
+    "name": "Cairns",
+    "country": "Australia",
+    "admin1": "Queensland"
   },
   "2176187": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -17141,6 +17177,12 @@
   "6173331": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Vancouver",
+    "country": "Canada",
+    "admin1": "British Columbia"
+  },
+  "6174041": {
+    "fetched_at": "2026-09-06T05:10:51.076Z",
+    "name": "Victoria",
     "country": "Canada",
     "admin1": "British Columbia"
   },
