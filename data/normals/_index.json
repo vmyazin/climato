@@ -5049,6 +5049,12 @@
     "country": "Bangladesh",
     "admin1": "Mymensingh Division"
   },
+  "1344377": {
+    "fetched_at": "2026-09-06T18:40:44.718Z",
+    "name": "Haldia",
+    "country": "India",
+    "admin1": "West Bengal"
+  },
   "1348843": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Maheshtala",
@@ -5823,6 +5829,12 @@
     "country": "Indonesia",
     "admin1": "East Java"
   },
+  "1632197": {
+    "fetched_at": "2026-09-06T18:40:44.718Z",
+    "name": "Paseh",
+    "country": "Indonesia",
+    "admin1": "West Java"
+  },
   "1632228": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Pasarkemis",
@@ -6266,6 +6278,12 @@
     "name": "Santiago",
     "country": "Philippines",
     "admin1": "Cagayan Valley"
+  },
+  "1689510": {
+    "fetched_at": "2026-09-06T18:40:44.718Z",
+    "name": "San Jose",
+    "country": "Philippines",
+    "admin1": "Mimaropa"
   },
   "1692192": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
@@ -9807,6 +9825,12 @@
     "country": "China",
     "admin1": "Heilongjiang"
   },
+  "2033467": {
+    "fetched_at": "2026-09-06T18:40:44.718Z",
+    "name": "Yanji",
+    "country": "China",
+    "admin1": "Jilin"
+  },
   "2033536": {
     "fetched_at": "2026-09-02T01:29:30.034Z",
     "name": "Yakeshi",
@@ -12080,6 +12104,12 @@
     "country": "The Netherlands",
     "admin1": "North Brabant"
   },
+  "2759794": {
+    "fetched_at": "2026-09-06T18:40:44.718Z",
+    "name": "Amsterdam",
+    "country": "The Netherlands",
+    "admin1": "North Holland"
+  },
   "2761369": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Vienna",
@@ -13333,6 +13363,12 @@
     "name": "Itaituba",
     "country": "Brazil",
     "admin1": "Pará"
+  },
+  "3398115": {
+    "fetched_at": "2026-09-06T18:40:44.718Z",
+    "name": "Ipojuca",
+    "country": "Brazil",
+    "admin1": "Pernambuco"
   },
   "3398269": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
@@ -16147,6 +16183,12 @@
     "name": "Rancagua",
     "country": "Chile",
     "admin1": "O'Higgins Region"
+  },
+  "3874096": {
+    "fetched_at": "2026-09-06T18:40:44.718Z",
+    "name": "Quilpué",
+    "country": "Chile",
+    "admin1": "Valparaiso"
   },
   "3874212": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
