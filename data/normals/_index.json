@@ -503,6 +503,12 @@
     "country": "Tanzania",
     "admin1": "Tanga"
   },
+  "159908": {
+    "fetched_at": "2026-09-07T16:06:55.743Z",
+    "name": "Geita",
+    "country": "Tanzania",
+    "admin1": "Geita"
+  },
   "160263": {
     "fetched_at": "2026-08-29T20:05:52.305Z",
     "name": "Dar es Salaam",
@@ -806,6 +812,12 @@
   "293725": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Rehovot",
+    "country": "Israel",
+    "admin1": "Central District"
+  },
+  "294071": {
+    "fetched_at": "2026-09-07T16:06:55.743Z",
+    "name": "Netanya",
     "country": "Israel",
     "admin1": "Central District"
   },
@@ -2523,6 +2535,12 @@
     "name": "Sargodha",
     "country": "Pakistan",
     "admin1": "Punjab"
+  },
+  "1167528": {
+    "fetched_at": "2026-09-07T16:06:55.743Z",
+    "name": "Quetta",
+    "country": "Pakistan",
+    "admin1": "Balochistan"
   },
   "1168555": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
@@ -5936,6 +5954,12 @@
     "name": "Mataram",
     "country": "Indonesia",
     "admin1": "West Nusa Tenggara"
+  },
+  "1636022": {
+    "fetched_at": "2026-09-07T16:06:55.743Z",
+    "name": "Martapura",
+    "country": "Indonesia",
+    "admin1": "South Kalimantan"
   },
   "1636308": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -10581,6 +10605,12 @@
     "country": "Australia",
     "admin1": "Queensland"
   },
+  "2174003": {
+    "fetched_at": "2026-09-07T16:06:55.743Z",
+    "name": "Brisbane",
+    "country": "Australia",
+    "admin1": "Queensland"
+  },
   "2176187": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Bendigo",
@@ -13196,6 +13226,12 @@
     "country": "Albania",
     "admin1": "Vlorë County"
   },
+  "3183875": {
+    "fetched_at": "2026-09-07T16:06:55.743Z",
+    "name": "Tirana",
+    "country": "Albania",
+    "admin1": "Tirana"
+  },
   "3186573": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Zenica",
@@ -14287,6 +14323,12 @@
     "name": "Nova Lima",
     "country": "Brazil",
     "admin1": "Minas Gerais"
+  },
+  "3456160": {
+    "fetched_at": "2026-09-07T16:06:55.743Z",
+    "name": "Nova Iguaçu",
+    "country": "Brazil",
+    "admin1": "Rio de Janeiro"
   },
   "3456166": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -18125,6 +18167,12 @@
   "8416218": {
     "fetched_at": "2026-09-02T15:22:17.614Z",
     "name": "Lizhi",
+    "country": "China",
+    "admin1": "Chongqing Municipality"
+  },
+  "8416933": {
+    "fetched_at": "2026-09-07T16:06:55.743Z",
+    "name": "Huixing",
     "country": "China",
     "admin1": "Chongqing Municipality"
   },
