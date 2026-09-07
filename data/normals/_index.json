@@ -11313,6 +11313,12 @@
     "country": "Nigeria",
     "admin1": "Anambra"
   },
+  "2350434": {
+    "fetched_at": "2026-09-07T20:11:55.822Z",
+    "name": "Aliayabiagba",
+    "country": "Nigeria",
+    "admin1": "Lagos"
+  },
   "2350841": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Akure",
@@ -16591,6 +16597,12 @@
     "name": "Ica",
     "country": "Peru",
     "admin1": "Ica"
+  },
+  "3941584": {
+    "fetched_at": "2026-09-07T20:11:55.822Z",
+    "name": "Cusco",
+    "country": "Peru",
+    "admin1": "Cuzco Department"
   },
   "3980194": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
