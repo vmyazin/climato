@@ -8331,6 +8331,12 @@
     "country": "China",
     "admin1": "Jiangxi"
   },
+  "1806466": {
+    "fetched_at": "2026-09-07T23:03:31.476Z",
+    "name": "Guangyuan",
+    "country": "China",
+    "admin1": "Sichuan"
+  },
   "1806488": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Qionghai",
@@ -9217,6 +9223,12 @@
     "country": "Japan",
     "admin1": "Saitama"
   },
+  "1851717": {
+    "fetched_at": "2026-09-07T23:03:31.476Z",
+    "name": "Shizuoka",
+    "country": "Japan",
+    "admin1": "Shizuoka"
+  },
   "1852225": {
     "fetched_at": "2026-09-02T23:36:56.397Z",
     "name": "Shimonoseki",
@@ -9402,6 +9414,12 @@
     "name": "Koshigaya",
     "country": "Japan",
     "admin1": "Saitama"
+  },
+  "1858910": {
+    "fetched_at": "2026-09-07T23:03:31.476Z",
+    "name": "Komatsu",
+    "country": "Japan",
+    "admin1": "Ishikawa"
   },
   "1858964": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
@@ -18265,6 +18283,12 @@
     "name": "Nanchuan",
     "country": "China",
     "admin1": "Chongqing Municipality"
+  },
+  "8556295": {
+    "fetched_at": "2026-09-07T23:03:31.476Z",
+    "name": "Orléans",
+    "country": "Canada",
+    "admin1": "Ontario"
   },
   "8581443": {
     "fetched_at": "2026-09-06T09:43:13.415Z",
