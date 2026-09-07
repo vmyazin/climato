@@ -821,6 +821,12 @@
     "country": "Israel",
     "admin1": "Tel Aviv"
   },
+  "295548": {
+    "fetched_at": "2026-09-07T10:46:25.605Z",
+    "name": "Bat Yam",
+    "country": "Israel",
+    "admin1": "Tel Aviv"
+  },
   "311046": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "İzmir",
@@ -5961,6 +5967,12 @@
     "country": "Indonesia",
     "admin1": "South Sumatra"
   },
+  "1638063": {
+    "fetched_at": "2026-09-07T10:46:25.605Z",
+    "name": "Lembang",
+    "country": "Indonesia",
+    "admin1": "West Java"
+  },
   "1638284": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Lawang",
@@ -6054,6 +6066,12 @@
   "1646194": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Ciputat",
+    "country": "Indonesia",
+    "admin1": "West Java"
+  },
+  "1646448": {
+    "fetched_at": "2026-09-07T10:46:25.605Z",
+    "name": "Cimahi",
     "country": "Indonesia",
     "admin1": "West Java"
   },
@@ -6849,6 +6867,12 @@
     "country": "China",
     "admin1": "Hubei"
   },
+  "1784580": {
+    "fetched_at": "2026-09-07T10:46:25.605Z",
+    "name": "Zhenzhou",
+    "country": "China",
+    "admin1": "Jiangsu"
+  },
   "1784617": {
     "fetched_at": "2026-09-04T15:10:30.811Z",
     "name": "Zhenping",
@@ -6927,6 +6951,12 @@
     "country": "China",
     "admin1": "Henan"
   },
+  "1785412": {
+    "fetched_at": "2026-09-07T10:46:25.605Z",
+    "name": "Zhabei",
+    "country": "China",
+    "admin1": "Shanghai Municipality"
+  },
   "1785453": {
     "fetched_at": "2026-08-29T20:05:52.305Z",
     "name": "Zaozhuang",
@@ -6998,6 +7028,12 @@
     "name": "Chengzhong",
     "country": "China",
     "admin1": "Hubei"
+  },
+  "1786657": {
+    "fetched_at": "2026-09-07T10:46:25.605Z",
+    "name": "Yinchuan",
+    "country": "China",
+    "admin1": "Ningxia"
   },
   "1786731": {
     "fetched_at": "2026-09-02T01:29:30.034Z",
@@ -12890,6 +12926,12 @@
     "country": "Poland",
     "admin1": "Opole Voivodeship"
   },
+  "3096880": {
+    "fetched_at": "2026-09-07T10:46:25.605Z",
+    "name": "Kalisz",
+    "country": "Poland",
+    "admin1": "Greater Poland"
+  },
   "3098722": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Gorzów Wielkopolski",
@@ -13315,6 +13357,12 @@
     "name": "São Luís",
     "country": "Brazil",
     "admin1": "Maranhão"
+  },
+  "3388376": {
+    "fetched_at": "2026-09-07T10:46:25.605Z",
+    "name": "São Lourenço da Mata",
+    "country": "Brazil",
+    "admin1": "Pernambuco"
   },
   "3388713": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -17927,6 +17975,12 @@
   "7483743": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
     "name": "Puthia",
+    "country": "Bangladesh",
+    "admin1": "Rajshahi Division"
+  },
+  "7483813": {
+    "fetched_at": "2026-09-07T10:46:25.605Z",
+    "name": "Natore",
     "country": "Bangladesh",
     "admin1": "Rajshahi Division"
   },
