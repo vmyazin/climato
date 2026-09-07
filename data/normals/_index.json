@@ -9211,6 +9211,12 @@
     "country": "Japan",
     "admin1": "Miyazaki"
   },
+  "1855207": {
+    "fetched_at": "2026-09-07T00:23:16.298Z",
+    "name": "Nishinomiya",
+    "country": "Japan",
+    "admin1": "Hyōgo"
+  },
   "1856057": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Nagoya",
@@ -12152,6 +12158,12 @@
     "country": "The Netherlands",
     "admin1": "North Brabant"
   },
+  "2758401": {
+    "fetched_at": "2026-09-07T00:23:16.298Z",
+    "name": "Breda",
+    "country": "The Netherlands",
+    "admin1": "North Brabant"
+  },
   "2759794": {
     "fetched_at": "2026-09-06T18:40:44.718Z",
     "name": "Amsterdam",
@@ -13885,6 +13897,12 @@
     "name": "Sarandi",
     "country": "Brazil",
     "admin1": "Paraná"
+  },
+  "3448136": {
+    "fetched_at": "2026-09-07T00:23:16.298Z",
+    "name": "São Vicente",
+    "country": "Brazil",
+    "admin1": "São Paulo"
   },
   "3448351": {
     "fetched_at": "2026-09-02T18:59:09.006Z",
