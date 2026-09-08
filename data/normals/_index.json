@@ -2560,6 +2560,12 @@
     "country": "Pakistan",
     "admin1": "Punjab"
   },
+  "1166993": {
+    "fetched_at": "2026-09-08T15:23:48.071Z",
+    "name": "Rawalpindi",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
   "1167528": {
     "fetched_at": "2026-09-07T16:06:55.743Z",
     "name": "Quetta",
@@ -17894,6 +17900,12 @@
     "country": "Brazil",
     "admin1": "Federal District"
   },
+  "6822099": {
+    "fetched_at": "2026-09-08T15:23:48.071Z",
+    "name": "Tsuchiura",
+    "country": "Japan",
+    "admin1": "Ibaraki"
+  },
   "6822153": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
     "name": "Uruma",
@@ -18791,6 +18803,12 @@
   "11962378": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Iguatemi",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "11962379": {
+    "fetched_at": "2026-09-08T15:23:48.071Z",
+    "name": "Sao Lucas",
     "country": "Brazil",
     "admin1": "São Paulo"
   },
