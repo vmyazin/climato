@@ -11,6 +11,12 @@
     "country": "Iran",
     "admin1": "Khuzestan"
   },
+  "55671": {
+    "fetched_at": "2026-09-08T01:30:32.498Z",
+    "name": "Kismayo",
+    "country": "Somalia",
+    "admin1": "Lower Juba"
+  },
   "63400": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Cabudwaaq",
@@ -2225,6 +2231,12 @@
     "country": "Malawi",
     "admin1": "Central Region"
   },
+  "933945": {
+    "fetched_at": "2026-09-08T01:30:32.498Z",
+    "name": "Vacoas",
+    "country": "Mauritius",
+    "admin1": "Plaines Wilhems District"
+  },
   "934995": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Manzini",
@@ -2408,6 +2420,12 @@
   "1033356": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Nampula",
+    "country": "Mozambique",
+    "admin1": "Nampula"
+  },
+  "1035025": {
+    "fetched_at": "2026-09-08T01:30:32.498Z",
+    "name": "Nacala",
     "country": "Mozambique",
     "admin1": "Nampula"
   },
@@ -4598,6 +4616,12 @@
     "name": "Bathinda",
     "country": "India",
     "admin1": "Punjab"
+  },
+  "1276100": {
+    "fetched_at": "2026-09-08T01:30:32.498Z",
+    "name": "Bharūch",
+    "country": "India",
+    "admin1": "Gujarat"
   },
   "1276128": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -11253,6 +11277,12 @@
     "country": "Nigeria",
     "admin1": "Akwa Ibom State"
   },
+  "2338273": {
+    "fetched_at": "2026-09-08T01:30:32.498Z",
+    "name": "Ikire",
+    "country": "Nigeria",
+    "admin1": "Osun State"
+  },
   "2338313": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
     "name": "Ikeja",
@@ -14329,6 +14359,12 @@
     "name": "Palhoça",
     "country": "Brazil",
     "admin1": "Santa Catarina"
+  },
+  "3455729": {
+    "fetched_at": "2026-09-08T01:30:32.498Z",
+    "name": "Ourinhos",
+    "country": "Brazil",
+    "admin1": "São Paulo"
   },
   "3455775": {
     "fetched_at": "2026-09-04T15:10:30.811Z",
