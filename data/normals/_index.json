@@ -1637,6 +1637,12 @@
     "country": "Russia",
     "admin1": "Moscow Oblast"
   },
+  "550478": {
+    "fetched_at": "2026-09-08T22:03:16.689Z",
+    "name": "Khasavyurt",
+    "country": "Russia",
+    "admin1": "Dagestan"
+  },
   "555129": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Ivanovskoye",
@@ -8397,6 +8403,12 @@
     "country": "China",
     "admin1": "Shanghai"
   },
+  "1806602": {
+    "fetched_at": "2026-09-08T22:03:16.689Z",
+    "name": "Cixi",
+    "country": "China",
+    "admin1": "Zhejiang"
+  },
   "1806696": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Humen",
@@ -11373,6 +11385,12 @@
     "country": "Nigeria",
     "admin1": "Yobe State"
   },
+  "2342490": {
+    "fetched_at": "2026-09-08T22:03:16.689Z",
+    "name": "Funtua",
+    "country": "Nigeria",
+    "admin1": "Katsina State"
+  },
   "2343093": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Esuk Oron",
@@ -12221,6 +12239,12 @@
   "2643123": {
     "fetched_at": "2026-08-26T21:19:43.452Z",
     "name": "Manchester",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2643339": {
+    "fetched_at": "2026-09-08T22:03:16.689Z",
+    "name": "Luton",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -19456,7 +19480,7 @@
     "country": "Egypt"
   },
   "reykjavik": {
-    "fetched_at": "2026-05-03T11:12:55.932Z",
+    "fetched_at": "2026-09-08T22:03:16.689Z",
     "name": "Reykjavík",
     "country": "Iceland"
   },
