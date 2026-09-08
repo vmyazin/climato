@@ -15350,6 +15350,12 @@
     "country": "Mexico",
     "admin1": "México"
   },
+  "3534599": {
+    "fetched_at": "2026-09-08T06:34:50.984Z",
+    "name": "Vedado",
+    "country": "Cuba",
+    "admin1": "Havana"
+  },
   "3536729": {
     "fetched_at": "2026-08-29T22:50:00.152Z",
     "name": "Santiago de Cuba",
