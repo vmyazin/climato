@@ -1235,6 +1235,12 @@
     "country": "Egypt",
     "admin1": "Sharqia Province"
   },
+  "362973": {
+    "fetched_at": "2026-09-08T11:46:45.677Z",
+    "name": "Abnūb",
+    "country": "Egypt",
+    "admin1": "Asyut Governorate"
+  },
   "363807": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
     "name": "Winejok",
@@ -5751,6 +5757,12 @@
     "country": "Indonesia",
     "admin1": "South Sulawesi"
   },
+  "1624041": {
+    "fetched_at": "2026-09-08T11:46:45.677Z",
+    "name": "Ternate",
+    "country": "Indonesia",
+    "admin1": "North Maluku"
+  },
   "1624647": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Tasikmalaya",
@@ -7791,6 +7803,12 @@
     "country": "China",
     "admin1": "Fujian"
   },
+  "1797658": {
+    "fetched_at": "2026-09-08T11:46:45.677Z",
+    "name": "Jinjiang",
+    "country": "China",
+    "admin1": "Fujian"
+  },
   "1797798": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Qingpu",
@@ -9180,6 +9198,12 @@
     "name": "Tsuruoka",
     "country": "Japan",
     "admin1": "Yamagata"
+  },
+  "1849814": {
+    "fetched_at": "2026-09-08T11:46:45.677Z",
+    "name": "Toyota",
+    "country": "Japan",
+    "admin1": "Aichi"
   },
   "1850147": {
     "fetched_at": "2026-05-19T04:32:10.512Z",
@@ -15829,6 +15853,12 @@
     "name": "Loja",
     "country": "Ecuador",
     "admin1": "Loja"
+  },
+  "3654870": {
+    "fetched_at": "2026-09-08T11:46:45.677Z",
+    "name": "Latacunga",
+    "country": "Ecuador",
+    "admin1": "Cotopaxi"
   },
   "3657509": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
