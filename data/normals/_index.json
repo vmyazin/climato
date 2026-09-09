@@ -5277,6 +5277,12 @@
     "country": "Tajikistan",
     "admin1": "Sughd"
   },
+  "1518262": {
+    "fetched_at": "2026-09-09T14:49:33.396Z",
+    "name": "Temirtau",
+    "country": "Kazakhstan",
+    "admin1": "Karaganda"
+  },
   "1518980": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Shymkent",
@@ -11864,6 +11870,12 @@
     "country": "Algeria",
     "admin1": "Algiers Province"
   },
+  "2507480": {
+    "fetched_at": "2026-09-09T14:49:33.396Z",
+    "name": "Algiers",
+    "country": "Algeria",
+    "admin1": "Algiers Province"
+  },
   "2508287": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Aïn Beïda",
@@ -15259,6 +15271,12 @@
     "name": "San Francisco de Macorís",
     "country": "Dominican Republic",
     "admin1": "Duarte Province"
+  },
+  "3493175": {
+    "fetched_at": "2026-09-09T14:49:33.396Z",
+    "name": "Puerto Plata",
+    "country": "Dominican Republic",
+    "admin1": "Puerto Plata"
   },
   "3493240": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
