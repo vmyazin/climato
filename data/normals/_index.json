@@ -2255,6 +2255,12 @@
     "country": "Malawi",
     "admin1": "Central Region"
   },
+  "933778": {
+    "fetched_at": "2026-09-09T21:17:07.337Z",
+    "name": "Francistown",
+    "country": "Botswana",
+    "admin1": "City of Francistown"
+  },
   "933945": {
     "fetched_at": "2026-09-08T01:30:32.498Z",
     "name": "Vacoas",
@@ -10904,6 +10910,12 @@
     "name": "Bafoussam",
     "country": "Cameroon",
     "admin1": "West Region"
+  },
+  "2236568": {
+    "fetched_at": "2026-09-09T21:17:07.337Z",
+    "name": "Uíge",
+    "country": "Angola",
+    "admin1": "Uíge Province"
   },
   "2236967": {
     "fetched_at": "2026-09-02T18:59:09.006Z",
