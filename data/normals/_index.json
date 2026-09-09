@@ -3459,6 +3459,12 @@
     "country": "India",
     "admin1": "Chhattisgarh"
   },
+  "1259009": {
+    "fetched_at": "2026-09-09T18:02:23.598Z",
+    "name": "Rāiganj",
+    "country": "India",
+    "admin1": "West Bengal"
+  },
   "1259012": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Rāichūr",
@@ -18121,6 +18127,12 @@
     "name": "Zhongshan",
     "country": "China",
     "admin1": "Guangdong"
+  },
+  "6992326": {
+    "fetched_at": "2026-09-09T18:02:23.598Z",
+    "name": "Mohali",
+    "country": "India",
+    "admin1": "Punjab"
   },
   "7026787": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
