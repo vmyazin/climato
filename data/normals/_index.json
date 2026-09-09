@@ -2141,6 +2141,12 @@
     "country": "Armenia",
     "admin1": "Yerevan"
   },
+  "866153": {
+    "fetched_at": "2026-09-09T10:09:35.325Z",
+    "name": "Nor Nork",
+    "country": "Armenia",
+    "admin1": "Yerevan"
+  },
   "866164": {
     "fetched_at": "2026-09-04T21:04:35.522Z",
     "name": "Ajapnyak",
@@ -12758,6 +12764,12 @@
     "country": "Germany",
     "admin1": "North Rhine-Westphalia"
   },
+  "2935517": {
+    "fetched_at": "2026-09-09T10:09:35.325Z",
+    "name": "Dortmund",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
+  },
   "2938913": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Darmstadt",
@@ -17191,6 +17203,12 @@
     "name": "Warren",
     "country": "United States",
     "admin1": "Michigan"
+  },
+  "5059163": {
+    "fetched_at": "2026-09-09T10:09:35.325Z",
+    "name": "Fargo",
+    "country": "United States",
+    "admin1": "North Dakota"
   },
   "5074472": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
