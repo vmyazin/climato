@@ -1475,6 +1475,12 @@
     "country": "Russia",
     "admin1": "Ryazan Oblast"
   },
+  "502971": {
+    "fetched_at": "2026-09-09T05:24:22.974Z",
+    "name": "Ramenki",
+    "country": "Russia",
+    "admin1": "Moscow"
+  },
   "503977": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Pushkino",
@@ -8072,6 +8078,12 @@
     "name": "Luohe",
     "country": "China",
     "admin1": "Henan"
+  },
+  "1802171": {
+    "fetched_at": "2026-09-09T05:24:22.974Z",
+    "name": "Kangding",
+    "country": "China",
+    "admin1": "Sichuan"
   },
   "1802206": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -18043,6 +18055,12 @@
     "name": "Somerset West",
     "country": "South Africa",
     "admin1": "Western Cape"
+  },
+  "6956647": {
+    "fetched_at": "2026-09-09T05:24:22.974Z",
+    "name": "Boyeros",
+    "country": "Cuba",
+    "admin1": "Havana"
   },
   "6956648": {
     "fetched_at": "2026-09-05T20:45:00.477Z",
