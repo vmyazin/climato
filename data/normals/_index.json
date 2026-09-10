@@ -8295,6 +8295,12 @@
     "country": "China",
     "admin1": "Yunnan"
   },
+  "1804850": {
+    "fetched_at": "2026-09-10T15:14:53.158Z",
+    "name": "Kaiyuan",
+    "country": "China",
+    "admin1": "Yunnan"
+  },
   "1804866": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Kaili",
@@ -12043,6 +12049,12 @@
     "name": "Temara",
     "country": "Morocco",
     "admin1": "Rabat-Salé-Kénitra"
+  },
+  "2529317": {
+    "fetched_at": "2026-09-10T15:14:53.158Z",
+    "name": "Taza",
+    "country": "Morocco",
+    "admin1": "Fes-Meknes"
   },
   "2530048": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
