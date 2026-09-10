@@ -2531,6 +2531,12 @@
     "country": "Afghanistan",
     "admin1": "Baghlan"
   },
+  "1150515": {
+    "fetched_at": "2026-09-10T18:42:37.492Z",
+    "name": "Surat Thani",
+    "country": "Thailand",
+    "admin1": "Surat Thani"
+  },
   "1160939": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
     "name": "Iranshahr",
@@ -12421,6 +12427,12 @@
     "name": "Aberdeen",
     "country": "United Kingdom",
     "admin1": "Scotland"
+  },
+  "2664454": {
+    "fetched_at": "2026-09-10T18:42:37.492Z",
+    "name": "Västerås",
+    "country": "Sweden",
+    "admin1": "Västmanland County"
   },
   "2673730": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
