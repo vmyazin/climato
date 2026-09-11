@@ -635,6 +635,12 @@
     "country": "Kenya",
     "admin1": "Murang'A"
   },
+  "195915": {
+    "fetched_at": "2026-09-11T15:16:32.339Z",
+    "name": "Jomvu",
+    "country": "Kenya",
+    "admin1": "Mombasa County"
+  },
   "198629": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
     "name": "Eldoret",
@@ -6572,6 +6578,12 @@
     "name": "Manila",
     "country": "Philippines",
     "admin1": "National Capital Region"
+  },
+  "1701947": {
+    "fetched_at": "2026-09-11T15:16:32.339Z",
+    "name": "Mandaue City",
+    "country": "Philippines",
+    "admin1": "Central Visayas"
   },
   "1701966": {
     "fetched_at": "2026-08-28T19:37:43.002Z",
@@ -14660,6 +14672,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3457671": {
+    "fetched_at": "2026-09-11T15:16:32.339Z",
+    "name": "Maringá",
+    "country": "Brazil",
+    "admin1": "Paraná"
+  },
   "3457692": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Marília",
@@ -14845,6 +14863,12 @@
     "name": "Itabira",
     "country": "Brazil",
     "admin1": "Minas Gerais"
+  },
+  "3460974": {
+    "fetched_at": "2026-09-11T15:16:32.339Z",
+    "name": "Itabaiana",
+    "country": "Brazil",
+    "admin1": "Sergipe"
   },
   "3461144": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -15709,6 +15733,12 @@
     "name": "San Miguel",
     "country": "El Salvador",
     "admin1": "San Miguel Department"
+  },
+  "3584257": {
+    "fetched_at": "2026-09-11T15:16:32.339Z",
+    "name": "Santa Tecla",
+    "country": "El Salvador",
+    "admin1": "La Libertad Department"
   },
   "3587902": {
     "fetched_at": "2026-09-06T16:29:06.700Z",
