@@ -1817,6 +1817,12 @@
     "country": "Armenia",
     "admin1": "Yerevan"
   },
+  "616635": {
+    "fetched_at": "2026-09-11T06:39:55.365Z",
+    "name": "Gyumri",
+    "country": "Armenia",
+    "admin1": "Shirak"
+  },
   "617239": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Tiraspol",
@@ -5276,6 +5282,12 @@
     "name": "Chelyabinsk",
     "country": "Russia",
     "admin1": "Chelyabinsk Oblast"
+  },
+  "1510853": {
+    "fetched_at": "2026-09-11T06:39:55.365Z",
+    "name": "Barnaul",
+    "country": "Russia",
+    "admin1": "Altai Krai"
   },
   "1512296": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
@@ -19127,6 +19139,12 @@
   "11962427": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Jardim Sao Luis",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "11962430": {
+    "fetched_at": "2026-09-11T06:39:55.365Z",
+    "name": "Sao Rafael",
     "country": "Brazil",
     "admin1": "São Paulo"
   },
