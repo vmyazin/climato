@@ -12194,6 +12194,12 @@
     "country": "Morocco",
     "admin1": "Rabat-Salé-Kénitra"
   },
+  "2548526": {
+    "fetched_at": "2026-09-12T19:41:42.700Z",
+    "name": "Guelmim",
+    "country": "Morocco",
+    "admin1": "Guelmim-Oued Noun"
+  },
   "2548830": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Al Fqih Ben Çalah",
@@ -17123,6 +17129,12 @@
   "4168782": {
     "fetched_at": "2026-05-09T08:28:20.476Z",
     "name": "Plantation",
+    "country": "United States",
+    "admin1": "Florida"
+  },
+  "4177887": {
+    "fetched_at": "2026-09-12T19:41:42.700Z",
+    "name": "West Palm Beach",
     "country": "United States",
     "admin1": "Florida"
   },
