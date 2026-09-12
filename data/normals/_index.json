@@ -3051,6 +3051,12 @@
     "country": "Indonesia",
     "admin1": "North Sumatra"
   },
+  "1215355": {
+    "fetched_at": "2026-09-12T06:33:23.443Z",
+    "name": "Binjai",
+    "country": "Indonesia",
+    "admin1": "North Sumatra"
+  },
   "1215412": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Belawan",
@@ -8006,6 +8012,12 @@
     "name": "Pingdu",
     "country": "China",
     "admin1": "Shandong"
+  },
+  "1798827": {
+    "fetched_at": "2026-09-12T06:33:23.443Z",
+    "name": "Pingdingshan",
+    "country": "China",
+    "admin1": "Henan"
   },
   "1798900": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
@@ -18151,6 +18163,12 @@
     "name": "Tsuchiura",
     "country": "Japan",
     "admin1": "Ibaraki"
+  },
+  "6822138": {
+    "fetched_at": "2026-09-12T06:33:23.443Z",
+    "name": "Niiza",
+    "country": "Japan",
+    "admin1": "Saitama"
   },
   "6822153": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
