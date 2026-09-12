@@ -2045,6 +2045,12 @@
     "country": "Ukraine",
     "admin1": "Kyiv City"
   },
+  "706483": {
+    "fetched_at": "2026-09-12T14:25:08.231Z",
+    "name": "Kharkiv",
+    "country": "Ukraine",
+    "admin1": "Kharkivs’ka Oblast’"
+  },
   "706524": {
     "fetched_at": "2026-09-05T13:36:47.520Z",
     "name": "Kerch",
