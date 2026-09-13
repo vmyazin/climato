@@ -1,4 +1,10 @@
 {
+  "14256": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Āzādshahr",
+    "country": "Iran",
+    "admin1": "Hamadan Province"
+  },
   "32909": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Shahre Jadide Andisheh",
@@ -1469,6 +1475,12 @@
     "country": "Russia",
     "admin1": "Rostov Oblast"
   },
+  "496638": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Sergiyev Posad",
+    "country": "Russia",
+    "admin1": "Moscow Oblast"
+  },
   "498677": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "Saratov",
@@ -1570,6 +1582,12 @@
     "name": "Noginsk",
     "country": "Russia",
     "admin1": "Moscow Oblast"
+  },
+  "520494": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Nizhny Tagil",
+    "country": "Russia",
+    "admin1": "Sverdlovsk Oblast"
   },
   "522377": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -1978,6 +1996,12 @@
     "name": "Galati",
     "country": "Romania",
     "admin1": "Galați County"
+  },
+  "680963": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Constanța",
+    "country": "Romania",
+    "admin1": "Constanța County"
   },
   "683123": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -4509,6 +4533,12 @@
     "country": "India",
     "admin1": "Karnataka"
   },
+  "1273403": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Datia",
+    "country": "India",
+    "admin1": "Madhya Pradesh"
+  },
   "1273587": {
     "fetched_at": "2026-09-01T23:35:59.499Z",
     "name": "Damoh",
@@ -5133,6 +5163,12 @@
     "country": "Myanmar",
     "admin1": "Magway"
   },
+  "1309233": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Mingaladon",
+    "country": "Myanmar",
+    "admin1": "Yangon"
+  },
   "1309793": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Meiktila",
@@ -5564,6 +5600,12 @@
     "name": "Tây Hồ",
     "country": "Vietnam",
     "admin1": "Hanoi"
+  },
+  "1567069": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Tan An",
+    "country": "Vietnam",
+    "admin1": "Tay Ninh"
   },
   "1567148": {
     "fetched_at": "2026-08-26T18:30:40.356Z",
@@ -6542,6 +6584,12 @@
     "name": "Paranaque City",
     "country": "Philippines",
     "admin1": "National Capital Region"
+  },
+  "1695462": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Pandi",
+    "country": "Philippines",
+    "admin1": "Central Luzon"
   },
   "1695743": {
     "fetched_at": "2026-09-02T06:28:08.098Z",
@@ -7922,6 +7970,12 @@
     "name": "Quanzhou",
     "country": "China",
     "admin1": "Fujian"
+  },
+  "1797632": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Yizhou",
+    "country": "China",
+    "admin1": "Guangxi"
   },
   "1797658": {
     "fetched_at": "2026-09-08T11:46:45.677Z",
@@ -9616,6 +9670,12 @@
   "1858729": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "Koshigaya",
+    "country": "Japan",
+    "admin1": "Saitama"
+  },
+  "1858794": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Kōnosu",
     "country": "Japan",
     "admin1": "Saitama"
   },
@@ -17168,6 +17228,12 @@
     "country": "United States",
     "admin1": "Kansas"
   },
+  "4299276": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Louisville",
+    "country": "United States",
+    "admin1": "Kentucky"
+  },
   "4315588": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
     "name": "Baton Rouge",
@@ -17273,6 +17339,12 @@
   "4676740": {
     "fetched_at": "2026-09-04T06:34:02.423Z",
     "name": "Brownsville",
+    "country": "United States",
+    "admin1": "Texas"
+  },
+  "4683416": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Corpus Christi",
     "country": "United States",
     "admin1": "Texas"
   },
@@ -17627,6 +17699,12 @@
   "5412199": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Arvada",
+    "country": "United States",
+    "admin1": "Colorado"
+  },
+  "5416541": {
+    "fetched_at": "2026-09-13T06:49:09.028Z",
+    "name": "Centennial",
     "country": "United States",
     "admin1": "Colorado"
   },
