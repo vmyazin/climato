@@ -22,6 +22,10 @@ Do not test the UI when employing TDD, focus on business logic. You should not a
 
 - `pnpm dev` auto-loads `.env.local` via Vite's `loadEnv` — set secrets there (e.g. `ADMIN_PASSWORD=...`) rather than prefixing the command. Do not commit `.env.local`.
 
+## Prerender delivery
+
+- Ordinary browsers and search crawlers must pass through middleware with `next()` so Vercel can serve generated city/comparison HTML. Keep the SPA fallback in `vercel.json` with destination `/` (`/index.html` fails with `cleanUrls: true`); rewriting these requests to `/` in middleware bypasses static-file routing.
+
 ## API endpoint rules
 
 - All `/api/*` endpoints that accept city data must validate through `validateCity()` in `api/_lib/catalog.ts`. Only numeric GeoNames ids present in `data/cities.tsv` and the 17 curated ids are accepted.

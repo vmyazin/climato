@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/admin", "destination": "/api/admin" },
-    { "source": "/((?!api/|normals/|admin$|.*\\.[a-z0-9]+$).*)", "destination": "/index.html" }
+    { "source": "/((?!api/|normals/|admin$|.*\\.[a-z0-9]+$).*)", "destination": "/" }
   ],
   "functions": {
     "api/normals.ts": {
