@@ -515,6 +515,12 @@
     "country": "Tanzania",
     "admin1": "Mbeya"
   },
+  "158151": {
+    "fetched_at": "2026-09-13T12:21:01.015Z",
+    "name": "Katumba",
+    "country": "Tanzania",
+    "admin1": "Mbeya"
+  },
   "159675": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Handeni",
@@ -2661,6 +2667,12 @@
     "name": "Quetta",
     "country": "Pakistan",
     "admin1": "Balochistan"
+  },
+  "1168197": {
+    "fetched_at": "2026-09-13T12:21:01.015Z",
+    "name": "Peshawar",
+    "country": "Pakistan",
+    "admin1": "Khyber Pakhtunkhwa"
   },
   "1168555": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
@@ -5312,6 +5324,12 @@
     "name": "Prokopyevsk",
     "country": "Russia",
     "admin1": "Kemerovo Oblast"
+  },
+  "1496153": {
+    "fetched_at": "2026-09-13T12:21:01.015Z",
+    "name": "Omsk",
+    "country": "Russia",
+    "admin1": "Omsk Oblast"
   },
   "1496747": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -8265,6 +8283,12 @@
     "country": "China",
     "admin1": "Hunan"
   },
+  "1802940": {
+    "fetched_at": "2026-09-13T12:21:01.015Z",
+    "name": "Puning",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
   "1803245": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Lishui",
@@ -10754,6 +10778,12 @@
     "name": "Mito",
     "country": "Japan",
     "admin1": "Ibaraki"
+  },
+  "2112141": {
+    "fetched_at": "2026-09-13T12:21:01.015Z",
+    "name": "Kōriyama",
+    "country": "Japan",
+    "admin1": "Fukushima"
   },
   "2112539": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
@@ -17066,6 +17096,12 @@
     "country": "Mexico",
     "admin1": "Baja California Sur"
   },
+  "3986172": {
+    "fetched_at": "2026-09-13T12:21:01.015Z",
+    "name": "San José del Cabo",
+    "country": "Mexico",
+    "admin1": "Baja California Sur"
+  },
   "3991164": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Santiago de Querétaro",
@@ -17179,6 +17215,12 @@
     "name": "Aguascalientes",
     "country": "Mexico",
     "admin1": "Aguascalientes"
+  },
+  "4151909": {
+    "fetched_at": "2026-09-13T12:21:01.015Z",
+    "name": "Coral Springs",
+    "country": "United States",
+    "admin1": "Florida"
   },
   "4156404": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -17429,6 +17471,12 @@
   "4920423": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "Fort Wayne",
+    "country": "United States",
+    "admin1": "Indiana"
+  },
+  "4926563": {
+    "fetched_at": "2026-09-13T12:21:01.015Z",
+    "name": "South Bend",
     "country": "United States",
     "admin1": "Indiana"
   },
