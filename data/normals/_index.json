@@ -7257,6 +7257,12 @@
     "country": "China",
     "admin1": "Guangdong"
   },
+  "1786378": {
+    "fetched_at": "2026-09-14T01:46:47.826Z",
+    "name": "Yongchuan",
+    "country": "China",
+    "admin1": "Chongqing Municipality"
+  },
   "1786546": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Zhongxiang",
@@ -11576,6 +11582,12 @@
     "name": "Ikot Ekpene",
     "country": "Nigeria",
     "admin1": "Akwa Ibom State"
+  },
+  "2338269": {
+    "fetched_at": "2026-09-14T01:46:47.826Z",
+    "name": "Ikirun",
+    "country": "Nigeria",
+    "admin1": "Osun State"
   },
   "2338273": {
     "fetched_at": "2026-09-08T01:30:32.498Z",
