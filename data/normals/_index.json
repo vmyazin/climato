@@ -695,6 +695,12 @@
     "country": "Uganda",
     "admin1": "Western Region"
   },
+  "229380": {
+    "fetched_at": "2026-09-15T01:00:04.395Z",
+    "name": "Masaka",
+    "country": "Uganda",
+    "admin1": "Central Region"
+  },
   "229911": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Lugazi",
@@ -17819,6 +17825,12 @@
   "5427946": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Lakewood",
+    "country": "United States",
+    "admin1": "Colorado"
+  },
+  "5441492": {
+    "fetched_at": "2026-09-15T01:00:04.395Z",
+    "name": "Thornton",
     "country": "United States",
     "admin1": "Colorado"
   },
