@@ -443,6 +443,12 @@
     "country": "Iran",
     "admin1": "Khuzestan"
   },
+  "145531": {
+    "fetched_at": "2026-09-15T15:17:27.426Z",
+    "name": "Saurimo",
+    "country": "Angola",
+    "admin1": "Lunda Sul Province"
+  },
   "145724": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Lucapa",
@@ -19183,6 +19189,12 @@
     "name": "Nansana",
     "country": "Uganda",
     "admin1": "Central Region"
+  },
+  "11048318": {
+    "fetched_at": "2026-09-15T15:17:27.426Z",
+    "name": "Sector 2",
+    "country": "Romania",
+    "admin1": "Bucharest"
   },
   "11101625": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
