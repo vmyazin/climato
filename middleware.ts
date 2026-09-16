@@ -82,6 +82,9 @@ export default function middleware(request: Request): Response {
     }
   }
 
+  // Directory pages are static HTML for every visitor, including social crawlers.
+  if (url.pathname === '/browse' || url.pathname.startsWith('/browse/')) return next()
+
   const ua = request.headers.get('user-agent') ?? ''
   // Let Vercel serve prerendered files first. The vercel.json rewrite provides
   // the SPA fallback only when no file exists; rewriting here bypasses that lookup.

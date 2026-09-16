@@ -169,6 +169,25 @@ function previewCleanUrls(): Plugin {
   return {
     name: 'climato-preview-clean-urls',
     apply: 'serve',
+    configureServer(server) {
+      // Directory pages are standalone build output, not SPA city routes.
+      server.middlewares.use((req, res, next) => {
+        if (req.method !== 'GET' && req.method !== 'HEAD') return next()
+        const pathname = new URL(req.url ?? '/', 'http://localhost').pathname.replace(/\/$/, '')
+        if (!/^\/browse(?:\/[a-z0-9-]+)?$/.test(pathname)) return next()
+        const file = resolve(__dirname, 'dist', `${pathname.slice(1)}.html`)
+        if (!existsSync(file)) {
+          res.statusCode = 503
+          res.end('Directory pages are not built yet. Run npm run build, then reload.')
+          return
+        }
+        res.setHeader('Content-Type', 'text/html; charset=utf-8')
+        // The directory includes its own CSS; production asset hashes are
+        // unavailable on the development server.
+        const html = readFileSync(file, 'utf8').replace(/<link\b[^>]*href="\/assets\/[^>]*>/g, '')
+        res.end(req.method === 'HEAD' ? undefined : html)
+      })
+    },
     configurePreviewServer(server) {
       server.middlewares.use((req, res, next) => {
         if (req.method !== 'GET' && req.method !== 'HEAD') return next()

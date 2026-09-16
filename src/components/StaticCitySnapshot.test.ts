@@ -28,7 +28,7 @@ describe('StaticCitySnapshot', () => {
     expect(html).toContain('Tokyo')
     expect(html).toContain('Tokyo has a')
     expect(html).toContain('Monthly climate normals for Tokyo, Japan')
-    expect(html).toContain('Nearby Cities')
+    expect(html).toContain('href="/compare/japan/tokyo/vs/japan/kanagawa/zama"')
     expect(html).toContain('href="/japan/kanagawa/zama"')
   })
 })

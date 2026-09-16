@@ -1,3 +1,4 @@
+import { prerenderDirectories } from './prerender-directories'
 import React from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
@@ -78,6 +79,7 @@ function main() {
     ...CITIES.map(city => ({ city: city as GeoCity, population: 0, isCurated: true })),
     ...catalog.map(city => ({ city: city as GeoCity, population: city.population, isCurated: false })),
   ]
+  prerenderDirectories(catalog, baseHtml, distDir, siteUrl)
   const eligible = buildSeoCityRoutes(items, cachedIds).filter(route => route.hasCachedNormals && route.cachedNormalsId)
 
   let rendered = 0

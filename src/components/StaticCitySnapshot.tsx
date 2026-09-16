@@ -66,7 +66,7 @@ export function StaticCitySnapshot({ city, neighbors }: Props) {
       </section>
       <ClimateNarrative city={city} unit="C" />
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <StaticNearbyCitiesSection neighbors={neighbors} />
+        <StaticNearbyCitiesSection city={city} neighbors={neighbors} />
       </div>
     </main>
   )

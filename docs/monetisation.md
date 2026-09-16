@@ -2,7 +2,7 @@
 
 > **Status legend:** ✅ done · 🟡 partial · ⬜ not started
 >
-> Last audit: 2026-05-25 (post preferred-region normals backfill)
+> Last audit: 2026-09-12 (nearby discovery and country directories; focused audit)
 
 ## 1. Affiliate Link Strategy — ⬜ not started
 
@@ -145,7 +145,7 @@ All four sections are derived purely from the `City` shape — no extra fetches,
 - [x] ✅ Canonical URLs — sitemap-side canonicalisation in [vite.config.ts:56-88](vite.config.ts#L56-L88) **plus** a `<link rel="canonical">` tag emitted at runtime by [src/hooks/useDocumentMeta.ts](src/hooks/useDocumentMeta.ts) that drops the optional `?@lat,lon` query so Google collapses the two URL forms into one canonical entry per city
 - [x] ✅ `og:image` auto-generated per city — [api/og.tsx](api/og.tsx) renders a 1200×630 image via `@vercel/og` with city + country + peak-month + hi/lo/rain stats baked in. [src/hooks/useDocumentMeta.ts](src/hooks/useDocumentMeta.ts) sets the per-city URL on the client; [middleware.ts](middleware.ts) injects the same meta tags into a minimal HTML response for social-share bots (Twitter, Facebook, Slack, etc.) so the previews work without JS execution. Bonus: appending `/ogimage` to any city URL redirects to the live image for sharing/debugging.
 - [ ] ⬜ Core Web Vitals: static pages should score 95+ on Lighthouse — not measured
-- [x] ✅ Internal linking: each city page links to 5 nearby cities — `№ 05 Nearby Cities` Module under each city page, fed by `/api/nearby` ([api/nearby.ts](api/nearby.ts) + `findNearest` in [api/_lib/catalog.ts](api/_lib/catalog.ts)). Each link uses `toSlug()` so it points to the same canonical URL as the sitemap. Section auto-hides for genuinely isolated cities (Reykjavík etc) where the nearest catalog city is past the 600 km ceiling.
+- [x] ✅ Internal linking: shared `CityDiscovery` renders up to five nearby-city links and direct comparison links in the interactive page and prerendered HTML. Country directory pages at `/browse/{country}` contain region sections and city links; all directories appear in the sitemap. Empty nearby results retain country browsing; errors offer retry. Verified against `CityDiscovery.tsx`, `scripts/prerender-directories.ts`, and the generated build.
 
 ### Distribution timeline
 
