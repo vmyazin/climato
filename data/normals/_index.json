@@ -11457,6 +11457,12 @@
     "country": "Ghana",
     "admin1": "Greater Accra Region"
   },
+  "2298330": {
+    "fetched_at": "2026-09-16T22:24:52.991Z",
+    "name": "Medina Estates",
+    "country": "Ghana",
+    "admin1": "Greater Accra Region"
+  },
   "2298890": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Kumasi",
@@ -13543,6 +13549,12 @@
     "name": "Gdansk",
     "country": "Poland",
     "admin1": "Pomerania"
+  },
+  "3099759": {
+    "fetched_at": "2026-09-16T22:24:52.991Z",
+    "name": "Elblag",
+    "country": "Poland",
+    "admin1": "Warmia-Masuria"
   },
   "3102014": {
     "fetched_at": "2026-09-01T23:35:59.499Z",
@@ -16148,6 +16160,12 @@
     "country": "Honduras",
     "admin1": "Francisco Morazán Department"
   },
+  "3608248": {
+    "fetched_at": "2026-09-16T22:24:52.991Z",
+    "name": "La Ceiba",
+    "country": "Honduras",
+    "admin1": "Atlántida Department"
+  },
   "3617708": {
     "fetched_at": "2026-09-02T06:28:08.098Z",
     "name": "Matagalpa",
@@ -17072,6 +17090,12 @@
     "country": "Chile",
     "admin1": "Los Lagos Region"
   },
+  "3878431": {
+    "fetched_at": "2026-09-16T22:24:52.991Z",
+    "name": "Ñuñoa",
+    "country": "Chile",
+    "admin1": "Santiago Metropolitan"
+  },
   "3880980": {
     "fetched_at": "2026-09-04T06:34:02.423Z",
     "name": "Maipú",
@@ -17951,6 +17975,12 @@
   "5416541": {
     "fetched_at": "2026-09-13T06:49:09.028Z",
     "name": "Centennial",
+    "country": "United States",
+    "admin1": "Colorado"
+  },
+  "5417598": {
+    "fetched_at": "2026-09-16T22:24:52.991Z",
+    "name": "Colorado Springs",
     "country": "United States",
     "admin1": "Colorado"
   },
