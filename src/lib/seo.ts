@@ -136,8 +136,9 @@ export function buildComparisonJsonLd(
   cityA: City | undefined,
   cityB: City | undefined,
   origin: string,
+  path?: string,
 ): object {
-  const compareUrl = `${origin}${toCompareSlug(a, b).path}`
+  const compareUrl = `${origin}${path ?? toCompareSlug(a, b).path}`
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -161,10 +162,14 @@ export function buildComparisonSeoMeta(
   cityA: City,
   cityB: City,
   siteUrl: string,
+  // Prerendered pairs are keyed by the sitemap's city paths, which can differ
+  // from the name-derived slug when two catalog names were merged into one
+  // route. The canonical must match the file that gets written.
+  path?: string,
 ): CitySeoMeta {
   const origin = siteUrl.replace(/\/$/, '')
-  const { path } = toCompareSlug(a, b)
-  const canonicalUrl = `${origin}${path}`
+  const canonicalPath = path ?? toCompareSlug(a, b).path
+  const canonicalUrl = `${origin}${canonicalPath}`
   const result = compareCities(cityA, cityB)
   const tempStat = result.stats[0]
   const warmerName = tempStat.winner === 'a' ? a.name : b.name
@@ -177,7 +182,7 @@ export function buildComparisonSeoMeta(
     description: `${warmerName} is warmer than ${coolerName} by ${tempStat.delta}. Monthly temperature, rainfall and sunshine comparison.${overlapHint}`,
     canonicalUrl,
     ogImageUrl: absoluteUrl(siteUrl, buildComparisonOgImageUrl(a, b, cityA, cityB)),
-    jsonLd: buildComparisonJsonLd(a, b, cityA, cityB, origin),
+    jsonLd: buildComparisonJsonLd(a, b, cityA, cityB, origin, canonicalPath),
   }
 }
 

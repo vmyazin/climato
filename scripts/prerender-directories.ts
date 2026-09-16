@@ -21,9 +21,9 @@ export function prerenderDirectories(cities: GeoCity[], baseHtml: string, dist: 
       .replace(/<script[\s\S]*?<\/script>/gi, '')
     head += `<meta name="description" content="${escape(description)}"><link rel="canonical" href="${escape(origin + path)}">${css}</head>`
     const html = `${head}<body><header class="browse-header"><a class="brand" href="/" aria-label="Climato home">${logo}<span>CLIMATO</span></a></header><main><h1>${escape(title)}</h1><p>${escape(description)}</p>${content}</main></body></html>`
-    for (const file of [join(dist, `${path}.html`), join(dist, path, 'index.html')]) {
-      mkdirSync(dirname(file), { recursive: true }); writeFileSync(file, html)
-    }
+    // Single file per route — see writeRouteHtml in prerender-cities.ts.
+    const file = join(dist, `${path}.html`)
+    mkdirSync(dirname(file), { recursive: true }); writeFileSync(file, html)
     paths.push(path)
   }
   for (const country of countries) {

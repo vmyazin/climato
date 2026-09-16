@@ -58,13 +58,14 @@ function readNormals(id: string): Normals {
   return JSON.parse(readFileSync(resolve(normalsDir, `${id}.json`), 'utf8')) as Normals
 }
 
+// One file per route. `cleanUrls` serves dist/a/b.html at /a/b; the sibling
+// dist/a/b/index.html we used to also write was served at /a/b/ as a second
+// 200, which Google reported as a duplicate. vercel.json now redirects the
+// trailing-slash form instead.
 function writeRouteHtml(path: string, html: string): void {
-  const indexPath = join(distDir, path, 'index.html')
-  const cleanUrlPath = join(distDir, `${path}.html`)
-  mkdirSync(dirname(indexPath), { recursive: true })
-  mkdirSync(dirname(cleanUrlPath), { recursive: true })
-  writeFileSync(indexPath, html)
-  writeFileSync(cleanUrlPath, html)
+  const file = join(distDir, `${path}.html`)
+  mkdirSync(dirname(file), { recursive: true })
+  writeFileSync(file, html)
 }
 
 function main() {

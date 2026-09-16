@@ -64,6 +64,24 @@ async function getLimiter(namespace: RateLimitNamespace): Promise<unknown | null
   }
 }
 
+// Search-engine crawlers fetch far faster than a browser session and from a
+// narrow IP range, so the per-IP budget below throttles them into 429s. A
+// throttled crawl renders a data-less page, which Search Console files as a
+// soft 404. These endpoints are read-only and CDN-cached upstream, so the
+// worst a spoofed user-agent buys is data it could have fetched anyway.
+const CRAWLER_UA =
+  /googlebot|bingbot|duckduckbot|applebot|yandexbot|baiduspider|slurp|petalbot|google-inspectiontool/i
+
+// Only the endpoints a crawl legitimately needs to render a city page.
+const CRAWLER_EXEMPT: ReadonlySet<RateLimitNamespace> = new Set(['normals', 'nearby', 'current'])
+
+function isExemptCrawler(req: ReqLike, namespace: RateLimitNamespace): boolean {
+  if (!CRAWLER_EXEMPT.has(namespace)) return false
+  const raw = req.headers?.['user-agent']
+  const ua = Array.isArray(raw) ? raw[0] : raw
+  return typeof ua === 'string' && CRAWLER_UA.test(ua)
+}
+
 export interface RateLimitResult {
   allowed: boolean
   remaining: number
@@ -74,6 +92,8 @@ export async function checkRateLimit(
   req: ReqLike,
   namespace: RateLimitNamespace,
 ): Promise<RateLimitResult> {
+  if (isExemptCrawler(req, namespace)) return { allowed: true, remaining: -1, reset: 0 }
+
   const limiter = await getLimiter(namespace)
   // Fail open when Upstash isn't configured — local dev shouldn't 429 just
   // because there's no Redis to talk to.

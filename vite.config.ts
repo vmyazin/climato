@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { readFileSync, existsSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { CITIES, type GeoCity } from './src/data/cities'
-import { buildSeoCityRoutes, priorityFor, type SeoCityInput } from './src/lib/seo-routes'
+import { buildSeoCityRoutes, pickComparisonCities, priorityFor, type SeoCityInput } from './src/lib/seo-routes'
 
 interface CatalogCity extends GeoCity {
   population: number
@@ -51,6 +51,18 @@ function loadNormalsIndex(p: string): Record<string, NormalsIndexEntry> {
   }
 }
 
+// Ids with committed normals under data/normals/. Only these cities can be
+// prerendered, so only these belong in the sitemap — advertising the rest
+// sends Google to a client-rendered shell it reports as a soft 404.
+function cachedNormalIds(dir: string): Set<string> {
+  if (!existsSync(dir)) return new Set()
+  return new Set(
+    readdirSync(dir)
+      .filter(f => f.endsWith('.json') && !f.startsWith('.') && f !== '_index.json')
+      .map(f => f.replace(/\.json$/, '')),
+  )
+}
+
 function seoFiles(): Plugin {
   return {
     name: 'climato-seo-files',
@@ -69,14 +81,15 @@ function seoFiles(): Plugin {
         ...CITIES.map(c => ({ city: c as GeoCity, population: 0, isCurated: true })),
         ...catalog.map(c => ({ city: c as GeoCity, population: c.population, isCurated: false })),
       ]
-      const routes = buildSeoCityRoutes(items)
-      const pathsById = new Map(routes.map(route => [route.city.id, route.path]))
+      const cachedIds = cachedNormalIds(resolve(__dirname, 'data/normals'))
+      const routes = buildSeoCityRoutes(items, cachedIds)
+      const indexable = routes.filter(route => route.hasCachedNormals)
 
       const seen = new Set<string>()
       const urls: { loc: string; priority: string; changefreq: string; lastmod: string }[] = [
         { loc: `${siteUrl}/`, priority: '1.0', changefreq: 'weekly', lastmod: buildDate },
       ]
-      for (const it of routes) {
+      for (const it of indexable) {
         const path = it.path
         if (!path || seen.has(path)) continue
         seen.add(path)
@@ -90,26 +103,17 @@ function seoFiles(): Plugin {
         })
       }
 
-      // Comparison pages: pre-generate the top 50 × 50 = 1225 unique pairs
-      // so Google can crawl them on first index. Lower priority (0.5) than
-      // single-city pages since they're a derivative surface. Uncatalogued
-      // pairs fall back to on-demand generation (the SPA handles any pair
-      // at runtime, just not in the sitemap).
-      const TOP_N_FOR_COMPARISON = 50
-      const top = [...items]
-        .sort((a, b) =>
-          (b.isCurated ? 1 : 0) - (a.isCurated ? 1 : 0) || b.population - a.population
-        )
-        .slice(0, TOP_N_FOR_COMPARISON)
+      // Comparison pages. `pickComparisonCities` is the same selection the
+      // comparison prerenderer uses, so every pair listed here exists as a
+      // static file. The SPA still handles any other pair at runtime; those
+      // just aren't advertised for crawling.
+      const top = pickComparisonCities(routes)
 
       let comparisonCount = 0
       for (let i = 0; i < top.length; i++) {
         for (let j = i + 1; j < top.length; j++) {
-          const aPath = pathsById.get(top[i].city.id)
-          const bPath = pathsById.get(top[j].city.id)
-          if (!aPath || !bPath) continue
           urls.push({
-            loc: `${siteUrl}/compare${aPath}/vs${bPath}`,
+            loc: `${siteUrl}/compare${top[i]!.path}/vs${top[j]!.path}`,
             priority: '0.5',
             changefreq: 'monthly',
             lastmod: buildDate,
@@ -135,6 +139,8 @@ ${urls
 
       const robots = `User-agent: *
 Allow: /
+# Redirects straight to the OG image endpoint — nothing to index.
+Disallow: /*/ogimage
 
 Sitemap: ${siteUrl}/sitemap.xml
 `
@@ -192,7 +198,15 @@ function previewCleanUrls(): Plugin {
       server.middlewares.use((req, res, next) => {
         if (req.method !== 'GET' && req.method !== 'HEAD') return next()
         const pathname = new URL(req.url ?? '/', 'http://localhost').pathname
-        if (pathname === '/' || pathname.endsWith('/') || pathname.includes('.')) return next()
+        // Mirror vercel.json's trailingSlash:false so preview and production
+        // agree on which URL is the real one.
+        if (pathname !== '/' && pathname.endsWith('/')) {
+          res.statusCode = 308
+          res.setHeader('Location', pathname.replace(/\/+$/, ''))
+          res.end()
+          return
+        }
+        if (pathname === '/' || pathname.includes('.')) return next()
         const file = resolve(__dirname, 'dist', `${pathname.slice(1)}.html`)
         if (!existsSync(file)) return next()
         res.setHeader('Content-Type', 'text/html; charset=utf-8')

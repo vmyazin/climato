@@ -56,6 +56,31 @@ function setCanonical(href: string | null) {
   if (el.getAttribute('href') !== href) el.setAttribute('href', href)
 }
 
+// Robots meta is only ever *added* for the not-found state; every other
+// branch clears it so a client-side navigation away from a dead slug doesn't
+// leave the tag behind on a page we do want indexed.
+function setRobots(content: string | null) {
+  let el = document.head.querySelector<HTMLMetaElement>('meta[name="robots"]')
+  if (!content) {
+    el?.remove()
+    return
+  }
+  if (!el) {
+    el = document.createElement('meta')
+    el.setAttribute('name', 'robots')
+    document.head.appendChild(el)
+  }
+  el.setAttribute('content', content)
+}
+
+// Self-canonical on the URL as requested, minus any query string. Used while
+// a city is still a coordinate-less placeholder: emitting nothing there left
+// thousands of look-alike shells with no canonical at all, which Google
+// reports as "Duplicate without user-selected canonical".
+function currentPathCanonical(): string {
+  return `${window.location.origin}${window.location.pathname}`
+}
+
 function setJsonLd(payload: object | null) {
   const existing = document.getElementById(JSONLD_ID)
   if (!payload) {
@@ -135,8 +160,9 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
         setCanonical(compareUrl)
       } else {
         setJsonLd(null)
-        setCanonical(null)
+        setCanonical(currentPathCanonical())
       }
+      setRobots(null)
       return
     }
 
@@ -147,6 +173,9 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       setOgImage(DEFAULT_OG_IMAGE)
       setJsonLd(null)
       setCanonical(null)
+      // The SPA fallback answers every path with 200, so an unresolvable slug
+      // is a soft 404 unless we say otherwise.
+      setRobots('noindex, follow')
       return
     }
 
@@ -162,6 +191,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       setOgImage(buildCityOgImageUrl(selectedCity, city))
       setJsonLd(meta.jsonLd)
       setCanonical(meta.canonicalUrl)
+      setRobots(null)
       return
     } else {
       document.title = `${name} Monthly Weather Averages — Climato`
@@ -190,8 +220,9 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       setCanonical(`${window.location.origin}${path}`)
     } else {
       setJsonLd(null)
-      setCanonical(null)
+      setCanonical(currentPathCanonical())
     }
+    setRobots(null)
   }, [selectedCity, city, isPlaceholderData, notFoundSlug, comparison])
 
   useEffect(() => {
@@ -201,6 +232,7 @@ export function useDocumentMeta({ selectedCity, city, isPlaceholderData, notFoun
       setOgImage(DEFAULT_OG_IMAGE)
       setJsonLd(null)
       setCanonical(null)
+      setRobots(null)
     }
   }, [])
 }

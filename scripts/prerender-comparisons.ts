@@ -4,11 +4,10 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import { dirname, join, resolve } from 'node:path'
 import { CITIES, type City, type GeoCity, type Normals } from '../src/data/cities'
 import { StaticComparisonSnapshot } from '../src/components/StaticComparisonSnapshot'
-import { buildSeoCityRoutes, type SeoCityInput } from '../src/lib/seo-routes'
+import { buildSeoCityRoutes, pickComparisonCities, COMPARISON_TOP_N, type SeoCityInput } from '../src/lib/seo-routes'
 import { buildComparisonSeoMeta } from '../src/lib/seo'
 import { injectPrerenderedCityHtml } from '../src/lib/prerender-html'
 import { buildPrerenderSeedScript } from '../src/lib/prerender-seed'
-import { toCompareSlug } from '../src/lib/slug'
 
 interface CatalogCity extends GeoCity {
   population: number
@@ -24,7 +23,7 @@ const baseHtmlPath = resolve(distDir, 'index.html')
 // Cap per-pair rendering to the same top-N used by the sitemap. Keeps the
 // build fast and the output set predictable regardless of how many cities
 // accumulate in data/normals.
-const TOP_N = Number(process.env.PRERENDER_COMPARISON_TOP_N ?? '50')
+const TOP_N = Number(process.env.PRERENDER_COMPARISON_TOP_N ?? String(COMPARISON_TOP_N))
 
 function loadCityCatalog(tsvPath: string): CatalogCity[] {
   if (!existsSync(tsvPath)) return []
@@ -58,13 +57,13 @@ function readNormals(id: string): Normals {
   return JSON.parse(readFileSync(resolve(normalsDir, `${id}.json`), 'utf8')) as Normals
 }
 
+// One file per route. `cleanUrls` serves dist/a/b.html at /a/b; the sibling
+// dist/a/b/index.html we used to also write was served at /a/b/ as a second
+// 200, which Google reported as a duplicate.
 function writeRouteHtml(path: string, html: string): void {
-  const indexPath = join(distDir, path, 'index.html')
-  const cleanUrlPath = join(distDir, `${path}.html`)
-  mkdirSync(dirname(indexPath), { recursive: true })
-  mkdirSync(dirname(cleanUrlPath), { recursive: true })
-  writeFileSync(indexPath, html)
-  writeFileSync(cleanUrlPath, html)
+  const file = join(distDir, `${path}.html`)
+  mkdirSync(dirname(file), { recursive: true })
+  writeFileSync(file, html)
 }
 
 function main() {
@@ -81,19 +80,12 @@ function main() {
     ...catalog.map(city => ({ city: city as GeoCity, population: city.population, isCurated: false })),
   ]
 
-  // Eligible candidates: cached normals + known route path, ranked by curated-first then population.
-  const eligible = buildSeoCityRoutes(items, cachedIds)
-    .filter(r => r.hasCachedNormals && r.cachedNormalsId)
-    .sort((a, b) =>
-      (b.isCurated ? 1 : 0) - (a.isCurated ? 1 : 0) ||
-      (b.population ?? 0) - (a.population ?? 0)
-    )
-    .slice(0, TOP_N)
+  // Same selection the sitemap uses, so the two can't drift apart.
+  const eligible = pickComparisonCities(buildSeoCityRoutes(items, cachedIds), TOP_N)
 
-  const eligibleCities: City[] = eligible.map(r => ({
-    ...r.city,
-    ...readNormals(r.cachedNormalsId!),
-    source: 'open-meteo',
+  const eligibleCities: { city: City; path: string }[] = eligible.map(r => ({
+    city: { ...r.city, ...readNormals(r.cachedNormalsId!), source: 'open-meteo' },
+    path: r.path,
   }))
 
   let rendered = 0
@@ -101,15 +93,16 @@ function main() {
 
   for (let i = 0; i < eligibleCities.length; i++) {
     for (let j = i + 1; j < eligibleCities.length; j++) {
-      const a = eligibleCities[i]!
-      const b = eligibleCities[j]!
+      const a = eligibleCities[i]!.city
+      const b = eligibleCities[j]!.city
 
-      const { path } = toCompareSlug(a, b)
-      const outPath = join(distDir, path, 'index.html')
-      if (existsSync(outPath)) { skipped++; continue }
+      // Built from the route paths, not the city names, so the URL matches
+      // the sitemap entry even where a name variant was merged away.
+      const path = `/compare${eligibleCities[i]!.path}/vs${eligibleCities[j]!.path}`
+      if (existsSync(join(distDir, `${path}.html`))) { skipped++; continue }
 
       const appHtml = renderToStaticMarkup(React.createElement(StaticComparisonSnapshot, { a, b }))
-      const meta = buildComparisonSeoMeta(a, b, a, b, siteUrl)
+      const meta = buildComparisonSeoMeta(a, b, a, b, siteUrl, path)
       const seedScript = buildPrerenderSeedScript({ kind: 'comparison', a, b })
       const html = injectPrerenderedCityHtml(baseHtml, meta, appHtml, seedScript)
       writeRouteHtml(path, html)
