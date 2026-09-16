@@ -2925,6 +2925,12 @@
     "country": "Pakistan",
     "admin1": "Khyber Pakhtunkhwa"
   },
+  "1183880": {
+    "fetched_at": "2026-09-16T19:07:58.536Z",
+    "name": "Bahawalpur",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
   "1185056": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Abbottabad",
@@ -4881,6 +4887,12 @@
     "country": "India",
     "admin1": "Uttar Pradesh"
   },
+  "1276759": {
+    "fetched_at": "2026-09-16T19:07:58.536Z",
+    "name": "Basirhat City",
+    "country": "India",
+    "admin1": "West Bengal"
+  },
   "1276856": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Barshi",
@@ -5985,6 +5997,12 @@
     "country": "Thailand",
     "admin1": "Khon Kaen"
   },
+  "1618177": {
+    "fetched_at": "2026-09-16T19:07:58.536Z",
+    "name": "Ban Khlong Prawet",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
   "1619485": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Bang Khun Thian",
@@ -6638,6 +6656,12 @@
     "name": "Santiago",
     "country": "Philippines",
     "admin1": "Cagayan Valley"
+  },
+  "1689395": {
+    "fetched_at": "2026-09-16T19:07:58.536Z",
+    "name": "San Jose del Monte",
+    "country": "Philippines",
+    "admin1": "Central Luzon"
   },
   "1689510": {
     "fetched_at": "2026-09-06T18:40:44.718Z",
@@ -10086,6 +10110,12 @@
     "name": "Chigasaki",
     "country": "Japan",
     "admin1": "Kanagawa"
+  },
+  "1864750": {
+    "fetched_at": "2026-09-16T19:07:58.536Z",
+    "name": "Beppu",
+    "country": "Japan",
+    "admin1": "Oita"
   },
   "1865005": {
     "fetched_at": "2026-09-05T18:36:25.616Z",
@@ -13772,6 +13802,12 @@
     "country": "Albania",
     "admin1": "Tirana"
   },
+  "3185728": {
+    "fetched_at": "2026-09-16T19:07:58.536Z",
+    "name": "Durrës",
+    "country": "Albania",
+    "admin1": "Durrës County"
+  },
   "3186573": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Zenica",
@@ -14522,6 +14558,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3447212": {
+    "fetched_at": "2026-09-16T19:07:58.536Z",
+    "name": "Suzano",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
   "3447259": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Sumaré",
@@ -14725,6 +14767,12 @@
     "name": "Ribeirão Pires",
     "country": "Brazil",
     "admin1": "São Paulo"
+  },
+  "3451353": {
+    "fetched_at": "2026-09-16T19:07:58.536Z",
+    "name": "Ribeirão das Neves",
+    "country": "Brazil",
+    "admin1": "Minas Gerais"
   },
   "3451668": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
