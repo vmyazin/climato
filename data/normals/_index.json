@@ -683,6 +683,12 @@
     "country": "Kenya",
     "admin1": "Murang'A"
   },
+  "195272": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Kakamega",
+    "country": "Kenya",
+    "admin1": "Kakamega County"
+  },
   "195915": {
     "fetched_at": "2026-09-11T15:16:32.339Z",
     "name": "Jomvu",
@@ -1768,6 +1774,12 @@
     "name": "Grozny",
     "country": "Russia",
     "admin1": "Chechnya"
+  },
+  "561347": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Glazov",
+    "country": "Russia",
+    "admin1": "Udmurtiya Republic"
   },
   "563514": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
@@ -6038,6 +6050,12 @@
     "country": "Thailand",
     "admin1": "Khon Kaen"
   },
+  "1610858": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Dusit",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
   "1618177": {
     "fetched_at": "2026-09-16T19:07:58.536Z",
     "name": "Ban Khlong Prawet",
@@ -6079,6 +6097,12 @@
     "name": "Tangerang",
     "country": "Indonesia",
     "admin1": "Banten"
+  },
+  "1625812": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Surakarta",
+    "country": "Indonesia",
+    "admin1": "Central Java"
   },
   "1625822": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
@@ -6319,6 +6343,12 @@
     "name": "Magelang",
     "country": "Indonesia",
     "admin1": "Central Java"
+  },
+  "1636930": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Madiun",
+    "country": "Indonesia",
+    "admin1": "East Java"
   },
   "1637090": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -8341,6 +8371,12 @@
     "name": "Nanchang",
     "country": "China",
     "admin1": "Jiangxi"
+  },
+  "1800175": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Nanbin",
+    "country": "China",
+    "admin1": "Chongqing Municipality"
   },
   "1800480": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
@@ -11378,6 +11414,12 @@
     "country": "Senegal",
     "admin1": "Tambacounda"
   },
+  "2246512": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Rufisque",
+    "country": "Senegal",
+    "admin1": "Dakar"
+  },
   "2246678": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Pikine",
@@ -12120,6 +12162,18 @@
     "name": "Sousse",
     "country": "Tunisia",
     "admin1": "Sousse Governorate"
+  },
+  "2473164": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Sejoumi",
+    "country": "Tunisia",
+    "admin1": "Tunis Governorate"
+  },
+  "2473247": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Aryanah",
+    "country": "Tunisia",
+    "admin1": "Ariana Governorate"
   },
   "2475475": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
@@ -17623,6 +17677,12 @@
     "country": "United States",
     "admin1": "Louisiana"
   },
+  "4347778": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Baltimore",
+    "country": "United States",
+    "admin1": "Maryland"
+  },
   "4385018": {
     "fetched_at": "2026-09-04T06:34:02.423Z",
     "name": "East Independence",
@@ -18786,6 +18846,12 @@
     "name": "Mohali",
     "country": "India",
     "admin1": "Punjab"
+  },
+  "7026720": {
+    "fetched_at": "2026-09-17T10:28:59.390Z",
+    "name": "Bang Khae",
+    "country": "Thailand",
+    "admin1": "Bangkok"
   },
   "7026787": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
