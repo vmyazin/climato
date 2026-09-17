@@ -6050,6 +6050,12 @@
     "country": "Thailand",
     "admin1": "Bangkok"
   },
+  "1608258": {
+    "fetched_at": "2026-09-17T22:28:01.972Z",
+    "name": "Nong Chok",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
   "1608529": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
     "name": "Nakhon Ratchasima",
@@ -18636,6 +18642,12 @@
     "name": "Novo Gama",
     "country": "Brazil",
     "admin1": "Goiás"
+  },
+  "6317837": {
+    "fetched_at": "2026-09-17T22:28:01.972Z",
+    "name": "Paço do Lumiar",
+    "country": "Brazil",
+    "admin1": "Maranhão"
   },
   "6317872": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
