@@ -2877,6 +2877,11 @@
     "country": "Pakistan",
     "admin1": "Punjab"
   },
+  "1178338": {
+    "fetched_at": "2026-09-17T00:55:26.449Z",
+    "name": "Gilgit",
+    "country": "Pakistan"
+  },
   "1178456": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "Ghotki",
@@ -6969,6 +6974,12 @@
     "country": "Malaysia",
     "admin1": "Johor"
   },
+  "1732750": {
+    "fetched_at": "2026-09-17T00:55:26.449Z",
+    "name": "Masai",
+    "country": "Malaysia",
+    "admin1": "Johor"
+  },
   "1732811": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Kluang",
@@ -10845,6 +10856,12 @@
     "country": "North Korea",
     "admin1": "North Hamgyong"
   },
+  "2056752": {
+    "fetched_at": "2026-09-17T00:55:26.449Z",
+    "name": "Khabarovsk Vtoroy",
+    "country": "Russia",
+    "admin1": "Khabarovsk"
+  },
   "2063523": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Perth",
@@ -12620,6 +12637,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2640101": {
+    "fetched_at": "2026-09-17T00:55:26.449Z",
+    "name": "Poole",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2640354": {
     "fetched_at": "2026-09-06T09:43:13.415Z",
     "name": "Peterborough",
@@ -12763,6 +12786,12 @@
     "name": "Västerås",
     "country": "Sweden",
     "admin1": "Västmanland County"
+  },
+  "2666199": {
+    "fetched_at": "2026-09-17T00:55:26.449Z",
+    "name": "Uppsala",
+    "country": "Sweden",
+    "admin1": "Uppsala County"
   },
   "2673730": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -19279,6 +19308,12 @@
     "name": "Andīsheh",
     "country": "Iran",
     "admin1": "Tehran"
+  },
+  "10920963": {
+    "fetched_at": "2026-09-17T00:55:26.449Z",
+    "name": "Salé Al Jadida",
+    "country": "Morocco",
+    "admin1": "Rabat-Salé-Kénitra"
   },
   "10942183": {
     "fetched_at": "2026-08-27T13:08:28.196Z",
