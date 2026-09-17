@@ -875,6 +875,12 @@
     "country": "United Arab Emirates",
     "admin1": "Dubai"
   },
+  "293253": {
+    "fetched_at": "2026-09-17T19:19:29.377Z",
+    "name": "Jaffa",
+    "country": "Israel",
+    "admin1": "Tel Aviv"
+  },
   "293397": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Tel Aviv",
@@ -5323,6 +5329,12 @@
     "name": "Kēng Tung",
     "country": "Myanmar",
     "admin1": "Shan State"
+  },
+  "1319389": {
+    "fetched_at": "2026-09-17T19:19:29.377Z",
+    "name": "Kyimyindine",
+    "country": "Myanmar",
+    "admin1": "Yangon"
   },
   "1321937": {
     "fetched_at": "2026-09-01T23:35:59.499Z",
@@ -18100,6 +18112,12 @@
   "5368361": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Los Angeles",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5379439": {
+    "fetched_at": "2026-09-17T19:19:29.377Z",
+    "name": "Ontario",
     "country": "United States",
     "admin1": "California"
   },
