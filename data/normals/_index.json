@@ -5480,6 +5480,12 @@
     "country": "Russia",
     "admin1": "Khanty-Mansia"
   },
+  "1498894": {
+    "fetched_at": "2026-09-17T15:20:11.864Z",
+    "name": "Miass",
+    "country": "Russia",
+    "admin1": "Chelyabinsk Oblast"
+  },
   "1504682": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Kansk",
@@ -8966,6 +8972,12 @@
     "country": "China",
     "admin1": "Hebei"
   },
+  "1809061": {
+    "fetched_at": "2026-09-17T15:20:11.864Z",
+    "name": "Jiaojiang",
+    "country": "China",
+    "admin1": "Zhejiang"
+  },
   "1809062": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Haimen",
@@ -10241,6 +10253,12 @@
     "name": "Kaesong",
     "country": "North Korea",
     "admin1": "Kaesong"
+  },
+  "1877615": {
+    "fetched_at": "2026-09-17T15:20:11.864Z",
+    "name": "Haeju",
+    "country": "North Korea",
+    "admin1": "South Hwanghae"
   },
   "1880159": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -12942,6 +12960,12 @@
     "name": "Amsterdam",
     "country": "The Netherlands",
     "admin1": "North Holland"
+  },
+  "2759879": {
+    "fetched_at": "2026-09-17T15:20:11.864Z",
+    "name": "Almere Stad",
+    "country": "The Netherlands",
+    "admin1": "Flevoland"
   },
   "2761369": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -17587,6 +17611,12 @@
     "country": "United States",
     "admin1": "Florida"
   },
+  "4155966": {
+    "fetched_at": "2026-09-17T15:20:11.864Z",
+    "name": "Fort Lauderdale",
+    "country": "United States",
+    "admin1": "Florida"
+  },
   "4156404": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Gainesville",
@@ -18960,6 +18990,12 @@
     "name": "Ashoknagar Kalyangarh",
     "country": "India",
     "admin1": "West Bengal"
+  },
+  "7303138": {
+    "fetched_at": "2026-09-17T15:20:11.864Z",
+    "name": "Kirishima",
+    "country": "Japan",
+    "admin1": "Kagoshima"
   },
   "7303248": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
