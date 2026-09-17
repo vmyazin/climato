@@ -1,0 +1,274 @@
+<!-- Climato: More paths between useful pages | Source: user brief + current NearbyCitiesSection | 2026-09-12 -->
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Climato — Where next? Four discovery directions</title><link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+    
+    :root {
+      --brand-50: #fae9e3;
+      --brand-100: #f1b8a9;
+      --brand-300: #b35e49;
+      --brand-500: #cc3b1f;
+      --brand-700: #8d2915;
+      --accent-50: #eef0e8;
+      --accent-500: #62654e;
+      --accent-700: #4a503b;
+      --ink: #111111;
+      --ink-soft: #55574f;
+      --ink-mute: #686a61;
+      --line: #c9ccc1;
+      --line-soft: #e4e6df;
+      --paper: #ffffff;
+      --bg: #f0f1ed;
+      --shadow-sm: 0 1px 2px rgba(20, 16, 70, 0.04), 0 1px 1px rgba(20, 16, 70, 0.02);
+      --shadow-md: 0 4px 24px -8px rgba(20, 16, 70, 0.08), 0 2px 4px rgba(20, 16, 70, 0.03);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
+    }
+
+    .page {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 72px 48px 160px;
+    }
+
+    
+    .doc-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 40px;
+      margin-bottom: 80px;
+    }
+    .doc-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand-500);
+      background: var(--brand-50);
+      padding: 6px 12px;
+      border-radius: 0;
+      margin-bottom: 20px;
+    }
+    .doc-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 0;
+      background: var(--brand-500);
+    }
+    .doc-title {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 56px;
+      line-height: 1.05;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+      color: var(--ink);
+    }
+    .doc-subtitle {
+      font-size: 19px;
+      color: var(--ink-soft);
+      max-width: 720px;
+      margin: 0 0 32px;
+      line-height: 1.45;
+    }
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 13px;
+      color: var(--ink-mute);
+    }
+    .doc-meta > div { display: flex; gap: 6px; }
+    .doc-meta b {
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+
+    
+    .variant {
+      margin-bottom: 96px;
+    }
+    .variant:last-child { margin-bottom: 0; }
+
+    .variant-head {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 28px;
+    }
+    .variant-letter {
+      width: 48px;
+      height: 48px;
+      border-radius: 0;
+      background: var(--ink);
+      color: white;
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-weight: 500;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: -0.02em;
+    }
+    .variant-meta h2 {
+      margin: 4px 0 6px;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+    .variant-tradeoff {
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin: 0;
+      max-width: 760px;
+    }
+    .variant-tradeoff b {
+      color: var(--brand-500);
+      font-weight: 600;
+    }
+
+    
+    .preview-frame {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 0;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      margin-left: 84px;
+      position: relative;
+    }
+    .preview-frame::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      width: 10px;
+      height: 10px;
+      border-radius: 0;
+      background: #f0e9e0;
+      box-shadow: 18px 0 0 #f0e9e0, 36px 0 0 #f0e9e0;
+      z-index: 2;
+    }
+    .preview-frame-bar {
+      background: #faf9f5;
+      border-bottom: 1px solid var(--line-soft);
+      padding: 14px 16px 14px 76px;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      font-weight: 600;
+    }
+    .preview {
+      padding: 0;
+      min-height: 200px;
+    }
+
+    
+    .variant-analysis {
+      margin: 24px 0 0 84px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+    .analysis-block {
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: var(--paper);
+    }
+    .analysis-block h4 {
+      margin: 0 0 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-500);
+    }
+    .analysis-block.is-risk h4 { color: #b8341f; }
+    .analysis-block.is-pick h4 { color: var(--accent-700); }
+    .analysis-block p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    
+    .decision {
+      margin-top: 120px;
+      padding: 40px 48px;
+      background: var(--ink);
+      color: white;
+      border-radius: 0;
+    }
+    .decision h3 {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin: 0 0 8px;
+    }
+    .decision-sub {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 14px;
+      margin: 0 0 28px;
+    }
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .decision-cell b {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-100);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .decision-cell span {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.45;
+    }
+
+    
+    @media (max-width: 900px) {
+      .page { padding: 40px 20px 80px; }
+      .doc-title { font-size: 36px; }
+      .variant-head { grid-template-columns: 48px 1fr; gap: 12px; }
+      .preview-frame { margin-left: 0; }
+      .variant-analysis { margin-left: 0; grid-template-columns: 1fr; }
+    }
+
+    
+  .doc-eyebrow,.doc-meta,.variant-letter,.preview-frame-bar{font-family:'JetBrains Mono',ui-monospace,monospace}.preview-frame{box-shadow:none}.doc-title{font-weight:700}.page{max-width:1520px}.variant-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.variant{min-width:0;margin-bottom:12px}.variant-head{grid-template-columns:48px 1fr;gap:12px}.preview-frame,.variant-analysis{margin-left:0}.variant-analysis{grid-template-columns:1fr;gap:0}.analysis-block{border:0;background:transparent;padding:12px 0}.doc-header{margin-bottom:48px}.decision{margin-top:56px}@media(max-width:1050px){.variant-grid{grid-template-columns:1fr}}
+.va-wrap{background:#f0f1ed;padding:24px;color:#111;min-height:550px} .va-wrap a{color:inherit;text-decoration:none} .va-wrap a:hover{color:#a52c15;text-decoration:underline} .va-wrap a:focus-visible,.va-wrap button:focus-visible{outline:2px solid #cc3b1f;outline-offset:4px} .va-mast{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #111;padding-bottom:15px;font-size:11px;letter-spacing:1px} .va-mast span{font-size:9px;color:#62665b} .va-eyebrow{font:10px 'JetBrains Mono',ui-monospace,monospace;text-transform:uppercase;letter-spacing:1px;color:#65675f} .va-wrap h3{font-size:36px;line-height:1.04;letter-spacing:-1px;margin:28px 0 12px} .va-intro{font-size:15px;max-width:380px;margin:0 0 24px;color:#55584f} .va-foot{border-top:1px solid #111;padding-top:16px;margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;font-size:12px} .va-foot button{border:0;padding:0;background:none;font:inherit;text-decoration:underline;cursor:pointer}.vb-wrap{background:#f0f1ed;padding:24px;color:#111;min-height:550px} .vb-wrap a{color:inherit;text-decoration:none} .vb-wrap a:hover{color:#a52c15;text-decoration:underline} .vb-wrap a:focus-visible,.vb-wrap button:focus-visible{outline:2px solid #cc3b1f;outline-offset:4px} .vb-mast{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #111;padding-bottom:15px;font-size:11px;letter-spacing:1px} .vb-mast span{font-size:9px;color:#62665b} .vb-eyebrow{font:10px 'JetBrains Mono',ui-monospace,monospace;text-transform:uppercase;letter-spacing:1px;color:#65675f} .vb-wrap h3{font-size:36px;line-height:1.04;letter-spacing:-1px;margin:28px 0 12px} .vb-intro{font-size:15px;max-width:380px;margin:0 0 24px;color:#55584f} .vb-foot{border-top:1px solid #111;padding-top:16px;margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;font-size:12px} .vb-foot button{border:0;padding:0;background:none;font:inherit;text-decoration:underline;cursor:pointer}.vc-wrap{background:#f0f1ed;padding:24px;color:#111;min-height:550px} .vc-wrap a{color:inherit;text-decoration:none} .vc-wrap a:hover{color:#a52c15;text-decoration:underline} .vc-wrap a:focus-visible,.vc-wrap button:focus-visible{outline:2px solid #cc3b1f;outline-offset:4px} .vc-mast{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #111;padding-bottom:15px;font-size:11px;letter-spacing:1px} .vc-mast span{font-size:9px;color:#62665b} .vc-eyebrow{font:10px 'JetBrains Mono',ui-monospace,monospace;text-transform:uppercase;letter-spacing:1px;color:#65675f} .vc-wrap h3{font-size:36px;line-height:1.04;letter-spacing:-1px;margin:28px 0 12px} .vc-intro{font-size:15px;max-width:380px;margin:0 0 24px;color:#55584f} .vc-foot{border-top:1px solid #111;padding-top:16px;margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;font-size:12px} .vc-foot button{border:0;padding:0;background:none;font:inherit;text-decoration:underline;cursor:pointer}.vd-wrap{background:#f0f1ed;padding:24px;color:#111;min-height:550px} .vd-wrap a{color:inherit;text-decoration:none} .vd-wrap a:hover{color:#a52c15;text-decoration:underline} .vd-wrap a:focus-visible,.vd-wrap button:focus-visible{outline:2px solid #cc3b1f;outline-offset:4px} .vd-mast{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #111;padding-bottom:15px;font-size:11px;letter-spacing:1px} .vd-mast span{font-size:9px;color:#62665b} .vd-eyebrow{font:10px 'JetBrains Mono',ui-monospace,monospace;text-transform:uppercase;letter-spacing:1px;color:#65675f} .vd-wrap h3{font-size:36px;line-height:1.04;letter-spacing:-1px;margin:28px 0 12px} .vd-intro{font-size:15px;max-width:380px;margin:0 0 24px;color:#55584f} .vd-foot{border-top:1px solid #111;padding-top:16px;margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;font-size:12px} .vd-foot button{border:0;padding:0;background:none;font:inherit;text-decoration:underline;cursor:pointer}
+.va-list{background:white;border:1px solid #111}.va-label,.va-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 20px;padding:16px;align-items:center}.va-label{padding:9px 16px;background:#e7e9e1;font:9px 'JetBrains Mono',ui-monospace,monospace;text-transform:uppercase}.va-row+.va-row{border-top:1px solid #d7d9d1}.va-row>a:first-child{font-size:23px;font-weight:600}.va-row>span{font:10px 'JetBrains Mono',ui-monospace,monospace;color:#666}.va-row>a:last-child{grid-column:1;justify-self:start;font-size:12px;line-height:1.4;color:#55584f;border:1px solid #c9ccc1;padding:7px 10px;margin-top:2px;border-radius:3px}.va-row>a:last-child:hover{background:#f0f1ed;color:#a72c16;border-color:#a72c16;text-decoration:none}.va-row>span{grid-column:2;grid-row:1 / span 2;align-self:center}.va-note{font-size:12px;color:#666;margin-top:18px}
+.vb-card{background:#fff;border:1px solid #111;margin-top:12px;padding:16px}.vb-card:first-of-type{border-top:4px solid #cc3b1f}.vb-top{display:flex;align-items:center;justify-content:space-between}.vb-top a{font-size:25px;font-weight:600}.vb-top span{font:10px 'JetBrains Mono',ui-monospace,monospace;color:#686b60}.vb-metrics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:12px 0}.vb-metrics b{font-size:22px;display:block;font-weight:500}.vb-metrics span{font-size:10px;color:#65675f}.vb-cta{display:block;border-top:1px solid #ddd;padding-top:10px;font-size:13px}.vb-wrap h3{margin-top:22px}.vb-wrap .vb-intro{margin-bottom:16px}
+.vc-tree{border-left:1px solid #111;margin:22px 0 0 8px;padding-left:20px}.vc-region{display:flex;align-items:center;gap:12px;font-size:21px;margin-bottom:18px}.vc-region button{font:inherit;border:0;background:none;cursor:pointer;padding:0;text-decoration:underline}.vc-region span{font:9px 'JetBrains Mono',ui-monospace,monospace;color:#74776c}.vc-city{position:relative;padding:16px 0;border-top:1px solid #c7c9c0;display:grid;grid-template-columns:1fr auto;gap:8px}.vc-city:before{content:'';position:absolute;width:20px;height:1px;background:#111;left:-20px;top:29px}.vc-city>a:first-child{font-size:25px;font-weight:600}.vc-city small{font:10px 'JetBrains Mono',ui-monospace,monospace;color:#686b60}.vc-city>a:last-child{font-size:12px;grid-column:1/-1;color:#a72c16}.vc-country{background:#111;color:white;padding:14px 16px;margin-top:24px;font-size:19px}.vc-country button{color:white;background:none;border:0;font:inherit;cursor:pointer}.vc-note{font-size:11px;color:#62665b;margin-top:20px}
+.vd-tabs{display:grid;grid-template-columns:1fr 1fr;border:1px solid #111;margin:22px 0 0}.vd-tabs button{font:500 13px 'Inter Tight',system-ui,sans-serif;background:white;border:0;padding:15px 8px;cursor:pointer}.vd-tabs button[aria-selected=true]{background:#111;color:white}.vd-tabs button+button{border-left:1px solid #111}.vd-panel{border:1px solid #111;border-top:0;background:white;padding:20px}.vd-item{padding:16px 0;border-bottom:1px solid #d7d9d1}.vd-item:last-child{border-bottom:0}.vd-item a{display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600}.vd-item small{display:block;margin-top:5px;color:#65675f;font-size:12px}.vd-wrap h3{font-size:42px}.vd-signal{color:#a72c16;font:10px 'JetBrains Mono',ui-monospace,monospace;display:block;margin-top:24px}
+dialog{border:1px solid #111;background:#f0f1ed;max-width:460px;padding:30px;font-family:'Inter Tight',system-ui,sans-serif}dialog::backdrop{background:#1118}dialog button{padding:10px 16px;border:1px solid #111;background:white;cursor:pointer}dialog a{color:#a52c15} @media(max-width:500px){.va-wrap,.vb-wrap,.vc-wrap,.vd-wrap{padding:16px}.va-label,.va-row{grid-template-columns:minmax(0,1fr) auto;padding:14px 12px}.va-row>a:first-child{font-size:20px}.va-mast span,.vb-mast span,.vc-mast span,.vd-mast span{display:none}.doc-meta{gap:8px}.decision{padding:24px}.variant-meta h2{font-size:23px}}
+.va-city-actions{display:flex;align-items:stretch;justify-self:start;max-width:100%;border:1px solid #c9ccc1;border-radius:3px;overflow:hidden}.va-city-actions>a:first-child{font-size:23px;font-weight:600;padding:9px 12px;min-width:0;overflow-wrap:anywhere}.va-city-actions>a:last-child{display:flex;align-items:center;gap:6px;font-size:12px;white-space:nowrap;color:#55584f;padding:9px 12px;border-left:1px solid #c9ccc1;background:#f7f8f4}.va-city-actions>a:hover{background:#e9ece2;text-decoration:none;color:#a72c16}.va-row>span{grid-column:2;grid-row:auto}.va-label>span:first-child{line-height:1.6}@media(max-width:500px){.va-city-actions>a:first-child{font-size:20px;padding:9px}.va-city-actions>a:last-child{padding:9px;font-size:11px}.va-row{gap:10px}}
+.va-intro{font-size:17px;line-height:1.5}
+.va-label{font-size:12px;line-height:1.5}
+.va-row>span{font-size:14px;line-height:1.5}
+.va-city-actions>a:last-child{font-size:14px;padding:11px 14px}
+.va-note,.va-foot{font-size:14px;line-height:1.5}
+.va-mast{font-size:13px}.va-mast span{font-size:12px}
+@media(max-width:500px){.va-label{font-size:12px}.va-row>span{font-size:14px}.va-city-actions>a:last-child{font-size:14px;padding:10px}.va-intro{font-size:16px}}
+</style></head><body><main class="page"><header class="doc-header"><div class="doc-eyebrow">Climato / Design exploration</div><h1 class="doc-title">One city. More ways to explore.</h1><p class="doc-subtitle">Four directions for turning the end of a city page into the beginning of another discovery.</p><div class="doc-meta"><div><b>Surface</b> City discovery module</div><div><b>Fixture</b> London + 3 nearby cities</div><div><b>Date</b> 12 Sep 2026</div></div><p style="font-size:13px;color:#686a61;margin:24px 0 0">City and comparison links open real pages. Directory links open a proposed-page preview. Option D switches between two views.</p></header><div class="variant-grid"><section class="variant" id="A"><div class="variant-head"><div class="variant-letter">A</div><div class="variant-meta"><h2>Local index</h2><p class="variant-tradeoff"><b>Fast scanning</b> · Less explanation before the click.</p></div></div><div class="preview-frame"><div class="preview-frame-bar">A · London / discovery section</div><div class="preview va-wrap"><div class="va-mast"><b>CLIMATO ◎</b><span>LONDON · UNITED KINGDOM</span></div><h3>Nearby cities</h3><p class="va-intro">View monthly climate averages for nearby cities or compare them with London.</p><div class="va-list"><div class="va-label"><span>Nearby cities · compare with London</span><span>Distance</span></div><div class="va-row"><div class="va-city-actions"><a href="https://climato.smoxu.com/uk/england/slough" target="_blank" rel="noopener">Slough<span aria-hidden="true"> →</span></a><a aria-label="Compare London with Slough" href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/slough" target="_blank" rel="noopener"><span aria-hidden="true">↔</span> Compare</a></div><span>33 km</span></div><div class="va-row"><div class="va-city-actions"><a href="https://climato.smoxu.com/uk/england/woking" target="_blank" rel="noopener">Woking<span aria-hidden="true"> →</span></a><a aria-label="Compare London with Woking" href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/woking" target="_blank" rel="noopener"><span aria-hidden="true">↔</span> Compare</a></div><span>37 km</span></div><div class="va-row"><div class="va-city-actions"><a href="https://climato.smoxu.com/uk/england/basildon" target="_blank" rel="noopener">Basildon<span aria-hidden="true"> →</span></a><a aria-label="Compare London with Basildon" href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/basildon" target="_blank" rel="noopener"><span aria-hidden="true">↔</span> Compare</a></div><span>41 km</span></div></div><p class="va-note">Temperature, rainfall and sunshine, month by month.</p><div class="va-foot"><button onclick="document.getElementById('directory').showModal()">Browse England →</button><button onclick="document.getElementById('directory').showModal()">All United Kingdom cities →</button></div></div></div><div class="variant-analysis"><div class="analysis-block"><h4>Why it works</h4><p>Fits the existing numbered modules with minimal added height.</p></div><div class="analysis-block is-risk"><h4>Tradeoff</h4><p>Secondary outlined actions sit beneath city names, leaving distance easy to scan.</p></div><div class="analysis-block is-pick"><h4>Choose it when</h4><p>You want a practical first release.</p></div></div></section><section class="variant" id="B"><div class="variant-head"><div class="variant-letter">B</div><div class="variant-meta"><h2>Compare first</h2><p class="variant-tradeoff"><b>Clear reasons to compare</b> · More height and dependence on cached data.</p></div></div><div class="preview-frame"><div class="preview-frame-bar">B · London / discovery section</div><div class="preview vb-wrap"><div class="vb-mast"><b>CLIMATO ◎</b><span>LONDON · UNITED KINGDOM</span></div><h3>How does London<br>compare?</h3><p class="vb-intro">Three nearby places. See what changes across the year.</p><article class="vb-card"><div class="vb-top"><a href="https://climato.smoxu.com/uk/england/slough" target="_blank" rel="noopener">Slough<span aria-hidden="true"> ↗</span></a><span>33 KM AWAY</span></div><div class="vb-metrics"><div><b>14.8°C</b><span>MEAN MONTHLY HIGH</span></div><div><b>725 mm</b><span>ANNUAL RAINFALL</span></div></div><div class="vb-cta"><a href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/slough" target="_blank" rel="noopener">Compare London & Slough<span aria-hidden="true"> ↗</span></a></div></article><article class="vb-card"><div class="vb-top"><a href="https://climato.smoxu.com/uk/england/woking" target="_blank" rel="noopener">Woking<span aria-hidden="true"> ↗</span></a><span>37 KM AWAY</span></div><div class="vb-metrics"><div><b>14.8°C</b><span>MEAN MONTHLY HIGH</span></div><div><b>724 mm</b><span>ANNUAL RAINFALL</span></div></div><div class="vb-cta"><a href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/woking" target="_blank" rel="noopener">Compare London & Woking<span aria-hidden="true"> ↗</span></a></div></article><article class="vb-card"><div class="vb-top"><a href="https://climato.smoxu.com/uk/england/basildon" target="_blank" rel="noopener">Basildon<span aria-hidden="true"> ↗</span></a><span>41 KM AWAY</span></div><div class="vb-metrics"><div><b>Not cached</b><span>MEAN MONTHLY HIGH</span></div><div><b>Not cached</b><span>ANNUAL RAINFALL</span></div></div><div class="vb-cta"><a href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/basildon" target="_blank" rel="noopener">Compare London & Basildon<span aria-hidden="true"> ↗</span></a></div></article><div class="vb-foot"><button onclick="document.getElementById('directory').showModal()">Browse England →</button><button onclick="document.getElementById('directory').showModal()">All United Kingdom cities →</button></div></div></div><div class="variant-analysis"><div class="analysis-block"><h4>Why it works</h4><p>Two climate measures give each comparison context.</p></div><div class="analysis-block is-risk"><h4>Tradeoff</h4><p>Uncached data needs an honest fallback, as shown for Basildon.</p></div><div class="analysis-block is-pick"><h4>Choose it when</h4><p>Comparison discovery is the priority.</p></div></div></section><section class="variant" id="C"><div class="variant-head"><div class="variant-letter">C</div><div class="variant-meta"><h2>Regional directory</h2><p class="variant-tradeoff"><b>Geographic context</b> · New region and country pages to maintain.</p></div></div><div class="preview-frame"><div class="preview-frame-bar">C · London / discovery section</div><div class="preview vc-wrap"><div class="vc-mast"><b>CLIMATO ◎</b><span>LONDON · UNITED KINGDOM</span></div><h3>A place in<br>the bigger picture.</h3><p class="vc-intro">Keep exploring London’s region, one city at a time.</p><div class="vc-country"><button onclick="document.getElementById('directory').showModal()">United Kingdom ↗</button></div><div class="vc-tree"><div class="vc-region"><button onclick="document.getElementById('directory').showModal()">England</button><span>REGION</span></div><div class="vc-city"><a href="https://climato.smoxu.com/uk/england/slough" target="_blank" rel="noopener">Slough<span aria-hidden="true"> ↗</span></a><small>33 KM<br>FROM LONDON</small><a href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/slough" target="_blank" rel="noopener">Compare with London<span aria-hidden="true"> ↗</span></a></div><div class="vc-city"><a href="https://climato.smoxu.com/uk/england/woking" target="_blank" rel="noopener">Woking<span aria-hidden="true"> ↗</span></a><small>37 KM<br>FROM LONDON</small><a href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/woking" target="_blank" rel="noopener">Compare with London<span aria-hidden="true"> ↗</span></a></div><div class="vc-city"><a href="https://climato.smoxu.com/uk/england/basildon" target="_blank" rel="noopener">Basildon<span aria-hidden="true"> ↗</span></a><small>41 KM<br>FROM LONDON</small><a href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/basildon" target="_blank" rel="noopener">Compare with London<span aria-hidden="true"> ↗</span></a></div></div><p class="vc-note">Showing three nearby cities from the England directory.</p></div></div><div class="variant-analysis"><div class="analysis-block"><h4>Why it works</h4><p>Country and region links create a clear route through the catalog.</p></div><div class="analysis-block is-risk"><h4>Tradeoff</h4><p>Geography may matter less than weather preferences.</p></div><div class="analysis-block is-pick"><h4>Choose it when</h4><p>You want the strongest browsing hierarchy.</p></div></div></section><section class="variant" id="D"><div class="variant-head"><div class="variant-letter">D</div><div class="variant-meta"><h2>Guided discovery</h2><p class="variant-tradeoff"><b>One decision at a time</b> · The second path sits behind a tab.</p></div></div><div class="preview-frame"><div class="preview-frame-bar">D · London / discovery section</div><div class="preview vd-wrap"><div class="vd-mast"><b>CLIMATO ◎</b><span>LONDON · UNITED KINGDOM</span></div><span class="vd-signal">CONTINUE FROM LONDON</span><h3>Where next?</h3><p class="vd-intro">Explore another place, or see how it measures up.</p><div class="vd-tabs" role="tablist" aria-label="Discovery mode"><button id="near-tab" role="tab" aria-selected="true" aria-controls="near-panel" onclick="setMode(false)">Explore nearby</button><button id="compare-tab" role="tab" aria-selected="false" aria-controls="compare-panel" onclick="setMode(true)">Compare with London</button></div><div class="vd-panel" id="near-panel" role="tabpanel" aria-labelledby="near-tab"><div class="vd-item"><a href="https://climato.smoxu.com/uk/england/slough" target="_blank" rel="noopener">Slough<span aria-hidden="true"> ↗</span></a><small>England · 33 km from London</small></div><div class="vd-item"><a href="https://climato.smoxu.com/uk/england/woking" target="_blank" rel="noopener">Woking<span aria-hidden="true"> ↗</span></a><small>England · 37 km from London</small></div><div class="vd-item"><a href="https://climato.smoxu.com/uk/england/basildon" target="_blank" rel="noopener">Basildon<span aria-hidden="true"> ↗</span></a><small>England · 41 km from London</small></div></div><div class="vd-panel" id="compare-panel" role="tabpanel" aria-labelledby="compare-tab" hidden><div class="vd-item"><a href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/slough" target="_blank" rel="noopener">Slough<span aria-hidden="true"> ↗</span></a><small>London & Slough · temperature, rain, sunshine</small></div><div class="vd-item"><a href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/woking" target="_blank" rel="noopener">Woking<span aria-hidden="true"> ↗</span></a><small>London & Woking · temperature, rain, sunshine</small></div><div class="vd-item"><a href="https://climato.smoxu.com/compare/uk/england/london/vs/uk/england/basildon" target="_blank" rel="noopener">Basildon<span aria-hidden="true"> ↗</span></a><small>London & Basildon · temperature, rain, sunshine</small></div></div><div class="vd-foot"><button onclick="document.getElementById('directory').showModal()">Browse England →</button><button onclick="document.getElementById('directory').showModal()">All United Kingdom cities →</button></div></div></div><div class="variant-analysis"><div class="analysis-block"><h4>Why it works</h4><p>Separates reading about a city from comparing it.</p></div><div class="analysis-block is-risk"><h4>Tradeoff</h4><p>Production should keep both link sets in prerendered HTML.</p></div><div class="analysis-block is-pick"><h4>Choose it when</h4><p>You want a quieter discovery module.</p></div></div></section></div><section class="decision"><h3>My pick: A now, C as the next step.</h3><p class="decision-sub">Start with direct comparison links beside nearby cities. Add regional browsing when its destination pages are ready.</p><div class="decision-grid"><div class="decision-cell"><b>A / Local index</b><span>Fast scanning</span></div><div class="decision-cell"><b>B / Compare first</b><span>Clear reasons to compare</span></div><div class="decision-cell"><b>C / Regional directory</b><span>Geographic context</span></div><div class="decision-cell"><b>D / Guided discovery</b><span>One decision at a time</span></div></div></section></main><dialog id="directory"><p style="color:#a52c15;font-size:11px;letter-spacing:1px">PROPOSED DESTINATION</p><h2>Browse England</h2><p>This directory does not exist in the current app. An implementation would need a prerendered country/region index built from the city catalog.</p><p>This preview uses the same three nearby cities:</p><ul><li><a href="https://climato.smoxu.com/uk/england/slough" target="_blank" rel="noopener">Slough<span aria-hidden="true"> ↗</span></a></li><li><a href="https://climato.smoxu.com/uk/england/woking" target="_blank" rel="noopener">Woking<span aria-hidden="true"> ↗</span></a></li><li><a href="https://climato.smoxu.com/uk/england/basildon" target="_blank" rel="noopener">Basildon<span aria-hidden="true"> ↗</span></a></li></ul><button onclick="this.closest('dialog').close()">Back to the exploration</button></dialog><script>function setMode(compare){document.getElementById('near-panel').hidden=compare;document.getElementById('compare-panel').hidden=!compare;document.getElementById('near-tab').setAttribute('aria-selected',String(!compare));document.getElementById('compare-tab').setAttribute('aria-selected',String(compare))}</script></body></html>
