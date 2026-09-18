@@ -155,6 +155,12 @@
     "country": "Iraq",
     "admin1": "Najaf"
   },
+  "99071": {
+    "fetched_at": "2026-09-18T17:55:35.143Z",
+    "name": "Al Mawşil al Jadīdah",
+    "country": "Iraq",
+    "admin1": "Nineveh Governorate"
+  },
   "99100": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Al Maḩmūdīyah",
@@ -6950,6 +6956,12 @@
     "country": "Philippines",
     "admin1": "Davao Region"
   },
+  "1706090": {
+    "fetched_at": "2026-09-18T17:55:35.143Z",
+    "name": "Lipa City",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
+  },
   "1707174": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Las Piñas",
@@ -8564,6 +8576,12 @@
     "country": "China",
     "admin1": "Anhui"
   },
+  "1802276": {
+    "fetched_at": "2026-09-18T17:55:35.143Z",
+    "name": "Longyan",
+    "country": "China",
+    "admin1": "Fujian"
+  },
   "1802420": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
     "name": "Longshui",
@@ -9713,6 +9731,12 @@
     "name": "Uji",
     "country": "Japan",
     "admin1": "Kyoto"
+  },
+  "1849498": {
+    "fetched_at": "2026-09-18T17:55:35.143Z",
+    "name": "Ube",
+    "country": "Japan",
+    "admin1": "Yamaguchi"
   },
   "1849519": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -12032,6 +12056,12 @@
     "country": "Nigeria",
     "admin1": "Anambra"
   },
+  "2350249": {
+    "fetched_at": "2026-09-18T17:55:35.143Z",
+    "name": "Amaigbo",
+    "country": "Nigeria",
+    "admin1": "Abia State"
+  },
   "2350434": {
     "fetched_at": "2026-09-07T20:11:55.822Z",
     "name": "Aliayabiagba",
@@ -12270,6 +12300,12 @@
     "name": "Kati",
     "country": "Mali",
     "admin1": "Koulikoro"
+  },
+  "2460596": {
+    "fetched_at": "2026-09-18T17:55:35.143Z",
+    "name": "Bamako",
+    "country": "Mali",
+    "admin1": "Bamako"
   },
   "2464470": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -12838,6 +12874,12 @@
   "2637627": {
     "fetched_at": "2026-09-04T23:27:11.474Z",
     "name": "Slough",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2638077": {
+    "fetched_at": "2026-09-18T17:55:35.143Z",
+    "name": "Sheffield",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -19978,6 +20020,12 @@
   "11962412": {
     "fetched_at": "2026-09-07T05:18:34.965Z",
     "name": "Vila Jacui",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "11962413": {
+    "fetched_at": "2026-09-18T17:55:35.143Z",
+    "name": "Vila Matilde",
     "country": "Brazil",
     "admin1": "São Paulo"
   },
