@@ -2471,6 +2471,12 @@
     "country": "South Africa",
     "admin1": "KwaZulu-Natal"
   },
+  "954013": {
+    "fetched_at": "2026-09-18T10:05:40.839Z",
+    "name": "Soshanguve",
+    "country": "South Africa",
+    "admin1": "Gauteng"
+  },
   "957487": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
     "name": "Sasolburg",
@@ -2650,6 +2656,12 @@
     "name": "Toliara",
     "country": "Madagascar",
     "admin1": "Atsimo-Andrefana Region"
+  },
+  "1064890": {
+    "fetched_at": "2026-09-18T10:05:40.839Z",
+    "name": "Fianarantsoa",
+    "country": "Madagascar",
+    "admin1": "Upper Matsiatra"
   },
   "1105728": {
     "fetched_at": "2026-09-17T05:32:19.411Z",
@@ -6704,6 +6716,12 @@
     "country": "Taiwan",
     "admin1": "Taiwan"
   },
+  "1678228": {
+    "fetched_at": "2026-09-18T10:05:40.839Z",
+    "name": "Keelung",
+    "country": "Taiwan",
+    "admin1": "Taiwan"
+  },
   "1678836": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Chiayi City",
@@ -10640,6 +10658,12 @@
     "country": "China",
     "admin1": "Inner Mongolia"
   },
+  "2035225": {
+    "fetched_at": "2026-09-18T10:05:40.839Z",
+    "name": "Fendou",
+    "country": "China",
+    "admin1": "Heilongjiang"
+  },
   "2035261": {
     "fetched_at": "2026-09-10T23:26:59.362Z",
     "name": "Qitaihe",
@@ -12850,6 +12874,12 @@
   "2644210": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
     "name": "Liverpool",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2644668": {
+    "fetched_at": "2026-09-18T10:05:40.839Z",
+    "name": "Leicester",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -19840,6 +19870,12 @@
   "11962401": {
     "fetched_at": "2026-08-29T22:50:00.152Z",
     "name": "Cursino",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "11962403": {
+    "fetched_at": "2026-09-18T10:05:40.839Z",
+    "name": "Vila Prudente",
     "country": "Brazil",
     "admin1": "São Paulo"
   },
