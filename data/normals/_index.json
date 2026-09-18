@@ -12979,6 +12979,12 @@
     "country": "The Netherlands",
     "admin1": "North Holland"
   },
+  "2759821": {
+    "fetched_at": "2026-09-18T00:50:45.563Z",
+    "name": "Amersfoort",
+    "country": "The Netherlands",
+    "admin1": "Utrecht"
+  },
   "2759879": {
     "fetched_at": "2026-09-17T15:20:11.864Z",
     "name": "Almere Stad",
@@ -15192,6 +15198,12 @@
     "name": "Marília",
     "country": "Brazil",
     "admin1": "São Paulo"
+  },
+  "3457708": {
+    "fetched_at": "2026-09-18T00:50:45.563Z",
+    "name": "Maricá",
+    "country": "Brazil",
+    "admin1": "Rio de Janeiro"
   },
   "3458131": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
