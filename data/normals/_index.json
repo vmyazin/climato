@@ -1823,6 +1823,12 @@
     "country": "Russia",
     "admin1": "Udmurtiya Republic"
   },
+  "563464": {
+    "fetched_at": "2026-09-18T20:01:04.998Z",
+    "name": "Engel's",
+    "country": "Russia",
+    "admin1": "Saratov Oblast"
+  },
   "563514": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "Elista",
@@ -2868,6 +2874,12 @@
   "1169692": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Muridke",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
+  "1169825": {
+    "fetched_at": "2026-09-18T20:01:04.998Z",
+    "name": "Multan",
     "country": "Pakistan",
     "admin1": "Punjab"
   },
@@ -5348,6 +5360,12 @@
     "country": "Myanmar",
     "admin1": "Magway"
   },
+  "1295765": {
+    "fetched_at": "2026-09-18T20:01:04.998Z",
+    "name": "Sittwe",
+    "country": "Myanmar",
+    "admin1": "Rakhine"
+  },
   "1298824": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Yangon",
@@ -6626,6 +6644,12 @@
     "country": "Indonesia",
     "admin1": "North Sulawesi"
   },
+  "1649150": {
+    "fetched_at": "2026-09-18T20:01:04.998Z",
+    "name": "Bengkulu",
+    "country": "Indonesia",
+    "admin1": "Bengkulu"
+  },
   "1649378": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Bekasi",
@@ -6781,6 +6805,12 @@
     "name": "Urdaneta",
     "country": "Philippines",
     "admin1": "Ilocos"
+  },
+  "1682659": {
+    "fetched_at": "2026-09-18T20:01:04.998Z",
+    "name": "Tayabas",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
   },
   "1682812": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
@@ -20476,6 +20506,12 @@
     "name": "Pravyi Bereh",
     "country": "Ukraine",
     "admin1": "Donetsk Oblast"
+  },
+  "13580095": {
+    "fetched_at": "2026-09-18T20:01:04.998Z",
+    "name": "Darnytsya",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
   },
   "13589354": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
