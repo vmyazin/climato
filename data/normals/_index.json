@@ -389,6 +389,12 @@
     "country": "Iran",
     "admin1": "Alborz Province"
   },
+  "130531": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Jahrom",
+    "country": "Iran",
+    "admin1": "Fars"
+  },
   "130802": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Īlām",
@@ -910,6 +916,12 @@
     "name": "Kfar Saba",
     "country": "Israel",
     "admin1": "Central District"
+  },
+  "294751": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Holon",
+    "country": "Israel",
+    "admin1": "Tel Aviv"
   },
   "295432": {
     "fetched_at": "2026-09-15T05:51:42.741Z",
@@ -2165,6 +2177,12 @@
     "country": "Ukraine",
     "admin1": "Rivne Oblast"
   },
+  "700022": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Nyzhnodniprovsk",
+    "country": "Ukraine",
+    "admin1": "Dnipropetrovsk Oblast"
+  },
   "702320": {
     "fetched_at": "2026-09-05T13:36:47.520Z",
     "name": "Makiyivka",
@@ -3265,6 +3283,12 @@
     "name": "Qarshi",
     "country": "Uzbekistan",
     "admin1": "Qashqadaryo"
+  },
+  "1217662": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Bukhara",
+    "country": "Uzbekistan",
+    "admin1": "Bukhara"
   },
   "1238992": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -6557,6 +6581,12 @@
   "1647003": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Cibinong",
+    "country": "Indonesia",
+    "admin1": "West Java"
+  },
+  "1647149": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Ciamis",
     "country": "Indonesia",
     "admin1": "West Java"
   },
@@ -10067,6 +10097,12 @@
     "name": "Kanazawa",
     "country": "Japan",
     "admin1": "Ishikawa"
+  },
+  "1860437": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Kamirenjaku",
+    "country": "Japan",
+    "admin1": "Tokyo"
   },
   "1860672": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -13753,6 +13789,12 @@
     "country": "Poland",
     "admin1": "Opole Voivodeship"
   },
+  "3093692": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Legnica",
+    "country": "Poland",
+    "admin1": "Lower Silesia"
+  },
   "3096880": {
     "fetched_at": "2026-09-07T10:46:25.605Z",
     "name": "Kalisz",
@@ -16597,6 +16639,12 @@
     "country": "Venezuela",
     "admin1": "Zulia"
   },
+  "3646382": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Carúpano",
+    "country": "Venezuela",
+    "admin1": "Sucre"
+  },
   "3646487": {
     "fetched_at": "2026-08-27T13:08:28.196Z",
     "name": "Carora",
@@ -17641,6 +17689,12 @@
     "country": "Mexico",
     "admin1": "Zacatecas"
   },
+  "4005539": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Guadalajara",
+    "country": "Mexico",
+    "admin1": "Jalisco"
+  },
   "4005937": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "San Pedro",
@@ -17959,6 +18013,12 @@
     "country": "United States",
     "admin1": "Connecticut"
   },
+  "4843564": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Stamford",
+    "country": "United States",
+    "admin1": "Connecticut"
+  },
   "4887398": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Chicago",
@@ -17992,6 +18052,12 @@
   "4930956": {
     "fetched_at": "2026-05-18T23:20:20.640Z",
     "name": "Boston",
+    "country": "United States",
+    "admin1": "Massachusetts"
+  },
+  "4942618": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Lowell",
     "country": "United States",
     "admin1": "Massachusetts"
   },
@@ -18184,6 +18250,12 @@
   "5359488": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Inglewood",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5359777": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Irvine",
     "country": "United States",
     "admin1": "California"
   },
@@ -18996,6 +19068,12 @@
     "name": "Lat Phrao",
     "country": "Thailand",
     "admin1": "Bangkok"
+  },
+  "7064006": {
+    "fetched_at": "2026-09-18T14:40:05.548Z",
+    "name": "Tongchuan",
+    "country": "China",
+    "admin1": "Shaanxi"
   },
   "7090983": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
