@@ -425,6 +425,12 @@
     "country": "Iran",
     "admin1": "South Khorasan Province"
   },
+  "141681": {
+    "fetched_at": "2026-09-18T05:19:20.971Z",
+    "name": "Bandar Abbas",
+    "country": "Iran",
+    "admin1": "Hormozgan"
+  },
   "143083": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Ardabil",
@@ -1289,6 +1295,12 @@
     "country": "Egypt",
     "admin1": "Qalyubia Governorate"
   },
+  "360995": {
+    "fetched_at": "2026-09-18T05:19:20.971Z",
+    "name": "Giza",
+    "country": "Egypt",
+    "admin1": "Giza Governorate"
+  },
   "361055": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Ismailia",
@@ -1594,6 +1606,12 @@
     "name": "Pskov",
     "country": "Russia",
     "admin1": "Pskov Oblast"
+  },
+  "508101": {
+    "fetched_at": "2026-09-18T05:19:20.971Z",
+    "name": "Podolsk",
+    "country": "Russia",
+    "admin1": "Moscow Oblast"
   },
   "508751": {
     "fetched_at": "2026-09-16T05:22:24.548Z",
@@ -10460,6 +10478,12 @@
     "country": "Russia",
     "admin1": "Primorskiy (Maritime) Kray"
   },
+  "2022890": {
+    "fetched_at": "2026-09-18T05:19:20.971Z",
+    "name": "Khabarovsk",
+    "country": "Russia",
+    "admin1": "Khabarovsk"
+  },
   "2025339": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Chita",
@@ -17848,6 +17872,12 @@
   "4699066": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Houston",
+    "country": "United States",
+    "admin1": "Texas"
+  },
+  "4709796": {
+    "fetched_at": "2026-09-18T05:19:20.971Z",
+    "name": "McAllen",
     "country": "United States",
     "admin1": "Texas"
   },
