@@ -251,6 +251,12 @@
     "country": "Saudi Arabia",
     "admin1": "Al Jawf Region"
   },
+  "109101": {
+    "fetched_at": "2026-09-19T23:40:00.767Z",
+    "name": "Al Mubarraz",
+    "country": "Saudi Arabia",
+    "admin1": "Eastern Province"
+  },
   "109353": {
     "fetched_at": "2026-09-16T10:19:57.382Z",
     "name": "Al Kharj",
@@ -766,6 +772,12 @@
     "name": "Kajansi",
     "country": "Uganda",
     "admin1": "Central Region"
+  },
+  "233312": {
+    "fetched_at": "2026-09-19T23:40:00.767Z",
+    "name": "Hoima",
+    "country": "Uganda",
+    "admin1": "Western Region"
   },
   "233346": {
     "fetched_at": "2026-08-26T18:30:40.356Z",
@@ -2501,6 +2513,12 @@
     "country": "South Africa",
     "admin1": "Gauteng"
   },
+  "946058": {
+    "fetched_at": "2026-09-19T23:40:00.767Z",
+    "name": "Mthatha",
+    "country": "South Africa",
+    "admin1": "Eastern Cape"
+  },
   "949224": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Thohoyandou",
@@ -3613,6 +3631,12 @@
     "name": "Seoni",
     "country": "India",
     "admin1": "Madhya Pradesh"
+  },
+  "1256922": {
+    "fetched_at": "2026-09-19T23:40:00.767Z",
+    "name": "Secunderabad",
+    "country": "India",
+    "admin1": "Telangana"
   },
   "1257022": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -19950,6 +19974,12 @@
     "name": "Sejong",
     "country": "South Korea",
     "admin1": "Sejong-si"
+  },
+  "11611487": {
+    "fetched_at": "2026-09-19T23:40:00.767Z",
+    "name": "Tachikawa",
+    "country": "Japan",
+    "admin1": "Tokyo"
   },
   "11611609": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
