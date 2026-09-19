@@ -6140,6 +6140,12 @@
     "country": "Thailand",
     "admin1": "Bangkok"
   },
+  "1608133": {
+    "fetched_at": "2026-09-19T09:46:37.730Z",
+    "name": "Nonthaburi",
+    "country": "Thailand",
+    "admin1": "Nonthaburi"
+  },
   "1608258": {
     "fetched_at": "2026-09-17T22:28:01.972Z",
     "name": "Nong Chok",
@@ -6163,6 +6169,12 @@
     "name": "Khon Kaen",
     "country": "Thailand",
     "admin1": "Khon Kaen"
+  },
+  "1610780": {
+    "fetched_at": "2026-09-19T09:46:37.730Z",
+    "name": "Hat Yai",
+    "country": "Thailand",
+    "admin1": "Songkhla"
   },
   "1610858": {
     "fetched_at": "2026-09-17T10:28:59.390Z",
