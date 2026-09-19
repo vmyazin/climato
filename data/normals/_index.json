@@ -659,6 +659,12 @@
     "country": "Kenya",
     "admin1": "Mandera County"
   },
+  "187968": {
+    "fetched_at": "2026-09-19T16:50:10.556Z",
+    "name": "Malindi",
+    "country": "Kenya",
+    "admin1": "Kilifi County"
+  },
   "189386": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Limuru",
@@ -11708,6 +11714,12 @@
     "country": "Senegal",
     "admin1": "Louga"
   },
+  "2250805": {
+    "fetched_at": "2026-09-19T16:50:10.556Z",
+    "name": "Kaolack",
+    "country": "Senegal",
+    "admin1": "Kaolack"
+  },
   "2252309": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Diourbel",
@@ -18253,6 +18265,12 @@
     "country": "United States",
     "admin1": "Michigan"
   },
+  "5037649": {
+    "fetched_at": "2026-09-19T16:50:10.556Z",
+    "name": "Minneapolis",
+    "country": "United States",
+    "admin1": "Minnesota"
+  },
   "5059163": {
     "fetched_at": "2026-09-09T10:09:35.325Z",
     "name": "Fargo",
@@ -20666,6 +20684,12 @@
   "13607966": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Circoiscrizione II",
+    "country": "Italy",
+    "admin1": "Piedmont"
+  },
+  "13607972": {
+    "fetched_at": "2026-09-19T16:50:10.556Z",
+    "name": "Circoiscrizione VIII",
     "country": "Italy",
     "admin1": "Piedmont"
   },
