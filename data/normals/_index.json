@@ -5504,6 +5504,12 @@
     "country": "Myanmar",
     "admin1": "Mandalay Region"
   },
+  "1314759": {
+    "fetched_at": "2026-09-20T19:05:33.238Z",
+    "name": "Lashio",
+    "country": "Myanmar",
+    "admin1": "Shan State"
+  },
   "1316752": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Kyaukpyu",
@@ -18703,6 +18709,12 @@
     "country": "United States",
     "admin1": "Colorado"
   },
+  "5577592": {
+    "fetched_at": "2026-09-20T19:05:33.238Z",
+    "name": "Greeley",
+    "country": "United States",
+    "admin1": "Colorado"
+  },
   "5729485": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Gresham",
@@ -19156,6 +19168,12 @@
   "6544490": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Usera",
+    "country": "Spain",
+    "admin1": "Madrid"
+  },
+  "6544493": {
+    "fetched_at": "2026-09-20T19:05:33.238Z",
+    "name": "Carabanchel",
     "country": "Spain",
     "admin1": "Madrid"
   },
