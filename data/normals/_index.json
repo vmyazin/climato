@@ -869,6 +869,12 @@
     "country": "Oman",
     "admin1": "Dhofar"
   },
+  "286647": {
+    "fetched_at": "2026-09-20T12:38:37.123Z",
+    "name": "Saham",
+    "country": "Oman",
+    "admin1": "Al Batinah North Governorate"
+  },
   "287286": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Muscat",
@@ -1463,6 +1469,12 @@
     "country": "Burundi",
     "admin1": "Bujumbura Mairie Province"
   },
+  "449504": {
+    "fetched_at": "2026-09-20T12:38:37.123Z",
+    "name": "Eslamshahr",
+    "country": "Iran",
+    "admin1": "Tehran"
+  },
   "461740": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Zyuzino",
@@ -1750,6 +1762,12 @@
     "name": "Mytishchi",
     "country": "Russia",
     "admin1": "Moscow Oblast"
+  },
+  "524294": {
+    "fetched_at": "2026-09-20T12:38:37.123Z",
+    "name": "Murom",
+    "country": "Russia",
+    "admin1": "Vladimir Oblast"
   },
   "524901": {
     "fetched_at": "2026-05-24T21:15:47.469Z",
@@ -6620,6 +6638,12 @@
     "country": "Indonesia",
     "admin1": "Central Java"
   },
+  "1642858": {
+    "fetched_at": "2026-09-20T12:38:37.123Z",
+    "name": "Jambi City",
+    "country": "Indonesia",
+    "admin1": "Jambi"
+  },
   "1642911": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Jakarta",
@@ -8861,6 +8885,12 @@
   "1804578": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Laizhou",
+    "country": "China",
+    "admin1": "Shandong"
+  },
+  "1804591": {
+    "fetched_at": "2026-09-20T12:38:37.123Z",
+    "name": "Laiwu",
     "country": "China",
     "admin1": "Shandong"
   },
