@@ -18175,6 +18175,12 @@
     "country": "United States",
     "admin1": "North Carolina"
   },
+  "4544349": {
+    "fetched_at": "2026-09-20T21:56:19.039Z",
+    "name": "Oklahoma City",
+    "country": "United States",
+    "admin1": "Oklahoma"
+  },
   "4553433": {
     "fetched_at": "2026-09-05T13:36:47.520Z",
     "name": "Tulsa",
@@ -18574,6 +18580,12 @@
   "5385955": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
     "name": "Rancho Cucamonga",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5387428": {
+    "fetched_at": "2026-09-20T21:56:19.039Z",
+    "name": "Richmond",
     "country": "United States",
     "admin1": "California"
   },
