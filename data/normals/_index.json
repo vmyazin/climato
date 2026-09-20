@@ -5744,6 +5744,12 @@
     "country": "Tajikistan",
     "admin1": "Sughd"
   },
+  "1516589": {
+    "fetched_at": "2026-09-20T16:31:48.331Z",
+    "name": "Zhezqazghan",
+    "country": "Kazakhstan",
+    "admin1": "Ulytau Region"
+  },
   "1516905": {
     "fetched_at": "2026-09-09T23:33:46.853Z",
     "name": "Taraz",
@@ -11960,6 +11966,12 @@
     "country": "Nigeria",
     "admin1": "Adamawa"
   },
+  "2318123": {
+    "fetched_at": "2026-09-20T16:31:48.331Z",
+    "name": "Yenagoa",
+    "country": "Nigeria",
+    "admin1": "Bayelsa State"
+  },
   "2319133": {
     "fetched_at": "2026-09-02T15:22:17.614Z",
     "name": "Warri",
@@ -16345,6 +16357,12 @@
     "country": "Mexico",
     "admin1": "Tamaulipas"
   },
+  "3519537": {
+    "fetched_at": "2026-09-20T16:31:48.331Z",
+    "name": "San Cristóbal de las Casas",
+    "country": "Mexico",
+    "admin1": "Chiapas"
+  },
   "3520339": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
     "name": "Reynosa",
@@ -16404,6 +16422,12 @@
     "name": "Ecatepec de Morelos",
     "country": "Mexico",
     "admin1": "México"
+  },
+  "3529947": {
+    "fetched_at": "2026-09-20T16:31:48.331Z",
+    "name": "Cuernavaca",
+    "country": "Mexico",
+    "admin1": "Morelos"
   },
   "3530049": {
     "fetched_at": "2026-09-03T01:33:12.533Z",
@@ -16878,6 +16902,12 @@
     "name": "Ejido",
     "country": "Venezuela",
     "admin1": "Mérida"
+  },
+  "3644768": {
+    "fetched_at": "2026-09-20T16:31:48.331Z",
+    "name": "Cumaná",
+    "country": "Venezuela",
+    "admin1": "Sucre"
   },
   "3645527": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -19638,6 +19668,12 @@
     "name": "Shenglilu",
     "country": "China",
     "admin1": "Chongqing Municipality"
+  },
+  "8436486": {
+    "fetched_at": "2026-09-20T16:31:48.331Z",
+    "name": "Sunset Park",
+    "country": "United States",
+    "admin1": "New York"
   },
   "8441115": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
