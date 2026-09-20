@@ -17317,6 +17317,12 @@
     "country": "Peru",
     "admin1": "Piura"
   },
+  "3698350": {
+    "fetched_at": "2026-09-20T07:07:12.701Z",
+    "name": "Chiclayo",
+    "country": "Peru",
+    "admin1": "Lambayeque"
+  },
   "3699088": {
     "fetched_at": "2026-09-05T20:45:00.477Z",
     "name": "Cajamarca",
@@ -18378,6 +18384,12 @@
     "name": "Green Bay",
     "country": "United States",
     "admin1": "Wisconsin"
+  },
+  "5282804": {
+    "fetched_at": "2026-09-20T07:07:12.701Z",
+    "name": "Bridgeport",
+    "country": "United States",
+    "admin1": "Connecticut"
   },
   "5292387": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
