@@ -179,6 +179,12 @@
     "country": "Iraq",
     "admin1": "Basra Governorate"
   },
+  "99135": {
+    "fetched_at": "2026-09-21T19:45:44.866Z",
+    "name": "Kufa",
+    "country": "Iraq",
+    "admin1": "Najaf"
+  },
   "99226": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Nāḩiyat al Iskandarīyah",
@@ -8792,6 +8798,12 @@
     "country": "China",
     "admin1": "Guangdong"
   },
+  "1801180": {
+    "fetched_at": "2026-09-21T19:45:44.866Z",
+    "name": "Maoming",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
   "1801401": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Majie",
@@ -12877,6 +12889,12 @@
     "country": "Spain",
     "admin1": "Andalusia"
   },
+  "2514256": {
+    "fetched_at": "2026-09-21T19:45:44.866Z",
+    "name": "Málaga",
+    "country": "Spain",
+    "admin1": "Andalusia"
+  },
   "2515270": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Las Palmas de Gran Canaria",
@@ -13098,6 +13116,12 @@
     "name": "Al Hoceima",
     "country": "Morocco",
     "admin1": "Tanger-Tetouan-Al Hoceima"
+  },
+  "2561668": {
+    "fetched_at": "2026-09-21T19:45:44.866Z",
+    "name": "Agadir",
+    "country": "Morocco",
+    "admin1": "Souss-Massa"
   },
   "2566633": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
