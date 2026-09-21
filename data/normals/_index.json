@@ -155,6 +155,12 @@
     "country": "Iraq",
     "admin1": "Najaf"
   },
+  "99062": {
+    "fetched_at": "2026-09-21T01:45:55.174Z",
+    "name": "Al Miqdādīyah",
+    "country": "Iraq",
+    "admin1": "Diyala Governorate"
+  },
   "99071": {
     "fetched_at": "2026-09-18T17:55:35.143Z",
     "name": "Al Mawşil al Jadīdah",
@@ -1984,6 +1990,12 @@
     "name": "Daşoguz",
     "country": "Turkmenistan",
     "admin1": "Dasoguz"
+  },
+  "608668": {
+    "fetched_at": "2026-09-21T01:45:55.174Z",
+    "name": "Oral",
+    "country": "Kazakhstan",
+    "admin1": "West Kazakhstan"
   },
   "610529": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -6991,6 +7003,12 @@
     "name": "Santiago",
     "country": "Philippines",
     "admin1": "Cagayan Valley"
+  },
+  "1687894": {
+    "fetched_at": "2026-09-21T01:45:55.174Z",
+    "name": "Santa Rosa",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
   },
   "1689395": {
     "fetched_at": "2026-09-16T19:07:58.536Z",
