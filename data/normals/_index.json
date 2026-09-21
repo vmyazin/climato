@@ -3290,6 +3290,12 @@
     "country": "Indonesia",
     "admin1": "North Sumatra"
   },
+  "1214073": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Rantauprapat",
+    "country": "Indonesia",
+    "admin1": "North Sumatra"
+  },
   "1214189": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Percut",
@@ -3511,6 +3517,12 @@
     "name": "Tumakuru",
     "country": "India",
     "admin1": "Karnataka"
+  },
+  "1254163": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Thiruvananthapuram",
+    "country": "India",
+    "admin1": "Kerala"
   },
   "1254187": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
@@ -5276,6 +5288,12 @@
     "country": "India",
     "admin1": "Gujarat"
   },
+  "1278708": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Amroha",
+    "country": "India",
+    "admin1": "Uttar Pradesh"
+  },
   "1278710": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Amritsar",
@@ -5515,6 +5533,12 @@
     "name": "Mingaladon",
     "country": "Myanmar",
     "admin1": "Yangon"
+  },
+  "1309611": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Myeik",
+    "country": "Myanmar",
+    "admin1": "Tanintharyi Region"
   },
   "1309793": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -6020,6 +6044,12 @@
     "country": "Vietnam",
     "admin1": "Thanh Hóa Province"
   },
+  "1568510": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Rach Gia",
+    "country": "Vietnam",
+    "admin1": "An Giang"
+  },
   "1568770": {
     "fetched_at": "2026-08-26T18:30:40.356Z",
     "name": "Quảng Ngãi",
@@ -6043,6 +6073,12 @@
     "name": "Phan Thiết",
     "country": "Vietnam",
     "admin1": "Lam Dong"
+  },
+  "1571644": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Ô Môn",
+    "country": "Vietnam",
+    "admin1": "Can Tho City"
   },
   "1572151": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -7262,6 +7298,12 @@
     "country": "Philippines",
     "admin1": "National Capital Region"
   },
+  "1721080": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Cagayan de Oro",
+    "country": "Philippines",
+    "admin1": "Northern Mindanao"
+  },
   "1722930": {
     "fetched_at": "2026-09-05T16:18:15.066Z",
     "name": "Bulaon",
@@ -7322,9 +7364,21 @@
     "country": "Malaysia",
     "admin1": "Johor"
   },
+  "1732721": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Kampung Pasir Gudang Baru",
+    "country": "Malaysia",
+    "admin1": "Johor"
+  },
   "1732722": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Pasir Gudang",
+    "country": "Malaysia",
+    "admin1": "Johor"
+  },
+  "1732724": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Kampung Larkin Lama",
     "country": "Malaysia",
     "admin1": "Johor"
   },
@@ -7343,6 +7397,12 @@
   "1732750": {
     "fetched_at": "2026-09-17T00:55:26.449Z",
     "name": "Masai",
+    "country": "Malaysia",
+    "admin1": "Johor"
+  },
+  "1732752": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Johor Bahru",
     "country": "Malaysia",
     "admin1": "Johor"
   },
@@ -7409,6 +7469,12 @@
   "1735079": {
     "fetched_at": "2026-09-04T23:27:11.474Z",
     "name": "Bukit Mertajam",
+    "country": "Malaysia",
+    "admin1": "Penang"
+  },
+  "1735102": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Bayan Lepas",
     "country": "Malaysia",
     "admin1": "Penang"
   },
@@ -7483,6 +7549,18 @@
     "name": "Puchong",
     "country": "Malaysia",
     "admin1": "Selangor"
+  },
+  "1764027": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Kampung Sungai Glugur",
+    "country": "Malaysia",
+    "admin1": "Penang"
+  },
+  "1764160": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Kampung Sungai Ara",
+    "country": "Malaysia",
+    "admin1": "Penang"
   },
   "1769014": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
@@ -13333,6 +13411,12 @@
     "country": "The Netherlands",
     "admin1": "South Holland"
   },
+  "2751773": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Leiden",
+    "country": "The Netherlands",
+    "admin1": "South Holland"
+  },
   "2755251": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "Groningen",
@@ -16255,6 +16339,12 @@
     "country": "Brazil",
     "admin1": "Goiás"
   },
+  "3472766": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Alagoinhas",
+    "country": "Brazil",
+    "admin1": "Estado de Bahia"
+  },
   "3474574": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Palmas",
@@ -16410,6 +16500,12 @@
     "name": "Playa del Carmen",
     "country": "Mexico",
     "admin1": "Quintana Roo"
+  },
+  "3522551": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Nuevo Laredo",
+    "country": "Mexico",
+    "admin1": "Tamaulipas"
   },
   "3523183": {
     "fetched_at": "2026-08-26T18:30:40.356Z",
@@ -17982,6 +18078,12 @@
     "name": "La Paz",
     "country": "Mexico",
     "admin1": "Baja California Sur"
+  },
+  "4003757": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Ciudad Benito Juárez",
+    "country": "Mexico",
+    "admin1": "Nuevo León"
   },
   "4004886": {
     "fetched_at": "2026-09-03T21:26:23.717Z",
@@ -20563,6 +20665,12 @@
     "country": "India",
     "admin1": "Maharashtra"
   },
+  "12514556": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Kota Damansara",
+    "country": "Malaysia",
+    "admin1": "Selangor"
+  },
   "12557764": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
     "name": "Taman Petaling",
@@ -20631,6 +20739,12 @@
   "13118091": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "Setia Alam",
+    "country": "Malaysia",
+    "admin1": "Selangor"
+  },
+  "13118225": {
+    "fetched_at": "2026-09-21T14:33:37.530Z",
+    "name": "Bukit Rahman Putra",
     "country": "Malaysia",
     "admin1": "Selangor"
   },
