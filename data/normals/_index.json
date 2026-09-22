@@ -41,6 +41,12 @@
     "country": "Somalia",
     "admin1": "Bay"
   },
+  "74477": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Ibb",
+    "country": "Yemen",
+    "admin1": "Ibb Governorate"
+  },
   "76184": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Dhamar",
@@ -604,6 +610,12 @@
     "name": "Dar es Salaam",
     "country": "Tanzania",
     "admin1": "Dar es Salaam Region"
+  },
+  "160892": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Bunda",
+    "country": "Tanzania",
+    "admin1": "Mara"
   },
   "161325": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -2566,6 +2578,12 @@
     "name": "KwaDukuza",
     "country": "South Africa",
     "admin1": "KwaZulu-Natal"
+  },
+  "952747": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Standerton",
+    "country": "South Africa",
+    "admin1": "Mpumalanga"
   },
   "954013": {
     "fetched_at": "2026-09-18T10:05:40.839Z",
@@ -5539,6 +5557,12 @@
     "name": "Pakokku",
     "country": "Myanmar",
     "admin1": "Magway"
+  },
+  "1308465": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Mawlamyine",
+    "country": "Myanmar",
+    "admin1": "Mon"
   },
   "1309233": {
     "fetched_at": "2026-09-13T06:49:09.028Z",
@@ -12553,6 +12577,12 @@
     "country": "Sierra Leone",
     "admin1": "Eastern Province"
   },
+  "2415703": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Siguiri",
+    "country": "Guinea",
+    "admin1": "Kankan Region"
+  },
   "2416402": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
     "name": "Kamsar",
@@ -12564,6 +12594,12 @@
     "name": "Manéah",
     "country": "Guinea",
     "admin1": "Kindia"
+  },
+  "2418362": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Labé",
+    "country": "Guinea",
+    "admin1": "Labé Region"
   },
   "2419533": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -12942,6 +12978,12 @@
     "name": "Almería",
     "country": "Spain",
     "admin1": "Andalusia"
+  },
+  "2521978": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Alicante",
+    "country": "Spain",
+    "admin1": "Valencia"
   },
   "2522013": {
     "fetched_at": "2026-09-04T21:04:35.522Z",
@@ -13416,6 +13458,12 @@
     "name": "Stockholm",
     "country": "Sweden",
     "admin1": "Stockholm County"
+  },
+  "2686657": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Örebro",
+    "country": "Sweden",
+    "admin1": "Örebro County"
   },
   "2745641": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -14262,6 +14310,12 @@
     "name": "Sant Andreu",
     "country": "Spain",
     "admin1": "Catalonia"
+  },
+  "3111108": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Salamanca",
+    "country": "Spain",
+    "admin1": "Castille and León"
   },
   "3112737": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -16060,6 +16114,12 @@
   "3465059": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Cubatão",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "3465284": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Cotia",
     "country": "Brazil",
     "admin1": "São Paulo"
   },
@@ -19531,6 +19591,12 @@
     "country": "China",
     "admin1": "Guangdong"
   },
+  "6958518": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Tantou",
+    "country": "China",
+    "admin1": "Guangdong"
+  },
   "6986104": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Zhongshan",
@@ -20741,6 +20807,12 @@
     "name": "Wangsa Maju",
     "country": "Malaysia",
     "admin1": "Kuala Lumpur"
+  },
+  "12750652": {
+    "fetched_at": "2026-09-22T06:52:30.641Z",
+    "name": "Perling",
+    "country": "Malaysia",
+    "admin1": "Johor"
   },
   "12750654": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
