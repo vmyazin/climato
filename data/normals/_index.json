@@ -7094,6 +7094,12 @@
     "country": "Philippines",
     "admin1": "Calabarzon"
   },
+  "1688749": {
+    "fetched_at": "2026-09-22T23:18:00.634Z",
+    "name": "San Pedro",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
+  },
   "1689395": {
     "fetched_at": "2026-09-16T19:07:58.536Z",
     "name": "San Jose del Monte",
@@ -7105,6 +7111,12 @@
     "name": "San Jose",
     "country": "Philippines",
     "admin1": "Mimaropa"
+  },
+  "1691444": {
+    "fetched_at": "2026-09-22T23:18:00.634Z",
+    "name": "Roxas City",
+    "country": "Philippines",
+    "admin1": "Western Visayas"
   },
   "1691490": {
     "fetched_at": "2026-09-17T05:32:19.411Z",
