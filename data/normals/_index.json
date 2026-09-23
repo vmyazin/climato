@@ -347,6 +347,12 @@
     "country": "Iran",
     "admin1": "Kerman"
   },
+  "116667": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Sāveh",
+    "country": "Iran",
+    "admin1": "Markazi"
+  },
   "117574": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Sanandaj",
@@ -2978,6 +2984,12 @@
   "1002108": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Germiston",
+    "country": "South Africa",
+    "admin1": "Gauteng"
+  },
+  "1014073": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Carletonville",
     "country": "South Africa",
     "admin1": "Gauteng"
   },
@@ -7202,6 +7214,12 @@
     "country": "Indonesia",
     "admin1": "North Sulawesi"
   },
+  "1636722": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Malang",
+    "country": "Indonesia",
+    "admin1": "East Java"
+  },
   "1636884": {
     "fetched_at": "2026-09-01T21:26:49.774Z",
     "name": "Magelang",
@@ -7225,6 +7243,12 @@
     "name": "Lubuklinggau",
     "country": "Indonesia",
     "admin1": "South Sumatra"
+  },
+  "1637510": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Loa Janan",
+    "country": "Indonesia",
+    "admin1": "East Kalimantan"
   },
   "1638063": {
     "fetched_at": "2026-09-07T10:46:25.605Z",
@@ -7411,6 +7435,12 @@
     "name": "Bogor",
     "country": "Indonesia",
     "admin1": "West Java"
+  },
+  "1648580": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Blitar",
+    "country": "Indonesia",
+    "admin1": "East Java"
   },
   "1648637": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -14269,6 +14299,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2646277": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Ilford",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2646914": {
     "fetched_at": "2026-05-03T11:12:55.832Z",
     "name": "High Wycombe",
@@ -14599,11 +14635,23 @@
     "country": "Germany",
     "admin1": "Lower Saxony"
   },
+  "2857807": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Offenbach",
+    "country": "Germany",
+    "admin1": "Hesse"
+  },
   "2860410": {
     "fetched_at": "2026-09-03T18:54:42.659Z",
     "name": "Oberhausen",
     "country": "Germany",
     "admin1": "North Rhine-Westphalia"
+  },
+  "2864072": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Neue Neustadt",
+    "country": "Germany",
+    "admin1": "Saxony-Anhalt"
   },
   "2864118": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -15124,6 +15172,12 @@
   "3058213": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Petržalka",
+    "country": "Slovakia",
+    "admin1": "Bratislava Region"
+  },
+  "3060972": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Bratislava",
     "country": "Slovakia",
     "admin1": "Bratislava Region"
   },
@@ -16188,6 +16242,12 @@
     "name": "Vespasiano",
     "country": "Brazil",
     "admin1": "Minas Gerais"
+  },
+  "3445446": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Várzea Paulista",
+    "country": "Brazil",
+    "admin1": "São Paulo"
   },
   "3445451": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
@@ -17653,6 +17713,12 @@
     "country": "Mexico",
     "admin1": "Mexico City"
   },
+  "3526700": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Iztacalco",
+    "country": "Mexico",
+    "admin1": "Mexico City"
+  },
   "3526798": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Iguala de la Independencia",
@@ -17910,6 +17976,12 @@
     "name": "Santa Tecla",
     "country": "El Salvador",
     "admin1": "La Libertad Department"
+  },
+  "3584399": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Mejicanos",
+    "country": "El Salvador",
+    "admin1": "San Salvador Department"
   },
   "3587902": {
     "fetched_at": "2026-09-06T16:29:06.700Z",
@@ -19248,6 +19320,12 @@
     "name": "San José del Cabo",
     "country": "Mexico",
     "admin1": "Baja California Sur"
+  },
+  "3988086": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Saltillo",
+    "country": "Mexico",
+    "admin1": "Coahuila"
   },
   "3991164": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -22139,6 +22217,12 @@
     "name": "Titiwangsa",
     "country": "Malaysia",
     "admin1": "Kuala Lumpur"
+  },
+  "13118432": {
+    "fetched_at": "2026-09-23T17:30:19.173Z",
+    "name": "Business Bay",
+    "country": "United Arab Emirates",
+    "admin1": "Dubai"
   },
   "13156582": {
     "fetched_at": "2026-08-28T19:37:43.002Z",
