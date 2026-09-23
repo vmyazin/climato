@@ -9554,6 +9554,12 @@
     "country": "China",
     "admin1": "Anhui"
   },
+  "1802238": {
+    "fetched_at": "2026-09-23T23:14:29.462Z",
+    "name": "Loudi",
+    "country": "China",
+    "admin1": "Hunan"
+  },
   "1802276": {
     "fetched_at": "2026-09-18T17:55:35.143Z",
     "name": "Longyan",
@@ -12535,6 +12541,12 @@
     "name": "Wollongong",
     "country": "Australia",
     "admin1": "New South Wales"
+  },
+  "2172517": {
+    "fetched_at": "2026-09-23T23:14:29.462Z",
+    "name": "Canberra",
+    "country": "Australia",
+    "admin1": "Australian Capital Territory"
   },
   "2172797": {
     "fetched_at": "2026-09-06T05:10:51.076Z",
