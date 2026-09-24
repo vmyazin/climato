@@ -947,6 +947,18 @@
     "country": "Uganda",
     "admin1": "Central Region"
   },
+  "232110": {
+    "fetched_at": "2026-09-24T01:42:01.057Z",
+    "name": "Kasangati",
+    "country": "Uganda",
+    "admin1": "Central Region"
+  },
+  "232422": {
+    "fetched_at": "2026-09-24T01:42:01.057Z",
+    "name": "Kampala",
+    "country": "Uganda",
+    "admin1": "Central Region"
+  },
   "232713": {
     "fetched_at": "2026-09-01T05:45:57.153Z",
     "name": "Kajansi",
@@ -6871,6 +6883,12 @@
     "name": "Rayong",
     "country": "Thailand",
     "admin1": "Rayong"
+  },
+  "1607508": {
+    "fetched_at": "2026-09-24T01:42:01.057Z",
+    "name": "Amphoe Phra Pradaeng",
+    "country": "Thailand",
+    "admin1": "Samut Prakan"
   },
   "1607782": {
     "fetched_at": "2026-09-03T18:54:42.659Z",
@@ -14395,6 +14413,12 @@
     "country": "United Kingdom",
     "admin1": "Scotland"
   },
+  "2651123": {
+    "fetched_at": "2026-09-24T01:42:01.057Z",
+    "name": "Doncaster",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2651817": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
     "name": "Croydon",
@@ -14626,6 +14650,12 @@
   "2800866": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
     "name": "Brussels",
+    "country": "Belgium",
+    "admin1": "Brussels Capital"
+  },
+  "2803201": {
+    "fetched_at": "2026-09-24T01:42:01.057Z",
+    "name": "Anderlecht",
     "country": "Belgium",
     "admin1": "Brussels Capital"
   },
