@@ -1853,6 +1853,12 @@
     "country": "Russia",
     "admin1": "Rostov Oblast"
   },
+  "496285": {
+    "fetched_at": "2026-09-24T17:35:23.792Z",
+    "name": "Severodvinsk",
+    "country": "Russia",
+    "admin1": "Arkhangelskaya oblast"
+  },
   "496638": {
     "fetched_at": "2026-09-13T06:49:09.028Z",
     "name": "Sergiyev Posad",
@@ -15361,6 +15367,12 @@
     "country": "Poland",
     "admin1": "Lower Silesia"
   },
+  "3095049": {
+    "fetched_at": "2026-09-24T17:35:23.792Z",
+    "name": "Koszalin",
+    "country": "Poland",
+    "admin1": "West Pomerania"
+  },
   "3096880": {
     "fetched_at": "2026-09-07T10:46:25.605Z",
     "name": "Kalisz",
@@ -19972,6 +19984,12 @@
   "5037649": {
     "fetched_at": "2026-09-19T16:50:10.556Z",
     "name": "Minneapolis",
+    "country": "United States",
+    "admin1": "Minnesota"
+  },
+  "5043473": {
+    "fetched_at": "2026-09-24T17:35:23.792Z",
+    "name": "Rochester",
     "country": "United States",
     "admin1": "Minnesota"
   },
