@@ -761,6 +761,12 @@
     "country": "Syria",
     "admin1": "Tartus Governorate"
   },
+  "169389": {
+    "fetched_at": "2026-09-25T18:06:17.667Z",
+    "name": "Idlib",
+    "country": "Syria",
+    "admin1": "Idlib Governorate"
+  },
   "169577": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Homs",
@@ -21817,6 +21823,12 @@
     "country": "Romania",
     "admin1": "Bucharest"
   },
+  "11048853": {
+    "fetched_at": "2026-09-25T18:06:17.667Z",
+    "name": "Dubai Investments Park",
+    "country": "United Arab Emirates",
+    "admin1": "Dubai"
+  },
   "11101625": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Rufisque est",
@@ -21876,6 +21888,12 @@
     "name": "Sejong",
     "country": "South Korea",
     "admin1": "Sejong-si"
+  },
+  "11524601": {
+    "fetched_at": "2026-09-25T18:06:17.667Z",
+    "name": "Jebel Ali",
+    "country": "United Arab Emirates",
+    "admin1": "Dubai"
   },
   "11611487": {
     "fetched_at": "2026-09-19T23:40:00.767Z",
