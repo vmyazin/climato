@@ -8018,6 +8018,12 @@
     "country": "Philippines",
     "admin1": "Caraga"
   },
+  "1725863": {
+    "fetched_at": "2026-09-25T07:05:17.943Z",
+    "name": "Bayambang",
+    "country": "Philippines",
+    "admin1": "Ilocos"
+  },
   "1726280": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Batangas",
@@ -11435,6 +11441,12 @@
     "name": "Ibaraki",
     "country": "Japan",
     "admin1": "Osaka"
+  },
+  "1862302": {
+    "fetched_at": "2026-09-25T07:05:17.943Z",
+    "name": "Hōfu",
+    "country": "Japan",
+    "admin1": "Yamaguchi"
   },
   "1862415": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
