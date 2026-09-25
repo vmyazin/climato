@@ -14563,6 +14563,12 @@
     "country": "Portugal",
     "admin1": "Viseu District"
   },
+  "2735943": {
+    "fetched_at": "2026-09-25T21:52:17.510Z",
+    "name": "Porto",
+    "country": "Portugal",
+    "admin1": "Porto District"
+  },
   "2740637": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Coimbra",
@@ -19669,6 +19675,12 @@
     "country": "United States",
     "admin1": "Florida"
   },
+  "4152820": {
+    "fetched_at": "2026-09-25T21:52:17.510Z",
+    "name": "Davie",
+    "country": "United States",
+    "admin1": "Florida"
+  },
   "4155966": {
     "fetched_at": "2026-09-17T15:20:11.864Z",
     "name": "Fort Lauderdale",
@@ -20010,6 +20022,12 @@
     "name": "South Boston",
     "country": "United States",
     "admin1": "Massachusetts"
+  },
+  "4984247": {
+    "fetched_at": "2026-09-25T21:52:17.510Z",
+    "name": "Ann Arbor",
+    "country": "United States",
+    "admin1": "Michigan"
   },
   "4998830": {
     "fetched_at": "2026-09-04T21:04:35.522Z",
