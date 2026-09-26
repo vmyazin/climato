@@ -515,6 +515,12 @@
     "country": "Iran",
     "admin1": "South Khorasan Province"
   },
+  "141584": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Bāneh",
+    "country": "Iran",
+    "admin1": "Kurdistan Province"
+  },
   "141681": {
     "fetched_at": "2026-09-18T05:19:20.971Z",
     "name": "Bandar Abbas",
@@ -2543,6 +2549,12 @@
     "country": "Ukraine",
     "admin1": "Sumy"
   },
+  "693821": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Sykhiv",
+    "country": "Ukraine",
+    "admin1": "Lviv Oblast"
+  },
   "694423": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Sevastopol",
@@ -2596,6 +2608,12 @@
     "name": "Donetsk",
     "country": "Ukraine",
     "admin1": "Donetsk Oblast"
+  },
+  "710719": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Chernivtsi",
+    "country": "Ukraine",
+    "admin1": "Chernivtsi"
   },
   "716935": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -12920,6 +12938,12 @@
     "country": "Senegal",
     "admin1": "Diourbel Region"
   },
+  "2262963": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Setúbal",
+    "country": "Portugal",
+    "admin1": "Setúbal District"
+  },
   "2264268": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Queluz",
@@ -14335,6 +14359,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2634910": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Wakefield",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2636389": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Swindon",
@@ -14586,6 +14616,12 @@
     "name": "Coimbra",
     "country": "Portugal",
     "admin1": "Coimbra District"
+  },
+  "2742032": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Braga",
+    "country": "Portugal",
+    "admin1": "Braga District"
   },
   "2745641": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -15505,6 +15541,12 @@
     "country": "Spain",
     "admin1": "Navarre"
   },
+  "3114965": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Ourense",
+    "country": "Spain",
+    "admin1": "Galicia"
+  },
   "3117735": {
     "fetched_at": "2026-05-02T22:03:13.315Z",
     "name": "Madrid",
@@ -15888,6 +15930,12 @@
     "name": "Cape Town",
     "country": "South Africa",
     "admin1": "Western Cape"
+  },
+  "3374333": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Praia",
+    "country": "Cabo Verde",
+    "admin1": "Praia Municipality"
   },
   "3378644": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -19513,6 +19561,12 @@
     "country": "Mexico",
     "admin1": "Nuevo León"
   },
+  "3985344": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "San Miguel de Allende",
+    "country": "Mexico",
+    "admin1": "Guanajuato"
+  },
   "3985604": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "San Luis Río Colorado",
@@ -19633,6 +19687,12 @@
     "country": "Mexico",
     "admin1": "Jalisco"
   },
+  "4005775": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Gómez Palacio",
+    "country": "Mexico",
+    "admin1": "Durango"
+  },
   "4005937": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "San Pedro",
@@ -19750,6 +19810,12 @@
   "4180439": {
     "fetched_at": "2026-05-19T00:19:43.853Z",
     "name": "Atlanta",
+    "country": "United States",
+    "admin1": "Georgia"
+  },
+  "4221552": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Savannah",
     "country": "United States",
     "admin1": "Georgia"
   },
@@ -21013,6 +21079,12 @@
     "country": "Japan",
     "admin1": "Okinawa"
   },
+  "6822159": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Fujimino",
+    "country": "Japan",
+    "admin1": "Saitama"
+  },
   "6822163": {
     "fetched_at": "2026-09-03T21:26:23.717Z",
     "name": "Iruma",
@@ -21504,6 +21576,12 @@
     "name": "Nimach",
     "country": "India",
     "admin1": "Rajasthan"
+  },
+  "8469788": {
+    "fetched_at": "2026-09-26T05:37:24.830Z",
+    "name": "Dubai Marina",
+    "country": "United Arab Emirates",
+    "admin1": "Dubai"
   },
   "8504423": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
