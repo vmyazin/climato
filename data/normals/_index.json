@@ -1121,6 +1121,12 @@
     "country": "Bahrain",
     "admin1": "Muharraq"
   },
+  "290503": {
+    "fetched_at": "2026-09-26T00:11:51.051Z",
+    "name": "Warisan",
+    "country": "United Arab Emirates",
+    "admin1": "Dubai"
+  },
   "291074": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
     "name": "Ras al-Khaimah",
@@ -2524,6 +2530,12 @@
     "name": "Uzhhorod",
     "country": "Ukraine",
     "admin1": "Zakarpattia Oblast"
+  },
+  "691650": {
+    "fetched_at": "2026-09-26T00:11:51.051Z",
+    "name": "Ternopil",
+    "country": "Ukraine",
+    "admin1": "Ternopil Oblast"
   },
   "692194": {
     "fetched_at": "2026-09-03T23:34:54.858Z",
@@ -19585,6 +19597,12 @@
     "country": "Mexico",
     "admin1": "Nuevo León"
   },
+  "4004330": {
+    "fetched_at": "2026-09-26T00:11:51.051Z",
+    "name": "Irapuato",
+    "country": "Mexico",
+    "admin1": "Guanajuato"
+  },
   "4004867": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Parral",
@@ -21010,6 +21028,12 @@
   "6822179": {
     "fetched_at": "2026-09-12T17:27:42.472Z",
     "name": "Inzai",
+    "country": "Japan",
+    "admin1": "Chiba"
+  },
+  "6822182": {
+    "fetched_at": "2026-09-26T00:11:51.051Z",
+    "name": "Yachiyo",
     "country": "Japan",
     "admin1": "Chiba"
   },
