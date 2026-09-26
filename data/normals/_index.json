@@ -14287,6 +14287,12 @@
     "country": "Nigeria",
     "admin1": "Lagos"
   },
+  "2566696": {
+    "fetched_at": "2026-09-26T10:19:44.507Z",
+    "name": "Akowonjo",
+    "country": "Nigeria",
+    "admin1": "Lagos"
+  },
   "2591949": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Cazenga",
@@ -20362,6 +20368,12 @@
   "5368361": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Los Angeles",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5374732": {
+    "fetched_at": "2026-09-26T10:19:44.507Z",
+    "name": "Moreno Valley",
     "country": "United States",
     "admin1": "California"
   },
