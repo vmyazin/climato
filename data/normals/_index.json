@@ -959,6 +959,12 @@
     "country": "Uganda",
     "admin1": "Central Region"
   },
+  "231165": {
+    "fetched_at": "2026-09-27T08:35:36.077Z",
+    "name": "Kira",
+    "country": "Uganda",
+    "admin1": "Central Region"
+  },
   "232110": {
     "fetched_at": "2026-09-24T01:42:01.057Z",
     "name": "Kasangati",
@@ -11502,6 +11508,12 @@
     "country": "Japan",
     "admin1": "Osaka"
   },
+  "1862627": {
+    "fetched_at": "2026-09-27T08:35:36.077Z",
+    "name": "Himeji",
+    "country": "Japan",
+    "admin1": "Hyōgo"
+  },
   "1862636": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Hikone",
@@ -21468,6 +21480,12 @@
     "name": "Kitengela",
     "country": "Kenya",
     "admin1": "Kajiado County"
+  },
+  "8054802": {
+    "fetched_at": "2026-09-27T08:35:36.077Z",
+    "name": "Xilinhot",
+    "country": "China",
+    "admin1": "Inner Mongolia"
   },
   "8063098": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
