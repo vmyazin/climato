@@ -2591,6 +2591,12 @@
     "country": "Ukraine",
     "admin1": "Donetsk Oblast"
   },
+  "702550": {
+    "fetched_at": "2026-09-28T12:52:57.031Z",
+    "name": "Lviv",
+    "country": "Ukraine",
+    "admin1": "Lviv Oblast"
+  },
   "703448": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Kyiv",
@@ -4412,6 +4418,12 @@
     "country": "India",
     "admin1": "Kerala"
   },
+  "1259425": {
+    "fetched_at": "2026-09-28T12:52:57.031Z",
+    "name": "Puducherry",
+    "country": "India",
+    "admin1": "Puducherry"
+  },
   "1259652": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
     "name": "Pimpri",
@@ -4741,6 +4753,12 @@
     "name": "Latur",
     "country": "India",
     "admin1": "Maharashtra"
+  },
+  "1265157": {
+    "fetched_at": "2026-09-28T12:52:57.031Z",
+    "name": "Lalitpur",
+    "country": "India",
+    "admin1": "Uttar Pradesh"
   },
   "1265242": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -5717,6 +5735,12 @@
   "1277240": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Bānsbāria",
+    "country": "India",
+    "admin1": "West Bengal"
+  },
+  "1277264": {
+    "fetched_at": "2026-09-28T12:52:57.031Z",
+    "name": "Bānkura",
     "country": "India",
     "admin1": "West Bengal"
   },
@@ -9769,6 +9793,12 @@
     "name": "Lianjiang",
     "country": "China",
     "admin1": "Guangdong"
+  },
+  "1804153": {
+    "fetched_at": "2026-09-28T12:52:57.031Z",
+    "name": "Leshan",
+    "country": "China",
+    "admin1": "Sichuan"
   },
   "1804169": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -15631,6 +15661,12 @@
     "country": "Spain",
     "admin1": "Catalonia"
   },
+  "3130564": {
+    "fetched_at": "2026-09-28T12:52:57.031Z",
+    "name": "Alcorcón",
+    "country": "Spain",
+    "admin1": "Madrid"
+  },
   "3130583": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Alcobendas",
@@ -16134,6 +16170,12 @@
     "name": "Juazeiro",
     "country": "Brazil",
     "admin1": "Estado de Bahia"
+  },
+  "3397277": {
+    "fetched_at": "2026-09-28T12:52:57.031Z",
+    "name": "João Pessoa",
+    "country": "Brazil",
+    "admin1": "Paraíba"
   },
   "3397838": {
     "fetched_at": "2026-07-05T15:56:50.764Z",
