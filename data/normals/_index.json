@@ -2153,6 +2153,12 @@
     "country": "Russia",
     "admin1": "Tatarstan Republic"
   },
+  "554840": {
+    "fetched_at": "2026-10-02T20:18:35.310Z",
+    "name": "Izhevsk",
+    "country": "Russia",
+    "admin1": "Udmurtiya Republic"
+  },
   "555129": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Ivanovskoye",
@@ -8948,6 +8954,12 @@
     "country": "China",
     "admin1": "Hubei"
   },
+  "1790920": {
+    "fetched_at": "2026-10-02T20:18:35.310Z",
+    "name": "Wushan",
+    "country": "China",
+    "admin1": "Chongqing Municipality"
+  },
   "1790923": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Wuxi",
@@ -15475,6 +15487,12 @@
     "country": "Poland",
     "admin1": "Silesia"
   },
+  "3083271": {
+    "fetched_at": "2026-10-02T20:18:35.310Z",
+    "name": "Torun",
+    "country": "Poland",
+    "admin1": "Kujawsko-Pomorskie"
+  },
   "3083829": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Szczecin",
@@ -16650,6 +16668,12 @@
     "name": "Teresópolis",
     "country": "Brazil",
     "admin1": "Rio de Janeiro"
+  },
+  "3446621": {
+    "fetched_at": "2026-10-02T20:18:35.310Z",
+    "name": "Teófilo Otoni",
+    "country": "Brazil",
+    "admin1": "Minas Gerais"
   },
   "3446682": {
     "fetched_at": "2026-09-05T18:36:25.616Z",
@@ -20730,6 +20754,12 @@
     "name": "Delta",
     "country": "Canada",
     "admin1": "British Columbia"
+  },
+  "5946768": {
+    "fetched_at": "2026-10-02T20:18:35.310Z",
+    "name": "Edmonton",
+    "country": "Canada",
+    "admin1": "Alberta"
   },
   "5950268": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
