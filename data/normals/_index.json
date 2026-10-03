@@ -4196,6 +4196,12 @@
     "country": "India",
     "admin1": "Meghalaya"
   },
+  "1256525": {
+    "fetched_at": "2026-10-03T10:41:08.504Z",
+    "name": "Siliguri",
+    "country": "India",
+    "admin1": "West Bengal"
+  },
   "1256639": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Shāntipur",
@@ -4723,6 +4729,12 @@
     "name": "Chennai",
     "country": "India",
     "admin1": "Tamil Nadu"
+  },
+  "1264543": {
+    "fetched_at": "2026-10-03T10:41:08.504Z",
+    "name": "Madhyamgram",
+    "country": "India",
+    "admin1": "West Bengal"
   },
   "1264621": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -5753,6 +5765,12 @@
   "1277264": {
     "fetched_at": "2026-09-28T12:52:57.031Z",
     "name": "Bānkura",
+    "country": "India",
+    "admin1": "West Bengal"
+  },
+  "1277324": {
+    "fetched_at": "2026-10-03T10:41:08.504Z",
+    "name": "Bangaon",
     "country": "India",
     "admin1": "West Bengal"
   },
@@ -16236,6 +16254,12 @@
     "name": "Itacoatiara",
     "country": "Brazil",
     "admin1": "Amazonas"
+  },
+  "3397909": {
+    "fetched_at": "2026-10-03T10:41:08.504Z",
+    "name": "Itapipoca",
+    "country": "Brazil",
+    "admin1": "Ceará"
   },
   "3397967": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
