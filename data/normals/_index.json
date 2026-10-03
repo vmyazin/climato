@@ -5048,6 +5048,12 @@
     "country": "India",
     "admin1": "Manipur"
   },
+  "1269834": {
+    "fetched_at": "2026-10-03T00:01:49.663Z",
+    "name": "Ichalkaranji",
+    "country": "India",
+    "admin1": "Maharashtra"
+  },
   "1269843": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Hyderabad",
@@ -12794,6 +12800,12 @@
     "country": "Libya",
     "admin1": "Al Marqab"
   },
+  "2219960": {
+    "fetched_at": "2026-10-03T00:01:49.663Z",
+    "name": "Al Jadīd",
+    "country": "Libya",
+    "admin1": "Sabha District"
+  },
   "2224827": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Ngaoundéré",
@@ -15739,6 +15751,12 @@
     "country": "Italy",
     "admin1": "Friuli Venezia Giulia"
   },
+  "3165185": {
+    "fetched_at": "2026-10-03T00:01:49.663Z",
+    "name": "Trieste",
+    "country": "Italy",
+    "admin1": "Friuli Venezia Giulia"
+  },
   "3165243": {
     "fetched_at": "2026-09-17T05:32:19.411Z",
     "name": "Trento",
@@ -17850,6 +17868,12 @@
     "name": "Apucarana",
     "country": "Brazil",
     "admin1": "Paraná"
+  },
+  "3472177": {
+    "fetched_at": "2026-10-03T00:01:49.663Z",
+    "name": "Angra dos Reis",
+    "country": "Brazil",
+    "admin1": "Rio de Janeiro"
   },
   "3472287": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -22608,6 +22632,12 @@
     "name": "Águas Claras",
     "country": "Brazil",
     "admin1": "Federal District"
+  },
+  "12450887": {
+    "fetched_at": "2026-10-03T00:01:49.663Z",
+    "name": "Shuanglonghu",
+    "country": "China",
+    "admin1": "Chongqing Municipality"
   },
   "12489673": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
