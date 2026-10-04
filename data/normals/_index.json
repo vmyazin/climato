@@ -4400,6 +4400,12 @@
     "country": "India",
     "admin1": "West Bengal"
   },
+  "1259166": {
+    "fetched_at": "2026-10-04T12:53:13.813Z",
+    "name": "Purnia",
+    "country": "India",
+    "admin1": "Bihar"
+  },
   "1259239": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Punāsa",
@@ -6734,6 +6740,12 @@
     "country": "Vietnam",
     "admin1": "Ho Chi Minh City (HCMC)"
   },
+  "1570656": {
+    "fetched_at": "2026-10-04T12:53:13.813Z",
+    "name": "Phúc Yên",
+    "country": "Vietnam",
+    "admin1": "Phu Tho"
+  },
   "1571058": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Phan Thiết",
@@ -8077,6 +8089,12 @@
     "name": "Dasmariñas",
     "country": "Philippines",
     "admin1": "Calabarzon"
+  },
+  "1716198": {
+    "fetched_at": "2026-10-04T12:53:13.813Z",
+    "name": "Dagupan",
+    "country": "Philippines",
+    "admin1": "Ilocos"
   },
   "1717641": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -10926,6 +10944,12 @@
     "country": "South Korea",
     "admin1": "Incheon"
   },
+  "1845136": {
+    "fetched_at": "2026-10-04T12:53:13.813Z",
+    "name": "Chuncheon",
+    "country": "South Korea",
+    "admin1": "Gangwon-do"
+  },
   "1845457": {
     "fetched_at": "2026-09-04T15:10:30.811Z",
     "name": "Jeonju",
@@ -10991,6 +11015,12 @@
     "name": "Uji",
     "country": "Japan",
     "admin1": "Kyoto"
+  },
+  "1849429": {
+    "fetched_at": "2026-10-04T12:53:13.813Z",
+    "name": "Ueda",
+    "country": "Japan",
+    "admin1": "Nagano"
   },
   "1849498": {
     "fetched_at": "2026-09-18T17:55:35.143Z",
@@ -14551,6 +14581,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2643097": {
+    "fetched_at": "2026-10-04T12:53:13.813Z",
+    "name": "Mansfield",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2643123": {
     "fetched_at": "2026-08-26T21:19:43.452Z",
     "name": "Manchester",
@@ -14604,6 +14640,12 @@
     "name": "Glasgow",
     "country": "United Kingdom",
     "admin1": "Scotland"
+  },
+  "2649808": {
+    "fetched_at": "2026-10-04T12:53:13.813Z",
+    "name": "Exeter",
+    "country": "United Kingdom",
+    "admin1": "England"
   },
   "2651123": {
     "fetched_at": "2026-09-24T01:42:01.057Z",
@@ -15358,6 +15400,12 @@
   "2990999": {
     "fetched_at": "2026-09-04T06:34:02.423Z",
     "name": "Nancy",
+    "country": "France",
+    "admin1": "Grand Est"
+  },
+  "2991214": {
+    "fetched_at": "2026-10-04T12:53:13.813Z",
+    "name": "Mulhouse",
     "country": "France",
     "admin1": "Grand Est"
   },
@@ -18055,6 +18103,12 @@
     "country": "Mexico",
     "admin1": "México"
   },
+  "3515463": {
+    "fetched_at": "2026-10-04T12:53:13.813Z",
+    "name": "Tláhuac",
+    "country": "Mexico",
+    "admin1": "Mexico City"
+  },
   "3515696": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
     "name": "Teziutlán",
@@ -18172,6 +18226,12 @@
   "3530049": {
     "fetched_at": "2026-09-03T01:33:12.533Z",
     "name": "Delegación Cuajimalpa de Morelos",
+    "country": "Mexico",
+    "admin1": "Mexico City"
+  },
+  "3530139": {
+    "fetched_at": "2026-10-04T12:53:13.813Z",
+    "name": "Coyoacán",
     "country": "Mexico",
     "admin1": "Mexico City"
   },
