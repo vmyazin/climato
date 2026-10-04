@@ -1271,6 +1271,12 @@
     "country": "Ethiopia",
     "admin1": "Oromiya"
   },
+  "330186": {
+    "fetched_at": "2026-10-04T20:30:51.663Z",
+    "name": "Nazrēt",
+    "country": "Ethiopia",
+    "admin1": "Oromiya"
+  },
   "333373": {
     "fetched_at": "2026-09-04T21:04:35.522Z",
     "name": "Kombolcha",
@@ -6104,6 +6110,12 @@
     "country": "Nepal",
     "admin1": "Lumbini Province"
   },
+  "1283582": {
+    "fetched_at": "2026-10-04T20:30:51.663Z",
+    "name": "Biratnagar",
+    "country": "Nepal",
+    "admin1": "Koshi"
+  },
   "1285173": {
     "fetched_at": "2026-09-01T05:45:57.153Z",
     "name": "Yenangyaung",
@@ -8473,6 +8485,12 @@
     "name": "Zitong",
     "country": "China",
     "admin1": "Chongqing Municipality"
+  },
+  "1783745": {
+    "fetched_at": "2026-10-04T20:30:51.663Z",
+    "name": "Zigong",
+    "country": "China",
+    "admin1": "Sichuan"
   },
   "1783763": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
@@ -15949,6 +15967,12 @@
     "country": "Italy",
     "admin1": "Tuscany"
   },
+  "3176219": {
+    "fetched_at": "2026-10-04T20:30:51.663Z",
+    "name": "Genoa",
+    "country": "Italy",
+    "admin1": "Liguria"
+  },
   "3176885": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
     "name": "Foggia",
@@ -20305,6 +20329,12 @@
     "country": "United States",
     "admin1": "Texas"
   },
+  "4744091": {
+    "fetched_at": "2026-10-04T20:30:51.663Z",
+    "name": "Alexandria",
+    "country": "United States",
+    "admin1": "Virginia"
+  },
   "4744709": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Arlington",
@@ -20348,7 +20378,7 @@
     "admin1": "Connecticut"
   },
   "4845193": {
-    "fetched_at": "2026-10-04T17:06:51.466Z",
+    "fetched_at": "2026-10-04T20:30:51.663Z",
     "name": "Waterbury",
     "country": "United States",
     "admin1": "Connecticut"
@@ -20686,6 +20716,12 @@
   "5374732": {
     "fetched_at": "2026-09-26T10:19:44.507Z",
     "name": "Moreno Valley",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5378538": {
+    "fetched_at": "2026-10-04T20:30:51.663Z",
+    "name": "Oakland",
     "country": "United States",
     "admin1": "California"
   },
@@ -21240,6 +21276,12 @@
     "name": "Itaim Paulista",
     "country": "Brazil",
     "admin1": "São Paulo"
+  },
+  "6317344": {
+    "fetched_at": "2026-10-04T20:30:51.663Z",
+    "name": "Jaboatão dos Guararapes",
+    "country": "Brazil",
+    "admin1": "Pernambuco"
   },
   "6317464": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
