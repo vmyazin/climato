@@ -6332,6 +6332,12 @@
     "country": "Russia",
     "admin1": "Sverdlovsk Oblast"
   },
+  "1488754": {
+    "fetched_at": "2026-10-05T02:27:26.324Z",
+    "name": "Tyumen",
+    "country": "Russia",
+    "admin1": "Tyumen Oblast"
+  },
   "1489530": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Tobolsk",
@@ -8375,6 +8381,12 @@
   "1735153": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Sungai Buloh",
+    "country": "Malaysia",
+    "admin1": "Selangor"
+  },
+  "1735158": {
+    "fetched_at": "2026-10-05T02:27:26.324Z",
+    "name": "Petaling Jaya",
     "country": "Malaysia",
     "admin1": "Selangor"
   },
