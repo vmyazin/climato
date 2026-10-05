@@ -7148,17 +7148,35 @@
     "country": "Thailand",
     "admin1": "Bangkok"
   },
+  "1621177": {
+    "fetched_at": "2026-10-05T18:52:46.565Z",
+    "name": "Yogyakarta",
+    "country": "Indonesia",
+    "admin1": "Special Region of Yogyakarta"
+  },
   "1621884": {
     "fetched_at": "2026-09-05T20:45:00.477Z",
     "name": "Watampone",
     "country": "Indonesia",
     "admin1": "South Sulawesi"
   },
+  "1622636": {
+    "fetched_at": "2026-10-05T18:52:46.565Z",
+    "name": "Ungaran",
+    "country": "Indonesia",
+    "admin1": "Central Java"
+  },
   "1622786": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Makassar",
     "country": "Indonesia",
     "admin1": "South Sulawesi"
+  },
+  "1623834": {
+    "fetched_at": "2026-10-05T18:52:46.565Z",
+    "name": "Timika",
+    "country": "Indonesia",
+    "admin1": "Central Papua"
   },
   "1624041": {
     "fetched_at": "2026-09-08T11:46:45.677Z",
@@ -7225,6 +7243,12 @@
     "name": "Subang",
     "country": "Indonesia",
     "admin1": "West Java"
+  },
+  "1626542": {
+    "fetched_at": "2026-10-05T18:52:46.565Z",
+    "name": "Sorong",
+    "country": "Indonesia",
+    "admin1": "Southwest Papua"
   },
   "1626560": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -7345,6 +7369,12 @@
     "name": "Pekanbaru",
     "country": "Indonesia",
     "admin1": "Riau"
+  },
+  "1631766": {
+    "fetched_at": "2026-10-05T18:52:46.565Z",
+    "name": "Pekalongan",
+    "country": "Indonesia",
+    "admin1": "Central Java"
   },
   "1631992": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -7508,6 +7538,12 @@
     "country": "Indonesia",
     "admin1": "Southeast Sulawesi"
   },
+  "1640581": {
+    "fetched_at": "2026-10-05T18:52:46.565Z",
+    "name": "Kedungwuni",
+    "country": "Indonesia",
+    "admin1": "Central Java"
+  },
   "1640660": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Kediri",
@@ -7531,6 +7567,12 @@
     "name": "Jepara",
     "country": "Indonesia",
     "admin1": "Central Java"
+  },
+  "1642588": {
+    "fetched_at": "2026-10-05T18:52:46.565Z",
+    "name": "Jember",
+    "country": "Indonesia",
+    "admin1": "East Java"
   },
   "1642858": {
     "fetched_at": "2026-09-20T12:38:37.123Z",
@@ -7615,6 +7657,12 @@
     "name": "Cilegon",
     "country": "Indonesia",
     "admin1": "Banten"
+  },
+  "1646559": {
+    "fetched_at": "2026-10-05T18:52:46.565Z",
+    "name": "Cilacap",
+    "country": "Indonesia",
+    "admin1": "Central Java"
   },
   "1646678": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -13249,6 +13297,12 @@
     "name": "Dabou",
     "country": "Ivory Coast",
     "admin1": "Lagunes District"
+  },
+  "2290956": {
+    "fetched_at": "2026-10-05T18:52:46.565Z",
+    "name": "Bouaké",
+    "country": "Ivory Coast",
+    "admin1": "Vallée du Bandama District"
   },
   "2293521": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
