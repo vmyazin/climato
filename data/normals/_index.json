@@ -4736,6 +4736,12 @@
     "country": "India",
     "admin1": "Karnataka"
   },
+  "1263834": {
+    "fetched_at": "2026-10-06T13:41:50.580Z",
+    "name": "Mandsaur",
+    "country": "India",
+    "admin1": "Madhya Pradesh"
+  },
   "1264111": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Māler Kotla",
@@ -5299,6 +5305,12 @@
     "name": "Ghaziabad",
     "country": "India",
     "admin1": "Uttar Pradesh"
+  },
+  "1271439": {
+    "fetched_at": "2026-10-06T13:41:50.580Z",
+    "name": "Gaya",
+    "country": "India",
+    "admin1": "Bihar"
   },
   "1271476": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
