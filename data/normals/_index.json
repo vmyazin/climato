@@ -20167,6 +20167,12 @@
     "country": "Mexico",
     "admin1": "Aguascalientes"
   },
+  "4076598": {
+    "fetched_at": "2026-10-07T09:23:45.055Z",
+    "name": "Mobile",
+    "country": "United States",
+    "admin1": "Alabama"
+  },
   "4151909": {
     "fetched_at": "2026-09-13T12:21:01.015Z",
     "name": "Coral Springs",
@@ -20592,6 +20598,12 @@
     "name": "Omaha",
     "country": "United States",
     "admin1": "Nebraska"
+  },
+  "5089178": {
+    "fetched_at": "2026-10-07T09:23:45.055Z",
+    "name": "Manchester",
+    "country": "United States",
+    "admin1": "New Hampshire"
   },
   "5097598": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
