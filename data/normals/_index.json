@@ -20323,6 +20323,12 @@
     "country": "United States",
     "admin1": "North Carolina"
   },
+  "4469146": {
+    "fetched_at": "2026-10-07T17:03:12.206Z",
+    "name": "Greensboro",
+    "country": "United States",
+    "admin1": "North Carolina"
+  },
   "4499379": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Wilmington",
@@ -20866,6 +20872,12 @@
   "5385955": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
     "name": "Rancho Cucamonga",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5387288": {
+    "fetched_at": "2026-10-07T17:03:12.206Z",
+    "name": "Rialto",
     "country": "United States",
     "admin1": "California"
   },
