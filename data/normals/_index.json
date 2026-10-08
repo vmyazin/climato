@@ -15055,6 +15055,12 @@
     "country": "Austria",
     "admin1": "State of Vienna"
   },
+  "2765028": {
+    "fetched_at": "2026-10-08T21:49:31.881Z",
+    "name": "Simmering",
+    "country": "Austria",
+    "admin1": "State of Vienna"
+  },
   "2766824": {
     "fetched_at": "2026-08-29T22:50:00.152Z",
     "name": "Salzburg",
@@ -19416,6 +19422,12 @@
     "name": "Chía",
     "country": "Colombia",
     "admin1": "Cundinamarca"
+  },
+  "3687230": {
+    "fetched_at": "2026-10-08T21:49:31.881Z",
+    "name": "Cartago",
+    "country": "Colombia",
+    "admin1": "Valle del Cauca Department"
   },
   "3687925": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
