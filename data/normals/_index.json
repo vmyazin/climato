@@ -689,6 +689,12 @@
     "country": "Tanzania",
     "admin1": "Njombe"
   },
+  "157738": {
+    "fetched_at": "2026-10-08T16:59:47.707Z",
+    "name": "Kigoma",
+    "country": "Tanzania",
+    "admin1": "Kigoma"
+  },
   "158027": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
     "name": "Kibaha",
@@ -10040,6 +10046,12 @@
     "country": "China",
     "admin1": "Shandong"
   },
+  "1804586": {
+    "fetched_at": "2026-10-08T16:59:47.707Z",
+    "name": "Laiyang",
+    "country": "China",
+    "admin1": "Shandong"
+  },
   "1804591": {
     "fetched_at": "2026-09-20T12:38:37.123Z",
     "name": "Laiwu",
@@ -10237,6 +10249,12 @@
     "name": "Jiading",
     "country": "China",
     "admin1": "Shanghai"
+  },
+  "1806535": {
+    "fetched_at": "2026-10-08T16:59:47.707Z",
+    "name": "Huzhou",
+    "country": "China",
+    "admin1": "Zhejiang"
   },
   "1806602": {
     "fetched_at": "2026-09-08T22:03:16.689Z",
@@ -12152,6 +12170,12 @@
     "country": "China",
     "admin1": "Heilongjiang"
   },
+  "2033168": {
+    "fetched_at": "2026-10-08T16:59:47.707Z",
+    "name": "Zhaodong",
+    "country": "China",
+    "admin1": "Heilongjiang"
+  },
   "2033196": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
     "name": "Zhangjiakou",
@@ -13424,6 +13448,12 @@
     "country": "Nigeria",
     "admin1": "Akwa Ibom State"
   },
+  "2320576": {
+    "fetched_at": "2026-10-08T16:59:47.707Z",
+    "name": "Umuahia",
+    "country": "Nigeria",
+    "admin1": "Abia State"
+  },
   "2320831": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
     "name": "Ugep",
@@ -13621,6 +13651,12 @@
     "name": "Ilorin",
     "country": "Nigeria",
     "admin1": "Kwara State"
+  },
+  "2337704": {
+    "fetched_at": "2026-10-08T16:59:47.707Z",
+    "name": "Ilesa",
+    "country": "Nigeria",
+    "admin1": "Osun State"
   },
   "2337765": {
     "fetched_at": "2026-09-04T23:27:11.474Z",
@@ -20524,6 +20560,12 @@
   "4835797": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Hartford",
+    "country": "United States",
+    "admin1": "Connecticut"
+  },
+  "4839745": {
+    "fetched_at": "2026-10-08T16:59:47.707Z",
+    "name": "North Stamford",
     "country": "United States",
     "admin1": "Connecticut"
   },
