@@ -11574,6 +11574,12 @@
     "country": "Japan",
     "admin1": "Osaka"
   },
+  "1859393": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Kisarazu",
+    "country": "Japan",
+    "admin1": "Chiba"
+  },
   "1859405": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
     "name": "Kiryū",
@@ -11595,6 +11601,12 @@
   "1859730": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Kawaguchi",
+    "country": "Japan",
+    "admin1": "Saitama"
+  },
+  "1859740": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Kawagoe",
     "country": "Japan",
     "admin1": "Saitama"
   },
@@ -11953,6 +11965,11 @@
   "1880271": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Serangoon",
+    "country": "Singapore"
+  },
+  "1880348": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Punggol",
     "country": "Singapore"
   },
   "1880628": {
@@ -13502,6 +13519,12 @@
     "country": "Nigeria",
     "admin1": "Gombe State"
   },
+  "2325200": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Oyo",
+    "country": "Nigeria",
+    "admin1": "Oyo State"
+  },
   "2325314": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Owo",
@@ -13543,6 +13566,12 @@
     "name": "Okigwe",
     "country": "Nigeria",
     "admin1": "Imo State"
+  },
+  "2327220": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Okene",
+    "country": "Nigeria",
+    "admin1": "Kogi State"
   },
   "2327735": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
@@ -13621,6 +13650,12 @@
     "name": "Kaduna",
     "country": "Nigeria",
     "admin1": "Kaduna State"
+  },
+  "2335953": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Jos",
+    "country": "Nigeria",
+    "admin1": "Plateau State"
   },
   "2336056": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
@@ -13717,6 +13752,12 @@
     "name": "Gusau",
     "country": "Nigeria",
     "admin1": "Zamfara State"
+  },
+  "2341355": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Gbongan",
+    "country": "Nigeria",
+    "admin1": "Osun State"
   },
   "2341374": {
     "fetched_at": "2026-09-05T13:36:47.520Z",
@@ -20437,6 +20478,12 @@
     "country": "United States",
     "admin1": "Pennsylvania"
   },
+  "4589387": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "North Charleston",
+    "country": "United States",
+    "admin1": "South Carolina"
+  },
   "4612862": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Chattanooga",
@@ -20446,6 +20493,12 @@
   "4613868": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Clarksville",
+    "country": "United States",
+    "admin1": "Tennessee"
+  },
+  "4619947": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "East Chattanooga",
     "country": "United States",
     "admin1": "Tennessee"
   },
@@ -20476,6 +20529,12 @@
   "4683416": {
     "fetched_at": "2026-09-13T06:49:09.028Z",
     "name": "Corpus Christi",
+    "country": "United States",
+    "admin1": "Texas"
+  },
+  "4684724": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Cypress",
     "country": "United States",
     "admin1": "Texas"
   },
@@ -20713,6 +20772,12 @@
     "country": "United States",
     "admin1": "New York"
   },
+  "5110629": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Buffalo",
+    "country": "United States",
+    "admin1": "New York"
+  },
   "5113779": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Corona",
@@ -20854,6 +20919,12 @@
   "5324200": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Antioch",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5325738": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Bakersfield",
     "country": "United States",
     "admin1": "California"
   },
@@ -21001,6 +21072,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5393015": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Santa Clara",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5393049": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Santa Clarita",
@@ -21091,9 +21168,21 @@
     "country": "United States",
     "admin1": "Nevada"
   },
+  "5513343": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Sunrise Manor",
+    "country": "United States",
+    "admin1": "Nevada"
+  },
   "5516233": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Amarillo",
+    "country": "United States",
+    "admin1": "Texas"
+  },
+  "5520993": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "El Paso",
     "country": "United States",
     "admin1": "Texas"
   },
@@ -21126,6 +21215,12 @@
     "name": "Greeley",
     "country": "United States",
     "admin1": "Colorado"
+  },
+  "5586437": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Boise",
+    "country": "United States",
+    "admin1": "Idaho"
   },
   "5729485": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -23040,6 +23135,12 @@
     "name": "Marne La Vallée",
     "country": "France",
     "admin1": "Île-de-France Region"
+  },
+  "12324302": {
+    "fetched_at": "2026-10-09T01:30:15.207Z",
+    "name": "Yidu",
+    "country": "China",
+    "admin1": "Shandong"
   },
   "12358476": {
     "fetched_at": "2026-09-04T15:10:30.811Z",
