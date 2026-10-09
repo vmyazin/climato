@@ -6974,6 +6974,12 @@
     "country": "Vietnam",
     "admin1": "Tay Ninh"
   },
+  "1586350": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Cam Ranh",
+    "country": "Vietnam",
+    "admin1": "Khanh Hoa"
+  },
   "1586357": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Cẩm Phả Mines",
@@ -9656,6 +9662,12 @@
     "country": "China",
     "admin1": "Jiangxi"
   },
+  "1798655": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Pingxiang",
+    "country": "China",
+    "admin1": "Guangxi"
+  },
   "1798713": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Pingshan",
@@ -11358,6 +11370,12 @@
     "country": "Japan",
     "admin1": "Gifu"
   },
+  "1854747": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Odawara",
+    "country": "Japan",
+    "admin1": "Kanagawa"
+  },
   "1854902": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Numazu",
@@ -11783,6 +11801,12 @@
     "name": "Hirakata",
     "country": "Japan",
     "admin1": "Osaka"
+  },
+  "1862599": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Hino",
+    "country": "Japan",
+    "admin1": "Tokyo"
   },
   "1862627": {
     "fetched_at": "2026-09-27T08:35:36.077Z",
@@ -12864,6 +12888,12 @@
     "name": "Hirosaki",
     "country": "Japan",
     "admin1": "Aomori"
+  },
+  "2130188": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Hakodate",
+    "country": "Japan",
+    "admin1": "Hokkaido"
   },
   "2130203": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
@@ -14633,6 +14663,12 @@
     "name": "Beni Mellal",
     "country": "Morocco",
     "admin1": "Beni Mellal-Khenifra"
+  },
+  "2556272": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Berrechid",
+    "country": "Morocco",
+    "admin1": "Casablanca-Settat"
   },
   "2558470": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
@@ -18834,6 +18870,12 @@
     "country": "Honduras",
     "admin1": "Atlántida Department"
   },
+  "3610613": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "El Progreso",
+    "country": "Honduras",
+    "admin1": "Yoro Department"
+  },
   "3613533": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Choloma",
@@ -19223,6 +19265,12 @@
     "name": "Zipaquirá",
     "country": "Colombia",
     "admin1": "Cundinamarca"
+  },
+  "3665688": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Yopal",
+    "country": "Colombia",
+    "admin1": "Casanare Department"
   },
   "3665900": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -20508,6 +20556,12 @@
     "country": "United States",
     "admin1": "Tennessee"
   },
+  "4645421": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "New South Memphis",
+    "country": "United States",
+    "admin1": "Tennessee"
+  },
   "4669635": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Abilene",
@@ -20703,6 +20757,12 @@
   "4951305": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "South Boston",
+    "country": "United States",
+    "admin1": "Massachusetts"
+  },
+  "4951788": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Springfield",
     "country": "United States",
     "admin1": "Massachusetts"
   },
@@ -20940,9 +21000,21 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5341430": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Daly City",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5343858": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Downey",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5344994": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "East Los Angeles",
     "country": "United States",
     "admin1": "California"
   },
@@ -22644,6 +22716,12 @@
     "country": "China",
     "admin1": "Jiangsu"
   },
+  "10942283": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Jinzhong",
+    "country": "China",
+    "admin1": "Shanxi"
+  },
   "10942359": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Baoji",
@@ -22787,6 +22865,12 @@
     "name": "Fuchū",
     "country": "Japan",
     "admin1": "Tokyo"
+  },
+  "11612347": {
+    "fetched_at": "2026-10-09T08:02:58.092Z",
+    "name": "Narashino",
+    "country": "Japan",
+    "admin1": "Chiba"
   },
   "11612537": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
