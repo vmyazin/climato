@@ -6914,6 +6914,12 @@
     "country": "Vietnam",
     "admin1": "Dong Thap"
   },
+  "1580410": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Ha Long",
+    "country": "Vietnam",
+    "admin1": "Quảng Ninh"
+  },
   "1581047": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
     "name": "Ha Tinh",
@@ -10592,6 +10598,12 @@
     "country": "China",
     "admin1": "Jiangsu"
   },
+  "1811720": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Enshi",
+    "country": "China",
+    "admin1": "Hubei"
+  },
   "1811729": {
     "fetched_at": "2026-09-03T18:54:42.659Z",
     "name": "Encheng",
@@ -10645,6 +10657,12 @@
     "name": "Dezhou",
     "country": "China",
     "admin1": "Shandong"
+  },
+  "1812961": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Deyang",
+    "country": "China",
+    "admin1": "Sichuan"
   },
   "1812990": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -12419,6 +12437,12 @@
     "country": "China",
     "admin1": "Jilin"
   },
+  "2035513": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Panshan",
+    "country": "China",
+    "admin1": "Liaoning"
+  },
   "2035610": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Nehe",
@@ -12946,6 +12970,12 @@
     "name": "Hachinohe",
     "country": "Japan",
     "admin1": "Aomori"
+  },
+  "2130404": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Ebetsu",
+    "country": "Japan",
+    "admin1": "Hokkaido"
   },
   "2130629": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -14707,6 +14737,12 @@
   "2553604": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
     "name": "Casablanca",
+    "country": "Morocco",
+    "admin1": "Casablanca-Settat"
+  },
+  "2554006": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Bouskoura",
     "country": "Morocco",
     "admin1": "Casablanca-Settat"
   },
@@ -20398,6 +20434,12 @@
     "country": "United States",
     "admin1": "Alabama"
   },
+  "4148757": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Brandon",
+    "country": "United States",
+    "admin1": "Florida"
+  },
   "4151909": {
     "fetched_at": "2026-09-13T12:21:01.015Z",
     "name": "Coral Springs",
@@ -20449,6 +20491,12 @@
   "4168782": {
     "fetched_at": "2026-05-09T08:28:20.476Z",
     "name": "Plantation",
+    "country": "United States",
+    "admin1": "Florida"
+  },
+  "4169171": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Port Saint Lucie",
     "country": "United States",
     "admin1": "Florida"
   },
@@ -20542,6 +20590,12 @@
     "country": "United States",
     "admin1": "Missouri"
   },
+  "4393217": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Kansas City",
+    "country": "United States",
+    "admin1": "Missouri"
+  },
   "4407066": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "St Louis",
@@ -20581,6 +20635,12 @@
   "4471025": {
     "fetched_at": "2026-10-08T09:33:35.884Z",
     "name": "High Point",
+    "country": "United States",
+    "admin1": "North Carolina"
+  },
+  "4498303": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "West Raleigh",
     "country": "United States",
     "admin1": "North Carolina"
   },
@@ -20878,6 +20938,12 @@
     "country": "United States",
     "admin1": "Michigan"
   },
+  "5011148": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Sterling Heights",
+    "country": "United States",
+    "admin1": "Michigan"
+  },
   "5014051": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Warren",
@@ -20985,6 +21051,12 @@
     "name": "Akron",
     "country": "United States",
     "admin1": "Ohio"
+  },
+  "5224151": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Providence",
+    "country": "United States",
+    "admin1": "Rhode Island"
   },
   "5231851": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -21196,6 +21268,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5377995": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Norwalk",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5378538": {
     "fetched_at": "2026-10-04T20:30:51.663Z",
     "name": "Oakland",
@@ -21283,6 +21361,12 @@
   "5393049": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Santa Clarita",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5393180": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Santa Maria",
     "country": "United States",
     "admin1": "California"
   },
@@ -22029,6 +22113,12 @@
     "name": "Yachiyo",
     "country": "Japan",
     "admin1": "Chiba"
+  },
+  "6822188": {
+    "fetched_at": "2026-10-09T20:21:40.660Z",
+    "name": "Ōsaki",
+    "country": "Japan",
+    "admin1": "Miyagi"
   },
   "6822216": {
     "fetched_at": "2026-09-23T20:43:12.539Z",
