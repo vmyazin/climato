@@ -6698,6 +6698,12 @@
     "country": "Vietnam",
     "admin1": "Phu Tho"
   },
+  "1563287": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Tuyen Quang",
+    "country": "Vietnam",
+    "admin1": "Tuyen Quang"
+  },
   "1564064": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
     "name": "Long Bien",
@@ -10802,6 +10808,12 @@
     "country": "China",
     "admin1": "Chongqing Municipality"
   },
+  "1815482": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Changyi",
+    "country": "China",
+    "admin1": "Shandong"
+  },
   "1815577": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Changsha",
@@ -11135,6 +11147,12 @@
     "name": "Changwon",
     "country": "South Korea",
     "admin1": "Gyeongsangnam-do"
+  },
+  "1847963": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Atsugi",
+    "country": "Japan",
+    "admin1": "Kanagawa"
   },
   "1847966": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -11483,6 +11501,12 @@
     "name": "Matsudo",
     "country": "Japan",
     "admin1": "Chiba"
+  },
+  "1857568": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Matsubara",
+    "country": "Japan",
+    "admin1": "Osaka"
   },
   "1857665": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
@@ -11996,9 +12020,19 @@
     "name": "Punggol",
     "country": "Singapore"
   },
+  "1880574": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Kampong Pasir Ris",
+    "country": "Singapore"
+  },
   "1880628": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
     "name": "Kallang",
+    "country": "Singapore"
+  },
+  "1880668": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Geylang",
     "country": "Singapore"
   },
   "1881953": {
@@ -12114,6 +12148,12 @@
     "name": "Wakayama",
     "country": "Japan",
     "admin1": "Wakayama"
+  },
+  "1926054": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Saijō",
+    "country": "Japan",
+    "admin1": "Ehime"
   },
   "1926099": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
@@ -12798,6 +12838,12 @@
     "name": "Sendai",
     "country": "Japan",
     "admin1": "Miyagi"
+  },
+  "2111220": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Sakura",
+    "country": "Japan",
+    "admin1": "Chiba"
   },
   "2111684": {
     "fetched_at": "2026-08-28T19:37:43.002Z",
@@ -14154,6 +14200,12 @@
     "country": "Tunisia",
     "admin1": "Sousse Governorate"
   },
+  "2467454": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Sfax",
+    "country": "Tunisia",
+    "admin1": "Sfax Governorate"
+  },
   "2473164": {
     "fetched_at": "2026-09-17T10:28:59.390Z",
     "name": "Sejoumi",
@@ -14591,6 +14643,12 @@
     "name": "Nador",
     "country": "Morocco",
     "admin1": "Oriental"
+  },
+  "2542715": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Meknes",
+    "country": "Morocco",
+    "admin1": "Fes-Meknes"
   },
   "2543549": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
@@ -15863,6 +15921,12 @@
     "name": "Ostrava",
     "country": "Czechia",
     "admin1": "Moravian-Silesian Region"
+  },
+  "3071961": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Liberec",
+    "country": "Czechia",
+    "admin1": "Liberec Region"
   },
   "3080985": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -19602,6 +19666,12 @@
     "country": "Panama",
     "admin1": "Provincia de Panamá"
   },
+  "3718962": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Tigwav",
+    "country": "Haiti",
+    "admin1": "Ouest"
+  },
   "3719028": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Pétionville",
@@ -20352,6 +20422,12 @@
     "country": "United States",
     "admin1": "Florida"
   },
+  "4160021": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Jacksonville",
+    "country": "United States",
+    "admin1": "Florida"
+  },
   "4164138": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
     "name": "Miami",
@@ -20373,6 +20449,12 @@
   "4168782": {
     "fetched_at": "2026-05-09T08:28:20.476Z",
     "name": "Plantation",
+    "country": "United States",
+    "admin1": "Florida"
+  },
+  "4174715": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Tallahassee",
     "country": "United States",
     "admin1": "Florida"
   },
@@ -20399,6 +20481,12 @@
     "name": "Savannah",
     "country": "United States",
     "admin1": "Georgia"
+  },
+  "4276614": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Olathe",
+    "country": "United States",
+    "admin1": "Kansas"
   },
   "4276873": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -20502,6 +20590,12 @@
     "country": "United States",
     "admin1": "North Carolina"
   },
+  "4509177": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Columbus",
+    "country": "United States",
+    "admin1": "Ohio"
+  },
   "4531405": {
     "fetched_at": "2026-10-04T17:06:51.466Z",
     "name": "Broken Arrow",
@@ -20525,6 +20619,12 @@
     "name": "Philadelphia",
     "country": "United States",
     "admin1": "Pennsylvania"
+  },
+  "4574324": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Charleston",
+    "country": "United States",
+    "admin1": "South Carolina"
   },
   "4589387": {
     "fetched_at": "2026-10-09T01:30:15.207Z",
@@ -20898,6 +20998,12 @@
     "country": "United States",
     "admin1": "Wisconsin"
   },
+  "5263045": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Milwaukee",
+    "country": "United States",
+    "admin1": "Wisconsin"
+  },
   "5282804": {
     "fetched_at": "2026-09-20T07:07:12.701Z",
     "name": "Bridgeport",
@@ -20991,6 +21097,12 @@
   "5327684": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Berkeley",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5336269": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Chico",
     "country": "United States",
     "admin1": "California"
   },
@@ -21096,6 +21208,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5379513": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Orange",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5384170": {
     "fetched_at": "2026-10-03T21:50:37.208Z",
     "name": "Pomona",
@@ -21120,6 +21238,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5389489": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Sacramento",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5391710": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "San Bernardino",
@@ -21129,6 +21253,12 @@
   "5391959": {
     "fetched_at": "2026-05-02T22:10:05.270Z",
     "name": "San Francisco",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5392171": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "San Jose",
     "country": "United States",
     "admin1": "California"
   },
@@ -21171,6 +21301,12 @@
   "5402405": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Thousand Oaks",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5403022": {
+    "fetched_at": "2026-10-09T15:36:04.148Z",
+    "name": "Torrance",
     "country": "United States",
     "admin1": "California"
   },
