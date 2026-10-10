@@ -6524,6 +6524,12 @@
     "country": "Tajikistan",
     "admin1": "Sughd"
   },
+  "1514891": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Konibodom",
+    "country": "Tajikistan",
+    "admin1": "Sughd"
+  },
   "1514896": {
     "fetched_at": "2026-10-10T06:28:04.017Z",
     "name": "Isfara",
@@ -9248,6 +9254,12 @@
     "country": "China",
     "admin1": "Hubei"
   },
+  "1791249": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Wuhai",
+    "country": "China",
+    "admin1": "Inner Mongolia"
+  },
   "1791272": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Wugang",
@@ -10934,6 +10946,12 @@
     "country": "China",
     "admin1": "Shandong"
   },
+  "1816373": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Bijie",
+    "country": "China",
+    "admin1": "Guizhou"
+  },
   "1816440": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Bengbu",
@@ -11339,6 +11357,12 @@
     "name": "Takarazuka",
     "country": "Japan",
     "admin1": "Hyōgo"
+  },
+  "1851032": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Takaoka",
+    "country": "Japan",
+    "admin1": "Toyama"
   },
   "1851100": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
@@ -12077,6 +12101,11 @@
     "name": "Ulu Bedok",
     "country": "Singapore"
   },
+  "1880176": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Toa Payoh New Town",
+    "country": "Singapore"
+  },
   "1880252": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Singapore",
@@ -12172,6 +12201,12 @@
     "name": "Hwado",
     "country": "South Korea",
     "admin1": "Gyeonggi-do"
+  },
+  "1904564": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Bình Thạnh",
+    "country": "Vietnam",
+    "admin1": "Ho Chi Minh City (HCMC)"
   },
   "1907146": {
     "fetched_at": "2026-10-10T00:21:08.133Z",
@@ -19354,6 +19389,12 @@
     "country": "Ecuador",
     "admin1": "Guayas"
   },
+  "3654410": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Manta",
+    "country": "Ecuador",
+    "admin1": "Manabí"
+  },
   "3654533": {
     "fetched_at": "2026-09-24T20:48:54.936Z",
     "name": "Machala",
@@ -20668,6 +20709,12 @@
     "country": "United States",
     "admin1": "Missouri"
   },
+  "4391812": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Independence",
+    "country": "United States",
+    "admin1": "Missouri"
+  },
   "4393217": {
     "fetched_at": "2026-10-09T20:21:40.660Z",
     "name": "Kansas City",
@@ -20791,6 +20838,12 @@
   "4641239": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
     "name": "Memphis",
+    "country": "United States",
+    "admin1": "Tennessee"
+  },
+  "4644312": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Murfreesboro",
     "country": "United States",
     "admin1": "Tennessee"
   },
@@ -21094,6 +21147,12 @@
     "country": "United States",
     "admin1": "New Jersey"
   },
+  "5106834": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Albany",
+    "country": "United States",
+    "admin1": "New York"
+  },
   "5110302": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Brooklyn",
@@ -21382,6 +21441,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5364940": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Lancaster",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5368361": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Los Angeles",
@@ -21613,6 +21678,12 @@
   "5520993": {
     "fetched_at": "2026-10-09T01:30:15.207Z",
     "name": "El Paso",
+    "country": "United States",
+    "admin1": "Texas"
+  },
+  "5525577": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Lubbock",
     "country": "United States",
     "admin1": "Texas"
   },
@@ -22936,6 +23007,12 @@
     "country": "Vietnam",
     "admin1": "Ho Chi Minh City (HCMC)"
   },
+  "9645086": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Quận Ba",
+    "country": "Vietnam",
+    "admin1": "Ho Chi Minh City (HCMC)"
+  },
   "9827976": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
     "name": "Paltan",
@@ -23211,6 +23288,12 @@
     "name": "Jebel Ali",
     "country": "United Arab Emirates",
     "admin1": "Dubai"
+  },
+  "11611478": {
+    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "name": "Yamato",
+    "country": "Japan",
+    "admin1": "Kanagawa"
   },
   "11611487": {
     "fetched_at": "2026-09-19T23:40:00.767Z",
