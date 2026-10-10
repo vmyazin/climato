@@ -2549,6 +2549,12 @@
     "country": "Romania",
     "admin1": "Brașov County"
   },
+  "683902": {
+    "fetched_at": "2026-10-10T00:21:08.133Z",
+    "name": "Brăila",
+    "country": "Romania",
+    "admin1": "Brăila County"
+  },
   "685826": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Baia Mare",
@@ -10844,6 +10850,12 @@
     "country": "China",
     "admin1": "Shanghai Municipality"
   },
+  "1815669": {
+    "fetched_at": "2026-10-10T00:21:08.133Z",
+    "name": "Changle",
+    "country": "China",
+    "admin1": "Shandong"
+  },
   "1816080": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Cangzhou",
@@ -12119,9 +12131,21 @@
     "country": "South Korea",
     "admin1": "Gyeonggi-do"
   },
+  "1907146": {
+    "fetched_at": "2026-10-10T00:21:08.133Z",
+    "name": "Sayama",
+    "country": "Japan",
+    "admin1": "Saitama"
+  },
   "1907299": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Asaka",
+    "country": "Japan",
+    "admin1": "Saitama"
+  },
+  "1907301": {
+    "fetched_at": "2026-10-10T00:21:08.133Z",
+    "name": "Shimotoda",
     "country": "Japan",
     "admin1": "Saitama"
   },
@@ -20776,6 +20800,12 @@
     "country": "United States",
     "admin1": "Texas"
   },
+  "4700168": {
+    "fetched_at": "2026-10-10T00:21:08.133Z",
+    "name": "Irving",
+    "country": "United States",
+    "admin1": "Texas"
+  },
   "4703223": {
     "fetched_at": "2026-10-04T23:37:42.223Z",
     "name": "Killeen",
@@ -21232,6 +21262,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5351515": {
+    "fetched_at": "2026-10-10T00:21:08.133Z",
+    "name": "Garden Grove",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5355933": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
     "name": "Hayward",
@@ -21400,6 +21436,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5405380": {
+    "fetched_at": "2026-10-10T00:21:08.133Z",
+    "name": "Vallejo",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5406567": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Visalia",
@@ -21547,6 +21589,12 @@
   "5809844": {
     "fetched_at": "2026-09-24T23:34:51.004Z",
     "name": "Seattle",
+    "country": "United States",
+    "admin1": "Washington"
+  },
+  "5811696": {
+    "fetched_at": "2026-10-10T00:21:08.133Z",
+    "name": "Spokane",
     "country": "United States",
     "admin1": "Washington"
   },
