@@ -629,6 +629,12 @@
     "country": "Tanzania",
     "admin1": "Rukwa"
   },
+  "149879": {
+    "fetched_at": "2026-10-10T22:03:03.519Z",
+    "name": "Singida",
+    "country": "Tanzania",
+    "admin1": "Singida"
+  },
   "150006": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
     "name": "Shinyanga",
@@ -8131,6 +8137,12 @@
     "name": "Panabo",
     "country": "Philippines",
     "admin1": "Davao Region"
+  },
+  "1698829": {
+    "fetched_at": "2026-10-10T22:03:03.519Z",
+    "name": "Naga",
+    "country": "Philippines",
+    "admin1": "Bicol Region"
   },
   "1699054": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -23864,6 +23876,12 @@
     "name": "Kota Damansara",
     "country": "Malaysia",
     "admin1": "Selangor"
+  },
+  "12541728": {
+    "fetched_at": "2026-10-10T22:03:03.519Z",
+    "name": "South Fulton",
+    "country": "United States",
+    "admin1": "Georgia"
   },
   "12557764": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
