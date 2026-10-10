@@ -8144,6 +8144,12 @@
     "country": "Philippines",
     "admin1": "Calabarzon"
   },
+  "1699755": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Midsayap",
+    "country": "Philippines",
+    "admin1": "Soccsksargen"
+  },
   "1699802": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
     "name": "Meycauayan",
@@ -8197,6 +8203,12 @@
     "name": "Malita",
     "country": "Philippines",
     "admin1": "Davao Region"
+  },
+  "1703417": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Makati City",
+    "country": "Philippines",
+    "admin1": "National Capital Region"
   },
   "1706090": {
     "fetched_at": "2026-09-18T17:55:35.143Z",
@@ -8293,6 +8305,12 @@
     "name": "Dagupan",
     "country": "Philippines",
     "admin1": "Ilocos"
+  },
+  "1717512": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Cebu City",
+    "country": "Philippines",
+    "admin1": "Central Visayas"
   },
   "1717641": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -12466,6 +12484,12 @@
     "country": "China",
     "admin1": "Liaoning"
   },
+  "2034655": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Suihua",
+    "country": "China",
+    "admin1": "Heilongjiang"
+  },
   "2034714": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Siping",
@@ -12573,6 +12597,12 @@
     "name": "Longjing",
     "country": "China",
     "admin1": "Jilin"
+  },
+  "2035970": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Longjiang",
+    "country": "China",
+    "admin1": "Heilongjiang"
   },
   "2035980": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
@@ -13816,6 +13846,12 @@
     "country": "Nigeria",
     "admin1": "Lagos"
   },
+  "2329821": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Mubi",
+    "country": "Nigeria",
+    "admin1": "Adamawa"
+  },
   "2331140": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Makurdi",
@@ -14252,6 +14288,12 @@
     "name": "Tahoua",
     "country": "Niger",
     "admin1": "Tahoua Region"
+  },
+  "2440485": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Niamey",
+    "country": "Niger",
+    "admin1": "Niamey"
   },
   "2441291": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -14898,6 +14940,12 @@
   "2566633": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Obalende",
+    "country": "Nigeria",
+    "admin1": "Lagos"
+  },
+  "2566636": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Ajegunle",
     "country": "Nigeria",
     "admin1": "Lagos"
   },
@@ -16077,6 +16125,12 @@
     "country": "Czechia",
     "admin1": "Liberec Region"
   },
+  "3078610": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Brno",
+    "country": "Czechia",
+    "admin1": "South Moravian"
+  },
   "3080985": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Zabrze",
@@ -16532,6 +16586,12 @@
     "name": "Podgorica",
     "country": "Montenegro",
     "admin1": "Podgorica"
+  },
+  "3194360": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Novi Sad",
+    "country": "Serbia",
+    "admin1": "Vojvodina"
   },
   "3194828": {
     "fetched_at": "2026-09-08T19:00:37.649Z",
@@ -20649,6 +20709,12 @@
     "country": "United States",
     "admin1": "Georgia"
   },
+  "4250542": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Springfield",
+    "country": "United States",
+    "admin1": "Illinois"
+  },
   "4276614": {
     "fetched_at": "2026-10-09T15:36:04.148Z",
     "name": "Olathe",
@@ -20666,6 +20732,12 @@
     "name": "Wichita",
     "country": "United States",
     "admin1": "Kansas"
+  },
+  "4297983": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Lexington",
+    "country": "United States",
+    "admin1": "Kentucky"
   },
   "4299276": {
     "fetched_at": "2026-09-13T06:49:09.028Z",
@@ -21201,6 +21273,12 @@
     "country": "United States",
     "admin1": "New York"
   },
+  "5137849": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Sheepshead Bay",
+    "country": "United States",
+    "admin1": "New York"
+  },
   "5139568": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Staten Island",
@@ -21480,6 +21558,12 @@
   "5379513": {
     "fetched_at": "2026-10-09T15:36:04.148Z",
     "name": "Orange",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5380698": {
+    "fetched_at": "2026-10-10T18:05:07.249Z",
+    "name": "Palmdale",
     "country": "United States",
     "admin1": "California"
   },
