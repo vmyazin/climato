@@ -13612,6 +13612,12 @@
     "country": "Ivory Coast",
     "admin1": "Vallée du Bandama District"
   },
+  "2290964": {
+    "fetched_at": "2026-10-11T01:21:14.703Z",
+    "name": "Bouaflé",
+    "country": "Ivory Coast",
+    "admin1": "Sassandra-Marahoue"
+  },
   "2293521": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Abobo",
@@ -14044,6 +14050,12 @@
     "country": "Nigeria",
     "admin1": "Enugu State"
   },
+  "2344053": {
+    "fetched_at": "2026-10-11T01:21:14.703Z",
+    "name": "Ede",
+    "country": "Nigeria",
+    "admin1": "Osun State"
+  },
   "2344082": {
     "fetched_at": "2026-09-04T15:10:30.811Z",
     "name": "Ebute Ikorodu",
@@ -14055,6 +14067,12 @@
     "name": "Buguma",
     "country": "Nigeria",
     "admin1": "Rivers State"
+  },
+  "2347209": {
+    "fetched_at": "2026-10-11T01:21:14.703Z",
+    "name": "Bida",
+    "country": "Nigeria",
+    "admin1": "Niger State"
   },
   "2347954": {
     "fetched_at": "2026-09-06T16:29:06.700Z",
@@ -15036,6 +15054,12 @@
   "2634491": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "West Bromwich",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2634739": {
+    "fetched_at": "2026-10-11T01:21:14.703Z",
+    "name": "Warrington",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -21225,6 +21249,12 @@
     "country": "United States",
     "admin1": "New Jersey"
   },
+  "5099836": {
+    "fetched_at": "2026-10-11T01:21:14.703Z",
+    "name": "Jersey City",
+    "country": "United States",
+    "admin1": "New Jersey"
+  },
   "5102466": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Paterson",
@@ -22652,6 +22682,12 @@
     "name": "Jaigaon",
     "country": "India",
     "admin1": "West Bengal"
+  },
+  "7289846": {
+    "fetched_at": "2026-10-11T01:21:14.703Z",
+    "name": "Ba Dinh",
+    "country": "Vietnam",
+    "admin1": "Hanoi"
   },
   "7290243": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
