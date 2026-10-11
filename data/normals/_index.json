@@ -8456,6 +8456,12 @@
     "country": "Philippines",
     "admin1": "Calabarzon"
   },
+  "1729564": {
+    "fetched_at": "2026-10-11T19:13:12.563Z",
+    "name": "Bacolod City",
+    "country": "Philippines",
+    "admin1": "Western Visayas"
+  },
   "1730413": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
     "name": "Apalit",
@@ -8677,6 +8683,12 @@
     "name": "Bintulu",
     "country": "Malaysia",
     "admin1": "Sarawak"
+  },
+  "1744246": {
+    "fetched_at": "2026-10-11T19:13:12.563Z",
+    "name": "Seri Kembangan",
+    "country": "Malaysia",
+    "admin1": "Selangor"
   },
   "1744763": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -9397,6 +9409,12 @@
     "name": "Weifang",
     "country": "China",
     "admin1": "Shandong"
+  },
+  "1791706": {
+    "fetched_at": "2026-10-11T19:13:12.563Z",
+    "name": "Wayaobu",
+    "country": "China",
+    "admin1": "Shaanxi"
   },
   "1791748": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -12346,6 +12364,12 @@
     "country": "China",
     "admin1": "Guangdong"
   },
+  "1916012": {
+    "fetched_at": "2026-10-11T19:13:12.563Z",
+    "name": "Wuzhishan",
+    "country": "China",
+    "admin1": "Hainan"
+  },
   "1916862": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Shijie",
@@ -14158,6 +14182,12 @@
     "country": "Nigeria",
     "admin1": "Niger State"
   },
+  "2347470": {
+    "fetched_at": "2026-10-11T19:13:12.563Z",
+    "name": "Bauchi",
+    "country": "Nigeria",
+    "admin1": "Bauchi"
+  },
   "2347954": {
     "fetched_at": "2026-09-06T16:29:06.700Z",
     "name": "Bama",
@@ -15210,6 +15240,12 @@
   "2641022": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Oldham",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2641170": {
+    "fetched_at": "2026-10-11T19:13:12.563Z",
+    "name": "Nottingham",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -16298,6 +16334,12 @@
     "name": "Rybnik",
     "country": "Poland",
     "admin1": "Silesia"
+  },
+  "3088171": {
+    "fetched_at": "2026-10-11T19:13:12.563Z",
+    "name": "Poznan",
+    "country": "Poland",
+    "admin1": "Greater Poland"
   },
   "3090048": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -21117,6 +21159,12 @@
     "country": "United States",
     "admin1": "Texas"
   },
+  "4685907": {
+    "fetched_at": "2026-10-11T19:13:12.563Z",
+    "name": "Denton",
+    "country": "United States",
+    "admin1": "Texas"
+  },
   "4692559": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Frisco",
@@ -21998,6 +22046,12 @@
     "name": "Boise",
     "country": "United States",
     "admin1": "Idaho"
+  },
+  "5725846": {
+    "fetched_at": "2026-10-11T19:13:12.563Z",
+    "name": "Eugene",
+    "country": "United States",
+    "admin1": "Oregon"
   },
   "5729485": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -24145,6 +24199,12 @@
     "name": "New Taipei City",
     "country": "Taiwan",
     "admin1": "Taipei"
+  },
+  "13060482": {
+    "fetched_at": "2026-10-11T19:13:12.563Z",
+    "name": "Bagong Silang",
+    "country": "Philippines",
+    "admin1": "National Capital Region"
   },
   "13061022": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
