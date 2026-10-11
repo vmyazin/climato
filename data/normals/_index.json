@@ -2825,6 +2825,12 @@
     "country": "Poland",
     "admin1": "Mazovia"
   },
+  "764484": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Mokotów",
+    "country": "Poland",
+    "admin1": "Mazovia"
+  },
   "765876": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Lublin",
@@ -8966,6 +8972,12 @@
     "country": "China",
     "admin1": "Guangdong"
   },
+  "1785738": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Yuncheng",
+    "country": "China",
+    "admin1": "Shanxi"
+  },
   "1785781": {
     "fetched_at": "2026-09-03T23:34:54.858Z",
     "name": "Yulin",
@@ -9307,6 +9319,12 @@
     "name": "Xiamen",
     "country": "China",
     "admin1": "Fujian"
+  },
+  "1790840": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Wuzhou",
+    "country": "China",
+    "admin1": "Guangxi"
   },
   "1790842": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
@@ -11814,6 +11832,12 @@
     "country": "Japan",
     "admin1": "Yamanashi"
   },
+  "1859146": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Kochi",
+    "country": "Japan",
+    "admin1": "Kochi"
+  },
   "1859171": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Kobe",
@@ -13696,6 +13720,12 @@
     "country": "Ivory Coast",
     "admin1": "Goh-Djiboua"
   },
+  "2289887": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Divo",
+    "country": "Ivory Coast",
+    "admin1": "Goh-Djiboua"
+  },
   "2290412": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Daoukro",
@@ -13917,6 +13947,12 @@
     "name": "Onitsha",
     "country": "Nigeria",
     "admin1": "Anambra"
+  },
+  "2326171": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Ondo",
+    "country": "Nigeria",
+    "admin1": "Ondo State"
   },
   "2326899": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
@@ -15956,6 +15992,12 @@
     "name": "Duisburg",
     "country": "Germany",
     "admin1": "North Rhine-Westphalia"
+  },
+  "2935022": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Dresden",
+    "country": "Germany",
+    "admin1": "Saxony"
   },
   "2935517": {
     "fetched_at": "2026-09-09T10:09:35.325Z",
@@ -20997,6 +21039,12 @@
     "country": "United States",
     "admin1": "Missouri"
   },
+  "4409896": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Springfield",
+    "country": "United States",
+    "admin1": "Missouri"
+  },
   "4431410": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Jackson",
@@ -21660,6 +21708,12 @@
   "5327684": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Berkeley",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5334223": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Carlsbad",
     "country": "United States",
     "admin1": "California"
   },
@@ -23325,6 +23379,12 @@
     "country": "China",
     "admin1": "Shandong"
   },
+  "9075789": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Long Khánh",
+    "country": "Vietnam",
+    "admin1": "Dong Nai"
+  },
   "9081327": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Hòa Thành",
@@ -23670,6 +23730,12 @@
   "11611632": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Fuchū",
+    "country": "Japan",
+    "admin1": "Tokyo"
+  },
+  "11611930": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Kodaira",
     "country": "Japan",
     "admin1": "Tokyo"
   },
@@ -24032,6 +24098,12 @@
     "name": "Yidu",
     "country": "China",
     "admin1": "Shandong"
+  },
+  "12324556": {
+    "fetched_at": "2026-10-11T23:14:07.113Z",
+    "name": "Shizuishan",
+    "country": "China",
+    "admin1": "Ningxia"
   },
   "12358476": {
     "fetched_at": "2026-09-04T15:10:30.811Z",
