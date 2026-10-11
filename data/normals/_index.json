@@ -377,6 +377,12 @@
     "country": "Iran",
     "admin1": "Kerman"
   },
+  "119115": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Qūchān",
+    "country": "Iran",
+    "admin1": "Razavi Khorasan"
+  },
   "119208": {
     "fetched_at": "2026-09-05T20:45:00.477Z",
     "name": "Qom",
@@ -713,6 +719,12 @@
     "country": "Tanzania",
     "admin1": "Mbeya"
   },
+  "158214": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Kasulu",
+    "country": "Tanzania",
+    "admin1": "Kigoma"
+  },
   "158597": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
     "name": "Kahama",
@@ -772,6 +784,12 @@
     "name": "Arusha",
     "country": "Tanzania",
     "admin1": "Arusha"
+  },
+  "162183": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Ashgabat",
+    "country": "Turkmenistan",
+    "admin1": "Ashgabat"
   },
   "163345": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -2218,6 +2236,12 @@
     "name": "Dimitrovgrad",
     "country": "Russia",
     "admin1": "Ulyanovsk Oblast"
+  },
+  "566532": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Derbent",
+    "country": "Russia",
+    "admin1": "Dagestan"
   },
   "569154": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -11352,6 +11376,12 @@
     "country": "Japan",
     "admin1": "Aichi"
   },
+  "1849845": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Toyokawa",
+    "country": "Japan",
+    "admin1": "Aichi"
+  },
   "1849846": {
     "fetched_at": "2026-09-23T20:43:12.539Z",
     "name": "Toyohashi",
@@ -11567,6 +11597,12 @@
     "name": "Nagaoka",
     "country": "Japan",
     "admin1": "Niigata"
+  },
+  "1856215": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Nagano",
+    "country": "Japan",
+    "admin1": "Nagano"
   },
   "1856243": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
@@ -12628,6 +12664,12 @@
     "country": "China",
     "admin1": "Liaoning"
   },
+  "2036337": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Kaiyuan",
+    "country": "China",
+    "admin1": "Liaoning"
+  },
   "2036389": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Jixi",
@@ -13087,6 +13129,12 @@
   "2128574": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Otaru",
+    "country": "Japan",
+    "admin1": "Hokkaido"
+  },
+  "2129376": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Kushiro",
     "country": "Japan",
     "admin1": "Hokkaido"
   },
@@ -15261,6 +15309,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2654789": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Brent",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2654993": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Bradford",
@@ -15276,6 +15330,12 @@
   "2655524": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "Blackburn",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2655613": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Birkenhead",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -21243,6 +21303,12 @@
     "country": "United States",
     "admin1": "New Hampshire"
   },
+  "5097529": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Edison",
+    "country": "United States",
+    "admin1": "New Jersey"
+  },
   "5097598": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Elizabeth",
@@ -21872,6 +21938,12 @@
     "name": "West Jordan",
     "country": "United States",
     "admin1": "Utah"
+  },
+  "5786882": {
+    "fetched_at": "2026-10-11T07:53:10.873Z",
+    "name": "Bellevue",
+    "country": "United States",
+    "admin1": "Washington"
   },
   "5808189": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
