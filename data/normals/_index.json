@@ -6794,6 +6794,12 @@
     "country": "Vietnam",
     "admin1": "Tuyen Quang"
   },
+  "1564046": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Trảng Bàng",
+    "country": "Vietnam",
+    "admin1": "Tay Ninh"
+  },
   "1564064": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
     "name": "Long Bien",
@@ -7021,6 +7027,12 @@
     "name": "Ha Long",
     "country": "Vietnam",
     "admin1": "Quảng Ninh"
+  },
+  "1580830": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Hòa Bình",
+    "country": "Vietnam",
+    "admin1": "Phu Tho"
   },
   "1581047": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
@@ -8600,11 +8612,23 @@
     "country": "Malaysia",
     "admin1": "Negeri Sembilan"
   },
+  "1734815": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Port Dickson",
+    "country": "Malaysia",
+    "admin1": "Negeri Sembilan"
+  },
   "1734821": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Sepang",
     "country": "Malaysia",
     "admin1": "Selangor"
+  },
+  "1735076": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Butterworth",
+    "country": "Malaysia",
+    "admin1": "Penang"
   },
   "1735079": {
     "fetched_at": "2026-09-04T23:27:11.474Z",
@@ -8669,6 +8693,12 @@
   "1735545": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Pasir Puteh",
+    "country": "Malaysia",
+    "admin1": "Kelantan"
+  },
+  "1735572": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Kuala Krai",
     "country": "Malaysia",
     "admin1": "Kelantan"
   },
@@ -11327,6 +11357,12 @@
     "name": "Gimcheon",
     "country": "South Korea",
     "admin1": "Gyeongsangbuk-do"
+  },
+  "1843137": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Gangneung",
+    "country": "South Korea",
+    "admin1": "Gangwon-do"
   },
   "1843491": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
@@ -14415,6 +14451,12 @@
     "country": "Guinea",
     "admin1": "Boké Region"
   },
+  "2416969": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Nzérékoré",
+    "country": "Guinea",
+    "admin1": "Nzérékoré Region"
+  },
   "2417786": {
     "fetched_at": "2026-09-02T18:59:09.006Z",
     "name": "Manéah",
@@ -14510,6 +14552,12 @@
     "name": "San",
     "country": "Mali",
     "admin1": "Ségou"
+  },
+  "2453348": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Mopti",
+    "country": "Mali",
+    "admin1": "Mopti"
   },
   "2454268": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
@@ -15620,6 +15668,12 @@
     "name": "Linz",
     "country": "Austria",
     "admin1": "Upper Austria"
+  },
+  "2774326": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Klagenfurt",
+    "country": "Austria",
+    "admin1": "Carinthia"
   },
   "2775220": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -21015,6 +21069,12 @@
     "country": "United States",
     "admin1": "Maryland"
   },
+  "4381982": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Columbia",
+    "country": "United States",
+    "admin1": "Missouri"
+  },
   "4385018": {
     "fetched_at": "2026-09-04T06:34:02.423Z",
     "name": "East Independence",
@@ -21258,6 +21318,12 @@
   "4710178": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "McKinney",
+    "country": "United States",
+    "admin1": "Texas"
+  },
+  "4710826": {
+    "fetched_at": "2026-10-12T02:42:26.116Z",
+    "name": "Mesquite",
     "country": "United States",
     "admin1": "Texas"
   },
