@@ -2291,6 +2291,12 @@
     "country": "Russia",
     "admin1": "Tatarstan Republic"
   },
+  "553915": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Kaluga",
+    "country": "Russia",
+    "admin1": "Kaluga Oblast"
+  },
   "554840": {
     "fetched_at": "2026-10-02T20:18:35.310Z",
     "name": "Izhevsk",
@@ -2944,6 +2950,12 @@
     "name": "Kielce",
     "country": "Poland",
     "admin1": "Świętokrzyskie"
+  },
+  "776251": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Bemowo",
+    "country": "Poland",
+    "admin1": "Mazovia"
   },
   "783263": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -6848,6 +6860,12 @@
     "country": "Russia",
     "admin1": "Chelyabinsk Oblast"
   },
+  "1510018": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Biysk",
+    "country": "Russia",
+    "admin1": "Altai Krai"
+  },
   "1510853": {
     "fetched_at": "2026-09-11T06:39:55.365Z",
     "name": "Barnaul",
@@ -8468,6 +8486,12 @@
     "country": "Philippines",
     "admin1": "National Capital Region"
   },
+  "1680116": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "NIA Valencia",
+    "country": "Philippines",
+    "admin1": "Northern Mindanao"
+  },
   "1680197": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Urdaneta",
@@ -9073,6 +9097,12 @@
     "name": "Tawau",
     "country": "Malaysia",
     "admin1": "Sabah"
+  },
+  "1734393": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Kulim",
+    "country": "Malaysia",
+    "admin1": "Kedah"
   },
   "1734586": {
     "fetched_at": "2026-09-16T15:10:41.106Z",
@@ -12150,6 +12180,12 @@
     "country": "Japan",
     "admin1": "Nagasaki"
   },
+  "1853008": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Sandachō",
+    "country": "Japan",
+    "admin1": "Hyōgo"
+  },
   "1853195": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Sakai",
@@ -13730,6 +13766,12 @@
     "name": "Sinuiju",
     "country": "North Korea",
     "admin1": "North Pyongan"
+  },
+  "2043572": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Kanggye",
+    "country": "North Korea",
+    "admin1": "Chagang"
   },
   "2043837": {
     "fetched_at": "2026-09-23T12:20:29.442Z",
@@ -20768,6 +20810,12 @@
     "country": "Colombia",
     "admin1": "Departamento del Chocó"
   },
+  "3671916": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Popayán",
+    "country": "Colombia",
+    "admin1": "Cauca Department"
+  },
   "3672110": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Pitalito",
@@ -21902,6 +21950,12 @@
     "country": "United States",
     "admin1": "Georgia"
   },
+  "4188985": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Columbus",
+    "country": "United States",
+    "admin1": "Georgia"
+  },
   "4221552": {
     "fetched_at": "2026-09-26T05:37:24.830Z",
     "name": "Savannah",
@@ -21965,6 +22019,12 @@
   "4330145": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Lafayette",
+    "country": "United States",
+    "admin1": "Louisiana"
+  },
+  "4333177": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Metairie",
     "country": "United States",
     "admin1": "Louisiana"
   },
@@ -22193,6 +22253,12 @@
   "4671654": {
     "fetched_at": "2026-05-19T21:27:43.174Z",
     "name": "Austin",
+    "country": "United States",
+    "admin1": "Texas"
+  },
+  "4672989": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Beaumont",
     "country": "United States",
     "admin1": "Texas"
   },
@@ -23408,6 +23474,12 @@
     "country": "United States",
     "admin1": "Hawaii"
   },
+  "5879400": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Anchorage",
+    "country": "United States",
+    "admin1": "Alaska"
+  },
   "5882873": {
     "fetched_at": "2026-08-31T21:39:48.036Z",
     "name": "Ajax",
@@ -23953,6 +24025,12 @@
     "name": "Tsuchiura",
     "country": "Japan",
     "admin1": "Ibaraki"
+  },
+  "6822129": {
+    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "name": "Tama",
+    "country": "Japan",
+    "admin1": "Tokyo"
   },
   "6822132": {
     "fetched_at": "2026-10-12T09:49:31.320Z",
