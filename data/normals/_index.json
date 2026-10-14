@@ -4328,6 +4328,12 @@
     "country": "India",
     "admin1": "Tamil Nadu"
   },
+  "1253315": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Vejalpur",
+    "country": "India",
+    "admin1": "Gujarat"
+  },
   "1253367": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Vasco da Gama",
@@ -4495,6 +4501,12 @@
     "name": "Suriāpet",
     "country": "India",
     "admin1": "Telangana"
+  },
+  "1255349": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Surendranagar",
+    "country": "India",
+    "admin1": "Gujarat"
   },
   "1255364": {
     "fetched_at": "2026-10-14T05:31:14.630Z",
@@ -5617,6 +5629,12 @@
     "name": "Hāpur",
     "country": "India",
     "admin1": "Uttar Pradesh"
+  },
+  "1270396": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Howrah",
+    "country": "India",
+    "admin1": "West Bengal"
   },
   "1270484": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -7133,6 +7151,12 @@
   "1529046": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Xinyuan",
+    "country": "China",
+    "admin1": "Xinjiang"
+  },
+  "1529085": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Wujiaqu",
     "country": "China",
     "admin1": "Xinjiang"
   },
@@ -9469,6 +9493,12 @@
     "name": "Zhoukou",
     "country": "China",
     "admin1": "Henan"
+  },
+  "1784178": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Zhoucun",
+    "country": "China",
+    "admin1": "Shandong"
   },
   "1784185": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -16346,6 +16376,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2644688": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Leeds",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2646003": {
     "fetched_at": "2026-09-04T23:27:11.474Z",
     "name": "Islington",
@@ -16469,6 +16505,12 @@
   "2655095": {
     "fetched_at": "2026-10-13T01:39:09.765Z",
     "name": "Bournemouth",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2655237": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Bolton",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -17276,6 +17318,12 @@
     "country": "France",
     "admin1": "Normandy"
   },
+  "3014728": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Grenoble",
+    "country": "France",
+    "admin1": "Rhône-Alpes"
+  },
   "3015772": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Paris 13 Gobelins",
@@ -17923,6 +17971,12 @@
     "name": "Aachen",
     "country": "Germany",
     "admin1": "North Rhine-Westphalia"
+  },
+  "3345439": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Telford",
+    "country": "United Kingdom",
+    "admin1": "England"
   },
   "3346015": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -22490,6 +22544,12 @@
     "country": "United States",
     "admin1": "Texas"
   },
+  "4693003": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Garland",
+    "country": "United States",
+    "admin1": "Texas"
+  },
   "4694482": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
     "name": "Grand Prairie",
@@ -23627,6 +23687,12 @@
   "5780026": {
     "fetched_at": "2026-09-23T12:20:29.442Z",
     "name": "Provo",
+    "country": "United States",
+    "admin1": "Utah"
+  },
+  "5780993": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Salt Lake City",
     "country": "United States",
     "admin1": "Utah"
   },
@@ -25218,6 +25284,12 @@
     "name": "Salé Al Jadida",
     "country": "Morocco",
     "admin1": "Rabat-Salé-Kénitra"
+  },
+  "10941913": {
+    "fetched_at": "2026-10-14T15:32:55.177Z",
+    "name": "Kajang",
+    "country": "Malaysia",
+    "admin1": "Selangor"
   },
   "10942183": {
     "fetched_at": "2026-08-27T13:08:28.196Z",
