@@ -671,6 +671,12 @@
     "country": "Tanzania",
     "admin1": "Songwe"
   },
+  "149581": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Tarime",
+    "country": "Tanzania",
+    "admin1": "Mara"
+  },
   "149606": {
     "fetched_at": "2026-10-13T16:29:28.201Z",
     "name": "Tanga",
@@ -928,6 +934,12 @@
     "name": "Mwala",
     "country": "Kenya",
     "admin1": "Machakos County"
+  },
+  "186301": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Mombasa",
+    "country": "Kenya",
+    "admin1": "Mombasa County"
   },
   "187269": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -1985,6 +1997,12 @@
     "country": "Russia",
     "admin1": "Moscow"
   },
+  "484646": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Tambov",
+    "country": "Russia",
+    "admin1": "Tambov Oblast"
+  },
   "484907": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Taganrog",
@@ -2459,6 +2477,12 @@
     "country": "Russia",
     "admin1": "Vologda Oblast"
   },
+  "569273": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Cherëmushki",
+    "country": "Russia",
+    "admin1": "Moscow"
+  },
   "569696": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Cheboksary",
@@ -2722,6 +2746,12 @@
     "name": "Jyväskylä",
     "country": "Finland",
     "admin1": "Central Finland"
+  },
+  "658225": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Helsinki",
+    "country": "Finland",
+    "admin1": "Uusimaa"
   },
   "660158": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -5018,6 +5048,12 @@
     "country": "India",
     "admin1": "Maharashtra"
   },
+  "1260476": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Panipat",
+    "country": "India",
+    "admin1": "Haryana"
+  },
   "1260482": {
     "fetched_at": "2026-09-19T13:30:15.086Z",
     "name": "Pānihāti",
@@ -6614,6 +6650,12 @@
     "country": "India",
     "admin1": "Maharashtra"
   },
+  "1278946": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Alwar",
+    "country": "India",
+    "admin1": "Rajasthan"
+  },
   "1278985": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Alappuzha",
@@ -7820,6 +7862,12 @@
     "country": "Vietnam",
     "admin1": "Ho Chi Minh City (HCMC)"
   },
+  "1588129": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Ba Vì",
+    "country": "Vietnam",
+    "admin1": "Hanoi"
+  },
   "1590900": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Thị Trấn Thuận Châu",
@@ -8912,6 +8960,12 @@
     "country": "Philippines",
     "admin1": "Central Luzon"
   },
+  "1693239": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Plaridel",
+    "country": "Philippines",
+    "admin1": "Central Luzon"
+  },
   "1694611": {
     "fetched_at": "2026-10-13T16:29:28.201Z",
     "name": "Pasay",
@@ -9050,6 +9104,12 @@
     "country": "Philippines",
     "admin1": "Calabarzon"
   },
+  "1706684": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Libertad",
+    "country": "Philippines",
+    "admin1": "Caraga"
+  },
   "1707123": {
     "fetched_at": "2026-10-14T05:31:14.630Z",
     "name": "La Trinidad",
@@ -9139,6 +9199,12 @@
     "name": "Gapan",
     "country": "Philippines",
     "admin1": "Central Luzon"
+  },
+  "1714781": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Dinaig",
+    "country": "Philippines",
+    "admin1": "Autonomous Region in Muslim Mindanao"
   },
   "1715348": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -14505,6 +14571,12 @@
     "country": "New Zealand",
     "admin1": "Canterbury"
   },
+  "2193733": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Auckland",
+    "country": "New Zealand",
+    "admin1": "Auckland"
+  },
   "2208032": {
     "fetched_at": "2026-09-03T18:54:42.659Z",
     "name": "Tauranga",
@@ -16280,6 +16352,12 @@
     "country": "Morocco",
     "admin1": "Tanger-Tetouan-Al Hoceima"
   },
+  "2544248": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Khouribga",
+    "country": "Morocco",
+    "admin1": "Beni Mellal-Khenifra"
+  },
   "2544333": {
     "fetched_at": "2026-08-27T23:15:15.266Z",
     "name": "Khenifra",
@@ -16723,6 +16801,12 @@
     "name": "Dundee",
     "country": "United Kingdom",
     "admin1": "Scotland"
+  },
+  "2650839": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Dudley",
+    "country": "United Kingdom",
+    "admin1": "England"
   },
   "2651123": {
     "fetched_at": "2026-09-24T01:42:01.057Z",
@@ -17887,6 +17971,12 @@
     "name": "Bydgoszcz",
     "country": "Poland",
     "admin1": "Kujawsko-Pomorskie"
+  },
+  "3104748": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Villaverde",
+    "country": "Spain",
+    "admin1": "Madrid"
   },
   "3105976": {
     "fetched_at": "2026-09-28T05:59:19.532Z",
@@ -22370,6 +22460,12 @@
     "country": "United States",
     "admin1": "Alabama"
   },
+  "4094455": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Tuscaloosa",
+    "country": "United States",
+    "admin1": "Alabama"
+  },
   "4119403": {
     "fetched_at": "2026-10-15T05:31:53.684Z",
     "name": "Little Rock",
@@ -22562,6 +22658,12 @@
     "country": "United States",
     "admin1": "Kansas"
   },
+  "4280539": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Topeka",
+    "country": "United States",
+    "admin1": "Kansas"
+  },
   "4281730": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Wichita",
@@ -22727,6 +22829,12 @@
   "4509177": {
     "fetched_at": "2026-10-09T15:36:04.148Z",
     "name": "Columbus",
+    "country": "United States",
+    "admin1": "Ohio"
+  },
+  "4509884": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Dayton",
     "country": "United States",
     "admin1": "Ohio"
   },
@@ -22979,6 +23087,12 @@
   "4726206": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "San Antonio",
+    "country": "United States",
+    "admin1": "Texas"
+  },
+  "4738214": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Tyler",
     "country": "United States",
     "admin1": "Texas"
   },
@@ -23264,6 +23378,12 @@
     "country": "United States",
     "admin1": "New Jersey"
   },
+  "5101798": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Newark",
+    "country": "United States",
+    "admin1": "New Jersey"
+  },
   "5102466": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Paterson",
@@ -23312,6 +23432,12 @@
     "country": "United States",
     "admin1": "New York"
   },
+  "5119167": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Gravesend",
+    "country": "United States",
+    "admin1": "New York"
+  },
   "5120034": {
     "fetched_at": "2026-10-10T06:28:04.017Z",
     "name": "Harlem",
@@ -23339,6 +23465,12 @@
   "5133273": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Queens",
+    "country": "United States",
+    "admin1": "New York"
+  },
+  "5134086": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Rochester",
     "country": "United States",
     "admin1": "New York"
   },
@@ -23525,6 +23657,12 @@
   "5327684": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Berkeley",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5331835": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Burbank",
     "country": "United States",
     "admin1": "California"
   },
@@ -24245,6 +24383,12 @@
   "5964700": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Greater Sudbury",
+    "country": "Canada",
+    "admin1": "Ontario"
+  },
+  "5967629": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Guelph",
     "country": "Canada",
     "admin1": "Ontario"
   },
@@ -24973,6 +25117,12 @@
     "name": "Noida",
     "country": "India",
     "admin1": "Uttar Pradesh"
+  },
+  "7279747": {
+    "fetched_at": "2026-10-15T15:20:52.837Z",
+    "name": "Bhiwadi",
+    "country": "India",
+    "admin1": "Rajasthan"
   },
   "7279754": {
     "fetched_at": "2026-10-14T22:43:24.981Z",
