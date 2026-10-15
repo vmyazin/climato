@@ -1331,6 +1331,12 @@
     "country": "Israel",
     "admin1": "Tel Aviv"
   },
+  "295629": {
+    "fetched_at": "2026-10-15T00:59:04.069Z",
+    "name": "Ashdod",
+    "country": "Israel",
+    "admin1": "Southern District"
+  },
   "311046": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "İzmir",
@@ -4453,6 +4459,12 @@
     "name": "Titagarh",
     "country": "India",
     "admin1": "West Bengal"
+  },
+  "1254320": {
+    "fetched_at": "2026-10-15T00:59:04.069Z",
+    "name": "Tiruvottiyūr",
+    "country": "India",
+    "admin1": "Tamil Nadu"
   },
   "1254327": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -16364,6 +16376,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2639577": {
+    "fetched_at": "2026-10-15T00:59:04.069Z",
+    "name": "Reading",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2640101": {
     "fetched_at": "2026-09-17T00:55:26.449Z",
     "name": "Poole",
@@ -16495,6 +16513,12 @@
     "name": "Glasgow",
     "country": "United Kingdom",
     "admin1": "Scotland"
+  },
+  "2648657": {
+    "fetched_at": "2026-10-15T00:59:04.069Z",
+    "name": "Gillingham",
+    "country": "United Kingdom",
+    "admin1": "England"
   },
   "2649808": {
     "fetched_at": "2026-10-04T12:53:13.813Z",
@@ -22118,6 +22142,12 @@
     "country": "Mexico",
     "admin1": "Aguascalientes"
   },
+  "4049979": {
+    "fetched_at": "2026-10-15T00:59:04.069Z",
+    "name": "Birmingham",
+    "country": "United States",
+    "admin1": "Alabama"
+  },
   "4068590": {
     "fetched_at": "2026-10-11T14:24:35.730Z",
     "name": "Huntsville",
@@ -22775,6 +22805,12 @@
   "4835797": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Hartford",
+    "country": "United States",
+    "admin1": "Connecticut"
+  },
+  "4839366": {
+    "fetched_at": "2026-10-15T00:59:04.069Z",
+    "name": "New Haven",
     "country": "United States",
     "admin1": "Connecticut"
   },
