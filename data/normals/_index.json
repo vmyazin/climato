@@ -209,6 +209,12 @@
     "country": "Iraq",
     "admin1": "Dhi Qar"
   },
+  "98854": {
+    "fetched_at": "2026-10-16T00:50:01.404Z",
+    "name": "Nasiriyah",
+    "country": "Iraq",
+    "admin1": "Dhi Qar"
+  },
   "98860": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
     "name": "Najaf",
@@ -4723,6 +4729,12 @@
     "name": "Silchar",
     "country": "India",
     "admin1": "Assam"
+  },
+  "1256320": {
+    "fetched_at": "2026-10-16T00:50:01.404Z",
+    "name": "Sīkar",
+    "country": "India",
+    "admin1": "Rajasthan"
   },
   "1256409": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -13014,6 +13026,12 @@
     "country": "Japan",
     "admin1": "Ishikawa"
   },
+  "1858926": {
+    "fetched_at": "2026-10-16T00:50:01.404Z",
+    "name": "Komaki",
+    "country": "Japan",
+    "admin1": "Aichi"
+  },
   "1858964": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
     "name": "Kokubunji",
@@ -17390,6 +17408,12 @@
     "country": "Germany",
     "admin1": "North Rhine-Westphalia"
   },
+  "2862375": {
+    "fetched_at": "2026-10-16T00:50:01.404Z",
+    "name": "Nippes",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
+  },
   "2864072": {
     "fetched_at": "2026-09-23T17:30:19.173Z",
     "name": "Neue Neustadt",
@@ -18349,6 +18373,12 @@
     "name": "Novara",
     "country": "Italy",
     "admin1": "Piedmont"
+  },
+  "3172394": {
+    "fetched_at": "2026-10-16T00:50:01.404Z",
+    "name": "Naples",
+    "country": "Italy",
+    "admin1": "Campania"
   },
   "3172629": {
     "fetched_at": "2026-09-23T12:20:29.442Z",
