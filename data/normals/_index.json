@@ -1043,6 +1043,12 @@
     "country": "Kenya",
     "admin1": "Uasin Gishu County"
   },
+  "201650": {
+    "fetched_at": "2026-10-16T19:02:57.252Z",
+    "name": "Nyagatare",
+    "country": "Rwanda",
+    "admin1": "Eastern Province"
+  },
   "202061": {
     "fetched_at": "2026-10-14T22:43:24.981Z",
     "name": "Kigali",
@@ -2087,6 +2093,12 @@
     "country": "Russia",
     "admin1": "Perm Krai"
   },
+  "491422": {
+    "fetched_at": "2026-10-16T19:02:57.252Z",
+    "name": "Sochi",
+    "country": "Russia",
+    "admin1": "Krasnodar Krai"
+  },
   "491687": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
     "name": "Smolensk",
@@ -2440,6 +2452,12 @@
     "name": "Kaluga",
     "country": "Russia",
     "admin1": "Kaluga Oblast"
+  },
+  "554234": {
+    "fetched_at": "2026-10-16T19:02:57.252Z",
+    "name": "Kaliningrad",
+    "country": "Russia",
+    "admin1": "Kaliningrad Oblast"
   },
   "554840": {
     "fetched_at": "2026-10-02T20:18:35.310Z",
@@ -6146,6 +6164,12 @@
     "country": "India",
     "admin1": "Uttar Pradesh"
   },
+  "1272051": {
+    "fetched_at": "2026-10-16T19:02:57.252Z",
+    "name": "Eluru",
+    "country": "India",
+    "admin1": "Andhra Pradesh"
+  },
   "1272175": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
     "name": "Durgapur",
@@ -7856,6 +7880,12 @@
     "country": "Vietnam",
     "admin1": "Quảng Ninh"
   },
+  "1575627": {
+    "fetched_at": "2026-10-16T19:02:57.252Z",
+    "name": "Long Xuyen",
+    "country": "Vietnam",
+    "admin1": "An Giang"
+  },
   "1576303": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Lao Cai",
@@ -8077,6 +8107,12 @@
     "name": "Ba Vì",
     "country": "Vietnam",
     "admin1": "Hanoi"
+  },
+  "1588275": {
+    "fetched_at": "2026-10-16T19:02:57.252Z",
+    "name": "Bảo Lộc",
+    "country": "Vietnam",
+    "admin1": "Lam Dong"
   },
   "1590900": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -9187,6 +9223,12 @@
     "name": "Paranaque City",
     "country": "Philippines",
     "admin1": "National Capital Region"
+  },
+  "1695097": {
+    "fetched_at": "2026-10-16T19:02:57.252Z",
+    "name": "Paniqui",
+    "country": "Philippines",
+    "admin1": "Central Luzon"
   },
   "1695462": {
     "fetched_at": "2026-09-13T06:49:09.028Z",
@@ -13068,6 +13110,12 @@
     "country": "Japan",
     "admin1": "Ishikawa"
   },
+  "1857519": {
+    "fetched_at": "2026-10-16T19:02:57.252Z",
+    "name": "Matsumoto",
+    "country": "Japan",
+    "admin1": "Nagano"
+  },
   "1857550": {
     "fetched_at": "2026-09-05T20:45:00.477Z",
     "name": "Matsue",
@@ -15665,6 +15713,12 @@
   "2338400": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Ijebu Ode",
+    "country": "Nigeria",
+    "admin1": "Ogun State"
+  },
+  "2338403": {
+    "fetched_at": "2026-10-16T19:02:57.252Z",
+    "name": "Ijebu-Igbo",
     "country": "Nigeria",
     "admin1": "Ogun State"
   },
@@ -25806,6 +25860,12 @@
     "name": "Pallabi",
     "country": "Bangladesh",
     "admin1": "Dhaka Division"
+  },
+  "7792200": {
+    "fetched_at": "2026-10-16T19:02:57.252Z",
+    "name": "Seri Manjung",
+    "country": "Malaysia",
+    "admin1": "Perak"
   },
   "7795834": {
     "fetched_at": "2026-10-13T08:32:27.879Z",
