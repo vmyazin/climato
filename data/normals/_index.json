@@ -1835,6 +1835,12 @@
     "country": "South Sudan",
     "admin1": "Upper Nile"
   },
+  "372753": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Kassala",
+    "country": "Sudan",
+    "admin1": "Kassala"
+  },
   "373303": {
     "fetched_at": "2026-09-03T01:33:12.533Z",
     "name": "Juba",
@@ -3125,6 +3131,12 @@
     "country": "Albania",
     "admin1": "Elbasan County"
   },
+  "783920": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Zemun",
+    "country": "Serbia",
+    "admin1": "Central Serbia"
+  },
   "785842": {
     "fetched_at": "2026-10-12T09:49:31.320Z",
     "name": "Skopje",
@@ -3268,6 +3280,12 @@
     "name": "Lusaka",
     "country": "Zambia",
     "admin1": "Lusaka Province"
+  },
+  "909863": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Luanshya",
+    "country": "Zambia",
+    "admin1": "Copperbelt"
   },
   "910111": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
@@ -6806,6 +6824,12 @@
     "country": "India",
     "admin1": "Gujarat"
   },
+  "1279259": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Agra",
+    "country": "India",
+    "admin1": "Uttar Pradesh"
+  },
   "1279290": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Agartala",
@@ -7538,6 +7562,12 @@
     "country": "Vietnam",
     "admin1": "Lao Cai"
   },
+  "1560565": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Xuân Lộc",
+    "country": "Vietnam",
+    "admin1": "Dong Nai"
+  },
   "1562548": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Vĩnh Yên",
@@ -7796,6 +7826,12 @@
     "country": "Vietnam",
     "admin1": "Lạng Sơn Province"
   },
+  "1577995": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "La Gi",
+    "country": "Vietnam",
+    "admin1": "Lam Dong"
+  },
   "1578163": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
     "name": "Kỳ Anh",
@@ -7849,6 +7885,12 @@
     "name": "Ha Tinh",
     "country": "Vietnam",
     "admin1": "Hà Tĩnh Province"
+  },
+  "1581052": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Hà Tiên",
+    "country": "Vietnam",
+    "admin1": "An Giang"
   },
   "1581130": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
@@ -13568,6 +13610,11 @@
     "name": "Serangoon",
     "country": "Singapore"
   },
+  "1880283": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Sembawang Estate",
+    "country": "Singapore"
+  },
   "1880348": {
     "fetched_at": "2026-10-09T01:30:15.207Z",
     "name": "Punggol",
@@ -14624,6 +14671,12 @@
     "name": "Asahikawa",
     "country": "Japan",
     "admin1": "Hokkaido"
+  },
+  "2130658": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Aomori",
+    "country": "Japan",
+    "admin1": "Aomori"
   },
   "2146142": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
@@ -16028,6 +16081,12 @@
     "country": "Mali",
     "admin1": "Koulikoro"
   },
+  "2457163": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Gao",
+    "country": "Mali",
+    "admin1": "Gao"
+  },
   "2460596": {
     "fetched_at": "2026-09-18T17:55:35.143Z",
     "name": "Bamako",
@@ -16051,6 +16110,12 @@
     "name": "Sfax",
     "country": "Tunisia",
     "admin1": "Sfax Governorate"
+  },
+  "2472706": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Bizerte",
+    "country": "Tunisia",
+    "admin1": "Bizerte Governorate"
   },
   "2473164": {
     "fetched_at": "2026-09-17T10:28:59.390Z",
@@ -16787,6 +16852,12 @@
   "2636882": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Stockport",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2637487": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Southampton",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -17786,6 +17857,12 @@
     "country": "Germany",
     "admin1": "State of Berlin"
   },
+  "2950349": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Bergisch Gladbach",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
+  },
   "2954172": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Augsburg",
@@ -17815,6 +17892,12 @@
     "name": "Paris 15 Vaugirard",
     "country": "France",
     "admin1": "Île-de-France Region"
+  },
+  "2972315": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Toulouse",
+    "country": "France",
+    "admin1": "Occitanie"
   },
   "2972328": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -18107,6 +18190,12 @@
   "3086586": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
     "name": "Rybnik",
+    "country": "Poland",
+    "admin1": "Silesia"
+  },
+  "3086800": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Ruda Śląska",
     "country": "Poland",
     "admin1": "Silesia"
   },
@@ -23450,6 +23539,12 @@
     "country": "United States",
     "admin1": "Iowa"
   },
+  "4853423": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Davenport",
+    "country": "United States",
+    "admin1": "Iowa"
+  },
   "4853828": {
     "fetched_at": "2026-10-13T01:39:09.765Z",
     "name": "Des Moines",
@@ -24380,9 +24475,21 @@
     "country": "United States",
     "admin1": "Nevada"
   },
+  "5506956": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Las Vegas",
+    "country": "United States",
+    "admin1": "Nevada"
+  },
   "5509403": {
     "fetched_at": "2026-10-14T05:31:14.630Z",
     "name": "North Las Vegas",
+    "country": "United States",
+    "admin1": "Nevada"
+  },
+  "5509952": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Paradise",
     "country": "United States",
     "admin1": "Nevada"
   },
@@ -24509,6 +24616,12 @@
   "5786882": {
     "fetched_at": "2026-10-11T07:53:10.873Z",
     "name": "Bellevue",
+    "country": "United States",
+    "admin1": "Washington"
+  },
+  "5793933": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Everett",
     "country": "United States",
     "admin1": "Washington"
   },
@@ -25019,6 +25132,12 @@
   "6544100": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Eixample",
+    "country": "Spain",
+    "admin1": "Catalonia"
+  },
+  "6544106": {
+    "fetched_at": "2026-10-16T10:10:46.401Z",
+    "name": "Ciutat Vella",
     "country": "Spain",
     "admin1": "Catalonia"
   },
