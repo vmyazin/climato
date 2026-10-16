@@ -2015,6 +2015,12 @@
     "country": "Russia",
     "admin1": "Komi"
   },
+  "479561": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Ufa",
+    "country": "Russia",
+    "admin1": "Bashkortostan Republic"
+  },
   "480060": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
     "name": "Tver'",
@@ -3536,6 +3542,12 @@
   "971534": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Mbombela",
+    "country": "South Africa",
+    "admin1": "Mpumalanga"
+  },
+  "976361": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Middelburg",
     "country": "South Africa",
     "admin1": "Mpumalanga"
   },
@@ -6182,6 +6194,12 @@
     "country": "India",
     "admin1": "Maharashtra"
   },
+  "1272543": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Dindigul",
+    "country": "India",
+    "admin1": "Tamil Nadu"
+  },
   "1272552": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Dimāpur",
@@ -6331,6 +6349,12 @@
     "name": "Chittoor",
     "country": "India",
     "admin1": "Andhra Pradesh"
+  },
+  "1274040": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Chittorgarh",
+    "country": "India",
+    "admin1": "Rajasthan"
   },
   "1274056": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -9296,6 +9320,12 @@
     "country": "Philippines",
     "admin1": "National Capital Region"
   },
+  "1701053": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Marawi City",
+    "country": "Philippines",
+    "admin1": "Autonomous Region in Muslim Mindanao"
+  },
   "1701124": {
     "fetched_at": "2026-09-05T16:18:15.066Z",
     "name": "Maramag",
@@ -9385,6 +9415,12 @@
     "name": "Laoag",
     "country": "Philippines",
     "admin1": "Ilocos"
+  },
+  "1708522": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Koronadal",
+    "country": "Philippines",
+    "admin1": "Soccsksargen"
   },
   "1709968": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -12618,6 +12654,12 @@
     "country": "South Korea",
     "admin1": "Incheon"
   },
+  "1843847": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Hwaseong-si",
+    "country": "South Korea",
+    "admin1": "Gyeonggi-do"
+  },
   "1845033": {
     "fetched_at": "2026-10-13T16:29:28.201Z",
     "name": "Chungju",
@@ -12713,6 +12755,12 @@
     "name": "Yao",
     "country": "Japan",
     "admin1": "Osaka"
+  },
+  "1848689": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Yamaguchi",
+    "country": "Japan",
+    "admin1": "Yamaguchi"
   },
   "1848774": {
     "fetched_at": "2026-10-15T10:23:13.375Z",
@@ -17125,6 +17173,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2645425": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Hull",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2646003": {
     "fetched_at": "2026-09-04T23:27:11.474Z",
     "name": "Islington",
@@ -17641,6 +17695,12 @@
     "country": "Germany",
     "admin1": "Baden-Wurttemberg"
   },
+  "2855745": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Paderborn",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
+  },
   "2856883": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Osnabrück",
@@ -18114,6 +18174,12 @@
     "name": "Montpellier",
     "country": "France",
     "admin1": "Occitanie"
+  },
+  "2994160": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Metz",
+    "country": "France",
+    "admin1": "Grand Est"
   },
   "2994540": {
     "fetched_at": "2026-08-29T20:05:52.305Z",
@@ -23161,6 +23227,12 @@
     "country": "United States",
     "admin1": "Kentucky"
   },
+  "4297999": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Lexington-Fayette",
+    "country": "United States",
+    "admin1": "Kentucky"
+  },
   "4299276": {
     "fetched_at": "2026-09-13T06:49:09.028Z",
     "name": "Louisville",
@@ -24736,6 +24808,12 @@
   "5746545": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
     "name": "Portland",
+    "country": "United States",
+    "admin1": "Oregon"
+  },
+  "5750162": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Salem",
     "country": "United States",
     "admin1": "Oregon"
   },
@@ -27212,6 +27290,12 @@
   "13118091": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "Setia Alam",
+    "country": "Malaysia",
+    "admin1": "Selangor"
+  },
+  "13118145": {
+    "fetched_at": "2026-10-16T22:14:07.452Z",
+    "name": "Bandar Bukit Raja",
     "country": "Malaysia",
     "admin1": "Selangor"
   },
