@@ -2561,6 +2561,12 @@
     "country": "Russia",
     "admin1": "Moscow Oblast"
   },
+  "579492": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Balakovo",
+    "country": "Russia",
+    "admin1": "Saratov Oblast"
+  },
   "580724": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Arzamas",
@@ -2849,6 +2855,12 @@
     "country": "Romania",
     "admin1": "Bihor County"
   },
+  "675810": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Iași",
+    "country": "Romania",
+    "admin1": "Iași County"
+  },
   "677697": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Galati",
@@ -2944,6 +2956,12 @@
     "name": "Rivne",
     "country": "Ukraine",
     "admin1": "Rivne Oblast"
+  },
+  "698740": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Odesa",
+    "country": "Ukraine",
+    "admin1": "Odesa"
   },
   "700022": {
     "fetched_at": "2026-09-18T14:40:05.548Z",
@@ -4598,6 +4616,12 @@
     "country": "India",
     "admin1": "Kerala"
   },
+  "1254241": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Tonk",
+    "country": "India",
+    "admin1": "Rajasthan"
+  },
   "1254309": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Titagarh",
@@ -5341,6 +5365,12 @@
     "name": "Morādābād",
     "country": "India",
     "admin1": "Uttar Pradesh"
+  },
+  "1262951": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Moga",
+    "country": "India",
+    "admin1": "Punjab"
   },
   "1262995": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
@@ -6224,6 +6254,12 @@
     "country": "India",
     "admin1": "Bihar"
   },
+  "1273581": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Dinapore",
+    "country": "India",
+    "admin1": "Bihar"
+  },
   "1273587": {
     "fetched_at": "2026-09-01T23:35:59.499Z",
     "name": "Damoh",
@@ -6301,6 +6337,12 @@
     "name": "Chas",
     "country": "India",
     "admin1": "Jharkhand"
+  },
+  "1274746": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Chandigarh",
+    "country": "India",
+    "admin1": "Chandigarh"
   },
   "1274767": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -15602,6 +15644,12 @@
     "country": "Nigeria",
     "admin1": "Osun State"
   },
+  "2338287": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Ikere-Ekiti",
+    "country": "Nigeria",
+    "admin1": "Ekiti State"
+  },
   "2338313": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
     "name": "Ikeja",
@@ -15685,6 +15733,12 @@
     "name": "Enugu",
     "country": "Nigeria",
     "admin1": "Enugu State"
+  },
+  "2343784": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Ejigbo",
+    "country": "Nigeria",
+    "admin1": "Osun State"
   },
   "2344053": {
     "fetched_at": "2026-10-11T01:21:14.703Z",
@@ -16849,6 +16903,12 @@
     "country": "United Kingdom",
     "admin1": "Wales"
   },
+  "2636503": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Sutton",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2636882": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Stockport",
@@ -16900,6 +16960,12 @@
   "2639577": {
     "fetched_at": "2026-10-15T00:59:04.069Z",
     "name": "Reading",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2639912": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Preston",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -17935,6 +18001,12 @@
     "country": "France",
     "admin1": "Grand Est"
   },
+  "2987914": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Perpignan",
+    "country": "France",
+    "admin1": "Occitanie"
+  },
   "2988394": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Paris 16 Passy",
@@ -18354,6 +18426,12 @@
     "name": "Ourense",
     "country": "Spain",
     "admin1": "Galicia"
+  },
+  "3116156": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Moratalaz",
+    "country": "Spain",
+    "admin1": "Madrid"
   },
   "3117735": {
     "fetched_at": "2026-05-02T22:03:13.315Z",
@@ -21289,6 +21367,12 @@
     "country": "Nicaragua",
     "admin1": "Masaya Department"
   },
+  "3618030": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "León",
+    "country": "Nicaragua",
+    "admin1": "León Department"
+  },
   "3620381": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Chinandega",
@@ -22651,6 +22735,12 @@
     "country": "Mexico",
     "admin1": "Nuevo León"
   },
+  "3995523": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Monclova",
+    "country": "Mexico",
+    "admin1": "Coahuila"
+  },
   "3996069": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Mexicali",
@@ -23380,6 +23470,12 @@
   "4703223": {
     "fetched_at": "2026-10-04T23:37:42.223Z",
     "name": "Killeen",
+    "country": "United States",
+    "admin1": "Texas"
+  },
+  "4705349": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Laredo",
     "country": "United States",
     "admin1": "Texas"
   },
@@ -25201,6 +25297,12 @@
     "country": "China",
     "admin1": "Hubei"
   },
+  "6648023": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Shuifu",
+    "country": "China",
+    "admin1": "Yunnan"
+  },
   "6657205": {
     "fetched_at": "2026-08-31T21:39:48.036Z",
     "name": "Fardīs",
@@ -25392,6 +25494,12 @@
     "name": "Somerset West",
     "country": "South Africa",
     "admin1": "Western Cape"
+  },
+  "6954929": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Greater Noida",
+    "country": "India",
+    "admin1": "Uttar Pradesh"
   },
   "6956647": {
     "fetched_at": "2026-09-09T05:24:22.974Z",
@@ -25675,6 +25783,12 @@
     "country": "China",
     "admin1": "Guangxi"
   },
+  "7602670": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Zhu Cheng City",
+    "country": "China",
+    "admin1": "Shandong"
+  },
   "7614932": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Pirituba",
@@ -25787,6 +25901,12 @@
     "name": "Huangpu",
     "country": "China",
     "admin1": "Shanghai Municipality"
+  },
+  "8310663": {
+    "fetched_at": "2026-10-16T15:01:05.808Z",
+    "name": "Central Coast",
+    "country": "Australia",
+    "admin1": "New South Wales"
   },
   "8335361": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
