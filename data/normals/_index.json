@@ -989,6 +989,12 @@
     "country": "Kenya",
     "admin1": "Trans Nzoia"
   },
+  "191299": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Kisii",
+    "country": "Kenya",
+    "admin1": "Kisii County"
+  },
   "192126": {
     "fetched_at": "2026-10-14T19:44:59.215Z",
     "name": "Kikuyu",
@@ -1246,6 +1252,12 @@
     "name": "Ibri",
     "country": "Oman",
     "admin1": "Ad Dhahirah"
+  },
+  "288764": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Bawshar",
+    "country": "Oman",
+    "admin1": "Muscat"
   },
   "288967": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -5294,6 +5306,12 @@
     "country": "India",
     "admin1": "Bihar"
   },
+  "1262771": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Morena",
+    "country": "India",
+    "admin1": "Madhya Pradesh"
+  },
   "1262775": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Morvi",
@@ -6343,6 +6361,12 @@
     "name": "Bilāspur",
     "country": "India",
     "admin1": "Chhattisgarh"
+  },
+  "1275665": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Bikaner",
+    "country": "India",
+    "admin1": "Rajasthan"
   },
   "1275716": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -9194,6 +9218,12 @@
     "country": "Philippines",
     "admin1": "Davao Region"
   },
+  "1703320": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Malabon",
+    "country": "Philippines",
+    "admin1": "National Capital Region"
+  },
   "1703417": {
     "fetched_at": "2026-10-10T18:05:07.249Z",
     "name": "Makati City",
@@ -9595,6 +9625,12 @@
     "name": "Kuala Terengganu",
     "country": "Malaysia",
     "admin1": "Terengganu"
+  },
+  "1734759": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Malacca",
+    "country": "Malaysia",
+    "admin1": "Melaka"
   },
   "1734810": {
     "fetched_at": "2026-10-04T23:37:42.223Z",
@@ -10033,6 +10069,12 @@
     "name": "Yuci",
     "country": "China",
     "admin1": "Shanxi"
+  },
+  "1786067": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Qianjiang",
+    "country": "China",
+    "admin1": "Hubei"
   },
   "1786112": {
     "fetched_at": "2026-09-03T18:54:42.659Z",
@@ -12510,6 +12552,12 @@
     "country": "Japan",
     "admin1": "Saitama"
   },
+  "1848277": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Yonago",
+    "country": "Japan",
+    "admin1": "Tottori"
+  },
   "1848313": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Yokosuka",
@@ -12713,6 +12761,12 @@
     "name": "Sasebo",
     "country": "Japan",
     "admin1": "Nagasaki"
+  },
+  "1852964": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Sano",
+    "country": "Japan",
+    "admin1": "Tochigi"
   },
   "1853008": {
     "fetched_at": "2026-10-14T00:39:42.835Z",
@@ -17258,6 +17312,12 @@
     "country": "Austria",
     "admin1": "Tyrol"
   },
+  "2778067": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Graz",
+    "country": "Austria",
+    "admin1": "Styria"
+  },
   "2779469": {
     "fetched_at": "2026-10-14T19:44:59.215Z",
     "name": "Floridsdorf",
@@ -17323,6 +17383,12 @@
     "name": "Wilmersdorf",
     "country": "Germany",
     "admin1": "State of Berlin"
+  },
+  "2809346": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Wiesbaden",
+    "country": "Germany",
+    "admin1": "Hesse"
   },
   "2820256": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
@@ -18176,6 +18242,12 @@
     "country": "Spain",
     "admin1": "Castille and León"
   },
+  "3111199": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Sabadell",
+    "country": "Spain",
+    "admin1": "Catalonia"
+  },
   "3112737": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Puente de Vallecas",
@@ -18217,6 +18289,12 @@
     "name": "Getafe",
     "country": "Spain",
     "admin1": "Madrid"
+  },
+  "3121456": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Girona",
+    "country": "Spain",
+    "admin1": "Catalonia"
   },
   "3121960": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -25696,6 +25774,12 @@
   "8504952": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
     "name": "Krasnogvargeisky",
+    "country": "Russia",
+    "admin1": "St.-Petersburg"
+  },
+  "8504953": {
+    "fetched_at": "2026-10-16T05:10:47.366Z",
+    "name": "Admiralteisky",
     "country": "Russia",
     "admin1": "St.-Petersburg"
   },
