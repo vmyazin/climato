@@ -4083,6 +4083,12 @@
     "country": "Pakistan",
     "admin1": "Punjab"
   },
+  "1176106": {
+    "fetched_at": "2026-10-17T00:49:45.766Z",
+    "name": "Jaranwala",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
   "1176515": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Jacobabad",
@@ -5449,6 +5455,12 @@
     "name": "Mangaluru",
     "country": "India",
     "admin1": "Karnataka"
+  },
+  "1263797": {
+    "fetched_at": "2026-10-17T00:49:45.766Z",
+    "name": "Mangalagiri",
+    "country": "India",
+    "admin1": "Andhra Pradesh"
   },
   "1263814": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -10730,6 +10742,12 @@
     "country": "China",
     "admin1": "Anhui"
   },
+  "1792892": {
+    "fetched_at": "2026-10-17T00:49:45.766Z",
+    "name": "Tianshui",
+    "country": "China",
+    "admin1": "Gansu"
+  },
   "1792947": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Tianjin",
@@ -13079,6 +13097,12 @@
     "name": "Niigata",
     "country": "Japan",
     "admin1": "Niigata"
+  },
+  "1855612": {
+    "fetched_at": "2026-10-17T00:49:45.766Z",
+    "name": "Nara",
+    "country": "Japan",
+    "admin1": "Nara"
   },
   "1856057": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -17394,6 +17418,12 @@
     "name": "Aberdeen",
     "country": "United Kingdom",
     "admin1": "Scotland"
+  },
+  "2657896": {
+    "fetched_at": "2026-10-17T00:49:45.766Z",
+    "name": "Zurich",
+    "country": "Switzerland",
+    "admin1": "Canton of Zurich"
   },
   "2664454": {
     "fetched_at": "2026-09-10T18:42:37.492Z",
@@ -26148,6 +26178,12 @@
     "country": "Malaysia",
     "admin1": "Selangor"
   },
+  "8504948": {
+    "fetched_at": "2026-10-17T00:49:45.766Z",
+    "name": "Petrogradka",
+    "country": "Russia",
+    "admin1": "St.-Petersburg"
+  },
   "8504952": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
     "name": "Krasnogvargeisky",
@@ -27323,6 +27359,12 @@
     "country": "United Arab Emirates",
     "admin1": "Dubai"
   },
+  "13132725": {
+    "fetched_at": "2026-10-17T00:49:45.766Z",
+    "name": "Chunga",
+    "country": "Zambia",
+    "admin1": "Lusaka Province"
+  },
   "13156582": {
     "fetched_at": "2026-08-28T19:37:43.002Z",
     "name": "Arabkir",
@@ -27553,6 +27595,12 @@
   "13607966": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Circoiscrizione II",
+    "country": "Italy",
+    "admin1": "Piedmont"
+  },
+  "13607970": {
+    "fetched_at": "2026-10-17T00:49:45.766Z",
+    "name": "Circoiscrizione VI",
     "country": "Italy",
     "admin1": "Piedmont"
   },
