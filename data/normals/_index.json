@@ -4030,6 +4030,12 @@
     "country": "Pakistan",
     "admin1": "Punjab"
   },
+  "1169027": {
+    "fetched_at": "2026-10-17T23:31:47.875Z",
+    "name": "New Mirpur City",
+    "country": "Pakistan",
+    "admin1": "Azad Kashmir"
+  },
   "1169116": {
     "fetched_at": "2026-09-04T21:04:35.522Z",
     "name": "Nawabshah",
@@ -7897,6 +7903,12 @@
     "name": "Thu Dau Mot",
     "country": "Vietnam",
     "admin1": "Ho Chi Minh City (HCMC)"
+  },
+  "1565047": {
+    "fetched_at": "2026-10-17T23:31:47.875Z",
+    "name": "Thuận Thanh",
+    "country": "Vietnam",
+    "admin1": "Bac Ninh"
   },
   "1565136": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -12151,6 +12163,12 @@
     "name": "Hangzhou",
     "country": "China",
     "admin1": "Zhejiang"
+  },
+  "1808931": {
+    "fetched_at": "2026-10-17T23:31:47.875Z",
+    "name": "Hangu",
+    "country": "China",
+    "admin1": "Tianjin Municipality"
   },
   "1808956": {
     "fetched_at": "2026-08-26T18:30:40.356Z",
@@ -18101,6 +18119,12 @@
     "name": "Neukölln",
     "country": "Germany",
     "admin1": "State of Berlin"
+  },
+  "2867543": {
+    "fetched_at": "2026-10-17T23:31:47.875Z",
+    "name": "Münster",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
   },
   "2867714": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -25649,6 +25673,12 @@
     "name": "Vancouver",
     "country": "Canada",
     "admin1": "British Columbia"
+  },
+  "6173577": {
+    "fetched_at": "2026-10-17T23:31:47.875Z",
+    "name": "Vaughan",
+    "country": "Canada",
+    "admin1": "Ontario"
   },
   "6174041": {
     "fetched_at": "2026-09-06T05:10:51.076Z",
