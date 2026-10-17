@@ -1571,6 +1571,12 @@
     "country": "Egypt",
     "admin1": "Sohag Governorate"
   },
+  "347796": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Sohag",
+    "country": "Egypt",
+    "admin1": "Sohag Governorate"
+  },
   "347907": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
     "name": "Sinnūris",
@@ -3712,6 +3718,12 @@
     "name": "Nacala",
     "country": "Mozambique",
     "admin1": "Nampula"
+  },
+  "1039536": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Maxixe",
+    "country": "Mozambique",
+    "admin1": "Inhambane Province"
   },
   "1039854": {
     "fetched_at": "2026-10-13T16:29:28.201Z",
@@ -14008,6 +14020,12 @@
     "name": "Woodlands",
     "country": "Singapore"
   },
+  "1884138": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Yeosu",
+    "country": "South Korea",
+    "admin1": "Jeollanam-do"
+  },
   "1884178": {
     "fetched_at": "2026-08-27T13:08:28.196Z",
     "name": "Gwangyang",
@@ -17712,6 +17730,12 @@
     "country": "Portugal",
     "admin1": "Braga District"
   },
+  "2743856": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Zoetermeer",
+    "country": "The Netherlands",
+    "admin1": "South Holland"
+  },
   "2745641": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Venlo",
@@ -17949,6 +17973,12 @@
   "2848273": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Remscheid",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
+  },
+  "2849647": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Recklinghausen",
     "country": "Germany",
     "admin1": "North Rhine-Westphalia"
   },
@@ -18696,6 +18726,12 @@
     "country": "Poland",
     "admin1": "West Pomerania"
   },
+  "3096472": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Katowice",
+    "country": "Poland",
+    "admin1": "Silesia"
+  },
   "3096880": {
     "fetched_at": "2026-09-07T10:46:25.605Z",
     "name": "Kalisz",
@@ -18810,6 +18846,12 @@
     "country": "Spain",
     "admin1": "Catalonia"
   },
+  "3111933": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Reus",
+    "country": "Spain",
+    "admin1": "Catalonia"
+  },
   "3112737": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Puente de Vallecas",
@@ -18827,6 +18869,12 @@
     "name": "Ourense",
     "country": "Spain",
     "admin1": "Galicia"
+  },
+  "3116025": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Móstoles",
+    "country": "Spain",
+    "admin1": "Madrid"
   },
   "3116156": {
     "fetched_at": "2026-10-16T15:01:05.808Z",
@@ -24108,6 +24156,12 @@
     "country": "United States",
     "admin1": "Illinois"
   },
+  "4905687": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Peoria",
+    "country": "United States",
+    "admin1": "Illinois"
+  },
   "4907959": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Rockford",
@@ -24594,6 +24648,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5339840": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Costa Mesa",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5341430": {
     "fetched_at": "2026-10-09T08:02:58.092Z",
     "name": "Daly City",
@@ -24699,6 +24759,12 @@
   "5359777": {
     "fetched_at": "2026-09-18T14:40:05.548Z",
     "name": "Irvine",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5363748": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Koreatown",
     "country": "United States",
     "admin1": "California"
   },
@@ -25787,6 +25853,12 @@
     "name": "San Pedro de la Paz",
     "country": "Chile",
     "admin1": "Biobio"
+  },
+  "6697563": {
+    "fetched_at": "2026-10-17T16:40:31.540Z",
+    "name": "Neyagawa",
+    "country": "Japan",
+    "admin1": "Osaka"
   },
   "6697759": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
