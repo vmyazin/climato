@@ -2087,6 +2087,12 @@
     "country": "Russia",
     "admin1": "Moscow"
   },
+  "487495": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Sterlitamak",
+    "country": "Russia",
+    "admin1": "Bashkortostan Republic"
+  },
   "487846": {
     "fetched_at": "2026-10-13T08:32:27.879Z",
     "name": "Stavropol",
@@ -2572,6 +2578,12 @@
     "name": "Bryansk",
     "country": "Russia",
     "admin1": "Bryansk Oblast"
+  },
+  "571741": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Brateyevo",
+    "country": "Russia",
+    "admin1": "Moscow"
   },
   "575505": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -4652,6 +4664,12 @@
     "country": "India",
     "admin1": "Maharashtra"
   },
+  "1253986": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Udaipur",
+    "country": "India",
+    "admin1": "Rajasthan"
+  },
   "1254089": {
     "fetched_at": "2026-09-01T05:45:57.153Z",
     "name": "Tumakuru",
@@ -4883,6 +4901,12 @@
   "1256826": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Seoni",
+    "country": "India",
+    "admin1": "Madhya Pradesh"
+  },
+  "1256913": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Sehore",
     "country": "India",
     "admin1": "Madhya Pradesh"
   },
@@ -6644,6 +6668,12 @@
     "country": "India",
     "admin1": "Odisha"
   },
+  "1276389": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Betūl",
+    "country": "India",
+    "admin1": "Madhya Pradesh"
+  },
   "1276393": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Bettiah",
@@ -6674,6 +6704,12 @@
     "country": "India",
     "admin1": "Rajasthan"
   },
+  "1276720": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Batāla",
+    "country": "India",
+    "admin1": "Punjab"
+  },
   "1276736": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Basti",
@@ -6697,6 +6733,12 @@
     "name": "Barnāla",
     "country": "India",
     "admin1": "Punjab"
+  },
+  "1276942": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Baripāda",
+    "country": "India",
+    "admin1": "Odisha"
   },
   "1277013": {
     "fetched_at": "2026-08-29T22:50:00.152Z",
@@ -7406,6 +7448,12 @@
     "country": "Russia",
     "admin1": "Chelyabinsk Oblast"
   },
+  "1500973": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Kyzyl",
+    "country": "Russia",
+    "admin1": "Republic of Tyva"
+  },
   "1501321": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Kurgan",
@@ -8107,6 +8155,12 @@
     "name": "Chợ Lớn",
     "country": "Vietnam",
     "admin1": "Ho Chi Minh City (HCMC)"
+  },
+  "1585489": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Chí Linh",
+    "country": "Vietnam",
+    "admin1": "Hai Phong"
   },
   "1586151": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -9104,6 +9158,12 @@
     "country": "Taiwan",
     "admin1": "Taiwan"
   },
+  "1677112": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Zhubei",
+    "country": "Taiwan",
+    "admin1": "Taiwan"
+  },
   "1678228": {
     "fetched_at": "2026-09-18T10:05:40.839Z",
     "name": "Keelung",
@@ -9325,6 +9385,12 @@
     "name": "Panabo",
     "country": "Philippines",
     "admin1": "Davao Region"
+  },
+  "1696710": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Pagadian",
+    "country": "Philippines",
+    "admin1": "Zamboanga Peninsula"
   },
   "1697497": {
     "fetched_at": "2026-10-14T22:43:24.981Z",
@@ -13572,6 +13638,12 @@
     "country": "Japan",
     "admin1": "Yamaguchi"
   },
+  "1861436": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Isesaki",
+    "country": "Japan",
+    "admin1": "Gunma"
+  },
   "1861449": {
     "fetched_at": "2026-10-13T16:29:28.201Z",
     "name": "Isehara",
@@ -15697,6 +15769,12 @@
     "country": "Nigeria",
     "admin1": "Anambra"
   },
+  "2328811": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Nkpor",
+    "country": "Nigeria",
+    "admin1": "Anambra"
+  },
   "2328952": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Nguru",
@@ -17358,6 +17436,12 @@
     "country": "United Kingdom",
     "admin1": "Scotland"
   },
+  "2650497": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Eastbourne",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2650752": {
     "fetched_at": "2026-10-11T14:24:35.730Z",
     "name": "Dundee",
@@ -17921,6 +18005,12 @@
     "name": "Mainz",
     "country": "Germany",
     "admin1": "Rhineland-Palatinate"
+  },
+  "2874545": {
+    "fetched_at": "2026-10-17T09:44:45.840Z",
+    "name": "Magdeburg",
+    "country": "Germany",
+    "admin1": "Saxony-Anhalt"
   },
   "2875376": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
