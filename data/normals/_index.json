@@ -923,6 +923,12 @@
     "country": "Kenya",
     "admin1": "Kiambu County"
   },
+  "183595": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Ngong",
+    "country": "Kenya",
+    "admin1": "Kajiado County"
+  },
   "184622": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Nakuru",
@@ -1336,6 +1342,12 @@
     "name": "Rehovot",
     "country": "Israel",
     "admin1": "Central District"
+  },
+  "293788": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Ramat Gan",
+    "country": "Israel",
+    "admin1": "Tel Aviv"
   },
   "294071": {
     "fetched_at": "2026-09-07T16:06:55.743Z",
@@ -3620,6 +3632,12 @@
   "1005125": {
     "fetched_at": "2026-10-15T05:31:53.684Z",
     "name": "Ermelo",
+    "country": "South Africa",
+    "admin1": "Mpumalanga"
+  },
+  "1005646": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "eMbalenhle",
     "country": "South Africa",
     "admin1": "Mpumalanga"
   },
@@ -6049,6 +6067,12 @@
     "name": "Hābra",
     "country": "India",
     "admin1": "West Bengal"
+  },
+  "1270576": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Gyānpur",
+    "country": "India",
+    "admin1": "Uttar Pradesh"
   },
   "1270583": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
@@ -9899,6 +9923,12 @@
   "1733953": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Lahad Datu",
+    "country": "Malaysia",
+    "admin1": "Sabah"
+  },
+  "1734052": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Sandakan",
     "country": "Malaysia",
     "admin1": "Sabah"
   },
@@ -14197,6 +14227,12 @@
     "country": "Russia",
     "admin1": "Zabaykalskiy (Transbaikal) Kray"
   },
+  "2026609": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Blagoveshchensk",
+    "country": "Russia",
+    "admin1": "Amur Oblast"
+  },
   "2027667": {
     "fetched_at": "2026-09-06T09:43:13.415Z",
     "name": "Angarsk",
@@ -16111,6 +16147,12 @@
     "country": "Nigeria",
     "admin1": "Ondo State"
   },
+  "2352379": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Ado-Ekiti",
+    "country": "Nigeria",
+    "admin1": "Ekiti State"
+  },
   "2352778": {
     "fetched_at": "2026-09-15T05:51:42.741Z",
     "name": "Abuja",
@@ -17322,6 +17364,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2641674": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Newcastle-under-Lyme",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2642465": {
     "fetched_at": "2026-08-29T22:50:00.152Z",
     "name": "Milton Keynes",
@@ -17693,6 +17741,12 @@
     "name": "Leiden",
     "country": "The Netherlands",
     "admin1": "South Holland"
+  },
+  "2753801": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Hoofddorp",
+    "country": "The Netherlands",
+    "admin1": "North Holland"
   },
   "2755251": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
@@ -19049,6 +19103,12 @@
     "name": "Arezzo",
     "country": "Italy",
     "admin1": "Tuscany"
+  },
+  "3183539": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Acilia-Castel Fusano-Ostia Antica",
+    "country": "Italy",
+    "admin1": "Lazio"
   },
   "3183719": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
@@ -22398,6 +22458,12 @@
     "country": "Colombia",
     "admin1": "Valle del Cauca Department"
   },
+  "3688452": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Buenaventura",
+    "country": "Colombia",
+    "admin1": "Valle del Cauca Department"
+  },
   "3688465": {
     "fetched_at": "2026-08-28T19:37:43.002Z",
     "name": "Bucaramanga",
@@ -24738,6 +24804,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5387877": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Riverside",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5388881": {
     "fetched_at": "2026-10-14T10:39:38.584Z",
     "name": "Roseville",
@@ -26606,6 +26678,12 @@
   "9645072": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Quận Sáu",
+    "country": "Vietnam",
+    "admin1": "Ho Chi Minh City (HCMC)"
+  },
+  "9645073": {
+    "fetched_at": "2026-10-17T13:16:52.206Z",
+    "name": "Quận Năm",
     "country": "Vietnam",
     "admin1": "Ho Chi Minh City (HCMC)"
   },
