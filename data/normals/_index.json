@@ -1853,6 +1853,12 @@
     "country": "Sudan",
     "admin1": "Khartoum State"
   },
+  "368277": {
+    "fetched_at": "2026-10-17T18:53:43.893Z",
+    "name": "Rabak",
+    "country": "Sudan",
+    "admin1": "White Nile"
+  },
   "370737": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Malakal",
@@ -1979,11 +1985,23 @@
     "country": "Russia",
     "admin1": "Moscow"
   },
+  "466806": {
+    "fetched_at": "2026-10-17T18:53:43.893Z",
+    "name": "Yoshkar-Ola",
+    "country": "Russia",
+    "admin1": "Mariy-El Republic"
+  },
   "467978": {
     "fetched_at": "2026-09-04T21:04:35.522Z",
     "name": "Yelets",
     "country": "Russia",
     "admin1": "Lipetsk Oblast"
+  },
+  "468809": {
+    "fetched_at": "2026-10-17T18:53:43.893Z",
+    "name": "Yasenevo",
+    "country": "Russia",
+    "admin1": "Moscow"
   },
   "468902": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -5563,6 +5581,12 @@
     "name": "Malappuram",
     "country": "India",
     "admin1": "Kerala"
+  },
+  "1264389": {
+    "fetched_at": "2026-10-17T18:53:43.893Z",
+    "name": "Mahesāna",
+    "country": "India",
+    "admin1": "Gujarat"
   },
   "1264407": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -13589,6 +13613,12 @@
     "name": "Kashiwa",
     "country": "Japan",
     "admin1": "Chiba"
+  },
+  "1859951": {
+    "fetched_at": "2026-10-17T18:53:43.893Z",
+    "name": "Kashihara-shi",
+    "country": "Japan",
+    "admin1": "Nara"
   },
   "1860034": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -24885,6 +24915,12 @@
   "5389489": {
     "fetched_at": "2026-10-09T15:36:04.148Z",
     "name": "Sacramento",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5391295": {
+    "fetched_at": "2026-10-17T18:53:43.893Z",
+    "name": "Salinas",
     "country": "United States",
     "admin1": "California"
   },
