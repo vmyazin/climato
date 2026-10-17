@@ -185,6 +185,12 @@
     "country": "Iraq",
     "admin1": "Erbil Governorate"
   },
+  "97783": {
+    "fetched_at": "2026-10-17T21:04:00.624Z",
+    "name": "Bayjī",
+    "country": "Iraq",
+    "admin1": "Salah ad Din"
+  },
   "98182": {
     "fetched_at": "2026-09-01T05:45:57.153Z",
     "name": "Baghdad",
@@ -1090,6 +1096,12 @@
     "name": "Mbarara",
     "country": "Uganda",
     "admin1": "Western Region"
+  },
+  "229278": {
+    "fetched_at": "2026-10-17T21:04:00.624Z",
+    "name": "Mbale",
+    "country": "Uganda",
+    "admin1": "Eastern Region"
   },
   "229380": {
     "fetched_at": "2026-09-15T01:00:04.395Z",
@@ -12912,6 +12924,12 @@
     "country": "South Korea",
     "admin1": "Gyeongsangnam-do"
   },
+  "1846918": {
+    "fetched_at": "2026-10-17T21:04:00.624Z",
+    "name": "Ansan-si",
+    "country": "South Korea",
+    "admin1": "Gyeonggi-do"
+  },
   "1846986": {
     "fetched_at": "2026-10-14T05:31:14.630Z",
     "name": "Andong",
@@ -19020,6 +19038,12 @@
     "country": "Norway",
     "admin1": "Vestland"
   },
+  "3164419": {
+    "fetched_at": "2026-10-17T21:04:00.624Z",
+    "name": "Vicenza",
+    "country": "Italy",
+    "admin1": "Veneto"
+  },
   "3164527": {
     "fetched_at": "2026-09-23T20:43:12.539Z",
     "name": "Verona",
@@ -20573,6 +20597,12 @@
     "name": "Lagarto",
     "country": "Brazil",
     "admin1": "Sergipe"
+  },
+  "3459462": {
+    "fetched_at": "2026-10-17T21:04:00.624Z",
+    "name": "Jundiaí",
+    "country": "Brazil",
+    "admin1": "São Paulo"
   },
   "3459505": {
     "fetched_at": "2026-09-06T20:52:46.826Z",
@@ -24171,6 +24201,12 @@
   "4890864": {
     "fetched_at": "2026-10-14T10:39:38.584Z",
     "name": "Elgin",
+    "country": "United States",
+    "admin1": "Illinois"
+  },
+  "4898015": {
+    "fetched_at": "2026-10-17T21:04:00.624Z",
+    "name": "Joliet",
     "country": "United States",
     "admin1": "Illinois"
   },
