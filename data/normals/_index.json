@@ -323,6 +323,12 @@
     "country": "Saudi Arabia",
     "admin1": "Mecca Region"
   },
+  "106297": {
+    "fetched_at": "2026-10-18T19:42:58.367Z",
+    "name": "Hafar Al-Batin",
+    "country": "Saudi Arabia",
+    "admin1": "Eastern Province"
+  },
   "107781": {
     "fetched_at": "2026-09-05T20:45:00.477Z",
     "name": "Az Zulfī",
@@ -1763,6 +1769,18 @@
     "country": "Egypt",
     "admin1": "Qalyubia"
   },
+  "359792": {
+    "fetched_at": "2026-10-18T19:42:58.367Z",
+    "name": "Aswān",
+    "country": "Egypt",
+    "admin1": "Aswan Governorate"
+  },
+  "359796": {
+    "fetched_at": "2026-10-18T19:42:58.367Z",
+    "name": "Suez",
+    "country": "Egypt",
+    "admin1": "Suez Governorate"
+  },
   "359815": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "As Sinbillāwayn",
@@ -1918,6 +1936,12 @@
     "name": "Al Manāqil",
     "country": "Sudan",
     "admin1": "Al Jazirah"
+  },
+  "379252": {
+    "fetched_at": "2026-10-18T19:42:58.367Z",
+    "name": "Khartoum",
+    "country": "Sudan",
+    "admin1": "Khartoum State"
   },
   "379302": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
@@ -5953,6 +5977,12 @@
     "name": "Jodhpur",
     "country": "India",
     "admin1": "Rajasthan"
+  },
+  "1268907": {
+    "fetched_at": "2026-10-18T19:42:58.367Z",
+    "name": "Jīnd",
+    "country": "India",
+    "admin1": "Haryana"
   },
   "1268936": {
     "fetched_at": "2026-09-01T05:45:57.153Z",
@@ -16798,6 +16828,12 @@
     "country": "Tunisia",
     "admin1": "Ariana Governorate"
   },
+  "2473449": {
+    "fetched_at": "2026-10-18T19:42:58.367Z",
+    "name": "Kairouan",
+    "country": "Tunisia",
+    "admin1": "Kairouan"
+  },
   "2475475": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
     "name": "Touggourt",
@@ -19245,6 +19281,12 @@
     "name": "Logroño",
     "country": "Spain",
     "admin1": "La Rioja"
+  },
+  "3118514": {
+    "fetched_at": "2026-10-18T19:42:58.367Z",
+    "name": "Lleida",
+    "country": "Spain",
+    "admin1": "Catalonia"
   },
   "3118532": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
@@ -26248,6 +26290,12 @@
     "country": "Spain",
     "admin1": "Madrid"
   },
+  "6544495": {
+    "fetched_at": "2026-10-18T19:42:58.367Z",
+    "name": "Retiro",
+    "country": "Spain",
+    "admin1": "Madrid"
+  },
   "6545310": {
     "fetched_at": "2026-09-04T15:10:30.811Z",
     "name": "Mitte",
@@ -26337,6 +26385,12 @@
     "name": "Taguatinga",
     "country": "Brazil",
     "admin1": "Federal District"
+  },
+  "6822096": {
+    "fetched_at": "2026-10-18T19:42:58.367Z",
+    "name": "Hitachi-Naka",
+    "country": "Japan",
+    "admin1": "Ibaraki"
   },
   "6822099": {
     "fetched_at": "2026-09-08T15:23:48.071Z",
