@@ -3239,6 +3239,12 @@
     "country": "Poland",
     "admin1": "Lesser Poland"
   },
+  "757065": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Targówek",
+    "country": "Poland",
+    "admin1": "Mazovia"
+  },
   "759734": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Rzeszów",
@@ -4250,9 +4256,21 @@
     "country": "Pakistan",
     "admin1": "Sindh"
   },
+  "1179400": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Faisalabad",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
   "1180289": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Dera Ghazi Khan",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
+  "1180436": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Daska Kalan",
     "country": "Pakistan",
     "admin1": "Punjab"
   },
@@ -6488,6 +6506,12 @@
     "country": "India",
     "admin1": "Madhya Pradesh"
   },
+  "1273687": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Dohad",
+    "country": "India",
+    "admin1": "Gujarat"
+  },
   "1273780": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Cuttack",
@@ -7237,6 +7261,12 @@
     "name": "Patan",
     "country": "Nepal",
     "admin1": "Bagmati Province"
+  },
+  "1283161": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Lahān",
+    "country": "Nepal",
+    "admin1": "Madhesh"
   },
   "1283240": {
     "fetched_at": "2026-09-03T18:54:42.659Z",
@@ -12870,6 +12900,12 @@
     "country": "South Korea",
     "admin1": "Ulsan"
   },
+  "1833788": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Uijeongbu-si",
+    "country": "South Korea",
+    "admin1": "Gyeonggi-do"
+  },
   "1835235": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Daejeon",
@@ -13163,6 +13199,12 @@
     "name": "Toyota",
     "country": "Japan",
     "admin1": "Aichi"
+  },
+  "1849837": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Toyonaka",
+    "country": "Japan",
+    "admin1": "Osaka"
   },
   "1849845": {
     "fetched_at": "2026-10-11T07:53:10.873Z",
@@ -17782,6 +17824,12 @@
     "country": "United Kingdom",
     "admin1": "Wales"
   },
+  "2653941": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Cambridge",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2654264": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Burnley",
@@ -18910,6 +18958,12 @@
     "country": "Poland",
     "admin1": "Silesia"
   },
+  "3082914": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Tychy",
+    "country": "Poland",
+    "admin1": "Silesia"
+  },
   "3083271": {
     "fetched_at": "2026-10-02T20:18:35.310Z",
     "name": "Torun",
@@ -19054,6 +19108,12 @@
     "country": "Spain",
     "admin1": "Castille and León"
   },
+  "3108288": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Tarragona",
+    "country": "Spain",
+    "admin1": "Catalonia"
+  },
   "3109453": {
     "fetched_at": "2026-09-14T22:46:46.556Z",
     "name": "Barakaldo",
@@ -19159,6 +19219,12 @@
   "3121960": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Fuenlabrada",
+    "country": "Spain",
+    "admin1": "Madrid"
+  },
+  "3121969": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Fuencarral",
     "country": "Spain",
     "admin1": "Madrid"
   },
@@ -19275,6 +19341,12 @@
     "name": "Turin",
     "country": "Italy",
     "admin1": "Piedmont"
+  },
+  "3165771": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Terni",
+    "country": "Italy",
+    "admin1": "Umbria"
   },
   "3165926": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
@@ -19521,6 +19593,12 @@
     "name": "Ondjiva",
     "country": "Angola",
     "admin1": "Cunene Province"
+  },
+  "3347019": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Mossamedes",
+    "country": "Angola",
+    "admin1": "Namibe Province"
   },
   "3347353": {
     "fetched_at": "2026-09-04T23:27:11.474Z",
@@ -21844,6 +21922,12 @@
     "country": "Cuba",
     "admin1": "Santiago de Cuba Province"
   },
+  "3547398": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Matanzas",
+    "country": "Cuba",
+    "admin1": "Matanzas Province"
+  },
   "3547640": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Marianao",
@@ -24010,6 +24094,12 @@
     "country": "United States",
     "admin1": "North Carolina"
   },
+  "4499612": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Winston-Salem",
+    "country": "United States",
+    "admin1": "North Carolina"
+  },
   "4508722": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
     "name": "Cincinnati",
@@ -26032,6 +26122,12 @@
     "country": "Brazil",
     "admin1": "Mato Grosso"
   },
+  "6324729": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Halifax",
+    "country": "Canada",
+    "admin1": "Nova Scotia"
+  },
   "6325494": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Québec",
@@ -26145,6 +26241,12 @@
     "name": "Fardīs",
     "country": "Iran",
     "admin1": "Tehran"
+  },
+  "6690108": {
+    "fetched_at": "2026-10-18T14:54:52.355Z",
+    "name": "Panchkula",
+    "country": "India",
+    "admin1": "Haryana"
   },
   "6690870": {
     "fetched_at": "2026-10-13T21:34:55.272Z",
