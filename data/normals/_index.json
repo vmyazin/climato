@@ -15521,6 +15521,12 @@
     "country": "Cameroon",
     "admin1": "Adamaoua Region"
   },
+  "2228373": {
+    "fetched_at": "2026-10-18T23:47:42.765Z",
+    "name": "Maroua",
+    "country": "Cameroon",
+    "admin1": "Far North"
+  },
   "2229411": {
     "fetched_at": "2026-09-04T01:26:49.281Z",
     "name": "Limbe",
@@ -17062,6 +17068,12 @@
     "country": "Algeria",
     "admin1": "Oum el Bouaghi Province"
   },
+  "2509954": {
+    "fetched_at": "2026-10-18T23:47:42.765Z",
+    "name": "Valencia",
+    "country": "Spain",
+    "admin1": "Valencia"
+  },
   "2510542": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Telde",
@@ -18004,6 +18016,12 @@
     "country": "Switzerland",
     "admin1": "Canton of Zurich"
   },
+  "2661552": {
+    "fetched_at": "2026-10-18T23:47:42.765Z",
+    "name": "Bern",
+    "country": "Switzerland",
+    "admin1": "Canton of Bern"
+  },
   "2664454": {
     "fetched_at": "2026-09-10T18:42:37.492Z",
     "name": "Västerås",
@@ -18321,6 +18339,12 @@
     "name": "Remscheid",
     "country": "Germany",
     "admin1": "North Rhine-Westphalia"
+  },
+  "2849483": {
+    "fetched_at": "2026-10-18T23:47:42.765Z",
+    "name": "Regensburg",
+    "country": "Germany",
+    "admin1": "Bavaria"
   },
   "2849647": {
     "fetched_at": "2026-10-17T16:40:31.540Z",
