@@ -287,6 +287,12 @@
     "country": "Saudi Arabia",
     "admin1": "Al-Qassim Region"
   },
+  "101760": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Sulţānah",
+    "country": "Saudi Arabia",
+    "admin1": "Medina Region"
+  },
   "102527": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Sakakah",
@@ -394,6 +400,12 @@
     "name": "Varāmīn",
     "country": "Iran",
     "admin1": "Tehran"
+  },
+  "112646": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Torbat-e Ḩeydarīyeh",
+    "country": "Iran",
+    "admin1": "Razavi Khorasan"
   },
   "112931": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -2986,6 +2998,12 @@
     "name": "Constanța",
     "country": "Romania",
     "admin1": "Constanța County"
+  },
+  "681290": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Cluj-Napoca",
+    "country": "Romania",
+    "admin1": "Cluj County"
   },
   "683123": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -5708,6 +5726,12 @@
     "country": "India",
     "admin1": "Telangana"
   },
+  "1265859": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Krishnanagar",
+    "country": "India",
+    "admin1": "West Bengal"
+  },
   "1265873": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Kozhikode",
@@ -7028,6 +7052,12 @@
     "country": "India",
     "admin1": "Tamil Nadu"
   },
+  "1278860": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Ambāla",
+    "country": "India",
+    "admin1": "Haryana"
+  },
   "1278903": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Ambarnath",
@@ -8329,6 +8359,12 @@
     "name": "Bien Hoa",
     "country": "Vietnam",
     "admin1": "Dong Nai"
+  },
+  "1587976": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Bến Tre",
+    "country": "Vietnam",
+    "admin1": "Vinh Long"
   },
   "1588060": {
     "fetched_at": "2026-09-05T18:36:25.616Z",
@@ -13998,6 +14034,12 @@
     "country": "Japan",
     "admin1": "Kanagawa"
   },
+  "1865714": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Ageo",
+    "country": "Japan",
+    "admin1": "Saitama"
+  },
   "1867429": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
     "name": "Ŭllyul",
@@ -14069,6 +14111,11 @@
     "name": "Kampong Pasir Ris",
     "country": "Singapore"
   },
+  "1880594": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Kembangan",
+    "country": "Singapore"
+  },
   "1880628": {
     "fetched_at": "2026-09-03T15:15:27.356Z",
     "name": "Kallang",
@@ -14092,6 +14139,11 @@
   "1882101": {
     "fetched_at": "2026-10-13T01:39:09.765Z",
     "name": "Serangoon New Town",
+    "country": "Singapore"
+  },
+  "1882115": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Tampines New Town",
     "country": "Singapore"
   },
   "1882155": {
@@ -17490,6 +17542,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2643179": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Maidstone",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2643339": {
     "fetched_at": "2026-09-08T22:03:16.689Z",
     "name": "Luton",
@@ -17825,6 +17883,12 @@
     "name": "Zoetermeer",
     "country": "The Netherlands",
     "admin1": "South Holland"
+  },
+  "2744114": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Zaanstad",
+    "country": "The Netherlands",
+    "admin1": "North Holland"
   },
   "2745641": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -21690,6 +21754,12 @@
     "country": "Cuba",
     "admin1": "Provincia de Pinar del Río"
   },
+  "3545064": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Palma Soriano",
+    "country": "Cuba",
+    "admin1": "Santiago de Cuba Province"
+  },
   "3547640": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Marianao",
@@ -21825,6 +21895,12 @@
   "3587902": {
     "fetched_at": "2026-09-06T16:29:06.700Z",
     "name": "Villa Nueva",
+    "country": "Guatemala",
+    "admin1": "Guatemala"
+  },
+  "3587923": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Villa Canales",
     "country": "Guatemala",
     "admin1": "Guatemala"
   },
@@ -28016,6 +28092,12 @@
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Nossa Senhora de Fátima",
     "country": "China"
+  },
+  "13527315": {
+    "fetched_at": "2026-10-18T06:38:57.763Z",
+    "name": "Santo Antonio",
+    "country": "China",
+    "admin1": "Guangdong"
   },
   "13535744": {
     "fetched_at": "2026-09-02T21:34:09.419Z",
