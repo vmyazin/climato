@@ -2333,6 +2333,12 @@
     "country": "Russia",
     "admin1": "Orenburg Oblast"
   },
+  "515879": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Oktyabrsky",
+    "country": "Russia",
+    "admin1": "Bashkortostan Republic"
+  },
   "516215": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
     "name": "Odintsovo",
@@ -3521,6 +3527,12 @@
     "country": "Malawi",
     "admin1": "Southern Region"
   },
+  "932505": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Maseru",
+    "country": "Lesotho",
+    "admin1": "Maseru District"
+  },
   "933778": {
     "fetched_at": "2026-09-09T21:17:07.337Z",
     "name": "Francistown",
@@ -3868,6 +3880,12 @@
     "name": "Zabol",
     "country": "Iran",
     "admin1": "Sistan and Baluchestan"
+  },
+  "1133616": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Mazari Sharif",
+    "country": "Afghanistan",
+    "admin1": "Balkh"
   },
   "1135689": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -16343,6 +16361,12 @@
     "country": "Nigeria",
     "admin1": "Rivers State"
   },
+  "2347059": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Birnin Kebbi",
+    "country": "Nigeria",
+    "admin1": "Kebbi"
+  },
   "2347209": {
     "fetched_at": "2026-10-11T01:21:14.703Z",
     "name": "Bida",
@@ -18016,6 +18040,12 @@
     "country": "The Netherlands",
     "admin1": "Limburg"
   },
+  "2745912": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Utrecht",
+    "country": "The Netherlands",
+    "admin1": "Utrecht"
+  },
   "2746301": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Tilburg",
@@ -18183,6 +18213,12 @@
     "name": "Würzburg",
     "country": "Germany",
     "admin1": "Bavaria"
+  },
+  "2805753": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Wuppertal",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
   },
   "2806654": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -18475,6 +18511,12 @@
   "2911287": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Marienthal",
+    "country": "Germany",
+    "admin1": "Free and Hanseatic City of Hamburg"
+  },
+  "2911288": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Hamburg-Mitte",
     "country": "Germany",
     "admin1": "Free and Hanseatic City of Hamburg"
   },
@@ -19131,6 +19173,12 @@
     "name": "Santa Coloma de Gramenet",
     "country": "Spain",
     "admin1": "Catalonia"
+  },
+  "3110044": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Donostia / San Sebastian",
+    "country": "Spain",
+    "admin1": "Basque Country"
   },
   "3110876": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -25396,6 +25444,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5406602": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Vista",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5407933": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
     "name": "West Covina",
@@ -26740,6 +26794,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "7626690": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Pimpri-Chinchwad",
+    "country": "India",
+    "admin1": "Maharashtra"
+  },
   "7645166": {
     "fetched_at": "2026-05-25T06:28:46.652Z",
     "name": "San Miguel",
@@ -26840,6 +26900,12 @@
     "fetched_at": "2026-10-13T16:29:28.201Z",
     "name": "Al Qāhirah al Jadīdah",
     "country": "Egypt"
+  },
+  "8285534": {
+    "fetched_at": "2026-10-18T17:36:13.269Z",
+    "name": "Fuencarral-El Pardo",
+    "country": "Spain",
+    "admin1": "Madrid"
   },
   "8299780": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
