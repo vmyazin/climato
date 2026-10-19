@@ -1571,6 +1571,12 @@
     "country": "Ethiopia",
     "admin1": "Addis Ababa"
   },
+  "345149": {
+    "fetched_at": "2026-10-19T20:15:13.067Z",
+    "name": "Ādīgrat",
+    "country": "Ethiopia",
+    "admin1": "Tigray"
+  },
   "346030": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
     "name": "Zefta",
@@ -3701,6 +3707,12 @@
     "country": "South Africa",
     "admin1": "KwaZulu-Natal"
   },
+  "965528": {
+    "fetched_at": "2026-10-19T20:15:13.067Z",
+    "name": "Phalaborwa",
+    "country": "South Africa",
+    "admin1": "Limpopo"
+  },
   "967476": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Orkney",
@@ -3808,6 +3820,12 @@
     "name": "Alberton",
     "country": "South Africa",
     "admin1": "Gauteng"
+  },
+  "1024552": {
+    "fetched_at": "2026-10-19T20:15:13.067Z",
+    "name": "Xai-Xai",
+    "country": "Mozambique",
+    "admin1": "Gaza Province"
   },
   "1024694": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
@@ -6494,6 +6512,12 @@
     "country": "India",
     "admin1": "West Bengal"
   },
+  "1272181": {
+    "fetched_at": "2026-10-19T20:15:13.067Z",
+    "name": "Durg",
+    "country": "India",
+    "admin1": "Chhattisgarh"
+  },
   "1272423": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
     "name": "Dombivali",
@@ -7771,6 +7795,12 @@
     "name": "Achinsk",
     "country": "Russia",
     "admin1": "Krasnoyarsk Krai"
+  },
+  "1512236": {
+    "fetched_at": "2026-10-19T20:15:13.067Z",
+    "name": "Abakan",
+    "country": "Russia",
+    "admin1": "Khakasiya Republic"
   },
   "1512296": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
@@ -18477,6 +18507,12 @@
     "country": "Germany",
     "admin1": "Lower Saxony"
   },
+  "2842647": {
+    "fetched_at": "2026-10-19T20:15:13.067Z",
+    "name": "Saarbrücken",
+    "country": "Germany",
+    "admin1": "Saarland"
+  },
   "2844588": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Rostock",
@@ -26535,6 +26571,12 @@
     "country": "China",
     "admin1": "Tibet"
   },
+  "6615440": {
+    "fetched_at": "2026-10-19T20:15:13.067Z",
+    "name": "Delicias",
+    "country": "Spain",
+    "admin1": "Aragon"
+  },
   "6619347": {
     "fetched_at": "2026-10-15T05:31:53.684Z",
     "name": "Navi Mumbai",
@@ -28737,6 +28779,18 @@
   "13607966": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Circoiscrizione II",
+    "country": "Italy",
+    "admin1": "Piedmont"
+  },
+  "13607967": {
+    "fetched_at": "2026-10-19T20:15:13.067Z",
+    "name": "Circoiscrizione III",
+    "country": "Italy",
+    "admin1": "Piedmont"
+  },
+  "13607969": {
+    "fetched_at": "2026-10-19T20:15:13.067Z",
+    "name": "Circoiscrizione V",
     "country": "Italy",
     "admin1": "Piedmont"
   },
