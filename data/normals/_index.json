@@ -13104,6 +13104,12 @@
     "country": "South Korea",
     "admin1": "Jeollabuk-do"
   },
+  "1845604": {
+    "fetched_at": "2026-10-19T01:53:17.013Z",
+    "name": "Cheongju-si",
+    "country": "South Korea",
+    "admin1": "North Chungcheong"
+  },
   "1845759": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Cheonan",
@@ -14262,6 +14268,11 @@
   "1880668": {
     "fetched_at": "2026-10-09T15:36:04.148Z",
     "name": "Geylang",
+    "country": "Singapore"
+  },
+  "1881921": {
+    "fetched_at": "2026-10-19T01:53:17.013Z",
+    "name": "Bukit Batok New Town",
     "country": "Singapore"
   },
   "1881953": {
@@ -18531,6 +18542,12 @@
     "name": "Ingolstadt",
     "country": "Germany",
     "admin1": "Bavaria"
+  },
+  "2904789": {
+    "fetched_at": "2026-10-19T01:53:17.013Z",
+    "name": "Hildesheim",
+    "country": "Germany",
+    "admin1": "Lower Saxony"
   },
   "2905891": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
