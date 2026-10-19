@@ -2207,6 +2207,12 @@
     "country": "Russia",
     "admin1": "Smolensk Oblast"
   },
+  "495136": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Shchukino",
+    "country": "Russia",
+    "admin1": "Moscow"
+  },
   "495344": {
     "fetched_at": "2026-10-15T10:23:13.375Z",
     "name": "Shchyolkovo",
@@ -2626,6 +2632,12 @@
     "name": "Elista",
     "country": "Russia",
     "admin1": "Kalmykiya Republic"
+  },
+  "563523": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Elektrostal",
+    "country": "Russia",
+    "admin1": "Moscow Oblast"
   },
   "563708": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -4221,6 +4233,12 @@
     "country": "Pakistan",
     "admin1": "Khyber Pakhtunkhwa"
   },
+  "1173664": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Khuzdar",
+    "country": "Pakistan",
+    "admin1": "Balochistan"
+  },
   "1173687": {
     "fetched_at": "2026-09-04T21:04:35.522Z",
     "name": "Khushāb",
@@ -4964,6 +4982,12 @@
     "country": "India",
     "admin1": "Rajasthan"
   },
+  "1255634": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Srinagar",
+    "country": "India",
+    "admin1": "Jammu and Kashmir"
+  },
   "1255647": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "Srikakulam",
@@ -5228,6 +5252,12 @@
     "country": "India",
     "admin1": "Telangana"
   },
+  "1258831": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Rāj-Nāndgaon",
+    "country": "India",
+    "admin1": "Chhattisgarh"
+  },
   "1258847": {
     "fetched_at": "2026-10-14T10:39:38.584Z",
     "name": "Rajkot",
@@ -5299,6 +5329,12 @@
     "name": "Punāsa",
     "country": "India",
     "admin1": "Madhya Pradesh"
+  },
+  "1259297": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Pudukkottai",
+    "country": "India",
+    "admin1": "Tamil Nadu"
   },
   "1259312": {
     "fetched_at": "2026-08-31T21:39:48.036Z",
@@ -6763,6 +6799,12 @@
     "name": "Bhubaneswar",
     "country": "India",
     "admin1": "Odisha"
+  },
+  "1275841": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Bhopal",
+    "country": "India",
+    "admin1": "Madhya Pradesh"
   },
   "1275899": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -9625,6 +9667,12 @@
     "name": "Norzagaray",
     "country": "Philippines",
     "admin1": "Central Luzon"
+  },
+  "1697846": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Navotas",
+    "country": "Philippines",
+    "admin1": "National Capital Region"
   },
   "1698829": {
     "fetched_at": "2026-10-10T22:03:03.519Z",
@@ -13662,6 +13710,12 @@
     "country": "Japan",
     "admin1": "Kagawa"
   },
+  "1857843": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Maebashi",
+    "country": "Japan",
+    "admin1": "Gunma"
+  },
   "1857871": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Machida",
@@ -16318,6 +16372,12 @@
     "country": "Nigeria",
     "admin1": "Oyo State"
   },
+  "2338900": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Ile-Ife",
+    "country": "Nigeria",
+    "admin1": "Osun State"
+  },
   "2339354": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Ibadan",
@@ -17598,6 +17658,12 @@
   "2636531": {
     "fetched_at": "2026-10-17T05:05:28.712Z",
     "name": "Sunderland",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2636841": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Stoke-on-Trent",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -21873,6 +21939,12 @@
     "country": "Mexico",
     "admin1": "Yucatán"
   },
+  "3523466": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Heroica Matamoros",
+    "country": "Mexico",
+    "admin1": "Tamaulipas"
+  },
   "3526485": {
     "fetched_at": "2026-09-15T05:51:42.741Z",
     "name": "Jiutepec",
@@ -23078,6 +23150,12 @@
     "name": "Juan Díaz",
     "country": "Panama",
     "admin1": "Provincia de Panamá"
+  },
+  "3718426": {
+    "fetched_at": "2026-10-19T06:59:37.543Z",
+    "name": "Port-au-Prince",
+    "country": "Haiti",
+    "admin1": "Ouest"
   },
   "3718962": {
     "fetched_at": "2026-10-09T15:36:04.148Z",
