@@ -35,6 +35,12 @@
     "country": "Somalia",
     "admin1": "Awdal"
   },
+  "53654": {
+    "fetched_at": "2026-10-20T08:10:18.475Z",
+    "name": "Mogadishu",
+    "country": "Somalia",
+    "admin1": "Banaadir"
+  },
   "55671": {
     "fetched_at": "2026-09-08T01:30:32.498Z",
     "name": "Kismayo",
@@ -2387,6 +2393,12 @@
     "country": "Russia",
     "admin1": "Orenburg Oblast"
   },
+  "515024": {
+    "fetched_at": "2026-10-20T08:10:18.475Z",
+    "name": "Orekhovo-Zuyevo",
+    "country": "Russia",
+    "admin1": "Moscow Oblast"
+  },
   "515879": {
     "fetched_at": "2026-10-18T17:36:13.269Z",
     "name": "Oktyabrsky",
@@ -4304,6 +4316,12 @@
     "name": "Garhi Khairo",
     "country": "Pakistan",
     "admin1": "Sindh"
+  },
+  "1174625": {
+    "fetched_at": "2026-10-20T08:10:18.475Z",
+    "name": "Kasur",
+    "country": "Pakistan",
+    "admin1": "Punjab"
   },
   "1174872": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
@@ -16318,6 +16336,12 @@
     "country": "Nigeria",
     "admin1": "Osun State"
   },
+  "2330100": {
+    "fetched_at": "2026-10-20T08:10:18.475Z",
+    "name": "Minna",
+    "country": "Nigeria",
+    "admin1": "Niger State"
+  },
   "2331140": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Makurdi",
@@ -19731,6 +19755,12 @@
     "country": "Italy",
     "admin1": "Lazio"
   },
+  "3169361": {
+    "fetched_at": "2026-10-20T08:10:18.475Z",
+    "name": "Rimini",
+    "country": "Italy",
+    "admin1": "Emilia-Romagna"
+  },
   "3169694": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Quarto Oggiaro",
@@ -22455,6 +22485,12 @@
     "country": "El Salvador",
     "admin1": "San Salvador Department"
   },
+  "3587345": {
+    "fetched_at": "2026-10-20T08:10:18.475Z",
+    "name": "Apopa",
+    "country": "El Salvador",
+    "admin1": "San Salvador Department"
+  },
   "3587902": {
     "fetched_at": "2026-09-06T16:29:06.700Z",
     "name": "Villa Nueva",
@@ -22490,6 +22526,12 @@
     "name": "Puerto Barrios",
     "country": "Guatemala",
     "admin1": "Izabal Department"
+  },
+  "3591415": {
+    "fetched_at": "2026-10-20T08:10:18.475Z",
+    "name": "Petapa",
+    "country": "Guatemala",
+    "admin1": "Guatemala"
   },
   "3592519": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -26574,6 +26616,12 @@
   "6544100": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Eixample",
+    "country": "Spain",
+    "admin1": "Catalonia"
+  },
+  "6544102": {
+    "fetched_at": "2026-10-20T08:10:18.475Z",
+    "name": "Sarrià-Sant Gervasi",
     "country": "Spain",
     "admin1": "Catalonia"
   },
