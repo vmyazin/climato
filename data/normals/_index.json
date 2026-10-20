@@ -1409,6 +1409,12 @@
     "country": "Israel",
     "admin1": "Tel Aviv"
   },
+  "294801": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Haifa",
+    "country": "Israel",
+    "admin1": "Haifa District"
+  },
   "295432": {
     "fetched_at": "2026-09-15T05:51:42.741Z",
     "name": "Bet Shemesh",
@@ -2458,6 +2464,12 @@
     "name": "Nizhny Tagil",
     "country": "Russia",
     "admin1": "Sverdlovsk Oblast"
+  },
+  "521118": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Nizhnekamsk",
+    "country": "Russia",
+    "admin1": "Tatarstan Republic"
   },
   "522377": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -3677,6 +3689,12 @@
     "country": "South Africa",
     "admin1": "Mpumalanga"
   },
+  "952865": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Springs",
+    "country": "South Africa",
+    "admin1": "Gauteng"
+  },
   "954013": {
     "fetched_at": "2026-09-18T10:05:40.839Z",
     "name": "Soshanguve",
@@ -4377,6 +4395,12 @@
     "country": "Pakistan",
     "admin1": "Punjab"
   },
+  "1178231": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Gojra",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
   "1178338": {
     "fetched_at": "2026-09-17T00:55:26.449Z",
     "name": "Gilgit",
@@ -5027,6 +5051,12 @@
   "1255254": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Tadpatri",
+    "country": "India",
+    "admin1": "Andhra Pradesh"
+  },
+  "1255264": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Tadepalligudem",
     "country": "India",
     "admin1": "Andhra Pradesh"
   },
@@ -9812,6 +9842,12 @@
     "country": "Philippines",
     "admin1": "Central Luzon"
   },
+  "1700360": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Mati",
+    "country": "Philippines",
+    "admin1": "Davao Region"
+  },
   "1700868": {
     "fetched_at": "2026-10-13T16:29:28.201Z",
     "name": "Mariveles",
@@ -9895,6 +9931,12 @@
     "name": "Makati City",
     "country": "Philippines",
     "admin1": "National Capital Region"
+  },
+  "1705536": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Los Baños",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
   },
   "1706090": {
     "fetched_at": "2026-09-18T17:55:35.143Z",
@@ -10022,11 +10064,23 @@
     "country": "Philippines",
     "admin1": "Central Luzon"
   },
+  "1714201": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Dumaguete",
+    "country": "Philippines",
+    "admin1": "Central Visayas"
+  },
   "1714781": {
     "fetched_at": "2026-10-15T15:20:52.837Z",
     "name": "Dinaig",
     "country": "Philippines",
     "admin1": "Autonomous Region in Muslim Mindanao"
+  },
+  "1714956": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Digos",
+    "country": "Philippines",
+    "admin1": "Davao Region"
   },
   "1715348": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -14328,6 +14382,12 @@
     "country": "Japan",
     "admin1": "Tokyo"
   },
+  "1864572": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Chikushino-shi",
+    "country": "Japan",
+    "admin1": "Fukuoka"
+  },
   "1864624": {
     "fetched_at": "2026-09-16T05:22:24.548Z",
     "name": "Chigasaki",
@@ -17848,7 +17908,7 @@
     "admin1": "England"
   },
   "2638077": {
-    "fetched_at": "2026-09-18T17:55:35.143Z",
+    "fetched_at": "2026-10-20T13:53:02.317Z",
     "name": "Sheffield",
     "country": "United Kingdom",
     "admin1": "England"
@@ -18201,6 +18261,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2655603": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Birmingham",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2655613": {
     "fetched_at": "2026-10-11T07:53:10.873Z",
     "name": "Birkenhead",
@@ -18378,6 +18444,12 @@
   "2753801": {
     "fetched_at": "2026-10-17T13:16:52.206Z",
     "name": "Hoofddorp",
+    "country": "The Netherlands",
+    "admin1": "North Holland"
+  },
+  "2755003": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Haarlem",
     "country": "The Netherlands",
     "admin1": "North Holland"
   },
@@ -23919,6 +23991,12 @@
     "country": "Mexico",
     "admin1": "Colima"
   },
+  "3980760": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Uruapan",
+    "country": "Mexico",
+    "admin1": "Michoacán"
+  },
   "3981254": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Torreón",
@@ -23984,6 +24062,12 @@
     "name": "Saltillo",
     "country": "Mexico",
     "admin1": "Coahuila"
+  },
+  "3988214": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Salamanca",
+    "country": "Mexico",
+    "admin1": "Guanajuato"
   },
   "3988392": {
     "fetched_at": "2026-10-04T17:06:51.466Z",
@@ -24174,6 +24258,12 @@
   "4076598": {
     "fetched_at": "2026-10-07T09:23:45.055Z",
     "name": "Mobile",
+    "country": "United States",
+    "admin1": "Alabama"
+  },
+  "4076784": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Montgomery",
     "country": "United States",
     "admin1": "Alabama"
   },
@@ -25803,6 +25893,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5401395": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Temecula",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5402405": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Thousand Oaks",
@@ -26772,6 +26868,12 @@
   "6822096": {
     "fetched_at": "2026-10-18T19:42:58.367Z",
     "name": "Hitachi-Naka",
+    "country": "Japan",
+    "admin1": "Ibaraki"
+  },
+  "6822097": {
+    "fetched_at": "2026-10-20T13:53:02.317Z",
+    "name": "Chikusei",
     "country": "Japan",
     "admin1": "Ibaraki"
   },
