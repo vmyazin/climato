@@ -3329,6 +3329,12 @@
     "country": "Turkey",
     "admin1": "Bursa Province"
   },
+  "755330": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Wola",
+    "country": "Poland",
+    "admin1": "Mazovia"
+  },
   "756135": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Warsaw",
@@ -5995,6 +6001,12 @@
     "name": "Khargone",
     "country": "India",
     "admin1": "Madhya Pradesh"
+  },
+  "1266976": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Kharagpur",
+    "country": "India",
+    "admin1": "West Bengal"
   },
   "1267016": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -17091,6 +17103,12 @@
     "country": "Tunisia",
     "admin1": "Sousse Governorate"
   },
+  "2464960": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Sukrah",
+    "country": "Tunisia",
+    "admin1": "Ariana Governorate"
+  },
   "2467454": {
     "fetched_at": "2026-10-09T15:36:04.148Z",
     "name": "Sfax",
@@ -17631,6 +17649,12 @@
     "country": "Morocco",
     "admin1": "Rabat-Salé-Kénitra"
   },
+  "2545957": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Inezgane",
+    "country": "Morocco",
+    "admin1": "Souss-Massa"
+  },
   "2548526": {
     "fetched_at": "2026-09-12T19:41:42.700Z",
     "name": "Guelmim",
@@ -17781,6 +17805,12 @@
     "country": "Ivory Coast",
     "admin1": "Bas-Sassandra District"
   },
+  "2618425": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "admin1": "Capital Region"
+  },
   "2633352": {
     "fetched_at": "2026-10-19T14:19:45.971Z",
     "name": "York",
@@ -17864,6 +17894,12 @@
     "name": "Swansea",
     "country": "United Kingdom",
     "admin1": "Wales"
+  },
+  "2636486": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Sutton Coldfield",
+    "country": "United Kingdom",
+    "admin1": "England"
   },
   "2636503": {
     "fetched_at": "2026-10-16T15:01:05.808Z",
@@ -18386,6 +18422,12 @@
     "name": "Braga",
     "country": "Portugal",
     "admin1": "Braga District"
+  },
+  "2743477": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Zwolle",
+    "country": "The Netherlands",
+    "admin1": "Overijssel"
   },
   "2743856": {
     "fetched_at": "2026-10-17T16:40:31.540Z",
@@ -19551,6 +19593,12 @@
     "country": "Spain",
     "admin1": "Castille and León"
   },
+  "3108286": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Terrassa",
+    "country": "Spain",
+    "admin1": "Catalonia"
+  },
   "3108288": {
     "fetched_at": "2026-10-18T14:54:52.355Z",
     "name": "Tarragona",
@@ -19634,6 +19682,12 @@
     "name": "Moratalaz",
     "country": "Spain",
     "admin1": "Madrid"
+  },
+  "3117164": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Mataró",
+    "country": "Spain",
+    "admin1": "Catalonia"
   },
   "3117735": {
     "fetched_at": "2026-05-02T22:03:13.315Z",
@@ -25383,6 +25437,12 @@
     "country": "United States",
     "admin1": "Ohio"
   },
+  "5150529": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Cleveland",
+    "country": "United States",
+    "admin1": "Ohio"
+  },
   "5174035": {
     "fetched_at": "2026-10-10T06:28:04.017Z",
     "name": "Toledo",
@@ -28621,6 +28681,12 @@
     "name": "Pingwu County",
     "country": "China",
     "admin1": "Sichuan"
+  },
+  "12495083": {
+    "fetched_at": "2026-10-20T18:07:50.790Z",
+    "name": "Chirmiri",
+    "country": "India",
+    "admin1": "Chhattisgarh"
   },
   "12500938": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
