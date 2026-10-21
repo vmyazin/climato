@@ -1223,6 +1223,12 @@
     "country": "Jordan",
     "admin1": "Zarqa Governorate"
   },
+  "250441": {
+    "fetched_at": "2026-10-21T19:41:10.603Z",
+    "name": "Amman",
+    "country": "Jordan",
+    "admin1": "Amman Governorate"
+  },
   "255274": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Piraeus",
@@ -2566,6 +2572,12 @@
     "name": "Lyublino",
     "country": "Russia",
     "admin1": "Moscow"
+  },
+  "532615": {
+    "fetched_at": "2026-10-21T19:41:10.603Z",
+    "name": "Lyubertsy",
+    "country": "Russia",
+    "admin1": "Moscow Oblast"
   },
   "535121": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -7328,6 +7340,12 @@
     "country": "India",
     "admin1": "Uttar Pradesh"
   },
+  "1278130": {
+    "fetched_at": "2026-10-21T19:41:10.603Z",
+    "name": "Avadi",
+    "country": "India",
+    "admin1": "Tamil Nadu"
+  },
   "1278149": {
     "fetched_at": "2026-09-02T15:22:17.614Z",
     "name": "Aurangabad",
@@ -8287,6 +8305,12 @@
     "name": "Xuân Lộc",
     "country": "Vietnam",
     "admin1": "Dong Nai"
+  },
+  "1562414": {
+    "fetched_at": "2026-10-21T19:41:10.603Z",
+    "name": "Vũng Tàu",
+    "country": "Vietnam",
+    "admin1": "Ho Chi Minh City (HCMC)"
   },
   "1562548": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
@@ -9350,6 +9374,12 @@
     "country": "Indonesia",
     "admin1": "West Java"
   },
+  "1639900": {
+    "fetched_at": "2026-10-21T19:41:10.603Z",
+    "name": "Klaten",
+    "country": "Indonesia",
+    "admin1": "Central Java"
+  },
   "1640344": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "Kendari",
@@ -9955,6 +9985,12 @@
     "name": "Naga",
     "country": "Philippines",
     "admin1": "Bicol Region"
+  },
+  "1698839": {
+    "fetched_at": "2026-10-21T19:41:10.603Z",
+    "name": "Naga",
+    "country": "Philippines",
+    "admin1": "Central Visayas"
   },
   "1699054": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -22365,6 +22401,12 @@
     "country": "Jamaica",
     "admin1": "Saint Catherine Parish"
   },
+  "3489854": {
+    "fetched_at": "2026-10-21T19:41:10.603Z",
+    "name": "Kingston",
+    "country": "Jamaica",
+    "admin1": "Kingston"
+  },
   "3492908": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
     "name": "Santo Domingo",
@@ -23264,6 +23306,12 @@
     "name": "Caracas",
     "country": "Venezuela",
     "admin1": "Distrito Federal"
+  },
+  "3647444": {
+    "fetched_at": "2026-10-21T19:41:10.603Z",
+    "name": "Calabozo",
+    "country": "Venezuela",
+    "admin1": "Guárico"
   },
   "3647637": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
@@ -24672,6 +24720,12 @@
   "4158476": {
     "fetched_at": "2026-10-21T15:40:01.400Z",
     "name": "Hialeah",
+    "country": "United States",
+    "admin1": "Florida"
+  },
+  "4158928": {
+    "fetched_at": "2026-10-21T19:41:10.603Z",
+    "name": "Hollywood",
     "country": "United States",
     "admin1": "Florida"
   },
@@ -27164,6 +27218,12 @@
     "name": "Doilungdêqên",
     "country": "China",
     "admin1": "Tibet"
+  },
+  "6611854": {
+    "fetched_at": "2026-10-21T19:41:10.603Z",
+    "name": "Nay Pyi Taw",
+    "country": "Myanmar",
+    "admin1": "Nay Pyi Taw"
   },
   "6615440": {
     "fetched_at": "2026-10-19T20:15:13.067Z",
