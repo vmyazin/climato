@@ -1163,6 +1163,12 @@
     "country": "Uganda",
     "admin1": "Central Region"
   },
+  "233299": {
+    "fetched_at": "2026-10-21T05:24:34.437Z",
+    "name": "Ibanda",
+    "country": "Uganda",
+    "admin1": "Western Region"
+  },
   "233312": {
     "fetched_at": "2026-09-19T23:40:00.767Z",
     "name": "Hoima",
@@ -1540,6 +1546,12 @@
     "name": "Dīla",
     "country": "Ethiopia",
     "admin1": "South Ethiopia Regional State"
+  },
+  "339219": {
+    "fetched_at": "2026-10-21T05:24:34.437Z",
+    "name": "Dessie",
+    "country": "Ethiopia",
+    "admin1": "Amhara"
   },
   "339666": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -13320,6 +13332,12 @@
     "country": "South Korea",
     "admin1": "Gyeongsangbuk-do"
   },
+  "1842936": {
+    "fetched_at": "2026-10-21T05:24:34.437Z",
+    "name": "Gimpo-si",
+    "country": "South Korea",
+    "admin1": "Gyeonggi-do"
+  },
   "1842944": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
     "name": "Gimcheon",
@@ -15424,6 +15442,12 @@
     "country": "North Korea",
     "admin1": "North Hamgyong"
   },
+  "2051523": {
+    "fetched_at": "2026-10-21T05:24:34.437Z",
+    "name": "Bratsk",
+    "country": "Russia",
+    "admin1": "Irkutsk Oblast"
+  },
   "2056752": {
     "fetched_at": "2026-09-17T00:55:26.449Z",
     "name": "Khabarovsk Vtoroy",
@@ -15501,6 +15525,12 @@
     "name": "Narita",
     "country": "Japan",
     "admin1": "Chiba"
+  },
+  "2111834": {
+    "fetched_at": "2026-10-21T05:24:34.437Z",
+    "name": "Morioka",
+    "country": "Japan",
+    "admin1": "Iwate"
   },
   "2111901": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -18555,6 +18585,12 @@
     "country": "The Netherlands",
     "admin1": "North Brabant"
   },
+  "2759661": {
+    "fetched_at": "2026-10-21T05:24:34.437Z",
+    "name": "Arnhem",
+    "country": "The Netherlands",
+    "admin1": "Gelderland"
+  },
   "2759706": {
     "fetched_at": "2026-10-17T05:05:28.712Z",
     "name": "Apeldoorn",
@@ -19317,6 +19353,12 @@
     "country": "France",
     "admin1": "Rhône-Alpes"
   },
+  "2998286": {
+    "fetched_at": "2026-10-21T05:24:34.437Z",
+    "name": "Limoges",
+    "country": "France",
+    "admin1": "New Aquitaine"
+  },
   "2998324": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Lille",
@@ -19596,6 +19638,12 @@
   "3100946": {
     "fetched_at": "2026-10-14T05:31:14.630Z",
     "name": "Częstochowa",
+    "country": "Poland",
+    "admin1": "Silesia"
+  },
+  "3101619": {
+    "fetched_at": "2026-10-21T05:24:34.437Z",
+    "name": "Chorzów",
     "country": "Poland",
     "admin1": "Silesia"
   },
@@ -22419,6 +22467,12 @@
     "country": "Mexico",
     "admin1": "Tamaulipas"
   },
+  "3530589": {
+    "fetched_at": "2026-10-21T05:24:34.437Z",
+    "name": "Ciudad Nezahualcoyotl",
+    "country": "Mexico",
+    "admin1": "México"
+  },
   "3530594": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Ciudad Madero",
@@ -24462,6 +24516,12 @@
   "4164167": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
     "name": "Miami Gardens",
+    "country": "United States",
+    "admin1": "Florida"
+  },
+  "4164601": {
+    "fetched_at": "2026-10-21T05:24:34.437Z",
+    "name": "Miramar",
     "country": "United States",
     "admin1": "Florida"
   },
