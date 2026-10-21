@@ -1025,6 +1025,12 @@
     "country": "Kenya",
     "admin1": "Trans Nzoia"
   },
+  "191245": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Kisumu",
+    "country": "Kenya",
+    "admin1": "Kisumu County"
+  },
   "191299": {
     "fetched_at": "2026-10-16T05:10:47.366Z",
     "name": "Kisii",
@@ -3017,6 +3023,12 @@
     "country": "Finland",
     "admin1": "Pirkanmaa"
   },
+  "643492": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Oulu",
+    "country": "Finland",
+    "admin1": "North Ostrobothnia"
+  },
   "649360": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Lahti",
@@ -3851,6 +3863,12 @@
     "country": "South Africa",
     "admin1": "Gauteng"
   },
+  "1004866": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Evaton",
+    "country": "South Africa",
+    "admin1": "Gauteng"
+  },
   "1005125": {
     "fetched_at": "2026-10-15T05:31:53.684Z",
     "name": "Ermelo",
@@ -4006,6 +4024,12 @@
     "name": "Fianarantsoa",
     "country": "Madagascar",
     "admin1": "Upper Matsiatra"
+  },
+  "1085510": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Epworth",
+    "country": "Zimbabwe",
+    "admin1": "Harare"
   },
   "1105728": {
     "fetched_at": "2026-09-17T05:32:19.411Z",
@@ -5461,6 +5485,12 @@
     "name": "Puri",
     "country": "India",
     "admin1": "Odisha"
+  },
+  "1259229": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Pune",
+    "country": "India",
+    "admin1": "Maharashtra"
   },
   "1259239": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -8407,6 +8437,12 @@
     "name": "Phú Mỹ",
     "country": "Vietnam",
     "admin1": "Ho Chi Minh City (HCMC)"
+  },
+  "1570449": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Phu Ly",
+    "country": "Vietnam",
+    "admin1": "Ninh Binh"
   },
   "1570656": {
     "fetched_at": "2026-10-04T12:53:13.813Z",
@@ -12734,6 +12770,12 @@
     "country": "China",
     "admin1": "Jiangxi"
   },
+  "1810724": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Gangu Chengguanzhen",
+    "country": "China",
+    "admin1": "Gansu"
+  },
   "1810820": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Fuzhou",
@@ -13272,6 +13314,12 @@
     "country": "South Korea",
     "admin1": "Busan"
   },
+  "1838716": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Bucheon-si",
+    "country": "South Korea",
+    "admin1": "Gyeonggi-do"
+  },
   "1839071": {
     "fetched_at": "2026-09-19T13:30:15.086Z",
     "name": "Pohang",
@@ -13403,6 +13451,12 @@
     "name": "Cheonan",
     "country": "South Korea",
     "admin1": "Chungcheongnam-do"
+  },
+  "1846266": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Jeju City",
+    "country": "South Korea",
+    "admin1": "Jeju-do"
   },
   "1846326": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
@@ -14661,6 +14715,12 @@
     "name": "Zhoushan",
     "country": "China",
     "admin1": "Zhejiang"
+  },
+  "1892823": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Donghae City",
+    "country": "South Korea",
+    "admin1": "Gangwon-do"
   },
   "1897007": {
     "fetched_at": "2026-09-19T13:30:15.086Z",
@@ -17877,6 +17937,12 @@
     "country": "Ivory Coast",
     "admin1": "Bas-Sassandra District"
   },
+  "2615876": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Odense",
+    "country": "Denmark",
+    "admin1": "South Denmark"
+  },
   "2618425": {
     "fetched_at": "2026-10-20T18:07:50.790Z",
     "name": "Copenhagen",
@@ -19299,6 +19365,12 @@
     "country": "France",
     "admin1": "Occitanie"
   },
+  "2990440": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Nice",
+    "country": "France",
+    "admin1": "Provence-Alpes-Côte d'Azur"
+  },
   "2990969": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Nantes",
@@ -19412,6 +19484,12 @@
     "name": "Amiens",
     "country": "France",
     "admin1": "Hauts-de-France"
+  },
+  "3038354": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Aix-en-Provence",
+    "country": "France",
+    "admin1": "Provence-Alpes-Côte d'Azur"
   },
   "3042430": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
@@ -19682,6 +19760,12 @@
     "name": "Valladolid",
     "country": "Spain",
     "admin1": "Castille and León"
+  },
+  "3107784": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Torrejón de Ardoz",
+    "country": "Spain",
+    "admin1": "Madrid"
   },
   "3108286": {
     "fetched_at": "2026-10-20T18:07:50.790Z",
@@ -23709,6 +23793,12 @@
     "country": "Mexico",
     "admin1": "Mexico City"
   },
+  "3827409": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "Cuauhtémoc",
+    "country": "Mexico",
+    "admin1": "Mexico City"
+  },
   "3827414": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Huixquilucan",
@@ -25776,6 +25866,12 @@
   "5344994": {
     "fetched_at": "2026-10-09T08:02:58.092Z",
     "name": "East Los Angeles",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5345529": {
+    "fetched_at": "2026-10-21T10:38:48.512Z",
+    "name": "El Cajon",
     "country": "United States",
     "admin1": "California"
   },
