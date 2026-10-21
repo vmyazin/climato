@@ -17151,6 +17151,12 @@
     "country": "Tunisia",
     "admin1": "Sfax Governorate"
   },
+  "2468369": {
+    "fetched_at": "2026-10-21T00:13:52.577Z",
+    "name": "Gabès",
+    "country": "Tunisia",
+    "admin1": "Gabès Governorate"
+  },
   "2472706": {
     "fetched_at": "2026-10-16T10:10:46.401Z",
     "name": "Bizerte",
@@ -23622,6 +23628,12 @@
   "3746181": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Ciudad Camilo Cienfuegos",
+    "country": "Cuba",
+    "admin1": "Havana"
+  },
+  "3746183": {
+    "fetched_at": "2026-10-21T00:13:52.577Z",
+    "name": "Centro Habana",
     "country": "Cuba",
     "admin1": "Havana"
   },
