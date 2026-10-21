@@ -1535,6 +1535,12 @@
     "country": "Ethiopia",
     "admin1": "Oromiya"
   },
+  "333795": {
+    "fetched_at": "2026-10-21T22:48:48.441Z",
+    "name": "Jijiga",
+    "country": "Ethiopia",
+    "admin1": "Somali"
+  },
   "334227": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Inda Silasē",
@@ -8762,6 +8768,12 @@
     "country": "Vietnam",
     "admin1": "Quảng Ninh"
   },
+  "1586443": {
+    "fetched_at": "2026-10-21T22:48:48.441Z",
+    "name": "Ca Mau",
+    "country": "Vietnam",
+    "admin1": "Ca Mau"
+  },
   "1586551": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "Cai Lậy",
@@ -10681,6 +10693,12 @@
     "name": "Kuala Krai",
     "country": "Malaysia",
     "admin1": "Kelantan"
+  },
+  "1735634": {
+    "fetched_at": "2026-10-21T22:48:48.441Z",
+    "name": "Kuching",
+    "country": "Malaysia",
+    "admin1": "Sarawak"
   },
   "1735902": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
@@ -27344,6 +27362,12 @@
     "name": "Ōnojō",
     "country": "Japan",
     "admin1": "Fukuoka"
+  },
+  "6822148": {
+    "fetched_at": "2026-10-21T22:48:48.441Z",
+    "name": "Aizu-Wakamatsu",
+    "country": "Japan",
+    "admin1": "Fukushima"
   },
   "6822153": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
