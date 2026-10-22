@@ -2129,6 +2129,12 @@
     "country": "Russia",
     "admin1": "Yaroslavl Oblast"
   },
+  "470451": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Vykhino-Zhulebino",
+    "country": "Russia",
+    "admin1": "Moscow"
+  },
   "472045": {
     "fetched_at": "2026-10-21T15:40:01.400Z",
     "name": "Voronezh",
@@ -3737,6 +3743,12 @@
     "country": "South Africa",
     "admin1": "Gauteng"
   },
+  "940909": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Welkom",
+    "country": "South Africa",
+    "admin1": "Free State"
+  },
   "942470": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "Vryheid",
@@ -4407,6 +4419,12 @@
     "country": "Pakistan",
     "admin1": "Punjab"
   },
+  "1172128": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Larkana",
+    "country": "Pakistan",
+    "admin1": "Sindh"
+  },
   "1172451": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Lahore",
@@ -4502,6 +4520,12 @@
     "name": "Hyderābād",
     "country": "Pakistan",
     "admin1": "Sindh"
+  },
+  "1177384": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Hafizabad",
+    "country": "Pakistan",
+    "admin1": "Punjab"
   },
   "1177654": {
     "fetched_at": "2026-09-04T18:35:10.663Z",
@@ -5684,6 +5708,12 @@
     "country": "India",
     "admin1": "Tamil Nadu"
   },
+  "1260716": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Pāli",
+    "country": "India",
+    "admin1": "Rajasthan"
+  },
   "1260728": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Palakkad",
@@ -6758,6 +6788,12 @@
     "country": "India",
     "admin1": "Maharashtra"
   },
+  "1272513": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Deesa",
+    "country": "India",
+    "admin1": "Gujarat"
+  },
   "1272543": {
     "fetched_at": "2026-10-16T22:14:07.452Z",
     "name": "Dindigul",
@@ -7763,6 +7799,12 @@
   "1309793": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Meiktila",
+    "country": "Myanmar",
+    "admin1": "Mandalay Region"
+  },
+  "1309937": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Pyin Oo Lwin",
     "country": "Myanmar",
     "admin1": "Mandalay Region"
   },
@@ -18471,6 +18513,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2646458": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Huddersfield",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2646914": {
     "fetched_at": "2026-05-03T11:12:55.832Z",
     "name": "High Wycombe",
@@ -18818,6 +18866,12 @@
     "name": "Rotterdam",
     "country": "The Netherlands",
     "admin1": "South Holland"
+  },
+  "2751283": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Maastricht",
+    "country": "The Netherlands",
+    "admin1": "Limburg"
   },
   "2751773": {
     "fetched_at": "2026-09-21T14:33:37.530Z",
@@ -19998,6 +20052,12 @@
   "3107784": {
     "fetched_at": "2026-10-21T10:38:48.512Z",
     "name": "Torrejón de Ardoz",
+    "country": "Spain",
+    "admin1": "Madrid"
+  },
+  "3108118": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Tetuán de las Victorias",
     "country": "Spain",
     "admin1": "Madrid"
   },
@@ -26823,6 +26883,12 @@
     "country": "United States",
     "admin1": "Alaska"
   },
+  "5882725": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Ahuntsic-Cartierville",
+    "country": "Canada",
+    "admin1": "Quebec"
+  },
   "5882873": {
     "fetched_at": "2026-08-31T21:39:48.036Z",
     "name": "Ajax",
@@ -27296,6 +27362,12 @@
     "name": "Sydney",
     "country": "Canada",
     "admin1": "Nova Scotia"
+  },
+  "6418220": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Orekhovo-Borisovo",
+    "country": "Russia",
+    "admin1": "Moscow"
   },
   "6543969": {
     "fetched_at": "2026-09-02T06:28:08.098Z",
@@ -29541,6 +29613,12 @@
   "13546316": {
     "fetched_at": "2026-10-21T15:40:01.400Z",
     "name": "Le Plateau-Mont-Royal",
+    "country": "Canada",
+    "admin1": "Quebec"
+  },
+  "13546322": {
+    "fetched_at": "2026-10-22T17:40:08.767Z",
+    "name": "Rivière-des-Prairies–Pointe-aux-Trembles",
     "country": "Canada",
     "admin1": "Quebec"
   },
