@@ -6776,6 +6776,12 @@
     "country": "India",
     "admin1": "Uttar Pradesh"
   },
+  "1272013": {
+    "fetched_at": "2026-10-22T23:41:19.997Z",
+    "name": "Erode",
+    "country": "India",
+    "admin1": "Tamil Nadu"
+  },
   "1272051": {
     "fetched_at": "2026-10-16T19:02:57.252Z",
     "name": "Eluru",
@@ -7748,6 +7754,12 @@
     "country": "Myanmar",
     "admin1": "Mon"
   },
+  "1293625": {
+    "fetched_at": "2026-10-22T23:41:19.997Z",
+    "name": "Dawei",
+    "country": "Myanmar",
+    "admin1": "Tanintharyi Region"
+  },
   "1293960": {
     "fetched_at": "2026-10-21T15:40:01.400Z",
     "name": "Taunggyi",
@@ -7817,6 +7829,12 @@
   "1309937": {
     "fetched_at": "2026-10-22T17:40:08.767Z",
     "name": "Pyin Oo Lwin",
+    "country": "Myanmar",
+    "admin1": "Mandalay Region"
+  },
+  "1311874": {
+    "fetched_at": "2026-10-22T23:41:19.997Z",
+    "name": "Mandalay",
     "country": "Myanmar",
     "admin1": "Mandalay Region"
   },
@@ -9583,6 +9601,12 @@
     "name": "Dumai",
     "country": "Indonesia",
     "admin1": "Riau"
+  },
+  "1645457": {
+    "fetched_at": "2026-10-22T23:41:19.997Z",
+    "name": "Dili",
+    "country": "Timor-Leste",
+    "admin1": "Dili Municipality"
   },
   "1645524": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -18819,6 +18843,12 @@
     "country": "Sweden",
     "admin1": "Skåne County"
   },
+  "2702979": {
+    "fetched_at": "2026-10-22T23:41:19.997Z",
+    "name": "Jönköping",
+    "country": "Sweden",
+    "admin1": "Jönköping"
+  },
   "2732265": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Viseu",
@@ -25557,6 +25587,12 @@
     "country": "United States",
     "admin1": "Texas"
   },
+  "4717782": {
+    "fetched_at": "2026-10-22T23:41:19.997Z",
+    "name": "Pasadena",
+    "country": "United States",
+    "admin1": "Texas"
+  },
   "4718097": {
     "fetched_at": "2026-10-10T06:28:04.017Z",
     "name": "Pearland",
@@ -25706,6 +25742,12 @@
     "name": "Des Moines",
     "country": "United States",
     "admin1": "Iowa"
+  },
+  "4883817": {
+    "fetched_at": "2026-10-22T23:41:19.997Z",
+    "name": "Aurora",
+    "country": "United States",
+    "admin1": "Illinois"
   },
   "4887398": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
@@ -26406,6 +26448,12 @@
   "5378538": {
     "fetched_at": "2026-10-04T20:30:51.663Z",
     "name": "Oakland",
+    "country": "United States",
+    "admin1": "California"
+  },
+  "5378771": {
+    "fetched_at": "2026-10-22T23:41:19.997Z",
+    "name": "Oceanside",
     "country": "United States",
     "admin1": "California"
   },
@@ -28225,6 +28273,12 @@
     "name": "Pailou",
     "country": "China",
     "admin1": "Chongqing Municipality"
+  },
+  "8411054": {
+    "fetched_at": "2026-10-22T23:41:19.997Z",
+    "name": "Madhyapur Thimi",
+    "country": "Nepal",
+    "admin1": "Bagmati Province"
   },
   "8416218": {
     "fetched_at": "2026-09-02T15:22:17.614Z",
