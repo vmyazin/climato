@@ -13500,6 +13500,12 @@
     "country": "South Korea",
     "admin1": "Gyeongsangbuk-do"
   },
+  "1842966": {
+    "fetched_at": "2026-10-22T01:00:12.158Z",
+    "name": "Gijang",
+    "country": "South Korea",
+    "admin1": "Busan"
+  },
   "1843137": {
     "fetched_at": "2026-10-12T02:42:26.116Z",
     "name": "Gangneung",
@@ -19107,6 +19113,12 @@
     "country": "Germany",
     "admin1": "State of Berlin"
   },
+  "2873891": {
+    "fetched_at": "2026-10-22T01:00:12.158Z",
+    "name": "Mannheim",
+    "country": "Germany",
+    "admin1": "Baden-Wurttemberg"
+  },
   "2874225": {
     "fetched_at": "2026-09-04T21:04:35.522Z",
     "name": "Mainz",
@@ -22850,6 +22862,12 @@
     "name": "Guantánamo",
     "country": "Cuba",
     "admin1": "Guantánamo Province"
+  },
+  "3557846": {
+    "fetched_at": "2026-10-22T01:00:12.158Z",
+    "name": "Guanabacoa",
+    "country": "Cuba",
+    "admin1": "Havana"
   },
   "3558729": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -29435,6 +29453,12 @@
     "name": "Darnytsya",
     "country": "Ukraine",
     "admin1": "Kyiv City"
+  },
+  "13589045": {
+    "fetched_at": "2026-10-22T01:00:12.158Z",
+    "name": "La Cité-Limoilou",
+    "country": "Canada",
+    "admin1": "Quebec"
   },
   "13589354": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
