@@ -4473,6 +4473,12 @@
     "country": "Pakistan",
     "admin1": "Sindh"
   },
+  "1176615": {
+    "fetched_at": "2026-10-22T06:40:41.142Z",
+    "name": "Islamabad",
+    "country": "Pakistan",
+    "admin1": "Islamabad"
+  },
   "1176734": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
     "name": "Hyderābād",
@@ -7742,6 +7748,12 @@
     "country": "Myanmar",
     "admin1": "Shan State"
   },
+  "1316574": {
+    "fetched_at": "2026-10-22T06:40:41.142Z",
+    "name": "Kyauktan",
+    "country": "Myanmar",
+    "admin1": "Yangon"
+  },
   "1316752": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Kyaukpyu",
@@ -8125,6 +8137,12 @@
     "name": "Taraz",
     "country": "Kazakhstan",
     "admin1": "Zhambyl"
+  },
+  "1517945": {
+    "fetched_at": "2026-10-22T06:40:41.142Z",
+    "name": "Turkestan",
+    "country": "Kazakhstan",
+    "admin1": "Turkistan"
   },
   "1518262": {
     "fetched_at": "2026-09-09T14:49:33.396Z",
@@ -9457,6 +9475,12 @@
     "name": "Grogol",
     "country": "Indonesia",
     "admin1": "Central Java"
+  },
+  "1643837": {
+    "fetched_at": "2026-10-22T06:40:41.142Z",
+    "name": "Gorontalo",
+    "country": "Indonesia",
+    "admin1": "Gorontalo"
   },
   "1644409": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -15724,6 +15748,12 @@
     "country": "Japan",
     "admin1": "Fukushima"
   },
+  "2112312": {
+    "fetched_at": "2026-10-22T06:40:41.142Z",
+    "name": "Katsuta",
+    "country": "Japan",
+    "admin1": "Ibaraki"
+  },
   "2112539": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
     "name": "Iwaki",
@@ -16245,6 +16275,12 @@
     "name": "Diourbel",
     "country": "Senegal",
     "admin1": "Diourbel Region"
+  },
+  "2253354": {
+    "fetched_at": "2026-10-22T06:40:41.142Z",
+    "name": "Dakar",
+    "country": "Senegal",
+    "admin1": "Dakar"
   },
   "2262963": {
     "fetched_at": "2026-09-26T05:37:24.830Z",
@@ -18960,6 +18996,12 @@
   "2831580": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Solingen",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
+  },
+  "2832495": {
+    "fetched_at": "2026-10-22T06:40:41.142Z",
+    "name": "Siegen",
     "country": "Germany",
     "admin1": "North Rhine-Westphalia"
   },
@@ -28046,6 +28088,12 @@
     "country": "Malaysia",
     "admin1": "Selangor"
   },
+  "8504621": {
+    "fetched_at": "2026-10-22T06:40:41.142Z",
+    "name": "Gereida",
+    "country": "Sudan",
+    "admin1": "Southern Darfur"
+  },
   "8504948": {
     "fetched_at": "2026-10-17T00:49:45.766Z",
     "name": "Petrogradka",
@@ -29493,6 +29541,12 @@
   "13607717": {
     "fetched_at": "2026-10-15T19:28:54.216Z",
     "name": "Kovpakivskyi",
+    "country": "Ukraine",
+    "admin1": "Sumy"
+  },
+  "13607718": {
+    "fetched_at": "2026-10-22T06:40:41.142Z",
+    "name": "Zarichnyi",
     "country": "Ukraine",
     "admin1": "Sumy"
   },
