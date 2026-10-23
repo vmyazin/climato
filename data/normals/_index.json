@@ -1151,6 +1151,12 @@
     "country": "Uganda",
     "admin1": "Central Region"
   },
+  "231954": {
+    "fetched_at": "2026-10-23T02:03:16.469Z",
+    "name": "Katabi",
+    "country": "Uganda",
+    "admin1": "Central Region"
+  },
   "232110": {
     "fetched_at": "2026-09-24T01:42:01.057Z",
     "name": "Kasangati",
@@ -9241,6 +9247,12 @@
     "name": "Singkawang",
     "country": "Indonesia",
     "admin1": "West Kalimantan"
+  },
+  "1626932": {
+    "fetched_at": "2026-10-23T02:03:16.469Z",
+    "name": "Singaraja",
+    "country": "Indonesia",
+    "admin1": "Bali"
   },
   "1627253": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -24651,6 +24663,12 @@
     "country": "Mexico",
     "admin1": "Coahuila"
   },
+  "3981369": {
+    "fetched_at": "2026-10-23T02:03:16.469Z",
+    "name": "Tonalá",
+    "country": "Mexico",
+    "admin1": "Jalisco"
+  },
   "3981461": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Tlaquepaque",
@@ -24890,6 +24908,12 @@
     "name": "Ciudad Juárez",
     "country": "Mexico",
     "admin1": "Chihuahua"
+  },
+  "4013714": {
+    "fetched_at": "2026-10-23T02:03:16.469Z",
+    "name": "Ciudad Guzmán",
+    "country": "Mexico",
+    "admin1": "Jalisco"
   },
   "4013728": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -27660,6 +27684,12 @@
   "6822146": {
     "fetched_at": "2026-10-15T22:42:26.525Z",
     "name": "Ōnojō",
+    "country": "Japan",
+    "admin1": "Fukuoka"
+  },
+  "6822147": {
+    "fetched_at": "2026-10-23T02:03:16.469Z",
+    "name": "Kasuga",
     "country": "Japan",
     "admin1": "Fukuoka"
   },
