@@ -1991,6 +1991,12 @@
     "country": "Sudan",
     "admin1": "Sennar"
   },
+  "367644": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Sennar",
+    "country": "Sudan",
+    "admin1": "Sennar"
+  },
   "368277": {
     "fetched_at": "2026-10-17T18:53:43.893Z",
     "name": "Rabak",
@@ -2350,6 +2356,12 @@
     "name": "Severodvinsk",
     "country": "Russia",
     "admin1": "Arkhangelskaya oblast"
+  },
+  "496348": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Severnyy",
+    "country": "Russia",
+    "admin1": "Moscow"
   },
   "496527": {
     "fetched_at": "2026-10-15T05:31:53.684Z",
@@ -4282,6 +4294,12 @@
     "name": "Wazirabad",
     "country": "Pakistan",
     "admin1": "Punjab"
+  },
+  "1163198": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Tordher",
+    "country": "Pakistan",
+    "admin1": "Khyber Pakhtunkhwa"
   },
   "1163272": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -9241,6 +9259,12 @@
     "name": "Tanjung Pinang",
     "country": "Indonesia",
     "admin1": "Riau Islands"
+  },
+  "1624877": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Tanjung Pandan",
+    "country": "Indonesia",
+    "admin1": "Bangka–Belitung Islands"
   },
   "1624917": {
     "fetched_at": "2026-10-12T09:49:31.320Z",
@@ -15006,6 +15030,11 @@
   "1880668": {
     "fetched_at": "2026-10-09T15:36:04.148Z",
     "name": "Geylang",
+    "country": "Singapore"
+  },
+  "1880750": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Bukit Merah Estate",
     "country": "Singapore"
   },
   "1881921": {
@@ -26415,6 +26444,12 @@
     "country": "United States",
     "admin1": "California"
   },
+  "5336899": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Chula Vista",
+    "country": "United States",
+    "admin1": "California"
+  },
   "5338122": {
     "fetched_at": "2026-10-13T21:34:55.272Z",
     "name": "Clovis",
@@ -27375,6 +27410,12 @@
     "country": "Canada",
     "admin1": "Quebec"
   },
+  "6138671": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Saint-Louis-de-Terrebonne",
+    "country": "Canada",
+    "admin1": "Quebec"
+  },
   "6141256": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Saskatoon",
@@ -27618,6 +27659,12 @@
   "6544102": {
     "fetched_at": "2026-10-20T08:10:18.475Z",
     "name": "Sarrià-Sant Gervasi",
+    "country": "Spain",
+    "admin1": "Catalonia"
+  },
+  "6544104": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Sants-Montjuïc",
     "country": "Spain",
     "admin1": "Catalonia"
   },
@@ -28143,6 +28190,12 @@
     "country": "India",
     "admin1": "West Bengal"
   },
+  "7289169": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Tri-Cities",
+    "country": "United States",
+    "admin1": "Washington"
+  },
   "7289846": {
     "fetched_at": "2026-10-11T01:21:14.703Z",
     "name": "Ba Dinh",
@@ -28663,6 +28716,12 @@
     "name": "Gadag-Betageri",
     "country": "India",
     "admin1": "Karnataka"
+  },
+  "8740157": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Hlaingthaya",
+    "country": "Myanmar",
+    "admin1": "Yangon"
   },
   "8740322": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -29871,6 +29930,12 @@
   "13546322": {
     "fetched_at": "2026-10-22T17:40:08.767Z",
     "name": "Rivière-des-Prairies–Pointe-aux-Trembles",
+    "country": "Canada",
+    "admin1": "Quebec"
+  },
+  "13546323": {
+    "fetched_at": "2026-10-23T17:43:42.106Z",
+    "name": "Rosemont–La Petite-Patrie",
     "country": "Canada",
     "admin1": "Quebec"
   },
