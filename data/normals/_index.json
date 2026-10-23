@@ -11,6 +11,12 @@
     "country": "Iran",
     "admin1": "Tehran"
   },
+  "32900": {
+    "fetched_at": "2026-10-23T20:40:44.706Z",
+    "name": "Golestān",
+    "country": "Iran",
+    "admin1": "Tehran"
+  },
   "32909": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Shahre Jadide Andisheh",
@@ -1174,6 +1180,12 @@
     "name": "Katabi",
     "country": "Uganda",
     "admin1": "Central Region"
+  },
+  "232066": {
+    "fetched_at": "2026-10-23T20:40:44.706Z",
+    "name": "Kasese",
+    "country": "Uganda",
+    "admin1": "Western Region"
   },
   "232110": {
     "fetched_at": "2026-09-24T01:42:01.057Z",
@@ -4043,6 +4055,12 @@
     "country": "South Africa",
     "admin1": "Gauteng"
   },
+  "1018725": {
+    "fetched_at": "2026-10-23T20:40:44.706Z",
+    "name": "Bloemfontein",
+    "country": "South Africa",
+    "admin1": "Free State"
+  },
   "1020098": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Benoni",
@@ -4264,6 +4282,12 @@
     "name": "Nakhon Si Thammarat",
     "country": "Thailand",
     "admin1": "Nakhon Si Thammarat"
+  },
+  "1152473": {
+    "fetched_at": "2026-10-23T20:40:44.706Z",
+    "name": "Lampang",
+    "country": "Thailand",
+    "admin1": "Lampang"
   },
   "1153269": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
@@ -9536,6 +9560,12 @@
     "country": "Indonesia",
     "admin1": "South Sumatra"
   },
+  "1633118": {
+    "fetched_at": "2026-10-23T20:40:44.706Z",
+    "name": "Palangkaraya",
+    "country": "Indonesia",
+    "admin1": "Central Kalimantan"
+  },
   "1635111": {
     "fetched_at": "2026-09-03T18:54:42.659Z",
     "name": "Mojokerto",
@@ -9889,6 +9919,12 @@
     "name": "Batang",
     "country": "Indonesia",
     "admin1": "Central Java"
+  },
+  "1650077": {
+    "fetched_at": "2026-10-23T20:40:44.706Z",
+    "name": "Banyuwangi",
+    "country": "Indonesia",
+    "admin1": "East Java"
   },
   "1650213": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -26171,6 +26207,12 @@
   "5113779": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Corona",
+    "country": "United States",
+    "admin1": "New York"
+  },
+  "5115985": {
+    "fetched_at": "2026-10-23T20:40:44.706Z",
+    "name": "East New York",
     "country": "United States",
     "admin1": "New York"
   },
