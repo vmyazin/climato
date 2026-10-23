@@ -4676,6 +4676,12 @@
     "country": "Pakistan",
     "admin1": "Punjab"
   },
+  "1180281": {
+    "fetched_at": "2026-10-23T23:35:10.293Z",
+    "name": "Dera Ismail Khan",
+    "country": "Pakistan",
+    "admin1": "Khyber Pakhtunkhwa"
+  },
   "1180289": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Dera Ghazi Khan",
@@ -9565,6 +9571,12 @@
     "name": "Palangkaraya",
     "country": "Indonesia",
     "admin1": "Central Kalimantan"
+  },
+  "1633419": {
+    "fetched_at": "2026-10-23T23:35:10.293Z",
+    "name": "Padang",
+    "country": "Indonesia",
+    "admin1": "West Sumatra"
   },
   "1635111": {
     "fetched_at": "2026-09-03T18:54:42.659Z",
@@ -23455,6 +23467,12 @@
     "name": "Cobán",
     "country": "Guatemala",
     "admin1": "Alta Verapaz"
+  },
+  "3598122": {
+    "fetched_at": "2026-10-23T23:35:10.293Z",
+    "name": "Coatepeque",
+    "country": "Guatemala",
+    "admin1": "Quetzaltenango"
   },
   "3598465": {
     "fetched_at": "2026-10-15T10:23:13.375Z",
