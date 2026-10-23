@@ -497,6 +497,12 @@
     "country": "Iran",
     "admin1": "Alborz Province"
   },
+  "124620": {
+    "fetched_at": "2026-10-23T12:59:59.662Z",
+    "name": "Masjed Soleymān",
+    "country": "Iran",
+    "admin1": "Khuzestan"
+  },
   "124665": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Mashhad",
@@ -2501,6 +2507,12 @@
     "country": "Russia",
     "admin1": "Kaluga Oblast"
   },
+  "517161": {
+    "fetched_at": "2026-10-23T12:59:59.662Z",
+    "name": "Novyye Cherëmushki",
+    "country": "Russia",
+    "admin1": "Moscow"
+  },
   "517836": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Novotroitsk",
@@ -4025,6 +4037,12 @@
     "country": "South Africa",
     "admin1": "Gauteng"
   },
+  "1023374": {
+    "fetched_at": "2026-10-23T12:59:59.662Z",
+    "name": "Alexandra",
+    "country": "South Africa",
+    "admin1": "Gauteng"
+  },
   "1023441": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Alberton",
@@ -4464,6 +4482,12 @@
   "1171965": {
     "fetched_at": "2026-09-04T15:10:30.811Z",
     "name": "Lodhran",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
+  "1172035": {
+    "fetched_at": "2026-10-23T12:59:59.662Z",
+    "name": "Layyah",
     "country": "Pakistan",
     "admin1": "Punjab"
   },
@@ -7442,6 +7466,12 @@
     "country": "India",
     "admin1": "West Bengal"
   },
+  "1277599": {
+    "fetched_at": "2026-10-23T12:59:59.662Z",
+    "name": "Balasore",
+    "country": "India",
+    "admin1": "Odisha"
+  },
   "1277820": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
     "name": "Baharampur",
@@ -9391,6 +9421,12 @@
     "name": "Prabumulih",
     "country": "Indonesia",
     "admin1": "South Sumatra"
+  },
+  "1631648": {
+    "fetched_at": "2026-10-23T12:59:59.662Z",
+    "name": "Pemalang",
+    "country": "Indonesia",
+    "admin1": "Central Java"
   },
   "1631733": {
     "fetched_at": "2026-09-05T13:36:47.520Z",
@@ -22815,6 +22851,12 @@
     "country": "Mexico",
     "admin1": "Tabasco"
   },
+  "3514674": {
+    "fetched_at": "2026-10-23T12:59:59.662Z",
+    "name": "Gustavo Adolfo Madero",
+    "country": "Mexico",
+    "admin1": "Mexico City"
+  },
   "3515062": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Tulancingo",
@@ -26211,6 +26253,12 @@
     "country": "United States",
     "admin1": "Pennsylvania"
   },
+  "5206379": {
+    "fetched_at": "2026-10-23T12:59:59.662Z",
+    "name": "Pittsburgh",
+    "country": "United States",
+    "admin1": "Pennsylvania"
+  },
   "5224151": {
     "fetched_at": "2026-10-09T20:21:40.660Z",
     "name": "Providence",
@@ -27320,6 +27368,12 @@
     "name": "Saanich",
     "country": "Canada",
     "admin1": "British Columbia"
+  },
+  "6137270": {
+    "fetched_at": "2026-10-23T12:59:59.662Z",
+    "name": "Saguenay",
+    "country": "Canada",
+    "admin1": "Quebec"
   },
   "6141256": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
@@ -28459,6 +28513,12 @@
     "name": "Petrogradka",
     "country": "Russia",
     "admin1": "St.-Petersburg"
+  },
+  "8504951": {
+    "fetched_at": "2026-10-23T12:59:59.662Z",
+    "name": "Kalininskiy",
+    "country": "Russia",
+    "admin1": "St. Petersburg"
   },
   "8504952": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
