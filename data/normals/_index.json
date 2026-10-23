@@ -551,6 +551,12 @@
     "country": "Iran",
     "admin1": "Lorestan Province"
   },
+  "128226": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Kermanshah",
+    "country": "Iran",
+    "admin1": "Kermanshah Province"
+  },
   "128234": {
     "fetched_at": "2026-09-01T10:33:05.585Z",
     "name": "Kerman",
@@ -1079,6 +1085,12 @@
     "country": "Kenya",
     "admin1": "Mombasa County"
   },
+  "197745": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Garissa",
+    "country": "Kenya",
+    "admin1": "Garissa County"
+  },
   "198629": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
     "name": "Eldoret",
@@ -1238,6 +1250,12 @@
   "255274": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Piraeus",
+    "country": "Greece",
+    "admin1": "Attica"
+  },
+  "264371": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Athens",
     "country": "Greece",
     "admin1": "Attica"
   },
@@ -2026,6 +2044,12 @@
     "name": "El Daein",
     "country": "Sudan",
     "admin1": "Eastern Darfur"
+  },
+  "380174": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Ad-Damazin",
+    "country": "Sudan",
+    "admin1": "Blue Nile"
   },
   "400771": {
     "fetched_at": "2026-08-31T21:39:48.036Z",
@@ -4259,6 +4283,12 @@
     "country": "Pakistan",
     "admin1": "Sindh"
   },
+  "1163967": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Tando Adam",
+    "country": "Pakistan",
+    "admin1": "Sindh"
+  },
   "1164408": {
     "fetched_at": "2026-09-22T12:07:41.883Z",
     "name": "Sukkur",
@@ -4826,6 +4856,12 @@
     "country": "Bangladesh",
     "admin1": "Chittagong"
   },
+  "1213500": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Tebingtinggi",
+    "country": "Indonesia",
+    "admin1": "North Sumatra"
+  },
   "1213547": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Tanjungbalai",
@@ -4859,6 +4895,12 @@
   "1214204": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Pematangsiantar",
+    "country": "Indonesia",
+    "admin1": "North Sumatra"
+  },
+  "1214369": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Padangsidempuan",
     "country": "Indonesia",
     "admin1": "North Sumatra"
   },
@@ -9236,6 +9278,12 @@
     "country": "Indonesia",
     "admin1": "West Java"
   },
+  "1626801": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Situbondo",
+    "country": "Indonesia",
+    "admin1": "East Java"
+  },
   "1626899": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
     "name": "Singosari",
@@ -9745,6 +9793,12 @@
     "name": "Bitung",
     "country": "Indonesia",
     "admin1": "North Sulawesi"
+  },
+  "1648759": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Bima",
+    "country": "Indonesia",
+    "admin1": "West Nusa Tenggara"
   },
   "1649150": {
     "fetched_at": "2026-09-18T20:01:04.998Z",
@@ -18369,6 +18423,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2637433": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Southend-on-Sea",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2637487": {
     "fetched_at": "2026-10-16T10:10:46.401Z",
     "name": "Southampton",
@@ -22803,6 +22863,12 @@
     "country": "Mexico",
     "admin1": "Tamaulipas"
   },
+  "3518135": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "San Pablo de las Salinas",
+    "country": "Mexico",
+    "admin1": "México"
+  },
   "3519537": {
     "fetched_at": "2026-09-20T16:31:48.331Z",
     "name": "San Cristóbal de las Casas",
@@ -22929,6 +22995,12 @@
     "country": "Mexico",
     "admin1": "Chiapas"
   },
+  "3530569": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Coacalco",
+    "country": "Mexico",
+    "admin1": "México"
+  },
   "3530580": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Ciudad Victoria",
@@ -22964,6 +23036,12 @@
     "name": "Cholula",
     "country": "Mexico",
     "admin1": "Puebla"
+  },
+  "3530870": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Chilpancingo",
+    "country": "Mexico",
+    "admin1": "Guerrero"
   },
   "3530937": {
     "fetched_at": "2026-10-19T23:58:02.143Z",
@@ -24680,6 +24758,12 @@
     "name": "Tijuana",
     "country": "Mexico",
     "admin1": "Baja California"
+  },
+  "3981941": {
+    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "name": "Tepic",
+    "country": "Mexico",
+    "admin1": "Nayarit"
   },
   "3982912": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
@@ -29908,7 +29992,7 @@
     "country": "Egypt"
   },
   "reykjavik": {
-    "fetched_at": "2026-10-06T06:55:25.307Z",
+    "fetched_at": "2026-10-23T07:58:00.034Z",
     "name": "Reykjavík",
     "country": "Iceland"
   },
