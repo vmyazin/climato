@@ -437,6 +437,12 @@
     "country": "Iran",
     "admin1": "Kerman"
   },
+  "116402": {
+    "fetched_at": "2026-10-24T16:17:39.002Z",
+    "name": "Semnan",
+    "country": "Iran",
+    "admin1": "Semnan Province"
+  },
   "116667": {
     "fetched_at": "2026-09-23T17:30:19.173Z",
     "name": "Sāveh",
@@ -2015,6 +2021,12 @@
     "country": "Sudan",
     "admin1": "White Nile"
   },
+  "369004": {
+    "fetched_at": "2026-10-24T16:17:39.002Z",
+    "name": "Nyala",
+    "country": "Sudan",
+    "admin1": "Southern Darfur"
+  },
   "370737": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Malakal",
@@ -2864,6 +2876,12 @@
   "575505": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Bogorodskoye",
+    "country": "Russia",
+    "admin1": "Moscow"
+  },
+  "576279": {
+    "fetched_at": "2026-10-24T16:17:39.002Z",
+    "name": "Biryulëvo",
     "country": "Russia",
     "admin1": "Moscow"
   },
@@ -9817,6 +9835,12 @@
     "name": "Depok",
     "country": "Indonesia",
     "admin1": "West Java"
+  },
+  "1645528": {
+    "fetched_at": "2026-10-24T16:17:39.002Z",
+    "name": "Denpasar",
+    "country": "Indonesia",
+    "admin1": "Bali"
   },
   "1645895": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -18809,6 +18833,12 @@
   "2646003": {
     "fetched_at": "2026-09-04T23:27:11.474Z",
     "name": "Islington",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2646057": {
+    "fetched_at": "2026-10-24T16:17:39.002Z",
+    "name": "Ipswich",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -29280,6 +29310,12 @@
     "name": "Kuwana",
     "country": "Japan",
     "admin1": "Mie"
+  },
+  "11500546": {
+    "fetched_at": "2026-10-24T16:17:39.002Z",
+    "name": "Kurichchi",
+    "country": "India",
+    "admin1": "Tamil Nadu"
   },
   "11523293": {
     "fetched_at": "2026-09-01T23:35:59.499Z",
