@@ -3497,6 +3497,12 @@
     "country": "Poland",
     "admin1": "Mazovia"
   },
+  "763166": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Olsztyn",
+    "country": "Poland",
+    "admin1": "Warmia-Masuria"
+  },
   "764484": {
     "fetched_at": "2026-10-11T23:14:07.113Z",
     "name": "Mokotów",
@@ -4721,6 +4727,12 @@
   "1181636": {
     "fetched_at": "2026-09-23T20:43:12.539Z",
     "name": "Chakwal",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
+  "1182092": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Burewala",
     "country": "Pakistan",
     "admin1": "Punjab"
   },
@@ -7934,6 +7946,12 @@
     "country": "Myanmar",
     "admin1": "Mon"
   },
+  "1308522": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Monywa",
+    "country": "Myanmar",
+    "admin1": "Sagaing Region"
+  },
   "1308567": {
     "fetched_at": "2026-10-13T08:32:27.879Z",
     "name": "Möng Yang",
@@ -9547,6 +9565,12 @@
     "name": "Pangkalpinang",
     "country": "Indonesia",
     "admin1": "Bangka–Belitung Islands"
+  },
+  "1632937": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Pamulang",
+    "country": "Indonesia",
+    "admin1": "West Java"
   },
   "1632998": {
     "fetched_at": "2026-09-03T01:33:12.533Z",
@@ -13692,6 +13716,12 @@
     "country": "South Korea",
     "admin1": "Gyeonggi-do"
   },
+  "1833105": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Wŏnju",
+    "country": "South Korea",
+    "admin1": "Gangwon-do"
+  },
   "1833747": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Ulsan",
@@ -13731,6 +13761,12 @@
   "1835848": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Seoul",
+    "country": "South Korea",
+    "admin1": "Seoul"
+  },
+  "1837362": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Siheungdong",
     "country": "South Korea",
     "admin1": "Seoul"
   },
@@ -16344,6 +16380,12 @@
   "2210247": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Tripoli",
+    "country": "Libya",
+    "admin1": "Tripoli"
+  },
+  "2210394": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Tājūrā’",
     "country": "Libya",
     "admin1": "Tripoli"
   },
@@ -22466,6 +22508,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3465196": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Criciúma",
+    "country": "Brazil",
+    "admin1": "Santa Catarina"
+  },
   "3465284": {
     "fetched_at": "2026-09-22T06:52:30.641Z",
     "name": "Cotia",
@@ -23480,6 +23528,12 @@
     "country": "Guatemala",
     "admin1": "Quetzaltenango"
   },
+  "3598132": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Guatemala City",
+    "country": "Guatemala",
+    "admin1": "Guatemala"
+  },
   "3598465": {
     "fetched_at": "2026-10-15T10:23:13.375Z",
     "name": "Chiquimula",
@@ -23503,6 +23557,12 @@
     "name": "Tegucigalpa",
     "country": "Honduras",
     "admin1": "Francisco Morazán Department"
+  },
+  "3601782": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "San Pedro Sula",
+    "country": "Honduras",
+    "admin1": "Cortés Department"
   },
   "3608248": {
     "fetched_at": "2026-09-16T22:24:52.991Z",
@@ -24985,6 +25045,12 @@
     "name": "Navojoa",
     "country": "Mexico",
     "admin1": "Sonora"
+  },
+  "3995402": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Morelia",
+    "country": "Mexico",
+    "admin1": "Michoacán"
   },
   "3995465": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -29140,6 +29206,12 @@
   "11204106": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
     "name": "Etwatwa",
+    "country": "South Africa",
+    "admin1": "Gauteng"
+  },
+  "11204237": {
+    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "name": "Ivory Park",
     "country": "South Africa",
     "admin1": "Gauteng"
   },
