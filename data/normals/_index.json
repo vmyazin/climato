@@ -3401,6 +3401,12 @@
     "country": "Ukraine",
     "admin1": "Chernivtsi"
   },
+  "710735": {
+    "fetched_at": "2026-10-24T19:05:45.551Z",
+    "name": "Chernihiv",
+    "country": "Ukraine",
+    "admin1": "Chernihiv Oblast"
+  },
   "716935": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Nyíregyháza",
@@ -3874,6 +3880,12 @@
     "name": "Thohoyandou",
     "country": "South Africa",
     "admin1": "Limpopo"
+  },
+  "949880": {
+    "fetched_at": "2026-10-24T19:05:45.551Z",
+    "name": "Thembisa",
+    "country": "South Africa",
+    "admin1": "Gauteng"
   },
   "952734": {
     "fetched_at": "2026-10-01T07:51:27.223Z",
@@ -4435,6 +4447,12 @@
   "1166000": {
     "fetched_at": "2026-09-02T06:28:08.098Z",
     "name": "Sargodha",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
+  "1166548": {
+    "fetched_at": "2026-10-24T19:05:45.551Z",
+    "name": "Sahiwal",
     "country": "Pakistan",
     "admin1": "Punjab"
   },
@@ -10775,6 +10793,12 @@
   "1725094": {
     "fetched_at": "2026-10-12T09:49:31.320Z",
     "name": "Binangonan",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
+  },
+  "1725115": {
+    "fetched_at": "2026-10-24T19:05:45.551Z",
+    "name": "Biñan",
     "country": "Philippines",
     "admin1": "Calabarzon"
   },
@@ -23125,6 +23149,12 @@
     "name": "Playa del Carmen",
     "country": "Mexico",
     "admin1": "Quintana Roo"
+  },
+  "3522307": {
+    "fetched_at": "2026-10-24T19:05:45.551Z",
+    "name": "Orizaba",
+    "country": "Mexico",
+    "admin1": "Veracruz"
   },
   "3522551": {
     "fetched_at": "2026-09-21T14:33:37.530Z",
