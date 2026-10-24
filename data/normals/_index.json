@@ -5138,6 +5138,12 @@
     "country": "Sri Lanka",
     "admin1": "Western Province"
   },
+  "1242110": {
+    "fetched_at": "2026-10-24T22:00:10.412Z",
+    "name": "Kalmunai",
+    "country": "Sri Lanka",
+    "admin1": "Eastern Province"
+  },
   "1242833": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Jaffna",
@@ -16983,6 +16989,12 @@
     "country": "Nigeria",
     "admin1": "Niger State"
   },
+  "2323090": {
+    "fetched_at": "2026-10-24T22:00:10.412Z",
+    "name": "Shomolu",
+    "country": "Nigeria",
+    "admin1": "Lagos"
+  },
   "2323390": {
     "fetched_at": "2026-09-06T13:12:00.839Z",
     "name": "Saki",
@@ -28175,6 +28187,12 @@
   "6825496": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Habikino",
+    "country": "Japan",
+    "admin1": "Osaka"
+  },
+  "6825498": {
+    "fetched_at": "2026-10-24T22:00:10.412Z",
+    "name": "Kawachi-Nagano",
     "country": "Japan",
     "admin1": "Osaka"
   },
