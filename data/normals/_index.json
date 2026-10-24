@@ -4037,6 +4037,12 @@
     "country": "South Africa",
     "admin1": "Mpumalanga"
   },
+  "1006984": {
+    "fetched_at": "2026-10-24T12:15:16.236Z",
+    "name": "East London",
+    "country": "South Africa",
+    "admin1": "Eastern Cape"
+  },
   "1014073": {
     "fetched_at": "2026-09-23T17:30:19.173Z",
     "name": "Carletonville",
@@ -4210,6 +4216,12 @@
     "name": "Somaroboro",
     "country": "South Africa",
     "admin1": "Mpumalanga"
+  },
+  "1105777": {
+    "fetched_at": "2026-10-24T12:15:16.236Z",
+    "name": "Centurion",
+    "country": "South Africa",
+    "admin1": "Gauteng"
   },
   "1106542": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
@@ -13998,6 +14010,12 @@
     "country": "Japan",
     "admin1": "Kanagawa"
   },
+  "1848373": {
+    "fetched_at": "2026-10-24T12:15:16.236Z",
+    "name": "Yokkaichi",
+    "country": "Japan",
+    "admin1": "Mie"
+  },
   "1848382": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
     "name": "Youkaichi",
@@ -14747,6 +14765,12 @@
     "name": "Kagoshima",
     "country": "Japan",
     "admin1": "Kagoshima"
+  },
+  "1860871": {
+    "fetched_at": "2026-10-24T12:15:16.236Z",
+    "name": "Kadoma",
+    "country": "Japan",
+    "admin1": "Osaka"
   },
   "1861084": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -26267,6 +26291,12 @@
   "5106834": {
     "fetched_at": "2026-10-10T13:06:17.902Z",
     "name": "Albany",
+    "country": "United States",
+    "admin1": "New York"
+  },
+  "5107464": {
+    "fetched_at": "2026-10-24T12:15:16.236Z",
+    "name": "Astoria",
     "country": "United States",
     "admin1": "New York"
   },
