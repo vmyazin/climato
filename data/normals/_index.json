@@ -3911,6 +3911,12 @@
     "country": "South Africa",
     "admin1": "Gauteng"
   },
+  "964315": {
+    "fetched_at": "2026-10-24T02:02:19.465Z",
+    "name": "Mokopane",
+    "country": "South Africa",
+    "admin1": "Limpopo"
+  },
   "964349": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Potchefstroom",
@@ -27818,6 +27824,12 @@
     "country": "India",
     "admin1": "Maharashtra"
   },
+  "6621166": {
+    "fetched_at": "2026-10-24T02:02:19.465Z",
+    "name": "Seogwipo",
+    "country": "South Korea",
+    "admin1": "Jeju-do"
+  },
   "6642286": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Ezhou",
@@ -28836,6 +28848,12 @@
     "name": "Ngã Bảy",
     "country": "Vietnam",
     "admin1": "Can Tho City"
+  },
+  "9645071": {
+    "fetched_at": "2026-10-24T02:02:19.465Z",
+    "name": "Quận Bốn",
+    "country": "Vietnam",
+    "admin1": "Ho Chi Minh City (HCMC)"
   },
   "9645072": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
