@@ -437,6 +437,12 @@
     "country": "Iran",
     "admin1": "Kerman"
   },
+  "115019": {
+    "fetched_at": "2026-10-25T22:50:29.722Z",
+    "name": "Shiraz",
+    "country": "Iran",
+    "admin1": "Fars"
+  },
   "116402": {
     "fetched_at": "2026-10-24T16:17:39.002Z",
     "name": "Semnan",
@@ -4030,6 +4036,12 @@
     "name": "Mbombela",
     "country": "South Africa",
     "admin1": "Mpumalanga"
+  },
+  "973111": {
+    "fetched_at": "2026-10-25T22:50:29.722Z",
+    "name": "Mpumalanga",
+    "country": "South Africa",
+    "admin1": "KwaZulu-Natal"
   },
   "976361": {
     "fetched_at": "2026-10-16T22:14:07.452Z",
@@ -16514,6 +16526,12 @@
     "name": "Sabha",
     "country": "Libya",
     "admin1": "Sabha District"
+  },
+  "2214846": {
+    "fetched_at": "2026-10-25T22:50:29.722Z",
+    "name": "Misratah",
+    "country": "Libya",
+    "admin1": "Misratah"
   },
   "2216885": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -29400,6 +29418,12 @@
     "name": "Dubai Investments Park",
     "country": "United Arab Emirates",
     "admin1": "Dubai"
+  },
+  "11071484": {
+    "fetched_at": "2026-10-25T22:50:29.722Z",
+    "name": "Latkrabang",
+    "country": "Thailand",
+    "admin1": "Bangkok"
   },
   "11101625": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
