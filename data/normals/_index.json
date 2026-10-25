@@ -1931,6 +1931,12 @@
     "country": "Egypt",
     "admin1": "Minya Governorate"
   },
+  "360716": {
+    "fetched_at": "2026-10-25T14:35:48.242Z",
+    "name": "Al Maţarīyah",
+    "country": "Egypt",
+    "admin1": "Dakahlia Governorate"
+  },
   "360754": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Al Manzalah",
@@ -19022,6 +19028,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2652618": {
+    "fetched_at": "2026-10-25T14:35:48.242Z",
+    "name": "Colchester",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2653225": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Chesterfield",
@@ -24571,6 +24583,12 @@
     "name": "Carrefour",
     "country": "Haiti",
     "admin1": "Ouest"
+  },
+  "3728474": {
+    "fetched_at": "2026-10-25T14:35:48.242Z",
+    "name": "Cap-Haïtien",
+    "country": "Haiti",
+    "admin1": "Nord"
   },
   "3731088": {
     "fetched_at": "2026-09-02T01:29:30.034Z",
