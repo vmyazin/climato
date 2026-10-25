@@ -16521,6 +16521,12 @@
     "country": "Libya",
     "admin1": "Az Zawiyah"
   },
+  "2218970": {
+    "fetched_at": "2026-10-25T20:01:09.158Z",
+    "name": "Az Zawiyah",
+    "country": "Libya",
+    "admin1": "Az Zawiyah"
+  },
   "2219701": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Al Ajaylat",
@@ -21187,6 +21193,12 @@
     "name": "São Lourenço da Mata",
     "country": "Brazil",
     "admin1": "Pernambuco"
+  },
+  "3388441": {
+    "fetched_at": "2026-10-25T20:01:09.158Z",
+    "name": "São José de Ribamar",
+    "country": "Brazil",
+    "admin1": "Maranhão"
   },
   "3388713": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
