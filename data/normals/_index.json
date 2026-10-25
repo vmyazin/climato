@@ -17355,6 +17355,12 @@
     "country": "Nigeria",
     "admin1": "Ondo State"
   },
+  "2338385": {
+    "fetched_at": "2026-10-25T17:54:06.156Z",
+    "name": "Ijero-Ekiti",
+    "country": "Nigeria",
+    "admin1": "Ekiti State"
+  },
   "2338400": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Ijebu Ode",
@@ -23231,6 +23237,12 @@
   "3522551": {
     "fetched_at": "2026-09-21T14:33:37.530Z",
     "name": "Nuevo Laredo",
+    "country": "Mexico",
+    "admin1": "Tamaulipas"
+  },
+  "3523149": {
+    "fetched_at": "2026-10-25T17:54:06.156Z",
+    "name": "Miramar",
     "country": "Mexico",
     "admin1": "Tamaulipas"
   },
