@@ -4109,6 +4109,12 @@
     "country": "South Africa",
     "admin1": "Free State"
   },
+  "1019330": {
+    "fetched_at": "2026-10-25T00:01:08.103Z",
+    "name": "Bhisho",
+    "country": "South Africa",
+    "admin1": "Eastern Cape"
+  },
   "1020098": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Benoni",
