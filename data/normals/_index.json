@@ -9608,6 +9608,12 @@
     "country": "Indonesia",
     "admin1": "Central Java"
   },
+  "1631905": {
+    "fetched_at": "2026-10-25T10:12:09.157Z",
+    "name": "Payakumbuh",
+    "country": "Indonesia",
+    "admin1": "West Sumatra"
+  },
   "1631992": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Pati",
@@ -21104,6 +21110,12 @@
     "country": "South Africa",
     "admin1": "Western Cape"
   },
+  "3370356": {
+    "fetched_at": "2026-10-25T10:12:09.157Z",
+    "name": "Athlone",
+    "country": "South Africa",
+    "admin1": "Western Cape"
+  },
   "3374333": {
     "fetched_at": "2026-09-26T05:37:24.830Z",
     "name": "Praia",
@@ -28352,6 +28364,12 @@
     "country": "Thailand",
     "admin1": "Bangkok"
   },
+  "7026785": {
+    "fetched_at": "2026-10-25T10:12:09.157Z",
+    "name": "Chatuchak",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
   "7026787": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Chom Thong",
@@ -29238,6 +29256,12 @@
     "name": "Panjin",
     "country": "China",
     "admin1": "Liaoning"
+  },
+  "10834495": {
+    "fetched_at": "2026-10-25T10:12:09.157Z",
+    "name": "Madhurampur Dehri",
+    "country": "India",
+    "admin1": "Bihar"
   },
   "10858926": {
     "fetched_at": "2026-09-01T05:45:57.153Z",
