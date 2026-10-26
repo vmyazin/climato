@@ -3341,6 +3341,12 @@
     "country": "Romania",
     "admin1": "Arad County"
   },
+  "688105": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Yevpatoriya",
+    "country": "Ukraine",
+    "admin1": "Crimea"
+  },
   "690548": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Uzhhorod",
@@ -3358,6 +3364,12 @@
     "name": "Sumy",
     "country": "Ukraine",
     "admin1": "Sumy"
+  },
+  "693805": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Simferopol",
+    "country": "Ukraine",
+    "admin1": "Crimea"
   },
   "693821": {
     "fetched_at": "2026-09-26T05:37:24.830Z",
@@ -3424,6 +3436,12 @@
     "name": "Kerch",
     "country": "Ukraine",
     "admin1": "Crimea"
+  },
+  "707471": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Ivano-Frankivsk",
+    "country": "Ukraine",
+    "admin1": "Ivano-Frankivsk Oblast"
   },
   "709717": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -4432,6 +4450,12 @@
     "name": "Wazirabad",
     "country": "Pakistan",
     "admin1": "Punjab"
+  },
+  "1162959": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Umarkot",
+    "country": "Pakistan",
+    "admin1": "Sindh"
   },
   "1163198": {
     "fetched_at": "2026-10-23T17:43:42.106Z",
@@ -13238,6 +13262,12 @@
     "country": "China",
     "admin1": "Tianjin Municipality"
   },
+  "1808950": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Hanfeng",
+    "country": "China",
+    "admin1": "Chongqing Municipality"
+  },
   "1808956": {
     "fetched_at": "2026-08-26T18:30:40.356Z",
     "name": "Changzhi",
@@ -17493,6 +17523,12 @@
     "country": "Nigeria",
     "admin1": "Osun State"
   },
+  "2343983": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Efon-Alaaye",
+    "country": "Nigeria",
+    "admin1": "Ekiti State"
+  },
   "2344053": {
     "fetched_at": "2026-10-11T01:21:14.703Z",
     "name": "Ede",
@@ -17528,6 +17564,12 @@
     "name": "Bida",
     "country": "Nigeria",
     "admin1": "Niger State"
+  },
+  "2347283": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Benin City",
+    "country": "Nigeria",
+    "admin1": "Edo State"
   },
   "2347470": {
     "fetched_at": "2026-10-11T19:13:12.563Z",
@@ -22592,6 +22634,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3461888": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Guarapari",
+    "country": "Brazil",
+    "admin1": "Espírito Santo"
+  },
   "3461936": {
     "fetched_at": "2026-09-12T01:38:32.857Z",
     "name": "Guará",
@@ -23185,6 +23233,12 @@
     "name": "Zumpango",
     "country": "Mexico",
     "admin1": "México"
+  },
+  "3514321": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Yautepec",
+    "country": "Mexico",
+    "admin1": "Morelos"
   },
   "3514519": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -28478,6 +28532,12 @@
     "country": "Thailand",
     "admin1": "Bangkok"
   },
+  "7026776": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Bueng Kum",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
   "7026785": {
     "fetched_at": "2026-10-25T10:12:09.157Z",
     "name": "Chatuchak",
@@ -29770,6 +29830,12 @@
   "11962390": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
     "name": "Jabaquara",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "11962391": {
+    "fetched_at": "2026-10-26T11:35:09.639Z",
+    "name": "Jose Bonifacio",
     "country": "Brazil",
     "admin1": "São Paulo"
   },
