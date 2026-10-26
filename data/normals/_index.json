@@ -1301,6 +1301,12 @@
     "country": "Greece",
     "admin1": "Attica"
   },
+  "255524": {
+    "fetched_at": "2026-10-26T17:40:33.068Z",
+    "name": "Peristeri",
+    "country": "Greece",
+    "admin1": "Attica"
+  },
   "264371": {
     "fetched_at": "2026-10-23T07:58:00.034Z",
     "name": "Athens",
@@ -4109,6 +4115,12 @@
     "country": "South Africa",
     "admin1": "North West"
   },
+  "990930": {
+    "fetched_at": "2026-10-26T17:40:33.068Z",
+    "name": "Kimberley",
+    "country": "South Africa",
+    "admin1": "Northern Cape"
+  },
   "993800": {
     "fetched_at": "2026-05-06T13:31:06.365Z",
     "name": "Johannesburg",
@@ -4120,6 +4132,12 @@
     "name": "Germiston",
     "country": "South Africa",
     "admin1": "Gauteng"
+  },
+  "1002145": {
+    "fetched_at": "2026-10-26T17:40:33.068Z",
+    "name": "George",
+    "country": "South Africa",
+    "admin1": "Western Cape"
   },
   "1004866": {
     "fetched_at": "2026-10-21T10:38:48.512Z",
@@ -5209,6 +5227,12 @@
     "name": "Kŭlob",
     "country": "Tajikistan",
     "admin1": "Khatlon Province"
+  },
+  "1230089": {
+    "fetched_at": "2026-10-26T17:40:33.068Z",
+    "name": "Pita Kotte",
+    "country": "Sri Lanka",
+    "admin1": "Western Province"
   },
   "1234633": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
@@ -19946,6 +19970,12 @@
     "country": "Germany",
     "admin1": "Thuringia"
   },
+  "2921466": {
+    "fetched_at": "2026-10-26T17:40:33.068Z",
+    "name": "Gelsenkirchen",
+    "country": "Germany",
+    "admin1": "North Rhine-Westphalia"
+  },
   "2923544": {
     "fetched_at": "2026-10-15T10:23:13.375Z",
     "name": "Fürth",
@@ -22633,6 +22663,12 @@
     "name": "Guarujá",
     "country": "Brazil",
     "admin1": "São Paulo"
+  },
+  "3461879": {
+    "fetched_at": "2026-10-26T17:40:33.068Z",
+    "name": "Guarapuava",
+    "country": "Brazil",
+    "admin1": "Paraná"
   },
   "3461888": {
     "fetched_at": "2026-10-26T11:35:09.639Z",
@@ -26588,6 +26624,12 @@
     "country": "United States",
     "admin1": "New York"
   },
+  "5109790": {
+    "fetched_at": "2026-10-26T17:40:33.068Z",
+    "name": "Borough Park",
+    "country": "United States",
+    "admin1": "New York"
+  },
   "5110266": {
     "fetched_at": "2026-10-11T14:24:35.730Z",
     "name": "The Bronx",
@@ -29562,6 +29604,12 @@
     "name": "Phusro",
     "country": "India",
     "admin1": "Jharkhand"
+  },
+  "11184422": {
+    "fetched_at": "2026-10-26T17:40:33.068Z",
+    "name": "Planaltina",
+    "country": "Brazil",
+    "admin1": "Federal District"
   },
   "11204106": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
