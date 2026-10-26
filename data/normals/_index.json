@@ -617,6 +617,12 @@
     "country": "Iran",
     "admin1": "Semnan Province"
   },
+  "135878": {
+    "fetched_at": "2026-10-26T05:28:24.375Z",
+    "name": "Dorūd",
+    "country": "Iran",
+    "admin1": "Lorestan Province"
+  },
   "139889": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Būkān",
@@ -3886,6 +3892,12 @@
     "name": "Vryheid",
     "country": "South Africa",
     "admin1": "KwaZulu-Natal"
+  },
+  "943882": {
+    "fetched_at": "2026-10-26T05:28:24.375Z",
+    "name": "Virginia",
+    "country": "South Africa",
+    "admin1": "Free State"
   },
   "944385": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -20114,6 +20126,12 @@
     "country": "France",
     "admin1": "Centre-Val de Loire"
   },
+  "2989781": {
+    "fetched_at": "2026-10-26T05:28:24.375Z",
+    "name": "Paris 14 Observatoire",
+    "country": "France",
+    "admin1": "Île-de-France Region"
+  },
   "2990363": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Nîmes",
@@ -20653,6 +20671,12 @@
     "name": "A Coruña",
     "country": "Spain",
     "admin1": "Galicia"
+  },
+  "3121245": {
+    "fetched_at": "2026-10-26T05:28:24.375Z",
+    "name": "Gràcia",
+    "country": "Spain",
+    "admin1": "Catalonia"
   },
   "3121437": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
@@ -22784,6 +22808,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3467081": {
+    "fetched_at": "2026-10-26T05:28:24.375Z",
+    "name": "Caraguatatuba",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
   "3467467": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Canoas",
@@ -23179,6 +23209,12 @@
     "name": "Gustavo Adolfo Madero",
     "country": "Mexico",
     "admin1": "Mexico City"
+  },
+  "3514783": {
+    "fetched_at": "2026-10-26T05:28:24.375Z",
+    "name": "Veracruz",
+    "country": "Mexico",
+    "admin1": "Veracruz"
   },
   "3515062": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -27367,6 +27403,12 @@
     "name": "Odessa",
     "country": "United States",
     "admin1": "Texas"
+  },
+  "5551123": {
+    "fetched_at": "2026-10-26T05:28:24.375Z",
+    "name": "Alhambra",
+    "country": "United States",
+    "admin1": "Arizona"
   },
   "5574991": {
     "fetched_at": "2026-09-04T21:04:35.522Z",
