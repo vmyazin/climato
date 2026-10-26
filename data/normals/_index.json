@@ -3347,6 +3347,12 @@
     "country": "Romania",
     "admin1": "Arad County"
   },
+  "686967": {
+    "fetched_at": "2026-10-26T21:56:06.887Z",
+    "name": "Zhytomyr",
+    "country": "Ukraine",
+    "admin1": "Zhytomyr Oblast"
+  },
   "688105": {
     "fetched_at": "2026-10-26T11:35:09.639Z",
     "name": "Yevpatoriya",
@@ -4445,6 +4451,12 @@
     "country": "Thailand",
     "admin1": "Prachuap Khiri Khan"
   },
+  "1153671": {
+    "fetched_at": "2026-10-26T21:56:06.887Z",
+    "name": "Chiang Mai",
+    "country": "Thailand",
+    "admin1": "Chiang Mai"
+  },
   "1157290": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Ban I Chang",
@@ -4865,6 +4877,12 @@
   "1181073": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Chishtian",
+    "country": "Pakistan",
+    "admin1": "Punjab"
+  },
+  "1181096": {
+    "fetched_at": "2026-10-26T21:56:06.887Z",
+    "name": "Chiniot",
     "country": "Pakistan",
     "admin1": "Punjab"
   },
@@ -19694,6 +19712,12 @@
     "country": "Germany",
     "admin1": "North Rhine-Westphalia"
   },
+  "2852217": {
+    "fetched_at": "2026-10-26T21:56:06.887Z",
+    "name": "Prenzlauer Berg",
+    "country": "Germany",
+    "admin1": "State of Berlin"
+  },
   "2852458": {
     "fetched_at": "2026-09-04T15:10:30.811Z",
     "name": "Potsdam",
@@ -20317,6 +20341,12 @@
     "name": "Bordeaux",
     "country": "France",
     "admin1": "New Aquitaine"
+  },
+  "3033123": {
+    "fetched_at": "2026-10-26T21:56:06.887Z",
+    "name": "Besançon",
+    "country": "France",
+    "admin1": "Bourgogne-Franche-Comté"
   },
   "3037656": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
