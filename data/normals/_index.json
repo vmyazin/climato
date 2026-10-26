@@ -2009,6 +2009,12 @@
     "country": "Egypt",
     "admin1": "Asyut Governorate"
   },
+  "363619": {
+    "fetched_at": "2026-10-26T00:46:09.459Z",
+    "name": "Yei",
+    "country": "South Sudan",
+    "admin1": "Central Equatoria"
+  },
   "363807": {
     "fetched_at": "2026-09-01T15:14:29.458Z",
     "name": "Winejok",
@@ -24529,6 +24535,12 @@
     "name": "Armenia",
     "country": "Colombia",
     "admin1": "Quindío Department"
+  },
+  "3691175": {
+    "fetched_at": "2026-10-26T00:46:09.459Z",
+    "name": "Trujillo",
+    "country": "Peru",
+    "admin1": "La Libertad"
   },
   "3691674": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
