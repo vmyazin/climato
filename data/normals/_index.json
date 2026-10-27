@@ -461,6 +461,12 @@
     "country": "Iran",
     "admin1": "Mazandaran"
   },
+  "117392": {
+    "fetched_at": "2026-10-27T21:00:59.914Z",
+    "name": "Saqqez",
+    "country": "Iran",
+    "admin1": "Kurdistan Province"
+  },
   "117574": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Sanandaj",
@@ -2597,6 +2603,12 @@
     "country": "Russia",
     "admin1": "Moscow Oblast"
   },
+  "515027": {
+    "fetched_at": "2026-10-27T21:00:59.914Z",
+    "name": "Orekhovo-Borisovo Severnoye",
+    "country": "Russia",
+    "admin1": "Moscow"
+  },
   "515879": {
     "fetched_at": "2026-10-18T17:36:13.269Z",
     "name": "Oktyabrsky",
@@ -3514,6 +3526,12 @@
     "name": "Chernihiv",
     "country": "Ukraine",
     "admin1": "Chernihiv Oblast"
+  },
+  "710791": {
+    "fetched_at": "2026-10-27T21:00:59.914Z",
+    "name": "Cherkasy",
+    "country": "Ukraine",
+    "admin1": "Cherkasy Oblast"
   },
   "716935": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -22358,6 +22376,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3452525": {
+    "fetched_at": "2026-10-27T21:00:59.914Z",
+    "name": "Pouso Alegre",
+    "country": "Brazil",
+    "admin1": "Minas Gerais"
+  },
   "3452640": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Porto Seguro",
@@ -23521,6 +23545,12 @@
     "name": "San Pablo de las Salinas",
     "country": "Mexico",
     "admin1": "México"
+  },
+  "3518692": {
+    "fetched_at": "2026-10-27T21:00:59.914Z",
+    "name": "San Juan del Río",
+    "country": "Mexico",
+    "admin1": "Querétaro"
   },
   "3519537": {
     "fetched_at": "2026-09-20T16:31:48.331Z",
@@ -28304,6 +28334,12 @@
     "country": "Canada",
     "admin1": "Nova Scotia"
   },
+  "6325488": {
+    "fetched_at": "2026-10-27T21:00:59.914Z",
+    "name": "Sainte-Foy",
+    "country": "Canada",
+    "admin1": "Quebec"
+  },
   "6325494": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Québec",
@@ -29178,6 +29214,12 @@
     "name": "Ordos",
     "country": "China",
     "admin1": "Inner Mongolia"
+  },
+  "8354626": {
+    "fetched_at": "2026-10-27T21:00:59.914Z",
+    "name": "Hamburg-Nord",
+    "country": "Germany",
+    "admin1": "Free and Hanseatic City of Hamburg"
   },
   "8355932": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
@@ -30121,6 +30163,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "11962406": {
+    "fetched_at": "2026-10-27T21:00:59.914Z",
+    "name": "Mandaqui",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
   "11962407": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Cachoeirinha",
@@ -30611,6 +30659,12 @@
     "name": "Recanto das Emas",
     "country": "Brazil",
     "admin1": "Federal District"
+  },
+  "13494069": {
+    "fetched_at": "2026-10-27T21:00:59.914Z",
+    "name": "Khlong Sam Wa",
+    "country": "Thailand",
+    "admin1": "Bangkok"
   },
   "13512502": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
