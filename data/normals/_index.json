@@ -1307,6 +1307,12 @@
     "country": "Greece",
     "admin1": "Attica"
   },
+  "261414": {
+    "fetched_at": "2026-10-27T05:54:02.422Z",
+    "name": "Kallithea",
+    "country": "Greece",
+    "admin1": "Attica"
+  },
   "264371": {
     "fetched_at": "2026-10-23T07:58:00.034Z",
     "name": "Athens",
@@ -1996,6 +2002,12 @@
     "name": "Al Ḩawāmidīyah",
     "country": "Egypt",
     "admin1": "Giza Governorate"
+  },
+  "361291": {
+    "fetched_at": "2026-10-27T05:54:02.422Z",
+    "name": "Hurghada",
+    "country": "Egypt",
+    "admin1": "Red Sea"
   },
   "361661": {
     "fetched_at": "2026-09-05T10:57:03.270Z",
@@ -5246,6 +5258,12 @@
     "country": "Tajikistan",
     "admin1": "Khatlon Province"
   },
+  "1226260": {
+    "fetched_at": "2026-10-27T05:54:02.422Z",
+    "name": "Trincomalee",
+    "country": "Sri Lanka",
+    "admin1": "Eastern Province"
+  },
   "1230089": {
     "fetched_at": "2026-10-26T17:40:33.068Z",
     "name": "Pita Kotte",
@@ -5255,6 +5273,12 @@
   "1234633": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
     "name": "Moratuwa",
+    "country": "Sri Lanka",
+    "admin1": "Western Province"
+  },
+  "1236854": {
+    "fetched_at": "2026-10-27T05:54:02.422Z",
+    "name": "Maharagama",
     "country": "Sri Lanka",
     "admin1": "Western Province"
   },
@@ -9367,6 +9391,12 @@
     "name": "Nonthaburi",
     "country": "Thailand",
     "admin1": "Nonthaburi"
+  },
+  "1608236": {
+    "fetched_at": "2026-10-27T05:54:02.422Z",
+    "name": "Nong Khaem",
+    "country": "Thailand",
+    "admin1": "Bangkok"
   },
   "1608258": {
     "fetched_at": "2026-09-17T22:28:01.972Z",
@@ -16239,6 +16269,12 @@
     "country": "Russia",
     "admin1": "Khabarovsk"
   },
+  "2057087": {
+    "fetched_at": "2026-10-27T05:54:02.422Z",
+    "name": "Kupang",
+    "country": "Indonesia",
+    "admin1": "East Nusa Tenggara"
+  },
   "2063523": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Perth",
@@ -19139,6 +19175,12 @@
   "2651123": {
     "fetched_at": "2026-09-24T01:42:01.057Z",
     "name": "Doncaster",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
+  "2651347": {
+    "fetched_at": "2026-10-27T05:54:02.422Z",
+    "name": "Derby",
     "country": "United Kingdom",
     "admin1": "England"
   },
@@ -24884,6 +24926,12 @@
     "country": "Argentina",
     "admin1": "Jujuy"
   },
+  "3836669": {
+    "fetched_at": "2026-10-27T05:54:02.422Z",
+    "name": "San Rafael",
+    "country": "Argentina",
+    "admin1": "Mendoza"
+  },
   "3836846": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "San Nicolás de los Arroyos",
@@ -27992,6 +28040,12 @@
     "country": "Canada",
     "admin1": "Ontario"
   },
+  "6169141": {
+    "fetched_at": "2026-10-27T05:54:02.422Z",
+    "name": "Trois-Rivières",
+    "country": "Canada",
+    "admin1": "Quebec"
+  },
   "6173331": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Vancouver",
@@ -30602,6 +30656,12 @@
   "13580095": {
     "fetched_at": "2026-09-18T20:01:04.998Z",
     "name": "Darnytsya",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
+  },
+  "13580130": {
+    "fetched_at": "2026-10-27T05:54:02.422Z",
+    "name": "Shulyavka",
     "country": "Ukraine",
     "admin1": "Kyiv City"
   },
