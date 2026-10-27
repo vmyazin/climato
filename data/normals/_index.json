@@ -1181,6 +1181,12 @@
     "country": "Uganda",
     "admin1": "Eastern Region"
   },
+  "229362": {
+    "fetched_at": "2026-10-27T16:53:18.437Z",
+    "name": "Masindi",
+    "country": "Uganda",
+    "admin1": "Western Region"
+  },
   "229380": {
     "fetched_at": "2026-09-15T01:00:04.395Z",
     "name": "Masaka",
@@ -1816,6 +1822,12 @@
     "name": "6th of October City",
     "country": "Egypt",
     "admin1": "Giza"
+  },
+  "353225": {
+    "fetched_at": "2026-10-27T16:53:18.437Z",
+    "name": "Madīnat an Naşr",
+    "country": "Egypt",
+    "admin1": "Cairo Governorate"
   },
   "353802": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -8461,6 +8473,12 @@
     "name": "Miass",
     "country": "Russia",
     "admin1": "Chelyabinsk Oblast"
+  },
+  "1500665": {
+    "fetched_at": "2026-10-27T16:53:18.437Z",
+    "name": "Leninsk-Kuznetsky",
+    "country": "Russia",
+    "admin1": "Kemerovo Oblast"
   },
   "1500973": {
     "fetched_at": "2026-10-17T09:44:45.840Z",
@@ -15360,6 +15378,12 @@
     "country": "North Korea",
     "admin1": "Kaesong"
   },
+  "1877449": {
+    "fetched_at": "2026-10-27T16:53:18.437Z",
+    "name": "Hamhung",
+    "country": "North Korea",
+    "admin1": "South Hamgyong"
+  },
   "1877615": {
     "fetched_at": "2026-09-17T15:20:11.864Z",
     "name": "Haeju",
@@ -16695,11 +16719,23 @@
     "country": "Libya",
     "admin1": "Sabha District"
   },
+  "2213618": {
+    "fetched_at": "2026-10-27T16:53:18.437Z",
+    "name": "Qaşr Bin Ghashīr",
+    "country": "Libya",
+    "admin1": "Tripoli"
+  },
   "2214846": {
     "fetched_at": "2026-10-25T22:50:29.722Z",
     "name": "Misratah",
     "country": "Libya",
     "admin1": "Misratah"
+  },
+  "2216349": {
+    "fetched_at": "2026-10-27T16:53:18.437Z",
+    "name": "Janzūr",
+    "country": "Libya",
+    "admin1": "Al Jafarah"
   },
   "2216885": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
@@ -24812,6 +24848,12 @@
     "country": "Peru",
     "admin1": "Loreto"
   },
+  "3696378": {
+    "fetched_at": "2026-10-27T16:53:18.437Z",
+    "name": "Huaraz",
+    "country": "Peru",
+    "admin1": "Ancash"
+  },
   "3698350": {
     "fetched_at": "2026-09-20T07:07:12.701Z",
     "name": "Chiclayo",
@@ -30638,6 +30680,12 @@
   "13546316": {
     "fetched_at": "2026-10-21T15:40:01.400Z",
     "name": "Le Plateau-Mont-Royal",
+    "country": "Canada",
+    "admin1": "Quebec"
+  },
+  "13546319": {
+    "fetched_at": "2026-10-27T16:53:18.437Z",
+    "name": "Mercier–Hochelaga-Maisonneuve",
     "country": "Canada",
     "admin1": "Quebec"
   },
