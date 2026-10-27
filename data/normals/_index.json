@@ -1799,6 +1799,12 @@
     "country": "Egypt",
     "admin1": "Matruh Governorate"
   },
+  "352951": {
+    "fetched_at": "2026-10-27T11:06:01.035Z",
+    "name": "Mallawī",
+    "country": "Egypt",
+    "admin1": "Minya Governorate"
+  },
   "353183": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Maghāghah",
@@ -3413,6 +3419,18 @@
     "country": "Ukraine",
     "admin1": "Rivne Oblast"
   },
+  "696643": {
+    "fetched_at": "2026-10-27T11:06:01.035Z",
+    "name": "Poltava",
+    "country": "Ukraine",
+    "admin1": "Poltava Oblast"
+  },
+  "696877": {
+    "fetched_at": "2026-10-27T11:06:01.035Z",
+    "name": "Podil",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
+  },
   "698740": {
     "fetched_at": "2026-10-16T15:01:05.808Z",
     "name": "Odesa",
@@ -4927,6 +4945,12 @@
     "name": "Phool Nagar",
     "country": "Pakistan",
     "admin1": "Punjab"
+  },
+  "1183105": {
+    "fetched_at": "2026-10-27T11:06:01.035Z",
+    "name": "Battagram",
+    "country": "Pakistan",
+    "admin1": "Khyber Pakhtunkhwa"
   },
   "1183460": {
     "fetched_at": "2026-09-03T06:31:52.261Z",
@@ -9356,6 +9380,12 @@
     "country": "Thailand",
     "admin1": "Bangkok"
   },
+  "1605843": {
+    "fetched_at": "2026-10-27T11:06:01.035Z",
+    "name": "Taling Chan",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
   "1606250": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
     "name": "Si Racha",
@@ -9529,6 +9559,12 @@
     "name": "Tasikmalaya",
     "country": "Indonesia",
     "admin1": "West Java"
+  },
+  "1624725": {
+    "fetched_at": "2026-10-27T11:06:01.035Z",
+    "name": "Tarakan",
+    "country": "Indonesia",
+    "admin1": "North Kalimantan"
   },
   "1624863": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
@@ -19514,6 +19550,12 @@
     "country": "The Netherlands",
     "admin1": "Groningen"
   },
+  "2756071": {
+    "fetched_at": "2026-10-27T11:06:01.035Z",
+    "name": "Enschede",
+    "country": "The Netherlands",
+    "admin1": "Overijssel"
+  },
   "2756253": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Eindhoven",
@@ -22597,6 +22639,12 @@
     "name": "Jaraguá do Sul",
     "country": "Brazil",
     "admin1": "Santa Catarina"
+  },
+  "3460103": {
+    "fetched_at": "2026-10-27T11:06:01.035Z",
+    "name": "Jaraguá",
+    "country": "Brazil",
+    "admin1": "São Paulo"
   },
   "3460170": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
@@ -30662,6 +30710,12 @@
   "13580130": {
     "fetched_at": "2026-10-27T05:54:02.422Z",
     "name": "Shulyavka",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
+  },
+  "13580316": {
+    "fetched_at": "2026-10-27T11:06:01.035Z",
+    "name": "Mykilska Borshchahivka",
     "country": "Ukraine",
     "admin1": "Kyiv City"
   },
