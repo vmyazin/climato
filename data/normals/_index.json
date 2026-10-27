@@ -9380,6 +9380,12 @@
     "country": "Thailand",
     "admin1": "Nakhon Ratchasima"
   },
+  "1608534": {
+    "fetched_at": "2026-10-27T00:58:25.103Z",
+    "name": "Nakhon Pathom",
+    "country": "Thailand",
+    "admin1": "Nakhon Pathom"
+  },
   "1609350": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Bangkok",
@@ -27461,6 +27467,12 @@
   "5503766": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
     "name": "Enterprise",
+    "country": "United States",
+    "admin1": "Nevada"
+  },
+  "5505411": {
+    "fetched_at": "2026-10-27T00:58:25.103Z",
+    "name": "Henderson",
     "country": "United States",
     "admin1": "Nevada"
   },
