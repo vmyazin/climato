@@ -4235,6 +4235,12 @@
     "country": "South Africa",
     "admin1": "Eastern Cape"
   },
+  "1007311": {
+    "fetched_at": "2026-10-28T23:39:27.291Z",
+    "name": "Durban",
+    "country": "South Africa",
+    "admin1": "KwaZulu-Natal"
+  },
   "1014073": {
     "fetched_at": "2026-09-23T17:30:19.173Z",
     "name": "Carletonville",
@@ -7849,6 +7855,12 @@
     "name": "Avadi",
     "country": "India",
     "admin1": "Tamil Nadu"
+  },
+  "1278148": {
+    "fetched_at": "2026-10-28T23:39:27.291Z",
+    "name": "Aurangābād",
+    "country": "India",
+    "admin1": "Bihar"
   },
   "1278149": {
     "fetched_at": "2026-09-02T15:22:17.614Z",
@@ -16983,6 +16995,12 @@
     "country": "Senegal",
     "admin1": "Tambacounda"
   },
+  "2246452": {
+    "fetched_at": "2026-10-28T23:39:27.291Z",
+    "name": "Saint-Louis",
+    "country": "Senegal",
+    "admin1": "Saint-Louis"
+  },
   "2246512": {
     "fetched_at": "2026-09-17T10:28:59.390Z",
     "name": "Rufisque",
@@ -19597,6 +19615,12 @@
     "name": "Rotterdam",
     "country": "The Netherlands",
     "admin1": "South Holland"
+  },
+  "2750053": {
+    "fetched_at": "2026-10-28T23:39:27.291Z",
+    "name": "Nijmegen",
+    "country": "The Netherlands",
+    "admin1": "Gelderland"
   },
   "2751283": {
     "fetched_at": "2026-10-22T17:40:08.767Z",
@@ -23407,6 +23431,12 @@
     "name": "Portmore",
     "country": "Jamaica",
     "admin1": "Saint Catherine Parish"
+  },
+  "3489297": {
+    "fetched_at": "2026-10-28T23:39:27.291Z",
+    "name": "New Kingston",
+    "country": "Jamaica",
+    "admin1": "Saint Andrew Parish"
   },
   "3489854": {
     "fetched_at": "2026-10-21T19:41:10.603Z",
