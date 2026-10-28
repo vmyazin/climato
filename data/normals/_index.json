@@ -1163,6 +1163,12 @@
     "country": "Uganda",
     "admin1": "Central Region"
   },
+  "228853": {
+    "fetched_at": "2026-10-28T06:22:34.042Z",
+    "name": "Mukono",
+    "country": "Uganda",
+    "admin1": "Central Region"
+  },
   "228971": {
     "fetched_at": "2026-09-23T20:43:12.539Z",
     "name": "Mubende",
@@ -23840,6 +23846,12 @@
     "country": "Cuba",
     "admin1": "Granma Province"
   },
+  "3547932": {
+    "fetched_at": "2026-10-28T06:22:34.042Z",
+    "name": "Mantilla",
+    "country": "Cuba",
+    "admin1": "Havana"
+  },
   "3550598": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
     "name": "Las Tunas",
@@ -29359,6 +29371,12 @@
     "country": "China",
     "admin1": "Yunnan"
   },
+  "8519916": {
+    "fetched_at": "2026-10-28T06:22:34.042Z",
+    "name": "Obolon",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
+  },
   "8521718": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Bole",
@@ -30776,6 +30794,12 @@
   "13546518": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
     "name": "Dniprovskyi",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
+  },
+  "13546519": {
+    "fetched_at": "2026-10-28T06:22:34.042Z",
+    "name": "Desna",
     "country": "Ukraine",
     "admin1": "Kyiv City"
   },
