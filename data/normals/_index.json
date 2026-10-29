@@ -8168,6 +8168,12 @@
     "country": "Nepal",
     "admin1": "Koshi"
   },
+  "1283613": {
+    "fetched_at": "2026-10-29T09:10:43.730Z",
+    "name": "Bharatpur",
+    "country": "Nepal",
+    "admin1": "Bagmati Province"
+  },
   "1285173": {
     "fetched_at": "2026-09-01T05:45:57.153Z",
     "name": "Yenangyaung",
@@ -22868,6 +22874,12 @@
     "country": "Brazil",
     "admin1": "Sergipe"
   },
+  "3461109": {
+    "fetched_at": "2026-10-29T09:10:43.730Z",
+    "name": "Ipiranga",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
   "3461144": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Ipatinga",
@@ -23527,6 +23539,12 @@
     "name": "Yautepec",
     "country": "Mexico",
     "admin1": "Morelos"
+  },
+  "3514450": {
+    "fetched_at": "2026-10-29T09:10:43.730Z",
+    "name": "Xochimilco",
+    "country": "Mexico",
+    "admin1": "Mexico City"
   },
   "3514519": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -24955,6 +24973,12 @@
     "name": "Huaraz",
     "country": "Peru",
     "admin1": "Ancash"
+  },
+  "3696417": {
+    "fetched_at": "2026-10-29T09:10:43.730Z",
+    "name": "Huánuco",
+    "country": "Peru",
+    "admin1": "Huánuco Department"
   },
   "3698350": {
     "fetched_at": "2026-09-20T07:07:12.701Z",
