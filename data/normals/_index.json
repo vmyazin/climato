@@ -605,6 +605,12 @@
     "country": "Iran",
     "admin1": "Fars"
   },
+  "130697": {
+    "fetched_at": "2026-10-29T21:27:45.931Z",
+    "name": "Īz̄eh",
+    "country": "Iran",
+    "admin1": "Khuzestan"
+  },
   "130802": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Īlām",
@@ -15330,6 +15336,12 @@
     "country": "Japan",
     "admin1": "Fukuoka"
   },
+  "1863985": {
+    "fetched_at": "2026-10-29T21:27:45.931Z",
+    "name": "Fukui-shi",
+    "country": "Japan",
+    "admin1": "Fukui"
+  },
   "1864092": {
     "fetched_at": "2026-10-03T05:50:24.413Z",
     "name": "Fujisawa",
@@ -16778,6 +16790,12 @@
     "name": "Tājūrā’",
     "country": "Libya",
     "admin1": "Tripoli"
+  },
+  "2210554": {
+    "fetched_at": "2026-10-29T21:27:45.931Z",
+    "name": "Sirte",
+    "country": "Libya",
+    "admin1": "Surt"
   },
   "2212775": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
@@ -22262,6 +22280,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3448519": {
+    "fetched_at": "2026-10-29T21:27:45.931Z",
+    "name": "São Mateus",
+    "country": "Brazil",
+    "admin1": "Espírito Santo"
+  },
   "3448622": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "São Leopoldo",
@@ -25730,6 +25754,12 @@
     "country": "Mexico",
     "admin1": "Baja California"
   },
+  "3996322": {
+    "fetched_at": "2026-10-29T21:27:45.931Z",
+    "name": "Mazatlán",
+    "country": "Mexico",
+    "admin1": "Sinaloa"
+  },
   "3996663": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Manzanillo",
@@ -26933,6 +26963,12 @@
   "5106834": {
     "fetched_at": "2026-10-10T13:06:17.902Z",
     "name": "Albany",
+    "country": "United States",
+    "admin1": "New York"
+  },
+  "5107129": {
+    "fetched_at": "2026-10-29T21:27:45.931Z",
+    "name": "Amherst",
     "country": "United States",
     "admin1": "New York"
   },
