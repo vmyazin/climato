@@ -695,6 +695,12 @@
     "country": "Iran",
     "admin1": "Khuzestan"
   },
+  "143534": {
+    "fetched_at": "2026-10-30T19:44:34.961Z",
+    "name": "Āmol",
+    "country": "Iran",
+    "admin1": "Mazandaran"
+  },
   "143860": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Shahrīār",
@@ -4354,6 +4360,12 @@
     "name": "Ressano Garcia",
     "country": "Mozambique",
     "admin1": "Maputo Province"
+  },
+  "1028434": {
+    "fetched_at": "2026-10-30T19:44:34.961Z",
+    "name": "Quelimane",
+    "country": "Mozambique",
+    "admin1": "Zambezia Province"
   },
   "1028918": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -29066,6 +29078,12 @@
     "country": "Thailand",
     "admin1": "Bangkok"
   },
+  "7026833": {
+    "fetched_at": "2026-10-30T19:44:34.961Z",
+    "name": "Lak Si",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
   "7026837": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Lat Phrao",
@@ -29856,6 +29874,12 @@
     "name": "Jianshui",
     "country": "China",
     "admin1": "Yunnan"
+  },
+  "9983718": {
+    "fetched_at": "2026-10-30T19:44:34.961Z",
+    "name": "Cheremushky",
+    "country": "Ukraine",
+    "admin1": "Odesa"
   },
   "10020191": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
