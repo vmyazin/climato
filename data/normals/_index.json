@@ -7226,6 +7226,12 @@
     "country": "India",
     "admin1": "Uttar Pradesh"
   },
+  "1271951": {
+    "fetched_at": "2026-10-30T23:18:14.066Z",
+    "name": "Faridabad",
+    "country": "India",
+    "admin1": "Haryana"
+  },
   "1271987": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Etāwah",
@@ -7555,6 +7561,12 @@
     "name": "Beed",
     "country": "India",
     "admin1": "Maharashtra"
+  },
+  "1275610": {
+    "fetched_at": "2026-10-30T23:18:14.066Z",
+    "name": "Bilimora",
+    "country": "India",
+    "admin1": "Gujarat"
   },
   "1275637": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
@@ -9643,6 +9655,12 @@
     "name": "Yogyakarta",
     "country": "Indonesia",
     "admin1": "Special Region of Yogyakarta"
+  },
+  "1621613": {
+    "fetched_at": "2026-10-30T23:18:14.066Z",
+    "name": "Weru",
+    "country": "Indonesia",
+    "admin1": "West Java"
   },
   "1621884": {
     "fetched_at": "2026-09-05T20:45:00.477Z",
@@ -23893,6 +23911,12 @@
     "name": "Comitán",
     "country": "Mexico",
     "admin1": "Chiapas"
+  },
+  "3530517": {
+    "fetched_at": "2026-10-30T23:18:14.066Z",
+    "name": "Coatzacoalcos",
+    "country": "Mexico",
+    "admin1": "Veracruz"
   },
   "3530569": {
     "fetched_at": "2026-10-23T07:58:00.034Z",
