@@ -2303,6 +2303,12 @@
     "country": "Russia",
     "admin1": "Voronezh Oblast"
   },
+  "472231": {
+    "fetched_at": "2026-10-30T14:36:17.692Z",
+    "name": "Volzhsky",
+    "country": "Russia",
+    "admin1": "Volgograd Oblast"
+  },
   "472459": {
     "fetched_at": "2026-09-02T15:22:17.614Z",
     "name": "Vologda",
@@ -7843,6 +7849,12 @@
     "name": "Balasore",
     "country": "India",
     "admin1": "Odisha"
+  },
+  "1277780": {
+    "fetched_at": "2026-10-30T14:36:17.692Z",
+    "name": "Baidyabati",
+    "country": "India",
+    "admin1": "West Bengal"
   },
   "1277820": {
     "fetched_at": "2026-09-04T11:46:49.794Z",
@@ -21050,6 +21062,12 @@
     "country": "Spain",
     "admin1": "Galicia"
   },
+  "3120635": {
+    "fetched_at": "2026-10-30T14:36:17.692Z",
+    "name": "Hortaleza",
+    "country": "Spain",
+    "admin1": "Madrid"
+  },
   "3121245": {
     "fetched_at": "2026-10-26T05:28:24.375Z",
     "name": "Gràcia",
@@ -25076,6 +25094,12 @@
     "country": "Peru",
     "admin1": "Huánuco Department"
   },
+  "3698304": {
+    "fetched_at": "2026-10-30T14:36:17.692Z",
+    "name": "Chimbote",
+    "country": "Peru",
+    "admin1": "Ancash"
+  },
   "3698350": {
     "fetched_at": "2026-09-20T07:07:12.701Z",
     "name": "Chiclayo",
@@ -25211,6 +25235,12 @@
   "3827598": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Ojo de Agua",
+    "country": "Mexico",
+    "admin1": "México"
+  },
+  "3827606": {
+    "fetched_at": "2026-10-30T14:36:17.692Z",
+    "name": "Buenavista",
     "country": "Mexico",
     "admin1": "México"
   },
@@ -28508,6 +28538,12 @@
     "country": "Brazil",
     "admin1": "Paraná"
   },
+  "6318546": {
+    "fetched_at": "2026-10-30T14:36:17.692Z",
+    "name": "São Mateus",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
   "6318632": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
     "name": "Sapopemba",
@@ -28547,6 +28583,12 @@
   "6325494": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Québec",
+    "country": "Canada",
+    "admin1": "Quebec"
+  },
+  "6325521": {
+    "fetched_at": "2026-10-30T14:36:17.692Z",
+    "name": "Lévis",
     "country": "Canada",
     "admin1": "Quebec"
   },
