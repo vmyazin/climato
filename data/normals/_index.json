@@ -2207,6 +2207,12 @@
     "country": "Iran",
     "admin1": "Isfahan"
   },
+  "418863": {
+    "fetched_at": "2026-10-30T07:46:42.921Z",
+    "name": "Isfahan",
+    "country": "Iran",
+    "admin1": "Isfahan"
+  },
   "425378": {
     "fetched_at": "2026-09-06T20:52:46.826Z",
     "name": "Bujumbura",
@@ -6931,6 +6937,12 @@
     "name": "Hoshiārpur",
     "country": "India",
     "admin1": "Punjab"
+  },
+  "1269939": {
+    "fetched_at": "2026-10-30T07:46:42.921Z",
+    "name": "Narmadapuram",
+    "country": "India",
+    "admin1": "Madhya Pradesh"
   },
   "1270022": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -14519,6 +14531,12 @@
     "name": "Tochigi",
     "country": "Japan",
     "admin1": "Tochigi"
+  },
+  "1850692": {
+    "fetched_at": "2026-10-30T07:46:42.921Z",
+    "name": "Nishi-Tokyo-shi",
+    "country": "Japan",
+    "admin1": "Tokyo"
   },
   "1850910": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
@@ -22838,6 +22856,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3460132": {
+    "fetched_at": "2026-10-30T07:46:42.921Z",
+    "name": "Japeri",
+    "country": "Brazil",
+    "admin1": "Rio de Janeiro"
+  },
   "3460170": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
     "name": "Jandira",
@@ -28712,6 +28736,12 @@
     "country": "Chile",
     "admin1": "Biobio"
   },
+  "6696918": {
+    "fetched_at": "2026-10-30T07:46:42.921Z",
+    "name": "Taoyuan",
+    "country": "Taiwan",
+    "admin1": "Taiwan"
+  },
   "6697563": {
     "fetched_at": "2026-10-17T16:40:31.540Z",
     "name": "Neyagawa",
@@ -29015,6 +29045,12 @@
   "7027001": {
     "fetched_at": "2026-10-25T05:23:56.916Z",
     "name": "Wang Thonglang",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
+  "7027003": {
+    "fetched_at": "2026-10-30T07:46:42.921Z",
+    "name": "Vadhana",
     "country": "Thailand",
     "admin1": "Bangkok"
   },
@@ -30139,6 +30175,12 @@
     "country": "Japan",
     "admin1": "Tokyo"
   },
+  "11611942": {
+    "fetched_at": "2026-10-30T07:46:42.921Z",
+    "name": "Kamagaya",
+    "country": "Japan",
+    "admin1": "Chiba"
+  },
   "11612347": {
     "fetched_at": "2026-10-09T08:02:58.092Z",
     "name": "Narashino",
@@ -31006,6 +31048,12 @@
     "name": "Pravyi Bereh",
     "country": "Ukraine",
     "admin1": "Donetsk Oblast"
+  },
+  "13580094": {
+    "fetched_at": "2026-10-30T07:46:42.921Z",
+    "name": "Pozniaky",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
   },
   "13580095": {
     "fetched_at": "2026-09-18T20:01:04.998Z",
