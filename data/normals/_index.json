@@ -3491,6 +3491,12 @@
     "country": "Ukraine",
     "admin1": "Lviv Oblast"
   },
+  "702658": {
+    "fetched_at": "2026-10-30T01:22:27.690Z",
+    "name": "Luhansk",
+    "country": "Ukraine",
+    "admin1": "Luhansk Oblast"
+  },
   "703448": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Kyiv",
@@ -15609,6 +15615,12 @@
     "country": "South Korea",
     "admin1": "Gangwon-do"
   },
+  "1897000": {
+    "fetched_at": "2026-10-30T01:22:27.690Z",
+    "name": "Seongnam-si",
+    "country": "South Korea",
+    "admin1": "Gyeonggi-do"
+  },
   "1897007": {
     "fetched_at": "2026-09-19T13:30:15.086Z",
     "name": "Hanam",
@@ -17132,6 +17144,12 @@
     "name": "Sinfra",
     "country": "Ivory Coast",
     "admin1": "Zanzan District"
+  },
+  "2282006": {
+    "fetched_at": "2026-10-30T01:22:27.690Z",
+    "name": "San-Pedro",
+    "country": "Ivory Coast",
+    "admin1": "Bas-Sassandra District"
   },
   "2284647": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -19004,6 +19022,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2634838": {
+    "fetched_at": "2026-10-30T01:22:27.690Z",
+    "name": "Walthamstow",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2634853": {
     "fetched_at": "2026-10-15T05:31:53.684Z",
     "name": "Walsall",
@@ -19921,6 +19945,12 @@
     "name": "Rostock",
     "country": "Germany",
     "admin1": "Mecklenburg-Vorpommern"
+  },
+  "2847736": {
+    "fetched_at": "2026-10-30T01:22:27.690Z",
+    "name": "Reutlingen",
+    "country": "Germany",
+    "admin1": "Baden-Wurttemberg"
   },
   "2848273": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
