@@ -2207,6 +2207,12 @@
     "country": "Yemen",
     "admin1": "Aden"
   },
+  "417472": {
+    "fetched_at": "2026-10-31T14:57:16.898Z",
+    "name": "Shāhīn Shahr",
+    "country": "Iran",
+    "admin1": "Isfahan"
+  },
   "418533": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Shahreẕā",
@@ -7040,6 +7046,12 @@
     "country": "India",
     "admin1": "West Bengal"
   },
+  "1270407": {
+    "fetched_at": "2026-10-31T14:57:16.898Z",
+    "name": "Hanumāngarh",
+    "country": "India",
+    "admin1": "Rajasthan"
+  },
   "1270484": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Hālīsahar",
@@ -9653,6 +9665,12 @@
   "1618177": {
     "fetched_at": "2026-09-16T19:07:58.536Z",
     "name": "Ban Khlong Prawet",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
+  "1619460": {
+    "fetched_at": "2026-10-31T14:57:16.898Z",
+    "name": "Bangkok Noi",
     "country": "Thailand",
     "admin1": "Bangkok"
   },
@@ -19046,6 +19064,12 @@
     "country": "Denmark",
     "admin1": "Capital Region"
   },
+  "2624886": {
+    "fetched_at": "2026-10-31T14:57:16.898Z",
+    "name": "Aalborg",
+    "country": "Denmark",
+    "admin1": "North Denmark"
+  },
   "2633352": {
     "fetched_at": "2026-10-19T14:19:45.971Z",
     "name": "York",
@@ -21635,6 +21659,12 @@
   "3359041": {
     "fetched_at": "2026-10-04T17:06:51.466Z",
     "name": "Worcester",
+    "country": "South Africa",
+    "admin1": "Western Cape"
+  },
+  "3363094": {
+    "fetched_at": "2026-10-31T14:57:16.898Z",
+    "name": "Paarl",
     "country": "South Africa",
     "admin1": "Western Cape"
   },
@@ -29174,6 +29204,12 @@
     "country": "Thailand",
     "admin1": "Bangkok"
   },
+  "7026886": {
+    "fetched_at": "2026-10-31T14:57:16.898Z",
+    "name": "Sai Mai",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
   "7026898": {
     "fetched_at": "2026-10-02T02:37:42.102Z",
     "name": "Suan Luang",
@@ -30666,6 +30702,12 @@
     "name": "San Martin",
     "country": "Peru",
     "admin1": "Piura"
+  },
+  "12157013": {
+    "fetched_at": "2026-10-31T14:57:16.898Z",
+    "name": "San Francisco De Borja",
+    "country": "Peru",
+    "admin1": "Lima region"
   },
   "12159964": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
