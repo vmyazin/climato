@@ -10112,6 +10112,12 @@
     "country": "Indonesia",
     "admin1": "West Java"
   },
+  "1639362": {
+    "fetched_at": "2026-10-31T02:48:25.200Z",
+    "name": "Kresek",
+    "country": "Indonesia",
+    "admin1": "West Java"
+  },
   "1639900": {
     "fetched_at": "2026-10-21T19:41:10.603Z",
     "name": "Klaten",
@@ -22844,6 +22850,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3458696": {
+    "fetched_at": "2026-10-31T02:48:25.200Z",
+    "name": "Lavras",
+    "country": "Brazil",
+    "admin1": "Minas Gerais"
+  },
   "3458930": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Lages",
@@ -22927,6 +22939,12 @@
     "name": "Ituiutaba",
     "country": "Brazil",
     "admin1": "Minas Gerais"
+  },
+  "3460535": {
+    "fetched_at": "2026-10-31T02:48:25.200Z",
+    "name": "Itu",
+    "country": "Brazil",
+    "admin1": "São Paulo"
   },
   "3460598": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
