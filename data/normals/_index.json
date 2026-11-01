@@ -4139,6 +4139,12 @@
     "country": "South Africa",
     "admin1": "Gauteng"
   },
+  "963516": {
+    "fetched_at": "2026-11-01T08:13:45.878Z",
+    "name": "Queenstown",
+    "country": "South Africa",
+    "admin1": "Eastern Cape"
+  },
   "964315": {
     "fetched_at": "2026-10-24T02:02:19.465Z",
     "name": "Mokopane",
@@ -15689,6 +15695,11 @@
     "name": "Gwangyang",
     "country": "South Korea",
     "admin1": "Jeollanam-do"
+  },
+  "1884365": {
+    "fetched_at": "2026-11-01T08:13:45.878Z",
+    "name": "Ang Mo Kio New Town",
+    "country": "Singapore"
   },
   "1884367": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
