@@ -9602,6 +9602,12 @@
     "country": "Thailand",
     "admin1": "Bangkok"
   },
+  "1608048": {
+    "fetched_at": "2026-11-01T19:54:49.541Z",
+    "name": "Pak Kret",
+    "country": "Thailand",
+    "admin1": "Nonthaburi"
+  },
   "1608133": {
     "fetched_at": "2026-09-19T09:46:37.730Z",
     "name": "Nonthaburi",
@@ -15582,6 +15588,12 @@
     "country": "North Korea",
     "admin1": "Nampo"
   },
+  "1876105": {
+    "fetched_at": "2026-11-01T19:54:49.541Z",
+    "name": "Kangsŏn",
+    "country": "North Korea",
+    "admin1": "South Pyongan"
+  },
   "1876124": {
     "fetched_at": "2026-10-12T09:49:31.320Z",
     "name": "Kangnyŏng",
@@ -16717,6 +16729,12 @@
     "name": "Abiko",
     "country": "Japan",
     "admin1": "Chiba"
+  },
+  "2119441": {
+    "fetched_at": "2026-11-01T19:54:49.541Z",
+    "name": "Yuzhno-Sakhalinsk",
+    "country": "Russia",
+    "admin1": "Sakhalin Oblast"
   },
   "2127733": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
