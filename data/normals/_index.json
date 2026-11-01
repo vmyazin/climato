@@ -623,6 +623,12 @@
     "country": "Iran",
     "admin1": "Hamadan Province"
   },
+  "132892": {
+    "fetched_at": "2026-11-01T01:33:23.451Z",
+    "name": "Gorgan",
+    "country": "Iran",
+    "admin1": "Golestan"
+  },
   "135423": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
     "name": "Shahrud",
@@ -25807,6 +25813,12 @@
     "name": "Ica",
     "country": "Peru",
     "admin1": "Ica"
+  },
+  "3939459": {
+    "fetched_at": "2026-11-01T01:33:23.451Z",
+    "name": "Huancayo",
+    "country": "Peru",
+    "admin1": "Junin"
   },
   "3941584": {
     "fetched_at": "2026-09-07T20:11:55.822Z",
