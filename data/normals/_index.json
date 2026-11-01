@@ -5414,6 +5414,12 @@
     "country": "Sri Lanka",
     "admin1": "Western Province"
   },
+  "1233369": {
+    "fetched_at": "2026-11-01T15:29:35.451Z",
+    "name": "Negombo",
+    "country": "Sri Lanka",
+    "admin1": "Western Province"
+  },
   "1234633": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
     "name": "Moratuwa",
@@ -9695,6 +9701,12 @@
   "1619485": {
     "fetched_at": "2026-08-26T16:06:24.321Z",
     "name": "Bang Khun Thian",
+    "country": "Thailand",
+    "admin1": "Bangkok"
+  },
+  "1619532": {
+    "fetched_at": "2026-11-01T15:29:35.451Z",
+    "name": "Bang Kapi",
     "country": "Thailand",
     "admin1": "Bangkok"
   },
@@ -18709,6 +18721,12 @@
     "country": "Spain",
     "admin1": "Andalusia"
   },
+  "2516548": {
+    "fetched_at": "2026-11-01T15:29:35.451Z",
+    "name": "Huelva",
+    "country": "Spain",
+    "admin1": "Andalusia"
+  },
   "2517117": {
     "fetched_at": "2026-08-28T19:37:43.002Z",
     "name": "Granada",
@@ -20479,6 +20497,12 @@
     "country": "Germany",
     "admin1": "Saxony"
   },
+  "2940187": {
+    "fetched_at": "2026-11-01T15:29:35.451Z",
+    "name": "Charlottenburg",
+    "country": "Germany",
+    "admin1": "State of Berlin"
+  },
   "2944368": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Bremerhaven",
@@ -21390,6 +21414,12 @@
     "name": "Piacenza",
     "country": "Italy",
     "admin1": "Emilia-Romagna"
+  },
+  "3171168": {
+    "fetched_at": "2026-11-01T15:29:35.451Z",
+    "name": "Pescara",
+    "country": "Italy",
+    "admin1": "Abruzzo"
   },
   "3171180": {
     "fetched_at": "2026-10-19T23:58:02.143Z",
