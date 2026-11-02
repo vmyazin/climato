@@ -4145,6 +4145,12 @@
     "country": "South Africa",
     "admin1": "Eastern Cape"
   },
+  "964137": {
+    "fetched_at": "2026-11-02T10:06:00.514Z",
+    "name": "Pretoria",
+    "country": "South Africa",
+    "admin1": "Gauteng"
+  },
   "964315": {
     "fetched_at": "2026-10-24T02:02:19.465Z",
     "name": "Mokopane",
@@ -23923,6 +23929,12 @@
     "country": "Mexico",
     "admin1": "Puebla"
   },
+  "3516109": {
+    "fetched_at": "2026-11-02T10:06:00.514Z",
+    "name": "Tehuacán",
+    "country": "Mexico",
+    "admin1": "Puebla"
+  },
   "3516266": {
     "fetched_at": "2026-09-17T05:32:19.411Z",
     "name": "Tapachula",
@@ -24013,6 +24025,12 @@
     "country": "Mexico",
     "admin1": "Tamaulipas"
   },
+  "3523760": {
+    "fetched_at": "2026-11-02T10:06:00.514Z",
+    "name": "Magdalena Contreras",
+    "country": "Mexico",
+    "admin1": "Mexico City"
+  },
   "3526485": {
     "fetched_at": "2026-09-15T05:51:42.741Z",
     "name": "Jiutepec",
@@ -24078,6 +24096,12 @@
     "name": "Coyoacán",
     "country": "Mexico",
     "admin1": "Mexico City"
+  },
+  "3530240": {
+    "fetched_at": "2026-11-02T10:06:00.514Z",
+    "name": "Córdoba",
+    "country": "Mexico",
+    "admin1": "Veracruz"
   },
   "3530367": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
@@ -24786,6 +24810,12 @@
     "name": "Calabozo",
     "country": "Venezuela",
     "admin1": "Guárico"
+  },
+  "3647549": {
+    "fetched_at": "2026-11-02T10:06:00.514Z",
+    "name": "Cagua",
+    "country": "Venezuela",
+    "admin1": "Aragua"
   },
   "3647637": {
     "fetched_at": "2026-09-05T06:20:46.060Z",
@@ -28788,6 +28818,12 @@
     "name": "Tangará da Serra",
     "country": "Brazil",
     "admin1": "Mato Grosso"
+  },
+  "6318856": {
+    "fetched_at": "2026-11-02T10:06:00.514Z",
+    "name": "Valparaíso de Goiás",
+    "country": "Brazil",
+    "admin1": "Goiás"
   },
   "6324729": {
     "fetched_at": "2026-10-18T14:54:52.355Z",
