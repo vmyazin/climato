@@ -25447,6 +25447,12 @@
     "country": "Cuba",
     "admin1": "Havana"
   },
+  "3805673": {
+    "fetched_at": "2026-11-02T20:31:13.864Z",
+    "name": "San Fernando de Apure",
+    "country": "Venezuela",
+    "admin1": "Apure"
+  },
   "3817746": {
     "fetched_at": "2026-09-01T23:35:59.499Z",
     "name": "Tepexpan",
