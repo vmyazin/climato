@@ -15588,6 +15588,12 @@
     "country": "North Korea",
     "admin1": "Pyongyang"
   },
+  "1871871": {
+    "fetched_at": "2026-11-03T23:43:30.180Z",
+    "name": "Pyongsong",
+    "country": "North Korea",
+    "admin1": "South Pyongan"
+  },
   "1873757": {
     "fetched_at": "2026-09-01T18:53:26.101Z",
     "name": "Nampo",
@@ -21166,6 +21172,12 @@
   "3112737": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Puente de Vallecas",
+    "country": "Spain",
+    "admin1": "Madrid"
+  },
+  "3114256": {
+    "fetched_at": "2026-11-03T23:43:30.180Z",
+    "name": "Parla",
     "country": "Spain",
     "admin1": "Madrid"
   },
