@@ -21271,6 +21271,12 @@
     "country": "Spain",
     "admin1": "Madrid"
   },
+  "3125239": {
+    "fetched_at": "2026-11-03T10:08:56.822Z",
+    "name": "Chamartin",
+    "country": "Spain",
+    "admin1": "Madrid"
+  },
   "3127461": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
     "name": "Burgos",
@@ -25932,6 +25938,12 @@
     "name": "Cusco",
     "country": "Peru",
     "admin1": "Cuzco Department"
+  },
+  "3946083": {
+    "fetched_at": "2026-11-03T10:08:56.822Z",
+    "name": "Callao",
+    "country": "Peru",
+    "admin1": "Provincia Constitucional del Callao"
   },
   "3947322": {
     "fetched_at": "2026-10-20T02:59:25.102Z",
