@@ -5426,6 +5426,12 @@
     "country": "Sri Lanka",
     "admin1": "Western Province"
   },
+  "1234569": {
+    "fetched_at": "2026-11-04T11:37:53.571Z",
+    "name": "Dehiwala-Mount Lavinia",
+    "country": "Sri Lanka",
+    "admin1": "Western Province"
+  },
   "1234633": {
     "fetched_at": "2026-10-12T19:24:57.692Z",
     "name": "Moratuwa",
@@ -10718,6 +10724,12 @@
     "country": "Philippines",
     "admin1": "Calabarzon"
   },
+  "1688830": {
+    "fetched_at": "2026-11-04T11:37:53.571Z",
+    "name": "San Pablo",
+    "country": "Philippines",
+    "admin1": "Calabarzon"
+  },
   "1689056": {
     "fetched_at": "2026-10-14T19:44:59.215Z",
     "name": "San Mateo",
@@ -11471,6 +11483,12 @@
   "1735102": {
     "fetched_at": "2026-09-21T14:33:37.530Z",
     "name": "Bayan Lepas",
+    "country": "Malaysia",
+    "admin1": "Penang"
+  },
+  "1735106": {
+    "fetched_at": "2026-11-04T11:37:53.571Z",
+    "name": "George Town",
     "country": "Malaysia",
     "admin1": "Penang"
   },
@@ -23263,6 +23281,12 @@
     "country": "Brazil",
     "admin1": "São Paulo"
   },
+  "3461859": {
+    "fetched_at": "2026-11-04T11:37:53.571Z",
+    "name": "Guaratinguetá",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
   "3461879": {
     "fetched_at": "2026-10-26T17:40:33.068Z",
     "name": "Guarapuava",
@@ -28927,6 +28951,12 @@
     "country": "France",
     "admin1": "Rhône-Alpes"
   },
+  "6544099": {
+    "fetched_at": "2026-11-04T11:37:53.571Z",
+    "name": "Moncloa-Aravaca",
+    "country": "Spain",
+    "admin1": "Madrid"
+  },
   "6544100": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Eixample",
@@ -31351,6 +31381,12 @@
   "13546316": {
     "fetched_at": "2026-10-21T15:40:01.400Z",
     "name": "Le Plateau-Mont-Royal",
+    "country": "Canada",
+    "admin1": "Quebec"
+  },
+  "13546317": {
+    "fetched_at": "2026-11-04T11:37:53.571Z",
+    "name": "Ville-Marie",
     "country": "Canada",
     "admin1": "Quebec"
   },
