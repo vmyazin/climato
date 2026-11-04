@@ -15618,6 +15618,12 @@
     "country": "North Korea",
     "admin1": "Kaesong"
   },
+  "1877030": {
+    "fetched_at": "2026-11-04T03:24:12.707Z",
+    "name": "Hŭngnam",
+    "country": "North Korea",
+    "admin1": "South Hamgyong"
+  },
   "1877449": {
     "fetched_at": "2026-10-27T16:53:18.437Z",
     "name": "Hamhung",
@@ -15967,6 +15973,12 @@
     "name": "Khabarovsk",
     "country": "Russia",
     "admin1": "Khabarovsk"
+  },
+  "2023469": {
+    "fetched_at": "2026-11-04T03:24:12.707Z",
+    "name": "Irkutsk",
+    "country": "Russia",
+    "admin1": "Irkutsk Oblast"
   },
   "2025339": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
@@ -24744,6 +24756,12 @@
     "name": "La Victoria",
     "country": "Venezuela",
     "admin1": "Aragua"
+  },
+  "3637012": {
+    "fetched_at": "2026-11-04T03:24:12.707Z",
+    "name": "Lander",
+    "country": "Venezuela",
+    "admin1": "Miranda"
   },
   "3638371": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
