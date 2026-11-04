@@ -6290,6 +6290,12 @@
     "country": "India",
     "admin1": "Tamil Nadu"
   },
+  "1261529": {
+    "fetched_at": "2026-11-04T23:58:41.184Z",
+    "name": "Nellore",
+    "country": "India",
+    "admin1": "Andhra Pradesh"
+  },
   "1261653": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Navsari",
@@ -24858,6 +24864,12 @@
     "name": "Ciudad Ojeda",
     "country": "Venezuela",
     "admin1": "Zulia"
+  },
+  "3645854": {
+    "fetched_at": "2026-11-04T23:58:41.184Z",
+    "name": "Charallave",
+    "country": "Venezuela",
+    "admin1": "Miranda"
   },
   "3646382": {
     "fetched_at": "2026-09-18T14:40:05.548Z",
