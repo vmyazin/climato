@@ -17078,6 +17078,12 @@
     "country": "Libya",
     "admin1": "Sabha District"
   },
+  "2220957": {
+    "fetched_at": "2026-11-05T20:19:10.661Z",
+    "name": "Yaoundé",
+    "country": "Cameroon",
+    "admin1": "Centre"
+  },
   "2223763": {
     "fetched_at": "2026-11-04T18:53:53.179Z",
     "name": "Nkongsamba",
@@ -22860,6 +22866,12 @@
     "name": "Petrópolis",
     "country": "Brazil",
     "admin1": "Rio de Janeiro"
+  },
+  "3454244": {
+    "fetched_at": "2026-11-05T20:19:10.661Z",
+    "name": "Pelotas",
+    "country": "Brazil",
+    "admin1": "Rio Grande do Sul"
   },
   "3454690": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
