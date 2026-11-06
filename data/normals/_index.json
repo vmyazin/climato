@@ -2669,6 +2669,12 @@
     "country": "Russia",
     "admin1": "Moscow Oblast"
   },
+  "516264": {
+    "fetched_at": "2026-11-06T21:47:48.090Z",
+    "name": "Ochakovo-Matveyevskoye",
+    "country": "Russia",
+    "admin1": "Moscow"
+  },
   "516436": {
     "fetched_at": "2026-10-14T10:39:38.584Z",
     "name": "Obninsk",
@@ -22597,6 +22603,12 @@
     "country": "Brazil",
     "admin1": "Paraná"
   },
+  "3448031": {
+    "fetched_at": "2026-11-06T21:47:48.090Z",
+    "name": "Sapucaia do Sul",
+    "country": "Brazil",
+    "admin1": "Rio Grande do Sul"
+  },
   "3448136": {
     "fetched_at": "2026-09-07T00:23:16.298Z",
     "name": "São Vicente",
@@ -26052,6 +26064,12 @@
     "name": "Cusco",
     "country": "Peru",
     "admin1": "Cuzco Department"
+  },
+  "3943789": {
+    "fetched_at": "2026-11-06T21:47:48.090Z",
+    "name": "Chincha Alta",
+    "country": "Peru",
+    "admin1": "Ica"
   },
   "3946083": {
     "fetched_at": "2026-11-03T10:08:56.822Z",
