@@ -11240,6 +11240,12 @@
     "country": "Philippines",
     "admin1": "Central Luzon"
   },
+  "1722186": {
+    "fetched_at": "2026-11-06T16:20:24.996Z",
+    "name": "Butuan",
+    "country": "Philippines",
+    "admin1": "Caraga"
+  },
   "1722930": {
     "fetched_at": "2026-09-05T16:18:15.066Z",
     "name": "Bulaon",
@@ -15599,6 +15605,12 @@
     "name": "Ageo",
     "country": "Japan",
     "admin1": "Saitama"
+  },
+  "1866923": {
+    "fetched_at": "2026-11-06T16:20:24.996Z",
+    "name": "Wonsan",
+    "country": "North Korea",
+    "admin1": "Kangwŏn-do"
   },
   "1867429": {
     "fetched_at": "2026-09-23T01:52:55.411Z",
@@ -24954,6 +24966,12 @@
     "name": "Barinas",
     "country": "Venezuela",
     "admin1": "Barinas"
+  },
+  "3648559": {
+    "fetched_at": "2026-11-06T16:20:24.996Z",
+    "name": "Barcelona",
+    "country": "Venezuela",
+    "admin1": "Anzoátegui"
   },
   "3649017": {
     "fetched_at": "2026-08-26T13:42:35.788Z",
