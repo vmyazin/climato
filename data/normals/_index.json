@@ -24781,6 +24781,12 @@
     "country": "Venezuela",
     "admin1": "Falcón"
   },
+  "3629614": {
+    "fetched_at": "2026-11-07T07:51:33.368Z",
+    "name": "Punta Cardón",
+    "country": "Venezuela",
+    "admin1": "Falcón"
+  },
   "3629706": {
     "fetched_at": "2026-08-26T14:31:06.937Z",
     "name": "Puerto Cabello",
@@ -24906,6 +24912,12 @@
     "name": "Cumaná",
     "country": "Venezuela",
     "admin1": "Sucre"
+  },
+  "3645213": {
+    "fetched_at": "2026-11-07T07:51:33.368Z",
+    "name": "Coro",
+    "country": "Venezuela",
+    "admin1": "Falcón"
   },
   "3645527": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
