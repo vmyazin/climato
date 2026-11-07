@@ -19483,6 +19483,12 @@
     "country": "United Kingdom",
     "admin1": "England"
   },
+  "2642607": {
+    "fetched_at": "2026-11-07T14:25:16.294Z",
+    "name": "Middlesbrough",
+    "country": "United Kingdom",
+    "admin1": "England"
+  },
   "2643097": {
     "fetched_at": "2026-10-04T12:53:13.813Z",
     "name": "Mansfield",
@@ -26094,6 +26100,12 @@
     "name": "Arequipa",
     "country": "Peru",
     "admin1": "Arequipa"
+  },
+  "3979770": {
+    "fetched_at": "2026-11-07T14:25:16.294Z",
+    "name": "Zapopan",
+    "country": "Mexico",
+    "admin1": "Jalisco"
   },
   "3979844": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
