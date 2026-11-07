@@ -4277,6 +4277,12 @@
     "country": "South Africa",
     "admin1": "Gauteng"
   },
+  "998082": {
+    "fetched_at": "2026-11-07T23:07:24.147Z",
+    "name": "Hammanskraal",
+    "country": "South Africa",
+    "admin1": "North West"
+  },
   "1002108": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Germiston",
@@ -7601,6 +7607,12 @@
   "1275120": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Bulandshahr",
+    "country": "India",
+    "admin1": "Uttar Pradesh"
+  },
+  "1275163": {
+    "fetched_at": "2026-11-07T23:07:24.147Z",
+    "name": "Budaun",
     "country": "India",
     "admin1": "Uttar Pradesh"
   },
@@ -24936,6 +24948,12 @@
     "name": "Ciudad Ojeda",
     "country": "Venezuela",
     "admin1": "Zulia"
+  },
+  "3645528": {
+    "fetched_at": "2026-11-07T23:07:24.147Z",
+    "name": "Ciudad Guayana",
+    "country": "Venezuela",
+    "admin1": "Bolívar"
   },
   "3645854": {
     "fetched_at": "2026-11-04T23:58:41.184Z",
