@@ -8372,6 +8372,12 @@
     "country": "Myanmar",
     "admin1": "Mandalay Region"
   },
+  "1308318": {
+    "fetched_at": "2026-11-07T19:05:10.847Z",
+    "name": "Mu-se",
+    "country": "Myanmar",
+    "admin1": "Shan State"
+  },
   "1308465": {
     "fetched_at": "2026-09-22T06:52:30.641Z",
     "name": "Mawlamyine",
@@ -27190,6 +27196,12 @@
   "4776024": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Newport News",
+    "country": "United States",
+    "admin1": "Virginia"
+  },
+  "4776222": {
+    "fetched_at": "2026-11-07T19:05:10.847Z",
+    "name": "Norfolk",
     "country": "United States",
     "admin1": "Virginia"
   },
