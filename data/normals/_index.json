@@ -8924,6 +8924,12 @@
     "country": "Kazakhstan",
     "admin1": "Pavlodar Region"
   },
+  "1520316": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Ust-Kamenogorsk",
+    "country": "Kazakhstan",
+    "admin1": "East Kazakhstan"
+  },
   "1522203": {
     "fetched_at": "2026-10-18T11:46:44.026Z",
     "name": "Kokshetau",
@@ -18260,11 +18266,23 @@
     "country": "Burkina Faso",
     "admin1": "Cascades Region"
   },
+  "2364104": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Sokodé",
+    "country": "Togo",
+    "admin1": "Centrale"
+  },
   "2365267": {
     "fetched_at": "2026-09-15T05:51:42.741Z",
     "name": "Lomé",
     "country": "Togo",
     "admin1": "Maritime"
+  },
+  "2366152": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Kara",
+    "country": "Togo",
+    "admin1": "Kara"
   },
   "2374775": {
     "fetched_at": "2026-08-26T18:30:40.356Z",
@@ -20467,6 +20485,12 @@
     "country": "Germany",
     "admin1": "Saxony"
   },
+  "2884161": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Kreuzberg",
+    "country": "Germany",
+    "admin1": "State of Berlin"
+  },
   "2884509": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
     "name": "Krefeld",
@@ -21384,6 +21408,12 @@
     "name": "León",
     "country": "Spain",
     "admin1": "Castille and León"
+  },
+  "3118594": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Leganés",
+    "country": "Spain",
+    "admin1": "Madrid"
   },
   "3119841": {
     "fetched_at": "2026-10-22T12:32:19.053Z",
@@ -23587,6 +23617,12 @@
     "country": "Brazil",
     "admin1": "Minas Gerais"
   },
+  "3465624": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Contagem",
+    "country": "Brazil",
+    "admin1": "Minas Gerais"
+  },
   "3465644": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
     "name": "Conselheiro Lafaiete",
@@ -23946,6 +23982,12 @@
     "name": "Ciudad Valles",
     "country": "Mexico",
     "admin1": "San Luis Potosí"
+  },
+  "3486270": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Anaco",
+    "country": "Venezuela",
+    "admin1": "Anzoátegui"
   },
   "3487903": {
     "fetched_at": "2026-08-27T02:16:53.700Z",
@@ -24883,6 +24925,12 @@
     "country": "Venezuela",
     "admin1": "Carabobo"
   },
+  "3629710": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Puerto Ayacucho",
+    "country": "Venezuela",
+    "admin1": "Amazonas"
+  },
   "3629965": {
     "fetched_at": "2026-11-08T16:23:24.138Z",
     "name": "Porlamar",
@@ -25122,6 +25170,12 @@
     "name": "Los Puertos de Altagracia",
     "country": "Venezuela",
     "admin1": "Zulia"
+  },
+  "3649833": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Acarigua",
+    "country": "Venezuela",
+    "admin1": "Portuguesa"
   },
   "3651297": {
     "fetched_at": "2026-08-30T05:57:18.306Z",
@@ -25579,6 +25633,12 @@
     "country": "Peru",
     "admin1": "Piura"
   },
+  "3693345": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Pucallpa",
+    "country": "Peru",
+    "admin1": "Ucayali"
+  },
   "3693528": {
     "fetched_at": "2026-08-30T15:07:58.039Z",
     "name": "Piura",
@@ -25632,6 +25692,12 @@
     "name": "Juan Díaz",
     "country": "Panama",
     "admin1": "Provincia de Panamá"
+  },
+  "3718420": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Port-de-Paix",
+    "country": "Haiti",
+    "admin1": "Nord-Ouest"
   },
   "3718426": {
     "fetched_at": "2026-10-19T06:59:37.543Z",
@@ -25710,6 +25776,12 @@
     "name": "Centro Habana",
     "country": "Cuba",
     "admin1": "Havana"
+  },
+  "3778045": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Maturín",
+    "country": "Venezuela",
+    "admin1": "Monagas"
   },
   "3805673": {
     "fetched_at": "2026-11-02T20:31:13.864Z",
@@ -29191,6 +29263,12 @@
     "country": "Spain",
     "admin1": "Catalonia"
   },
+  "6544103": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Horta-Guinardó",
+    "country": "Spain",
+    "admin1": "Catalonia"
+  },
   "6544104": {
     "fetched_at": "2026-10-23T17:43:42.106Z",
     "name": "Sants-Montjuïc",
@@ -29202,6 +29280,12 @@
     "name": "Ciutat Vella",
     "country": "Spain",
     "admin1": "Catalonia"
+  },
+  "6544487": {
+    "fetched_at": "2026-11-08T20:48:14.550Z",
+    "name": "Arganzuela",
+    "country": "Spain",
+    "admin1": "Madrid"
   },
   "6544488": {
     "fetched_at": "2026-10-18T01:35:31.983Z",
