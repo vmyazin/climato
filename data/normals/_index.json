@@ -1511,6 +1511,12 @@
     "country": "United Arab Emirates",
     "admin1": "Ajman Emirate"
   },
+  "292968": {
+    "fetched_at": "2026-11-08T16:23:24.138Z",
+    "name": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "admin1": "Abu Dhabi Emirate"
+  },
   "293253": {
     "fetched_at": "2026-09-17T19:19:29.377Z",
     "name": "Jaffa",
@@ -5425,6 +5431,12 @@
     "name": "Kŭlob",
     "country": "Tajikistan",
     "admin1": "Khatlon Province"
+  },
+  "1221874": {
+    "fetched_at": "2026-11-08T16:23:24.138Z",
+    "name": "Dushanbe",
+    "country": "Tajikistan",
+    "admin1": "Dushanbe"
   },
   "1226260": {
     "fetched_at": "2026-10-27T05:54:02.422Z",
@@ -20749,6 +20761,12 @@
     "country": "France",
     "admin1": "Île-de-France Region"
   },
+  "2972191": {
+    "fetched_at": "2026-11-08T16:23:24.138Z",
+    "name": "Tours",
+    "country": "France",
+    "admin1": "Centre-Val de Loire"
+  },
   "2972315": {
     "fetched_at": "2026-10-16T10:10:46.401Z",
     "name": "Toulouse",
@@ -24865,6 +24883,12 @@
     "country": "Venezuela",
     "admin1": "Carabobo"
   },
+  "3629965": {
+    "fetched_at": "2026-11-08T16:23:24.138Z",
+    "name": "Porlamar",
+    "country": "Venezuela",
+    "admin1": "Nueva Esparta"
+  },
   "3630297": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Petare",
@@ -24990,6 +25014,12 @@
     "name": "Cumaná",
     "country": "Venezuela",
     "admin1": "Sucre"
+  },
+  "3644918": {
+    "fetched_at": "2026-11-08T16:23:24.138Z",
+    "name": "Cúa",
+    "country": "Venezuela",
+    "admin1": "Miranda"
   },
   "3645213": {
     "fetched_at": "2026-11-07T07:51:33.368Z",
@@ -27790,6 +27820,12 @@
   "5295985": {
     "fetched_at": "2026-08-31T16:26:32.095Z",
     "name": "Glendale",
+    "country": "United States",
+    "admin1": "Arizona"
+  },
+  "5303929": {
+    "fetched_at": "2026-11-08T16:23:24.138Z",
+    "name": "Maryvale",
     "country": "United States",
     "admin1": "Arizona"
   },
@@ -31053,6 +31089,12 @@
   "11962427": {
     "fetched_at": "2026-08-31T02:25:05.490Z",
     "name": "Jardim Sao Luis",
+    "country": "Brazil",
+    "admin1": "São Paulo"
+  },
+  "11962429": {
+    "fetched_at": "2026-11-08T16:23:24.138Z",
+    "name": "Sacomã",
     "country": "Brazil",
     "admin1": "São Paulo"
   },
