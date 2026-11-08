@@ -3053,6 +3053,12 @@
     "country": "Russia",
     "admin1": "Saratov Oblast"
   },
+  "580497": {
+    "fetched_at": "2026-11-08T09:36:04.737Z",
+    "name": "Astrakhan",
+    "country": "Russia",
+    "admin1": "Astrakhan Oblast"
+  },
   "580724": {
     "fetched_at": "2026-08-30T23:56:54.107Z",
     "name": "Arzamas",
@@ -10580,6 +10586,12 @@
     "country": "Taiwan",
     "admin1": "Taipei"
   },
+  "1668295": {
+    "fetched_at": "2026-11-08T09:36:04.737Z",
+    "name": "Taitung",
+    "country": "Taiwan",
+    "admin1": "Taiwan"
+  },
   "1668341": {
     "fetched_at": "2026-05-25T03:11:05.075Z",
     "name": "Taipei",
@@ -14514,6 +14526,12 @@
     "country": "South Korea",
     "admin1": "Gyeongsangnam-do"
   },
+  "1846898": {
+    "fetched_at": "2026-11-08T09:36:04.737Z",
+    "name": "Anyang-si",
+    "country": "South Korea",
+    "admin1": "Gyeonggi-do"
+  },
   "1846918": {
     "fetched_at": "2026-10-17T21:04:00.624Z",
     "name": "Ansan-si",
@@ -14963,6 +14981,12 @@
     "name": "Nara",
     "country": "Japan",
     "admin1": "Nara"
+  },
+  "1856035": {
+    "fetched_at": "2026-11-08T09:36:04.737Z",
+    "name": "Naha",
+    "country": "Japan",
+    "admin1": "Okinawa"
   },
   "1856057": {
     "fetched_at": "2026-05-25T03:38:47.998Z",
@@ -15642,6 +15666,12 @@
     "country": "North Korea",
     "admin1": "South Hwanghae"
   },
+  "1869446": {
+    "fetched_at": "2026-11-08T09:36:04.737Z",
+    "name": "Songnim-ni",
+    "country": "North Korea",
+    "admin1": "North Hwanghae"
+  },
   "1871859": {
     "fetched_at": "2026-09-23T06:48:32.331Z",
     "name": "Pyongyang",
@@ -15695,6 +15725,12 @@
     "name": "Haeju",
     "country": "North Korea",
     "admin1": "South Hwanghae"
+  },
+  "1879490": {
+    "fetched_at": "2026-11-08T09:36:04.737Z",
+    "name": "Chaeryŏng-ni",
+    "country": "North Korea",
+    "admin1": "South Pyongan"
   },
   "1880159": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
@@ -18979,6 +19015,12 @@
     "country": "Morocco",
     "admin1": "Casablanca-Settat"
   },
+  "2537763": {
+    "fetched_at": "2026-11-08T09:36:04.737Z",
+    "name": "Salé",
+    "country": "Morocco",
+    "admin1": "Rabat-Salé-Kénitra"
+  },
   "2537881": {
     "fetched_at": "2026-09-02T11:46:09.269Z",
     "name": "Safi",
@@ -21558,6 +21600,12 @@
     "name": "Perugia",
     "country": "Italy",
     "admin1": "Umbria"
+  },
+  "3171457": {
+    "fetched_at": "2026-11-08T09:36:04.737Z",
+    "name": "Parma",
+    "country": "Italy",
+    "admin1": "Emilia-Romagna"
   },
   "3171728": {
     "fetched_at": "2026-10-21T15:40:01.400Z",
@@ -24834,6 +24882,12 @@
     "name": "Mérida",
     "country": "Venezuela",
     "admin1": "Mérida"
+  },
+  "3632929": {
+    "fetched_at": "2026-11-08T09:36:04.737Z",
+    "name": "Mariara",
+    "country": "Venezuela",
+    "admin1": "Carabobo"
   },
   "3632998": {
     "fetched_at": "2026-08-31T08:55:39.184Z",
@@ -31513,6 +31567,12 @@
   "13535744": {
     "fetched_at": "2026-09-02T21:34:09.419Z",
     "name": "Holosiyiv",
+    "country": "Ukraine",
+    "admin1": "Kyiv City"
+  },
+  "13535747": {
+    "fetched_at": "2026-11-08T09:36:04.737Z",
+    "name": "Svyatoshyn",
     "country": "Ukraine",
     "admin1": "Kyiv City"
   },
