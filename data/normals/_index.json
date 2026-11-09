@@ -383,6 +383,12 @@
     "country": "Saudi Arabia",
     "admin1": "Eastern Province"
   },
+  "109323": {
+    "fetched_at": "2026-11-09T07:16:52.630Z",
+    "name": "Khobar",
+    "country": "Saudi Arabia",
+    "admin1": "Eastern Province"
+  },
   "109353": {
     "fetched_at": "2026-09-16T10:19:57.382Z",
     "name": "Al Kharj",
@@ -21259,6 +21265,12 @@
     "country": "Poland",
     "admin1": "Silesia"
   },
+  "3104324": {
+    "fetched_at": "2026-11-09T07:16:52.630Z",
+    "name": "Zaragoza",
+    "country": "Spain",
+    "admin1": "Aragon"
+  },
   "3104748": {
     "fetched_at": "2026-10-15T15:20:52.837Z",
     "name": "Villaverde",
@@ -29244,6 +29256,12 @@
     "name": "Sydney",
     "country": "Canada",
     "admin1": "Nova Scotia"
+  },
+  "6418146": {
+    "fetched_at": "2026-11-09T07:16:52.630Z",
+    "name": "Chertanovo Yuzhnoye",
+    "country": "Russia",
+    "admin1": "Moscow"
   },
   "6418220": {
     "fetched_at": "2026-10-22T17:40:08.767Z",
