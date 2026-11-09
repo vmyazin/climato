@@ -15414,6 +15414,12 @@
     "country": "Japan",
     "admin1": "Yamaguchi"
   },
+  "1861310": {
+    "fetched_at": "2026-11-09T00:09:02.670Z",
+    "name": "Itami",
+    "country": "Japan",
+    "admin1": "Hyōgo"
+  },
   "1861436": {
     "fetched_at": "2026-10-17T09:44:45.840Z",
     "name": "Isesaki",
@@ -27712,6 +27718,12 @@
   "5113779": {
     "fetched_at": "2026-09-03T11:45:25.488Z",
     "name": "Corona",
+    "country": "United States",
+    "admin1": "New York"
+  },
+  "5115843": {
+    "fetched_at": "2026-11-09T00:09:02.670Z",
+    "name": "East Flatbush",
     "country": "United States",
     "admin1": "New York"
   },
