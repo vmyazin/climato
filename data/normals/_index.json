@@ -11264,6 +11264,12 @@
     "country": "Philippines",
     "admin1": "National Capital Region"
   },
+  "1720508": {
+    "fetched_at": "2026-11-09T17:50:47.327Z",
+    "name": "Calasiao",
+    "country": "Philippines",
+    "admin1": "Ilocos"
+  },
   "1720681": {
     "fetched_at": "2026-10-15T05:31:53.684Z",
     "name": "Calamba",
@@ -26292,6 +26298,12 @@
     "name": "Callao",
     "country": "Peru",
     "admin1": "Provincia Constitucional del Callao"
+  },
+  "3947019": {
+    "fetched_at": "2026-11-09T17:50:47.327Z",
+    "name": "Ayacucho",
+    "country": "Peru",
+    "admin1": "Ayacucho"
   },
   "3947322": {
     "fetched_at": "2026-10-20T02:59:25.102Z",
