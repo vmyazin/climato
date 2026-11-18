@@ -635,6 +635,12 @@
     "country": "Iran",
     "admin1": "Golestan"
   },
+  "132938": {
+    "fetched_at": "2026-11-18T18:26:15.425Z",
+    "name": "Gonbad-e Kāvūs",
+    "country": "Iran",
+    "admin1": "Golestan"
+  },
   "135423": {
     "fetched_at": "2026-09-05T01:28:24.657Z",
     "name": "Shahrud",
@@ -17133,7 +17139,7 @@
     "admin1": "Sabha District"
   },
   "2213618": {
-    "fetched_at": "2026-10-27T16:53:18.437Z",
+    "fetched_at": "2026-11-18T18:26:15.425Z",
     "name": "Qaşr Bin Ghashīr",
     "country": "Libya",
     "admin1": "Tripoli"
