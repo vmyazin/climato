@@ -5247,7 +5247,7 @@
     "admin1": "Khulna Division"
   },
   "1185920": {
-    "fetched_at": "2026-08-26T13:42:35.788Z",
+    "fetched_at": "2026-11-19T00:46:35.389Z",
     "name": "Tungipara",
     "country": "Bangladesh",
     "admin1": "Dhaka Division"
@@ -25114,6 +25114,12 @@
   "3645528": {
     "fetched_at": "2026-11-07T23:07:24.147Z",
     "name": "Ciudad Guayana",
+    "country": "Venezuela",
+    "admin1": "Bolívar"
+  },
+  "3645532": {
+    "fetched_at": "2026-11-19T00:46:35.389Z",
+    "name": "Ciudad Bolívar",
     "country": "Venezuela",
     "admin1": "Bolívar"
   },
