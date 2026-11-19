@@ -8757,7 +8757,7 @@
     "admin1": "Chelyabinsk Oblast"
   },
   "1510018": {
-    "fetched_at": "2026-10-14T00:39:42.835Z",
+    "fetched_at": "2026-11-19T23:55:27.960Z",
     "name": "Biysk",
     "country": "Russia",
     "admin1": "Altai Krai"
@@ -13047,7 +13047,7 @@
     "admin1": "Shanghai"
   },
   "1800498": {
-    "fetched_at": "2026-08-30T21:40:12.777Z",
+    "fetched_at": "2026-11-19T23:55:27.960Z",
     "name": "Mingshui",
     "country": "China",
     "admin1": "Shandong"
@@ -14705,6 +14705,12 @@
     "name": "Tsuruoka",
     "country": "Japan",
     "admin1": "Yamagata"
+  },
+  "1849796": {
+    "fetched_at": "2026-11-19T23:55:27.960Z",
+    "name": "Tsu",
+    "country": "Japan",
+    "admin1": "Mie"
   },
   "1849814": {
     "fetched_at": "2026-09-08T11:46:45.677Z",
