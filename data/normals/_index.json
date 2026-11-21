@@ -3198,7 +3198,7 @@
     "admin1": "Imereti"
   },
   "615532": {
-    "fetched_at": "2026-08-30T05:57:18.306Z",
+    "fetched_at": "2026-11-21T10:18:18.245Z",
     "name": "Batumi",
     "country": "Georgia",
     "admin1": "Adjara"
@@ -29652,6 +29652,12 @@
     "name": "Kawachi-Nagano",
     "country": "Japan",
     "admin1": "Osaka"
+  },
+  "6845329": {
+    "fetched_at": "2026-11-21T10:18:18.245Z",
+    "name": "Bang Sue",
+    "country": "Thailand",
+    "admin1": "Bangkok"
   },
   "6847550": {
     "fetched_at": "2026-08-30T10:57:58.788Z",
