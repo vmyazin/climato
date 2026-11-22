@@ -8288,6 +8288,12 @@
     "country": "China",
     "admin1": "Xinjiang"
   },
+  "1282027": {
+    "fetched_at": "2026-11-22T10:23:30.132Z",
+    "name": "Malé",
+    "country": "Maldives",
+    "admin1": "Kaafu Atoll"
+  },
   "1282898": {
     "fetched_at": "2026-08-30T21:40:12.777Z",
     "name": "Pokhara",
@@ -29130,6 +29136,12 @@
     "name": "Winnipeg",
     "country": "Canada",
     "admin1": "Manitoba"
+  },
+  "6252065": {
+    "fetched_at": "2026-11-22T10:23:30.132Z",
+    "name": "Nou Barris",
+    "country": "Spain",
+    "admin1": "Catalonia"
   },
   "6254843": {
     "fetched_at": "2026-08-30T00:48:12.875Z",
