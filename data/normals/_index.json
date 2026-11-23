@@ -10293,7 +10293,7 @@
     "admin1": "Central Java"
   },
   "1640660": {
-    "fetched_at": "2026-08-31T08:55:39.184Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Kediri",
     "country": "Indonesia",
     "admin1": "East Java"
@@ -19472,7 +19472,7 @@
     "admin1": "England"
   },
   "2637433": {
-    "fetched_at": "2026-10-23T07:58:00.034Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Southend-on-Sea",
     "country": "United Kingdom",
     "admin1": "England"
@@ -19610,7 +19610,7 @@
     "admin1": "England"
   },
   "2642465": {
-    "fetched_at": "2026-08-29T22:50:00.152Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Milton Keynes",
     "country": "United Kingdom",
     "admin1": "England"
@@ -19862,7 +19862,7 @@
     "admin1": "England"
   },
   "2654993": {
-    "fetched_at": "2026-08-31T08:55:39.184Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Bradford",
     "country": "United Kingdom",
     "admin1": "England"
@@ -20744,7 +20744,7 @@
     "admin1": "State of Berlin"
   },
   "2944368": {
-    "fetched_at": "2026-08-30T15:07:58.039Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Bremerhaven",
     "country": "Germany",
     "admin1": "Free Hanseatic City of Bremen"
@@ -22538,7 +22538,7 @@
     "admin1": "Central Department"
   },
   "3438115": {
-    "fetched_at": "2026-08-30T10:57:58.788Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Fernando de la Mora",
     "country": "Paraguay",
     "admin1": "Central Department"
@@ -22742,7 +22742,7 @@
     "admin1": "São Paulo"
   },
   "3447624": {
-    "fetched_at": "2026-09-02T23:36:56.397Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Sete Lagoas",
     "country": "Brazil",
     "admin1": "Minas Gerais"
@@ -23024,7 +23024,7 @@
     "admin1": "Minas Gerais"
   },
   "3453406": {
-    "fetched_at": "2026-08-30T10:57:58.788Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Poá",
     "country": "Brazil",
     "admin1": "São Paulo"
@@ -23738,7 +23738,7 @@
     "admin1": "São Paulo"
   },
   "3467081": {
-    "fetched_at": "2026-10-26T05:28:24.375Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Caraguatatuba",
     "country": "Brazil",
     "admin1": "São Paulo"
@@ -24632,7 +24632,7 @@
     "admin1": "Provincia de Camagüey"
   },
   "3567597": {
-    "fetched_at": "2026-08-27T02:16:53.700Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Bayamo",
     "country": "Cuba",
     "admin1": "Granma Province"
@@ -24640,6 +24640,12 @@
   "3567924": {
     "fetched_at": "2026-08-30T18:50:29.294Z",
     "name": "Balcón de la Lisa",
+    "country": "Cuba",
+    "admin1": "Havana"
+  },
+  "3568342": {
+    "fetched_at": "2026-11-23T15:26:23.678Z",
+    "name": "Arroyo Naranjo",
     "country": "Cuba",
     "admin1": "Havana"
   },
@@ -24950,7 +24956,7 @@
     "admin1": "Zulia"
   },
   "3628503": {
-    "fetched_at": "2026-08-29T22:50:00.152Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "San Carlos",
     "country": "Venezuela",
     "admin1": "Cojedes"
@@ -26486,7 +26492,7 @@
     "admin1": "Sonora"
   },
   "3995402": {
-    "fetched_at": "2026-10-24T07:37:40.918Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Morelia",
     "country": "Mexico",
     "admin1": "Michoacán"
@@ -28070,7 +28076,7 @@
     "admin1": "California"
   },
   "5338122": {
-    "fetched_at": "2026-10-13T21:34:55.272Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Clovis",
     "country": "United States",
     "admin1": "California"
@@ -28784,7 +28790,7 @@
     "admin1": "Quebec"
   },
   "5882873": {
-    "fetched_at": "2026-08-31T21:39:48.036Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Ajax",
     "country": "Canada",
     "admin1": "Ontario"
@@ -31039,7 +31045,7 @@
     "admin1": "Jeollabuk-do"
   },
   "11777624": {
-    "fetched_at": "2026-10-13T01:39:09.765Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Archway",
     "country": "United Kingdom",
     "admin1": "England"
@@ -31201,7 +31207,7 @@
     "admin1": "São Paulo"
   },
   "11962403": {
-    "fetched_at": "2026-09-18T10:05:40.839Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Vila Prudente",
     "country": "Brazil",
     "admin1": "São Paulo"
@@ -32042,7 +32048,7 @@
     "country": "Egypt"
   },
   "reykjavik": {
-    "fetched_at": "2026-11-15T15:54:30.325Z",
+    "fetched_at": "2026-11-23T15:26:23.678Z",
     "name": "Reykjavík",
     "country": "Iceland"
   },
