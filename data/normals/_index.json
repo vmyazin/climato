@@ -6297,7 +6297,7 @@
     "admin1": "Maharashtra"
   },
   "1261039": {
-    "fetched_at": "2026-08-30T18:50:29.294Z",
+    "fetched_at": "2026-11-24T12:58:05.938Z",
     "name": "Orai",
     "country": "India",
     "admin1": "Uttar Pradesh"
@@ -14187,7 +14187,7 @@
     "admin1": "Shandong"
   },
   "1816373": {
-    "fetched_at": "2026-10-10T13:06:17.902Z",
+    "fetched_at": "2026-11-24T12:58:05.938Z",
     "name": "Bijie",
     "country": "China",
     "admin1": "Guizhou"
@@ -18686,7 +18686,7 @@
     "admin1": "Souk Ahras Province"
   },
   "2479536": {
-    "fetched_at": "2026-09-23T01:52:55.411Z",
+    "fetched_at": "2026-11-24T12:58:05.938Z",
     "name": "Skikda",
     "country": "Algeria",
     "admin1": "Skikda Province"
@@ -25292,7 +25292,7 @@
     "admin1": "Loja"
   },
   "3654870": {
-    "fetched_at": "2026-09-08T11:46:45.677Z",
+    "fetched_at": "2026-11-24T12:58:05.938Z",
     "name": "Latacunga",
     "country": "Ecuador",
     "admin1": "Cotopaxi"
@@ -32054,7 +32054,7 @@
     "country": "Egypt"
   },
   "reykjavik": {
-    "fetched_at": "2026-11-24T02:37:07.570Z",
+    "fetched_at": "2026-11-24T12:58:05.938Z",
     "name": "Reykjavík",
     "country": "Iceland"
   },
