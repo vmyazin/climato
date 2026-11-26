@@ -2364,7 +2364,7 @@
     "admin1": "Volgograd Oblast"
   },
   "473247": {
-    "fetched_at": "2026-09-04T21:04:35.522Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Vladimir",
     "country": "Russia",
     "admin1": "Vladimir Oblast"
@@ -2682,7 +2682,7 @@
     "admin1": "Bashkortostan Republic"
   },
   "516215": {
-    "fetched_at": "2026-09-03T06:31:52.261Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Odintsovo",
     "country": "Russia",
     "admin1": "Moscow Oblast"
@@ -4500,7 +4500,7 @@
     "admin1": "Sofala"
   },
   "1052944": {
-    "fetched_at": "2026-09-23T01:52:55.411Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Angoche",
     "country": "Mozambique",
     "admin1": "Nampula"
@@ -4858,7 +4858,7 @@
     "admin1": "Khyber Pakhtunkhwa"
   },
   "1170425": {
-    "fetched_at": "2026-08-30T21:40:12.777Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Mianwali",
     "country": "Pakistan",
     "admin1": "Punjab"
@@ -8733,7 +8733,7 @@
     "admin1": "Republic of Tyva"
   },
   "1501321": {
-    "fetched_at": "2026-09-23T06:48:32.331Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Kurgan",
     "country": "Russia",
     "admin1": "Kurgan Oblast"
@@ -8901,7 +8901,7 @@
     "admin1": "Zhetysu Region"
   },
   "1518980": {
-    "fetched_at": "2026-08-31T08:55:39.184Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Shymkent",
     "country": "Kazakhstan",
     "admin1": "Shymkent"
@@ -9003,7 +9003,7 @@
     "admin1": "Xinjiang"
   },
   "1529102": {
-    "fetched_at": "2026-05-25T03:11:05.075Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Ürümqi",
     "country": "China",
     "admin1": "Xinjiang"
@@ -9051,7 +9051,7 @@
     "admin1": "Gansu"
   },
   "1529569": {
-    "fetched_at": "2026-09-05T16:18:15.066Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Changji",
     "country": "China",
     "admin1": "Xinjiang"
@@ -13299,13 +13299,13 @@
     "admin1": "Hunan"
   },
   "1804208": {
-    "fetched_at": "2026-08-30T21:40:12.777Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Leiyang",
     "country": "China",
     "admin1": "Hunan"
   },
   "1804252": {
-    "fetched_at": "2026-09-01T23:35:59.499Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Lecheng",
     "country": "China",
     "admin1": "Guangdong"
@@ -14001,7 +14001,7 @@
     "admin1": "Ningxia"
   },
   "1813425": {
-    "fetched_at": "2026-08-29T20:05:52.305Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Datun",
     "country": "China",
     "admin1": "Jiangsu"
@@ -16479,7 +16479,7 @@
     "admin1": "Liaoning"
   },
   "2036670": {
-    "fetched_at": "2026-08-30T10:57:58.788Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Hulan Ergi",
     "country": "China",
     "admin1": "Heilongjiang"
@@ -31417,7 +31417,7 @@
     "admin1": "Ningxia"
   },
   "12358476": {
-    "fetched_at": "2026-09-04T15:10:30.811Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Hechi",
     "country": "China",
     "admin1": "Guangxi"
@@ -32054,7 +32054,7 @@
     "country": "Egypt"
   },
   "reykjavik": {
-    "fetched_at": "2026-11-24T12:58:05.938Z",
+    "fetched_at": "2026-11-26T18:43:39.078Z",
     "name": "Reykjavík",
     "country": "Iceland"
   },
